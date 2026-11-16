@@ -1,0 +1,409 @@
+<title>Ósemka Tech Stack</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;600&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap">
+<style>
+/* Layout: graph-paper (kratka) masthead, sticky section index on the left, single reading column of specs + wide wireframe panels. */
+:root{
+  --bg:#F5F8F8; --surface:#FFFFFF; --sunk:#EDF2F2; --ink:#1A2A2F; --muted:#56676C; --line:#D8E2E3; --grid:#E3ECEC;
+  --accent:#2C7673; --accent-ink:#FFFFFF; --accent-soft:#DDEFED;
+  --exam:#3A4787; --exam-soft:#E4E7F5;
+  --pl:#A94C63; --pl-soft:#F6E5EA; --ma:#336BAA; --ma-soft:#E2ECF7; --en:#367E4E; --en-soft:#E1F1E6;
+  --ok:#2B7A4B; --ok-soft:#E0F2E7; --bad:#AE4636; --bad-soft:#F8E6E2; --warn:#9A6614; --warn-soft:#F7EDD9;
+  --f-display:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --f-ui:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --f-read:"Literata", Georgia, "Times New Roman", serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  --r-s:6px; --r-m:10px; --r-l:16px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#10181B; --surface:#172126; --sunk:#0C1315; --ink:#E2EBEB; --muted:#98AAAE; --line:#283A3F; --grid:#18262A;
+  --accent:#6CC0BA; --accent-ink:#0B1A1A; --accent-soft:#1A3533;
+  --exam:#9AA6E8; --exam-soft:#222A49;
+  --pl:#E592A6; --pl-soft:#3A2129; --ma:#82AAE8; --ma-soft:#1C2B40; --en:#7DC796; --en-soft:#1B3224;
+  --ok:#6DCC93; --ok-soft:#173326; --bad:#EE8C7D; --bad-soft:#3B1E1A; --warn:#E3B45E; --warn-soft:#382A12;
+  color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#10181B; --surface:#172126; --sunk:#0C1315; --ink:#E2EBEB; --muted:#98AAAE; --line:#283A3F; --grid:#18262A;
+  --accent:#6CC0BA; --accent-ink:#0B1A1A; --accent-soft:#1A3533;
+  --exam:#9AA6E8; --exam-soft:#222A49;
+  --pl:#E592A6; --pl-soft:#3A2129; --ma:#82AAE8; --ma-soft:#1C2B40; --en:#7DC796; --en-soft:#1B3224;
+  --ok:#6DCC93; --ok-soft:#173326; --bad:#EE8C7D; --bad-soft:#3B1E1A; --warn:#E3B45E; --warn-soft:#382A12;
+  color-scheme:dark }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:16px}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{animation:none!important; transition:none!important} }
+body{background:var(--bg); color:var(--ink); font-family:var(--f-ui); font-size:16px; line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left,0px)); padding-right:max(16px, env(safe-area-inset-right,0px)); padding-block:0 64px}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:4px}
+
+.mast{margin-inline:calc(-1 * max(16px, env(safe-area-inset-left,0px)));
+  padding:56px max(16px, env(safe-area-inset-right,0px)) 40px max(16px, env(safe-area-inset-left,0px));
+  background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size:20px 20px; border-bottom:1px solid var(--line)}
+.mast-in{max-width:1180px; margin:0 auto}
+.eyebrow{font-family:var(--f-mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+h1{font-family:var(--f-display); font-weight:700; font-size:clamp(40px, 7vw, 76px); line-height:1; letter-spacing:-.02em; margin:12px 0 16px; text-wrap:balance}
+h1 .eight{color:var(--accent)}
+.lede{max-width:64ch; font-size:18px; color:var(--ink); margin:0}
+.meta{display:flex; flex-wrap:wrap; gap:8px; margin-top:20px}
+.chip{display:inline-flex; align-items:center; gap:6px; font-size:13px; padding:3px 10px; border-radius:999px; border:1px solid var(--line); background:var(--surface); color:var(--muted)}
+.chip b{color:var(--ink); font-weight:700}
+
+.wrap{max-width:1180px; margin:0 auto; display:grid; grid-template-columns:200px minmax(0,1fr); gap:48px; padding-top:40px}
+nav.toc{position:sticky; top:calc(16px + env(safe-area-inset-top,0px)); align-self:start; font-size:14px}
+nav.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+nav.toc a{display:block; padding:5px 10px; border-radius:var(--r-s); color:var(--muted); text-decoration:none}
+nav.toc a:hover{background:var(--sunk); color:var(--ink)}
+nav.toc .grp{font-family:var(--f-mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:14px 10px 4px}
+main{min-width:0}
+section{padding-block:8px 40px; border-bottom:1px solid var(--line); margin-bottom:40px}
+section:last-child{border-bottom:0}
+h2{font-family:var(--f-display); font-size:32px; line-height:1.15; letter-spacing:-.01em; margin:0 0 8px; text-wrap:balance}
+h3{font-family:var(--f-display); font-size:21px; line-height:1.25; margin:32px 0 8px; text-wrap:balance}
+h4{font-size:13px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:20px 0 8px}
+p, li{max-width:68ch}
+.sub{color:var(--muted); margin-top:0}
+.num{font-family:var(--f-mono); font-size:13px; color:var(--accent); margin-right:8px}
+code, .mono{font-family:var(--f-mono); font-size:.88em}
+code{background:var(--sunk); padding:1px 5px; border-radius:4px}
+
+.principles{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:16px; margin-top:20px}
+.pr{background:var(--surface); border:1px solid var(--line); border-radius:var(--r-m); padding:18px 20px}
+.pr h3{margin:0 0 6px; font-size:18px}
+.pr p{margin:0; font-size:15px; color:var(--muted)}
+
+table{border-collapse:collapse; width:100%; font-size:14.5px}
+.tbl{overflow-x:auto; border:1px solid var(--line); border-radius:var(--r-m); background:var(--surface)}
+th, td{text-align:left; padding:9px 14px; border-bottom:1px solid var(--line); vertical-align:top}
+th{font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); font-weight:700; background:var(--sunk)}
+tr:last-child td{border-bottom:0}
+td.n{font-variant-numeric:tabular-nums; font-family:var(--f-mono); font-size:13px; white-space:nowrap}
+
+.swatches{display:grid; grid-template-columns:repeat(auto-fill, minmax(150px,1fr)); gap:12px}
+.sw{border:1px solid var(--line); border-radius:var(--r-m); overflow:hidden; background:var(--surface)}
+.sw .c{height:56px; border-bottom:1px solid var(--line)}
+.sw .l{padding:8px 10px; font-size:13px; line-height:1.35}
+.sw .l b{display:block}
+.sw .l span{font-family:var(--f-mono); font-size:11.5px; color:var(--muted)}
+
+.subjects{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:12px}
+.subj{border-radius:var(--r-m); padding:16px 18px; border:1px solid var(--line); background:var(--surface); display:grid; gap:6px}
+.subj .tag{display:inline-flex; align-self:start; justify-self:start; font-size:12px; font-weight:700; padding:2px 9px; border-radius:999px}
+.subj.pl .tag{background:var(--pl-soft); color:var(--pl)} .subj.ma .tag{background:var(--ma-soft); color:var(--ma)} .subj.en .tag{background:var(--en-soft); color:var(--en)}
+.subj .t{font-family:var(--f-display); font-size:22px; font-weight:700}
+.subj .s{font-size:14px; color:var(--muted)}
+.subj .bar{height:6px; border-radius:3px; background:var(--sunk); overflow:hidden}
+.subj .bar i{display:block; height:100%}
+.subj.pl .bar i{background:var(--pl); width:58%} .subj.ma .bar i{background:var(--ma); width:61%} .subj.en .bar i{background:var(--en); width:74%}
+
+.modes{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:16px}
+.shell{border-radius:var(--r-l); border:1px solid var(--line); overflow:hidden; background:var(--surface)}
+.shell .top{display:flex; justify-content:space-between; align-items:center; gap:12px; padding:10px 16px; font-size:14px; font-weight:700}
+.shell.practice .top{background:var(--accent-soft); color:var(--accent)}
+.shell.exam .top{background:var(--exam); color:var(--surface)}
+.shell .body{padding:16px; font-size:14.5px; color:var(--muted)}
+.shell .body ul{margin:0; padding-left:18px}
+
+.type-spec{display:grid; gap:0; border:1px solid var(--line); border-radius:var(--r-m); background:var(--surface); overflow:hidden}
+.ts{display:grid; grid-template-columns:150px minmax(0,1fr); gap:16px; padding:14px 18px; border-bottom:1px solid var(--line); align-items:baseline}
+.ts:last-child{border-bottom:0}
+.ts .k{font-family:var(--f-mono); font-size:12px; color:var(--muted)}
+.ts .k b{display:block; color:var(--ink); font-family:var(--f-ui); font-size:13px}
+.ts .v{min-width:0; overflow-wrap:anywhere}
+
+.gallery{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:16px}
+.comp{background:var(--surface); border:1px solid var(--line); border-radius:var(--r-m); padding:16px 18px; min-width:0}
+.comp h4{margin-top:0}
+.opt{display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:var(--r-s); border:1.5px solid var(--line); margin-bottom:8px; font-size:15px; background:var(--surface)}
+.opt .k{width:26px; height:26px; flex:none; display:grid; place-items:center; border-radius:50%; border:1.5px solid var(--line); font-weight:700; font-size:13px}
+.opt .st{margin-left:auto; font-size:12.5px; font-weight:700}
+.opt.sel{border-color:var(--accent); background:var(--accent-soft)} .opt.sel .k{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
+.opt.ok{border-color:var(--ok); background:var(--ok-soft)} .opt.ok .k{background:var(--ok); border-color:var(--ok); color:var(--surface)} .opt.ok .st{color:var(--ok)}
+.opt.bad{border-color:var(--bad); background:var(--bad-soft)} .opt.bad .k{border-color:var(--bad); color:var(--bad)} .opt.bad .st{color:var(--bad)}
+.opt.rev{border-style:dashed; border-color:var(--ok)} .opt.rev .st{color:var(--ok)}
+.timers{display:flex; flex-wrap:wrap; gap:8px}
+.timer{font-family:var(--f-mono); font-variant-numeric:tabular-nums; font-weight:600; font-size:15px; padding:6px 12px; border-radius:999px; border:1.5px solid var(--line)}
+.timer.n{color:var(--ink)} .timer.w{color:var(--warn); background:var(--warn-soft); border-color:var(--warn)} .timer.c{color:var(--bad); background:var(--bad-soft); border-color:var(--bad)}
+.timer.sw{color:var(--accent); border-style:dashed}
+.qmap{display:grid; grid-template-columns:repeat(7, 34px); gap:6px}
+.qmap span{height:34px; display:grid; place-items:center; border-radius:var(--r-s); font-family:var(--f-mono); font-size:13px; border:1.5px solid var(--line); position:relative}
+.qmap .a{background:var(--sunk); color:var(--ink); border-color:var(--sunk)}
+.qmap .cur{border-color:var(--exam); color:var(--exam); font-weight:600}
+.qmap .f::after{content:""; position:absolute; top:-4px; right:-4px; width:9px; height:9px; border-radius:50%; background:var(--warn); border:2px solid var(--surface)}
+.legend{display:flex; flex-wrap:wrap; gap:14px; font-size:12.5px; color:var(--muted); margin-top:10px}
+.player{border:1px solid var(--line); border-radius:var(--r-m); padding:12px; display:grid; gap:10px; background:var(--bg)}
+.player .row{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+.pbtn{width:36px; height:36px; border-radius:50%; display:grid; place-items:center; background:var(--accent); color:var(--accent-ink); font-size:13px; flex:none; border:0}
+.track{flex:1; min-width:120px; height:6px; border-radius:3px; background:var(--line); position:relative}
+.track i{position:absolute; inset:0 auto 0 0; width:38%; border-radius:3px; background:var(--accent)}
+.track.locked i{background:var(--exam); width:59%}
+.seg{font-family:var(--f-mono); font-size:12px; padding:3px 8px; border-radius:var(--r-s); border:1px solid var(--line); color:var(--muted)}
+.seg.on{border-color:var(--accent); color:var(--accent); background:var(--accent-soft)}
+.live{display:inline-flex; align-items:center; gap:6px; font-size:12.5px; font-weight:700; color:var(--exam)}
+.live::before{content:""; width:8px; height:8px; border-radius:50%; background:var(--bad)}
+.crit{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px 12px; align-items:center; font-size:14.5px}
+.pips{display:flex; gap:4px}
+.pips b{width:28px; height:28px; display:grid; place-items:center; border-radius:var(--r-s); border:1.5px solid var(--line); font-family:var(--f-mono); font-size:12.5px; font-weight:400; color:var(--muted)}
+.pips b.on{background:var(--accent); border-color:var(--accent); color:var(--accent-ink); font-weight:600}
+.pips b.ai{border-style:dashed; border-color:var(--exam); color:var(--exam)}
+.reading{font-family:var(--f-read); font-size:19px; line-height:1.7; max-width:60ch; background:var(--surface); border:1px solid var(--line); border-radius:var(--r-m); padding:20px 24px 20px 52px}
+.reading .ln{position:absolute; left:-36px; width:26px; text-align:right; top:4px; font-family:var(--f-mono); font-size:11px; color:var(--muted); padding-right:8px}
+.reading p{margin:0; position:relative}
+.reading mark{background:var(--warn-soft); color:inherit; border-bottom:2px solid var(--warn); padding:0 1px}
+.math{font-family:var(--f-read); font-size:20px; font-style:italic; letter-spacing:.01em}
+
+.wf{margin:14px 0 6px; overflow-x:auto; background:var(--surface); border:1px solid var(--line); border-radius:var(--r-m); padding:16px 18px}
+.wf pre{margin:0; font-family:var(--f-mono); font-size:12.5px; line-height:1.45; color:var(--ink); white-space:pre; width:max-content}
+.notes{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:4px 28px; margin-top:12px}
+.notes ul{margin:0; padding-left:18px}
+.notes li{font-size:15px; margin-bottom:6px}
+.callout{border-left:3px solid var(--accent); background:var(--accent-soft); border-radius:0 var(--r-s) var(--r-s) 0; padding:12px 16px; margin:16px 0; font-size:15px; max-width:72ch}
+.callout.warn{border-color:var(--warn); background:var(--warn-soft)}
+.callout b{display:block; margin-bottom:2px}
+.screen-tag{display:inline-block; font-family:var(--f-mono); font-size:12px; color:var(--muted); border:1px solid var(--line); border-radius:var(--r-s); padding:1px 7px; margin-left:8px; vertical-align:middle}
+
+@media (max-width: 860px){
+  .wrap{grid-template-columns:minmax(0,1fr); gap:8px; padding-top:20px}
+  nav.toc{position:static}
+  nav.toc ol{display:flex; flex-wrap:nowrap; overflow-x:auto; gap:6px; padding-bottom:6px}
+  nav.toc li.grp{display:none}
+  nav.toc a{white-space:nowrap; border:1px solid var(--line); background:var(--surface)}
+  .ts{grid-template-columns:minmax(0,1fr); gap:4px}
+
+
+}
+</style>
+<header class="mast">
+  <div class="mast-in">
+    <div class="eyebrow">Technologia i plan · wersja 1 · 16 listopada 2026</div>
+    <h1>Ósemka<span class="eight">.</span> stack</h1>
+    <p class="lede">One language end to end, so the schema from the data model is written once and used by the importer, the scoring engine and the app. It ships as a desktop app with a Windows installer (and a macOS one), works offline, and keeps all data on the student's computer.</p>
+    <div class="meta">
+      <span class="chip">TypeScript · <b>Node 24</b></span>
+      <span class="chip">Electron + React + <b>SQLite</b></span>
+      <span class="chip">Instalator <b>.exe</b> + .dmg</span>
+      <span class="chip">ok. <b>5–6</b> tygodni</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+<nav class="toc" aria-label="Spis treści">
+  <ol>
+    <li class="grp">Stack</li>
+    <li><a href="#zasady">Choices</a></li>
+    <li><a href="#warstwy">Layer by layer</a></li>
+    <li><a href="#windows">Windows</a></li>
+    <li><a href="#ai">AI usage</a></li>
+    <li><a href="#repo">Repository</a></li>
+    <li class="grp">Plan</li>
+    <li><a href="#etapy">Build phases</a></li>
+    <li><a href="#ryzyka">Risks</a></li>
+    <li><a href="#start">First step</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<section id="zasady">
+  <div class="eyebrow">01 · Stack</div>
+  <h2>Three decisions that drive the rest</h2>
+  <div class="principles">
+    <div class="pr"><h3>TypeScript everywhere</h3><p>The importer, scoring and app share one Zod schema. A task the importer writes is validated by the same code that later renders and scores it.</p></div>
+    <div class="pr"><h3>Windows and macOS</h3><p>Every dependency has to work on both. Mac-only tools are replaced, paths are handled the same way on both systems, and every change is tested on both in CI.</p></div>
+    <div class="pr"><h3>Scoring is pure code</h3><p>Scoring and analytics are plain functions with no UI or database inside, so they can be tested against real key entries before any screen exists.</p></div>
+  </div>
+  <h4>Tools, and what replaces the Mac-only ones</h4>
+  <div class="tbl"><table>
+    <thead><tr><th>Job</th><th>On this Mac today</th><th>Chosen (Windows + macOS)</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>Runtime</td><td class="n">Node 24 / pnpm 11</td><td>Node 24 LTS / pnpm</td><td>Official Windows installers</td></tr>
+      <tr><td>PDF text + page images</td><td>poppler CLI</td><td><b>pdf.js</b> (<code>pdfjs-dist</code>) + <code>@napi-rs/canvas</code></td><td>Pure npm packages with Windows builds; nothing to install by hand</td></tr>
+      <tr><td>Speech-to-text</td><td>mlx_whisper (Apple Silicon only)</td><td><b>whisper.cpp</b></td><td>Runs on Windows (CPU, or GPU via CUDA/Vulkan) and on Mac (Metal)</td></tr>
+      <tr><td>Audio tools</td><td class="n">ffmpeg 8.1</td><td><code>ffmpeg-static</code></td><td>Ships the right ffmpeg binary per system through npm</td></tr>
+      <tr><td>Database</td><td class="n">SQLite 3.45</td><td><code>better-sqlite3</code></td><td>Prebuilt Windows binaries; no compiler needed</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="warstwy">
+  <div class="eyebrow">02 · Stack</div>
+  <h2>Layer by layer</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Layer</th><th>Choice</th><th>Why</th><th>Considered instead</th></tr></thead>
+    <tbody>
+      <tr><td>Desktop shell</td><td><b>Electron</b>, built with <b>electron-vite</b></td><td>One codebase gives a Windows installer and a Mac app, with the same Chromium engine on every PC.</td><td>Tauri: smaller, but uses each system's own web view and needs Rust.</td></tr>
+      <tr><td>Interface</td><td><b>React</b> + <b>React Router</b></td><td>The screens from the UI spec run inside the app window. No web server and no open port.</td><td>Next.js: was chosen for a website; inside a desktop app it adds a server for nothing.</td></tr>
+      <tr><td>Main ↔ window</td><td>Typed IPC through a preload script</td><td>The window can only call a short list of functions (save answer, get session, ask AI). Context isolation on, no Node access in the page.</td><td>–</td></tr>
+      <tr><td>Styling</td><td><b>Tailwind CSS</b> over the spec's CSS tokens</td><td>Light/dark tokens are defined once as CSS variables, exactly as in the UI spec.</td><td>CSS modules: fine, slower to iterate.</td></tr>
+      <tr><td>Components</td><td><b>Radix UI</b> primitives</td><td>Accessible radio groups, dialogs and tabs with keyboard support, styled our way.</td><td>A full kit such as MUI: fights the custom look.</td></tr>
+      <tr><td>Math</td><td><b>KaTeX</b></td><td>Fast LaTeX rendering, works offline.</td><td>MathJax: heavier.</td></tr>
+      <tr><td>PDF panel</td><td><b>PDF.js</b></td><td>Opens the original page next to a task.</td><td>–</td></tr>
+      <tr><td>Charts</td><td>inline <b>SVG</b> + <b>Recharts</b></td><td>Sparklines are a few lines of SVG; Recharts for the score trend.</td><td>D3 directly: more code than needed.</td></tr>
+      <tr><td>Database</td><td><b>SQLite</b> (<code>better-sqlite3</code>) + <b>Drizzle ORM</b>, in the main process</td><td>A single file in the user's app-data folder. Migrations run on app start after an update.</td><td>A server database: not needed offline.</td></tr>
+      <tr><td>Content</td><td><b>JSON files</b> in <code>content/</code>, validated by Zod, shipped inside the installer</td><td>Readable diffs, easy review, versioned with the code.</td><td>Content in the database: harder to review.</td></tr>
+      <tr><td>Crash safety</td><td>SQLite in WAL mode, every answer saved on change</td><td>A crash or power cut loses at most the last keystrokes; the simulation timer resumes from its deadline.</td><td>–</td></tr>
+      <tr><td>Importer</td><td>TypeScript CLI (<code>tsx</code>) using pdf.js, ffmpeg-static and whisper.cpp</td><td>Same schema as the app; runs the same way on Windows and macOS.</td><td>Python importer: would need the schema twice.</td></tr>
+      <tr><td>Tests</td><td><b>Vitest</b> + <b>Playwright</b>, run on Windows and macOS in CI</td><td>Unit tests for scoring with real key entries; Playwright drives the Electron app itself for the timer, submit and small-window layout.</td><td>–</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="windows">
+  <div class="eyebrow">03 · Stack</div>
+  <h2>Windows support</h2>
+  <p class="sub">Two kinds of work: the app has to run and look right on a typical Windows laptop, and the importer has to cope with Windows paths.</p>
+
+  <h3>File paths with Polish letters</h3>
+  <div class="callout warn"><b>Found in your folders.</b> On this Mac, <code>Język polski</code> and <code>Język angielski</code> are stored in decomposed Unicode (NFD: “e” followed by a separate ogonek mark), while <code>Matematyka</code> has no special letters. Windows normally uses composed form (NFC). Copying the folders between systems can produce either form, so a plain string comparison of paths will fail on one of them.</div>
+  <div class="notes">
+    <ul>
+      <li>Content files store paths relative to the data folder, with forward slashes and NFC letters.</li>
+      <li>At runtime, folder and file names are matched by comparing NFC forms of the directory listing, never by building the exact string.</li>
+      <li>Paths are always joined with Node's <code>path</code> module, never with “/” by hand.</li>
+    </ul>
+    <ul>
+      <li><code>.gitattributes</code> fixes line endings to LF, so files look the same on both systems.</li>
+      <li>Project scripts are written in Node, not shell commands like <code>rm -rf</code>, so they run in PowerShell too.</li>
+      <li>The project should live close to the drive root (e.g. <code>C:\osemka</code>) to stay clear of Windows' 260-character path limit.</li>
+    </ul>
+  </div>
+
+  <h3>Windows laptops and screens</h3>
+  <div class="notes">
+    <ul>
+      <li><b>Small screens:</b> many school laptops are 1366×768 at 125 % scaling, which leaves about 1093×615 px. The simulation screen must fit that without scrolling the header; below 1200 px wide the sheet map becomes a drawer.</li>
+      <li><b>High contrast mode:</b> styles respond to <code>forced-colors</code>, and answer states already use an icon and a word, not color alone.</li>
+      <li><b>Scrollbars</b> take space on Windows: reading panes use <code>scrollbar-gutter: stable</code> so the text doesn't jump.</li>
+    </ul>
+    <ul>
+      <li><b>Fonts</b> are bundled with the app (no internet needed); Segoe UI is the fallback.</li>
+      <li><b>Shortcut hints</b> show Ctrl on Windows and ⌘ on macOS.</li>
+      <li><b>One engine:</b> Electron brings its own Chromium, so the app looks and behaves the same on every PC regardless of the installed browser.</li>
+    </ul>
+  </div>
+
+  <h3>How a Windows user gets the app: decided, option A</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Option</th><th>What the student does</th><th>Good</th><th>Costs</th></tr></thead>
+    <tbody>
+      <tr><td><b>A. Desktop app</b> (Electron) <i>· chosen</i></td><td>Runs an installer (.exe), then opens Ósemka from the Start menu</td><td>Works offline; data and CKE files stay on the PC; no hosting or login; also gives a Mac .dmg</td><td>About 3 extra days for packaging. Without a code-signing certificate, Windows SmartScreen warns on first install. AI suggestions need an API key saved on the PC, encrypted by Windows.</td></tr>
+      <tr><td><b>B. Private website</b></td><td>Opens a link in Edge, logs in</td><td>Nothing to install; works on any PC and on the phone</td><td>Hosting, accounts and file storage; student data on a server; CKE reuse terms matter more once it's online.</td></tr>
+      <tr><td><b>C. Run from source</b></td><td>Installs Node, runs <code>pnpm start</code>, opens the browser</td><td>No extra work</td><td>Fine for a parent or developer, too technical for a student alone.</td></tr>
+    </tbody>
+  </table></div>
+  <p style="font-size:14.5px;color:var(--muted)">B is not planned. C remains how the app runs during development. Choosing A also means the phone is not a target: practice happens on the computer.</p>
+
+  <h3>How the desktop app works</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Topic</th><th>Decision</th></tr></thead>
+    <tbody>
+      <tr><td>Installer</td><td>NSIS <code>.exe</code> from <code>electron-builder</code>, per-user install (no administrator rights needed), Start menu and desktop shortcut, uninstaller. macOS gets a <code>.dmg</code>.</td></tr>
+      <tr><td>Where it's built</td><td>The Windows installer is built on Windows (a GitHub Actions Windows runner, or a Windows PC), because the SQLite module has to be compiled for Windows and Electron. The Mac app is built on this Mac.</td></tr>
+      <tr><td>What's inside</td><td>The app, the published <code>content/</code>, and the source files the app shows: sheet PDFs for the PDF panel and the six recordings. The six sessions' source files are 55 MB today; with Electron the installer is roughly 150 MB and about 350 MB once installed (estimate, measured in P9).</td></tr>
+      <tr><td>Student data</td><td><code>%APPDATA%\Osemka\</code> on Windows, <code>~/Library/Application Support/Osemka/</code> on macOS: the database and settings. The folder name has no Polish letters on purpose. Uninstalling keeps the data unless the student ticks “usuń dane”.</td></tr>
+      <tr><td>Backup</td><td>Ustawienia → Dane → “Eksportuj” writes one file with all attempts; “Importuj” restores it on another PC.</td></tr>
+      <tr><td>New exams</td><td>The importer stays a developer tool. New sessions (e.g. Maj 2027) reach the student as a new app version.</td></tr>
+      <tr><td>Updates</td><td>v1: download and run the new installer, data is kept. Later: automatic updates with <code>electron-updater</code> from a release server.</td></tr>
+      <tr><td>AI key</td><td>Optional. Entered once in Ustawienia, stored encrypted with Electron <code>safeStorage</code> (Windows DPAPI, macOS Keychain), used only by the main process. Without a key, self-grading works and AI suggestions are hidden.</td></tr>
+      <tr><td>Code signing</td><td>v1 unsigned: Windows shows “System Windows ochronił ten komputer” on first run, and the student clicks “Więcej informacji” → “Uruchom mimo to”. To remove the warning, sign with Microsoft's Trusted Signing service (small monthly fee) or a code-signing certificate.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="ai">
+  <div class="eyebrow">04 · Stack</div>
+  <h2>Where AI is used, and how</h2>
+  <p class="sub">Two jobs, both through the official Anthropic TypeScript SDK. Import runs on the developer's machine; grading suggestions run in the app's main process, never in the window.</p>
+  <div class="tbl"><table>
+    <thead><tr><th></th><th>Import: PDF → tasks and keys</th><th>Grading suggestions</th></tr></thead>
+    <tbody>
+      <tr><td>Model</td><td>Claude Opus 5.5 (<code>claude-opus-5-5</code>)</td><td>Claude Opus 5.5</td></tr>
+      <tr><td>Input</td><td>The task's PDF pages as a document, plus its text layer</td><td>Student's answer, the key's criteria and the sample solutions</td></tr>
+      <tr><td>Output</td><td>Structured JSON checked against the Zod schema</td><td>Structured JSON: points per criterion + a short reason quoting the key</td></tr>
+      <tr><td>Effort</td><td><code>high</code>: accuracy matters, it runs once per session</td><td><code>medium</code>: answer within seconds</td></tr>
+      <tr><td>Cost controls</td><td>Batch API (half price, not time-sensitive); the shared instructions and schema are cached</td><td>Rubric and key excerpt cached per task</td></tr>
+      <tr><td>Safety net</td><td>Validation, then human review before publishing</td><td>Shown as a suggestion only; the student decides</td></tr>
+    </tbody>
+  </table></div>
+  <p style="font-size:14.5px;color:var(--muted)">Rough cost: a few US dollars to import all six sessions, and well under one cent per essay suggestion. Both are estimates to confirm by measuring on the first session.</p>
+</section>
+
+<section id="repo">
+  <div class="eyebrow">05 · Stack</div>
+  <h2>Repository layout</h2>
+  <div class="wf"><pre>
+8-class/
+├── Język polski/ Matematyka/ Język angielski/   source files, untouched
+├── content/                     importer output (JSON + assets), reviewed and committed
+├── apps/
+│   └── desktop/
+│       ├── src/main/            Electron main: SQLite + Drizzle, files, AI calls, IPC
+│       ├── src/preload/         typed bridge, the only API the window can call
+│       ├── src/renderer/        React screens S1–S12
+│       └── electron-builder.yml installers: Windows NSIS .exe, macOS .dmg
+├── packages/
+│   ├── schema/                  Zod schemas (from design/schema.ts) and inferred types
+│   ├── scoring/                 pure scoring: choice, text match, levels, rubrics
+│   └── analytics/               skill stats, readiness, next step
+├── tools/
+│   └── importer/                CLI: discover → extract → … → validate; review server
+├── design/                      UI spec, data model, schema.ts, this plan
+└── pnpm-workspace.yaml
+</pre></div>
+</section>
+
+<section id="etapy">
+  <div class="eyebrow">06 · Plan</div>
+  <h2>Build phases</h2>
+  <p class="sub">Ordered so the hardest unknown, getting good data out of the PDFs, is solved first on a single session. Estimates assume one developer working with Claude Code.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Phase</th><th>Delivers</th><th>Done when</th><th>Est.</th></tr></thead>
+    <tbody>
+      <tr><td class="n">P0</td><td>Repository, workspace, Electron shell with preload/IPC, SQLite, design tokens, Zod schema, CI on Windows + macOS</td><td>An empty app window opens on Windows and macOS in light and dark mode and writes to its database</td><td class="n">2–3 d</td></tr>
+      <tr><td class="n">P1</td><td>Importer stages 1–5, 7 and a minimal review screen, on <b>Matematyka · Maj 2026</b></td><td>session.json passes every check and is identical when imported on Windows and on macOS; all 20 tasks reviewed</td><td class="n">3–4 d</td></tr>
+      <tr><td class="n">P2</td><td>Scoring package with tests built from real key entries</td><td>Every rule type tested, incl. all-or-nothing and the X/Y versions</td><td class="n">2 d</td></tr>
+      <tr><td class="n">P3</td><td>Exam browser (S2), mode picker (S3), practice player (S4)</td><td>A full practice attempt on math 2026 can be finished and resumed</td><td class="n">3–4 d</td></tr>
+      <tr><td class="n">P4</td><td>Simulation (S5) with deadline timer, submit flow, results (S8)</td><td>Playwright: quitting and reopening the app keeps the time; time-up submits</td><td class="n">3 d</td></tr>
+      <tr><td class="n">P5</td><td>Self-grading (S9) for math levels; AI suggestions</td><td>Open tasks move a result from provisional to graded</td><td class="n">3 d</td></tr>
+      <tr><td class="n">P6</td><td>Polish and English: reading view (S7), essay and e-mail rubrics, audio cue map and listening (S6); import the other 5 sessions</td><td>All 6 sessions published; both audio modes behave as specified</td><td class="n">4–5 d</td></tr>
+      <tr><td class="n">P7</td><td>Analytics: dashboard (S1), analysis (S10), history (S11)</td><td>Numbers match a hand calculation on sample attempts</td><td class="n">3 d</td></tr>
+      <tr><td class="n">P8</td><td>Settings (S12) incl. AI key and backup, accessibility pass, small-laptop layouts</td><td>Keyboard-only attempt works; contrast and high-contrast checks pass; simulation fits 1366×768 at 125 %</td><td class="n">2–3 d</td></tr>
+      <tr><td class="n">P9</td><td>Installers: Windows .exe built on Windows, macOS .dmg; bundled content; uninstall and upgrade paths</td><td>On a fresh Windows 10 and Windows 11 PC: install without admin rights, finish a simulation offline, upgrade keeps the data</td><td class="n">3 d</td></tr>
+    </tbody>
+  </table></div>
+  <p style="font-size:14.5px;color:var(--muted)">Total roughly 29–35 working days. A first version for practice exists after P3, about 2 weeks in; until P9 it runs from source on Windows and macOS.</p>
+</section>
+
+<section id="ryzyka">
+  <div class="eyebrow">07 · Plan</div>
+  <h2>Risks</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Risk</th><th>Impact</th><th>Mitigation</th></tr></thead>
+    <tbody>
+      <tr><td>AI misreads a formula, figure or key answer</td><td>Wrong feedback to the student</td><td>Schema validation, point-sum checks, human review of every task against the PDF page.</td></tr>
+      <tr><td>Figures are hard to rebuild</td><td>Slow import</td><td>v1 uses cropped images of the original drawing; SVG redraws only where needed.</td></tr>
+      <tr><td>Audio boundaries slightly off</td><td>Practice segments start mid-sentence</td><td>Reviewer adjusts on a waveform; simulation plays the whole file and is unaffected.</td></tr>
+      <tr><td>Student skips self-grading</td><td>Analytics miss open-task data</td><td>Provisional scores are clearly marked; the dashboard shows the grading queue.</td></tr>
+      <tr><td>Folder names differ in Unicode form between systems</td><td>Files not found on Windows</td><td>NFC comparison everywhere; a CI test with both name forms.</td></tr>
+      <tr><td>Native module fails to install on Windows</td><td>App won't start</td><td>Only packages with prebuilt Windows binaries; CI installs from scratch on Windows.</td></tr>
+      <tr><td>SmartScreen warning scares the student or a parent</td><td>App not installed</td><td>Short install guide with a screenshot; signing later if needed.</td></tr>
+      <tr><td>Antivirus flags an unsigned app</td><td>Install blocked on school PCs</td><td>Per-user install; signing removes most false alarms.</td></tr>
+      <tr><td>Wrong extended-time values</td><td>Unrealistic simulation</td><td>Editable setting; confirm against the current CKE notice.</td></tr>
+      <tr><td>Reuse rights if the app is shared</td><td>Legal</td><td>Stays private for personal study; check CKE terms before any public release.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="start">
+  <div class="eyebrow">08 · Plan</div>
+  <h2>First step</h2>
+  <p>The project folder is not a git repository yet. P0 starts with <code>git init</code>, a <code>.gitignore</code> that keeps the source PDFs and recordings out of the repository (they are large and come from CKE), a <code>.gitattributes</code> for line endings, and the workspace skeleton. The Windows CI run needs the repository on GitHub; until then, Windows checks are manual. Then P1 starts on Matematyka · Maj 2026.</p>
+</section>
+
+</main>
+</div>

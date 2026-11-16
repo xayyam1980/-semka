@@ -1,0 +1,829 @@
+<title>Ósemka Data Model</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;600&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap">
+<style>
+/* Layout: graph-paper (kratka) masthead, sticky section index on the left, single reading column of specs + wide wireframe panels. */
+:root{
+  --bg:#F5F8F8; --surface:#FFFFFF; --sunk:#EDF2F2; --ink:#1A2A2F; --muted:#56676C; --line:#D8E2E3; --grid:#E3ECEC;
+  --accent:#2C7673; --accent-ink:#FFFFFF; --accent-soft:#DDEFED;
+  --exam:#3A4787; --exam-soft:#E4E7F5;
+  --pl:#A94C63; --pl-soft:#F6E5EA; --ma:#336BAA; --ma-soft:#E2ECF7; --en:#367E4E; --en-soft:#E1F1E6;
+  --ok:#2B7A4B; --ok-soft:#E0F2E7; --bad:#AE4636; --bad-soft:#F8E6E2; --warn:#9A6614; --warn-soft:#F7EDD9;
+  --f-display:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --f-ui:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --f-read:"Literata", Georgia, "Times New Roman", serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  --r-s:6px; --r-m:10px; --r-l:16px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#10181B; --surface:#172126; --sunk:#0C1315; --ink:#E2EBEB; --muted:#98AAAE; --line:#283A3F; --grid:#18262A;
+  --accent:#6CC0BA; --accent-ink:#0B1A1A; --accent-soft:#1A3533;
+  --exam:#9AA6E8; --exam-soft:#222A49;
+  --pl:#E592A6; --pl-soft:#3A2129; --ma:#82AAE8; --ma-soft:#1C2B40; --en:#7DC796; --en-soft:#1B3224;
+  --ok:#6DCC93; --ok-soft:#173326; --bad:#EE8C7D; --bad-soft:#3B1E1A; --warn:#E3B45E; --warn-soft:#382A12;
+  color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#10181B; --surface:#172126; --sunk:#0C1315; --ink:#E2EBEB; --muted:#98AAAE; --line:#283A3F; --grid:#18262A;
+  --accent:#6CC0BA; --accent-ink:#0B1A1A; --accent-soft:#1A3533;
+  --exam:#9AA6E8; --exam-soft:#222A49;
+  --pl:#E592A6; --pl-soft:#3A2129; --ma:#82AAE8; --ma-soft:#1C2B40; --en:#7DC796; --en-soft:#1B3224;
+  --ok:#6DCC93; --ok-soft:#173326; --bad:#EE8C7D; --bad-soft:#3B1E1A; --warn:#E3B45E; --warn-soft:#382A12;
+  color-scheme:dark }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:16px}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{animation:none!important; transition:none!important} }
+body{background:var(--bg); color:var(--ink); font-family:var(--f-ui); font-size:16px; line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left,0px)); padding-right:max(16px, env(safe-area-inset-right,0px)); padding-block:0 64px}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:4px}
+
+.mast{margin-inline:calc(-1 * max(16px, env(safe-area-inset-left,0px)));
+  padding:56px max(16px, env(safe-area-inset-right,0px)) 40px max(16px, env(safe-area-inset-left,0px));
+  background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size:20px 20px; border-bottom:1px solid var(--line)}
+.mast-in{max-width:1180px; margin:0 auto}
+.eyebrow{font-family:var(--f-mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+h1{font-family:var(--f-display); font-weight:700; font-size:clamp(40px, 7vw, 76px); line-height:1; letter-spacing:-.02em; margin:12px 0 16px; text-wrap:balance}
+h1 .eight{color:var(--accent)}
+.lede{max-width:64ch; font-size:18px; color:var(--ink); margin:0}
+.meta{display:flex; flex-wrap:wrap; gap:8px; margin-top:20px}
+.chip{display:inline-flex; align-items:center; gap:6px; font-size:13px; padding:3px 10px; border-radius:999px; border:1px solid var(--line); background:var(--surface); color:var(--muted)}
+.chip b{color:var(--ink); font-weight:700}
+
+.wrap{max-width:1180px; margin:0 auto; display:grid; grid-template-columns:200px minmax(0,1fr); gap:48px; padding-top:40px}
+nav.toc{position:sticky; top:calc(16px + env(safe-area-inset-top,0px)); align-self:start; font-size:14px}
+nav.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+nav.toc a{display:block; padding:5px 10px; border-radius:var(--r-s); color:var(--muted); text-decoration:none}
+nav.toc a:hover{background:var(--sunk); color:var(--ink)}
+nav.toc .grp{font-family:var(--f-mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:14px 10px 4px}
+main{min-width:0}
+section{padding-block:8px 40px; border-bottom:1px solid var(--line); margin-bottom:40px}
+section:last-child{border-bottom:0}
+h2{font-family:var(--f-display); font-size:32px; line-height:1.15; letter-spacing:-.01em; margin:0 0 8px; text-wrap:balance}
+h3{font-family:var(--f-display); font-size:21px; line-height:1.25; margin:32px 0 8px; text-wrap:balance}
+h4{font-size:13px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:20px 0 8px}
+p, li{max-width:68ch}
+.sub{color:var(--muted); margin-top:0}
+.num{font-family:var(--f-mono); font-size:13px; color:var(--accent); margin-right:8px}
+code, .mono{font-family:var(--f-mono); font-size:.88em}
+code{background:var(--sunk); padding:1px 5px; border-radius:4px}
+
+.principles{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:16px; margin-top:20px}
+.pr{background:var(--surface); border:1px solid var(--line); border-radius:var(--r-m); padding:18px 20px}
+.pr h3{margin:0 0 6px; font-size:18px}
+.pr p{margin:0; font-size:15px; color:var(--muted)}
+
+table{border-collapse:collapse; width:100%; font-size:14.5px}
+.tbl{overflow-x:auto; border:1px solid var(--line); border-radius:var(--r-m); background:var(--surface)}
+th, td{text-align:left; padding:9px 14px; border-bottom:1px solid var(--line); vertical-align:top}
+th{font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); font-weight:700; background:var(--sunk)}
+tr:last-child td{border-bottom:0}
+td.n{font-variant-numeric:tabular-nums; font-family:var(--f-mono); font-size:13px; white-space:nowrap}
+
+.swatches{display:grid; grid-template-columns:repeat(auto-fill, minmax(150px,1fr)); gap:12px}
+.sw{border:1px solid var(--line); border-radius:var(--r-m); overflow:hidden; background:var(--surface)}
+.sw .c{height:56px; border-bottom:1px solid var(--line)}
+.sw .l{padding:8px 10px; font-size:13px; line-height:1.35}
+.sw .l b{display:block}
+.sw .l span{font-family:var(--f-mono); font-size:11.5px; color:var(--muted)}
+
+.subjects{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:12px}
+.subj{border-radius:var(--r-m); padding:16px 18px; border:1px solid var(--line); background:var(--surface); display:grid; gap:6px}
+.subj .tag{display:inline-flex; align-self:start; justify-self:start; font-size:12px; font-weight:700; padding:2px 9px; border-radius:999px}
+.subj.pl .tag{background:var(--pl-soft); color:var(--pl)} .subj.ma .tag{background:var(--ma-soft); color:var(--ma)} .subj.en .tag{background:var(--en-soft); color:var(--en)}
+.subj .t{font-family:var(--f-display); font-size:22px; font-weight:700}
+.subj .s{font-size:14px; color:var(--muted)}
+.subj .bar{height:6px; border-radius:3px; background:var(--sunk); overflow:hidden}
+.subj .bar i{display:block; height:100%}
+.subj.pl .bar i{background:var(--pl); width:58%} .subj.ma .bar i{background:var(--ma); width:61%} .subj.en .bar i{background:var(--en); width:74%}
+
+.modes{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:16px}
+.shell{border-radius:var(--r-l); border:1px solid var(--line); overflow:hidden; background:var(--surface)}
+.shell .top{display:flex; justify-content:space-between; align-items:center; gap:12px; padding:10px 16px; font-size:14px; font-weight:700}
+.shell.practice .top{background:var(--accent-soft); color:var(--accent)}
+.shell.exam .top{background:var(--exam); color:var(--surface)}
+.shell .body{padding:16px; font-size:14.5px; color:var(--muted)}
+.shell .body ul{margin:0; padding-left:18px}
+
+.type-spec{display:grid; gap:0; border:1px solid var(--line); border-radius:var(--r-m); background:var(--surface); overflow:hidden}
+.ts{display:grid; grid-template-columns:150px minmax(0,1fr); gap:16px; padding:14px 18px; border-bottom:1px solid var(--line); align-items:baseline}
+.ts:last-child{border-bottom:0}
+.ts .k{font-family:var(--f-mono); font-size:12px; color:var(--muted)}
+.ts .k b{display:block; color:var(--ink); font-family:var(--f-ui); font-size:13px}
+.ts .v{min-width:0; overflow-wrap:anywhere}
+
+.gallery{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:16px}
+.comp{background:var(--surface); border:1px solid var(--line); border-radius:var(--r-m); padding:16px 18px; min-width:0}
+.comp h4{margin-top:0}
+.opt{display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:var(--r-s); border:1.5px solid var(--line); margin-bottom:8px; font-size:15px; background:var(--surface)}
+.opt .k{width:26px; height:26px; flex:none; display:grid; place-items:center; border-radius:50%; border:1.5px solid var(--line); font-weight:700; font-size:13px}
+.opt .st{margin-left:auto; font-size:12.5px; font-weight:700}
+.opt.sel{border-color:var(--accent); background:var(--accent-soft)} .opt.sel .k{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
+.opt.ok{border-color:var(--ok); background:var(--ok-soft)} .opt.ok .k{background:var(--ok); border-color:var(--ok); color:var(--surface)} .opt.ok .st{color:var(--ok)}
+.opt.bad{border-color:var(--bad); background:var(--bad-soft)} .opt.bad .k{border-color:var(--bad); color:var(--bad)} .opt.bad .st{color:var(--bad)}
+.opt.rev{border-style:dashed; border-color:var(--ok)} .opt.rev .st{color:var(--ok)}
+.timers{display:flex; flex-wrap:wrap; gap:8px}
+.timer{font-family:var(--f-mono); font-variant-numeric:tabular-nums; font-weight:600; font-size:15px; padding:6px 12px; border-radius:999px; border:1.5px solid var(--line)}
+.timer.n{color:var(--ink)} .timer.w{color:var(--warn); background:var(--warn-soft); border-color:var(--warn)} .timer.c{color:var(--bad); background:var(--bad-soft); border-color:var(--bad)}
+.timer.sw{color:var(--accent); border-style:dashed}
+.qmap{display:grid; grid-template-columns:repeat(7, 34px); gap:6px}
+.qmap span{height:34px; display:grid; place-items:center; border-radius:var(--r-s); font-family:var(--f-mono); font-size:13px; border:1.5px solid var(--line); position:relative}
+.qmap .a{background:var(--sunk); color:var(--ink); border-color:var(--sunk)}
+.qmap .cur{border-color:var(--exam); color:var(--exam); font-weight:600}
+.qmap .f::after{content:""; position:absolute; top:-4px; right:-4px; width:9px; height:9px; border-radius:50%; background:var(--warn); border:2px solid var(--surface)}
+.legend{display:flex; flex-wrap:wrap; gap:14px; font-size:12.5px; color:var(--muted); margin-top:10px}
+.player{border:1px solid var(--line); border-radius:var(--r-m); padding:12px; display:grid; gap:10px; background:var(--bg)}
+.player .row{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+.pbtn{width:36px; height:36px; border-radius:50%; display:grid; place-items:center; background:var(--accent); color:var(--accent-ink); font-size:13px; flex:none; border:0}
+.track{flex:1; min-width:120px; height:6px; border-radius:3px; background:var(--line); position:relative}
+.track i{position:absolute; inset:0 auto 0 0; width:38%; border-radius:3px; background:var(--accent)}
+.track.locked i{background:var(--exam); width:59%}
+.seg{font-family:var(--f-mono); font-size:12px; padding:3px 8px; border-radius:var(--r-s); border:1px solid var(--line); color:var(--muted)}
+.seg.on{border-color:var(--accent); color:var(--accent); background:var(--accent-soft)}
+.live{display:inline-flex; align-items:center; gap:6px; font-size:12.5px; font-weight:700; color:var(--exam)}
+.live::before{content:""; width:8px; height:8px; border-radius:50%; background:var(--bad)}
+.crit{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px 12px; align-items:center; font-size:14.5px}
+.pips{display:flex; gap:4px}
+.pips b{width:28px; height:28px; display:grid; place-items:center; border-radius:var(--r-s); border:1.5px solid var(--line); font-family:var(--f-mono); font-size:12.5px; font-weight:400; color:var(--muted)}
+.pips b.on{background:var(--accent); border-color:var(--accent); color:var(--accent-ink); font-weight:600}
+.pips b.ai{border-style:dashed; border-color:var(--exam); color:var(--exam)}
+.reading{font-family:var(--f-read); font-size:19px; line-height:1.7; max-width:60ch; background:var(--surface); border:1px solid var(--line); border-radius:var(--r-m); padding:20px 24px 20px 52px}
+.reading .ln{position:absolute; left:-36px; width:26px; text-align:right; top:4px; font-family:var(--f-mono); font-size:11px; color:var(--muted); padding-right:8px}
+.reading p{margin:0; position:relative}
+.reading mark{background:var(--warn-soft); color:inherit; border-bottom:2px solid var(--warn); padding:0 1px}
+.math{font-family:var(--f-read); font-size:20px; font-style:italic; letter-spacing:.01em}
+
+.wf{margin:14px 0 6px; overflow-x:auto; background:var(--surface); border:1px solid var(--line); border-radius:var(--r-m); padding:16px 18px}
+.wf pre{margin:0; font-family:var(--f-mono); font-size:12.5px; line-height:1.45; color:var(--ink); white-space:pre; width:max-content}
+.notes{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:4px 28px; margin-top:12px}
+.notes ul{margin:0; padding-left:18px}
+.notes li{font-size:15px; margin-bottom:6px}
+.callout{border-left:3px solid var(--accent); background:var(--accent-soft); border-radius:0 var(--r-s) var(--r-s) 0; padding:12px 16px; margin:16px 0; font-size:15px; max-width:72ch}
+.callout.warn{border-color:var(--warn); background:var(--warn-soft)}
+.callout b{display:block; margin-bottom:2px}
+.screen-tag{display:inline-block; font-family:var(--f-mono); font-size:12px; color:var(--muted); border:1px solid var(--line); border-radius:var(--r-s); padding:1px 7px; margin-left:8px; vertical-align:middle}
+
+@media (max-width: 860px){
+  .wrap{grid-template-columns:minmax(0,1fr); gap:8px; padding-top:20px}
+  nav.toc{position:static}
+  nav.toc ol{display:flex; flex-wrap:nowrap; overflow-x:auto; gap:6px; padding-bottom:6px}
+  nav.toc li.grp{display:none}
+  nav.toc a{white-space:nowrap; border:1px solid var(--line); background:var(--surface)}
+  .ts{grid-template-columns:minmax(0,1fr); gap:4px}
+
+
+}
+</style>
+<header class="mast">
+  <div class="mast-in">
+    <div class="eyebrow">Model danych · wersja 1 · 16 listopada 2026</div>
+    <h1>Ósemka<span class="eight">.</span> dane</h1>
+    <p class="lede">How CKE sheets, keys and recordings become structured tasks, how every answer is scored, and what the analytics are computed from. Everything here was checked against the six sessions in your folders.</p>
+    <div class="meta">
+      <span class="chip">Polski <b>45</b> pkt · 18–19 zadań</span>
+      <span class="chip">Matematyka <b>30</b> pkt · 20–21 zadań</span>
+      <span class="chip">Angielski <b>55</b> pkt · 14 zadań</span>
+      <span class="chip">Schema: <b>design/schema.ts</b></span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+<nav class="toc" aria-label="Spis treści">
+  <ol>
+    <li class="grp">Fakty</li>
+    <li><a href="#fakty">What the exams contain</a></li>
+    <li><a href="#zasady">Modeling rules</a></li>
+    <li class="grp">Model</li>
+    <li><a href="#mapa">Entity map</a></li>
+    <li><a href="#tresc">Content layer</a></li>
+    <li><a href="#ocena">Scoring engine</a></li>
+    <li><a href="#uczen">Student layer</a></li>
+    <li><a href="#analityka">Analytics</a></li>
+    <li class="grp">Import</li>
+    <li><a href="#import">Pipeline</a></li>
+    <li><a href="#audio">Audio cue map</a></li>
+    <li><a href="#walidacja">Validation</a></li>
+    <li><a href="#pliki">Storage layout</a></li>
+    <li class="grp">Dalej</li>
+    <li><a href="#schemat">Full schema</a></li>
+    <li><a href="#dalej">Open questions</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<section id="fakty">
+  <div class="eyebrow">01 · Verified</div>
+  <h2>What the exams actually contain</h2>
+  <p class="sub">Counted from the PDFs. Two numbers differ from my first design page, which used placeholder totals of 60 points; that page is now corrected.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Subject</th><th>Maj 2025</th><th>Maj 2026</th><th>Formats found</th><th>Scoring details that affect the model</th></tr></thead>
+    <tbody>
+      <tr><td>Język polski</td><td class="n">19 zad. · 45 pkt</td><td class="n">18 zad. · 45 pkt</td><td>single choice, true/false, choice + reason, short open answers, essay</td><td>Essay 0–20 with 8 criteria; criterion 1 = 0 zeroes the rest; spelling and punctuation scored from error counts, with separate dyslexia thresholds.</td></tr>
+      <tr><td>Matematyka</td><td class="n">21 zad. · 30 pkt</td><td class="n">20 zad. · 30 pkt</td><td>single choice, true/false, choice + reason, worked solutions</td><td>Open tasks 0–2 or 0–3; each level lists alternative paths joined by “LUB”; the key includes sample solutions scored 2 or 3 pts. Answers differ between sheet versions X and Y.</td></tr>
+      <tr><td>Język angielski</td><td class="n">14 zad. · 55 pkt</td><td class="n">14 zad. · 55 pkt</td><td>single choice, matching, gap fill, short answers, e-mail</td><td>Gap answers come with accepted and rejected example lists. Language-use tasks need exact spelling; listening and reading only need the message. E-mail 0–10, content scored from a 2-D table.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout warn"><b>Task counts change between years.</b> Nothing in the app may assume “21 tasks” or “open tasks start at 16”. Everything is read from the session data.</div>
+</section>
+
+<section id="zasady">
+  <div class="eyebrow">02 · Principles</div>
+  <h2>Five modeling rules</h2>
+  <div class="principles">
+    <div class="pr"><h3>The item is the unit</h3><p>Scores, skill tags and analytics live on items (“8.1”, “2.3”), not tasks. English task 1 alone tests four different requirements across its items.</p></div>
+    <div class="pr"><h3>Content is immutable</h3><p>A published session never changes. A re-import creates a new content version, and each attempt keeps the version it was taken on, so old scores never shift.</p></div>
+    <div class="pr"><h3>Every point has a source</h3><p>Each score records whether it came from auto-checking, the student, or an accepted AI suggestion. Analytics can filter on this.</p></div>
+    <div class="pr"><h3>Always traceable to paper</h3><p>Every task, stimulus and key entry carries a page reference to the original PDF, for students and for reviewers.</p></div>
+    <div class="pr"><h3>Derived data is computed</h3><p>Skill stats, readiness and trends are computed from responses and scores. Nothing in analytics is stored by hand.</p></div>
+  </div>
+</section>
+
+<section id="mapa">
+  <div class="eyebrow">03 · Model</div>
+  <h2>Entity map</h2>
+  <p class="sub">Upper half: content built by the importer. Lower half: student data created while practising.</p>
+  <div class="wf"><pre class="mermaid">
+erDiagram
+  SUBJECT ||--o{ SESSION : has
+  SESSION ||--|{ SOURCE_FILE : "built from"
+  SESSION ||--|{ TASK : contains
+  SESSION ||--o{ STIMULUS : contains
+  TASK }o--o{ STIMULUS : uses
+  TASK ||--|{ ITEM : "scored as"
+  ITEM }o--|{ SKILL_TAG : "tagged with"
+  ITEM }o--o| RUBRIC : "graded by"
+  STIMULUS ||--o{ AUDIO_SEGMENT : "cut into"
+  SESSION ||--o{ ATTEMPT : "taken as"
+  ATTEMPT ||--o{ RESPONSE : records
+  ATTEMPT ||--o{ ITEM_SCORE : earns
+  ATTEMPT ||--o{ ATTEMPT_EVENT : logs
+  ITEM ||--o{ RESPONSE : "answered by"
+  ITEM ||--o{ ITEM_SCORE : "scored by"
+</pre></div>
+</section>
+
+<section id="tresc">
+  <div class="eyebrow">04 · Model</div>
+  <h2>Content layer</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Entity</th><th>One per</th><th>Key fields</th><th>Why it exists</th></tr></thead>
+    <tbody>
+      <tr><td><b>Session</b></td><td>folder, e.g. <code>Matematyka/Maj 2026</code></td><td>year, month, term, formCode, versions, maxPoints, contentVersion, status</td><td>The exam browser card and the unit a simulation is timed on.</td></tr>
+      <tr><td><b>SourceFile</b></td><td>file in the folder</td><td>kind, path, sha256, pages, durationSec</td><td>Detects changed files on re-import, and opens the original page.</td></tr>
+      <tr><td><b>Stimulus</b></td><td>shared text, figure or recording</td><td>lines[], lineNumbering, asset, audioSegmentIds</td><td>Several tasks use one passage; text stored as lines keeps line numbers exact.</td></tr>
+      <tr><td><b>Task</b></td><td>“Zadanie N. (0–M)”</td><td>number, maxPoints, instruction, format, skillTags</td><td>What the student sees as one question.</td></tr>
+      <tr><td><b>Item</b></td><td>scored sub-part</td><td>label, maxPoints, response, key by version, scoring</td><td>What gets checked and counted.</td></tr>
+      <tr><td><b>Rubric</b></td><td>essay or e-mail</td><td>criteria (levels, error-count, matrix), gates</td><td>Self-grading screen and point total.</td></tr>
+      <tr><td><b>SkillTag</b></td><td>curriculum requirement</td><td>general, specific, stage, area</td><td>Gap analysis in the CKE's own terms.</td></tr>
+      <tr><td><b>AudioSegment</b></td><td>piece of the recording</td><td>start/end, role, taskNumber, textLabel</td><td>Practice chapters; exam mode ignores them.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Example: English gap fill 4.1 (Maj 2026)</h3>
+  <p class="sub">Accepted and rejected answers are copied from the key, including the reasons.</p>
+  <div class="wf"><pre>{
+  "id": "en-2026-04-1",
+  "label": "4.1",
+  "maxPoints": 1,
+  "response": { "type": "short_text", "gaps": 1, "language": "en" },
+  "key": {
+    "X": { "type": "text",
+           "expected": ["twenty", "20"],
+           "accepted": ["twenty pounds", "20£", "£20", "the 20", "only twenty"],
+           "rejected": [] }
+  },
+  "scoring": { "type": "text_match", "strictness": "communicative" },
+  "skillTags": ["en-II.5"]
+}</pre></div>
+
+  <h3>Example: Math 16 (0–3), levels with alternative paths</h3>
+  <div class="wf"><pre>{
+  "id": "ma-2026-16",
+  "label": "16",
+  "maxPoints": 3,
+  "response": { "type": "worked_solution" },
+  "key": { "X": { "type": "model_solution", "solution": "v = \\frac{48\\,km}{40\\,min} = 72\\,km/h ..." } },
+  "scoring": { "type": "levels", "levels": [
+    { "points": 3, "paths": ["prędkość 72 km/h i wniosek, że 75 km trwa dłużej niż 1 h",
+                             "droga w 1 h = 72 km i ten sam wniosek",
+                             "czas 62,5 min i wniosek 62,5 min > 1 h"] },
+    { "points": 2, "paths": ["v = 48 km / 40 min oraz 123 km − 48 km", "..."] },
+    { "points": 1, "paths": ["v = 48 km / 40 min", "123 km − 48 km", "..."] },
+    { "points": 0, "paths": ["rozwiązanie niespełniające kryteriów na 1 pkt"] }
+  ]},
+  "skillTags": ["ma-XII.9", "ma-gen-IV"],
+  "exemplars": [{ "points": 3, "content": "...", "ref": { "source": "klucz", "page": 14 } }]
+}</pre></div>
+</section>
+
+<section id="ocena">
+  <div class="eyebrow">05 · Model</div>
+  <h2>Scoring engine</h2>
+  <p class="sub">Each response type maps to one rule. Only some can be fully automatic; the rest go to the self-grading queue.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Response type</th><th>Where</th><th>Rule</th><th>Checked by</th></tr></thead>
+    <tbody>
+      <tr><td>single_choice</td><td>all</td><td>match key for the attempt's version</td><td>auto</td></tr>
+      <tr><td>true_false</td><td>PL, MA</td><td>all_or_nothing (“oba zdania muszą być dobrze”)</td><td>auto</td></tr>
+      <tr><td>choice_with_reason</td><td>PL, MA</td><td>all_or_nothing on choice + reason</td><td>auto</td></tr>
+      <tr><td>matching</td><td>EN</td><td>per_part, 1 pt per slot</td><td>auto</td></tr>
+      <tr><td>short_text</td><td>EN, PL</td><td>text_match with strictness</td><td>auto when listed, otherwise self</td></tr>
+      <tr><td>worked_solution</td><td>MA</td><td>levels with LUB paths + exemplars</td><td>self, AI optional</td></tr>
+      <tr><td>extended_text</td><td>PL essay, EN e-mail</td><td>rubric with gates, error counts, matrix</td><td>self, AI optional</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Short-answer matching</h3>
+  <ol>
+    <li>Normalize: trim, collapse spaces, unify quotes and apostrophes, fold case (the key accepts capital/lowercase swaps).</li>
+    <li>Answer matches an expected or accepted answer: <b>correct</b>, scored automatically.</li>
+    <li>Answer matches a rejected example: <b>incorrect</b>, and the key's reason is shown.</li>
+    <li>Anything else: <b>unresolved</b>. The student compares it with the key, optionally with an AI suggestion, and the score is saved as self-graded.</li>
+  </ol>
+  <div class="callout"><b>No fuzzy auto-credit.</b> The key itself rejects “snakes” for “snacks”, which is one letter apart. Near-matches are only used to show the closest accepted answer during self-check, never to award points.</div>
+
+  <h3>Rubric types</h3>
+  <div class="gallery">
+    <div class="comp">
+      <h4>Levels · PL essay, criteria 1–6</h4>
+      <p style="margin:0;font-size:14.5px">Student picks a level, each with the key's descriptor. Gate: <i>Realizacja tematu wypowiedzi</i> = 0 sets all other criteria to 0.</p>
+    </div>
+    <div class="comp">
+      <h4>Error count · PL criteria 7–8</h4>
+      <div class="tbl"><table>
+        <thead><tr><th>Ortografia</th><th>standard</th><th>dysleksja</th></tr></thead>
+        <tbody><tr><td class="n">2 pkt</td><td class="n">≤ 1 błąd</td><td class="n">≤ 3</td></tr><tr><td class="n">1 pkt</td><td class="n">2–3</td><td class="n">4–6</td></tr><tr><td class="n">0 pkt</td><td class="n">≥ 4</td><td class="n">≥ 7</td></tr></tbody>
+      </table></div>
+    </div>
+    <div class="comp">
+      <h4>Matrix · EN e-mail, Treść 0–4</h4>
+      <div class="tbl"><table>
+        <thead><tr><th>Referenced ↓ / developed →</th><th>3</th><th>2</th><th>1</th><th>0</th></tr></thead>
+        <tbody><tr><td class="n">3</td><td class="n">4</td><td class="n">3</td><td class="n">2</td><td class="n">1</td></tr><tr><td class="n">2</td><td class="n">–</td><td class="n">2</td><td class="n">1</td><td class="n">1</td></tr></tbody>
+      </table></div>
+      <p style="margin:8px 0 0;font-size:13px;color:var(--muted)">The student ticks which of the 3 bullet points they mentioned and which they developed; the table gives the points.</p>
+    </div>
+  </div>
+</section>
+
+<section id="uczen">
+  <div class="eyebrow">06 · Model</div>
+  <h2>Student layer</h2>
+  <div class="wf"><pre>
+ Attempt lifecycle
+
+   [in_progress] ──Oddaj / czas minął──► [submitted] ──ostatnie zadanie otwarte ocenione──► [graded]
+        │  ▲                                  │
+   wyjście│  │Wznów (tylko nauka)            wynik tymczasowy: punkty auto
+        ▼  │                                  + „?” przy zadaniach do samooceny
+     (zapisane)
+</pre></div>
+  <div class="notes">
+    <ul>
+      <li><b>Deadline-based timer.</b> A simulation stores <code>deadlineAt</code> at start. Remaining time is always deadline minus now, so reloading, closing the tab or a sleeping laptop cannot add time. On reopen after the deadline, the attempt is submitted with <code>submitReason: "time_up"</code>.</li>
+      <li><b>Accommodation snapshot.</b> Extended time and dyslexia thresholds are copied into the attempt at start, so changing settings later doesn't rescore old attempts.</li>
+    </ul>
+    <ul>
+      <li><b>Responses save on every change</b>, simulation mode every 5 s at most. Flags, hints used, highlights and time per item are stored with the answer.</li>
+      <li><b>Event log</b> is append-only: views, checks, focus changes, audio play and seek. It feeds time-per-task stats and proves that exam audio rules were followed.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="analityka">
+  <div class="eyebrow">07 · Model</div>
+  <h2>How the analytics are computed</h2>
+  <div class="type-spec">
+    <div class="ts"><div class="k"><b>Skill result</b>per tag, per window</div><div class="v mono" style="font-size:14px">pct = Σ earned / Σ maxPoints over scored items with the tag<br>n &lt; 4 → “za mało danych”; unscored items are left out</div></div>
+    <div class="ts"><div class="k"><b>Status</b></div><div class="v">opanowane ≥ 80 % · do pracy 50–79 % · słabe &lt; 50 %</div></div>
+    <div class="ts"><div class="k"><b>Improvement</b></div><div class="v">Change vs the previous window of the same length, reported only when both windows have n ≥ 4.</div></div>
+    <div class="ts"><div class="k"><b>Subject estimate</b></div><div class="v mono" style="font-size:14px">weighted mean of the last 3 attempts' %<br>weights: recency 3·2·1 × mode (symulacja 1.0, nauka 0.5) × share of the sheet covered</div></div>
+    <div class="ts"><div class="k"><b>Readiness</b></div><div class="v">Mean of the 3 subject estimates. Confidence is high when every subject has a simulation in the last 30 days, medium when two do, low otherwise.</div></div>
+    <div class="ts"><div class="k"><b>Next step</b></div><div class="v mono" style="font-size:14px">recoverable(area) = avg maxPoints per session in area × (1 − pct)<br>pick the area with the highest value and n ≥ 4</div></div>
+  </div>
+
+  <h3>From requirement to display area</h3>
+  <p class="sub">Tags store the key's wording exactly. A hand-kept table groups them into the areas the student sees.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Requirement in the key</th><th>Display area</th></tr></thead>
+    <tbody>
+      <tr><td>MA · V. Obliczenia procentowe. 5) stosuje obliczenia procentowe…</td><td>Procenty</td></tr>
+      <tr><td>MA · XII. Obliczenia praktyczne. 9) …prędkość przy danej drodze i czasie…</td><td>Obliczenia praktyczne</td></tr>
+      <tr><td>MA · XIII. Odczytywanie danych i elementy statystyki opisowej. 1)…</td><td>Statystyka</td></tr>
+      <tr><td>EN · II.5) Uczeń znajduje w wypowiedzi określone informacje.</td><td>Rozumienie ze słuchu</td></tr>
+      <tr><td>PL · II. Kształcenie językowe.</td><td>Kształcenie językowe</td></tr>
+    </tbody>
+  </table></div>
+  <p style="font-size:14px;color:var(--muted)">A second, fixed dimension is the format: closed vs open, plus the English section (listening, language functions, reading, language use, writing).</p>
+</section>
+
+<section id="import">
+  <div class="eyebrow">08 · Import</div>
+  <h2>From PDF to published session</h2>
+  <p class="sub">The PDFs have a real text layer, so most of the structure can be found reliably. Formulas and figures are the exception: in the text layer, fractions like 48 km / 40 min break across lines. Those parts use page images and an AI vision model, and everything is checked by a person before it is published.</p>
+  <div class="wf"><pre>
+  /[Przedmiot]/[Miesiąc Rok]/*.pdf, *.mp3
+        │
+  1  ODKRYJ ········ pliki → rodzaj, sha256, strony, czas nagrania          automatycznie
+        │
+  2  WYODRĘBNIJ ···· tekst z każdej strony + obraz strony (200 dpi)          automatycznie
+        │
+  3  PODZIEL ······· kotwice „Zadanie N. (0–M)” w arkuszu i kluczu           automatycznie
+        │            suma punktów musi się zgadzać (45 / 30 / 55)
+        │
+  4  STRUKTURA ····· zadania, opcje, teksty, wzory (LaTeX), rysunki        AI + schemat
+        │
+  5  KLUCZ ········· odpowiedzi X/Y, poziomy, przykłady, wymagania         AI + schemat
+        │
+  6  NAGRANIE ······ transkrypcja ↔ mp3 → segmenty (tylko angielski)         ASR + AI
+        │
+  7  SPRAWDŹ ······· reguły walidacji, raport ostrzeżeń                      automatycznie
+        │
+  8  PRZEGLĄD ······ PDF obok wyniku, poprawki, „Opublikuj”                  człowiek
+        ▼
+  content/&lt;przedmiot&gt;/&lt;rrrr-mm-termin&gt;/session.json   (status: published)
+</pre></div>
+  <div class="tbl"><table>
+    <thead><tr><th>Stage</th><th>Details</th></tr></thead>
+    <tbody>
+      <tr><td>1 Odkryj</td><td>Recognizes <code>arkusz</code>, <code>arkusz-zadania-otwarte</code>, <code>klucz</code>, <code>odpowiedzi</code>, <code>zasady_oceniania</code>, <code>transkrypcja</code>, <code>*.mp3</code>. Parses Polish month names (“Maj 2026” → 2026-05). Unchanged files (same sha256) are skipped on re-import.</td></tr>
+      <tr><td>3 Podziel</td><td>Deterministic and cheap, and it catches problems early. A first regex pass on the 2025 math key found 20 of 21 tasks, exactly the kind of mismatch this stage must stop on.</td></tr>
+      <tr><td>4–5 AI</td><td>One call per task: page image + its text + the JSON schema. Output is validated against <code>schema.ts</code>; failures are retried, then flagged for review. Reads the key header for exam date, form code and versions.</td></tr>
+      <tr><td>8 Przegląd</td><td>A reviewer screen shows the PDF page next to the rendered task, with the warnings from stage 7. About 20 tasks per session, so a full review takes roughly an hour per session.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="audio">
+  <div class="eyebrow">09 · Import</div>
+  <h2>Audio cue map</h2>
+  <p class="sub">The recording is about 21 minutes and contains every text twice, plus instructions and pauses. Practice mode needs to know where each piece starts.</p>
+  <ol>
+    <li>Transcribe the mp3 with word-level timestamps using whisper.cpp, which runs locally on Windows and macOS.</li>
+    <li>Align the result with <code>transkrypcja.pdf</code>, which labels “Zadanie 1. Tekst 1” and so on.</li>
+    <li>Each text is found twice: the first match is <code>play1</code>, the second <code>play2</code>. Silent gaps between them become <code>pause</code>; Polish instructions become <code>instruction</code>.</li>
+    <li>The reviewer checks the boundaries on a waveform and nudges them if needed.</li>
+  </ol>
+  <div class="wf"><pre>
+ 0:00 ┃intro┃ instr. Z1 ┃ T1 play1 ┃pause┃ T1 play2 ┃pause┃ T2 play1 ┃ … ┃ instr. Z4 ┃ … ┃ outro ┃ 21:24
+</pre></div>
+  <p style="font-size:14.5px;color:var(--muted)">Simulation mode ignores the segments and plays the file once from 0:00, so it stays faithful even if a boundary is slightly off.</p>
+</section>
+
+<section id="walidacja">
+  <div class="eyebrow">10 · Import</div>
+  <h2>Checks before publishing</h2>
+  <div class="notes">
+    <ul>
+      <li>Sum of task points equals the session total, and each task equals the sum of its items.</li>
+      <li>Task numbers run 1…N without gaps, and the sheet and key list the same tasks.</li>
+      <li>Every item has a key for each sheet version, or is marked as the same for all versions.</li>
+      <li>Choice keys point to options that exist.</li>
+      <li>Rubric criteria add up to the item's points (20 for the essay, 10 for the e-mail).</li>
+    </ul>
+    <ul>
+      <li>Every item has at least one skill tag, and every tag has a display area.</li>
+      <li>Page references fall within the file's page count; every figure file exists.</li>
+      <li>Line numbers cited in tasks exist in the stimulus.</li>
+      <li>Audio segments are sorted, don't overlap, end before the file does, and every listening task has both plays.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="pliki">
+  <div class="eyebrow">11 · Import</div>
+  <h2>Storage layout</h2>
+  <p class="sub">Content as versioned JSON next to your source folders; student data in a database (choice of database comes with the tech stack).</p>
+  <div class="wf"><pre>
+8-class/
+├── Matematyka/Maj 2026/…            source files, untouched
+├── content/
+│   ├── taxonomy/
+│   │   ├── skills.json              SkillTag, shared across sessions
+│   │   └── areas.json               requirement → display area
+│   ├── matematyka/2026-05-glowny/
+│   │   ├── session.json             Session + Stimuli + Tasks + Items
+│   │   ├── rubrics.json
+│   │   ├── assets/                  figures (png/svg), page renders for review
+│   │   └── import-report.json       checks, warnings, reviewer sign-off
+│   └── angielski/2026-05-glowny/
+│       ├── …
+│       └── audio.json               AudioSegment[]
+└── design/schema.ts                 the types on this page
+</pre></div>
+  <div class="callout warn"><b>Licensing.</b> CKE publishes these materials for free download. For personal study that's fine; if the platform is ever offered to other people, check CKE's terms on reusing its sheets and recordings first.</div>
+</section>
+
+<section id="schemat">
+  <div class="eyebrow">12 · Reference</div>
+  <h2>Full schema</h2>
+  <p class="sub">The same file as <code>design/schema.ts</code>.</p>
+  <details>
+    <summary style="cursor:pointer;font-weight:700">Show all types</summary>
+    <div class="wf"><pre>// Ósemka data model, v1 (2026-11-16)
+// Two layers:
+//   CONTENT  - built by the importer from the CKE PDFs/MP3, immutable once published,
+//              versioned by content hash. Stored as JSON files + assets.
+//   STUDENT  - attempts, responses, scores. Every attempt pins a content version.
+// Derived analytics (skill stats, readiness) are computed from STUDENT + CONTENT, never typed in.
+
+// ───────────────────────── CONTENT ─────────────────────────
+
+export type SubjectId = &quot;polski&quot; | &quot;matematyka&quot; | &quot;angielski&quot;;
+export type SheetVersion = &quot;X&quot; | &quot;Y&quot;;             // keys list answers per version
+export type Term = &quot;glowny&quot; | &quot;dodatkowy&quot;;         // termin główny / dodatkowy
+
+export interface Subject {
+  id: SubjectId;
+  name: string;                // &quot;Język polski&quot;
+  examCode: string;            // &quot;OPOP&quot; | &quot;OMAP&quot; | &quot;OJAP&quot; (prefix of form codes)
+  standardMinutes: number;     // 150 | 125 | 110
+  extendedMinutesDefault: number; // 225 | 185 | 165 (editable, confirm vs CKE notice)
+}
+
+/** One exam sitting, e.g. Matematyka · Maj 2026 · termin główny. Maps 1:1 to a folder. */
+export interface Session {
+  id: string;                  // &quot;matematyka-2026-05-glowny&quot;
+  subjectId: SubjectId;
+  year: number;                // 2026
+  month: number;               // 5  (parsed from folder &quot;Maj 2026&quot;)
+  term: Term;                  // from key header, default &quot;glowny&quot;
+  examDate?: string;           // &quot;2026-05-13&quot; (from key header &quot;Termin egzaminu&quot;)
+  formCode: string;            // &quot;OJAP-100&quot; - only the standard form is imported
+  versions: SheetVersion[];    // [&quot;X&quot;,&quot;Y&quot;]
+  maxPoints: number;           // 45 | 30 | 55, must equal sum of tasks
+  taskOrder: string[];         // task ids in sheet order
+  sources: SourceFile[];
+  contentVersion: string;      // sha256 over the normalized session JSON
+  status: &quot;draft&quot; | &quot;reviewed&quot; | &quot;published&quot;;
+}
+
+export type SourceKind =
+  | &quot;arkusz&quot;                 // arkusz.pdf
+  | &quot;karta_otwarte&quot;          // arkusz-zadania-otwarte.pdf (answer sheet for open tasks)
+  | &quot;klucz&quot;                  // klucz.pdf | odpowiedzi.pdf | zasady_oceniania.pdf
+  | &quot;nagranie&quot;               // *.mp3
+  | &quot;transkrypcja&quot;;          // transkrypcja.pdf
+
+export interface SourceFile {
+  kind: SourceKind;
+  /** Relative to the data folder, forward slashes, Unicode NFC: &quot;Matematyka/Maj 2026/klucz.pdf&quot;.
+   *  On disk the name may be NFD (macOS) or NFC (Windows): resolve by comparing NFC forms. */
+  path: string;
+  sha256: string;
+  pages?: number;
+  durationSec?: number;      // audio only
+}
+
+/** Pointer back to the original, used by &quot;Arkusz PDF, s. 6&quot; and by reviewers. */
+export interface PageRef {
+  source: SourceKind;
+  page: number;              // 1-based
+  bbox?: [x: number, y: number, w: number, h: number]; // PDF points, optional crop
+}
+
+/** Shared material that several tasks refer to: a passage, a chart, a recording segment. */
+export interface Stimulus {
+  id: string;                // &quot;pl-2026-tekst-2&quot;
+  kind: &quot;text&quot; | &quot;poem&quot; | &quot;figure&quot; | &quot;table&quot; | &quot;audio&quot;;
+  title?: string;
+  author?: string;           // literary texts
+  /** Text kept as lines so line numbers match the arkusz (&quot;w. 12–14&quot;). */
+  lines?: string[];
+  lineNumbering?: &quot;every&quot; | &quot;every5&quot; | &quot;none&quot;;
+  asset?: string;            // &quot;assets/ma-2026-z7.svg&quot; for figures
+  audioSegmentIds?: string[];
+  ref: PageRef;
+}
+
+/** A numbered task as printed: &quot;Zadanie 8. (0–3)&quot;. */
+export interface Task {
+  id: string;                // &quot;pl-2026-08&quot;
+  sessionId: string;
+  number: number;            // 8
+  maxPoints: number;         // 3  (= sum of its items&#x27; maxPoints)
+  instruction: string;       // polecenie, Markdown + LaTeX
+  stimulusIds: string[];
+  items: Item[];             // at least one
+  format: &quot;zamkniete&quot; | &quot;otwarte&quot;;
+  skillTags: string[];       // inherited by items unless the item overrides
+  section?: string;          // English: &quot;Rozumienie ze słuchu&quot;, ...
+  ref: PageRef;
+}
+
+/** Smallest scored unit: &quot;8.1&quot;, &quot;1.3&quot;, or the whole task when it has no sub-items. */
+export interface Item {
+  id: string;                // &quot;pl-2026-08-1&quot;
+  label: string;             // &quot;8.1&quot;
+  maxPoints: number;
+  prompt?: string;
+  response: ResponseSpec;
+  key: Partial&lt;Record&lt;SheetVersion, KeySpec&gt;&gt;; // version-specific where the key splits
+  scoring: ScoringRule;
+  skillTags?: string[];      // e.g. English 1.1 = II.5, 1.2 = II.4
+  explanation?: string;      // shown in practice mode after checking
+  exemplars?: Exemplar[];    // &quot;Przykładowe rozwiązania ocenione na 3 punkty&quot;
+}
+
+// How the student answers (drives the input component)
+export type ResponseSpec =
+  | { type: &quot;single_choice&quot;; options: Option[] }                 // A–D
+  | { type: &quot;true_false&quot;; statements: Option[] }                 // P/F per statement
+  | { type: &quot;matching&quot;; slots: string[]; options: Option[] }     // 2.1–2.4 → A–E
+  | { type: &quot;choice_with_reason&quot;; choices: Option[]; reasons: Option[] } // A/B + 1/2/3
+  | { type: &quot;short_text&quot;; gaps: number; language: &quot;pl&quot; | &quot;en&quot; } // gap fill, short answer
+  | { type: &quot;worked_solution&quot; }                                  // math open: typed or on paper
+  | { type: &quot;extended_text&quot;; minWords?: number; form?: string }; // essay, e-mail
+
+export interface Option { id: string; text: string; asset?: string }
+
+// What counts as correct
+export type KeySpec =
+  | { type: &quot;choice&quot;; correct: string }                          // &quot;C&quot;
+  | { type: &quot;choices&quot;; correct: Record&lt;string, string&gt; }         // {&quot;P1&quot;:&quot;P&quot;,&quot;P2&quot;:&quot;F&quot;} or {&quot;2.1&quot;:&quot;C&quot;}
+  | { type: &quot;text&quot;; expected: string[]; accepted: string[]; rejected: RejectedExample[] }
+  | { type: &quot;model_solution&quot;; solution: string };                // Markdown + LaTeX
+
+export interface RejectedExample { answer: string; reason: string } // &quot;snakes&quot; - zmienia znaczenie
+
+export type ScoringRule =
+  | { type: &quot;all_or_nothing&quot; }                       // 1 pkt only if every part correct
+  | { type: &quot;per_part&quot;; pointsEach: number }         // English 2.1–2.4: 1 pkt each item
+  | { type: &quot;text_match&quot;; strictness: TextStrictness }
+  | { type: &quot;levels&quot;; levels: Level[] }              // math open 0–3, Polish short open
+  | { type: &quot;rubric&quot;; rubricId: string };            // essay / e-mail
+
+/** English key: środki językowe need full correctness; listening/reading only need the message. */
+export type TextStrictness = &quot;communicative&quot; | &quot;strict_spelling&quot;;
+
+export interface Level {
+  points: number;            // 3, 2, 1, 0
+  /** Alternatives joined by &quot;LUB&quot; in the key; any one satisfies the level. */
+  paths: string[];
+}
+
+export interface Exemplar { points: number; content: string; note?: string; ref: PageRef }
+
+/** Essay (PL zad. 18, 0–20) and e-mail (EN zad. 14, 0–10). */
+export interface Rubric {
+  id: string;
+  maxPoints: number;
+  criteria: Criterion[];
+  /** e.g. &quot;Realizacja tematu = 0 → all other criteria = 0&quot;. */
+  gates: { ifCriterion: string; equals: number; thenAllOthers: number }[];
+}
+
+export type Criterion =
+  | { id: string; name: string; type: &quot;levels&quot;; max: number; levels: Level[] }
+  | {
+      // Ortografia, Interpunkcja: points from an error count, two threshold sets
+      id: string; name: string; type: &quot;error_count&quot;; max: number;
+      thresholds: { standard: Threshold[]; dyslexia: Threshold[] };
+    }
+  | {
+      // EN Treść: points from (podpunkty referenced × podpunkty developed)
+      id: string; name: string; type: &quot;matrix&quot;; max: number;
+      rows: string; cols: string; table: Record&lt;string, Record&lt;string, number&gt;&gt;;
+    };
+
+export interface Threshold { maxErrors: number; points: number } // first match wins
+
+/** A curriculum requirement exactly as the key prints it, plus a display area for analytics. */
+export interface SkillTag {
+  id: string;                // &quot;ma-XII.9&quot; | &quot;en-II.5&quot; | &quot;pl-I&quot;
+  subjectId: SubjectId;
+  stage?: &quot;IV–VI&quot; | &quot;VII–VIII&quot;;
+  general: string;           // &quot;IV. Rozumowanie i argumentacja.&quot;
+  specific?: string;         // &quot;XII. Obliczenia praktyczne. 9) ... prędkość ...&quot;
+  area: string;              // display group, mapped by hand: &quot;Obliczenia praktyczne&quot;
+}
+
+/** Listening: one entry per contiguous piece of the full CKE recording. */
+export interface AudioSegment {
+  id: string;                // &quot;en-2026-z1-t2-play1&quot;
+  recording: string;         // SourceFile path
+  startSec: number;
+  endSec: number;
+  role: &quot;intro&quot; | &quot;instruction&quot; | &quot;play1&quot; | &quot;pause&quot; | &quot;play2&quot; | &quot;outro&quot;;
+  taskNumber?: number;       // 1
+  textLabel?: string;        // &quot;Tekst 2&quot;
+  transcriptLines?: string[];
+}
+
+// ───────────────────────── STUDENT ─────────────────────────
+
+export interface StudentSettings {
+  theme: &quot;system&quot; | &quot;light&quot; | &quot;dark&quot;;
+  fontScale: number;                 // 0.9–1.4
+  readingFont: &quot;literata&quot; | &quot;sans&quot; | &quot;dyslexic&quot;;
+  reduceMotion: boolean;
+  extendedTime: boolean;
+  extendedMinutes: Record&lt;SubjectId, number&gt;;
+  dyslexiaCriteria: boolean;         // switches error_count thresholds
+  defaultPlaybackRate: 0.75 | 0.9 | 1;
+}
+
+export type Mode = &quot;nauka&quot; | &quot;symulacja&quot;;
+
+export interface Attempt {
+  id: string;
+  sessionId: string;
+  contentVersion: string;            // pinned: later re-imports never change old scores
+  version: SheetVersion;             // which key column applies
+  mode: Mode;
+  scope: &quot;all&quot; | &quot;closed&quot; | &quot;open&quot; | &quot;flagged&quot; | { taskIds: string[] };
+  status: &quot;in_progress&quot; | &quot;submitted&quot; | &quot;graded&quot;;   // graded = no open item left unscored
+  startedAt: string;                 // ISO
+  /** Simulation only. The countdown is deadline-based, so reloads and closed tabs keep time. */
+  deadlineAt?: string;
+  timeLimitMin?: number;             // 125 or 185, copied from settings at start
+  accommodations: { extendedTime: boolean; dyslexiaCriteria: boolean }; // snapshot
+  submittedAt?: string;
+  submitReason?: &quot;student&quot; | &quot;time_up&quot;;
+  activeMs: number;                  // practice: stopwatch total
+}
+
+export interface Response {
+  attemptId: string;
+  itemId: string;
+  value: ResponseValue | null;
+  flagged: boolean;
+  hintsUsed: number;
+  timeSpentMs: number;
+  checkedAt?: string;                // practice: when &quot;Sprawdź&quot; was pressed
+  highlights?: { stimulusId: string; line: number; from: number; to: number }[];
+  updatedAt: string;
+}
+
+export type ResponseValue =
+  | { type: &quot;choice&quot;; value: string }
+  | { type: &quot;choices&quot;; value: Record&lt;string, string&gt; }
+  | { type: &quot;text&quot;; value: string[] }                  // one string per gap
+  | { type: &quot;work&quot;; text?: string; photoIds?: string[]; onPaper?: boolean }
+  | { type: &quot;essay&quot;; text?: string; photoIds?: string[]; wordCount?: number };
+
+/** Every point awarded says where it came from. */
+export interface ItemScore {
+  attemptId: string;
+  itemId: string;
+  points: number | null;             // null = waiting for self-grading
+  source: &quot;auto&quot; | &quot;self&quot; | &quot;ai_accepted&quot; | &quot;self_over_ai&quot;;
+  autoResult?: &quot;correct&quot; | &quot;incorrect&quot; | &quot;unresolved&quot;; // short_text not in accepted/rejected
+  criterionScores?: Record&lt;string, number&gt;;           // rubric items
+  errorCounts?: Record&lt;string, number&gt;;               // ortografia, interpunkcja
+  evidence?: { criterionId: string; quote: string }[];
+  aiSuggestion?: { points: number; criterionScores?: Record&lt;string, number&gt;; rationale: string; model: string };
+  gradedAt?: string;
+}
+
+/** Append-only log; feeds timer recovery, audio rules and time-per-task analytics. */
+export interface AttemptEvent {
+  attemptId: string;
+  at: string;
+  type:
+    | &quot;start&quot; | &quot;resume&quot; | &quot;submit&quot; | &quot;time_up&quot;
+    | &quot;task_view&quot; | &quot;check&quot; | &quot;flag&quot; | &quot;hint&quot;
+    | &quot;focus_lost&quot; | &quot;focus_back&quot;
+    | &quot;audio_play&quot; | &quot;audio_pause&quot; | &quot;audio_seek&quot; | &quot;audio_end&quot;;
+  itemId?: string;
+  data?: Record&lt;string, unknown&gt;;
+}
+
+// ───────────────────────── DERIVED (computed, cached at most) ─────────────────────────
+
+export interface SkillStat {
+  skillTagId: string;
+  window: { from: string; to: string };
+  earned: number;              // sum of points on items with this tag
+  possible: number;            // sum of maxPoints of those items (scored items only)
+  n: number;                   // number of items
+  pct: number | null;          // null when n &lt; 4 (&quot;za mało danych&quot;)
+  status: &quot;opanowane&quot; | &quot;do_pracy&quot; | &quot;slabe&quot; | &quot;za_malo_danych&quot;; // ≥80 / 50–79 / &lt;50
+  deltaPp?: number;            // vs previous window, only if both windows have n ≥ 4
+}
+</pre></div>
+  </details>
+</section>
+
+<section id="dalej">
+  <div class="eyebrow">13 · Next</div>
+  <h2>Open questions</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Question</th><th>Suggested default</th></tr></thead>
+    <tbody>
+      <tr><td>Which sheet version does an attempt use?</td><td>Random X or Y per attempt, hidden from the student; a second attempt gets the other version.</td></tr>
+      <tr><td>Import only the standard form (-100)?</td><td>Yes. Adapted forms (-200, -400, …) have different layouts and aren't in your folders.</td></tr>
+      <tr><td>Where does AI grading run?</td><td>Server-side call with the rubric, key excerpt and exemplars; the student's text is not stored by the AI provider.</td></tr>
+      <tr><td>One student or several?</td><td>Model supports several (attempts belong to a student); start with one.</td></tr>
+    </tbody>
+  </table></div>
+  <p>Next step: the tech stack and the build plan, starting with the importer, because every screen depends on its output.</p>
+</section>
+
+</main>
+</div>

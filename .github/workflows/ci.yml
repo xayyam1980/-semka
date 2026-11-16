@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    name: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @osemka/desktop ensure:electron
+      - run: pnpm --filter @osemka/desktop rebuild:native
+      - run: pnpm typecheck
+      - run: pnpm test
+      - name: Smoke test (opens the app, checks SQLite and restart)
+        run: pnpm smoke
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: smoke-${{ matrix.os }}
+          path: apps/desktop/out/smoke/*.png
+          if-no-files-found: ignore

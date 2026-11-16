@@ -1,0 +1,21 @@
+# CKE source materials stay out of the repository (large, third-party).
+# Matched by extension at subject/session depth so Unicode folder names don't matter.
+/*/*/*.pdf
+/*/*/*.mp3
+!/design/**
+
+node_modules/
+out/
+dist/
+release/
+coverage/
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+*.db
+*.db-journal
+*.db-wal
+*.db-shm

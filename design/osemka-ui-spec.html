@@ -1,0 +1,864 @@
+<title>Ósemka UI Architecture</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;600&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap">
+<style>
+/* Layout: graph-paper (kratka) masthead, sticky section index on the left, single reading column of specs + wide wireframe panels. */
+:root{
+  --bg:#F5F8F8; --surface:#FFFFFF; --sunk:#EDF2F2; --ink:#1A2A2F; --muted:#56676C; --line:#D8E2E3; --grid:#E3ECEC;
+  --accent:#2C7673; --accent-ink:#FFFFFF; --accent-soft:#DDEFED;
+  --exam:#3A4787; --exam-soft:#E4E7F5;
+  --pl:#A94C63; --pl-soft:#F6E5EA; --ma:#336BAA; --ma-soft:#E2ECF7; --en:#367E4E; --en-soft:#E1F1E6;
+  --ok:#2B7A4B; --ok-soft:#E0F2E7; --bad:#AE4636; --bad-soft:#F8E6E2; --warn:#9A6614; --warn-soft:#F7EDD9;
+  --f-display:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --f-ui:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --f-read:"Literata", Georgia, "Times New Roman", serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  --r-s:6px; --r-m:10px; --r-l:16px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#10181B; --surface:#172126; --sunk:#0C1315; --ink:#E2EBEB; --muted:#98AAAE; --line:#283A3F; --grid:#18262A;
+  --accent:#6CC0BA; --accent-ink:#0B1A1A; --accent-soft:#1A3533;
+  --exam:#9AA6E8; --exam-soft:#222A49;
+  --pl:#E592A6; --pl-soft:#3A2129; --ma:#82AAE8; --ma-soft:#1C2B40; --en:#7DC796; --en-soft:#1B3224;
+  --ok:#6DCC93; --ok-soft:#173326; --bad:#EE8C7D; --bad-soft:#3B1E1A; --warn:#E3B45E; --warn-soft:#382A12;
+  color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#10181B; --surface:#172126; --sunk:#0C1315; --ink:#E2EBEB; --muted:#98AAAE; --line:#283A3F; --grid:#18262A;
+  --accent:#6CC0BA; --accent-ink:#0B1A1A; --accent-soft:#1A3533;
+  --exam:#9AA6E8; --exam-soft:#222A49;
+  --pl:#E592A6; --pl-soft:#3A2129; --ma:#82AAE8; --ma-soft:#1C2B40; --en:#7DC796; --en-soft:#1B3224;
+  --ok:#6DCC93; --ok-soft:#173326; --bad:#EE8C7D; --bad-soft:#3B1E1A; --warn:#E3B45E; --warn-soft:#382A12;
+  color-scheme:dark }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:16px}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{animation:none!important; transition:none!important} }
+body{background:var(--bg); color:var(--ink); font-family:var(--f-ui); font-size:16px; line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left,0px)); padding-right:max(16px, env(safe-area-inset-right,0px)); padding-block:0 64px}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:4px}
+
+.mast{margin-inline:calc(-1 * max(16px, env(safe-area-inset-left,0px)));
+  padding:56px max(16px, env(safe-area-inset-right,0px)) 40px max(16px, env(safe-area-inset-left,0px));
+  background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size:20px 20px; border-bottom:1px solid var(--line)}
+.mast-in{max-width:1180px; margin:0 auto}
+.eyebrow{font-family:var(--f-mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+h1{font-family:var(--f-display); font-weight:700; font-size:clamp(40px, 7vw, 76px); line-height:1; letter-spacing:-.02em; margin:12px 0 16px; text-wrap:balance}
+h1 .eight{color:var(--accent)}
+.lede{max-width:64ch; font-size:18px; color:var(--ink); margin:0}
+.meta{display:flex; flex-wrap:wrap; gap:8px; margin-top:20px}
+.chip{display:inline-flex; align-items:center; gap:6px; font-size:13px; padding:3px 10px; border-radius:999px; border:1px solid var(--line); background:var(--surface); color:var(--muted)}
+.chip b{color:var(--ink); font-weight:700}
+
+.wrap{max-width:1180px; margin:0 auto; display:grid; grid-template-columns:200px minmax(0,1fr); gap:48px; padding-top:40px}
+nav.toc{position:sticky; top:calc(16px + env(safe-area-inset-top,0px)); align-self:start; font-size:14px}
+nav.toc ol{list-style:none; margin:0; padding:0; display:grid; gap:2px}
+nav.toc a{display:block; padding:5px 10px; border-radius:var(--r-s); color:var(--muted); text-decoration:none}
+nav.toc a:hover{background:var(--sunk); color:var(--ink)}
+nav.toc .grp{font-family:var(--f-mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:14px 10px 4px}
+main{min-width:0}
+section{padding-block:8px 40px; border-bottom:1px solid var(--line); margin-bottom:40px}
+section:last-child{border-bottom:0}
+h2{font-family:var(--f-display); font-size:32px; line-height:1.15; letter-spacing:-.01em; margin:0 0 8px; text-wrap:balance}
+h3{font-family:var(--f-display); font-size:21px; line-height:1.25; margin:32px 0 8px; text-wrap:balance}
+h4{font-size:13px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:20px 0 8px}
+p, li{max-width:68ch}
+.sub{color:var(--muted); margin-top:0}
+.num{font-family:var(--f-mono); font-size:13px; color:var(--accent); margin-right:8px}
+code, .mono{font-family:var(--f-mono); font-size:.88em}
+code{background:var(--sunk); padding:1px 5px; border-radius:4px}
+
+.principles{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:16px; margin-top:20px}
+.pr{background:var(--surface); border:1px solid var(--line); border-radius:var(--r-m); padding:18px 20px}
+.pr h3{margin:0 0 6px; font-size:18px}
+.pr p{margin:0; font-size:15px; color:var(--muted)}
+
+table{border-collapse:collapse; width:100%; font-size:14.5px}
+.tbl{overflow-x:auto; border:1px solid var(--line); border-radius:var(--r-m); background:var(--surface)}
+th, td{text-align:left; padding:9px 14px; border-bottom:1px solid var(--line); vertical-align:top}
+th{font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); font-weight:700; background:var(--sunk)}
+tr:last-child td{border-bottom:0}
+td.n{font-variant-numeric:tabular-nums; font-family:var(--f-mono); font-size:13px; white-space:nowrap}
+
+.swatches{display:grid; grid-template-columns:repeat(auto-fill, minmax(150px,1fr)); gap:12px}
+.sw{border:1px solid var(--line); border-radius:var(--r-m); overflow:hidden; background:var(--surface)}
+.sw .c{height:56px; border-bottom:1px solid var(--line)}
+.sw .l{padding:8px 10px; font-size:13px; line-height:1.35}
+.sw .l b{display:block}
+.sw .l span{font-family:var(--f-mono); font-size:11.5px; color:var(--muted)}
+
+.subjects{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:12px}
+.subj{border-radius:var(--r-m); padding:16px 18px; border:1px solid var(--line); background:var(--surface); display:grid; gap:6px}
+.subj .tag{display:inline-flex; align-self:start; justify-self:start; font-size:12px; font-weight:700; padding:2px 9px; border-radius:999px}
+.subj.pl .tag{background:var(--pl-soft); color:var(--pl)} .subj.ma .tag{background:var(--ma-soft); color:var(--ma)} .subj.en .tag{background:var(--en-soft); color:var(--en)}
+.subj .t{font-family:var(--f-display); font-size:22px; font-weight:700}
+.subj .s{font-size:14px; color:var(--muted)}
+.subj .bar{height:6px; border-radius:3px; background:var(--sunk); overflow:hidden}
+.subj .bar i{display:block; height:100%}
+.subj.pl .bar i{background:var(--pl); width:58%} .subj.ma .bar i{background:var(--ma); width:61%} .subj.en .bar i{background:var(--en); width:74%}
+
+.modes{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:16px}
+.shell{border-radius:var(--r-l); border:1px solid var(--line); overflow:hidden; background:var(--surface)}
+.shell .top{display:flex; justify-content:space-between; align-items:center; gap:12px; padding:10px 16px; font-size:14px; font-weight:700}
+.shell.practice .top{background:var(--accent-soft); color:var(--accent)}
+.shell.exam .top{background:var(--exam); color:var(--surface)}
+.shell .body{padding:16px; font-size:14.5px; color:var(--muted)}
+.shell .body ul{margin:0; padding-left:18px}
+
+.type-spec{display:grid; gap:0; border:1px solid var(--line); border-radius:var(--r-m); background:var(--surface); overflow:hidden}
+.ts{display:grid; grid-template-columns:150px minmax(0,1fr); gap:16px; padding:14px 18px; border-bottom:1px solid var(--line); align-items:baseline}
+.ts:last-child{border-bottom:0}
+.ts .k{font-family:var(--f-mono); font-size:12px; color:var(--muted)}
+.ts .k b{display:block; color:var(--ink); font-family:var(--f-ui); font-size:13px}
+.ts .v{min-width:0; overflow-wrap:anywhere}
+
+.gallery{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:16px}
+.comp{background:var(--surface); border:1px solid var(--line); border-radius:var(--r-m); padding:16px 18px; min-width:0}
+.comp h4{margin-top:0}
+.opt{display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:var(--r-s); border:1.5px solid var(--line); margin-bottom:8px; font-size:15px; background:var(--surface)}
+.opt .k{width:26px; height:26px; flex:none; display:grid; place-items:center; border-radius:50%; border:1.5px solid var(--line); font-weight:700; font-size:13px}
+.opt .st{margin-left:auto; font-size:12.5px; font-weight:700}
+.opt.sel{border-color:var(--accent); background:var(--accent-soft)} .opt.sel .k{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
+.opt.ok{border-color:var(--ok); background:var(--ok-soft)} .opt.ok .k{background:var(--ok); border-color:var(--ok); color:var(--surface)} .opt.ok .st{color:var(--ok)}
+.opt.bad{border-color:var(--bad); background:var(--bad-soft)} .opt.bad .k{border-color:var(--bad); color:var(--bad)} .opt.bad .st{color:var(--bad)}
+.opt.rev{border-style:dashed; border-color:var(--ok)} .opt.rev .st{color:var(--ok)}
+.timers{display:flex; flex-wrap:wrap; gap:8px}
+.timer{font-family:var(--f-mono); font-variant-numeric:tabular-nums; font-weight:600; font-size:15px; padding:6px 12px; border-radius:999px; border:1.5px solid var(--line)}
+.timer.n{color:var(--ink)} .timer.w{color:var(--warn); background:var(--warn-soft); border-color:var(--warn)} .timer.c{color:var(--bad); background:var(--bad-soft); border-color:var(--bad)}
+.timer.sw{color:var(--accent); border-style:dashed}
+.qmap{display:grid; grid-template-columns:repeat(7, 34px); gap:6px}
+.qmap span{height:34px; display:grid; place-items:center; border-radius:var(--r-s); font-family:var(--f-mono); font-size:13px; border:1.5px solid var(--line); position:relative}
+.qmap .a{background:var(--sunk); color:var(--ink); border-color:var(--sunk)}
+.qmap .cur{border-color:var(--exam); color:var(--exam); font-weight:600}
+.qmap .f::after{content:""; position:absolute; top:-4px; right:-4px; width:9px; height:9px; border-radius:50%; background:var(--warn); border:2px solid var(--surface)}
+.legend{display:flex; flex-wrap:wrap; gap:14px; font-size:12.5px; color:var(--muted); margin-top:10px}
+.player{border:1px solid var(--line); border-radius:var(--r-m); padding:12px; display:grid; gap:10px; background:var(--bg)}
+.player .row{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+.pbtn{width:36px; height:36px; border-radius:50%; display:grid; place-items:center; background:var(--accent); color:var(--accent-ink); font-size:13px; flex:none; border:0}
+.track{flex:1; min-width:120px; height:6px; border-radius:3px; background:var(--line); position:relative}
+.track i{position:absolute; inset:0 auto 0 0; width:38%; border-radius:3px; background:var(--accent)}
+.track.locked i{background:var(--exam); width:59%}
+.seg{font-family:var(--f-mono); font-size:12px; padding:3px 8px; border-radius:var(--r-s); border:1px solid var(--line); color:var(--muted)}
+.seg.on{border-color:var(--accent); color:var(--accent); background:var(--accent-soft)}
+.live{display:inline-flex; align-items:center; gap:6px; font-size:12.5px; font-weight:700; color:var(--exam)}
+.live::before{content:""; width:8px; height:8px; border-radius:50%; background:var(--bad)}
+.crit{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px 12px; align-items:center; font-size:14.5px}
+.pips{display:flex; gap:4px}
+.pips b{width:28px; height:28px; display:grid; place-items:center; border-radius:var(--r-s); border:1.5px solid var(--line); font-family:var(--f-mono); font-size:12.5px; font-weight:400; color:var(--muted)}
+.pips b.on{background:var(--accent); border-color:var(--accent); color:var(--accent-ink); font-weight:600}
+.pips b.ai{border-style:dashed; border-color:var(--exam); color:var(--exam)}
+.reading{font-family:var(--f-read); font-size:19px; line-height:1.7; max-width:60ch; background:var(--surface); border:1px solid var(--line); border-radius:var(--r-m); padding:20px 24px 20px 52px}
+.reading .ln{position:absolute; left:-36px; width:26px; text-align:right; top:4px; font-family:var(--f-mono); font-size:11px; color:var(--muted); padding-right:8px}
+.reading p{margin:0; position:relative}
+.reading mark{background:var(--warn-soft); color:inherit; border-bottom:2px solid var(--warn); padding:0 1px}
+.math{font-family:var(--f-read); font-size:20px; font-style:italic; letter-spacing:.01em}
+
+.wf{margin:14px 0 6px; overflow-x:auto; background:var(--surface); border:1px solid var(--line); border-radius:var(--r-m); padding:16px 18px}
+.wf pre{margin:0; font-family:var(--f-mono); font-size:12.5px; line-height:1.45; color:var(--ink); white-space:pre; width:max-content}
+.notes{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:4px 28px; margin-top:12px}
+.notes ul{margin:0; padding-left:18px}
+.notes li{font-size:15px; margin-bottom:6px}
+.callout{border-left:3px solid var(--accent); background:var(--accent-soft); border-radius:0 var(--r-s) var(--r-s) 0; padding:12px 16px; margin:16px 0; font-size:15px; max-width:72ch}
+.callout.warn{border-color:var(--warn); background:var(--warn-soft)}
+.callout b{display:block; margin-bottom:2px}
+.screen-tag{display:inline-block; font-family:var(--f-mono); font-size:12px; color:var(--muted); border:1px solid var(--line); border-radius:var(--r-s); padding:1px 7px; margin-left:8px; vertical-align:middle}
+
+@media (max-width: 860px){
+  .wrap{grid-template-columns:minmax(0,1fr); gap:8px; padding-top:20px}
+  nav.toc{position:static}
+  nav.toc ol{display:flex; flex-wrap:nowrap; overflow-x:auto; gap:6px; padding-bottom:6px}
+  nav.toc li.grp{display:none}
+  nav.toc a{white-space:nowrap; border:1px solid var(--line); background:var(--surface)}
+  .ts{grid-template-columns:minmax(0,1fr); gap:4px}
+
+
+}
+</style>
+
+<header class="mast">
+  <div class="mast-in">
+    <div class="eyebrow">Projekt UI/UX · wersja 1 · 16 listopada 2026</div>
+    <h1>Ósemka<span class="eight">.</span></h1>
+    <p class="lede">Design system and screen architecture for a practice platform for the <i>egzamin ósmoklasisty</i>: Polish, Mathematics and English, built on the official CKE sheets and keys you already have locally. Interface copy is in Polish, because that is what the student reads; the annotations are in English.</p>
+    <div class="meta">
+      <span class="chip"><b>6</b> sesje · Maj 2025, Maj 2026</span>
+      <span class="chip"><b>18</b> plików źródłowych</span>
+      <span class="chip">Polski <b>150</b> min</span>
+      <span class="chip">Matematyka <b>125</b> min</span>
+      <span class="chip">Angielski <b>110</b> min</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+<nav class="toc" aria-label="Spis treści">
+  <ol>
+    <li class="grp">Podstawy</li>
+    <li><a href="#zrodla">Source material</a></li>
+    <li><a href="#filozofia">UX philosophy</a></li>
+    <li class="grp">Design system</li>
+    <li><a href="#kolor">Color & modes</a></li>
+    <li><a href="#typografia">Typography</a></li>
+    <li><a href="#komponenty">Components</a></li>
+    <li><a href="#dostepnosc">Accessibility</a></li>
+    <li class="grp">Ekrany</li>
+    <li><a href="#ia">Site map</a></li>
+    <li><a href="#s-pulpit">Pulpit</a></li>
+    <li><a href="#s-arkusze">Arkusze</a></li>
+    <li><a href="#s-start">Start próby</a></li>
+    <li><a href="#s-nauka">Tryb nauki</a></li>
+    <li><a href="#s-symulacja">Symulacja</a></li>
+    <li><a href="#s-sluchanie">Słuchanie</a></li>
+    <li><a href="#s-czytanie">Czytanie</a></li>
+    <li><a href="#s-wynik">Wynik</a></li>
+    <li><a href="#s-samoocena">Samoocena</a></li>
+    <li><a href="#s-analiza">Analiza</a></li>
+    <li><a href="#s-historia">Historia</a></li>
+    <li><a href="#s-ustawienia">Ustawienia</a></li>
+    <li class="grp">Dalej</li>
+    <li><a href="#decyzje">Decisions & next</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<section id="zrodla">
+  <div class="eyebrow">01 · Grounding</div>
+  <h2>What the source folders contain</h2>
+  <p class="sub">I read the local tree before designing. Three findings shape the UI more than anything else.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Subject</th><th>Files per session</th><th>Pages</th><th>What it means for the UI</th></tr></thead>
+    <tbody>
+      <tr><td>Matematyka</td><td><code>arkusz.pdf</code>, <code>arkusz-zadania-otwarte.pdf</code>, <code>klucz.pdf</code></td><td class="n">16–20 + 8 + 26</td><td>20–21 tasks, 30 pts. The second PDF is the <i>karta rozwiązań zadań otwartych</i>, the sheet students write open solutions on, so it doubles as a printable worksheet. The player needs a real work area, and results split closed vs open.</td></tr>
+      <tr><td>Język polski</td><td><code>arkusz.pdf</code>, <code>klucz.pdf</code></td><td class="n">24 + 28–29</td><td>18–19 tasks, 45 pts. Long texts with line numbers, so a split reading view. The essay alone is 0–20 pts across 8 criteria.</td></tr>
+      <tr><td>Język angielski</td><td><code>arkusz.pdf</code>, <code>klucz.pdf</code>, <code>nagranie.mp3</code>, <code>transkrypcja.pdf</code></td><td class="n">20 + 25 + 3</td><td>14 tasks, 55 pts, including a 0–10 e-mail. One continuous recording, about 21 minutes (21:05 and 21:24). The transcript gives segment boundaries for practice mode.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout">
+    <b>The answer keys already contain the skill taxonomy.</b>
+    Every task in <code>klucz.pdf</code> lists its <i>wymaganie ogólne</i> and <i>wymagania szczegółowe</i> from the core curriculum (for example “V. Obliczenia procentowe” or “XIII. Odczytywanie danych i elementy statystyki”). Gap analysis tags each task with these, so “where I fail” uses the CKE's own vocabulary instead of categories we invent.
+  </div>
+  <div class="callout">
+    <b>The recording is the full exam soundtrack.</b>
+    At about 21 minutes for 3 transcript pages, the mp3 includes the instructions, both plays of each text, and the pauses. Exam simulation therefore plays the file once, start to end, locked. Practice mode needs a cue map (start/end per Tekst) built once during import.
+  </div>
+  <div class="callout warn">
+    <b>Keys have sheet versions.</b>
+    The math key lists “Rozwiązanie – wersja X” and “wersja Y”. The importer has to pin each attempt to one version, and the UI never shows a version letter to the student.
+  </div>
+</section>
+
+<section id="filozofia">
+  <div class="eyebrow">02 · Philosophy</div>
+  <h2>Calm, honest, exam-shaped</h2>
+  <p class="sub">The user is 14 or 15, often anxious, and preparing for a paper exam in a quiet room. The interface should feel like a good desk: tidy, well lit, nothing shouting.</p>
+  <div class="principles">
+    <div class="pr"><h3>One job per screen</h3><p>Inside an attempt, the global nav disappears. The student sees the task, the answer area and one primary action. Everything else is one tap away, never on screen by default.</p></div>
+    <div class="pr"><h3>Two modes that look different</h3><p>Practice uses the teal shell and feels open. Simulation switches to an indigo focus shell with a countdown. A student should never wonder which mode they are in.</p></div>
+    <div class="pr"><h3>Mistakes are information</h3><p>Wrong answers use a muted brick color, never alarm red, and always come with “why” and the CKE rule. No streak shaming, no sad mascots, no loss animations.</p></div>
+    <div class="pr"><h3>Show the sample size</h3><p>A trend from two tasks is noise. Every percentage in analytics carries <code>n</code>, and areas with fewer than 4 tasks say “za mało danych” instead of guessing.</p></div>
+    <div class="pr"><h3>Faithful to paper</h3><p>Task numbers, line numbers, point ranges “(0–3)” and wording follow the arkusz exactly. The original PDF page is always reachable, so the student can trust the digital copy.</p></div>
+    <div class="pr"><h3>The student grades, AI advises</h3><p>For open answers the student scores themselves against CKE criteria. AI suggestions appear in a separate box, are marked as suggestions and never overwrite the student's own score.</p></div>
+  </div>
+</section>
+
+<section id="kolor">
+  <div class="eyebrow">03 · Design system</div>
+  <h2>Color: cool neutrals, one teal, three subjects</h2>
+  <p class="sub">Neutrals carry a slight teal bias so the page feels calm rather than clinical. Saturated color is rationed: the accent marks the one primary action, subject colors appear only as small identifiers. These swatches follow your light/dark setting.</p>
+
+  <h4>Core tokens</h4>
+  <div class="swatches">
+    <div class="sw"><div class="c" style="background:var(--bg)"></div><div class="l"><b>Tło</b><span>--bg</span></div></div>
+    <div class="sw"><div class="c" style="background:var(--surface)"></div><div class="l"><b>Powierzchnia</b><span>--surface</span></div></div>
+    <div class="sw"><div class="c" style="background:var(--ink)"></div><div class="l"><b>Tekst</b><span>--ink · AA 13:1+</span></div></div>
+    <div class="sw"><div class="c" style="background:var(--muted)"></div><div class="l"><b>Tekst pomocniczy</b><span>--muted · AA</span></div></div>
+    <div class="sw"><div class="c" style="background:var(--accent)"></div><div class="l"><b>Akcent / nauka</b><span>--accent</span></div></div>
+    <div class="sw"><div class="c" style="background:var(--exam)"></div><div class="l"><b>Symulacja</b><span>--exam</span></div></div>
+  </div>
+
+  <h4>Feedback (semantic, separate from the accent)</h4>
+  <div class="swatches">
+    <div class="sw"><div class="c" style="background:var(--ok)"></div><div class="l"><b>Dobrze</b><span>--ok + ✓ icon</span></div></div>
+    <div class="sw"><div class="c" style="background:var(--bad)"></div><div class="l"><b>Do poprawy</b><span>--bad + × icon</span></div></div>
+    <div class="sw"><div class="c" style="background:var(--warn)"></div><div class="l"><b>Uwaga / oznaczone</b><span>--warn</span></div></div>
+  </div>
+  <p style="font-size:14px;color:var(--muted)">State is never color-only: every result pairs color with an icon and a word, for color-blind students and grayscale printouts.</p>
+
+  <h4>Subject identity</h4>
+  <div class="subjects">
+    <div class="subj pl"><span class="tag">PL</span><div class="t">Język polski</div><div class="s">150 min · ostatnio 58 %</div><div class="bar"><i></i></div></div>
+    <div class="subj ma"><span class="tag">MA</span><div class="t">Matematyka</div><div class="s">125 min · ostatnio 61 %</div><div class="bar"><i></i></div></div>
+    <div class="subj en"><span class="tag">EN</span><div class="t">Język angielski</div><div class="s">110 min · ostatnio 74 %</div><div class="bar"><i></i></div></div>
+  </div>
+  <p style="font-size:13px;color:var(--muted)">Scores shown are example values.</p>
+
+  <h4>Mode shells</h4>
+  <div class="modes">
+    <div class="shell practice"><div class="top"><span>Matematyka · NAUKA</span><span class="mono">◷ 14:32</span></div><div class="body"><ul><li>Light teal header band, stopwatch counts up (optional)</li><li>“Sprawdź” after every task, explanation panel</li><li>Exit any time, resumes where you left off</li></ul></div></div>
+    <div class="shell exam"><div class="top"><span>Matematyka · SYMULACJA</span><span class="mono">1:47:12</span></div><div class="body"><ul><li>Solid indigo header, countdown, “Oddaj” button</li><li>No key, no hints, no global nav</li><li>Leaving requires submitting</li></ul></div></div>
+  </div>
+</section>
+
+<section id="typografia">
+  <div class="eyebrow">04 · Design system</div>
+  <h2>Typography: built for long reading</h2>
+  <p class="sub">Four faces, each with one role. All support Polish diacritics (ą ć ę ł ń ó ś ź ż). The UI face, Atkinson Hyperlegible, was designed by the Braille Institute to keep look-alike characters (I l 1, O 0) distinct, which matters when answers are letters and numbers.</p>
+  <div class="type-spec">
+    <div class="ts"><div class="k"><b>Display</b>Bricolage Grotesque 700<br>32 / 24 / 21</div><div class="v" style="font-family:var(--f-display);font-size:32px;font-weight:700;line-height:1.1">Gotowość: 64 %</div></div>
+    <div class="ts"><div class="k"><b>UI & tasks</b>Atkinson Hyperlegible<br>16 / 1.6, min 15</div><div class="v">Zadanie 7. (0–1) Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F, jeśli jest fałszywe.</div></div>
+    <div class="ts"><div class="k"><b>Reading passages</b>Literata 400<br>19 / 1.7, 60 ch</div><div class="v" style="font-family:var(--f-read);font-size:19px;line-height:1.7">Był to dzień, w którym wszystko zdawało się możliwe. Szedł ulicą, a za nim ciągnął się zapach świeżego chleba.</div></div>
+    <div class="ts"><div class="k"><b>Math</b>KaTeX (renders LaTeX)<br>1.15× body size</div><div class="v math">P = ½ · a · h = ½ · 6 · 8 = 24 cm²</div></div>
+    <div class="ts"><div class="k"><b>Data & timers</b>JetBrains Mono<br>tabular figures</div><div class="v mono" style="font-size:15px">1:47:12 · 18 / 30 pkt · n=11</div></div>
+  </div>
+  <p style="font-size:14.5px;color:var(--muted)">Scale: 13 · 15 · 16 · 19 · 21 · 24 · 32 · 44 px. The student's text-size setting scales tasks and passages together (90–140 %) without touching the chrome.</p>
+</section>
+
+<section id="komponenty">
+  <div class="eyebrow">05 · Design system</div>
+  <h2>Core components</h2>
+  <p class="sub">The pieces every attempt screen is built from, shown in their key states.</p>
+  <div class="gallery">
+    <div class="comp">
+      <h4>Answer option · 5 states</h4>
+      <div class="opt"><span class="k">A</span>18 cm²</div>
+      <div class="opt sel"><span class="k">B</span>24 cm²<span class="st">wybrane</span></div>
+      <div class="opt ok"><span class="k">C</span>24 cm²<span class="st">✓ dobrze</span></div>
+      <div class="opt bad"><span class="k">D</span>48 cm²<span class="st">× Twój wybór</span></div>
+      <div class="opt rev"><span class="k">C</span>24 cm²<span class="st">poprawna</span></div>
+      <p style="font-size:13px;color:var(--muted);margin:4px 0 0">Keyboard: A–D or 1–4 to choose, Enter to check. Targets 44 px high minimum.</p>
+    </div>
+    <div class="comp">
+      <h4>Timer chip</h4>
+      <div class="timers">
+        <span class="timer sw">◷ 14:32</span>
+        <span class="timer n">1:47:12</span>
+        <span class="timer w">0:14:59</span>
+        <span class="timer c">0:04:59</span>
+      </div>
+      <p style="font-size:13px;color:var(--muted);margin:10px 0 0">Stopwatch (practice), normal, under 15 min, under 5 min. The time can be hidden with one click while it keeps running; at 15 and 5 minutes a quiet banner appears, no sound.</p>
+      <h4 style="margin-top:22px">Sheet map (simulation)</h4>
+      <div class="qmap" aria-label="Mapa arkusza">
+        <span class="a">1</span><span class="a">2</span><span class="a">3</span><span class="a f">4</span><span>5</span><span class="a">6</span><span class="a">7</span>
+        <span class="a">8</span><span class="a">9</span><span>10</span><span class="a">11</span><span class="a f">12</span><span class="cur">13</span><span>14</span>
+      </div>
+      <div class="legend"><span>szare = odpowiedź</span><span>puste = brak</span><span>kropka = oznaczone</span><span>ramka = teraz</span></div>
+    </div>
+    <div class="comp">
+      <h4>Audio · practice</h4>
+      <div class="player">
+        <div class="row"><button class="pbtn" aria-label="Odtwórz">▶</button><div class="track"><i></i></div><span class="mono" style="font-size:12px">0:14 / 0:48</span></div>
+        <div class="row"><span class="seg">T1</span><span class="seg on">T2</span><span class="seg">T3</span><span class="seg">T4</span><span class="seg">0.75×</span><span class="seg on">1×</span></div>
+      </div>
+      <h4 style="margin-top:18px">Audio · simulation</h4>
+      <div class="player">
+        <div class="row"><span class="live">NAGRANIE TRWA</span><span class="mono" style="font-size:12px;margin-left:auto">12:40 / 21:24</span></div>
+        <div class="track locked"><i></i></div>
+        <div style="font-size:13px;color:var(--muted)">Bez pauzy i przewijania. Tylko głośność.</div>
+      </div>
+    </div>
+    <div class="comp">
+      <h4>Rubric criterion</h4>
+      <div class="crit">
+        <span>2 · Elementy retoryczne</span>
+        <span class="pips"><b>0</b><b>1</b><b class="ai">2</b><b class="on">3</b><b>4</b><b>5</b></span>
+        <span>6 · Język</span>
+        <span class="pips"><b>0</b><b>1</b><b class="on">2</b><b>3</b><b>4</b></span>
+        <span>8 · Interpunkcja</span>
+        <span class="pips"><b>0</b><b class="on">1</b></span>
+      </div>
+      <p style="font-size:13px;color:var(--muted);margin:12px 0 0">Filled = student's score. Dashed indigo = AI suggestion. Tapping a level expands the CKE descriptor from the key.</p>
+    </div>
+    <div class="comp" style="grid-column:1/-1">
+      <h4>Reading passage with highlight</h4>
+      <div class="reading">
+        <p><span class="ln">1</span>Był to dzień, w którym wszystko zdawało się możliwe.</p>
+        <p><span class="ln">2</span>Szedł ulicą, a za nim <mark>ciągnął się zapach świeżego</mark></p>
+        <p><span class="ln">3</span><mark>chleba</mark> z piekarni na rogu.</p>
+      </div>
+      <p style="font-size:13px;color:var(--muted);margin:10px 0 0">Line numbers match the arkusz. Student highlights persist per attempt. After checking, the key's evidence line is highlighted the same way. Example text, not from the sheet.</p>
+    </div>
+  </div>
+</section>
+
+<section id="dostepnosc">
+  <div class="eyebrow">06 · Design system</div>
+  <h2>Accessibility and accommodations</h2>
+  <div class="notes">
+    <ul>
+      <li><b>Contrast:</b> body text 13:1 and muted text at least 4.5:1, in both themes.</li>
+      <li><b>Dark mode</b> is designed, not inverted: lifted surfaces, desaturated subject colors, and reading text at 87 % luminance to avoid glare.</li>
+      <li><b>Keyboard:</b> every attempt can be finished without a mouse. <code>J/K</code> next/previous, <code>F</code> flag, <code>Enter</code> check.</li>
+    </ul>
+    <ul>
+      <li><b>Wydłużony czas</b> is a setting, not a per-attempt checkbox the student has to remember. It applies to simulations and shows in results (“125 → 185 min”).</li>
+      <li><b>Dysleksja:</b> optional dyslexia-friendly font, and the CKE's separate spelling and punctuation thresholds for the essay (the key defines both scales).</li>
+      <li><b>Motion:</b> respects reduced-motion. The only animation is a 150 ms fade between tasks.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="ia">
+  <div class="eyebrow">07 · Screens</div>
+  <h2>Site map</h2>
+  <p class="sub">Five top-level destinations. An attempt (“próba”) is its own space outside the main nav.</p>
+  <div class="wf"><pre>Ósemka
+├── Pulpit /                     gotowość, następny krok, przedmioty, luki, ostatnie
+├── Arkusze /arkusze             przedmiot → sesja (Maj 2026, Maj 2025, …)
+│   └── Sesja /arkusze/:przedmiot/:sesja
+│       ├── Podgląd               lista zadań, punkty, źródła PDF
+│       └── Start                 wybór trybu, dostosowania
+├── Próba /proba/:id              (poza głównym menu, własny układ)
+│   ├── Nauka                     zadanie + sprawdzanie + wyjaśnienie
+│   ├── Symulacja                 tryb skupienia, zegar, mapa arkusza
+│   ├── Oddanie                   podsumowanie braków → potwierdzenie
+│   ├── Wynik /proba/:id/wynik
+│   ├── Przegląd błędów           tylko zadania × i ★
+│   └── Samoocena                 kolejka zadań otwartych
+├── Historia /historia            przedmiot → sesja → próby
+├── Analiza /analiza              trend, umiejętności, zamknięte/otwarte, postępy
+└── Ustawienia /ustawienia        wygląd, dostosowania, dźwięk, dane</pre></div>
+</section>
+
+<section id="s-pulpit">
+  <h3><span class="num">S1</span>Pulpit: dashboard and analytics hub <span class="screen-tag">/</span></h3>
+  <p class="sub">Answers three questions in order: how ready am I, what should I do now, where am I losing points.</p>
+  <div class="wf"><pre>╔═ Pulpit · / ═════════════════════════════════════════════════════════════════════════╗
+║ Ósemka   Pulpit  Arkusze  Historia  Analiza            [Motyw] [Ustaw.]  Ola         ║
+║ ──────────────────────────────────────────────────────────────────────────────────── ║
+║ Cześć, Ola. Do egzaminu zostało 176 dni. Ostatnia nauka: wczoraj, 42 min.            ║
+║                                                                                      ║
+║ ┌─ GOTOWOŚĆ ───────────────────────┐  ┌─ NASTĘPNY KROK ──────────────────────┐       ║
+║ │ 64 %          ▲ 6 pp / 30 dni    │  │ Geometria płaska: 4 z 11 pkt         │       ║
+║ │ ███████████████████░░░░░░░░░     │  │ w ostatnich 3 próbach. To Twój       │       ║
+║ │ pewność prognozy: średnia        │  │ największy zapas punktów.            │       ║
+║ │ (symulacje: 2 z 3 przedmiotów)   │  │ [ ► 8 zadań · tryb nauki · 20 min ]  │       ║
+║ │ [ Jak to liczymy? ]              │  │ [ Inny temat ]                       │       ║
+║ └──────────────────────────────────┘  └──────────────────────────────────────┘       ║
+║                                                                                      ║
+║ ┌─ Język polski ────────┐ ┌─ Matematyka ──────────┐ ┌─ Język angielski ──────┐       ║
+║ │ 150 min · ost. 58 %   │ │ 125 min · ost. 61 %   │ │ 110 min · ost. 74 %    │       ║
+║ │ ▁▃▄▄▆  26 / 45 pkt    │ │ ▂▃▅▅▆  18 / 30 pkt    │ │ ▄▅▅▆▇  41 / 55 pkt     │       ║
+║ │ Słabo: wypracowanie   │ │ Słabo: geometria      │ │ Słabo: środki jęz.     │       ║
+║ │ [Ćwicz] [Symulacja]   │ │ [Ćwicz] [Symulacja]   │ │ [Ćwicz] [Symulacja]    │       ║
+║ └───────────────────────┘ └───────────────────────┘ └────────────────────────┘       ║
+║                                                                                      ║
+║ ┌─ GDZIE TRACISZ PUNKTY  (top 5, wszystkie przedmioty) ────────────────────────────┐ ║
+║ │ Geometria płaska (MA)     ███░░░░░░░  36 %   n=11  ▼ 4 pp   [Ćwicz]              │ ║
+║ │ Wypracowanie: język (PL)  ████░░░░░░  42 %   n=3   ━        [Ćwicz]              │ ║
+║ │ Środki językowe (EN)      █████░░░░░  50 %   n=12  ▲ 8 pp   [Ćwicz]              │ ║
+║ │ Zadania otwarte (MA)      █████░░░░░  52 %   n=15  ▲ 5 pp   [Ćwicz]              │ ║
+║ │ Kształcenie jęz. (PL)     ██████░░░░  58 %   n=14  ━        [Ćwicz]              │ ║
+║ │                                               [ Pełna analiza → ]                │ ║
+║ └──────────────────────────────────────────────────────────────────────────────────┘ ║
+║                                                                                      ║
+║ ┌─ OSTATNIE PRÓBY ─────────────────────────────────────────────────────────────────┐ ║
+║ │ 15 lis  Matematyka · Maj 2026      Symulacja  61 %  18/30  ●samoocena            │ ║
+║ │ 13 lis  Język ang. · Maj 2025      Nauka      74 %  41/55                        │ ║
+║ │ 10 lis  Język polski · Maj 2025    Symulacja  58 %  26/45  ○ do oceny            │ ║
+║ │                                                    [ Cała historia → ]           │ ║
+║ └──────────────────────────────────────────────────────────────────────────────────┘ ║
+╚══════════════════════════════════════════════════════════════════════════════════════╝</pre></div>
+  <div class="notes">
+    <ul>
+      <li><b>Gotowość</b> is the average of the latest score per subject, with simulations weighted 1.0 and practice 0.5. Confidence drops while a subject has no simulation.</li>
+      <li><b>Następny krok</b> picks the skill with the most recoverable points (max points × miss rate), not simply the lowest percentage.</li>
+    </ul>
+    <ul>
+      <li>Subject cards show raw CKE points next to the percentage, because that is what the school certificate shows.</li>
+      <li>“○ do oceny” in history means open tasks still wait for self-grading; the score is provisional until then.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="s-arkusze">
+  <h3><span class="num">S2</span>Arkusze: exam browser <span class="screen-tag">/arkusze</span></h3>
+  <p class="sub">Mirrors your folder structure: subject, then session. Adding a folder such as <code>Matematyka/Grudzień 2026</code> adds a card after import.</p>
+  <div class="wf"><pre>╔═ Arkusze · /arkusze ═════════════════════════════════════════════════════════════════╗
+║ Ósemka   Pulpit  Arkusze  Historia  Analiza            [Motyw] [Ustaw.]  Ola         ║
+║ ──────────────────────────────────────────────────────────────────────────────────── ║
+║ Arkusze egzaminacyjne                                                                ║
+║ [ Wszystkie ] [ Polski ] [ Matematyka ] [ Angielski ]     Sortuj: najnowsze ▾        ║
+║ Filtr: ( ) nierozwiązane  ( ) z oznaczonymi zadaniami  ( ) do samooceny              ║
+║                                                                                      ║
+║ MATEMATYKA ─────────────────────────────────────────────────────────────────         ║
+║ ┌─ Maj 2026 · termin główny ─────────┐  ┌─ Maj 2025 · termin główny ─────────┐       ║
+║ │ 20 zadań · 30 pkt · 125 min        │  │ 21 zadań · 30 pkt · 125 min        │       ║
+║ │ Twoje próby: 1   najlepsza 61 %    │  │ Twoje próby: 0                     │       ║
+║ │ Zamknięte 14/14 · Otwarte 4/16     │  │ ─                                  │       ║
+║ │ Źródła: arkusz · klucz ✓           │  │ Źródła: arkusz · klucz ✓           │       ║
+║ │ [ ► Rozpocznij ]  [ Podgląd ]      │  │ [ ► Rozpocznij ]  [ Podgląd ]      │       ║
+║ └────────────────────────────────────┘  └────────────────────────────────────┘       ║
+║                                                                                      ║
+║ JĘZYK ANGIELSKI ────────────────────────────────────────────────────────────         ║
+║ ┌─ Maj 2026 · termin główny ─────────┐  ┌─ Maj 2025 · termin główny ─────────┐       ║
+║ │ 14 zadań · 55 pkt · 110 min        │  │ 14 zadań · 55 pkt · 110 min        │       ║
+║ │ Nagranie 21:24 · transkrypcja ✓    │  │ Nagranie 21:05 · transkrypcja ✓    │       ║
+║ │ Twoje próby: 0                     │  │ Twoje próby: 2   najlepsza 74 %    │       ║
+║ │ [ ► Rozpocznij ]  [ Podgląd ]      │  │ [ ► Rozpocznij ]  [ Podgląd ]      │       ║
+║ └────────────────────────────────────┘  └────────────────────────────────────┘       ║
+║                                                                                      ║
+║ Liczby zadań i punktów z importu klucza. Wyniki prób to dane przykładowe.            ║
+╚══════════════════════════════════════════════════════════════════════════════════════╝</pre></div>
+  <div class="notes">
+    <ul>
+      <li><b>Podgląd</b> lists tasks with point ranges and skill tags, so a student can pick a single task to practise.</li>
+      <li>“Źródła” shows which files were found. A session missing its key is shown greyed out with “brak klucza”.</li>
+    </ul>
+    <ul>
+      <li>Session labels come from folder names; the term (główny, dodatkowy) comes from the key's header text.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="s-start">
+  <h3><span class="num">S3</span>Start próby: choose the mode <span class="screen-tag">/arkusze/:p/:s/start</span></h3>
+  <p class="sub">The mode choice is explicit and side by side, so nobody starts a 125-minute timer by accident.</p>
+  <div class="wf"><pre>╔═ Start próby · /arkusze/matematyka/maj-2026/start ═══════════════════════════════════╗
+║ ← Arkusze        Matematyka · Maj 2026 · termin główny                               ║
+║ ──────────────────────────────────────────────────────────────────────────────────── ║
+║ Jak chcesz pracować?                                                                 ║
+║                                                                                      ║
+║ ┌─ TRYB NAUKI ───────────────────────┐  ┌─ SYMULACJA EGZAMINU ───────────────┐       ║
+║ │ Bez presji czasu                   │  │ Jak w maju, na sali                │       ║
+║ │                                    │  │                                    │       ║
+║ │ ✓ sprawdzasz każde zadanie od razu │  │ ● 125 min, odliczanie bez pauzy    │       ║
+║ │ ✓ wyjaśnienia i zasady z klucza    │  │ ● klucz dopiero po oddaniu         │       ║
+║ │ ✓ wracasz, oznaczasz, przerywasz   │  │ ● nie możesz wyjść bez oddania     │       ║
+║ │ ○ stoper (opcjonalnie)             │  │ ● zapis automatyczny co 5 s        │       ║
+║ │                                    │  │                                    │       ║
+║ │ [ ► Zacznij naukę ]                │  │ [ ► Rozpocznij symulację ]         │       ║
+║ └────────────────────────────────────┘  └────────────────────────────────────┘       ║
+║                                                                                      ║
+║ ┌─ DOSTOSOWANIA ───────────────────────────────────────────────────────────────────┐ ║
+║ │ [ ] Wydłużony czas         125 min  →  185 min   (ustaw w Ustawieniach)          │ ║
+║ │ [ ] Kryteria dla dysleksji (ortografia i interpunkcja w wypracowaniu)            │ ║
+║ │ Zadania:  (•) cały arkusz  ( ) zamknięte  ( ) otwarte  ( ) oznaczone             │ ║
+║ └──────────────────────────────────────────────────────────────────────────────────┘ ║
+║                                                                                      ║
+║ Przed symulacją: przygotuj kartkę i długopis do brudnopisu. Kalkulator niedozwolony. ║
+╚══════════════════════════════════════════════════════════════════════════════════════╝</pre></div>
+</section>
+
+<section id="s-nauka">
+  <h3><span class="num">S4</span>Tryb nauki: practice player <span class="screen-tag">/proba/:id</span></h3>
+  <p class="sub">Task on the left, feedback on the right after “Sprawdź”. On phones the feedback becomes a bottom sheet.</p>
+  <div class="wf"><pre>╔═ Tryb nauki · /proba/8f2c?zad=7 ═════════════════════════════════════════════════════╗
+║ Matematyka · Maj 2026 · NAUKA        ◷ 14:32 (stoper)       [ Przerwij ]             ║
+║ Zadanie 7 z 20   ▓▓▓▓▓▓░░░░░░░░░░░░░░░   6 sprawdzonych · 5 ✓ · 1 ×                  ║
+║ ──────────────────────────────────────────────────────────────────────────────────── ║
+║ Zadanie 7. (0–1)                   [★ Oznacz]   ┌─ PO SPRAWDZENIU ───────────────┐   ║
+║                                                 │ P1  P  ✓ dobrze                │   ║
+║ Dany jest trójkąt prostokątny o przyprostokąt-  │ P2  P  × poprawnie: F          │   ║
+║ nych 6 cm i 8 cm. Oceń prawdziwość zdań.        │                                │   ║
+║                                                 │ Wynik: 0 / 1 pkt               │   ║
+║       [ rysunek z arkusza, SVG / wycinek ]      │ (oba zdania muszą być dobrze)  │   ║
+║                                                 │                                │   ║
+║ P1. Przeciwprostokątna ma 10 cm.  ( P ) ( F )   │ Dlaczego: P = ½·6·8 = 24 cm².  │   ║
+║ P2. Pole wynosi 48 cm².            ( P ) ( F )  │ 48 to iloczyn bez ½.           │   ║
+║                                                 │                                │   ║
+║ [ Sprawdź ]   [ Pomiń ]   [ Pokaż podpowiedź ]  │ Wymaganie: VIII. Własności     │   ║
+║                                                 │ figur płaskich                 │   ║
+║                                                 │ [ Rozwiązanie krok po kroku ]  │   ║
+║                                                 │ [ Arkusz PDF, s. 6 ]           │   ║
+║                                                 └────────────────────────────────┘   ║
+║ ──────────────────────────────────────────────────────────────────────────────────── ║
+║ [ ← Poprzednie ]   1 2 3 4 5 6 [7] 8 9 10 11 … 20   ★3 ★7      [ Następne → ]        ║
+╚══════════════════════════════════════════════════════════════════════════════════════╝</pre></div>
+  <div class="notes">
+    <ul>
+      <li>Scoring follows the key exactly, including all-or-nothing rules such as “oba zdania muszą być dobrze”.</li>
+      <li><b>Podpowiedź</b> shows the first step of the solution. Using it is recorded and shown in results, without a penalty.</li>
+    </ul>
+    <ul>
+      <li>“Arkusz PDF, s. 6” opens the original page in a side panel, for drawings that are hard to rebuild.</li>
+      <li>The task strip keeps flagged tasks (★) one tap away for a final review loop.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="s-symulacja">
+  <h3><span class="num">S5</span>Symulacja: exam simulation <span class="screen-tag">/proba/:id</span></h3>
+  <p class="sub">Focus shell. The student can move freely between tasks, as with a paper booklet. What is locked is the key, hints, pausing and leaving.</p>
+  <div class="wf"><pre>╔═ Symulacja · /proba/91ab (tryb skupienia) ═══════════════════════════════════════════╗
+║ Matematyka · Maj 2026 · SYMULACJA                  ◷ 1:47:12   [ Oddaj ]             ║
+║ ──────────────────────────────────────────────────────────────────────────────────── ║
+║ Zadanie 16. (0–3)                    [★ Oznacz]  ┌─ MAPA ARKUSZA ─────────┐          ║
+║                                                  │  1 ● 2 ● 3 ● 4 ● 5 ○   │          ║
+║ Pan Nowak ogrodził działkę w kształcie           │  6 ● 7 ★ 8 ● 9 ●10 ○   │          ║
+║ prostokąta o obwodzie 64 m. Jeden bok jest       │ 11 ●12 ●13 ●14 ●15 ●   │          ║
+║ o 6 m dłuższy od drugiego. Oblicz pole.          │ 16 ◉17 ○18 ○19 ○20 ○   │          ║
+║                                                  │                        │          ║
+║ Zapisz obliczenia.                               │ ● odpowiedź  ○ brak    │          ║
+║ ┌──────────────────────────────────────────┐     │ ★ oznaczone  ◉ teraz   │          ║
+║ │ 2(a + a + 6) = 64  →  a = 13             │     │                        │          ║
+║ │ P = 13 · 19 = 247 m²                     │     │ Bez klucza do oddania. │          ║
+║ │ [ x² ] [ √ ] [ ułamek ] [ π ] [ rysunek ] │    └────────────────────────┘          ║
+║ └──────────────────────────────────────────┘                                         ║
+║ Zapisano 12 s temu                                                                   ║
+║ ──────────────────────────────────────────────────────────────────────────────────── ║
+║ [ ← Poprzednie ]                                            [ Następne → ]           ║
+║                                                                                      ║
+║ Stany zegara:  normalny  ·  &lt; 15 min: bursztynowy  ·  &lt; 5 min: pulsuje 1×/min        ║
+║ Koniec czasu: odpowiedzi zablokowane, automatyczne oddanie, ekran podsumowania.      ║
+╚══════════════════════════════════════════════════════════════════════════════════════╝</pre></div>
+  <div class="notes">
+    <ul>
+      <li>The timer runs on wall-clock time stored on the server. Closing the tab does not stop it; reopening restores the attempt with the remaining time.</li>
+      <li><b>Oddaj</b> opens a summary first: “3 zadania bez odpowiedzi, 2 oznaczone”, with links to each.</li>
+    </ul>
+    <ul>
+      <li>Open math tasks get a typed work area with a small symbol bar, or “rozwiązałem na kartce” plus an optional photo. Both are graded later in Samoocena.</li>
+      <li>Browser fullscreen is offered on start but not forced.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="s-sluchanie">
+  <h3><span class="num">S6</span>Rozumienie ze słuchu: the listening player</h3>
+  <p class="sub">The same recording drives both modes. Practice cuts it into segments; simulation plays it once, as the CKE recording is designed to be played.</p>
+  <div class="wf"><pre>╔═ Rozumienie ze słuchu · tryb nauki vs symulacja ═════════════════════════════════════╗
+║ TRYB NAUKI  ·  Zadanie 1, Tekst 2                                                    ║
+║ ┌──────────────────────────────────────────────────────────────────────────────────┐ ║
+║ │ ◄◄ 5s   ►  ▶▶ 5s     Tekst 2  0:14 ━━━━━━●━━━━━━━━ 0:48     [0.75×][0.9×][1×]    │ ║
+║ │ Segmenty:  [T1] [T2] [T3] [T4]   [ Powtarzaj segment ]   odtworzono: 3×          │ ║
+║ │ [ Transkrypcja ]  dostępna po sprawdzeniu; zdanie z odpowiedzią podświetlone     │ ║
+║ └──────────────────────────────────────────────────────────────────────────────────┘ ║
+║                                                                                      ║
+║ SYMULACJA  ·  jedno nagranie CKE od początku do końca                                ║
+║ ┌──────────────────────────────────────────────────────────────────────────────────┐ ║
+║ │ ● NAGRANIE TRWA     Zadanie 2 · drugie odtworzenie       12:40 / 21:24           │ ║
+║ │ ████████████████████████████████████████░░░░░░░░░░░░░░░░░░░░░░                   │ ║
+║ │ Brak pauzy i przewijania. Tylko głośność:  ─────●───                             │ ║
+║ │ Możesz w tym czasie zaznaczać odpowiedzi w zadaniach 1–4.                        │ ║
+║ └──────────────────────────────────────────────────────────────────────────────────┘ ║
+║                                                                                      ║
+║ Przed startem symulacji:  [ ► Próba dźwięku 10 s ]   słyszysz wyraźnie?  [ Tak ]     ║
+╚══════════════════════════════════════════════════════════════════════════════════════╝</pre></div>
+  <h4>Audio flow</h4>
+  <div class="wf"><pre>SYMULACJA (angielski)
+
+ [Próba dźwięku] ──ok──► [Instrukcja 60 s] ──auto──► [NAGRANIE CKE 21:24]
+                                                         │   bez pauzy/seek
+                                                         │   głośność: tak
+                                                         ▼
+                                     [Koniec nagrania] ──► reszta arkusza
+                                                            (zegar 110 min biegnie
+                                                             od startu cały czas)
+
+ Utrata fokusu / zamknięcie karty: nagranie dalej liczy czas w tle;
+ po powrocie odtwarzanie wznawia się w bieżącym miejscu, jak na sali.
+
+NAUKA (angielski)
+
+ [Zadanie N] ──► [Segment Tekst k] ⇄ powtórz / 0.75× / ±5 s
+                       │
+                       ▼
+                 [Sprawdź] ──► [Transkrypcja + podświetlone zdanie]</pre></div>
+</section>
+
+<section id="s-czytanie">
+  <h3><span class="num">S7</span>Czytanie: split reading view</h3>
+  <p class="sub">For Polish texts and English reading tasks. The passage stays put while the student moves through its tasks.</p>
+  <div class="wf"><pre>╔═ Czytanie · Język polski, zadania 1–8 (widok dzielony) ══════════════════════════════╗
+║ Język polski · Maj 2026 · NAUKA                  [Aa−] [Aa+] [Szeroko]  [Tekst]      ║
+║ ──────────────────────────────────────────────────────────────────────────────────── ║
+║ TEKST 1  (Literata, 19 px, 1.7)          │ Zadanie 3. (0–1)       [★ Oznacz]         ║
+║                                          │                                           ║
+║   1  Był to dzień, w którym wszystko     │ Które zdanie jest zgodne z tekstem?       ║
+║   2  zdawało się możliwe. Szedł ulicą,   │                                           ║
+║   3  a za nim ciągnął się zapach         │ ( ) A. …                                  ║
+║   4  świeżego chleba z piekarni…         │ ( ) B. …                                  ║
+║   …                                      │ ( ) C. …                                  ║
+║  34                                      │ ( ) D. …                                  ║
+║                                          │                                           ║
+║ Numeracja wersów jak w arkuszu.          │ [ Sprawdź ]                               ║
+║ Zaznacz fragment → [Zakreśl]             │                                           ║
+║                                                                                      ║
+║ Telefon: tekst i zadanie to dwie zakładki [ Tekst | Zadanie ], pozycja zapamiętana.  ║
+╚══════════════════════════════════════════════════════════════════════════════════════╝</pre></div>
+</section>
+
+<section id="s-wynik">
+  <h3><span class="num">S8</span>Wynik próby: results <span class="screen-tag">/proba/:id/wynik</span></h3>
+  <p class="sub">Score first, then comparison, then the per-task table. Open tasks waiting for grading are a clear next action, not a footnote.</p>
+  <div class="wf"><pre>╔═ Wynik próby · /proba/91ab/wynik ════════════════════════════════════════════════════╗
+║ Matematyka · Maj 2026 · Symulacja · 15 lis 2026, 125 min (użyto 118)                 ║
+║ ──────────────────────────────────────────────────────────────────────────────────── ║
+║ ┌─ WYNIK ──────────┐ ┌─ PORÓWNANIE ─────────────────────┐ ┌─ CZEKA ────────┐         ║
+║ │ 18 / 30 pkt      │ │ vs Twoja poprzednia:  ▲ 4 pkt    │ │ 2 zadania      │         ║
+║ │ 60 %             │ │ zamknięte   12 / 14   86 %       │ │ otwarte do     │         ║
+║ │                  │ │ otwarte      6 / 16   38 %       │ │ samooceny      │         ║
+║ │ w tym 4 pkt      │ │ oznaczone    3 zadania           │ │ [ Oceń → ]     │         ║
+║ │ z samooceny      │ │ czas na zad. 5:40 śr.            │ └────────────────┘         ║
+║ └──────────────────┘ └──────────────────────────────────┘                            ║
+║                                                                                      ║
+║ ┌─ ZADANIA ────────────────────────────────────────────────────────────────────────┐ ║
+║ │ Nr  Typ       Umiejętność                Pkt    Status                           │ ║
+║ │  1  zamkn.    Procenty                   1/1    ✓                                │ ║
+║ │  7  zamkn.    Własności figur płaskich   0/1    ×    [Zobacz]                    │ ║
+║ │ 16  otwarte   Równania                   3/3    ✓ samoocena                      │ ║
+║ │ 19  otwarte   Bryły                      ?/3    ○ do oceny  [Oceń]               │ ║
+║ │ …                                                                                │ ║
+║ └──────────────────────────────────────────────────────────────────────────────────┘ ║
+║                                                                                      ║
+║ [ Przejrzyj błędy (6) ]   [ Ćwicz słabe obszary ]   [ Pobierz podsumowanie ]         ║
+╚══════════════════════════════════════════════════════════════════════════════════════╝</pre></div>
+</section>
+
+<section id="s-samoocena">
+  <h3><span class="num">S9</span>Samoocena: self-grading rubric</h3>
+  <p class="sub">Built on the real Zadanie 18 criteria from <code>Język polski/Maj 2026/klucz.pdf</code>: eight criteria summing to 20 points, with the rule that 0 for “Realizacja tematu” sets every other criterion to 0.</p>
+  <div class="wf"><pre>╔═ Samoocena · Zadanie 18 (wypracowanie, 0–20) ════════════════════════════════════════╗
+║ Język polski · Maj 2026 · Zad. 18 · przemówienie            [ Zapisz szkic ]         ║
+║ ──────────────────────────────────────────────────────────────────────────────────── ║
+║ TWOJA PRACA  (412 słów)          ┌─ KRYTERIA CKE ─────────────────────────┐          ║
+║                                  │ 1 Realizacja tematu   (0)(1)[2]        │          ║
+║ Drodzy koledzy i koleżanki!      │   forma przemówienia: zwrot ✓,         │          ║
+║ Czy zastanawialiście się…        │   cechy b)–f): b ✓  d ✓  e ✓           │          ║
+║                                  │   0 pkt tu = 0 we wszystkich           │          ║
+║ Zaznacz w tekście, co uzasadnia  │ 2 Elementy retor.  (0)(1)(2)[3](4)(5)  │          ║
+║ ocenę → przypnij do kryterium.   │ 3 Kompetencje lit.    (0)[1](2)        │          ║
+║                                  │ 4 Kompozycja          (0)(1)[2]        │          ║
+║ [ Zdjęcie pracy z kartki ]       │ 5 Styl                (0)(1)[2]        │          ║
+║                                  │ 6 Język           (0)(1)[2](3)(4)      │          ║
+║                                  │ 7 Ortografia  błędy: [ 2 ] → 1 pkt     │          ║
+║                                  │ 8 Interpunkcja błędy: [ 5 ] → 1 pkt    │          ║
+║                                  │ ──────────────────────────────         │          ║
+║                                  │ Razem: 14 / 20                         │          ║
+║                                  └────────────────────────────────────────┘          ║
+║                                                                                      ║
+║ ┌─ SUGESTIA AI  (osobno od Twojej oceny) ──────────────────────────────────────────┐ ║
+║ │ Kryterium 2: proponuję 2 pkt, nie 3. Drugi argument nie ma przykładu             │ ║
+║ │ z lektury, a klucz wymaga argumentów „zilustrowanych przykładami”.               │ ║
+║ │ [ Przyjmij 2 ]  [ Zostaw moją ocenę ]  [ Pokaż fragment z klucza ]               │ ║
+║ └──────────────────────────────────────────────────────────────────────────────────┘ ║
+║                                                                                      ║
+║ Każdy poziom kryterium rozwija opis z klucza. Ortografia i interpunkcja liczą        ║
+║ punkty z liczby błędów; progi zmieniają się po włączeniu kryteriów dla dysleksji.    ║
+╚══════════════════════════════════════════════════════════════════════════════════════╝</pre></div>
+  <div class="notes">
+    <ul>
+      <li>The model answer and key only open after the student taps “Zakończ pisanie”, so they cannot write to the key.</li>
+      <li>For “Ortografia” and “Interpunkcja” the student counts errors and the app converts the count with the CKE thresholds.</li>
+    </ul>
+    <ul>
+      <li>Math open tasks use the same screen with the key's stages (for example 0–3 pts with “pokonanie zasadniczych trudności”).</li>
+      <li>History records who set each score: student, AI accepted, or student over AI. Analytics can then separate them.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="s-analiza">
+  <h3><span class="num">S10</span>Analiza: gaps and improvement <span class="screen-tag">/analiza</span></h3>
+  <p class="sub">The detailed view behind the dashboard's “Gdzie tracisz punkty”. Skill names come straight from the keys.</p>
+  <div class="wf"><pre>╔═ Analiza · /analiza ═════════════════════════════════════════════════════════════════╗
+║ Ósemka   Pulpit  Arkusze  Historia  Analiza            [Motyw] [Ustaw.]  Ola         ║
+║ ──────────────────────────────────────────────────────────────────────────────────── ║
+║ Analiza  [Polski] [•Matematyka] [Angielski]   Okres: [90 dni ▾]  Tryb: [oba ▾]       ║
+║                                                                                      ║
+║ ┌─ WYNIK W CZASIE (% i pkt CKE) ─────────┐  ┌─ ZAMKNIĘTE vs OTWARTE ───────────┐     ║
+║ │ 70%│                   ●               │  │ zamknięte  ████████░░  80 %      │     ║
+║ │    │          ●    ●                   │  │ otwarte    ████░░░░░░  40 %      │     ║
+║ │ 50%│  ●   ●             ◆ = symulacja  │  │                                  │     ║
+║ │    │                    ● = nauka      │  │ Otwarte: tracisz zwykle na       │     ║
+║ │ 30%└──────────────────────────         │  │ „pokonaniu zasadniczych          │     ║
+║ │     wrz   paź   lis                    │  │ trudności” (etap 2 z 3).         │     ║
+║ └────────────────────────────────────────┘  └──────────────────────────────────┘     ║
+║                                                                                      ║
+║ ┌─ UMIEJĘTNOŚCI (wymagania z podstawy programowej, wg klucza CKE) ─────────────────┐ ║
+║ │ Obszar                       Wynik   n    Trend 90 dni    Status                 │ ║
+║ │ Procenty                     88 %    8    ▃▅▆▇  ▲ 12 pp   ● opanowane            │ ║
+║ │ Równania                     71 %    7    ▄▄▅▆  ▲ 6 pp    ◐ do pracy             │ ║
+║ │ Statystyka                   67 %    6    ▅▄▅▅  ━         ◐ do pracy             │ ║
+║ │ Własności figur płaskich     36 %   11    ▅▄▃▃  ▼ 4 pp    ○ słabe  [Ćwicz]       │ ║
+║ │ Bryły                        33 %    3    ··▃▃  za mało danych (n&lt;4)             │ ║
+║ └──────────────────────────────────────────────────────────────────────────────────┘ ║
+║                                                                                      ║
+║ ┌─ CO SIĘ POPRAWIŁO ───────────────────────────────────────────────────────────────┐ ║
+║ │ Procenty: z 60 % (wrz) do 88 % (lis), 8 zadań. Ostatnie 5 bez błędu.             │ ║
+║ │ Równania: zadania otwarte 0–2 → teraz zwykle 2–3 pkt.                            │ ║
+║ └──────────────────────────────────────────────────────────────────────────────────┘ ║
+╚══════════════════════════════════════════════════════════════════════════════════════╝</pre></div>
+  <div class="notes">
+    <ul>
+      <li>Status thresholds: opanowane at 80 % or more, do pracy at 50–79 %, słabe below 50 %, all with n ≥ 4.</li>
+      <li>Polish areas: Kształcenie literackie i kulturowe, Kształcenie językowe, Tworzenie wypowiedzi, plus each essay criterion.</li>
+    </ul>
+    <ul>
+      <li>English areas: Rozumienie ze słuchu, Funkcje językowe, Rozumienie tekstów pisanych, Środki językowe, Wypowiedź pisemna.</li>
+      <li>“Co się poprawiło” only lists changes backed by at least 4 tasks in both periods.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="s-historia">
+  <h3><span class="num">S11</span>Historia: attempt history <span class="screen-tag">/historia</span></h3>
+  <div class="wf"><pre>╔═ Historia · /historia ═══════════════════════════════════════════════════════════════╗
+║ Ósemka   Pulpit  Arkusze  Historia  Analiza            [Motyw] [Ustaw.]  Ola         ║
+║ ──────────────────────────────────────────────────────────────────────────────────── ║
+║ Historia prób    Grupuj: [ przedmiot ▾ ]   Tryb: [ wszystkie ▾ ]   [ Szukaj… ]       ║
+║                                                                                      ║
+║ ▾ MATEMATYKA                                                                         ║
+║    ▾ Maj 2026                                                                        ║
+║       15 lis  Symulacja  118/125 min   18/30  60 %  ▲ 4   [Wynik] [Powtórz]          ║
+║       02 lis  Nauka      51 min        14/30  47 %        [Wynik] [Wznów ►]          ║
+║    ▸ Maj 2025  (2 próby, najlepsza 57 %)                                             ║
+║ ▾ JĘZYK ANGIELSKI                                                                    ║
+║    ▾ Maj 2025                                                                        ║
+║       13 lis  Nauka      64 min        41/55  74 %  ▲ 6   [Wynik] [Powtórz]          ║
+║ ▸ JĘZYK POLSKI  (3 próby)                                                            ║
+║                                                                                      ║
+║ Próba przerwana w trybie nauki = „Wznów”. Symulacja przerwana = oddana z czasem.     ║
+╚══════════════════════════════════════════════════════════════════════════════════════╝</pre></div>
+</section>
+
+<section id="s-ustawienia">
+  <h3><span class="num">S12</span>Ustawienia: settings <span class="screen-tag">/ustawienia</span></h3>
+  <div class="wf"><pre>╔═ Ustawienia · /ustawienia ═══════════════════════════════════════════════════════════╗
+║ Ósemka   Pulpit  Arkusze  Historia  Analiza            [Motyw] [Ustaw.]  Ola         ║
+║ ──────────────────────────────────────────────────────────────────────────────────── ║
+║ ┌─ WYGLĄD I CZYTANIE ──────────────────────────────────────────────────────────────┐ ║
+║ │ Motyw            ( ) jasny  ( ) ciemny  (•) jak system                           │ ║
+║ │ Rozmiar tekstu   A ───●──── A     podgląd: „Był to dzień…”                       │ ║
+║ │ Czcionka tekstów (•) Literata  ( ) bezszeryfowa  ( ) dla dysleksji               │ ║
+║ │ Ruch             [x] ogranicz animacje                                           │ ║
+║ └──────────────────────────────────────────────────────────────────────────────────┘ ║
+║ ┌─ DOSTOSOWANIA EGZAMINACYJNE ─────────────────────────────────────────────────────┐ ║
+║ │ [x] Wydłużony czas    Polski 150 → [225]  Matematyka 125 → [185]                 │ ║
+║ │                       Angielski 110 → [165]     (zgodnie z komunikatem CKE)      │ ║
+║ │ [ ] Kryteria oceniania dla uczniów z dysleksją (zad. 18, ortografia)             │ ║
+║ └──────────────────────────────────────────────────────────────────────────────────┘ ║
+║ ┌─ DŹWIĘK ─────────────────────────────────────────────────────────────────────────┐ ║
+║ │ Głośność domyślna ─────●──   [ ► Próba dźwięku ]                                 │ ║
+║ │ Nauka: domyślna prędkość [ 1× ▾ ]                                                │ ║
+║ └──────────────────────────────────────────────────────────────────────────────────┘ ║
+║ ┌─ DANE ───────────────────────────────────────────────────────────────────────────┐ ║
+║ │ [ Eksportuj historię (JSON/CSV) ]   [ Wyczyść historię… ]                        │ ║
+║ └──────────────────────────────────────────────────────────────────────────────────┘ ║
+╚══════════════════════════════════════════════════════════════════════════════════════╝</pre></div>
+  <div class="callout warn"><b>Extended time values need checking.</b>The defaults shown (225 / 185 / 165 min) are my understanding of the CKE maximums for wydłużony czas. They are editable, and should be confirmed against the current CKE accommodations notice before release.</div>
+</section>
+
+<section id="decyzje">
+  <div class="eyebrow">08 · Next</div>
+  <h2>Decisions made and open questions</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Topic</th><th>Proposal</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Navigation in simulation</td><td>Free movement between tasks, as on paper; key, hints, pause and exit locked</td><td>Proposed</td></tr>
+      <tr><td>Content import</td><td>One-time PDF → structured tasks, checked by a person, with page links back to the PDF</td><td>Needed before build</td></tr>
+      <tr><td>Listening cue map</td><td>Segment boundaries per Tekst, aligned once against the transcript</td><td>Needed for practice audio</td></tr>
+      <tr><td>Accounts</td><td>Single student, local-first; parent/teacher view later</td><td>Open question</td></tr>
+      <tr><td>Interface language</td><td>Polish UI throughout, English kept for English tasks</td><td>Proposed</td></tr>
+      <tr><td>Device priority</td><td>Laptop first for simulation, phone for practice and review</td><td>Open question</td></tr>
+    </tbody>
+  </table></div>
+  <p>Next step: data model and import pipeline (task schema, skill tags from the keys, scoring rules, audio cue map), then the tech stack.</p>
+</section>
+
+</main>
+</div>
