@@ -1,0 +1,2494 @@
+{
+  "session": {
+    "id": "angielski-2025-05-glowny",
+    "subjectId": "angielski",
+    "year": 2025,
+    "month": 5,
+    "term": "glowny",
+    "examDate": "2025-05-15",
+    "formCode": "OJAP-100",
+    "versions": [
+      "X"
+    ],
+    "maxPoints": 55,
+    "taskOrder": [
+      "en-2025-01",
+      "en-2025-02",
+      "en-2025-03",
+      "en-2025-04",
+      "en-2025-05",
+      "en-2025-06",
+      "en-2025-07",
+      "en-2025-08",
+      "en-2025-09",
+      "en-2025-10",
+      "en-2025-11",
+      "en-2025-12",
+      "en-2025-13",
+      "en-2025-14"
+    ],
+    "sources": [
+      {
+        "kind": "arkusz",
+        "path": "Język angielski/Maj 2025/arkusz.pdf",
+        "sha256": "27940300ff6c07af72233451fb3dc7caacac9655c0705aae4f152779dec1e2d9",
+        "pages": 20
+      },
+      {
+        "kind": "klucz",
+        "path": "Język angielski/Maj 2025/klucz.pdf",
+        "sha256": "c0adeef13dfb81be477b1a5e95499260dd6043e860740bd9b0ba90e499f48ff7",
+        "pages": 25
+      },
+      {
+        "kind": "nagranie",
+        "path": "Język angielski/Maj 2025/nagranie.mp3",
+        "sha256": "a5424a3c7e26ef526020ad96672f6654e23f6e076a650c34a76e6eb968882259"
+      },
+      {
+        "kind": "transkrypcja",
+        "path": "Język angielski/Maj 2025/transkrypcja.pdf",
+        "sha256": "b325e0706b4bda8804fbb4f62dafaa32b393c90419c07fc39f5b42c3ae9ba350",
+        "pages": 3
+      }
+    ],
+    "contentVersion": "7a524bddadd60bcd",
+    "status": "published"
+  },
+  "stimuli": [
+    {
+      "id": "en-2025-01-fig1",
+      "kind": "figure",
+      "title": "Trzy obrazki: A – para butów sportowych (trampków), B – słuchawki nauszne, C – koszulka (T-shirt).",
+      "asset": "assets/en-2025-01-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 3
+      }
+    },
+    {
+      "id": "en-2025-01-fig2",
+      "kind": "figure",
+      "title": "Trzy obrazki: A – rower, B – autobus, C – samochód osobowy.",
+      "asset": "assets/en-2025-01-fig2.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 3
+      }
+    },
+    {
+      "id": "en-2025-01-fig3",
+      "kind": "figure",
+      "title": "Trzy obrazki: A – gabinet lekarski ze stetoskopem i wagą, B – biblioteka z regałami na książki, C – stoisko sklepowe z owocami i warzywami.",
+      "asset": "assets/en-2025-01-fig3.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 3
+      }
+    },
+    {
+      "id": "en-2025-01-nagranie",
+      "kind": "audio",
+      "title": "Nagranie do zadania 1",
+      "asset": "assets/nagranie.mp3",
+      "audioSegmentIds": [
+        "en-2025-01-audio"
+      ],
+      "ref": {
+        "source": "nagranie",
+        "page": 1
+      }
+    },
+    {
+      "id": "en-2025-02-nagranie",
+      "kind": "audio",
+      "title": "Nagranie do zadania 2",
+      "asset": "assets/nagranie.mp3",
+      "audioSegmentIds": [
+        "en-2025-02-audio"
+      ],
+      "ref": {
+        "source": "nagranie",
+        "page": 1
+      }
+    },
+    {
+      "id": "en-2025-03-nagranie",
+      "kind": "audio",
+      "title": "Nagranie do zadania 3",
+      "asset": "assets/nagranie.mp3",
+      "audioSegmentIds": [
+        "en-2025-03-audio"
+      ],
+      "ref": {
+        "source": "nagranie",
+        "page": 1
+      }
+    },
+    {
+      "id": "en-2025-04-nagranie",
+      "kind": "audio",
+      "title": "Nagranie do zadania 4",
+      "asset": "assets/nagranie.mp3",
+      "audioSegmentIds": [
+        "en-2025-04-audio"
+      ],
+      "ref": {
+        "source": "nagranie",
+        "page": 1
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "en-2025-01",
+      "sessionId": "angielski-2025-05-glowny",
+      "number": 1,
+      "maxPoints": 5,
+      "instruction": "Usłyszysz dwukrotnie pięć tekstów. W zadaniach 1.1.–1.5., na podstawie informacji zawartych w nagraniu, z podanych odpowiedzi wybierz właściwą. Zakreśl jedną z liter: A, B albo C.",
+      "stimulusIds": [
+        "en-2025-01-nagranie",
+        "en-2025-01-fig1",
+        "en-2025-01-fig2",
+        "en-2025-01-fig3"
+      ],
+      "items": [
+        {
+          "id": "en-2025-01-1",
+          "label": "1.1",
+          "maxPoints": 1,
+          "prompt": "What was in the parcel?\n\n![Trzy obrazki: A – para butów sportowych (trampków), B – słuchawki nauszne, C – koszulka (T-shirt).](stimulus:en-2025-01-fig1)",
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "A pair of trainers (sports shoes)."
+              },
+              {
+                "id": "B",
+                "text": "A pair of headphones."
+              },
+              {
+                "id": "C",
+                "text": "A T-shirt."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "en-gen-II",
+            "en-II.5"
+          ],
+          "explanation": "W nagraniu Sam mówi: „I'll open the parcel and try the trainers on”, więc w paczce były buty sportowe (trainers). Słuchawki (headphones) to rzecz, którą Sam ma na uszach w trakcie rozmowy, a koszulka (T-shirt) jest tylko wspomniana jako pasująca do nowych butów. Dlatego poprawna odpowiedź to obrazek z butami sportowymi."
+        },
+        {
+          "id": "en-2025-01-2",
+          "label": "1.2",
+          "maxPoints": 1,
+          "prompt": "How is Jack going to get to school tomorrow?\n\n![Trzy obrazki: A – rower, B – autobus, C – samochód osobowy.](stimulus:en-2025-01-fig2)",
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "A bicycle."
+              },
+              {
+                "id": "B",
+                "text": "A bus."
+              },
+              {
+                "id": "C",
+                "text": "A car."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "en-gen-II",
+            "en-II.5"
+          ],
+          "explanation": "Rower Jacka ma zepsute tylne koło („something is wrong with the back wheel”), a droga pieszo na przystanek autobusu oznaczałaby przemoknięcie w deszczu. Na koniec mama zgadza się go zawieźć: „I'll drive you then”, więc Jack pojedzie do szkoły samochodem."
+        },
+        {
+          "id": "en-2025-01-3",
+          "label": "1.3",
+          "maxPoints": 1,
+          "prompt": "Where is the girl calling from?\n\n![Trzy obrazki: A – gabinet lekarski ze stetoskopem i wagą, B – biblioteka z regałami na książki, C – stoisko sklepowe z owocami i warzywami.](stimulus:en-2025-01-fig3)",
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "A doctor's office."
+              },
+              {
+                "id": "B",
+                "text": "A library."
+              },
+              {
+                "id": "C",
+                "text": "A grocery shop (a fruit and vegetable stand)."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "en-gen-II",
+            "en-II.4"
+          ],
+          "explanation": "Dziewczynka mówi, że czeka w kolejce, aby kupić owoce: „now I'm waiting to buy some fruit for the class party tomorrow”. Oznacza to, że dzwoni ze sklepu spożywczego. Zwrot książek do biblioteki dopiero przed nią, a wizyta u lekarza to tylko plan na wieczór wspomniany przez tatę."
+        },
+        {
+          "id": "en-2025-01-4",
+          "label": "1.4",
+          "maxPoints": 1,
+          "prompt": "The girl",
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "offers James some help."
+              },
+              {
+                "id": "B",
+                "text": "asks James to agree to something."
+              },
+              {
+                "id": "C",
+                "text": "invites James to a party."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "en-gen-II",
+            "en-II.3"
+          ],
+          "explanation": "Dziewczynka dzwoni, aby zapytać, czy może zabrać kuzyna na przyjęcie: „Can I bring him with me?”. Prosi więc Jamesa o wyrażenie zgody na coś. To nie ona zaprasza Jamesa – przyjęcie jest organizowane przez Jamesa („Thanks for inviting me to your party”)."
+        },
+        {
+          "id": "en-2025-01-5",
+          "label": "1.5",
+          "maxPoints": 1,
+          "prompt": "What is the boy talking about?",
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "a film somebody recommended to him"
+              },
+              {
+                "id": "B",
+                "text": "a play he saw at the theatre"
+              },
+              {
+                "id": "C",
+                "text": "a book he read for school"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "en-gen-II",
+            "en-II.2"
+          ],
+          "explanation": "Chłopiec opisuje spektakl, który oglądał w teatrze: wspomina aktorów stojących blisko niego („the actors were just a few metres from me”) i prawie pustą scenę („The stage was almost empty”). Książkę dopiero przeczyta w przyszłym miesiącu („Next month I'm going to read the book for school”), więc nie o niej opowiada."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "en-gen-II",
+        "en-II.5",
+        "en-II.4",
+        "en-II.3",
+        "en-II.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 3
+      }
+    },
+    {
+      "id": "en-2025-02",
+      "sessionId": "angielski-2025-05-glowny",
+      "number": 2,
+      "maxPoints": 4,
+      "instruction": "**Usłyszysz dwukrotnie cztery wypowiedzi związane z wizytą w ogrodzie zoologicznym. Na podstawie informacji zawartych w nagraniu dopasuj do każdej wypowiedzi (2.1.–2.4.) odpowiadające jej zdanie (A–E). Wpisz rozwiązania do tabeli.**\n\n**Uwaga!** Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej wypowiedzi.",
+      "stimulusIds": [
+        "en-2025-02-nagranie"
+      ],
+      "items": [
+        {
+          "id": "en-2025-02",
+          "label": "2",
+          "maxPoints": 4,
+          "response": {
+            "type": "matching",
+            "slots": [
+              "2.1",
+              "2.2",
+              "2.3",
+              "2.4"
+            ],
+            "options": [
+              {
+                "id": "A",
+                "text": "While visiting the zoo, I did a written task."
+              },
+              {
+                "id": "B",
+                "text": "I really enjoyed a film shown at the zoo."
+              },
+              {
+                "id": "C",
+                "text": "I was surprised by what an animal was doing."
+              },
+              {
+                "id": "D",
+                "text": "I couldn’t see something I was interested in."
+              },
+              {
+                "id": "E",
+                "text": "I was scared by a noise when I was looking at some animals."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "2.1": "D",
+                "2.2": "E",
+                "2.3": "A",
+                "2.4": "C"
+              }
+            }
+          },
+          "scoring": {
+            "type": "per_part",
+            "pointsEach": 1
+          },
+          "skillTags": [
+            "en-gen-II",
+            "en-II.5"
+          ],
+          "explanation": "W wypowiedzi 1. chłopiec mówi, że gdy dotarł do słoni, „the feeding was over!”, czyli nie zobaczył tego, co go interesowało – pasuje zdanie D. W wypowiedzi 2. dziewczyna słyszy „a very loud sound right behind me” i bardzo się boi – pasuje zdanie E. W wypowiedzi 3. uczniowie musieli „fill in the gaps on the sheets”, czyli wykonali zadanie pisemne – pasuje zdanie A. W wypowiedzi 4. dziewczyna jest zaskoczona zachowaniem małpy: „I had no idea monkeys can play like that!” – pasuje zdanie C; zdanie B jest dodatkowe, bo to dziewczyna nagrała film telefonem, a nie oglądała film pokazywany w zoo."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "en-gen-II",
+        "en-II.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "en-2025-03",
+      "sessionId": "angielski-2025-05-glowny",
+      "number": 3,
+      "maxPoints": 4,
+      "instruction": "Usłyszysz dwukrotnie cztery wypowiedzi dotyczące czytania książek (3.1.–3.4.).\nDo każdej z nich dobierz właściwą reakcję (A–E). Wpisz rozwiązania do tabeli.\n**Uwaga!** Jedna reakcja została podana dodatkowo i nie pasuje do żadnej wypowiedzi.",
+      "stimulusIds": [
+        "en-2025-03-nagranie"
+      ],
+      "items": [
+        {
+          "id": "en-2025-03",
+          "label": "3",
+          "maxPoints": 4,
+          "response": {
+            "type": "matching",
+            "slots": [
+              "3.1",
+              "3.2",
+              "3.3",
+              "3.4"
+            ],
+            "options": [
+              {
+                "id": "A",
+                "text": "You may be right, but I prefer historical novels."
+              },
+              {
+                "id": "B",
+                "text": "You’re welcome. I’m glad you liked it."
+              },
+              {
+                "id": "C",
+                "text": "Oh, really? I need to congratulate him then."
+              },
+              {
+                "id": "D",
+                "text": "Oh, thank you. It was easier than I expected."
+              },
+              {
+                "id": "E",
+                "text": "Why don’t you take a detective story with you?"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "3.1": "E",
+                "3.2": "A",
+                "3.3": "D",
+                "3.4": "B"
+              }
+            }
+          },
+          "scoring": {
+            "type": "per_part",
+            "pointsEach": 1
+          },
+          "skillTags": [
+            "en-gen-IV",
+            "en-VI.8",
+            "en-VI.4",
+            "en-VI.6",
+            "en-VI.14"
+          ],
+          "explanation": "W wypowiedzi 1. słyszymy prośbę o polecenie czegoś do czytania na wakacje („Could you recommend something to read on holiday?”), dlatego pasuje reakcja E z propozycją: „Why don’t you take a detective story with you?”. W wypowiedzi 2. („I think fantasy books are great.”) ktoś wyraża swoją opinię, a reakcja A („You may be right, but I prefer historical novels.”) odnosi się do niej i przedstawia własną preferencję. W wypowiedzi 3. („Congratulations on winning the reading competition.”) słyszymy gratulacje skierowane do kogoś trzeciego, więc właściwa jest reakcja C: „Oh, really? I need to congratulate him then.”. W wypowiedzi 4. („Thank you for the fantastic novel you gave me.”) słyszymy podziękowanie, na które odpowiada reakcja B: „You’re welcome. I’m glad you liked it.”; reakcja D jest reakcją dodatkową i nie pasuje do żadnej wypowiedzi."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "en-gen-IV",
+        "en-VI.8",
+        "en-VI.4",
+        "en-VI.6",
+        "en-VI.14"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 5
+      }
+    },
+    {
+      "id": "en-2025-04",
+      "sessionId": "angielski-2025-05-glowny",
+      "number": 4,
+      "maxPoints": 3,
+      "instruction": "Usłyszysz dwukrotnie rozmowę przyjaciół na temat wyjazdu na mecz piłki nożnej. Na podstawie informacji zawartych w nagraniu uzupełnij luki 4.1.–4.3. w notatce, tak aby jak najbardziej precyzyjnie oddać sens wysłuchanego tekstu. Luki należy uzupełnić w języku angielskim.\n\nThe boy’s dad wants to park the car next to **4.1.** _____, so they need to leave home early.\n\nAfter the match, they are going to have **4.2.** _____ for lunch.\n\nA ticket for someone under 16 costs **4.3.** _____ pounds.",
+      "stimulusIds": [
+        "en-2025-04-nagranie"
+      ],
+      "items": [
+        {
+          "id": "en-2025-04-1",
+          "label": "4.1",
+          "maxPoints": 1,
+          "response": {
+            "type": "short_text",
+            "gaps": 1,
+            "language": "en"
+          },
+          "key": {
+            "X": {
+              "type": "text",
+              "expected": [
+                "the cinema"
+              ],
+              "accepted": [
+                "cinema",
+                "a cinema",
+                "Cinema"
+              ],
+              "rejected": [
+                {
+                  "answer": "11 o’clock",
+                  "reason": "Odpowiedź nielogiczna."
+                },
+                {
+                  "answer": "the stadium",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "stadium",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "the cinema and stadium",
+                  "reason": "Dwie odpowiedzi, z których jedna jest poprawna, a druga – błędna."
+                },
+                {
+                  "answer": "sinema",
+                  "reason": "Wymagana pełna poprawność zapisu wyrazu cinema (wyraz o wysokiej frekwencji)."
+                },
+                {
+                  "answer": "the place next to the cinema",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "place next to the cinema",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                }
+              ]
+            }
+          },
+          "scoring": {
+            "type": "text_match",
+            "strictness": "communicative"
+          },
+          "skillTags": [
+            "en-gen-II",
+            "en-II.5",
+            "en-gen-I"
+          ],
+          "explanation": "W nagraniu chłopiec mówi: „we’ll have to leave early if we want to find a place in the car park next to the cinema”, a na pytanie o parking przy stadionie odpowiada: „that car park is only for team members”. Tata chce więc zaparkować obok kina, dlatego luka 4.1 to the cinema.",
+          "scoringNotes": [
+            "Akceptowane są wszystkie odpowiedzi nieujęte w zasadach oceniania, które są merytorycznie poprawne i spełniają wszystkie warunki zadania.",
+            "1 pkt – poprawna odpowiedź.",
+            "0 pkt – odpowiedź niepoprawna lub brak odpowiedzi.",
+            "Dopuszcza się pominięcie przedimka the lub zastąpienie go przedimkiem a.",
+            "Akceptuje się zapis cinema wielką literą.",
+            "W zadaniu otwartym sprawdzającym rozumienie ze słuchu uwzględnia się stwierdzoną i udokumentowaną dysleksję, dysgrafię i dysortografię. Przy ocenie tego zadania nie są brane pod uwagę błędy ortograficzne. Błąd ortograficzny zmieniający znaczenie wyrazu to błąd językowy. Jest on brany pod uwagę w ocenie poprawności językowej.",
+            "Przykładowe akceptowane odpowiedzi do zadania 4. w pracach uczniów ze specyficznymi trudnościami w uczeniu się: z dysleksją, z dysgrafią, z dysortografią: 4.1. cinnema"
+          ]
+        },
+        {
+          "id": "en-2025-04-2",
+          "label": "4.2",
+          "maxPoints": 1,
+          "response": {
+            "type": "short_text",
+            "gaps": 1,
+            "language": "en"
+          },
+          "key": {
+            "X": {
+              "type": "text",
+              "expected": [
+                "pancakes"
+              ],
+              "accepted": [
+                "pan cakes",
+                "pan-cakes",
+                "Pancakes",
+                "pencakes",
+                "puncakes",
+                "pamcakes",
+                "pancake’s",
+                "a pancakes",
+                "some pancakes",
+                "pancakes at the snack bar",
+                "pancakes but not hot dogs",
+                "a pancake",
+                "pancake"
+              ],
+              "rejected": [
+                {
+                  "answer": "from the food truck",
+                  "reason": "Odpowiedź nielogiczna."
+                },
+                {
+                  "answer": "snack",
+                  "reason": "Odpowiedź nieprecyzyjna."
+                },
+                {
+                  "answer": "snacks",
+                  "reason": "Odpowiedź nieprecyzyjna."
+                },
+                {
+                  "answer": "placki",
+                  "reason": "Odpowiedź w języku innym niż wymagany."
+                },
+                {
+                  "answer": "naleśniki",
+                  "reason": "Odpowiedź w języku innym niż wymagany."
+                },
+                {
+                  "answer": "hot dogs",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "pancoke",
+                  "reason": "Błąd w drugiej części wyrazu."
+                },
+                {
+                  "answer": "pancooks",
+                  "reason": "Błąd w drugiej części wyrazu."
+                },
+                {
+                  "answer": "pancases",
+                  "reason": "Błąd w drugiej części wyrazu."
+                },
+                {
+                  "answer": "hot dogs or pancakes",
+                  "reason": "Dwie odpowiedzi, z których jedna jest poprawna, a druga – błędna."
+                },
+                {
+                  "answer": "hot dogs and pancakes",
+                  "reason": "Dwie odpowiedzi, z których jedna jest poprawna, a druga – błędna."
+                },
+                {
+                  "answer": "buy pancakes",
+                  "reason": ""
+                }
+              ]
+            }
+          },
+          "scoring": {
+            "type": "text_match",
+            "strictness": "communicative"
+          },
+          "skillTags": [
+            "en-gen-II",
+            "en-II.5",
+            "en-gen-I"
+          ],
+          "explanation": "Chłopiec proponuje hot dogi z food trucka albo pancakes: „we can go for pancakes at the snack bar right across the road”. Emma odpowiada: „I’m not a great fan of hot dogs, but pancakes would be great”, a chłopiec się zgadza: „OK, good idea, I like them too”. Po meczu zjedzą więc pancakes.",
+          "scoringNotes": [
+            "Akceptowane są wszystkie odpowiedzi nieujęte w zasadach oceniania, które są merytorycznie poprawne i spełniają wszystkie warunki zadania.",
+            "1 pkt – poprawna odpowiedź.",
+            "0 pkt – odpowiedź niepoprawna lub brak odpowiedzi.",
+            "Dopuszczalny zapis.",
+            "Akceptuje się te błędy w zapisie pierwszej części wyrazu pancakes.",
+            "Dopuszczalny błąd.",
+            "Dopuszcza się użycie liczby pojedynczej.",
+            "W zadaniu otwartym sprawdzającym rozumienie ze słuchu uwzględnia się stwierdzoną i udokumentowaną dysleksję, dysgrafię i dysortografię. Przy ocenie tego zadania nie są brane pod uwagę błędy ortograficzne. Błąd ortograficzny zmieniający znaczenie wyrazu to błąd językowy. Jest on brany pod uwagę w ocenie poprawności językowej.",
+            "Przykładowe akceptowane odpowiedzi do zadania 4. w pracach uczniów ze specyficznymi trudnościami w uczeniu się: z dysleksją, z dysgrafią, z dysortografią: 4.2. panckakes"
+          ]
+        },
+        {
+          "id": "en-2025-04-3",
+          "label": "4.3",
+          "maxPoints": 1,
+          "response": {
+            "type": "short_text",
+            "gaps": 1,
+            "language": "en"
+          },
+          "key": {
+            "X": {
+              "type": "text",
+              "expected": [
+                "five",
+                "5"
+              ],
+              "accepted": [
+                "five pounds",
+                "only five",
+                "5£",
+                "£5"
+              ],
+              "rejected": [
+                {
+                  "answer": "twelve",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "22",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "three",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "enough money",
+                  "reason": "Odpowiedź nie pasuje logicznie do otoczenia luki."
+                },
+                {
+                  "answer": "fife",
+                  "reason": "Wymagana pełna poprawność zapisu wyrazu five (wyraz o wysokiej frekwencji)."
+                },
+                {
+                  "answer": "fiwe",
+                  "reason": "Wymagana pełna poprawność zapisu wyrazu five (wyraz o wysokiej frekwencji)."
+                },
+                {
+                  "answer": "five dollars",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                }
+              ]
+            }
+          },
+          "scoring": {
+            "type": "text_match",
+            "strictness": "communicative"
+          },
+          "skillTags": [
+            "en-gen-II",
+            "en-II.5",
+            "en-gen-I"
+          ],
+          "explanation": "Chłopiec podaje ceny biletów: „An adult ticket costs £12, but it’s only £5 if you are under 16.” Bilet dla osoby poniżej 16 lat kosztuje więc pięć funtów, dlatego luka 4.3 to five / 5 (liczba 12 to cena biletu dla dorosłego, a 22 to suma za trzy osoby).",
+          "scoringNotes": [
+            "Akceptowane są wszystkie odpowiedzi nieujęte w zasadach oceniania, które są merytorycznie poprawne i spełniają wszystkie warunki zadania.",
+            "1 pkt – poprawna odpowiedź.",
+            "0 pkt – odpowiedź niepoprawna lub brak odpowiedzi.",
+            "Dopuszcza się przepisanie wyrazu pounds z otoczenia luki.",
+            "Odpowiedź poprawna.",
+            "W zadaniu otwartym sprawdzającym rozumienie ze słuchu uwzględnia się stwierdzoną i udokumentowaną dysleksję, dysgrafię i dysortografię. Przy ocenie tego zadania nie są brane pod uwagę błędy ortograficzne. Błąd ortograficzny zmieniający znaczenie wyrazu to błąd językowy. Jest on brany pod uwagę w ocenie poprawności językowej.",
+            "Przykładowe akceptowane odpowiedzi do zadania 4. w pracach uczniów ze specyficznymi trudnościami w uczeniu się: z dysleksją, z dysgrafią, z dysortografią: 4.3. fiwe"
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "en-gen-II",
+        "en-II.5",
+        "en-gen-I"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 5
+      }
+    },
+    {
+      "id": "en-2025-05",
+      "sessionId": "angielski-2025-05-glowny",
+      "number": 5,
+      "maxPoints": 4,
+      "instruction": "Dla każdej z opisanych sytuacji (5.1.–5.4.) wybierz właściwą reakcję. Zakreśl jedną z liter: A, B albo C.",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "en-2025-05-1",
+          "label": "5.1",
+          "maxPoints": 1,
+          "prompt": "Kolega chce pójść do kina na film, który Ci się nie podobał. Jak mu to odradzisz?",
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "You aren’t allowed to watch it."
+              },
+              {
+                "id": "B",
+                "text": "I can’t go and see it with you."
+              },
+              {
+                "id": "C",
+                "text": "Don’t waste your time on it."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "en-gen-IV",
+            "en-VI.9"
+          ],
+          "explanation": "Sytuacja wymaga odradzenia koledze obejrzenia filmu, który Ci się nie podobał. Reakcja „Don’t waste your time on it.” („Nie marnuj na niego czasu”) jest właśnie odradzeniem, czyli udzieleniem rady, żeby nie oglądał filmu. Odpowiedź „You aren’t allowed to watch it.” oznacza zakaz, a „I can’t go and see it with you.” odmowę wspólnego wyjścia, więc nie pasują do sytuacji."
+        },
+        {
+          "id": "en-2025-05-2",
+          "label": "5.2",
+          "maxPoints": 1,
+          "prompt": "Chcesz poczęstować koleżankę tortem. Co powiesz?",
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Help yourself."
+              },
+              {
+                "id": "B",
+                "text": "Thanks a lot."
+              },
+              {
+                "id": "C",
+                "text": "The same to you."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "en-gen-IV",
+            "en-VI.14"
+          ],
+          "explanation": "Chcesz poczęstować koleżankę tortem, więc zachęcasz ją do poczęstunku zwrotem grzecznościowym „Help yourself.” („Poczęstuj się”). Odpowiedź „Thanks a lot.” to podziękowanie, a „The same to you.” to odwzajemnienie życzeń, więc żadna z nich nie jest poczęstowaniem kogoś."
+        },
+        {
+          "id": "en-2025-05-3",
+          "label": "5.3",
+          "maxPoints": 1,
+          "prompt": "Rozmawiasz z przyjaciółmi o koncercie, na którym niedawno byliście.\nJak wyrazisz swoją opinię o nim?",
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "That would be great."
+              },
+              {
+                "id": "B",
+                "text": "It’s nice to hear about it."
+              },
+              {
+                "id": "C",
+                "text": "I really enjoyed it."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "en-gen-IV",
+            "en-VI.4"
+          ],
+          "explanation": "Byliście razem na koncercie, więc własną opinię o nim wyrażasz słowami „I really enjoyed it.” („Bardzo mi się podobał”). Odpowiedź „That would be great.” to reakcja na propozycję, a „It’s nice to hear about it.” to komentarz do czyjejś relacji, a nie do własnego przeżycia."
+        },
+        {
+          "id": "en-2025-05-4",
+          "label": "5.4",
+          "maxPoints": 1,
+          "prompt": "Podczas dyskusji z kolegą chcesz przyznać mu rację. Co powiesz?",
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "You’re right."
+              },
+              {
+                "id": "B",
+                "text": "You can’t be serious."
+              },
+              {
+                "id": "C",
+                "text": "You should agree with me."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "en-gen-IV",
+            "en-VI.4"
+          ],
+          "explanation": "Przyznanie koledze racji oznacza zgodę z jego opinią, czyli wypowiedź „You’re right.” („Masz rację”). Odpowiedź „You can’t be serious.” wyraża niedowierzanie, a „You should agree with me.” zachęca kolegę, żeby zgodził się z Tobą, więc obie pasują do odwrotnej sytuacji."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "en-gen-IV",
+        "en-VI.9",
+        "en-VI.14",
+        "en-VI.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "en-2025-06",
+      "sessionId": "angielski-2025-05-glowny",
+      "number": 6,
+      "maxPoints": 2,
+      "instruction": "Uzupełnij dialogi. Wpisz w każdą lukę (6.1.–6.2.) brakujący fragment wypowiedzi, tak aby otrzymać spójne i logiczne teksty. Wykorzystaj wyrazy podane w nawiasie, ale nie zmieniaj ich formy. Luki należy uzupełnić w języku angielskim.\n**Uwaga! W każdą lukę możesz wpisać maksymalnie trzy wyrazy, wliczając w to wyraz już podany.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "en-2025-06-1",
+          "label": "6.1",
+          "maxPoints": 1,
+          "prompt": "**X:** Where is Tom from?\n**Y:** He 6.1. (born) ______________________________ in Spain, but he lives in London.",
+          "response": {
+            "type": "short_text",
+            "gaps": 1,
+            "language": "en"
+          },
+          "key": {
+            "X": {
+              "type": "text",
+              "expected": [
+                "was born"
+              ],
+              "accepted": [
+                "he was born"
+              ],
+              "rejected": [
+                {
+                  "answer": "is from",
+                  "reason": "Odpowiedź niezgodna z poleceniem."
+                },
+                {
+                  "answer": "was a born",
+                  "reason": "Odpowiedź zawiera poważny błąd językowy."
+                },
+                {
+                  "answer": "was borned",
+                  "reason": "Odpowiedź zawiera poważny błąd językowy."
+                },
+                {
+                  "answer": "was borning",
+                  "reason": "Odpowiedź zawiera poważny błąd językowy."
+                },
+                {
+                  "answer": "were born",
+                  "reason": "Odpowiedź nie łączy się logicznie z fragmentami otaczającymi lukę."
+                },
+                {
+                  "answer": "is born",
+                  "reason": "Odpowiedź nie łączy się logicznie z fragmentami otaczającymi lukę."
+                },
+                {
+                  "answer": "has been born",
+                  "reason": "Odpowiedź nie łączy się logicznie z fragmentami otaczającymi lukę."
+                },
+                {
+                  "answer": "born",
+                  "reason": "Odpowiedź nie łączy się logicznie z fragmentami otaczającymi lukę."
+                },
+                {
+                  "answer": "wos born",
+                  "reason": "Wymagana pełna poprawność zapisu wyrazu was (wyraz o wysokiej frekwencji)."
+                }
+              ]
+            }
+          },
+          "scoring": {
+            "type": "text_match",
+            "strictness": "communicative"
+          },
+          "skillTags": [
+            "en-gen-IV",
+            "en-VI.3"
+          ],
+          "explanation": "Pytanie Where is Tom from? dotyczy pochodzenia, a w odpowiedzi mówimy o miejscu urodzenia: He was born in Spain. Wyraz born występuje w stronie biernej w czasie past simple (was/were + born), a podmiotem jest He, dlatego do luki wpisujemy was born (można też przepisać wyraz poprzedzający lukę: he was born).",
+          "scoringNotes": [
+            "Akceptowane są wszystkie odpowiedzi nieujęte w zasadach oceniania, które są merytorycznie poprawne i spełniają wszystkie warunki zadania.",
+            "1 pkt – poprawna odpowiedź.",
+            "0 pkt – odpowiedź niepoprawna lub brak odpowiedzi.",
+            "W przypadku zadań sprawdzających znajomość funkcji językowych równie istotna jak komunikatywność odpowiedzi jest jej poprawność. Odpowiedzi zawierające poważne błędy językowe i/lub ortograficzne nie są akceptowane.",
+            "Dopuszcza się przepisanie wyrazu poprzedzającego lukę.",
+            "W zadaniu otwartym sprawdzającym znajomość funkcji językowych uwzględnia się stwierdzoną i udokumentowaną dysleksję, dysgrafię i dysortografię. Przy ocenie tego zadania nie są brane pod uwagę błędy ortograficzne. Błąd ortograficzny zmieniający znaczenie wyrazu to błąd językowy. Jest on brany pod uwagę w ocenie poprawności językowej.",
+            "Przykładowe akceptowane odpowiedzi do zadania 6. w pracach uczniów ze specyficznymi trudnościami w uczeniu się: z dysleksją, z dysgrafią, z dysortografią: 6.1. wos born"
+          ]
+        },
+        {
+          "id": "en-2025-06-2",
+          "label": "6.2",
+          "maxPoints": 1,
+          "prompt": "**X:** Brian, 6.2. (borrow) ____________________________________________ your scooter this afternoon?\n**Y:** Sure, but don't let anyone else use it!",
+          "response": {
+            "type": "short_text",
+            "gaps": 1,
+            "language": "en"
+          },
+          "key": {
+            "X": {
+              "type": "text",
+              "expected": [
+                "can I borrow",
+                "could I borrow",
+                "may I borrow"
+              ],
+              "accepted": [
+                "can i borrow",
+                "Could I borrow",
+                "can't I borrow",
+                "couldn't I borrow",
+                "can I borow",
+                "could I borow",
+                "may I borow",
+                "can we borrow"
+              ],
+              "rejected": [
+                {
+                  "answer": "I can borrow",
+                  "reason": "Wymagana jest konstrukcja pytająca."
+                },
+                {
+                  "answer": "may I borrowed",
+                  "reason": "Odpowiedź zawiera poważny błąd językowy."
+                },
+                {
+                  "answer": "is it OK if I borrow",
+                  "reason": "Przekroczony limit wyrazów."
+                },
+                {
+                  "answer": "will you borrow",
+                  "reason": "Odpowiedź nie łączy się logicznie z fragmentami otaczającymi lukę."
+                },
+                {
+                  "answer": "can you borrow",
+                  "reason": "Odpowiedź nie łączy się logicznie z fragmentami otaczającymi lukę."
+                },
+                {
+                  "answer": "may you borrow",
+                  "reason": "Odpowiedź nie łączy się logicznie z fragmentami otaczającymi lukę."
+                },
+                {
+                  "answer": "did you borrow",
+                  "reason": "Odpowiedź nie łączy się logicznie z fragmentami otaczającymi lukę."
+                },
+                {
+                  "answer": "will I borrow",
+                  "reason": ""
+                }
+              ]
+            }
+          },
+          "scoring": {
+            "type": "text_match",
+            "strictness": "communicative"
+          },
+          "skillTags": [
+            "en-gen-I",
+            "en-VI.10"
+          ],
+          "explanation": "Odpowiedź Sure, but don't let anyone else use it! pokazuje, że pierwsze zdanie jest prośbą o pozwolenie. O pozwolenie pytamy za pomocą czasowników modalnych can, could lub may w konstrukcji pytającej: can I borrow / could I borrow / may I borrow your scooter this afternoon?",
+          "scoringNotes": [
+            "Akceptowane są wszystkie odpowiedzi nieujęte w zasadach oceniania, które są merytorycznie poprawne i spełniają wszystkie warunki zadania.",
+            "1 pkt – poprawna odpowiedź.",
+            "0 pkt – odpowiedź niepoprawna lub brak odpowiedzi.",
+            "W przypadku zadań sprawdzających znajomość funkcji językowych równie istotna jak komunikatywność odpowiedzi jest jej poprawność. Odpowiedzi zawierające poważne błędy językowe i/lub ortograficzne nie są akceptowane.",
+            "Akceptuje się zapis I małą literą.",
+            "Akceptuje się zapis could wielką literą.",
+            "Akceptuje się użycie zaimka we.",
+            "W zadaniu otwartym sprawdzającym znajomość funkcji językowych uwzględnia się stwierdzoną i udokumentowaną dysleksję, dysgrafię i dysortografię. Przy ocenie tego zadania nie są brane pod uwagę błędy ortograficzne. Błąd ortograficzny zmieniający znaczenie wyrazu to błąd językowy. Jest on brany pod uwagę w ocenie poprawności językowej.",
+            "Przykładowe akceptowane odpowiedzi do zadania 6. w pracach uczniów ze specyficznymi trudnościami w uczeniu się: z dysleksją, z dysgrafią, z dysortografią: 6.2. coud I borrow"
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "en-gen-IV",
+        "en-VI.3",
+        "en-gen-I",
+        "en-VI.10"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 7
+      }
+    },
+    {
+      "id": "en-2025-07",
+      "sessionId": "angielski-2025-05-glowny",
+      "number": 7,
+      "maxPoints": 4,
+      "instruction": "Przeczytaj teksty. W zadaniach 7.1.–7.4. z podanych odpowiedzi wybierz właściwą, zgodną z treścią tekstu. Zakreśl jedną z liter: A, B albo C.",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "en-2025-07-1",
+          "label": "7.1",
+          "maxPoints": 1,
+          "prompt": "> **SARAH’S BLOG**\n>\n> Last month I took part in a cooking competition at my school! We had to send in a recipe for our favourite after-school snack. The recipes didn’t have to be original: they could be our family recipes or something we had found in a cookbook. I decided to send in a recipe for a toasted sandwich. It’s a snack I saw on a TV cooking programme. The judges liked it and I was invited to make it in the school cafeteria last Friday. I didn’t get into the top three, but I had a lot of fun. And now the really great thing: Tom Burns, the celebrity chef, was one of the judges and he talked to me during the event. He said he really liked my sandwich!\n\nIn the cooking competition, Sarah",
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "won the first prize."
+              },
+              {
+                "id": "B",
+                "text": "met a famous person."
+              },
+              {
+                "id": "C",
+                "text": "made a snack from her family cookbook."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "en-gen-II",
+            "en-III.4"
+          ],
+          "explanation": "Sarah pisze w blogu: „Tom Burns, the celebrity chef, was one of the judges and he talked to me during the event”, czyli podczas konkursu poznała sławną osobę. Nie wygrała pierwszej nagrody, bo przyznaje: „I didn’t get into the top three”, a przepis na przekąskę zobaczyła w programie telewizyjnym („a snack I saw on a TV cooking programme”), nie w rodzinnej książce kucharskiej. Dlatego poprawna jest odpowiedź B."
+        },
+        {
+          "id": "en-2025-07-2",
+          "label": "7.2",
+          "maxPoints": 1,
+          "prompt": "> No matter what you are going to celebrate, we’ll help you make it unforgettable. For example, it’s your brother’s birthday and you don’t know what to get him. Why don’t you buy a personalised present? We have lots of things to choose from. The most popular are flash drives and power banks. But we also offer mugs, bags, calendars, etc. Just select a product and we will add your photo or text. A few clicks and it’s done!\n\nThis advertisement is for someone who wants to",
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "learn how to make a gadget."
+              },
+              {
+                "id": "B",
+                "text": "find a place to organize a birthday party."
+              },
+              {
+                "id": "C",
+                "text": "give someone a special gift."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "en-gen-II",
+            "en-III.3"
+          ],
+          "explanation": "Ogłoszenie zachęca do kupienia spersonalizowanego prezentu: „Why don’t you buy a personalised present?” oraz „we will add your photo or text”. Jest więc skierowane do osoby, która chce komuś wręczyć wyjątkowy prezent. Nie uczy ono robienia gadżetów ani nie oferuje miejsca na przyjęcie urodzinowe – urodziny to tylko przykład sytuacji. Dlatego poprawna jest odpowiedź C."
+        },
+        {
+          "id": "en-2025-07-3",
+          "label": "7.3",
+          "maxPoints": 1,
+          "prompt": "> Jim,\n> I won’t be able to drive Amy to her friend’s birthday party at the Kids’ Club.\n> Please take her to the party on your way to football practice. She has to be there at 5 p.m.\n> Don’t forget to take the money I’ve left you for a taxi – it’s on the kitchen table.\n> I know I can count on you!\n> Mum\n\nMum wrote the note to",
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "give Jim some instructions."
+              },
+              {
+                "id": "B",
+                "text": "encourage Jim to go to training."
+              },
+              {
+                "id": "C",
+                "text": "thank Jim for his help."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "en-gen-II",
+            "en-III.2"
+          ],
+          "explanation": "Mama wydaje Jimowi polecenia: „Please take her to the party on your way to football practice” oraz „Don’t forget to take the money I’ve left you for a taxi”. Notatka służy więc przekazaniu instrukcji, a nie podziękowaniu za pomoc (do pomocy dopiero ma dojść) ani zachęceniu Jima do treningu. Dlatego poprawna jest odpowiedź A."
+        },
+        {
+          "id": "en-2025-07-4",
+          "label": "7.4",
+          "maxPoints": 1,
+          "prompt": "> *Holly’s World* Episode 13\n>\n> Holly discovers that *Calico*, her grandma’s café, is going out of business because a new shopping centre has opened nearby and customers just don’t come to *Calico* anymore. The café was a special place because it brought people from the village together. To help her grandma, Holly decides to organize a singing competition at the café. Will customers choose the café or the shopping centre?\n\nEpisode 13 of *Holly’s World* is about",
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Holly’s idea how to make her grandma’s café popular again."
+              },
+              {
+                "id": "B",
+                "text": "an event organized at the shopping centre."
+              },
+              {
+                "id": "C",
+                "text": "Holly’s work as a waitress in *Calico*."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "en-gen-II",
+            "en-III.1"
+          ],
+          "explanation": "W opisie odcinka czytamy: „To help her grandma, Holly decides to organize a singing competition at the café”, czyli odcinek jest o pomyśle Holly na to, jak sprawić, by kawiarnia babci znów przyciągała klientów. Konkurs ma się odbyć w kawiarni, a nie w centrum handlowym, i nic nie mówi o pracy Holly jako kelnerki. Dlatego poprawna jest odpowiedź A."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "en-gen-II",
+        "en-III.4",
+        "en-III.3",
+        "en-III.2",
+        "en-III.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "en-2025-08",
+      "sessionId": "angielski-2025-05-glowny",
+      "number": 8,
+      "maxPoints": 3,
+      "instruction": "Przeczytaj tekst, z którego usunięto trzy zdania. Wpisz w każdą lukę (8.1.–8.3.) literę, którą oznaczono brakujące zdanie (A–D), tak aby otrzymać spójny i logiczny tekst.\nUwaga! Jedno zdanie zostało podane dodatkowo i nie pasuje do żadnej luki.\n\nDISCOVERY IN A CHIMNEY*\n\nWhile renovating a house in Surrey, a builder made an interesting discovery in an unused chimney. 8.1. _____ In it, a 7-year-old boy called Tom asked Santa Claus to bring him a few coloured pencils and a woollen hat. The builder was surprised at how little the boy had asked for, especially compared to what kids today want for Christmas. 8.2. _____ Tom – now an old man – read his own letter on the internet and phoned the builder. During their conversation, it turned out that young Tom had never got the presents. So the builder decided to make Tom’s childhood dream come true. He gave the old man a huge box of coloured pencils and a nice woollen hat. When Tom saw the presents, he was really happy. 8.3. _____ “But I’ll keep the hat,” he said smiling. “It will remind me that dreams can come true.”\n\nNa podstawie: www.newsinlevels.com\n\n* Chimney – komin.",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "en-2025-08",
+          "label": "8",
+          "maxPoints": 3,
+          "response": {
+            "type": "matching",
+            "slots": [
+              "8.1",
+              "8.2",
+              "8.3"
+            ],
+            "options": [
+              {
+                "id": "A",
+                "text": "To show how much times have changed, he posted a photo of the letter online."
+              },
+              {
+                "id": "B",
+                "text": "He decided to give his new pencils to a boy from a poor family he knew."
+              },
+              {
+                "id": "C",
+                "text": "The old man never met the builder, but decided to write a letter to him."
+              },
+              {
+                "id": "D",
+                "text": "It was a dirty old envelope which contained a 70-year-old letter."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "8.1": "D",
+                "8.2": "A",
+                "8.3": "B"
+              }
+            }
+          },
+          "scoring": {
+            "type": "per_part",
+            "pointsEach": 1
+          },
+          "skillTags": [
+            "en-gen-II",
+            "en-III.5"
+          ],
+          "explanation": "W lukę 8.1. pasuje zdanie o brudnej, starej kopercie z listem sprzed 70 lat (D), ponieważ przed luką jest mowa o odkryciu w kominie, a po luce słowa “In it, a 7-year-old boy called Tom asked Santa Claus...” odnoszą się właśnie do koperty z listem. W lukę 8.2. pasuje zdanie o zamieszczeniu zdjęcia listu w internecie (A), bo budowlaniec dziwił się, jak mało chłopiec poprosił w porównaniu z dzisiejszymi dziećmi, a następne zdanie mówi, że Tom “read his own letter on the internet”. W lukę 8.3. pasuje zdanie o oddaniu kredek chłopcu z biednej rodziny (B), ponieważ kolejne słowa “But I’ll keep the hat” przeciwstawiają zatrzymanie czapki oddaniu kresek. Zdanie C nie pasuje do żadnej luki."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "en-gen-II",
+        "en-III.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "en-2025-09",
+      "sessionId": "angielski-2025-05-glowny",
+      "number": 9,
+      "maxPoints": 4,
+      "instruction": "Przeczytaj opisy trzech statków (A–C) oraz zdania 9.1.–9.4. Do każdego zdania dopasuj właściwy opis. Wpisz rozwiązania do tabeli.\n**Uwaga!** Jeden z opisów pasuje do dwóch zdań.\n\nMUSEUM SHIPS\n\n**A.** The **Mary Rose** was King Henry VIII’s famous flagship, named after his sister Mary. In 1545, during the war against France, it sank near the English coast. The ship lay underwater for over 400 years. In October 1982, a special machine lifted the Mary Rose out of the sea. The event was watched live on television by 60 million people worldwide. The ship and all the objects found in it can be admired in the Mary Rose Museum located in Portsmouth.\n\n**B.** The **Cutty Sark**, the fastest sailing ship of its time, has been visited by thousands of tourists since it was opened to the public in 1954. In 2007 the deck was damaged by fire, but fortunately most of the ship’s original structure was saved. On board you will meet people dressed up as characters from the ship’s past and hear their fascinating stories about the everyday activities of the ship’s crew during their long journeys.\n\n**C.** The **Golden Hinde** was the ship on which Sir Francis Drake sailed around the world between 1577 and 1580. It was originally known as the Pelican, but Drake renamed it. When it returned to Britain, the ship was put on public display in London. It remained there for 70 years until it was destroyed by wind, rain and water. In 1973 another Golden Hinde was built using traditional methods. It looks just like the one Drake sailed on. Through various practical activities on board, visitors can experience the life of a 16th-century sailor.\n\nNa podstawie: www.maryrose.org; www.rmg.co.uk; www.goldenhinde.co.uk",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "en-2025-09",
+          "label": "9",
+          "maxPoints": 4,
+          "prompt": "9.1. On this ship, people in historical costumes talk about life at sea.\n9.2. This ship’s name was changed.\n9.3. This ship was raised from the bottom of the sea.\n9.4. A copy was made of this ship.",
+          "response": {
+            "type": "matching",
+            "slots": [
+              "9.1",
+              "9.2",
+              "9.3",
+              "9.4"
+            ],
+            "options": [
+              {
+                "id": "A",
+                "text": "The **Mary Rose** was King Henry VIII’s famous flagship, named after his sister Mary. In 1545, during the war against France, it sank near the English coast. The ship lay underwater for over 400 years. In October 1982, a special machine lifted the Mary Rose out of the sea. The event was watched live on television by 60 million people worldwide. The ship and all the objects found in it can be admired in the Mary Rose Museum located in Portsmouth."
+              },
+              {
+                "id": "B",
+                "text": "The **Cutty Sark**, the fastest sailing ship of its time, has been visited by thousands of tourists since it was opened to the public in 1954. In 2007 the deck was damaged by fire, but fortunately most of the ship’s original structure was saved. On board you will meet people dressed up as characters from the ship’s past and hear their fascinating stories about the everyday activities of the ship’s crew during their long journeys."
+              },
+              {
+                "id": "C",
+                "text": "The **Golden Hinde** was the ship on which Sir Francis Drake sailed around the world between 1577 and 1580. It was originally known as the Pelican, but Drake renamed it. When it returned to Britain, the ship was put on public display in London. It remained there for 70 years until it was destroyed by wind, rain and water. In 1973 another Golden Hinde was built using traditional methods. It looks just like the one Drake sailed on. Through various practical activities on board, visitors can experience the life of a 16th-century sailor."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "9.1": "B",
+                "9.2": "C",
+                "9.3": "A",
+                "9.4": "C"
+              }
+            }
+          },
+          "scoring": {
+            "type": "per_part",
+            "pointsEach": 1
+          },
+          "skillTags": [
+            "en-gen-II",
+            "en-III.4"
+          ],
+          "explanation": "Zdanie o ludziach w historycznych kostiumach opowiadających o życiu na morzu pasuje do opisu statku Cutty Sark, bo czytamy w nim: „On board you will meet people dressed up as characters from the ship’s past and hear their fascinating stories about the everyday activities of the ship’s crew”. Zdanie o zmianie nazwy statku i zdanie o wykonanej kopii pasują do opisu statku Golden Hinde: „It was originally known as the Pelican, but Drake renamed it” oraz „In 1973 another Golden Hinde was built using traditional methods”. Zdanie o podniesieniu statku z dna morza pasuje do opisu statku Mary Rose: „a special machine lifted the Mary Rose out of the sea”. Dlatego jeden opis (Golden Hinde) pasuje do dwóch zdań."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "en-gen-II",
+        "en-III.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 11
+      }
+    },
+    {
+      "id": "en-2025-10",
+      "sessionId": "angielski-2025-05-glowny",
+      "number": 10,
+      "maxPoints": 3,
+      "instruction": "Przeczytaj teksty 1. i 2. Uzupełnij w e-mailu Ani luki 10.1.–10.3. zgodnie z treścią tekstów, tak aby jak najbardziej precyzyjnie oddać sens podanych informacji. Luki należy uzupełnić w języku polskim.\n\n**Tekst 1.**\n\n**EXCELLENT THEATRE EXPERIENCE!**\n\nKing’s Cross Theatre, London\n\n★★★★ ‘Unbeatable. A delightful production’ Evening Standard\n\nThis is a wonderful adaptation of Edith Nesbit’s classic novel The Railway Children, performed on a stage built in an unused part of a real railway station.\n\nAt the beginning of the play we meet Bobbie, Peter and Phyllis in their comfortable London house. When their father suddenly disappears, they have to move to the country to live in a much smaller house near a railway station. Their mother writes stories to earn money for the family. The children spend a lot of their free time at the station, where they discover new and exciting things about trains. However, the mystery remains − where is their father? To find out, come and see the play!\n\nThere are amazing special effects, and in the last scene a real old steam train comes onto the stage!\n\n**Tekst 2.**\n\n**Mike**\n16 March, 2.34 p.m.\n\nI decided to go and see The Railway Children with my cousin. The tickets were quite expensive, but it was worth it. The real steam train was an absolute hit! After the play we were able to get inside it! Then we visited a bookshop in the main hall of the train station, which offered books at half price.\n\n**Wiadomość**\n**Od:** anna@mail.com\n**Do:** marek@mail.com\n**Temat:** Przedstawienie\n\nCześć Marku!\n\nZarezerwowałam właśnie bilety na przedstawienie, na które chciałabym Cię zabrać, kiedy przyjedziesz do Londynu. Jest ono niezwykłe, bo scena teatralna znajduje się w nieużywanej części **10.1.** _____.\n\nSztuka jest adaptacją znanej książki. Główni bohaterowie to trójka dzieci, które muszą opuścić swój dom w mieście i zamieszkać na wsi, po tym jak nagle **10.2.** _____. Warto obejrzeć tę sztukę, żeby poznać rozwiązanie tej tajemnicy.\n\nCzytałam opinie kilku widzów i wszyscy są zachwyceni. Jedna z osób napisała też, że po przedstawieniu można było **10.3.** _____ ze zniżką.\n\nAnia",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "en-2025-10-1",
+          "label": "10.1",
+          "maxPoints": 1,
+          "prompt": "Jest ono niezwykłe, bo scena teatralna znajduje się w nieużywanej części **10.1.** _____.",
+          "response": {
+            "type": "short_text",
+            "gaps": 1,
+            "language": "pl"
+          },
+          "key": {
+            "X": {
+              "type": "text",
+              "expected": [
+                "stacji kolejowej",
+                "dworca kolejowego"
+              ],
+              "accepted": [
+                "londyńskiej stacji kolejowej",
+                "stacji (dla) pociągów",
+                "stacji pociągowej",
+                "prawdziwej stacji kolejowej"
+              ],
+              "rejected": [
+                {
+                  "answer": "(prawdziwej) stacji",
+                  "reason": "Odpowiedź nieprecyzyjna."
+                },
+                {
+                  "answer": "(prawdziwego) dworca",
+                  "reason": "Odpowiedź nieprecyzyjna."
+                },
+                {
+                  "answer": "stacji railway",
+                  "reason": ""
+                },
+                {
+                  "answer": "dworca Railway",
+                  "reason": ""
+                },
+                {
+                  "answer": "stacji PKP",
+                  "reason": ""
+                },
+                {
+                  "answer": "pociągu",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "teatru",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "torowiska",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "stacji metra",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "metra",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "peronu",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "Londynu",
+                  "reason": "Odpowiedź nieprecyzyjna."
+                },
+                {
+                  "answer": "miasta",
+                  "reason": "Odpowiedź nieprecyzyjna."
+                },
+                {
+                  "answer": "King’s Cross",
+                  "reason": "Odpowiedź nieprecyzyjna."
+                }
+              ]
+            }
+          },
+          "scoring": {
+            "type": "text_match",
+            "strictness": "communicative"
+          },
+          "skillTags": [
+            "en-gen-II",
+            "en-III.4",
+            "en-gen-V",
+            "en-VIII.2"
+          ],
+          "explanation": "W tekście 1. czytamy, że sztuka jest wystawiana „on a stage built in an unused part of a real railway station”, czyli na scenie zbudowanej w nieużywanej części prawdziwej stacji kolejowej. Dlatego lukę uzupełniamy wyrażeniem „stacji kolejowej” / „dworca kolejowego”.",
+          "scoringNotes": [
+            "1 pkt – poprawna odpowiedź.",
+            "0 pkt – odpowiedź niepoprawna lub brak odpowiedzi.",
+            "Akceptowane są wszystkie odpowiedzi nieujęte w zasadach oceniania, które są merytorycznie poprawne i spełniają wszystkie warunki zadania."
+          ]
+        },
+        {
+          "id": "en-2025-10-2",
+          "label": "10.2",
+          "maxPoints": 1,
+          "prompt": "Główni bohaterowie to trójka dzieci, które muszą opuścić swój dom w mieście i zamieszkać na wsi, po tym jak nagle **10.2.** _____.",
+          "response": {
+            "type": "short_text",
+            "gaps": 1,
+            "language": "pl"
+          },
+          "key": {
+            "X": {
+              "type": "text",
+              "expected": [
+                "znika ich ojciec",
+                "zniknął ich ojciec"
+              ],
+              "accepted": [
+                "znika (im) ojciec",
+                "ich tata (tajemniczo) zniknął",
+                "ojciec zaginął",
+                "ojciec zaginoł",
+                "ojciec zaginą"
+              ],
+              "rejected": [
+                {
+                  "answer": "their father disappears",
+                  "reason": "Odpowiedź w języku innym niż wymagany."
+                },
+                {
+                  "answer": "ich matka przeprowadza się na wieś",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "stracili swój dom w Londynie",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "ich tata umarł",
+                  "reason": ""
+                },
+                {
+                  "answer": "ich tata odszedł (od nich)",
+                  "reason": ""
+                },
+                {
+                  "answer": "ich tata porzucił ich",
+                  "reason": ""
+                },
+                {
+                  "answer": "ich tata opuścił ich",
+                  "reason": ""
+                },
+                {
+                  "answer": "ich tata oddalił się",
+                  "reason": ""
+                },
+                {
+                  "answer": "ich tata uciekł",
+                  "reason": ""
+                },
+                {
+                  "answer": "ojciec zginął",
+                  "reason": ""
+                },
+                {
+                  "answer": "zabrakło im pieniędzy",
+                  "reason": ""
+                },
+                {
+                  "answer": "stracili wszystkie pieniądze",
+                  "reason": ""
+                },
+                {
+                  "answer": "musieli opuścić miasto",
+                  "reason": ""
+                },
+                {
+                  "answer": "ich ojciec został zwolniony",
+                  "reason": ""
+                }
+              ]
+            }
+          },
+          "scoring": {
+            "type": "text_match",
+            "strictness": "communicative"
+          },
+          "skillTags": [
+            "en-gen-II",
+            "en-III.4",
+            "en-gen-V",
+            "en-VIII.2"
+          ],
+          "explanation": "W tekście 1. napisano: „When their father suddenly disappears, they have to move to the country”. Dzieci muszą więc opuścić swój dom w mieście i zamieszkać na wsi po tym, jak nagle znika ich ojciec / zniknął ich ojciec.",
+          "scoringNotes": [
+            "1 pkt – poprawna odpowiedź.",
+            "0 pkt – odpowiedź niepoprawna lub brak odpowiedzi.",
+            "Akceptowane są wszystkie odpowiedzi nieujęte w zasadach oceniania, które są merytorycznie poprawne i spełniają wszystkie warunki zadania.",
+            "Dopuszczalne użycie wyrazów zbliżonych znaczeniowo do wyrazu znikać.",
+            "Dopuszczalne są błędy w języku polskim, jeśli nie zakłócają zrozumienia odpowiedzi."
+          ]
+        },
+        {
+          "id": "en-2025-10-3",
+          "label": "10.3",
+          "maxPoints": 1,
+          "prompt": "Jedna z osób napisała też, że po przedstawieniu można było **10.3.** _____ ze zniżką.",
+          "response": {
+            "type": "short_text",
+            "gaps": 1,
+            "language": "pl"
+          },
+          "key": {
+            "X": {
+              "type": "text",
+              "expected": [
+                "kupić książki"
+              ],
+              "accepted": [
+                "zakupić książki",
+                "nabyć książki",
+                "dostać książki",
+                "zdobyć książki",
+                "kupić książkę",
+                "wejść do środka lokomotywy i kupić książki",
+                "kupić książki w księgarni",
+                "kupić książki 50% taniej",
+                "kupić ksiażki",
+                "kupić ksiazki",
+                "odwiedzić księgarnię sprzedającą książki",
+                "iść do sklepu z książkami i kupić je"
+              ],
+              "rejected": [
+                {
+                  "answer": "kupić książki dla dzieci",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "kupić książki o pociągach",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "kupić książki z biblioteki",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "kupić bilety",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "wejść do środka i kupić książki",
+                  "reason": "Odpowiedź nielogiczna."
+                },
+                {
+                  "answer": "wejść do pociągu",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "wejść do środka",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "dostać się do środka",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "zobaczyć pociąg od środka",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "przejechać się koleją",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "odwiedzić bibliotekę",
+                  "reason": "Odpowiedź niezgodna z tekstem."
+                },
+                {
+                  "answer": "pójść do księgarni",
+                  "reason": "Odpowiedź nie łączy się logicznie z fragmentami otaczającymi lukę."
+                }
+              ]
+            }
+          },
+          "scoring": {
+            "type": "text_match",
+            "strictness": "communicative"
+          },
+          "skillTags": [
+            "en-gen-II",
+            "en-III.4",
+            "en-gen-V",
+            "en-VIII.2"
+          ],
+          "explanation": "W tekście 2. Mike pisze o księgarni w hali dworca, „which offered books at half price”, czyli oferowała książki o połowę taniej. Po przedstawieniu można było więc kupić książki ze zniżką.",
+          "scoringNotes": [
+            "1 pkt – poprawna odpowiedź.",
+            "0 pkt – odpowiedź niepoprawna lub brak odpowiedzi.",
+            "Akceptowane są wszystkie odpowiedzi nieujęte w zasadach oceniania, które są merytorycznie poprawne i spełniają wszystkie warunki zadania.",
+            "Dopuszczalne użycie wyrazów zbliżonych znaczeniowo do wyrazu kupić.",
+            "Dopuszczalne są błędy w języku polskim, jeśli nie zakłócają zrozumienia odpowiedzi."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "en-gen-II",
+        "en-III.4",
+        "en-gen-V",
+        "en-VIII.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "en-2025-11",
+      "sessionId": "angielski-2025-05-glowny",
+      "number": 11,
+      "maxPoints": 3,
+      "instruction": "Przeczytaj tekst. Spośród wyrazów podanych w ramce wybierz te, które są poprawnym uzupełnieniem luk 11.1.–11.3. Wpisz odpowiednią literę (A–F) obok numeru każdej luki.\n**Uwaga!** Trzy wyrazy zostały podane dodatkowo i nie pasują do żadnej luki.\n\n### A FURRY CHAMPION\n\nMeet Paris, the cutest dog goalkeeper in the world. She’s a 12-year-old Beagle with a special talent for football. She’s really good at catching footballs with her front paws. In fact, last year she broke the Guinness World Record for the **11.1.** _____ number of footballs caught by a dog in one minute. Her owner says that Paris practises for 15 minutes **11.2.** _____ afternoon. She doesn’t train longer than that, as her owner doesn’t want her to get bored.\n\nCan your dog do similar tricks? If so, **11.3.** _____ us know in the comments below!\n\nNa podstawie: www.dogtime.com",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "en-2025-11",
+          "label": "11",
+          "maxPoints": 3,
+          "response": {
+            "type": "matching",
+            "slots": [
+              "11.1",
+              "11.2",
+              "11.3"
+            ],
+            "options": [
+              {
+                "id": "A",
+                "text": "at"
+              },
+              {
+                "id": "B",
+                "text": "every"
+              },
+              {
+                "id": "C",
+                "text": "fastest"
+              },
+              {
+                "id": "D",
+                "text": "give"
+              },
+              {
+                "id": "E",
+                "text": "largest"
+              },
+              {
+                "id": "F",
+                "text": "let"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "11.1": "E",
+                "11.2": "B",
+                "11.3": "F"
+              }
+            }
+          },
+          "scoring": {
+            "type": "per_part",
+            "pointsEach": 1
+          },
+          "skillTags": [
+            "en-gen-I"
+          ],
+          "explanation": "W luce 11.1. potrzebny jest przymiotnik w stopniu najwyższym opisujący rekord: „the largest number of footballs caught by a dog” (największa liczba piłek złapanych przez psa), więc pasuje wyraz E (largest). W luce 11.2. określenie powtarzalności treningów daje wyraz B (every): „every afternoon” znaczy „każdego popołudnia”. W luce 11.3. potrzebny jest czasownik w konstrukcji „let us know” (daj nam znać), czyli wyraz F (let). Wyrazy at, fastest i give nie pasują do żadnej luki.",
+          "scoringNotes": [
+            "Akceptowane są **wszystkie odpowiedzi nieujęte w zasadach oceniania**, które są **merytorycznie poprawne i spełniają wszystkie warunki zadania**."
+          ]
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "en-gen-I"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "en-2025-12",
+      "sessionId": "angielski-2025-05-glowny",
+      "number": 12,
+      "maxPoints": 3,
+      "instruction": "Przeczytaj tekst. Wybierz poprawne uzupełnienie luk 12.1.–12.3. Zakreśl jedną z liter: A, B albo C.\n\nQUILLING – ART FOR EVERYONE\n\nIf you want to give someone a unique present, try quilling. This is a way of **12.1.** _____ lovely “pictures” from coloured strips of paper which you stick to a paper board. Quilling is quite cheap. It’s enough to have strips of paper in various colours, scissors, glue and two metal tools for holding the strips of paper and giving **12.2.** _____ the shapes you want. All these things can be bought in an ordinary stationery shop, where you buy your exercise books and pens for school. Quilling may be difficult **12.3.** _____, but with a little practice, you can become a real artist.",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "en-2025-12-1",
+          "label": "12.1",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "creating"
+              },
+              {
+                "id": "B",
+                "text": "created"
+              },
+              {
+                "id": "C",
+                "text": "create"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "en-gen-I"
+          ],
+          "explanation": "W tekście czytamy: „This is a way of 12.1. _____ lovely “pictures””. Po przyimku „of” czasownik musi przyjąć formę z końcówką -ing (gerundium), dlatego poprawne jest „creating”. Formy „created” i „create” nie mogą stać bezpośrednio po przyimku."
+        },
+        {
+          "id": "en-2025-12-2",
+          "label": "12.2",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "they"
+              },
+              {
+                "id": "B",
+                "text": "their"
+              },
+              {
+                "id": "C",
+                "text": "them"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "en-gen-I"
+          ],
+          "explanation": "W tekście czytamy: „two metal tools for holding the strips of paper and giving 12.2. _____ the shapes you want”. Czasownik „giving” wymaga dopełnienia, więc potrzebny jest zaimek w formie dopełnieniowej „them”, odnoszący się do „strips of paper”. „they” jest zaimkiem podmiotowym, a „their” dzierżawczym, dlatego nie pasują."
+        },
+        {
+          "id": "en-2025-12-3",
+          "label": "12.3",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "at first"
+              },
+              {
+                "id": "B",
+                "text": "at all"
+              },
+              {
+                "id": "C",
+                "text": "at last"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "en-gen-I"
+          ],
+          "explanation": "W tekście czytamy: „Quilling may be difficult 12.3. _____, but with a little practice, you can become a real artist”. Przeciwstawienie z „but with a little practice” oznacza, że na początku quilling może być trudny, więc pasuje „at first” (na początku). „at all” i „at last” nie tworzą takiego kontrastu znaczeniowego."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "en-gen-I"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 15
+      }
+    },
+    {
+      "id": "en-2025-13",
+      "sessionId": "angielski-2025-05-glowny",
+      "number": 13,
+      "maxPoints": 3,
+      "instruction": "Przetłumacz na język angielski fragmenty podane w nawiasach, tak aby otrzymać zdania logiczne i gramatycznie poprawne. Wymagana jest pełna poprawność ortograficzna wpisywanych fragmentów zdań.\n**Uwaga!** W każdą lukę możesz wpisać **maksymalnie trzy wyrazy**.",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "en-2025-13-1",
+          "label": "13.1",
+          "maxPoints": 1,
+          "prompt": "Where (*widziałeś*) ________ Tom yesterday?",
+          "response": {
+            "type": "short_text",
+            "gaps": 1,
+            "language": "en"
+          },
+          "key": {
+            "X": {
+              "type": "text",
+              "expected": [
+                "did you see"
+              ],
+              "accepted": [
+                "Did you see"
+              ],
+              "rejected": [
+                {
+                  "answer": "(you) saw",
+                  "reason": "brak operatora did w pytaniu w czasie Past Simple"
+                },
+                {
+                  "answer": "you see",
+                  "reason": "czas Present Simple i brak konstrukcji pytania"
+                },
+                {
+                  "answer": "you seen",
+                  "reason": "błędna forma czasownika (seen bez operatora) i brak konstrukcji pytania"
+                },
+                {
+                  "answer": "have you seen",
+                  "reason": "czas Present Perfect zamiast Past Simple przy określeniu yesterday"
+                },
+                {
+                  "answer": "did you watch",
+                  "reason": "niewłaściwy czasownik (watch zamiast see)"
+                },
+                {
+                  "answer": "did you saw",
+                  "reason": "błędna forma czasownika po operatorze did (saw zamiast see)"
+                },
+                {
+                  "answer": "had you seen",
+                  "reason": "czas Past Perfect zamiast Past Simple"
+                },
+                {
+                  "answer": "were you seeing",
+                  "reason": "czas Past Continuous zamiast Past Simple"
+                }
+              ]
+            }
+          },
+          "scoring": {
+            "type": "text_match",
+            "strictness": "communicative"
+          },
+          "skillTags": [
+            "en-gen-I"
+          ],
+          "explanation": "Pytanie w czasie Past Simple tworzymy z operatorem did i czasownikiem w bezokoliczniku: Where did you see Tom yesterday? Okolicznik yesterday wskazuje na czas przeszły dokonany, a czasownik see znaczy widzieć.",
+          "scoringNotes": [
+            "0 pkt – odpowiedź niepoprawna lub brak odpowiedzi.",
+            "W zadaniu otwartym sprawdzającym znajomość środków językowych wymagana jest pełna poprawność gramatyczna i ortograficzna.",
+            "Akceptuje się wyraz zapisany wielką literą zamiast małą i odwrotnie. Powyższe ustalenie stosuje się pod warunkiem, że zdający nie naruszył innych zasad pisowni, np. pisowni nazw własnych.",
+            "Akceptowane są wszystkie odpowiedzi nieujęte w zasadach oceniania, które są merytorycznie poprawne i spełniają wszystkie warunki zadania.",
+            "Przy ocenie tego zadania nie są brane pod uwagę błędy ortograficzne. Błąd ortograficzny zmieniający znaczenie wyrazu to błąd językowy. Jest on brany pod uwagę w ocenie poprawności językowej.",
+            "Przykładowe akceptowane odpowiedzi do zadania 13. w pracach uczniów ze specyficznymi trudnościami w uczeniu się: z dysleksją, z dysgrafią, z dysortografią: 13.1. did yo see"
+          ]
+        },
+        {
+          "id": "en-2025-13-2",
+          "label": "13.2",
+          "maxPoints": 1,
+          "prompt": "I often use (*rower mojego brata*) ________ to go to the supermarket.",
+          "response": {
+            "type": "short_text",
+            "gaps": 1,
+            "language": "en"
+          },
+          "key": {
+            "X": {
+              "type": "text",
+              "expected": [
+                "my brother's bike",
+                "my brother's bicycle"
+              ],
+              "accepted": [],
+              "rejected": [
+                {
+                  "answer": "bike my brother",
+                  "reason": "zła kolejność wyrazów – brak dopełniacza saksońskiego"
+                },
+                {
+                  "answer": "a bike of my brother",
+                  "reason": "niepoprawna konstrukcja dzierżawcza z of"
+                },
+                {
+                  "answer": "my brother bicycle",
+                  "reason": "brak dopełniacza saksońskiego ('s)"
+                },
+                {
+                  "answer": "my brothers' bike",
+                  "reason": "dopełniacz liczby mnogiej (brothers') zamiast pojedynczej (brother's)"
+                },
+                {
+                  "answer": "my brothers bike",
+                  "reason": "brak apostrofu i końcówki 's w dopełniaczu"
+                },
+                {
+                  "answer": "(a) brother's bike",
+                  "reason": "brak zaimka my – nie wynika z tekstu, czyj to rower"
+                }
+              ]
+            }
+          },
+          "scoring": {
+            "type": "text_match",
+            "strictness": "communicative"
+          },
+          "skillTags": [
+            "en-gen-I"
+          ],
+          "explanation": "Posiadacza wyrażamy dopełniaczem saksońskim: posiadacz + 's + rzecz posiadana, czyli my brother's bike (rower mojego brata). Możliwy jest też rzeczownik bicycle zamiast bike.",
+          "scoringNotes": [
+            "0 pkt – odpowiedź niepoprawna lub brak odpowiedzi.",
+            "W zadaniu otwartym sprawdzającym znajomość środków językowych wymagana jest pełna poprawność gramatyczna i ortograficzna.",
+            "Akceptuje się wyraz zapisany wielką literą zamiast małą i odwrotnie. Powyższe ustalenie stosuje się pod warunkiem, że zdający nie naruszył innych zasad pisowni, np. pisowni nazw własnych.",
+            "Akceptowane są wszystkie odpowiedzi nieujęte w zasadach oceniania, które są merytorycznie poprawne i spełniają wszystkie warunki zadania.",
+            "Przy ocenie tego zadania nie są brane pod uwagę błędy ortograficzne. Błąd ortograficzny zmieniający znaczenie wyrazu to błąd językowy. Jest on brany pod uwagę w ocenie poprawności językowej.",
+            "Przykładowe akceptowane odpowiedzi do zadania 13. w pracach uczniów ze specyficznymi trudnościami w uczeniu się: z dysleksją, z dysgrafią, z dysortografią: 13.2. my brohter's bike"
+          ]
+        },
+        {
+          "id": "en-2025-13-3",
+          "label": "13.3",
+          "maxPoints": 1,
+          "prompt": "Excuse me, these trousers are not (*wystarczająco długie*) ________ for me. Can I try on another pair?",
+          "response": {
+            "type": "short_text",
+            "gaps": 1,
+            "language": "en"
+          },
+          "key": {
+            "X": {
+              "type": "text",
+              "expected": [
+                "long enough"
+              ],
+              "accepted": [
+                "quite long enough",
+                "really long enough"
+              ],
+              "rejected": [
+                {
+                  "answer": "enough long",
+                  "reason": "zła kolejność – enough stoi po przymiotniku"
+                },
+                {
+                  "answer": "too long",
+                  "reason": "złe znaczenie (zbyt długie zamiast wystarczająco długie)"
+                },
+                {
+                  "answer": "long",
+                  "reason": "brak słowa enough"
+                },
+                {
+                  "answer": "big enough",
+                  "reason": "niewłaściwy przymiotnik (big zamiast long)"
+                },
+                {
+                  "answer": "tall enough",
+                  "reason": "niewłaściwy przymiotnik (tall zamiast long)"
+                },
+                {
+                  "answer": "longer enough",
+                  "reason": "błędne połączenie stopnia wyższego z enough"
+                },
+                {
+                  "answer": "the longest",
+                  "reason": "stopień najwyższy zamiast konstrukcji z enough"
+                },
+                {
+                  "answer": "that long",
+                  "reason": "złe znaczenie i brak enough"
+                },
+                {
+                  "answer": "quite long",
+                  "reason": "brak słowa enough"
+                },
+                {
+                  "answer": "really long",
+                  "reason": "brak słowa enough"
+                }
+              ]
+            }
+          },
+          "scoring": {
+            "type": "text_match",
+            "strictness": "communicative"
+          },
+          "skillTags": [
+            "en-gen-I"
+          ],
+          "explanation": "Przysłówek enough stawiamy po przymiotniku, którego dotyczy: long enough znaczy wystarczająco długie. W zdaniu przeczącym: these trousers are not long enough for me.",
+          "scoringNotes": [
+            "0 pkt – odpowiedź niepoprawna lub brak odpowiedzi.",
+            "W zadaniu otwartym sprawdzającym znajomość środków językowych wymagana jest pełna poprawność gramatyczna i ortograficzna.",
+            "Akceptuje się wyraz zapisany wielką literą zamiast małą i odwrotnie. Powyższe ustalenie stosuje się pod warunkiem, że zdający nie naruszył innych zasad pisowni, np. pisowni nazw własnych.",
+            "Akceptowane są wszystkie odpowiedzi nieujęte w zasadach oceniania, które są merytorycznie poprawne i spełniają wszystkie warunki zadania.",
+            "Przy ocenie tego zadania nie są brane pod uwagę błędy ortograficzne. Błąd ortograficzny zmieniający znaczenie wyrazu to błąd językowy. Jest on brany pod uwagę w ocenie poprawności językowej.",
+            "Przykładowe akceptowane odpowiedzi do zadania 13. w pracach uczniów ze specyficznymi trudnościami w uczeniu się: z dysleksją, z dysgrafią, z dysortografią: 13.3. long enuogh"
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "en-gen-I"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 16
+      }
+    },
+    {
+      "id": "en-2025-14",
+      "sessionId": "angielski-2025-05-glowny",
+      "number": 14,
+      "maxPoints": 10,
+      "instruction": "Właśnie wróciłeś/wróciłaś z zagranicznej wycieczki szkolnej. W e-mailu do kolegi poznanego za granicą:\n- wyjaśnij, dlaczego uważasz wycieczkę za udaną\n- napisz, jaki problem Twoja grupa miała w drodze powrotnej\n- zaproś kolegę do siebie i zaproponuj, jak spędzicie wolny czas.\n\nNapisz swoją wypowiedź w języku angielskim. Podpisz się jako **XYZ**.\n**Rozwiń** swoją wypowiedź w każdym z trzech podpunktów, tak aby osoba nieznająca polecenia w języku polskim uzyskała wszystkie wskazane w nim informacje. Pamiętaj, że długość wypowiedzi powinna wynosić **od 50 do 120 wyrazów** (nie licząc wyrazów podanych na początku wypowiedzi). Oceniane są: umiejętność **pełnego** przekazania informacji, spójność, bogactwo językowe oraz poprawność językowa.",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "en-2025-14",
+          "label": "14",
+          "maxPoints": 10,
+          "response": {
+            "type": "extended_text",
+            "minWords": 50
+          },
+          "key": {},
+          "scoring": {
+            "type": "rubric",
+            "rubrics": [
+              {
+                "topic": null,
+                "rubricId": "en-2025-14-t1"
+              }
+            ]
+          },
+          "skillTags": [
+            "en-gen-I",
+            "en-gen-III",
+            "en-gen-IV",
+            "en-gen-V"
+          ],
+          "scoringNotes": [
+            "Treść: W ocenie treści bierze się najpierw pod uwagę, do ilu podpunktów polecenia uczeń się odniósł w swojej wypowiedzi, a następnie ile z tych podpunktów rozwinął w zadowalającym stopniu. Za wypowiedź przyznaje się od 0 do 4 punktów, zgodnie z tabelą. Przykładowo: wypowiedź ucznia, który odniósł się do 2 podpunktów i oba rozwinął, zostanie oceniona na 2 punkty.",
+            "Jako podpunkt, do którego uczeń nie odniósł się, traktowana jest wypowiedź ucznia, która (a) nie realizuje tego podpunktu lub (b) realizuje go w sposób całkowicie niekomunikatywny. Za podpunkt, do którego uczeń odniósł się, przyjmuje się komunikatywną wypowiedź w minimalnym stopniu odnoszącą się do danego podpunktu, np. Our flight was cancelled. Za podpunkt rozwinięty przyjmuje się wypowiedź odnoszącą się do podpunktu w sposób bardziej szczegółowy, np. The trip was great because we visited many places and I met you. lub Our bus broke down and we had to wait for another one. Wyrazy takie jak: very, much, many, a lot oraz stopień wyższy i najwyższy przymiotnika nie stanowią rozwinięcia podpunktu polecenia, niezależnie od tego, ile razy są powtórzone.",
+            "W przypadku podpunktów polecenia, które składają się z dwóch członów: jeśli uczeń w minimalnym stopniu nawiązał do jednego członu, a drugiego nie zrealizował – odniósł się, np. Come to me, please.; jeśli nawiązał do obydwu członów w minimalnym stopniu – rozwinął, np. Come to me, please, we'll go to the circus.; jeśli rozbudował wypowiedź tylko w zakresie jednego członu, a drugiego nie zrealizował – odniósł się, np. We'll go to one of the best Italian restaurants in the city.",
+            "Realizacja podpunktu polecenia za pomocą dwóch wyrazów/wyrażeń synonimicznych (np. On our way back my friend got ill and sick.), dwóch wzajemnie wykluczających się wyrazów/wyrażeń (np. The traffic was heavy and light.) lub równorzędnych wyrazów/wyrażeń odnoszących się do jednego aspektu (np. We'll go to Warsaw and Poznan.) jest oceniana jako odniósł się. Ten sam fragment tekstu nie może być traktowany jako realizacja dwóch różnych podpunktów polecenia jednocześnie.",
+            "Uwagi dodatkowe: Wypowiedź jest oceniana na 0 punktów w każdym kryterium, jeżeli jest: nieczytelna LUB całkowicie niezgodna z poleceniem LUB niekomunikatywna dla odbiorcy (np. napisana fonetycznie) LUB odtworzona z podręcznika lub innego źródła (nie jest wówczas uznawana za wypowiedź sformułowaną przez zdającego).",
+            "Jeżeli wypowiedź została oceniona na 0 punktów w kryterium treści, we wszystkich pozostałych kryteriach również przyznaje się 0 punktów. W takich pracach oznacza się błędy. Jeżeli wypowiedź została oceniona na 1 punkt w kryterium treści, we wszystkich pozostałych kryteriach przyznaje się maksymalnie 1 punkt. W takich pracach oznacza się błędy.",
+            "Jeżeli wypowiedź zawiera mniej niż 40 wyrazów, jest oceniana wyłącznie w kryterium treści. W pozostałych kryteriach przyznaje się 0 punktów. W takich pracach nie oznacza się błędów.",
+            "W ocenie poprawności środków językowych nie bierze się pod uwagę błędów ortograficznych w wypowiedziach uczniów, którym przyznano takie dostosowanie warunków przeprowadzania egzaminu (takie błędy nie są oznaczane w pracy zdającego). Błąd ortograficzny zmieniający znaczenie wyrazu to błąd językowy. Jest on brany pod uwagę w ocenie poprawności środków językowych.",
+            "Zasady liczenia wyrazów: liczone są wyrazy oddzielone spacją; formy skrócone (don't, can't, isn't, haven't itd.) są liczone jako jeden wyraz; jako jeden wyraz liczone są: wyrazy łączone dywizem, oznaczenia i symbole literowe bez względu na liczbę liter, adres mailowy lub internetowy oraz numer telefonu, liczby bez względu na ich długość; podpis XYZ nie jest uwzględniany w liczbie wyrazów; nie uznaje się i nie uwzględnia w liczbie wyrazów symboli graficznych używanych w internecie (np. emotikony); bierze się pod uwagę wyrazy w języku innym niż język egzaminu.",
+            "Spójność i logika: jeżeli w pracy nie są zaznaczone żadne błędy w spójności i logice, to uczniowi przyznaje się 2 punkty w kryterium spójności i logiki wypowiedzi. Uczeń nie musi realizować podpunktów polecenia w kolejności, w jakiej są wymienione w zadaniu; sama zmiana kolejności nie może być podstawą do obniżenia punktacji w tym kryterium.",
+            "Zakres środków językowych: zadowalający zakres środków językowych odnosi się do środków leksykalno-gramatycznych, których znajomości można oczekiwać od absolwenta szkoły podstawowej na poziomie A2. W ocenie poprawności bierze się pod uwagę orientacyjny stosunek liczby błędów do długości tekstu (nie ma potrzeby liczenia wyrazów i błędów).",
+            "Uszczegółowienia do podpunktu „wyjaśnij, dlaczego uważasz wycieczkę za udaną”: przez powód, dlaczego wycieczka była udana, rozumie się m.in. atrakcje wycieczki (np. I liked it because we went to museums. – „odniósł się”, It was great because we visited museums and art galleries. – „odniósł się i rozwinął”), atmosferę wycieczki (np. Everybody was friendly and that's why I really enjoyed my trip. – „odniósł się”), zalety wycieczki (np. I learned a lot about British culture. – „odniósł się i rozwinął”), inne aspekty (np. The trip was amazing because I saw many places. – „odniósł się”, ALE I saw many amazing places. – „odniósł się i rozwinął”, We tried new local dishes. – „odniósł się i rozwinął”), upodobania (np. I love London where we spent 10 days. – „odniósł się i rozwinął”). Sformułowania, w których uczeń wyraża jedynie swój pozytywny stosunek do wycieczki, nie uzasadniając, dlaczego była udana, np. I liked it very much. / The trip was great/excellent., nie stanowią realizacji tego podpunktu.",
+            "Uszczegółowienia do podpunktu „napisz, jaki problem Twoja grupa miała w drodze powrotnej”: problem może dotyczyć np. środków transportu (np. Our bus ran out of petrol. – „odniósł się”), utrudnień w podróży (np. There was a lot of traffic. – „odniósł się”, There was so much traffic that we had to wait. – „odniósł się i rozwinął”), zachowania członków grupy (np. We were very loud and the driver stopped the bus. – „odniósł się i rozwinął”), pogody/warunków pogodowych lub innych aspektów podróży/zjawisk/wydarzeń (np. My friend lost his ticket. – „odniósł się”). Wymagane jest użycie czasu przeszłego (realizacja wyłącznie w czasie teraźniejszym: R→O). Opis problemu, który nie wydarzył się w drodze powrotnej lub nie miał na nią wpływu: R→O. Użycie jedynie przymiotników określających problem: O→N, ALE może to być elementem rozwijającym, np. We had a big problem. We got lost. („odniósł się i rozwinął”). Nie akceptuje się wypowiedzi, w których uczeń nie przedstawia żadnego problemu, np. I returned home happily. („nie odniósł się”).",
+            "Uszczegółowienia do podpunktu „zaproś kolegę do siebie i zaproponuj, jak spędzicie wolny czas”: podpunkt jest dwuczłonowy; aby wypowiedź mogła być uznana za rozwiniętą, wymagane jest komunikatywne odniesienie się do obydwu członów, np. Come to Poland and we will go to the seaside. („odniósł się i rozwinął”). Jeżeli uczeń w minimalnym stopniu nawiązał tylko do jednego członu albo rozbudował wypowiedź tylko w zakresie jednego członu, uznaje się, że odniósł się do tego podpunktu. Nie akceptuje się takiej realizacji zaproszenia, w której uczeń nie zaprasza do swojego domu / miejscowości / kraju, np. Go with me on such a trip next time. („nie odniósł się”), ani takiej propozycji spędzenia wolnego czasu, w której uczeń opisuje plany już zrealizowane, np. Last weekend we watched a funny comedy. („nie odniósł się”)."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "en-gen-I",
+        "en-gen-III",
+        "en-gen-IV",
+        "en-gen-V"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 16
+      }
+    }
+  ],
+  "rubrics": [
+    {
+      "id": "en-2025-14-t1",
+      "maxPoints": 10,
+      "criteria": [
+        {
+          "id": "tresc",
+          "name": "Treść",
+          "type": "matrix",
+          "max": 4,
+          "rows": "Do ilu podpunktów uczeń się odniósł?",
+          "cols": "Ile podpunktów rozwinął?",
+          "table": {
+            "0": {
+              "0": 0
+            },
+            "1": {
+              "0": 0,
+              "1": 1
+            },
+            "2": {
+              "0": 1,
+              "1": 1,
+              "2": 2
+            },
+            "3": {
+              "0": 1,
+              "1": 2,
+              "2": 3,
+              "3": 4
+            }
+          }
+        },
+        {
+          "id": "spojnosc",
+          "name": "Spójność i logika wypowiedzi",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Wypowiedź jest w całości lub w znacznej większości spójna i logiczna zarówno na poziomie poszczególnych zdań, jak i całego tekstu."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Wypowiedź zawiera usterki w spójności/logice na poziomie poszczególnych zdań oraz/lub całego tekstu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Wypowiedź jest w znacznej mierze niespójna/nielogiczna; zbudowana jest z fragmentów trudnych do powiązania w całość."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "zakres",
+          "name": "Zakres środków językowych",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Zadowalający zakres środków językowych; oprócz środków językowych o wysokim stopniu pospolitości w wypowiedzi występuje kilka precyzyjnych sformułowań."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Ograniczony zakres środków językowych; w wypowiedzi użyte są głównie środki językowe o wysokim stopniu pospolitości."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Bardzo ograniczony zakres środków językowych w znacznym stopniu uniemożliwiający realizację polecenia."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "poprawnosc",
+          "name": "Poprawność środków językowych",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "- brak błędów\n- nieliczne błędy niezakłócające komunikacji lub sporadycznie zakłócające komunikację"
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "- liczne błędy niezakłócające komunikacji lub czasami zakłócające komunikację\n- bardzo liczne błędy niezakłócające komunikacji"
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "- liczne błędy często zakłócające komunikację\n- bardzo liczne błędy w znacznym stopniu zakłócające komunikację"
+              ]
+            }
+          ]
+        }
+      ],
+      "gates": [
+        {
+          "ifCriterion": "tresc",
+          "equals": 0,
+          "thenAllOthers": 0
+        },
+        {
+          "ifCriterion": "tresc",
+          "equals": 1,
+          "thenAllOthers": 1,
+          "mode": "cap"
+        }
+      ]
+    }
+  ],
+  "audio": [
+    {
+      "id": "en-2025-01-audio",
+      "recording": "assets/nagranie.mp3",
+      "startSec": 0,
+      "endSec": 491.3,
+      "role": "task",
+      "playsStartSec": 59.3,
+      "taskNumber": 1,
+      "transcriptLines": [
+        "Tekst 1.",
+        "Mum: Sam, your parcel’s finally arrived.",
+        "Sam: Great, just in time for tomorrow!",
+        "Mum: But, please take your headphones off. We can’t talk properly when you’re wearing them.",
+        "Sam: OK. I’ll open the parcel and try the trainers on. I hope they are the right size.",
+        "Mum: How do they feel?",
+        "Sam: Mum, they are just perfect and they match my T-shirt. Thanks.",
+        "Mum: You’re welcome. I hope they will help you win the competition.",
+        "Tekst 2.",
+        "Woman: Jack, I’m sorry but I won’t be able to drive you to school tomorrow. I have to leave home half an hour earlier than usual. Could you go by bike?",
+        "Boy: Unfortunately, something is wrong with the back wheel, but I can take the bus.",
+        "Woman: I’ll just check the weather forecast. Oh no, it says it’s going to rain all day. It’s a 15-minute walk to the bus stop, you’ll get terribly wet.",
+        "Boy: So can I go with you? I don’t mind getting to school earlier.",
+        "Woman: OK. Let’s do that. I’ll drive you then. And we’ll try to get your bike fixed at the weekend.",
+        "Tekst 3.",
+        "Girl: Hi Dad! I’m calling to say that I’ll be back a bit late today.",
+        "Dad: Why? What’s the matter?",
+        "Girl: I still have to return the books I borrowed last month and now I’m waiting to buy some fruit for the class party tomorrow. It will take a while because there are a few people in front of me in the queue. But as soon as I’m done with everything, I’ll come straight home.",
+        "Dad: OK, but please be back before 5 and remember that you have a doctor’s appointment at 6.30.",
+        "Tekst 4.",
+        "Girl: Hi, James! Thanks for inviting me to your party. I’m looking forward to it. There’s just one thing. My cousin is staying at my place this weekend, because he’s helping me redecorate my room. Can I bring him with me? I don’t want to leave him alone for the whole evening and I’m sure we’ll all enjoy his company. Please call me back.",
+        "Tekst 5.",
+        "Boy: The mystery kept me fascinated until the very end. It is based on Agatha Christie’s book with the same title and Philip Ronin is the director. I had a very good place in the second row, so the actors were just a few metres from me. The stage was almost empty, with only a table and two chairs on it. I had to use my imagination, so it was different from watching a film. Next month I’m going to read the book for school. I wonder if I will like it. Egzamin ósmoklasisty z j ę zyka angielskiego (OJAP-100, OJAP-200, OJAP-400, OJAP-500, OJAP-660,"
+      ]
+    },
+    {
+      "id": "en-2025-02-audio",
+      "recording": "assets/nagranie.mp3",
+      "startSec": 497.1,
+      "endSec": 822.2,
+      "role": "task",
+      "playsStartSec": 529.4,
+      "taskNumber": 2,
+      "transcriptLines": [
+        "Wypowiedź 1.",
+        "Boy: Last Saturday I went to the zoo which has recently opened in my city. I really wanted to watch the elephant feeding session at noon. But first I had to wait in a long queue to buy a ticket to get into the zoo. When I finally got to the elephants, the feeding was over! It’s a pity I didn’t buy the ticket online!",
+        "Wypowiedź 2.",
+        "Girl: Once, my grandparents took me and my older sister to the zoo. I was about 10 years old then. We were admiring the lions when suddenly I heard a very loud sound right behind me. I thought it was a wild animal so I was really afraid. But actually it was just my sister watching a loud video on her phone.",
+        "Wypowiedź 3.",
+        "Boy: My class went to the zoo last week, and a guide showed us around. He gave us some sheets of paper with fun facts about the animals. But some parts of the texts were missing so we had to listen to him carefully to fill in the gaps on the sheets. I loved it and I’m looking forward to our next visit to the zoo.",
+        "Wypowiedź 4.",
+        "Girl: While I was at the zoo yesterday, I saw a monkey playing with a teddy bear, like children do. The monkey carried it and tried to give it food. It was amazing! I had no idea monkeys can play like that! I even recorded a film on my phone and shared it on my social media. It’s really funny."
+      ]
+    },
+    {
+      "id": "en-2025-03-audio",
+      "recording": "assets/nagranie.mp3",
+      "startSec": 831.4,
+      "endSec": 958,
+      "role": "task",
+      "playsStartSec": 864.1,
+      "taskNumber": 3,
+      "transcriptLines": [
+        "Wypowiedź 1.",
+        "Could you recommend something to read on holiday?",
+        "Wypowiedź 2.",
+        "I think fantasy books are great.",
+        "Wypowiedź 3.",
+        "Congratulations on winning the reading competition.",
+        "Wypowiedź 4.",
+        "Thank you for the fantastic novel you gave me. Egzamin ósmoklasisty z j ę zyka angielskiego (OJAP-100, OJAP-200, OJAP-400, OJAP-500, OJAP-660,"
+      ]
+    },
+    {
+      "id": "en-2025-04-audio",
+      "recording": "assets/nagranie.mp3",
+      "startSec": 963.6,
+      "endSec": 1217.1,
+      "role": "task",
+      "playsStartSec": 1000.8,
+      "taskNumber": 4,
+      "transcriptLines": [
+        "Boy: Hi, Emma, the Milton football team are playing an important match tomorrow. Do you want to come and watch it with me and my dad?",
+        "Girl: Sure, I’d love to. But how are we going to get to the stadium?",
+        "Boy: In my dad’s car. He says we’ll have to leave early if we want to find a place in the car park next to the cinema.",
+        "Girl: Can’t we park next to the stadium?",
+        "Boy: Well, that car park is only for team members. We’ll pick you up at eleven o’clock, OK?",
+        "Girl: Great. And what about lunch? We might be hungry after the match.",
+        "Boy: Don’t worry, we can buy some hot dogs from the food truck at the stadium. Or we can go for pancakes at the snack bar right across the road.",
+        "Girl: I’m not a great fan of hot dogs, but pancakes would be great.",
+        "Boy: OK, good idea, I like them too.",
+        "Girl: And how much are the tickets?",
+        "Boy: An adult ticket costs £12, but it’s only £5 if you are under 16. So that will be £22 for the three of us.",
+        "Girl: That’s not expensive. I’ll have enough money left to buy a Milton team scarf after the match."
+      ]
+    }
+  ]
+}

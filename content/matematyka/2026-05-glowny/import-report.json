@@ -1,6 +1,6 @@
 {
   "sessionId": "matematyka-2026-05-glowny",
-  "at": "2026-11-17T12:31:08.025Z",
+  "at": "2026-11-17T19:39:53.388Z",
   "model": "qwen · qwen3.8-max · token-plan.maas.qwencloudapi.com",
   "segmentation": {
     "sheetTasks": 20,
@@ -36,7 +36,7 @@
         "cacheRead": 0,
         "cacheWrite": 0
       },
-      "cached": false
+      "cached": true
     },
     {
       "number": 3,
@@ -72,7 +72,7 @@
         "cacheRead": 0,
         "cacheWrite": 0
       },
-      "cached": false
+      "cached": true
     },
     {
       "number": 6,
@@ -322,6 +322,11 @@
       "details": []
     },
     {
+      "name": "Rubric items point to rubrics that add up to the item's points",
+      "ok": true,
+      "details": []
+    },
+    {
       "name": "Every image in the text points to an existing figure",
       "ok": true,
       "details": []
@@ -344,8 +349,8 @@
   ],
   "ok": true,
   "tokens": {
-    "input": 14838,
-    "output": 12890
+    "input": 0,
+    "output": 0
   },
-  "approvedAt": "2026-11-17T12:35:54.953Z"
+  "approvedAt": "2026-11-17T19:40:16.043Z"
 }

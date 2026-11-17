@@ -98,8 +98,20 @@ export function AnswerInput({ item, value, onChange, revealedKey, ctx }: Props) 
   if (r.type === "matching") {
     const chosen: Choices = value?.type === "choices" ? value.value : {};
     const key: Choices = revealedKey?.type === "choices" ? revealedKey.correct : {};
+    // Short options (sentences, words) are listed here; long ones (whole texts A–C) are already in the task text.
+    const listOptions = r.options.every((o) => o.text && o.text !== o.id && o.text.length <= 200);
     return (
       <div className="flex flex-col gap-2">
+        {listOptions && (
+          <ol className="mb-2 flex flex-col gap-1" data-testid="matching-options">
+            {r.options.map((o) => (
+              <li key={o.id} className="flex gap-2">
+                <b className="w-6 shrink-0">{o.id}.</b>
+                <Rich text={o.text} ctx={ctx} inline />
+              </li>
+            ))}
+          </ol>
+        )}
         {r.slots.map((slot) => (
           <label key={slot} className="flex items-center gap-3">
             <span className="tabular w-12 font-bold">{slot}</span>

@@ -31,6 +31,24 @@ Rules:
 - Explanations are for a 14-year-old student: never mention sheet versions (X, Y), the key or answer cards; explain the mathematics or the reasoning.
 - If something is unreadable or ambiguous, say so in notes rather than guessing.`;
 
+/** Extra rules for one subject. Kept out of SYSTEM so other subjects' cached results stay valid. */
+const SUBJECT_RULES: Record<string, { version: string; text: string }> = {
+  "Język angielski": {
+    version: "en-1",
+    text: `English exam (język angielski) rules:
+- Instructions are in Polish; copy them exactly. Texts, questions and options are in English; copy them exactly too.
+- Numbered parts (1.1., 1.2., …) are separate items labelled "1.1", "1.2" with 1 point each, except where noted below. The shared instruction goes in instruction; a part's own question goes in its prompt.
+- Picture options (A, B, C are drawings): return one figure per part covering its three pictures and their letters, link it in that part's prompt as ![](fig:ID), and give options A, B, C with a short English description of each picture as text.
+- Matching tasks answered in a table (e.g. 2.1–2.4 to A–E, 3.1–3.4 to reactions A–E, 8.1–8.3 gaps to sentences A–D, 9.1–9.4 to texts A–C, 11.1–11.3 gaps to words A–F): ONE matching item labelled with the task number, slots "2.1", "2.2"… in order, options = the lettered choices, scoring per_part (1 point per slot), keys[].answer = the letters in slot order (e.g. "DEAC").
+- One question per part with options A–C (e.g. 1.4, 5.1, 7.1, 12.1): single_choice items, one per part. For 7.x, each part's own short text (a blog post, an advertisement, a note) goes in that part's prompt before its question, formatted in Markdown (blockquote).
+- Longer texts used by the whole task (e.g. task 8's article, task 9's descriptions A–C, task 10's texts, task 11's and 12's articles) go in instruction, formatted in Markdown (headings, paragraphs, blockquotes); gaps written as "8.1. _____". Drop decorative photos and their "Źródło:" credits.
+- Gap-fill answers written by the student (e.g. 4.1–4.3, 6.1–6.2, 10.1–10.3, 13.1–13.3): one short_text item per gap, gaps 1, scoring text_match, language "en" or "pl" as the instruction requires ("Luki należy uzupełnić w języku polskim" means "pl"). Copy the key's "Odpowiedź oczekiwana" into expected, every "Przykład odpowiedzi akceptowanej" into accepted, and every "Przykład odpowiedzi niepoprawnej" with its reason into rejected. Expand alternatives into separate entries: "can/could/may I borrow" → "can I borrow", "could I borrow", "may I borrow"; "(the) cinema" → "the cinema", "cinema"; "five / 5" → "five", "5". Answers listed for students with dyslexia go in scoringNotes, not accepted.
+- Requirements are listed per part in the key's table: general = "Wymaganie ogólne" (e.g. "II. Rozumienie wypowiedzi."), section = null, specific = the code and text (e.g. "II.5) Uczeń znajduje w wypowiedzi określone informacje."), stage = null.
+- Explanations (in Polish) say why the answer is right; for listening tasks quote the decisive words from the transcript, for reading tasks the decisive words from the text.
+- The e-mail (wypowiedź pisemna, 10 points): one extended_text item, scoring rubric; essay with one topic (id "1", form "e-mail", text = the instruction with its three bullet points and the given beginning of the e-mail), minWords 50. Criteria: "tresc" (Treść, max 4) as a matrix with rows = number of points referred to ("3", "2", "1", "0") and cols = number of points developed ("3", "2", "1", "0"), one cell per value printed in the key's table; "spojnosc" (Spójność i logika wypowiedzi, 2), "zakres" (Zakres środków językowych, 2) and "poprawnosc" (Poprawność środków językowych, 2) as levels with the key's descriptions. Gates: tresc = 0 → 0 in all others (mode "set"); tresc = 1 → at most 1 in all others (mode "cap"). Put the key's numbered rules (Uwagi dodatkowe, word counting, the "Uszczegółowienia do zadania" examples of "odniósł się" / "rozwinął" for each bullet point) in scoringNotes, shortened but faithful.`,
+  },
+};
+
 export interface TaskInput {
   sessionId: string;
   subjectName: string;
@@ -62,7 +80,7 @@ const pageText = (p: PdfPage) => p.lines.map((l) => l.text).join("\n");
 
 export function inputHash(t: TaskInput, providerKey = "anthropic:claude-opus-5-5"): string {
   return createHash("sha256")
-    .update(JSON.stringify([PROMPT_VERSION, providerKey, t.sheetSha, t.keySha, t.number, t.sheetPages.map((p) => p.page), t.keyPages.map((p) => p.page), ...(t.reviewerNote ? [t.reviewerNote] : []), ...(t.contextNote ? [t.contextNote] : [])]))
+    .update(JSON.stringify([PROMPT_VERSION, ...(SUBJECT_RULES[t.subjectName] ? [SUBJECT_RULES[t.subjectName]!.version] : []), providerKey, t.sheetSha, t.keySha, t.number, t.sheetPages.map((p) => p.page), t.keyPages.map((p) => p.page), ...(t.reviewerNote ? [t.reviewerNote] : []), ...(t.contextNote ? [t.contextNote] : [])]))
     .digest("hex")
     .slice(0, 16);
 }
@@ -110,7 +128,8 @@ export async function structureTask(provider: Provider | null, t: TaskInput, cac
   if (!provider) throw new Error("No AI provider configured: see .env.example (or run with --dry-run to stop before this stage).");
 
   try {
-    const res = await askJson(provider, { system: SYSTEM, parts: await parts(t, provider.prefersJpeg), schema: DraftTask, maxTokens: 32000, effort: "high" });
+    const rules = SUBJECT_RULES[t.subjectName];
+    const res = await askJson(provider, { system: rules ? `${SYSTEM}\n\n${rules.text}` : SYSTEM, parts: await parts(t, provider.prefersJpeg), schema: DraftTask, maxTokens: 32000, effort: "high" });
     writeFileSync(file, JSON.stringify({ draft: res.data, model: res.model, provider: provider.id, usage: res.usage, attempts: res.attempts, at: new Date().toISOString() }, null, 2));
     return { draft: res.data, model: res.model, usage: res.usage, cached: false, attempts: res.attempts };
   } catch (err) {

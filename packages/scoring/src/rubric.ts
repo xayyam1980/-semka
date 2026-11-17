@@ -67,8 +67,12 @@ export function scoreRubric(rubric: Rubric, input: RubricInput, opts: { dyslexia
 
   let gatedBy: string | undefined;
   for (const g of rubric.gates) {
-    if (per[g.ifCriterion] === g.equals) {
-      gatedBy = g.ifCriterion;
+    if (per[g.ifCriterion] !== g.equals) continue;
+    gatedBy = g.ifCriterion;
+    if (g.mode === "cap") {
+      // E.g. English e-mail: 1 point for content → at most 1 point in every other criterion.
+      for (const c of rubric.criteria) if (c.id !== g.ifCriterion && per[c.id] !== undefined) per[c.id] = Math.min(per[c.id]!, g.thenAllOthers);
+    } else {
       for (const c of rubric.criteria) if (c.id !== g.ifCriterion) per[c.id] = g.thenAllOthers;
       missing.length = 0; // nothing else needs filling in once the gate applies
     }

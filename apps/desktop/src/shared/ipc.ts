@@ -60,6 +60,8 @@ export interface PublicStimulus {
   source?: string;
   footnotes?: { mark: string; text: string }[];
   wordCount?: number;
+  /** Listening tasks: this task's part of the session recording (asset). */
+  audio?: { startSec: number; endSec: number; playsStartSec?: number };
 }
 
 export interface PublicSession {
@@ -72,6 +74,8 @@ export interface PublicSession {
   contentVersion: string;
   tasks: PublicTask[];
   stimuli: PublicStimulus[];
+  /** The whole recording, played once in a simulation. Absent for sessions without listening, or when the file is missing. */
+  recording?: { asset: string };
 }
 
 export type Scope = "all" | "closed" | "open" | { taskIds: string[] };
@@ -160,6 +164,8 @@ export interface CheckResult {
     rubrics?: { topic: string | null; rubric: Rubric }[];
     /** Whether this attempt uses the thresholds for students with dyslexia. */
     dyslexia?: boolean;
+    /** Listening tasks: the transcript of the task's recording. */
+    transcript?: string[];
   };
 }
 
@@ -170,6 +176,8 @@ export interface OsemkaApi {
 
   listSessions(): Promise<SessionSummary[]>;
   getSession(id: string): Promise<PublicSession | null>;
+  /** The session recording's bytes (media from a custom scheme is refused when the page is a file). */
+  getRecording(sessionId: string): Promise<Uint8Array | null>;
 
   listAttempts(sessionId?: string): Promise<AttemptSummary[]>;
   startPractice(sessionId: string, scope: Scope): Promise<AttemptView>;
@@ -199,6 +207,7 @@ export const IPC = {
   updateSettings: "settings:update",
   listSessions: "content:list",
   getSession: "content:get",
+  getRecording: "content:recording",
   listAttempts: "attempt:list",
   startPractice: "attempt:start-practice",
   startSimulation: "attempt:start-simulation",

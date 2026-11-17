@@ -187,7 +187,8 @@ export const Rubric = z.object({
   id: z.string(),
   maxPoints: z.number().int().positive(),
   criteria: z.array(Criterion).min(1),
-  gates: z.array(z.object({ ifCriterion: z.string(), equals: z.number().int(), thenAllOthers: z.number().int() })),
+  /** "set" (default): the other criteria get exactly thenAllOthers points; "cap": at most thenAllOthers. */
+  gates: z.array(z.object({ ifCriterion: z.string(), equals: z.number().int(), thenAllOthers: z.number().int(), mode: z.enum(["set", "cap"]).optional() })),
 });
 export type Rubric = z.infer<typeof Rubric>;
 
@@ -207,7 +208,10 @@ export const AudioSegment = z
     recording: RelPath,
     startSec: z.number().nonnegative(),
     endSec: z.number().positive(),
-    role: z.enum(["intro", "instruction", "play1", "pause", "play2", "outro"]),
+    /** "task": everything for one listening task (announcement, reading pause, both plays); used in practice. */
+    role: z.enum(["intro", "instruction", "play1", "pause", "play2", "outro", "task"]),
+    /** For "task": where the first play starts, after the announcement and the pause for reading the questions. */
+    playsStartSec: z.number().nonnegative().optional(),
     taskNumber: z.number().int().positive().optional(),
     textLabel: z.string().optional(),
     transcriptLines: z.array(z.string()).optional(),

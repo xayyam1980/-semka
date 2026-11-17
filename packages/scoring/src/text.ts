@@ -44,10 +44,24 @@ export function matchText(
   const a = normalizeAnswer(answer);
   if (!a) return { result: "blank" };
   const good = [...key.expected, ...key.accepted];
-  const hit = good.find((g) => normalizeAnswer(g) === a);
+  const same = (entry: string) => withOptionalParts(entry).some((v) => normalizeAnswer(v) === a);
+  const hit = good.find(same);
   if (hit !== undefined) return { result: "correct", matched: hit };
-  const bad = key.rejected.find((r) => normalizeAnswer(r.answer) === a);
+  const bad = key.rejected.find((r) => same(r.answer));
   if (bad) return { result: "incorrect", matched: bad.answer, reason: bad.reason };
   const ranked = good.map((g) => ({ g, d: levenshtein(a, normalizeAnswer(g)) })).sort((x, y) => x.d - y.d);
   return ranked[0] ? { result: "unresolved", closest: ranked[0].g } : { result: "unresolved" };
+}
+
+/** Key entries mark optional words in brackets: "znika (im) ojciec" stands for "znika ojciec" and "znika im ojciec". */
+export function withOptionalParts(entry: string): string[] {
+  const parts = entry.split(/(\([^()]*\))/);
+  const optional = parts.filter((p) => /^\(.*\)$/.test(p)).length;
+  if (!optional || optional > 4) return [entry];
+  const out: string[] = [];
+  for (let mask = 0; mask < 1 << optional; mask++) {
+    let k = 0;
+    out.push(parts.map((p) => (/^\(.*\)$/.test(p) ? (mask & (1 << k++) ? p.slice(1, -1) : "") : p)).join("").replace(/\s+/g, " ").trim());
+  }
+  return out;
 }

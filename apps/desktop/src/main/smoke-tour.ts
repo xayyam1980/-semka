@@ -9,6 +9,7 @@ const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
 export async function runTour(win: BrowserWindow, outDir: string): Promise<string[]> {
   if (process.env.OSEMKA_DEV_SIM_SECONDS) return runTimeUpTour(win, outDir);
   if (process.env.OSEMKA_TOUR === "polski") return runPolishTour(win, outDir);
+  if (process.env.OSEMKA_TOUR === "angielski") return runEnglishTour(win, outDir);
   const js = <T>(code: string) => win.webContents.executeJavaScript(code) as Promise<T>;
   const shots: string[] = [];
   const shot = async (name: string) => {
@@ -151,5 +152,64 @@ async function runPolishTour(win: BrowserWindow, outDir: string): Promise<string
   await wait(600);
   await scrollTo('[data-testid="rubric-grader"]');
   await shot("zadanie-19-ocena");
+  return shots;
+}
+
+/** OSEMKA_TOUR=angielski: listening player, picture options, transcript, matching, e-mail rubric, recording bar. */
+async function runEnglishTour(win: BrowserWindow, outDir: string): Promise<string[]> {
+  // userGesture: lets the tour start audio like a click would.
+  const js = <T>(code: string) => win.webContents.executeJavaScript(code, true) as Promise<T>;
+  const shots: string[] = [];
+  const shot = async (name: string) => {
+    await wait(500);
+    const file = join(outDir, `angielski-${shots.length + 1}-${name}-${process.platform}.png`);
+    writeFileSync(file, (await win.webContents.capturePage()).toPNG());
+    shots.push(file);
+  };
+  const click = (selector: string) => js(`(() => { const el = document.querySelector(${JSON.stringify(selector)}); if (!el) throw new Error("missing ${selector.replace(/"/g, "'")}"); el.click(); })()`);
+  const clickText = (text: string) =>
+    js(`(() => { const el = [...document.querySelectorAll("button")].find(b => b.textContent.trim() === ${JSON.stringify(text)}); if (!el) throw new Error("no button ${text}"); el.click(); })()`);
+  const type = (selector: string, text: string) =>
+    js(`(() => { const t = document.querySelector(${JSON.stringify(selector)}); const set = Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, "value").set; set.call(t, ${JSON.stringify(text)}); t.dispatchEvent(new Event("input", { bubbles: true })); })()`);
+  const scrollTo = (selector: string) => js(`document.querySelector(${JSON.stringify(selector)})?.scrollIntoView({ block: "start" })`);
+
+  const session = process.env.OSEMKA_TOUR_SESSION ?? "angielski-2025-05-glowny";
+  await js(`location.hash = "#/arkusze/${session}"`);
+  await wait(500);
+  await click('[data-testid="start-practice"]');
+  await wait(2000); // the recording arrives once per session
+  await click('[data-testid="listen-toggle"]');
+  await wait(2500);
+  const playing = await js<number>(`document.querySelector(".listening audio")?.currentTime ?? -1`);
+  await shot(`zadanie-1-sluchanie-${playing > 0 ? "gra" : "cisza"}`);
+  await click('[data-testid="listen-skip"]').catch(() => undefined);
+  await wait(800);
+  const afterSkip = await js<number>(`document.querySelector(".listening audio")?.currentTime ?? -1`);
+  await click('[data-testid="listen-toggle"]');
+  const diag = await js<string>(`(async () => { const a = document.querySelector(".listening audio"); const r = await fetch(a.src, { headers: { range: "bytes=0-99" } }).catch((e) => ({ status: String(e) })); return JSON.stringify({ src: a.src, err: a.error && a.error.code + " " + a.error.message, ready: a.readyState, net: a.networkState, fetch: r.status, len: r.headers && r.headers.get("content-range") }); })()`);
+  writeFileSync(join(outDir, "angielski-audio.txt"), `audio: ${playing.toFixed(1)}s after 2.5 s, ${afterSkip.toFixed(1)}s after skip\n${diag}\n`);
+  await js(`document.querySelectorAll('[data-option="A"]')[0].click()`);
+  await js(`document.querySelectorAll('[data-testid="check"]')[0].click()`);
+  await wait(600);
+  await scrollTo('[data-testid="transcript"]');
+  await js(`document.querySelector('[data-testid="transcript"]')?.setAttribute("open", "")`);
+  await shot("zadanie-1-transkrypcja");
+  await clickText("3");
+  await shot("zadanie-3-dopasowanie");
+  await clickText("14");
+  await type("textarea", "I had a great time during my school trip abroad. We visited London and saw many famous places. On the way back our bus broke down and we waited two hours. Would you like to visit me in July? We can go to the mountains and swim in the lake. Write soon! XYZ");
+  await click('[data-testid="check"]');
+  await wait(600);
+  await scrollTo('[data-testid="rubric-grader"]');
+  await shot("zadanie-14-ocena");
+
+  await js(`location.hash = "#/arkusze/${session}"`);
+  await wait(500);
+  await click('[data-testid="start-simulation"]');
+  await click('[data-testid="confirm-simulation"]');
+  await wait(3500);
+  await shot("symulacja-nagranie");
+  const t = await js<number>(`document.querySelector(".recording audio")?.currentTime ?? -1`);
+  console.log(`TOUR recording: ${t.toFixed(1)}s after 3.5 s`);
   return shots;
 }

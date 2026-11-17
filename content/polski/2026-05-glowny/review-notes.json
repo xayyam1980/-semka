@@ -1,0 +1,4 @@
+{
+  "10": "Item 10.2 has an empty model solution. Fill keys[0].solution (version X) with one complete correct answer taken from the key's example answers awarded full points (Przykładowe rozwiązania / odpowiedzi ocenione na maksymalną liczbę punktów).",
+  "15": "The item has no keys entry. Add keys with one entry for version X: answer null, solution = one complete example answer from the key awarded 2 points (title, hero and justification with a situation from the book). Keep the levels, exemplars and scoring notes."
+}

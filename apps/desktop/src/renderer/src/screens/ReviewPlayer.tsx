@@ -4,10 +4,11 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router";
 import type { AttemptView, CheckResult, PublicSession, PublicTask } from "../../../shared/ipc";
 import { AnswerInput } from "../components/AnswerInput";
-import { Feedback } from "../components/Feedback";
+import { Feedback, TaskTranscript } from "../components/Feedback";
 import { Rich } from "../components/Rich";
 import { TaskText } from "../components/TaskText";
 import { ReadingPane, readingTextOf } from "../components/ReadingPane";
+import { ListeningPlayer, listeningOf } from "../components/ListeningPlayer";
 import { sessionLabel } from "../lib/format";
 
 export function ReviewPlayer() {
@@ -53,6 +54,8 @@ export function ReviewPlayer() {
   };
 
   const reading = readingTextOf(task.stimulusIds, session.stimuli);
+  const listening = listeningOf(task.stimulusIds, session.stimuli);
+  const transcript = task.items.map((i) => review[i.id]?.reveal.transcript).find(Boolean);
   const grade = async (itemId: string, points: number) => {
     try {
       await window.osemka.gradeItem(attemptId, itemId, points);
@@ -81,7 +84,9 @@ export function ReviewPlayer() {
             <h1 className="text-2xl font-bold">
               Zadanie {task.number}. <span className="font-normal text-muted">(0–{task.maxPoints})</span>
             </h1>
+            {listening && <ListeningPlayer sessionId={session.id} stimulus={listening} available={!!session.recording} />}
             <TaskText task={task} values={values} ctx={ctx} />
+            {transcript && <TaskTranscript lines={transcript} />}
             {task.items.map((it) => (
               <div key={it.id} className="flex flex-col gap-3">
                 {task.items.length > 1 && <h2 className="font-bold">{it.label}</h2>}

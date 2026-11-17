@@ -1,8 +1,8 @@
 // The import pipeline for one session: discover → extract → segment → structure (AI) → assemble → validate → write.
 import { createHash } from "node:crypto";
-import { existsSync, mkdirSync, readdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, statSync, unlinkSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
-import { SUBJECTS, type Rubric, type SessionBundle, type SkillTag, type SourceFile, type Stimulus, type Task } from "@osemka/schema";
+import { SUBJECTS, type AudioSegment, type Rubric, type SessionBundle, type SkillTag, type SourceFile, type Stimulus, type Task } from "@osemka/schema";
 import { assemble } from "./assemble.ts";
 import { estimateInputTokens, inputHash, providerFromEnv, structureTask, type TaskInput } from "./ai.ts";
 import { fileOf, type FoundSession } from "./discover.ts";
@@ -11,6 +11,7 @@ import { snapFigure } from "./figures.ts";
 import { findTextGroups, stimulusFromDraft, textCacheFile, transcribeText } from "./texts.ts";
 import { taskId as makeTaskId } from "./assemble.ts";
 import { compareSheetAndKey, segment } from "./segment.ts";
+import { cueMap, englishKeyPages, speechBlocks, transcriptByTask } from "./english.ts";
 import { validateBundle, type Check } from "./validate.ts";
 
 export interface RunOptions {
@@ -71,8 +72,19 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
   const sheetSeg = segment(sheetPages, { maxPagesPerTask: 3 });
   // Essay keys run over many pages; a span only ever reaches the next task's heading anyway.
   const keySeg = segment(keyPages, { maxPagesPerTask: 10 });
-  const segProblems = [...sheetSeg.problems.map((p) => `arkusz: ${p}`), ...keySeg.problems.map((p) => `klucz: ${p}`), ...compareSheetAndKey(sheetSeg, keySeg)];
-  opts.log(`Sheet: ${sheetSeg.spans.length} tasks, ${sheetSeg.totalPoints} pts. Key: ${keySeg.spans.length} tasks, ${keySeg.totalPoints} pts.`);
+  // English keys list answers in tables per skill, without "Zadanie N. (0–M)" headings: pages are found by table rows.
+  const english = s.subjectId === "angielski" ? englishKeyPages(keyPages, sheetSeg.spans) : undefined;
+  const segProblems = english
+    ? [...sheetSeg.problems.map((p) => `arkusz: ${p}`), ...english.problems]
+    : [...sheetSeg.problems.map((p) => `arkusz: ${p}`), ...keySeg.problems.map((p) => `klucz: ${p}`), ...compareSheetAndKey(sheetSeg, keySeg)];
+  opts.log(
+    english
+      ? `Sheet: ${sheetSeg.spans.length} tasks, ${sheetSeg.totalPoints} pts. Key pages: ${[...english.pages].map(([n, p]) => `${n}:${p.join(",")}`).join(" ")}`
+      : `Sheet: ${sheetSeg.spans.length} tasks, ${sheetSeg.totalPoints} pts. Key: ${keySeg.spans.length} tasks, ${keySeg.totalPoints} pts.`,
+  );
+  // Listening: the transcript names the listening tasks; it is given to the AI for explanations and shown after checking.
+  const transcriptFile = fileOf(s, "transkrypcja");
+  const transcript = transcriptFile ? transcriptByTask(await readPages(await openPdf(transcriptFile.abs))) : new Map<number, string[]>();
   for (const p of segProblems) opts.log(`  ! ${p}`);
 
   const report: RunReport = {
@@ -128,7 +140,7 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
   const inputs: TaskInput[] = [];
   const sheetSourceOf = new Map<number, { kind: "arkusz" | "karta_otwarte"; fromPage: number }>();
   for (const span of wanted) {
-    const k = keyByNum.get(span.number)!;
+    const k = keyByNum.get(span.number);
     const range = (a: number, b: number) => Array.from({ length: b - a + 1 }, (_, i) => a + i);
     const karta = kartaByNum.get(span.number);
     const src = karta ? { kind: "karta_otwarte" as const, span: karta, pages: kartaPages, sha: kartaFile!.sha256 } : { kind: "arkusz" as const, span, pages: sheetPages, sha: sheetFile.sha256 };
@@ -139,10 +151,13 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
       number: span.number,
       maxPoints: span.maxPoints,
       sheetPages: await Promise.all(range(src.span.fromPage, src.span.toPage).map(async (p) => ({ page: p, png: await png(src.kind, p), text: src.pages[p - 1]! }))),
-      keyPages: await Promise.all(range(k.fromPage, k.toPage).map(async (p) => ({ page: p, png: await png("klucz", p), text: keyPages[p - 1]! }))),
+      keyPages: await Promise.all((english ? english.pages.get(span.number)! : range(k!.fromPage, k!.toPage)).map(async (p) => ({ page: p, png: await png("klucz", p), text: keyPages[p - 1]! }))),
       sheetSha: src.sha,
       ...(reviewNotes[String(span.number)] ? { reviewerNote: reviewNotes[String(span.number)] } : {}),
       ...(textOfTask.has(span.number) ? { contextNote: `This task uses reading text ${textOfTask.get(span.number)!.index}, which is transcribed separately and shown next to the task. Do not copy it into the instruction.` } : {}),
+      ...(transcript.has(span.number)
+        ? { contextNote: `This is a listening task; the recording is played separately. Its transcript, for writing the explanations only (never copy it into the instruction):\n<transcript>\n${transcript.get(span.number)!.join("\n")}\n</transcript>` }
+        : {}),
       keySha: keyFile.sha256,
     });
   }
@@ -236,7 +251,12 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
       const pixels = new Map<number, Awaited<ReturnType<typeof decodePng>>>();
       for (let pg = area.fromPage; pg <= area.toPage; pg++) pixels.set(pg, await decodePng(await png(src.kind, pg)));
       for (const f of a.figures) {
-        const snapped = snapFigure(srcPages, (pg) => pixels.get(pg)!, area, f.sheetPage, f.box);
+        // A figure linked from one numbered part ("1.2") sits right below that part's label on the sheet.
+        const owner = a.task.items.find((it) => it.prompt?.includes(`stimulus:${f.stimulus.id})`) && /^\d+\.\d+$/.test(it.label));
+        const labelRe = owner ? new RegExp(`^${owner.label.replace(".", "\\.")}\\.\\s`) : undefined;
+        const anchorPage = labelRe ? srcPages.find((pg) => pg.page >= area.fromPage && pg.page <= area.toPage && pg.lines.some((l) => labelRe.test(l.text))) : undefined;
+        const anchor = anchorPage && labelRe ? { page: anchorPage.page, y: anchorPage.lines.find((l) => labelRe.test(l.text))!.y } : undefined;
+        const snapped = snapFigure(srcPages, (pg) => pixels.get(pg)!, area, f.sheetPage, f.box, anchor);
         if (snapped.method === "ai-box") a.notes.push(`Figure ${f.stimulus.id}: no drawing found in the task's area, crop uses the AI's box. Check it.`);
         f.stimulus.ref = { ...f.stimulus.ref, page: snapped.page };
         writeFileSync(join(sessionDir, f.stimulus.asset!), await cropPng(await png(src.kind, snapped.page), snapped.box));
@@ -256,6 +276,29 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
   }
   report.tokens = tokens;
   if (provider?.price) report.costUsd = round(cost);
+
+  // Listening: copy the recording next to the content (kept out of git) and cut it into one segment per task.
+  const audio: AudioSegment[] = [];
+  const audioProblems: string[] = [];
+  const mp3 = fileOf(s, "nagranie");
+  if (mp3 && transcript.size) {
+    const asset = "assets/nagranie.mp3";
+    const dest = join(sessionDir, asset);
+    if (!existsSync(dest) || statSync(dest).size !== statSync(mp3.abs).size) copyFileSync(mp3.abs, dest);
+    const { blocks, duration } = speechBlocks(mp3.abs);
+    const listening = [...transcript.keys()].sort((a, b) => a - b);
+    const cues = cueMap(blocks, duration, asset, listening);
+    audioProblems.push(...cues.problems);
+    for (const seg of cues.segments) {
+      const task = tasks.find((t) => t.number === seg.taskNumber);
+      if (!task) continue;
+      const id = `${task.id}-nagranie`;
+      audio.push({ ...seg, id: `${task.id}-audio`, transcriptLines: transcript.get(seg.taskNumber!) ?? [] });
+      stimuli.push({ id, kind: "audio", title: `Nagranie do zadania ${task.number}`, asset, audioSegmentIds: [`${task.id}-audio`], ref: { source: "nagranie", page: 1 } });
+      task.stimulusIds = [id, ...task.stimulusIds];
+    }
+    opts.log(`Recording: ${cues.segments.map((c) => `${c.taskNumber} ${fmtTime(c.startSec)}–${fmtTime(c.endSec)}`).join(", ")}`);
+  }
 
   const sources: SourceFile[] = [];
   for (const f of s.files) {
@@ -280,7 +323,7 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
     stimuli,
     tasks,
     rubrics,
-    audio: [],
+    audio,
   };
   const contentVersion = createHash("sha256").update(JSON.stringify(bundleNoVersion)).digest("hex").slice(0, 16);
   const bundle = { ...bundleNoVersion, session: { ...bundleNoVersion.session, contentVersion } };
@@ -291,8 +334,8 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
   const v = opts.onlyTasks
     ? { checks: [{ name: `Partial import of tasks ${opts.onlyTasks.join(", ")}: cannot be published`, ok: false, details: [] }, ...full.checks], ok: false }
     : full;
-  report.checks = v.checks;
-  report.ok = v.ok && report.tasks.every((t) => t.problems.length === 0);
+  report.checks = english ? [...v.checks, { name: "The recording splits into the listening tasks", ok: audioProblems.length === 0, details: audioProblems }] : v.checks;
+  report.ok = v.ok && report.checks.every((c) => c.ok) && report.tasks.every((t) => t.problems.length === 0);
 
   writeFileSync(join(sessionDir, "session.json"), JSON.stringify(bundle, null, 2) + "\n");
   // After a full run, figure files that no task refers to any more are removed (e.g. after a reviewer note).
@@ -332,3 +375,5 @@ function mergeTaxonomy(file: string, tags: Map<string, SkillTag>): void {
 }
 
 const round = (n: number) => Math.round(n * 100) / 100;
+
+const fmtTime = (sec: number) => `${Math.floor(sec / 60)}:${String(Math.floor(sec % 60)).padStart(2, "0")}`;

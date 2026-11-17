@@ -177,7 +177,8 @@ export class AttemptService {
     if (r) this.db.update(responses).set({ checkedAt: t, updatedAt: t }).where(and(eq(responses.attemptId, attemptId), eq(responses.itemId, itemId))).run();
     else this.db.insert(responses).values({ attemptId, itemId, value: null, checkedAt: t, updatedAt: t }).run();
     if (outcome.points !== null) this.upsertScore(attemptId, itemId, { points: outcome.points, source: "auto", ...(outcome.kind === "auto" ? { autoResult: outcome.result } : {}) });
-    return this.reveal(item, a.version as SheetVersion, outcome, dysOf(a));
+    const checked = new Set(this.db.select().from(responses).where(eq(responses.attemptId, attemptId)).all().filter((x) => x.checkedAt).map((x) => x.itemId));
+    return this.reveal(item, a.version as SheetVersion, outcome, dysOf(a), this.taskFullyChecked(b, itemId, checked));
   }
 
   /** After submission: every item with its outcome and the key (for the review screen). */
@@ -294,6 +295,7 @@ export class AttemptService {
     const saved = this.db.select().from(responses).where(eq(responses.attemptId, attemptId)).all();
     const scores = new Map(this.db.select().from(itemScores).where(eq(itemScores.attemptId, attemptId)).all().map((s) => [s.itemId, s]));
     const out: Record<string, SavedResponse> = {};
+    const checkedIds = new Set(saved.filter((x) => x.checkedAt).map((x) => x.itemId));
     for (const r of saved) {
       const item = this.item(b, r.itemId);
       const value = r.value ? ResponseValue.parse(JSON.parse(r.value)) : null;
@@ -302,7 +304,7 @@ export class AttemptService {
         value,
         flagged: r.flagged,
         timeSpentMs: r.timeSpentMs,
-        ...(r.checkedAt ? { checkedAt: r.checkedAt, check: this.reveal(item, a.version as SheetVersion, scoreItem(item, value, a.version as SheetVersion), dysOf(a)) } : {}),
+        ...(r.checkedAt ? { checkedAt: r.checkedAt, check: this.reveal(item, a.version as SheetVersion, scoreItem(item, value, a.version as SheetVersion), dysOf(a), this.taskFullyChecked(b, r.itemId, checkedIds)) } : {}),
         ...gradeFields(score, this.suggestionOf(score)),
       };
     }
@@ -382,7 +384,13 @@ export class AttemptService {
     this.db.insert(itemScores).values(values).onConflictDoUpdate({ target: [itemScores.attemptId, itemScores.itemId], set: values }).run();
   }
 
-  private reveal(item: Item, version: SheetVersion, outcome: CheckResult["outcome"], dyslexia = false): CheckResult {
+  /** Practice: a listening transcript holds the answers to every part of its task, so it waits until all are checked. */
+  private taskFullyChecked(b: SessionBundle, itemId: string, checked: Set<string>): boolean {
+    const task = b.tasks.find((t) => t.items.some((i) => i.id === itemId));
+    return !!task && task.items.every((i) => checked.has(i.id));
+  }
+
+  private reveal(item: Item, version: SheetVersion, outcome: CheckResult["outcome"], dyslexia = false, withTranscript = true): CheckResult {
     const key = item.key[version];
     const rubrics =
       item.scoring.type === "rubric"
@@ -391,9 +399,13 @@ export class AttemptService {
             return r ? [{ topic: ref.topic, rubric: r }] : [];
           })
         : [];
+    const b = this.content.get(this.sessionOfItem(item.id));
+    const task = b?.tasks.find((t) => t.items.some((i) => i.id === item.id));
+    const transcript = task && withTranscript ? b!.audio.find((x) => x.taskNumber === task.number)?.transcriptLines : undefined;
     return {
       outcome,
       reveal: {
+        ...(transcript?.length ? { transcript } : {}),
         ...(rubrics.length ? { rubrics, dyslexia } : {}),
         ...(key ? { key } : {}),
         ...(item.explanation ? { explanation: item.explanation } : {}),

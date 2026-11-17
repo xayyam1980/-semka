@@ -1,0 +1,291 @@
+{
+  "sessionId": "angielski-2025-05-glowny",
+  "at": "2026-11-17T19:32:59.337Z",
+  "model": "qwen · qwen3.8-max · token-plan.maas.qwencloudapi.com",
+  "segmentation": {
+    "sheetTasks": 14,
+    "sheetPoints": 55,
+    "keyTasks": 0,
+    "keyPoints": 0,
+    "problems": []
+  },
+  "tasks": [
+    {
+      "number": 1,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 12673,
+        "output": 7827,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 2,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 11054,
+        "output": 3607,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 3,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 10894,
+        "output": 4443,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 4,
+      "problems": [],
+      "notes": [
+        "Klucz nie rozróżnia wersji arkusza X/Y dla odpowiedzi otwartych zadania 4. (tabele uszczegółowień nie mają kolumn wersji), dlatego podano jeden wpis klucza (wersja X) ważny dla obu wersji arkusza.",
+        "W kluczu przykład odpowiedzi niepoprawnej \"buy pancakes\" (luka 4.2) oraz przykład akceptowany \"5£ / £5\" (luka 4.3) nie mają podanego uzasadnienia (puste pole w tabeli).",
+        "Ozdobne zdjęcie piłki w bramce nad notatką oraz podpis \"Źródło: computerweekly.com\" pominięto jako dekoracyjne."
+      ],
+      "usage": {
+        "input": 17506,
+        "output": 15089,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 5,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 10621,
+        "output": 4616,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 6,
+      "problems": [],
+      "notes": [
+        "W kluczu uzasadnienie odrzucenia odpowiedzi \"will I borrow\" (zad. 6.2) jest puste; pozostawiono pusty tekst uzasadnienia.",
+        "Odpowiedzi z ukośnikami w kluczu (np. \"can/could/may I borrow\", \"was a born / was borned / was borning\") rozdzielono na osobne wpisy zgodnie z zasadą rozwijania alternatyw."
+      ],
+      "usage": {
+        "input": 16654,
+        "output": 10513,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 7,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 12130,
+        "output": 6721,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 8,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 10721,
+        "output": 4755,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 9,
+      "problems": [],
+      "notes": [
+        "Dekoracyjne zdjęcie żaglowców przy nagłówku MUSEUM SHIPS oraz podpis „Źródło: thetudorials.com” pominięto zgodnie z zasadą usuwania dekoracyjnych zdjęć i ich podpisów; trzymany został jedynie podpis „Na podstawie: …” odnoszący się do tekstów."
+      ],
+      "usage": {
+        "input": 10846,
+        "output": 13729,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 10,
+      "problems": [],
+      "notes": [
+        "Klucz (tabela wymagań dla zadania 10.) podaje wymagania w komórkach scalonych dla wszystkich części 10.1–10.3, dlatego każdej części przypisano oba wymagania ogólne (II i V) i oba szczegółowe (III.4 i VIII.2).",
+        "Klucz nie rozróżnia wersji arkusza X/Y dla odpowiedzi zadania 10. (tabla wymagań i tabela odpowiedzi nie mają kolumn wersji), dlatego podano jedną pozycję keys[] z wersją X.",
+        "Niektóre wiersze tabeli odpowiedzi niepoprawnych mają puste uzasadnienie w kluczu – pozostawiono reason \"\".",
+        "Zdobiące zdjęcie Mike'a oraz odsyłacze źródłowe („Na podstawie: www.londontheatredirect.com”, „Źródło: raisingteenstoday.com”) pominięto zgodnie z zasadą."
+      ],
+      "usage": {
+        "input": 18452,
+        "output": 14772,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 11,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 10591,
+        "output": 5438,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 12,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 10571,
+        "output": 5058,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 13,
+      "problems": [],
+      "notes": [
+        "Klucz dla zadania 13. nie rozróżnia wersji arkusza X i Y (jedna kolumna odpowiedzi), dlatego podano pojedynczy wpis keys z wersją X.",
+        "W tabeli Przykłady odpowiedzi akceptowanych dla 13.2 klucz podaje ---, czyli brak dodatkowych odpowiedzi akceptowanych poza oczekiwaną."
+      ],
+      "usage": {
+        "input": 15499,
+        "output": 9739,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 14,
+      "problems": [],
+      "notes": [
+        "Początek e-maila w czystopisie arkusza brzmi „I had a great time during my school trip abroad.”, natomiast w uszczegółowieniach do zadania 14 klucz cytuje „I had a lovely time during my school trip abroad.”; w temacie wypowiedzi przyjęto wersję z arkusza.",
+        "Klucz nie podaje odrębnych odpowiedzi dla wersji X i Y (zadanie otwarte oceniane rubryką), dlatego podano jeden wpis keys z wersją X i odpowiedzią null.",
+        "Strony z czystopisem i brudnopisem (strony 17–18 arkusza) zawierają jedynie miejsce na wypowiedź oraz tabelę punktacji dla egzaminatora; nie są częścią polecenia i nie zostały odwzorowane jako figura."
+      ],
+      "usage": {
+        "input": 31935,
+        "output": 18373,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "Matches the content schema",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Task points add up to the session total",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Each task equals the sum of its items",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Task numbers run 1…N without gaps",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every item has a key for each usable sheet version",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Choice keys point to options that exist",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Levels go from the item's points down to 0",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every item has a skill tag, and every tag has an area",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Page references are within the files",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every figure file exists",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Rubric items point to rubrics that add up to the item's points",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every image in the text points to an existing figure",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Stimuli referenced by tasks exist",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No control characters in the text",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every formula renders",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "The recording splits into the listening tasks",
+      "ok": true,
+      "details": []
+    }
+  ],
+  "ok": true,
+  "tokens": {
+    "input": 0,
+    "output": 0
+  },
+  "approvedAt": "2026-11-17T19:33:10.389Z"
+}

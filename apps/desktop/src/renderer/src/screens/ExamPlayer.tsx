@@ -7,6 +7,7 @@ import { AnswerInput, hasAnswer } from "../components/AnswerInput";
 import { Rich } from "../components/Rich";
 import { TaskText } from "../components/TaskText";
 import { ReadingPane, readingTextOf } from "../components/ReadingPane";
+import { RecordingBar } from "../components/RecordingBar";
 import { clock, plural, sessionLabel } from "../lib/format";
 
 const SAVE_DELAY_MS = 400;
@@ -30,6 +31,7 @@ export function ExamPlayer() {
   const deadline = useRef<number>(0);
   const warned = useRef({ warn: false, critical: false });
   const ended = useRef(false);
+  const loadedAt = useRef(Date.now());
 
   const toResult = useCallback(() => {
     ended.current = true;
@@ -183,6 +185,15 @@ export function ExamPlayer() {
           Oddaj
         </button>
       </header>
+      {session.recording && view && (
+        <RecordingBar
+          sessionId={session.id}
+          asset={session.recording.asset}
+          startedAtLocal={Date.parse(view.summary.startedAt) - Date.parse(view.timing.serverNow) + loadedAt.current}
+          stimuli={session.stimuli}
+          taskNumberOf={(id) => session.tasks.find((t) => t.stimulusIds.includes(id))?.number}
+        />
+      )}
       {banner && (
         <div className="flex items-center gap-3 bg-[var(--warn-soft)] px-6 py-2 text-sm text-[var(--warn)]" role="status">
           <b>{banner}</b>

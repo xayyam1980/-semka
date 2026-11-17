@@ -2,6 +2,8 @@
 # Matched by extension at subject/session depth so Unicode folder names don't matter.
 /*/*/*.pdf
 /*/*/*.mp3
+# Recordings copied next to the imported content (shipped with the installer, not the repository).
+/content/**/*.mp3
 !/design/**
 
 node_modules/

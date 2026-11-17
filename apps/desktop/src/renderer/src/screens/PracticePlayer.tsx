@@ -4,10 +4,11 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router";
 import type { AiSuggestion, AttemptView, CheckResult, PublicSession, PublicTask, SavedResponse } from "../../../shared/ipc";
 import { AnswerInput, hasAnswer } from "../components/AnswerInput";
-import { Feedback } from "../components/Feedback";
+import { Feedback, TaskTranscript } from "../components/Feedback";
 import { Rich, type RichContext } from "../components/Rich";
 import { TaskText } from "../components/TaskText";
 import { ReadingPane, readingTextOf } from "../components/ReadingPane";
+import { ListeningPlayer, listeningOf } from "../components/ListeningPlayer";
 import { clock, sessionLabel } from "../lib/format";
 
 const SAVE_DELAY_MS = 400;
@@ -170,7 +171,9 @@ export function PracticePlayer() {
   if (!view || !session || !task || !ctxBase) return <p className="p-8 text-muted">Ładowanie…</p>;
 
   const allChecked = task.items.every((i) => checks[i.id]);
+  const transcript = task.items.map((i) => checks[i.id]?.reveal.transcript).find(Boolean);
   const reading = readingTextOf(task.stimulusIds, session.stimuli);
+  const listening = listeningOf(task.stimulusIds, session.stimuli);
   const anyAnswer = task.items.some((i) => hasAnswer(i, values[i.id] ?? null));
   const checkedItems = Object.keys(checks).length;
   const correctItems = Object.values(checks).filter((c) => c.outcome.kind === "auto" && c.outcome.result === "correct").length;
@@ -220,7 +223,9 @@ export function PracticePlayer() {
                 {flagged ? "★ Oznaczone" : "☆ Oznacz"}
               </button>
             </div>
+            {listening && <ListeningPlayer sessionId={session.id} stimulus={listening} available={!!session.recording} />}
             <TaskText task={task} values={values} ctx={ctxBase} />
+            {transcript && <TaskTranscript lines={transcript} />}
             {task.items.map((it) => {
               const ctx: RichContext = ctxBase;
               return (

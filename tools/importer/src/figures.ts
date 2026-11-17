@@ -183,12 +183,32 @@ export function snapFigure(
   area: TaskArea,
   aiPage: number,
   aiBox: Box,
+  /** Where the figure's part label ("1.2.") is printed: the drawing is the first one below it. More reliable than the AI's box. */
+  anchor?: { page: number; y: number },
 ): { page: number; box: Box; method: "gap" | "ai-box" } {
   const gaps = taskGaps(pages, area);
   const pageH = (n: number) => pages.find((p) => p.page === n)!.height;
+  if (anchor) {
+    const below = gaps.filter((g) => g.page === anchor.page && g.bottom > anchor.y).sort((a, b) => a.top - b.top);
+    for (const gap of below) {
+      const px = pixelsOf(gap.page);
+      const d = pickDrawing(px, gap, pageH(gap.page), [aiBox[0], 0, aiBox[2], 1]);
+      if (!d) continue;
+      const pad = 10;
+      return {
+        page: gap.page,
+        box: [Math.max(0, d[0] - pad) / px.width, Math.max(0, d[1] - pad) / px.height, Math.min(px.width, d[2] + pad) / px.width, Math.min(px.height, d[3] + pad) / px.height],
+        method: "gap",
+      };
+    }
+  }
   const ranked = [...gaps].sort((a, b) => {
-    const score = (g: Gap) =>
-      (g.page === aiPage ? 2 : 0) + (g.page === aiPage && overlap(g.top, g.bottom, aiBox[1] * pageH(g.page), aiBox[3] * pageH(g.page)) > 0 ? 1 : 0);
+    // Same page first, then the gap that covers most of the AI's box (several picture rows can share a page).
+    const score = (g: Gap) => {
+      if (g.page !== aiPage) return 0;
+      const top = aiBox[1] * pageH(g.page), bottom = aiBox[3] * pageH(g.page);
+      return 2 + overlap(g.top, g.bottom, top, bottom) / Math.max(1, bottom - top);
+    };
     return score(b) - score(a);
   });
   for (const gap of ranked) {

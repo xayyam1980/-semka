@@ -1,5 +1,175 @@
 [
   {
+    "id": "en-gen-I",
+    "subjectId": "angielski",
+    "general": "I. Znajomość środków językowych. Uczeń posługuje się podstawowym zasobem środków językowych (leksykalnych, gramatycznych, ortograficznych) […].",
+    "area": "Znajomość środków językowych"
+  },
+  {
+    "id": "en-gen-II",
+    "subjectId": "angielski",
+    "general": "II. Rozumienie wypowiedzi. Uczeń rozumie […] proste wypowiedzi pisemne […].",
+    "area": "Rozumienie wypowiedzi"
+  },
+  {
+    "id": "en-gen-III",
+    "subjectId": "angielski",
+    "general": "III. Tworzenie wypowiedzi. Uczeń samodzielnie tworzy krótkie, proste, spójne i logiczne wypowiedzi […] pisemne […].",
+    "area": "Tworzenie wypowiedzi"
+  },
+  {
+    "id": "en-gen-IV",
+    "subjectId": "angielski",
+    "general": "IV. Reagowanie na wypowiedzi. Uczeń […] reaguje w sposób zrozumiały, adekwatnie do sytuacji komunikacyjnej, […] pisemnie […].",
+    "area": "Reagowanie na wypowiedzi"
+  },
+  {
+    "id": "en-gen-V",
+    "subjectId": "angielski",
+    "general": "V. Przetwarzanie wypowiedzi. Uczeń zmienia formę przekazu […].",
+    "area": "Przetwarzanie wypowiedzi"
+  },
+  {
+    "id": "en-II.2",
+    "subjectId": "angielski",
+    "general": "II. Rozumienie wypowiedzi. Uczeń rozumie proste wypowiedzi ustne artykułowane wyraźnie, w standardowej odmianie języka […].",
+    "specific": "II.2) Uczeń określa główną myśl wypowiedzi […].",
+    "area": "Rozumienie wypowiedzi"
+  },
+  {
+    "id": "en-II.3",
+    "subjectId": "angielski",
+    "general": "II. Rozumienie wypowiedzi. Uczeń rozumie proste wypowiedzi ustne artykułowane wyraźnie, w standardowej odmianie języka […].",
+    "specific": "II.3) Uczeń określa intencje nadawcy lub autora wypowiedzi.",
+    "area": "Rozumienie wypowiedzi"
+  },
+  {
+    "id": "en-II.4",
+    "subjectId": "angielski",
+    "general": "II. Rozumienie wypowiedzi. Uczeń rozumie proste wypowiedzi ustne artykułowane wyraźnie, w standardowej odmianie języka […].",
+    "specific": "II.4) Uczeń określa kontekst wypowiedzi.",
+    "area": "Rozumienie wypowiedzi"
+  },
+  {
+    "id": "en-II.5",
+    "subjectId": "angielski",
+    "general": "I. Znajomość środków językowych. Uczeń posługuje się podstawowym zasobem środków językowych (leksykalnych, gramatycznych, ortograficznych) […].",
+    "specific": "II.5) Uczeń znajduje w wypowiedzi określone informacje.",
+    "area": "Znajomość środków językowych"
+  },
+  {
+    "id": "en-III.1",
+    "subjectId": "angielski",
+    "general": "II. Rozumienie wypowiedzi. Uczeń rozumie […] proste wypowiedzi pisemne […].",
+    "specific": "III.1) Uczeń określa główną myśl tekstu […].",
+    "area": "Rozumienie wypowiedzi"
+  },
+  {
+    "id": "en-III.2",
+    "subjectId": "angielski",
+    "general": "II. Rozumienie wypowiedzi. Uczeń rozumie […] proste wypowiedzi pisemne […].",
+    "specific": "III.2) Uczeń określa intencje nadawcy lub autora tekstu.",
+    "area": "Rozumienie wypowiedzi"
+  },
+  {
+    "id": "en-III.3",
+    "subjectId": "angielski",
+    "general": "II. Rozumienie wypowiedzi. Uczeń rozumie […] proste wypowiedzi pisemne […].",
+    "specific": "III.3) Uczeń określa kontekst wypowiedzi.",
+    "area": "Rozumienie wypowiedzi"
+  },
+  {
+    "id": "en-III.4",
+    "subjectId": "angielski",
+    "general": "II. Rozumienie wypowiedzi. Uczeń rozumie […] proste wypowiedzi pisemne […].",
+    "specific": "III.4) Uczeń znajduje w tekście określone informacje.",
+    "area": "Rozumienie wypowiedzi"
+  },
+  {
+    "id": "en-III.5",
+    "subjectId": "angielski",
+    "general": "II. Rozumienie wypowiedzi. Uczeń rozumie […] proste wypowiedzi pisemne […].",
+    "specific": "III.5) Uczeń rozpoznaje związki między poszczególnymi częściami tekstu.",
+    "area": "Rozumienie wypowiedzi"
+  },
+  {
+    "id": "en-V.1",
+    "subjectId": "angielski",
+    "general": "III. Tworzenie wypowiedzi.",
+    "specific": "V.1) Uczeń opisuje ludzi, zwierzęta, przedmioty, miejsca i zjawiska.",
+    "area": "Tworzenie wypowiedzi"
+  },
+  {
+    "id": "en-VI.10",
+    "subjectId": "angielski",
+    "general": "I. Znajomość środków językowych.",
+    "specific": "VI.10) Uczeń pyta o pozwolenie […].",
+    "area": "Znajomość środków językowych"
+  },
+  {
+    "id": "en-VI.12",
+    "subjectId": "angielski",
+    "general": "IV. Reagowanie na wypowiedzi.",
+    "specific": "VI.12) Uczeń wyraża […] odmowę spełnienia prośby.",
+    "area": "Reagowanie na wypowiedzi"
+  },
+  {
+    "id": "en-VI.14",
+    "subjectId": "angielski",
+    "general": "IV. Reagowanie na wypowiedzi. Uczeń uczestniczy w rozmowie i w typowych sytuacjach reaguje w sposób zrozumiały, adekwatnie do sytuacji komunikacyjnej […].",
+    "specific": "VI.14) Uczeń stosuje zwroty i formy grzecznościowe.",
+    "area": "Reagowanie na wypowiedzi"
+  },
+  {
+    "id": "en-VI.3",
+    "subjectId": "angielski",
+    "general": "IV. Reagowanie na wypowiedzi.",
+    "specific": "VI.3) Uczeń […] przekazuje informacje i wyjaśnienia.",
+    "area": "Reagowanie na wypowiedzi"
+  },
+  {
+    "id": "en-VI.4",
+    "subjectId": "angielski",
+    "general": "IV. Reagowanie na wypowiedzi. Uczeń uczestniczy w rozmowie i w typowych sytuacjach reaguje w sposób zrozumiały, adekwatnie do sytuacji komunikacyjnej […].",
+    "specific": "VI.4) Uczeń […] zgadza się […] z opiniami innych osób.",
+    "area": "Reagowanie na wypowiedzi"
+  },
+  {
+    "id": "en-VI.6",
+    "subjectId": "angielski",
+    "general": "IV. Reagowanie na wypowiedzi. Uczeń uczestniczy w rozmowie i w typowych sytuacjach reaguje w sposób zrozumiały, adekwatnie do sytuacji komunikacyjnej […].",
+    "specific": "VI.6) Uczeń […] odpowiada na […] gratulacje.",
+    "area": "Reagowanie na wypowiedzi"
+  },
+  {
+    "id": "en-VI.8",
+    "subjectId": "angielski",
+    "general": "IV. Reagowanie na wypowiedzi. Uczeń uczestniczy w rozmowie i w typowych sytuacjach reaguje w sposób zrozumiały, adekwatnie do sytuacji komunikacyjnej […].",
+    "specific": "VI.8) Uczeń proponuje […].",
+    "area": "Reagowanie na wypowiedzi"
+  },
+  {
+    "id": "en-VI.9",
+    "subjectId": "angielski",
+    "general": "IV. Reagowanie na wypowiedzi. Uczeń uczestniczy w rozmowie i w typowych sytuacjach reaguje w sposób zrozumiały, adekwatnie do sytuacji komunikacyjnej […].",
+    "specific": "VI.9) Uczeń […] udziela rady.",
+    "area": "Reagowanie na wypowiedzi"
+  },
+  {
+    "id": "en-VII.3",
+    "subjectId": "angielski",
+    "general": "IV. Reagowanie na wypowiedzi.",
+    "specific": "VII.3) Uczeń […] przekazuje informacje i wyjaśnienia.",
+    "area": "Reagowanie na wypowiedzi"
+  },
+  {
+    "id": "en-VIII.2",
+    "subjectId": "angielski",
+    "general": "V. Przetwarzanie wypowiedzi. Uczeń zmienia formę przekazu […] pisemnego […].",
+    "specific": "VIII.2) Uczeń przekazuje w języku […] polskim informacje sformułowane w […] języku obcym.",
+    "area": "Przetwarzanie wypowiedzi"
+  },
+  {
     "id": "ma-46-II.11",
     "subjectId": "matematyka",
     "general": "I. Sprawność rachunkowa.\n1. Wykonywanie nieskomplikowanych obliczeń w pamięci lub pisemnie oraz wykorzystanie tych umiejętności w sytuacjach praktycznych.",
@@ -360,6 +530,22 @@
     "area": "Rozumowanie i argumentacja. 1. Przeprowadzanie prostego rozumowania, podawanie argumentów uzasadniających poprawność rozumowania, rozróżnianie dowodu od przykładu"
   },
   {
+    "id": "pl-46-1.12",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe.",
+    "specific": "1. Gramatyka języka polskiego. Uczeń: 12) rozpoznaje w tekście typy wypowiedzeń: zdanie pojedyncze, zdania złożone […];",
+    "area": "Gramatyka języka polskiego",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-1.13",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe.",
+    "specific": "1. Gramatyka języka polskiego. Uczeń: 13) przekształca konstrukcje składniowe, np. zdania złożone w pojedyncze i odwrotnie […].",
+    "area": "Gramatyka języka polskiego",
+    "stage": "IV–VI"
+  },
+  {
     "id": "pl-46-1.3",
     "subjectId": "polski",
     "general": "II. Kształcenie językowe.",
@@ -381,6 +567,14 @@
     "general": "I. Kształcenie literackie i kulturowe.",
     "specific": "1. Czytanie utworów literackich. 7) opowiada o wydarzeniach fabuły [...].",
     "area": "Czytanie utworów literackich",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-1.8",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe. 3. Poznawanie podstawowych pojęć oraz terminów służących do opisywania języka […].",
+    "specific": "1. Gramatyka języka polskiego. Uczeń: 8) nazywa części zdania i rozpoznaje ich funkcje składniowe w wypowiedzeniach (podmiot […], przydawka […]).",
+    "area": "Gramatyka języka polskiego",
     "stage": "IV–VI"
   },
   {
@@ -424,6 +618,14 @@
     "stage": "IV–VI"
   },
   {
+    "id": "pl-46-2.4",
+    "subjectId": "polski",
+    "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia […] innych tekstów kultury.",
+    "specific": "2. Odbiór tekstów kultury. Uczeń: 4) dostrzega relacje między częściami wypowiedzi […].",
+    "area": "Odbiór tekstów kultury",
+    "stage": "IV–VI"
+  },
+  {
     "id": "pl-46-2.5",
     "subjectId": "polski",
     "general": "II. Kształcenie językowe.",
@@ -454,6 +656,22 @@
     "specific": "IV. Samokształcenie. 5) korzysta ze słowników ogólnych języka polskiego [...].",
     "area": "Samokształcenie",
     "stage": "IV–VI"
+  },
+  {
+    "id": "pl-78-1.1",
+    "subjectId": "polski",
+    "general": "III. Tworzenie wypowiedzi. 1. Rozwijanie umiejętności wypowiadania się w określonych formach wypowiedzi [...] pisemnych. 4. Rozwijanie umiejętności stosowania środków stylistycznych i dbałości o estetykę tekstu oraz umiejętności organizacji tekstu. 5. Poznawanie podstawowych zasad retoryki, w szczególności argumentowania […].",
+    "specific": "1. Elementy retoryki. 1) funkcjonalnie wykorzystuje środki retoryczne oraz rozumie ich oddziaływanie na odbiorcę; 2) gromadzi i porządkuje materiał rzeczowy potrzebny do tworzenia wypowiedzi [...]; 3) tworzy wypowiedź, stosując odpowiednią dla danej formy gatunkowej kompozycję oraz zasady spójności językowej między akapitami; rozumie rolę akapitów jako spójnych całości myślowych w tworzeniu wypowiedzi pisemnych; 4) wykorzystuje znajomość zasad tworzenia tezy i hipotezy oraz argumentów przy tworzeniu [...] tekstów argumentacyjnych; 5) odróżnia przykład od argumentu; 6) przeprowadza wnioskowanie jako element wywodu argumentacyjnego; 7) zgadza się z cudzymi poglądami lub polemizuje z nimi, rzeczowo uzasadniając własne zdanie.",
+    "area": "Elementy retoryki",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "pl-78-1.2",
+    "subjectId": "polski",
+    "general": "III. Tworzenie wypowiedzi. 1. Rozwijanie umiejętności wypowiadania się w określonych formach wypowiedzi [...] pisemnych. 4. Rozwijanie umiejętności stosowania środków stylistycznych i dbałości o estetykę tekstu oraz umiejętności organizacji tekstu.",
+    "specific": "1. Elementy retoryki. 2) gromadzi i porządkuje materiał rzeczowy potrzebny do tworzenia wypowiedzi [...]; 3) tworzy wypowiedź, stosując odpowiednią dla danej formy gatunkowej kompozycję oraz zasady spójności językowej między akapitami; rozumie rolę akapitów jako spójnych całości myślowych w tworzeniu wypowiedzi pisemnych.",
+    "area": "Elementy retoryki",
+    "stage": "VII–VIII"
   },
   {
     "id": "pl-78-1.4",
@@ -493,6 +711,14 @@
     "general": "III. Tworzenie wypowiedzi.",
     "specific": "2. Mówienie i pisanie. 2) wykonuje przekształcenia na tekście cudzym […] streszcza […].",
     "area": "Mówienie i pisanie",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "pl-78-3.2",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe. 2. Rozwijanie rozumienia twórczego i sprawczego charakteru działań językowych oraz formowanie odpowiedzialności za własne zachowania językowe.",
+    "specific": "3. Komunikacja językowa i kultura języka. 2) rozróżnia normę językową wzorcową oraz użytkową i stosuje się do nich.",
+    "area": "Komunikacja językowa i kultura języka",
     "stage": "VII–VIII"
   },
   {

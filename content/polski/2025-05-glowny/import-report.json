@@ -1,6 +1,6 @@
 {
   "sessionId": "polski-2025-05-glowny",
-  "at": "2026-11-17T13:59:11.686Z",
+  "at": "2026-11-17T19:40:02.876Z",
   "model": "manual (drafts written into the cache, no API)",
   "segmentation": {
     "sheetTasks": 19,
@@ -325,5 +325,5 @@
     "input": 0,
     "output": 0
   },
-  "approvedAt": "2026-11-17T14:09:12.786Z"
+  "approvedAt": "2026-11-17T19:40:18.673Z"
 }

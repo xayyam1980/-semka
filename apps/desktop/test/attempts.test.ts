@@ -93,3 +93,25 @@ describe("practice attempt", () => {
     expect(() => svc.saveResponse(a.summary.id, "ma-2026-99", { value: null })).toThrow(/Unknown item/);
   });
 });
+
+describe("listening (Język angielski 2025)", () => {
+  const EN = "angielski-2025-05-glowny";
+  it("keeps the transcript back until every part of the task is checked", () => {
+    const a = svc.startPractice(EN, "all");
+    const parts = content.get(EN)!.tasks[0]!.items;
+    const first = svc.checkItem(a.summary.id, parts[0]!.id);
+    expect(first.reveal.transcript).toBeUndefined();
+    for (const p of parts.slice(1, -1)) expect(svc.checkItem(a.summary.id, p.id).reveal.transcript).toBeUndefined();
+    const last = svc.checkItem(a.summary.id, parts.at(-1)!.id);
+    expect(last.reveal.transcript?.[0]).toBe("Tekst 1.");
+    // Reopening the attempt shows it with every checked part.
+    expect(svc.view(a.summary.id)!.responses[parts[0]!.id]!.check!.reveal.transcript).toBeDefined();
+  });
+
+  it("gives the window each task's part of the recording but not its transcript", () => {
+    const s = content.publicSession(EN)!;
+    const audio = s.stimuli.filter((x) => x.kind === "audio");
+    expect(audio.map((x) => x.audio?.startSec)).toEqual([0, 497.1, 831.4, 963.6]);
+    expect(JSON.stringify(s)).not.toContain("transcript");
+  });
+});

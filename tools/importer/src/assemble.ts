@@ -52,6 +52,12 @@ export function tagsFor(subjectId: SubjectId, req: DraftItem["requirements"][num
   // General requirements (wymagania ogólne) are the same for all stages.
   const general = splitRoman(req.general);
   if (general) tags.push({ id: `${p}-gen-${general.roman}`, subjectId, general: req.general.trim(), area: general.name });
+  // English codes carry their section in the specific requirement: "II.5) Uczeń znajduje w wypowiedzi określone informacje."
+  const en = !req.section && req.specific ? /^\s*([IVX]+)\.(\d+)\)/.exec(req.specific) : null;
+  if (en && general) {
+    tags.push({ id: `${p}-${en[1]}.${en[2]}`, subjectId, general: req.general.trim(), specific: req.specific!.trim(), area: general.name });
+    return tags;
+  }
   const section = splitRoman(req.section);
   const num = req.specific ? /^\s*(\d+)\)/.exec(req.specific)?.[1] : undefined;
   if (section) {
@@ -74,7 +80,7 @@ function response(d: DraftItem, subjectId: SubjectId, essay: DraftEssay | null):
     case "true_false": return { type: "true_false", statements: d.statements };
     case "choice_with_reason": return { type: "choice_with_reason", choices: d.options, reasons: d.reasons };
     case "matching": return { type: "matching", slots: d.slots, options: d.options };
-    case "short_text": return { type: "short_text", gaps: Math.max(1, d.gaps), language: subjectId === "angielski" ? "en" : "pl" };
+    case "short_text": return { type: "short_text", gaps: Math.max(1, d.gaps), language: d.language ?? (subjectId === "angielski" ? "en" : "pl") };
     case "worked_solution": return { type: "worked_solution" };
     case "extended_text":
       return {
@@ -183,7 +189,8 @@ export function buildRubrics(taskId: string, maxPoints: number, essay: DraftEssa
     const sum = criteria.reduce((a, c) => a + c.max, 0);
     if (sum !== maxPoints) problems.push(`Temat ${topic.id}: criteria add up to ${sum}, the essay is worth ${maxPoints}`);
     for (const g of topic.gates) if (!criteria.some((c) => c.id === g.ifCriterion)) problems.push(`Temat ${topic.id}: gate refers to unknown criterion ${g.ifCriterion}`);
-    return { id: `${taskId}-t${topic.id}`, maxPoints, criteria, gates: topic.gates };
+    const gates = topic.gates.map((g) => ({ ifCriterion: g.ifCriterion, equals: g.equals, thenAllOthers: g.thenAllOthers, ...(g.mode === "cap" ? { mode: "cap" as const } : {}) }));
+    return { id: `${taskId}-t${topic.id}`, maxPoints, criteria, gates };
   });
 }
 

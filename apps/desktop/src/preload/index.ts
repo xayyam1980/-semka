@@ -7,6 +7,7 @@ const api: OsemkaApi = {
   updateSettings: (patch) => ipcRenderer.invoke(IPC.updateSettings, patch),
   listSessions: () => ipcRenderer.invoke(IPC.listSessions),
   getSession: (id) => ipcRenderer.invoke(IPC.getSession, id),
+  getRecording: (id) => ipcRenderer.invoke(IPC.getRecording, id),
   listAttempts: (sessionId) => ipcRenderer.invoke(IPC.listAttempts, sessionId),
   startPractice: (sessionId, scope) => ipcRenderer.invoke(IPC.startPractice, sessionId, scope),
   startSimulation: (sessionId) => ipcRenderer.invoke(IPC.startSimulation, sessionId),

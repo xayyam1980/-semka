@@ -70,6 +70,7 @@ export function openContent(root: string, opts: { includeDrafts: boolean }): Con
         maxPoints: b.session.maxPoints,
         contentVersion: b.session.contentVersion,
         tasks: b.tasks.map(publicTask),
+        ...recordingOf(b, (rel) => !!this.assetPath(id, rel)),
         stimuli: b.stimuli.map((s) => ({
           id: s.id,
           kind: s.kind,
@@ -81,6 +82,7 @@ export function openContent(root: string, opts: { includeDrafts: boolean }): Con
           ...(s.source ? { source: s.source } : {}),
           ...(s.footnotes ? { footnotes: s.footnotes } : {}),
           ...(s.wordCount ? { wordCount: s.wordCount } : {}),
+          ...audioOf(b, s),
         })),
       };
     },
@@ -90,6 +92,17 @@ export function openContent(root: string, opts: { includeDrafts: boolean }): Con
       return full.startsWith(base + sep) && existsSync(full) ? full : undefined;
     },
   };
+}
+
+/** The task's segment of the recording, without the transcript (it comes with the key, after checking). */
+function audioOf(b: Bundle, s: Bundle["stimuli"][number]): { audio?: { startSec: number; endSec: number; playsStartSec?: number } } {
+  const seg = s.kind === "audio" ? b.audio.find((a) => s.audioSegmentIds?.includes(a.id)) : undefined;
+  return seg ? { audio: { startSec: seg.startSec, endSec: seg.endSec, ...(seg.playsStartSec !== undefined ? { playsStartSec: seg.playsStartSec } : {}) } } : {};
+}
+
+function recordingOf(b: Bundle, exists: (rel: string) => boolean): { recording?: { asset: string } } {
+  const rel = b.audio[0]?.recording;
+  return rel && exists(rel) ? { recording: { asset: rel } } : {};
 }
 
 /** Strips keys, explanations, levels, exemplars and notes. */

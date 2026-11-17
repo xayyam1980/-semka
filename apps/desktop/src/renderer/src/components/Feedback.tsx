@@ -235,3 +235,19 @@ function EssayRubric({ reveal, essay, ctx }: { reveal: CheckResult["reveal"]; es
     </div>
   );
 }
+
+/** Listening: the recording's transcript, once per task (after every part is checked, or in review). */
+export function TaskTranscript({ lines }: { lines: string[] }) {
+  return (
+    <details className="rounded-md border border-line bg-surface p-3" data-testid="transcript">
+      <summary className="cursor-pointer text-xs font-bold uppercase tracking-wider text-muted">Transkrypcja nagrania</summary>
+      <div className="mt-2 flex flex-col gap-1 text-[15px]" lang="en">
+        {lines.map((l, i) => (
+          <p key={i} className={/^(Tekst|Wypowiedź|Text)\s+\d+\.$/.test(l) ? "mt-2 font-bold" : ""}>
+            {l}
+          </p>
+        ))}
+      </div>
+    </details>
+  );
+}

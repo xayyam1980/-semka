@@ -57,7 +57,7 @@ describe("classify", () => {
 const req = { stage: "IV–VI" as const, general: "II. Wykorzystanie i tworzenie informacji.", section: "V. Obliczenia procentowe.", specific: "5) stosuje obliczenia procentowe do rozwiązywania problemów w kontekście praktycznym" };
 
 const base: Omit<DraftItem, "responseType" | "keys" | "scoring"> = {
-  label: "1", maxPoints: 1, prompt: null, options: [], statements: [], reasons: [], slots: [], gaps: 0,
+  label: "1", maxPoints: 1, prompt: null, options: [], statements: [], reasons: [], slots: [], gaps: 0, language: null,
   requirements: [req], explanation: null, exemplars: [], scoringNotes: [],
 };
 const key = (version: "X" | "Y", answer: string | null, solution: string | null = null) =>

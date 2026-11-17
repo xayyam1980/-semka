@@ -125,21 +125,28 @@ function MatrixChoice({ c, value, onChange }: { c: Extract<Criterion, { type: "m
   const [row, setRow] = useState(value?.row ?? "");
   const [col, setCol] = useState(value?.col ?? "");
   const pick = (r: string, k: string) => {
-    if (r && k) onChange({ row: r, col: k });
+    if (r && k && c.table[r]?.[k] !== undefined) onChange({ row: r, col: k });
   };
   return (
     <div className="flex flex-col gap-2 text-[14px]">
-      <p className="text-muted">Najpierw zakres środków językowych, potem liczba błędów:</p>
+      <p className="text-muted">1. {label(c.rows)}</p>
       <div className="flex flex-col gap-1.5">
         {rows.map((r) => (
-          <button key={r} className={`opt top ${row === r ? "sel" : ""}`} onClick={() => { setRow(r); pick(r, col); }} aria-pressed={row === r}>
+          <button key={r} className={`opt top ${row === r ? "sel" : ""}`} onClick={() => { setRow(r); if (c.table[r]?.[col] === undefined) setCol(""); else pick(r, col); }} aria-pressed={row === r}>
             <span>{r}</span>
           </button>
         ))}
       </div>
+      <p className="text-muted">2. {label(c.cols)}</p>
       <div className="flex flex-wrap gap-1.5">
         {cols.map((k) => (
-          <button key={k} className={`btn ghost ${col === k ? "!border-accent !bg-accent-soft !text-accent" : ""}`} onClick={() => { setCol(k); pick(row, k); }} aria-pressed={col === k}>
+          <button
+            key={k}
+            className={`btn ghost ${col === k ? "!border-accent !bg-accent-soft !text-accent" : ""}`}
+            disabled={!row || c.table[row]?.[k] === undefined}
+            onClick={() => { setCol(k); pick(row, k); }}
+            aria-pressed={col === k}
+          >
             {k}
           </button>
         ))}
@@ -147,3 +154,7 @@ function MatrixChoice({ c, value, onChange }: { c: Extract<Criterion, { type: "m
     </div>
   );
 }
+
+/** "zakres środków językowych" → "Zakres środków językowych:"; a question keeps its own "?". */
+const cap = (s: string) => (s ? s[0]!.toUpperCase() + s.slice(1) : s);
+const label = (s: string) => (/[?:]$/.test(s) ? cap(s) : `${cap(s)}:`);

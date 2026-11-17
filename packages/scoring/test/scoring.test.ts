@@ -102,6 +102,19 @@ describe("attempt totals on the whole session", () => {
   });
 });
 
+describe("optional words in key entries (Język angielski 2025, zad. 10)", () => {
+  const k102 = { expected: ["znika ich ojciec"], accepted: ["znika (im) ojciec", "ich tata (tajemniczo) zniknął"], rejected: [{ answer: "(prawdziwej) stacji", reason: "Odpowiedź nieprecyzyjna." }] };
+  it("accepts the entry with and without the bracketed words", () => {
+    expect(matchText("znika im ojciec", k102)).toMatchObject({ result: "correct" });
+    expect(matchText("znika ojciec", k102)).toMatchObject({ result: "correct" });
+    expect(matchText("ich tata tajemniczo zniknął", k102)).toMatchObject({ result: "correct" });
+  });
+  it("rejects with and without them too", () => {
+    expect(matchText("stacji", k102)).toMatchObject({ result: "incorrect" });
+    expect(matchText("prawdziwej stacji", k102)).toMatchObject({ result: "incorrect" });
+  });
+});
+
 describe("short text (Język angielski 2026, zad. 4.1 / 4.3)", () => {
   const k41 = { expected: ["twenty", "20"], accepted: ["twenty pounds", "20£", "£20", "the 20", "only twenty"], rejected: [] };
   const k43 = { expected: ["snacks"], accepted: [], rejected: [{ answer: "snakes", reason: "zmienia znaczenie wyrazu" }, { answer: "sweet snacks", reason: "element niezgodny z tekstem" }] };
@@ -153,12 +166,15 @@ const email = Rubric.parse({
   maxPoints: 10,
   criteria: [
     { id: "tresc", name: "Treść", type: "matrix", max: 4, rows: "podpunkty, do których się odniósł", cols: "podpunkty rozwinięte",
-      table: { "3": { "3": 4, "2": 3, "1": 2, "0": 1 }, "2": { "2": 2, "1": 1, "0": 1 } } },
+      table: { "3": { "3": 4, "2": 3, "1": 2, "0": 1 }, "2": { "2": 2, "1": 1, "0": 1 }, "1": { "1": 1, "0": 0 }, "0": { "0": 0 } } },
     { id: "spojnosc", name: "Spójność i logika wypowiedzi", type: "levels", max: 2, levels: lvl(2) },
     { id: "zakres", name: "Zakres środków językowych", type: "levels", max: 2, levels: lvl(2) },
     { id: "poprawnosc", name: "Poprawność środków językowych", type: "levels", max: 2, levels: lvl(2) },
   ],
-  gates: [],
+  gates: [
+    { ifCriterion: "tresc", equals: 0, thenAllOthers: 0 },
+    { ifCriterion: "tresc", equals: 1, thenAllOthers: 1, mode: "cap" },
+  ],
 });
 
 describe("Polish essay rubric", () => {
@@ -192,6 +208,16 @@ describe("Polish essay rubric", () => {
 
 describe("English e-mail rubric", () => {
   it("criteria add up to 10", () => expect(rubricProblems(email)).toEqual([]));
+
+  it("1 point for Treść caps every other criterion at 1; 0 sets them to 0", () => {
+    const base = { levels: { spojnosc: 2, zakres: 2, poprawnosc: 0 } };
+    const one = scoreRubric(email, { ...base, matrix: { tresc: { row: "3", col: "0" } } }, { dyslexia: false });
+    expect(one).toMatchObject({ total: 3, perCriterion: { tresc: 1, spojnosc: 1, zakres: 1, poprawnosc: 0 }, gatedBy: "tresc" });
+    const capOnly = scoreRubric(email, { matrix: { tresc: { row: "2", col: "0" } } }, { dyslexia: false });
+    expect(capOnly.missing).toEqual(["spojnosc", "zakres", "poprawnosc"]);
+    const zero = scoreRubric(email, { matrix: { tresc: { row: "1", col: "0" } } }, { dyslexia: false });
+    expect(zero).toMatchObject({ total: 0, missing: [] });
+  });
 
   it("reads Treść from the referenced × developed table", () => {
     const base = { levels: { spojnosc: 2, zakres: 1, poprawnosc: 1 } };

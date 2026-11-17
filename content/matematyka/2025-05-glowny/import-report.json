@@ -1,6 +1,6 @@
 {
   "sessionId": "matematyka-2025-05-glowny",
-  "at": "2026-11-17T14:08:00.655Z",
+  "at": "2026-11-17T19:40:00.637Z",
   "model": "qwen · qwen3.8-max · token-plan.maas.qwencloudapi.com",
   "segmentation": {
     "sheetTasks": 21,
@@ -358,5 +358,5 @@
     "input": 0,
     "output": 0
   },
-  "approvedAt": "2026-11-17T14:09:05.562Z"
+  "approvedAt": "2026-11-17T19:40:17.360Z"
 }

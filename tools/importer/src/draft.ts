@@ -48,6 +48,7 @@ export const DraftItem = z.object({
   reasons: z.array(Opt).describe("choice_with_reason: the second group (e.g. 1, 2, 3 or C, D). Otherwise empty"),
   slots: z.array(z.string()).describe("matching: slot labels in order. Otherwise empty"),
   gaps: z.number().int().describe("short_text: number of gaps; otherwise 0"),
+  language: z.enum(["pl", "en"]).nullable().default(null).describe('short_text: the language the answer must be written in ("en" or "pl"); otherwise null'),
   keys: z.array(Key).describe("One entry per sheet version printed in the key (X, and Y if present)"),
   scoring: z.object({
     type: z.enum(["all_or_nothing", "per_part", "text_match", "levels", "rubric"]),
@@ -104,7 +105,16 @@ export const DraftEssay = z.object({
         text: z.string().describe("The full topic (Temat) text, Markdown"),
         form: z.string().nullable().describe('Required form, e.g. "przemówienie", "opowiadanie", "rozprawka"'),
         criteria: z.array(DraftCriterion).min(1),
-        gates: z.array(z.object({ ifCriterion: z.string(), equals: z.number().int(), thenAllOthers: z.number().int() })).describe('E.g. "0 for Realizacja tematu → 0 in all other criteria"'),
+        gates: z
+          .array(
+            z.object({
+              ifCriterion: z.string(),
+              equals: z.number().int(),
+              thenAllOthers: z.number().int(),
+              mode: z.enum(["set", "cap"]).nullable().default(null).describe('"set": the others get exactly thenAllOthers; "cap": at most thenAllOthers'),
+            }),
+          )
+          .describe('E.g. "0 for Realizacja tematu → 0 in all other criteria" (set); "1 for Treść → at most 1 in the others" (cap)'),
       }),
     )
     .min(1),

@@ -1,0 +1,2135 @@
+{
+  "session": {
+    "id": "polski-2026-05-glowny",
+    "subjectId": "polski",
+    "year": 2026,
+    "month": 5,
+    "term": "glowny",
+    "formCode": "OPOP-100",
+    "versions": [
+      "X"
+    ],
+    "maxPoints": 45,
+    "taskOrder": [
+      "pl-2026-01",
+      "pl-2026-02",
+      "pl-2026-03",
+      "pl-2026-04",
+      "pl-2026-05",
+      "pl-2026-06",
+      "pl-2026-07",
+      "pl-2026-08",
+      "pl-2026-09",
+      "pl-2026-10",
+      "pl-2026-11",
+      "pl-2026-12",
+      "pl-2026-13",
+      "pl-2026-14",
+      "pl-2026-15",
+      "pl-2026-16",
+      "pl-2026-17",
+      "pl-2026-18"
+    ],
+    "sources": [
+      {
+        "kind": "arkusz",
+        "path": "Język polski/Maj 2026/arkusz.pdf",
+        "sha256": "05d4076b2b6353058c40c59a28a8bfc456df2c593b18ecdacecc6935de4bb14a",
+        "pages": 24
+      },
+      {
+        "kind": "klucz",
+        "path": "Język polski/Maj 2026/klucz.pdf",
+        "sha256": "97da801836b3cc7467cbec4fe1c36ad25ba7096a813e3c0ae7c9c9524ae91ad8",
+        "pages": 29
+      }
+    ],
+    "contentVersion": "778225771d80af0f",
+    "status": "published"
+  },
+  "stimuli": [
+    {
+      "id": "pl-2026-tekst-1",
+      "kind": "text",
+      "title": "Przyjaciel Automateusza",
+      "author": "Stanisław Lem",
+      "lines": [
+        "Pewien robot, mając wyruszyć w daleką a niebezpieczną drogę, posłyszał o wielce pożytecznym urządzeniu, które wynalazca jego nazwał elektrycznym przyjacielem. Pomyślał, że raźniej mu będzie na duszy, jeśli otrzyma towarzysza, choćby miała nim być tylko maszyna, udał się więc do wynalazcy i poprosił, aby opowiedział o sztucznym przyjacielu.",
+        "– Służę ci – odparł wynalazca. (Jak wiadomo, w bajkach wszyscy się „tykają”¹, nawet smoków nie tytułuje się panami i jedynie do królów trzeba się odzywać w liczbie mnogiej). To mówiąc, wyjął z kieszeni garść metalowych ziarenek, podobnych do drobnego śrutu.",
+        "– Co to jest? – zdziwił się robot.",
+        "– A jak się nazywasz, bo zapomniałem cię o to zapytać we właściwym miejscu tej bajki? – spytał wynalazca.",
+        "– Nazywam się Automateusz.",
+        "– To dla mnie za długie, będę cię nazywał Automkiem.",
+        "– Kiedy to od Automasza, ale niech ci będzie – odparł tamten.",
+        "– A zatem, mój zacny Automku, masz przed sobą garść elektroprzyjaciół. Musisz wiedzieć, że z powołania i specjalizacji jestem miniaturyzatorem. To znaczy urządzenia wielkie i ciężkie zmieniam na małe i przenośne. Każde takie ziarenko jest koncentratem elektrycznego myślenia, niezmiernie wszechstronnym i rozumnym. Nie powiem ci, że to geniusz, gdyż byłaby to przesada, podobna do fałszywej reklamy. Co prawda, zamiarem moim jest właśnie stworzyć elektrycznych geniuszów i nie spocznę, póki nie zrobię tak malutkich, aby ich można było nosić w kieszeni tysiące; dopiero kiedy wsypię ich do worków i będę sprzedawał na wagę, jak piasek, dopnę wymarzonego celu. Ale mniejsza o te moje plany na przyszłość, na razie sprzedaję elektroprzyjaciół na sztuki, i to niedrogo: za jednego biorę tyle, ile zaważy, w brylantach. Przyznasz chyba, jaka to umiarkowana cena, wziąwszy pod uwagę, że możesz takiego elektroprzyjaciela włożyć do ucha, gdzie będzie ci szeptał dobre rady i służył wszelką informacją. […] Czy bierzesz go? Gdybyś reflektował na tuzin, mógłbym odstąpić taniej…",
+        "– Nie, na razie wystarczy mi jeden – odparł Automateusz. – Ale chciałbym jeszcze wiedzieć, czego właściwie mogę się po nim spodziewać? Czy potrafi dopomóc w ciężkiej sytuacji życiowej?",
+        "– Jasne, przecież po to właśnie jest! – odparł pogodnie wynalazca. Podrzucił na dłoni garść ziaren, lśniących metalicznie, gdyż były sporządzone z rzadkich metali, i ciągnął:",
+        "– Oczywiście, nie możesz liczyć na pomoc w sensie fizycznym, ale nie o nią przecież chodzi. Pokrzepiające uwagi, dobre i bystre rady, rozsądne refleksje, korzystne dla ciebie wskazania, napomnienia, przestrogi, jak również słowa otuchy, sentencje, dodające wiary we własne siły, oraz głębokie myśli, pozwalające sprostać każdej, jakiejkolwiek trudnej, a nawet groźnej sytuacji – oto tylko drobna część repertuaru moich elektroprzyjaciół. Są absolutnie oddani, wierni, stale przytomni, bo nigdy nie śpią, są też nad wyraz trwali, estetyczni, a sam widzisz, jacy poręczni! Więc jak, bierzesz tylko jednego?",
+        "– Tak – odparł Automateusz. – Powiedz mi jeszcze, proszę, co będzie, jeżeli mi go ktoś ukradnie? Czy wróci do mnie? Czy doprowadzi złodzieja do zguby?",
+        "– Co to, to nie – odrzekł wynalazca. – Będzie mu służył tak samo pilnie i wiernie jak poprzednio tobie. Nie możesz wymagać zbyt wiele, mój Automku, nie opuści cię w biedzie, jeśli ty jego nie opuścisz. Ale to ci nie grozi, jeżeli tylko włożysz go do ucha i będziesz miał je zawsze zatkane watą…",
+        "– Dobrze – zgodził się Automateusz. – A jak mam do niego mówić?",
+        "– Wcale nie musisz mówić, wystarczy, abyś bezdźwięcznie wyszeptał cokolwiek, a usłyszy cię doskonale. Co do jego imienia, to zwie się Wuch. Możesz mówić doń „mój Wuchu”, to wystarczy.",
+        "– Doskonale – odparł Automateusz.",
+        "Zważyli Wucha, wynalazca otrzymał zań ładny brylancik, a robot, uspokojony, że ma już towarzysza, bliską duszę na daleką drogę, ruszył przed siebie."
+      ],
+      "lineNumbering": "none",
+      "source": "Stanisław Lem, Przyjaciel Automateusza, [w:] tenże, Bajki robotów, Kraków 2017.",
+      "footnotes": [
+        {
+          "mark": "1",
+          "text": "Tykać się – zwracając się do kogoś, mówić mu ty; mówić komuś po imieniu."
+        }
+      ],
+      "wordCount": 579,
+      "ref": {
+        "source": "arkusz",
+        "page": 5
+      }
+    },
+    {
+      "id": "pl-2026-tekst-2",
+      "kind": "text",
+      "title": "CZY MOŻEMY KSZTAŁTOWAĆ NASZĄ PRZYSZŁOŚĆ?",
+      "author": "Stephen Hawking",
+      "lines": [
+        "Gdy pomyślę o geniuszu, od razu przychodzi mi do głowy Einstein². Skąd się wzięły jego genialne idee? Być może z połączenia takich cech jak wnikliwa intuicja, nieschematyczne myślenie i wybitny intelekt. Einstein potrafił zajrzeć pod powierzchnię rzeczywistości, aby dotrzeć do jej głębokiej struktury. Nie ulegał dyktatowi zdrowego rozsądku. Miał odwagę zgłębiać idee, które innym zdawały się niedorzeczne. I to wyzwoliło kreatywne moce jego umysłu, co zapewniło mu rangę największego geniusza nie tylko jego czasów, lecz także wszystkich czasów.",
+        "Sto lat później fizycy wiedzą znacznie więcej o wszechświecie aniżeli Einstein. Dysponujemy obecnie potężnymi narzędziami badawczymi, jak akceleratory cząstek³, superkomputery czy teleskopy kosmiczne. A jednak wyobraźnia nadal ma ogromne znaczenie. Dzięki niej możemy m.in. przemieszczać się bez ograniczeń w czasie i przestrzeni czy rozpatrywać najbardziej egzotyczne zjawiska przyrody.",
+        "Jako małego chłopca niezwykle interesowało mnie, jak rozmaite rzeczy działają. W owych czasach można było po prostu coś rozebrać i podpatrzeć mechanizm. Nie zawsze udawało się ponownie złożyć zabawki, które rozłożyłem na części, jednak niewątpliwie w ten sposób nauczyłem się więcej niż współcześnie chłopiec lub dziewczynka, którzy próbowali zrobić to samo ze smartfonem.",
+        "Moja obecna praca również polega na dociekaniu, jak coś działa, tyle że w znacznie większej skali. Już nie demontuję miniaturowych kolejek, lecz usiłuję dojść do tego, jak działa wszechświat. Jest to skomplikowane zajęcie, które fascynowało mnie i przyprawiało o dreszcz emocji przez całe moje dorosłe życie. Poszczęściło mi się, że żyłem w okresie wspaniałego rozkwitu obranej przeze mnie dyscypliny, kosmologii, która zajmuje się badaniem początków wszechświata.",
+        "Obecnie, dzięki pracom teoretycznym i sukcesom badań eksperymentalnych, kosmologia doprowadziła do tego, że wszechświat ma przed nami coraz mniej tajemnic. Jednak nadal są wielkie pytania, na które nie znamy odpowiedzi, i przed nami jest jeszcze wiele pracy.",
+        "Co więc czeka tych, którzy są młodzi w chwili obecnej? Mogę powiedzieć z pełnym przekonaniem, że ich przyszłość będzie uzależniona od nauki i techniki w większym stopniu niż wcześniejszych pokoleń. Będą oni musieli poznać naukę lepiej niż ktokolwiek przed nimi, gdyż będzie ona stanowić o ich codziennym życiu.",
+        "Tak naprawdę nie wiemy, na czym będzie polegać następne wielkie odkrycie naukowe ani kto tego dokona. Jeżeli ukażemy satysfakcję, jaką dają odkrycia, zastosujemy innowacyjne i przystępne sposoby upowszechniania wiedzy, to istotnie zwiększymy szansę na odnalezienie nowego Einsteina i zainspirowanie go do podjęcia pracy naukowej. Kimkolwiek on się okaże.",
+        "Pamiętajcie zatem, aby kierować wzrok ku gwiazdom, a nie – patrzeć na własne stopy. Próbujcie rozeznać się w tym, co widzicie, i zadawajcie sobie pytanie, dlaczego wszechświat w ogóle istnieje. Bądźcie dociekliwi. Najważniejsze, aby się nie poddawać. Puśćcie wodze swojej wyobraźni. Kształt przyszłości zależy od was."
+      ],
+      "lineNumbering": "none",
+      "source": "Na podstawie: Stephen Hawking, Czy możemy kształtować naszą przyszłość?, [w:] tenże, Krótkie odpowiedzi na wielkie pytania, przeł. Marek Krośniak, Poznań 2018.",
+      "footnotes": [
+        {
+          "mark": "1",
+          "text": "Stephen Hawking (1942–2018) – wybitny brytyjski fizyk i astronom."
+        },
+        {
+          "mark": "2",
+          "text": "Albert Einstein (1879–1955) – wybitny fizyk i matematyk, laureat Nagrody Nobla."
+        },
+        {
+          "mark": "3",
+          "text": "Akcelerator cząstek – urządzenie służące do nadawania cząstkom elementarnym wielkich prędkości, stosowane m.in. w fizyce jądrowej."
+        }
+      ],
+      "wordCount": 455,
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "pl-2026-07-fig1",
+      "kind": "figure",
+      "title": "Rysunek przedstawiający grupę błyszczących metalowych kul różnej wielkości, ilustracja do tekstu reklamowego.",
+      "asset": "assets/pl-2026-07-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "pl-2026-09-fig1",
+      "kind": "figure",
+      "title": "Zdjęcie 1: złote kłosy zboża na polu.",
+      "asset": "assets/pl-2026-09-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "pl-2026-09-fig2",
+      "kind": "figure",
+      "title": "Zdjęcie 2: piaszczysta pustynia z wydmami.",
+      "asset": "assets/pl-2026-09-fig2.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "pl-2026-09-fig3",
+      "kind": "figure",
+      "title": "Zdjęcie 3: stado ptaków lecących na tle nieba.",
+      "asset": "assets/pl-2026-09-fig3.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "pl-2026-09-fig4",
+      "kind": "figure",
+      "title": "Zdjęcie 4: żmija zwinięta na trawie z uniesioną głową.",
+      "asset": "assets/pl-2026-09-fig4.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "pl-2026-09-fig5",
+      "kind": "figure",
+      "title": "Zdjęcie 5: czerwona róża z zielonymi liśćmi.",
+      "asset": "assets/pl-2026-09-fig5.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "pl-2026-09-fig6",
+      "kind": "figure",
+      "title": "Zdjęcie 6: lis siedzący na tle pnia drzewa.",
+      "asset": "assets/pl-2026-09-fig6.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "pl-2026-17-fig1",
+      "kind": "figure",
+      "title": "Kolaż ilustracji matematycznych (m.in. znak sumy, wykresy, figury geometryczne, modele brył) umieszczony przy nagłówku OGŁOSZENIE w ramce przeznaczonej na odpowiedź.",
+      "asset": "assets/pl-2026-17-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 15
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "pl-2026-01",
+      "sessionId": "polski-2026-05-glowny",
+      "number": 1,
+      "maxPoints": 1,
+      "instruction": "Na podstawie przytoczonego fragmentu utworu Przyjaciel Automateusza oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.",
+      "stimulusIds": [
+        "pl-2026-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-01",
+          "label": "1",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Automateusz spotkał się z wynalazcą, aby nakłonić go do stworzenia elektrycznego przyjaciela. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Automateusz oczekiwał, że elektryczny przyjaciel będzie dla niego wsparciem podczas podróży. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "F",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.13"
+          ],
+          "explanation": "Pierwsze stwierdzenie jest prawdziwe: Automateusz spotkał się z wynalazcą właśnie po to, by ten stworzył elektrycznego przyjaciela, dlatego wybieramy P. Drugie stwierdzenie jest fałszywe: Automateusz szukał w przyjacielu towarzysza i bliskiej duszy, a nie wsparcia podczas podróży – z tekstu nie wynika, by oczekiwał od niego pomocy w drodze, dlatego wybieramy F."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-1.13"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "pl-2026-02",
+      "sessionId": "polski-2026-05-glowny",
+      "number": 2,
+      "maxPoints": 1,
+      "instruction": "**Która z podanych informacji jest niezgodna z treścią przytoczonego fragmentu utworu Przyjaciel Automateusza? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [
+        "pl-2026-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-02",
+          "label": "2",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Wynalazca zamierzał kontynuować pracę nad miniaturyzowaniem elektrycznych przyjaciół."
+              },
+              {
+                "id": "B",
+                "text": "Wynalazca obiecał Automateuszowi, że elektryczny przyjaciel będzie mu zawsze wierny, niezależnie od okoliczności."
+              },
+              {
+                "id": "C",
+                "text": "Wynalazca wyposażył elektrycznego przyjaciela w umiejętność wspierania swojego towarzysza podróży."
+              },
+              {
+                "id": "D",
+                "text": "Wynalazca wyjaśnił Automateuszowi, że na cenę elektrycznego przyjaciela wpływa jego waga."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "Trzeba porównać każdą z podanych informacji z treścią fragmentu. W przytoczonym tekście nie ma wypowiedzi wynalazcy, w której wyjaśniałby on Automateuszowi, że od wagi elektrycznego przyjaciela zależy jego cena – narrator tylko wspomina, że zważono Wucha i wynalazca otrzymał zań brylancik. Pozostałe informacje znajdują potwierdzenie w przytoczonym fragmencie utworu. Dlatego informacją niezgodną z treścią fragmentu jest D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "pl-2026-03",
+      "sessionId": "polski-2026-05-glowny",
+      "number": 3,
+      "maxPoints": 1,
+      "instruction": "**Dokończ zdanie tak, aby było zgodne z treścią przytoczonego fragmentu utworu *Przyjaciel Automateusza*. Wybierz właściwą odpowiedź spośród podanych.**\n\nWynalazca, używając sformułowania *Służę ci*, zwrócił się do Automateusza na „ty”, co według narratora jest zgodne z zasadami",
+      "stimulusIds": [
+        "pl-2026-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-03",
+          "label": "3",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "przyjętymi w świecie bajek."
+              },
+              {
+                "id": "B",
+                "text": "komunikowania się z robotami."
+              },
+              {
+                "id": "C",
+                "text": "zwracania się do ludzi młodych."
+              },
+              {
+                "id": "D",
+                "text": "obowiązującymi wśród znajomych."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-2.2"
+          ],
+          "explanation": "W przytoczonym fragmencie narrator zaznacza, że wynalazca mówi do Automateusza na „ty” zgodnie z zasadami przyjętymi w świecie bajek – w tej bajkowej konwencji wszyscy tak się do siebie zwracają. Dlatego zdanie należy dokończyć odpowiedzią A: „przyjętymi w świecie bajek”. Pozostałe możliwości (komunikowanie się z robotami, zwracanie się do ludzi młodych, zasady wśród znajomych) nie wynikają z tekstu utworu."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-2.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 7
+      }
+    },
+    {
+      "id": "pl-2026-04",
+      "sessionId": "polski-2026-05-glowny",
+      "number": 4,
+      "maxPoints": 1,
+      "instruction": "Przeczytaj definicję wyrazu perswazja ze słownika języka polskiego.\n\n«przekonywanie kogoś, aby zrobił coś lub zachował się w sposób, jakiego chce inna osoba»\n\nNa podstawie: www.wsjp.pl\n\n**Do podanej niżej tezy sformułuj argument. Odwołaj się do powyższej definicji oraz do przytoczonego fragmentu utworu Przyjaciel Automateusza.**\n\nTeza: Wynalazca, z którym spotkał się Automateusz, dobrze opanował sztukę perswazji.\n\nArgument: ………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………\n……………………………………………………………………………………………………………",
+      "stimulusIds": [
+        "pl-2026-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-04",
+          "label": "4",
+          "maxPoints": 1,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Wynalazca doskonale zareklamował swój produkt, wymieniając cały szereg jego zalet. Skłoniło to Automateusza do kupienia Wucha."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "poprawne sformułowanie argumentu"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-III",
+            "pl-78-1.4"
+          ],
+          "exemplars": [
+            {
+              "points": 1,
+              "content": "Wynalazca doskonale zareklamował swój produkt, wymieniając cały szereg jego zalet. Skłoniło to Automateusza do kupienia Wucha.",
+              "ref": {
+                "source": "klucz",
+                "page": 3
+              }
+            },
+            {
+              "points": 1,
+              "content": "Wynalazca doskonale opanował sztukę perswazji. Powiedział robotowi, że elektroprzyjaciel ma wiele zalet, a jego cena nie jest zbyt wygórowana.",
+              "ref": {
+                "source": "klucz",
+                "page": 3
+              }
+            },
+            {
+              "points": 1,
+              "content": "Wynalazcy udało się nakłonić Automateusza do zakupu elektroprzyjaciela.",
+              "ref": {
+                "source": "klucz",
+                "page": 3
+              }
+            },
+            {
+              "points": 0,
+              "content": "Elektroprzyjaciele stworzeni przez wynalazcę byli niespotykanie małych rozmiarów.",
+              "ref": {
+                "source": "klucz",
+                "page": 3
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-III",
+        "pl-78-1.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 7
+      }
+    },
+    {
+      "id": "pl-2026-05",
+      "sessionId": "polski-2026-05-glowny",
+      "number": 5,
+      "maxPoints": 1,
+      "instruction": "**Na podstawie przytoczonego fragmentu utworu Przyjaciel Automateusza oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "pl-2026-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-05",
+          "label": "5",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Z pierwszego akapitu przytoczonego fragmentu utworu wynika, że narrator wie, o czym myśli Automateusz. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Zdanie umieszczone w nawiasie jest komentarzem narratora do pierwszej wypowiedzi wynalazcy. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.9"
+          ],
+          "explanation": "W pierwszym akapicie fragmentu narrator ujawnia wnętrze bohatera – pisze, co Automateusz myśli, więc pierwsze stwierdzenie jest prawdziwe. Zdanie umieszczone w nawiasie nie jest wypowiedzią żadnego bohatera, lecz głosem narratora, który komentuje pierwszą wypowiedź wynalazcy, dlatego drugie stwierdzenie także jest prawdziwe. Oba stwierdzenia oznaczamy więc literą P, czyli kod odpowiedzi to PP."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-1.9"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 7
+      }
+    },
+    {
+      "id": "pl-2026-06",
+      "sessionId": "polski-2026-05-glowny",
+      "number": 6,
+      "maxPoints": 1,
+      "instruction": "Oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.",
+      "stimulusIds": [
+        "pl-2026-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-06",
+          "label": "6",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Wyrazy brylant i brylancik należą do tej samej rodziny wyrazów. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "W wyrazie brylancik formant pełni tę samą funkcję co formant w wyrazie ziarenko. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-78-1.2"
+          ],
+          "explanation": "Wyrazy brylant i brylancik mają ten sam rdzeń (brylant-), więc należą do tej samej rodziny wyrazów – pierwsze stwierdzenie jest prawdziwe. Formant -ik- w wyrazie brylancik i formant -enko- w wyrazie ziarenko pełnią tę samą funkcję: tworzą zdrobnienia wyrazów podstawowych (brylant, ziarno), więc drugie stwierdzenie również jest prawdziwe. Dlatego oba odpowiedzi to P."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-78-1.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "pl-2026-07",
+      "sessionId": "polski-2026-05-glowny",
+      "number": 7,
+      "maxPoints": 1,
+      "instruction": "**Aby zwiększyć sprzedaż urządzeń produkowanych przez siebie, wynalazca, bohater utworu _Przyjaciel Automateusza_, przygotował krótki tekst reklamowy. Niestety, zabrakło w nim trzech przecinków. Uzupełnij poniższy zapis tak, aby był zgodny z zasadami interpunkcji.**\n\nJeśli potrzebujesz towarzysza przyjdź do mnie. Możesz zyskać przyjaciela, który wesprze Cię w każdej sytuacji. Będzie wierny i stale przytomny, a przy tym estetyczny poręczny i trwały. Zapłacisz w brylantach – tyle, ile waży. Kupując kilku elektroprzyjaciół masz gwarancję korzystnego rabatu.\n\n![Rysunek przedstawiający grupę błyszczących metalowych kul różnej wielkości, ilustracja do tekstu reklamowego.](stimulus:pl-2026-07-fig1)\n\nWynalazca",
+      "stimulusIds": [
+        "pl-2026-tekst-1",
+        "pl-2026-07-fig1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-07",
+          "label": "7",
+          "maxPoints": 1,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Jeśli potrzebujesz towarzysza, przyjdź do mnie. Możesz zyskać przyjaciela, który wesprze Cię w każdej sytuacji. Będzie wierny i stale przytomny, a przy tym estetyczny, poręczny i trwały. Zapłacisz w brylantach – tyle, ile waży. Kupując kilku elektroprzyjaciół, masz gwarancję korzystnego rabatu."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "poprawne wpisanie trzech przecinków."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-4.2"
+          ],
+          "explanation": "Trzy przecinki trzeba wpisać tam, gdzie kończą się lub zaczynają wydzielone części zdania. Po wyrazie „towarzysza” kończy się zdanie podrzędne zaczynające się od „jeśli”, więc oddzielamy je przecinkiem od części „przyjdź do mnie”. W wyliczeniu przymiotników „estetyczny, poręczny i trwały” przecinek stawiamy między pierwszym a drugim wyrazem, bo spójnik „i” łączy dopiero dwie ostatnie pozycje. Po wyrazie „elektroprzyjaciół” kończy się część zdania zaczynająca się od imiesłowu „kupując”, którą też trzeba oddzielić przecinkiem od reszty."
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-4.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "pl-2026-08",
+      "sessionId": "polski-2026-05-glowny",
+      "number": 8,
+      "maxPoints": 3,
+      "instruction": "**8.1. Uzupełnij poniższe zdanie. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nWypowiedzenie Każde takie ziarenko jest koncentratem elektrycznego myślenia, niezmiernie wszechstronnym i rozumnym jest zdaniem [[A|B]], podobnie jak wypowiedzenie [[C|D]].",
+      "stimulusIds": [
+        "pl-2026-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-08-1",
+          "label": "8.1",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "pojedynczym"
+              },
+              {
+                "id": "B",
+                "text": "złożonym"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "Gdybyś reflektował na tuzin, mógłbym odstąpić taniej"
+              },
+              {
+                "id": "D",
+                "text": "A zatem, mój zacny Automku, masz przed sobą garść elektroprzyjaciół"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "A",
+                "reason": "D"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-1.12",
+            "pl-46-1.13",
+            "pl-46-4.2"
+          ],
+          "explanation": "Pierwsze wypowiedzenie ma jedno orzeczenie („jest”), więc jest zdaniem pojedynczym. Spośród wypowiedzeń C i D tylko D ma jedno orzeczenie („masz”), dlatego również jest zdaniem pojedynczym; wypowiedzenie C ma dwa orzeczenia („reflektował”, „mógłbym odstąpić”) i jest zdaniem złożonym. Zatem poprawna odpowiedź to A i D."
+        },
+        {
+          "id": "pl-2026-08-2",
+          "label": "8.2",
+          "maxPoints": 2,
+          "prompt": "**8.2. Przekształć trzy poniższe zdania pojedyncze w zdanie wielokrotnie złożone, zachowując sens wypowiedzi. Wykorzystaj dwa spójniki wybrane spośród podanych w ramce.**\n**Uwaga. W zadaniu będzie oceniana poprawność interpunkcyjna.**\n\nczy i którzy lub ponieważ więc\n\n1. Wynalazcy udało się stworzyć elektroprzyjaciół.\n2. Elektroprzyjaciele byli niewielkich rozmiarów.\n3. Elektroprzyjaciele mieścili się nawet w kieszeni.",
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Wynalazcy udało się stworzyć elektroprzyjaciół i byli oni niewielkich rozmiarów, więc mieścili się nawet w kieszeni."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "przekształcenie trzech zdań pojedynczych w zdanie wielokrotnie złożone z zachowaniem sensu wypowiedzi, poprawna interpunkcja."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "przekształcenie trzech zdań pojedynczych w zdanie wielokrotnie złożone z zachowaniem sensu wypowiedzi, ale niepoprawna interpunkcja",
+                  "przekształcenie trzech zdań pojedynczych w zdanie wielokrotnie złożone z zachowaniem sensu wypowiedzi, poprawna interpunkcja, ale użycie tylko jednego spójnika wymaganego poleceniem."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-1.12",
+            "pl-46-1.13",
+            "pl-46-4.2"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "- Wynalazcy udało się stworzyć elektroprzyjaciół i byli oni niewielkich rozmiarów, więc mieścili się nawet w kieszeni.\n- Wynalazcy udało się stworzyć elektroprzyjaciół, a ponieważ byli niewielkich rozmiarów, więc mieścili się w kieszeni.\n- Wynalazcy udało się stworzyć elektroprzycjół, którzy byli niewielkich rozmiarów, więc mieścili się w kieszeni.",
+              "ref": {
+                "source": "klucz",
+                "page": 6
+              }
+            },
+            {
+              "points": 1,
+              "content": "Wynalazcy udało się stworzyć elektroprzyjaciół, a ponieważ byli niewielkich rozmiarów, mieścili się nawet w kieszeni.",
+              "ref": {
+                "source": "klucz",
+                "page": 6
+              }
+            },
+            {
+              "points": 0,
+              "content": "Wynalazcy udało się stworzyć elektroprzyjaciół, byli niewielkich rozmiarów, mieścili się nawet w kieszeni.",
+              "ref": {
+                "source": "klucz",
+                "page": 6
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Uwaga. Jeżeli uczeń wybrał wyraz „którzy” i zastosował go poprawnie w funkcji spójnika zespalającego dwa zdania oraz spełnił pozostałe warunki polecenia, otrzymuje punkty za rozwiązanie zadania."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-1.12",
+        "pl-46-1.13",
+        "pl-46-4.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 9
+      }
+    },
+    {
+      "id": "pl-2026-09",
+      "sessionId": "polski-2026-05-glowny",
+      "number": 9,
+      "maxPoints": 2,
+      "instruction": "Przygotowujesz prezentację na temat przyjaźni i chcesz ją zilustrować zdjęciami nawiązującymi do treści *Małego Księcia* Antoine'a de Saint-Exupéry'ego.\n\n**Spośród poniższych zdjęć wybierz dwa i wyjaśnij związek każdego z nich z tematem przyjaźni przedstawionej w *Małym Księciu*.**\n\n1. ![Zdjęcie 1: złote kłosy zboża na polu.](stimulus:pl-2026-09-fig1)\n2. ![Zdjęcie 2: piaszczysta pustynia z wydmami.](stimulus:pl-2026-09-fig2)\n3. ![Zdjęcie 3: stado ptaków lecących na tle nieba.](stimulus:pl-2026-09-fig3)\n4. ![Zdjęcie 4: żmija zwinięta na trawie z uniesioną głową.](stimulus:pl-2026-09-fig4)\n5. ![Zdjęcie 5: czerwona róża z zielonymi liśćmi.](stimulus:pl-2026-09-fig5)\n6. ![Zdjęcie 6: lis siedzący na tle pnia drzewa.](stimulus:pl-2026-09-fig6)\n\nwww.pixabay.com",
+      "stimulusIds": [
+        "pl-2026-tekst-1",
+        "pl-2026-09-fig1",
+        "pl-2026-09-fig2",
+        "pl-2026-09-fig3",
+        "pl-2026-09-fig4",
+        "pl-2026-09-fig5",
+        "pl-2026-09-fig6"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-09",
+          "label": "9",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Przykładowe odpowiedzi:\n- Zdjęcie numer: 1\nWyjaśnienie: *Kolor zboża miał przypominać Lisowi kolor włosów jego przyjaciela – Małego Księcia.*\n- Zdjęcie numer: 2\nWyjaśnienie: *Mały Książę spotkał Pilota na pustyni i tu nawiązała się ich przyjaźń, którą umocniły wspólne rozmowy i przeżycia.*\n- Zdjęcie numer: 3\nWyjaśnienie: *Dzięki ptakom Mały Książę wyruszył ze swojej planety, żeby znaleźć przyjaciela.*\n- Zdjęcie numer: 4\nWyjaśnienie: *Mały Książę miał nadzieję, że po ukąszeniu przez żmiję powróci do swojej przyjaciółki Róży.*\n- Zdjęcie numer: 5\nWyjaśnienie: *Mały Książę opuścił Różę i wyruszył w podróż po innych planetach w poszukiwaniu przyjaciela.*\n- Zdjęcie numer: 6\nWyjaśnienie: *Lis wytłumaczył Małemu Księciu, czym jest przyjaźń.*"
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "wyjaśnienie związku dwóch wybranych zdjęć z tematem przyjaźni w lekturze."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "wyjaśnienie związku jednego wybranego zdjęcia z tematem przyjaźni w lekturze."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-2.12"
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-2.12"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "pl-2026-10",
+      "sessionId": "polski-2026-05-glowny",
+      "number": 10,
+      "maxPoints": 2,
+      "instruction": "Przeczytaj poniższy fragment utworu.",
+      "stimulusIds": [
+        "pl-2026-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-10-1",
+          "label": "10.1",
+          "maxPoints": 1,
+          "prompt": "**Podaj tytuł lektury obowiązkowej, z której pochodzi powyższy fragment.**",
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "„Kamienie na szaniec”"
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "odpowiedź poprawna"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.9",
+            "pl-gen-III",
+            "pl-78-1.4"
+          ]
+        },
+        {
+          "id": "pl-2026-10-2",
+          "label": "10.2",
+          "maxPoints": 1,
+          "prompt": "**Czy prawdziwe jest – Twoim zdaniem – twierdzenie, że bohater, o którym mowa w powyższym fragmencie utworu, podejmował się pracy nad wynalazkami, aby zaspokoić swoje ambicje?**\n\n**Przedstaw swoje stanowisko i je uzasadnij. W argumentacji odwołaj się do znajomości całego utworu, z którego pochodzi zacytowany fragment.**",
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Stanowisko: Moim zdaniem Rudy zaspokajał swoje ambicje, tworząc nowe wynalazki.\nUzasadnienie: Rudy w pierwszej kolejności chciał jak najlepiej przysłużyć się ojczyźnie. Jego wynalazki przyczyniały się do sukcesów Małego Sabotażu."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "przedstawienie stanowiska i jego uzasadnienie zawierające odwołanie do treści całego utworu"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.9",
+            "pl-gen-III",
+            "pl-78-1.4"
+          ],
+          "exemplars": [
+            {
+              "points": 1,
+              "content": "Stanowisko: Moim zdaniem Rudy zaspokajał swoje ambicje, tworząc nowe wynalazki.\nUzasadnienie: Rudy w pierwszej kolejności chciał jak najlepiej przysłużyć się ojczyźnie. Jego wynalazki przyczyniały się do sukcesów Małego Sabotażu.",
+              "ref": {
+                "source": "klucz",
+                "page": 7
+              }
+            },
+            {
+              "points": 1,
+              "content": "Stanowisko: Nie jest to twierdzenie prawdziwe.\nUzasadnienie: Bohater lektury „Kamienie na szaniec” nie postępował tak, aby zaspokoić swoje ambicje. Rudy podejmował pracę nad wynalazkami, aby wyrazić sprzeciw wobec niemieckich okupantów.",
+              "ref": {
+                "source": "klucz",
+                "page": 7
+              }
+            },
+            {
+              "points": 0,
+              "content": "Stanowisko: Tak, bohater lektury miał wielkie ambicje i zaspokajał je wynalazkami.\nUzasadnienie: Rudy był bardzo inteligentnym i wszechstronnie uzdolnionym chłopcem. Posiadał wiele zdolności i ambicji, z których często korzystał.",
+              "ref": {
+                "source": "klucz",
+                "page": 8
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-1.9",
+        "pl-gen-III",
+        "pl-78-1.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 11
+      }
+    },
+    {
+      "id": "pl-2026-11",
+      "sessionId": "polski-2026-05-glowny",
+      "number": 11,
+      "maxPoints": 2,
+      "instruction": "Z podanych pytań wybierz te, na które odpowiedzi zawarto we wskazanych akapitach tekstu Stephena Hawkinga, i wpisz do tabeli oznaczenia literowe tych pytań. Każdemu akapitowi przyporządkuj jedno pytanie.",
+      "stimulusIds": [
+        "pl-2026-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-11",
+          "label": "11",
+          "maxPoints": 2,
+          "response": {
+            "type": "matching",
+            "slots": [
+              "3",
+              "5",
+              "7"
+            ],
+            "options": [
+              {
+                "id": "A",
+                "text": "Czym pasjonował się Hawking w dzieciństwie?"
+              },
+              {
+                "id": "B",
+                "text": "Jakie cechy charakteryzowały Einsteina jako naukowca?"
+              },
+              {
+                "id": "C",
+                "text": "Do czego naukowcom może być potrzebna wyobraźnia?"
+              },
+              {
+                "id": "D",
+                "text": "Co może zachęcić uczonych do podjęcia pracy naukowej?"
+              },
+              {
+                "id": "E",
+                "text": "Czy kosmologia wyjaśniła już wszystkie zagadki wszechświata?"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "3": "A",
+                "5": "E",
+                "7": "D"
+              }
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawne wpisanie trzech liter."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawne wpisanie dwóch liter."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "Każdemu akapitowi należy przyporządkować to pytanie, na które odpowiedź znajduje się w tym akapicie. W akapicie 3. autor pisze o tym, czym Hawking pasjonował się w dzieciństwie, więc pasuje pytanie A. Akapit 5. zawiera odpowiedź na pytanie, czy kosmologia wyjaśniła już wszystkie zagadki wszechświata (E), a akapit 7. – na pytanie, co może zachęcić uczonych do podjęcia pracy naukowej (D)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 13
+      }
+    },
+    {
+      "id": "pl-2026-12",
+      "sessionId": "polski-2026-05-glowny",
+      "number": 12,
+      "maxPoints": 1,
+      "instruction": "Które z poniższych stwierdzeń jest zgodne z treścią tekstu Stephena Hawkinga?\nWybierz właściwą odpowiedź spośród podanych.",
+      "stimulusIds": [
+        "pl-2026-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-12",
+          "label": "12",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Połączenie wyobraźni i nauki prowadzi do lepszego poznania świata."
+              },
+              {
+                "id": "B",
+                "text": "Obecny stan wiedzy zniechęca ludzi do podejmowania badań naukowych."
+              },
+              {
+                "id": "C",
+                "text": "W kolejnych latach wpływ nauki i techniki na nasze życie będzie stopniowo malał."
+              },
+              {
+                "id": "D",
+                "text": "Dzięki pracy kosmologów uda się wkrótce odkryć wszystkie tajemnice wszechświata."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-2.2"
+          ],
+          "explanation": "Z tekstu wynika, że to połączenie wyobraźni i nauki pozwala lepiej poznawać świat, dlatego zgodne z treścią tekstu jest stwierdzenie A. Pozostałe odpowiedzi przeczą myślom autora: nie pisze on, że obecny stan wiedzy zniechęca do badań, że wpływ nauki i techniki na nasze życie będzie malał, ani że wkrótce odkryjemy wszystkie tajemnice wszechświata."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-2.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 13
+      }
+    },
+    {
+      "id": "pl-2026-13",
+      "sessionId": "polski-2026-05-glowny",
+      "number": 13,
+      "maxPoints": 1,
+      "instruction": "Dokończ zdanie tak, aby było zgodne z treścią tekstu Stephena Hawkinga. Wybierz właściwą odpowiedź spośród podanych.\n\nZ pierwszego akapitu tekstu wynika, że autor uważa Einsteina za geniusza wszech czasów ze względu między innymi na",
+      "stimulusIds": [
+        "pl-2026-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-13",
+          "label": "13",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "powszechnie uznane podejście do nauki."
+              },
+              {
+                "id": "B",
+                "text": "odwagę i kreatywność w sposobie rozumowania."
+              },
+              {
+                "id": "C",
+                "text": "opieranie się na zweryfikowanych wynikach badań."
+              },
+              {
+                "id": "D",
+                "text": "dystans wobec postaw badawczych opartych na intuicji."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-2.2"
+          ],
+          "explanation": "W pierwszym akapicie tekstu autor pisze o Einsteinie jako o geniuszu wszech czasów, podkreślając jego odwagę i kreatywność w sposobie rozumowania, czyli umiejętność myślenia inaczej niż wszyscy i łączenia wyobraźni z nauką. Dlatego poprawna jest odpowiedź mówiąca o odwadze i kreatywności w sposobie rozumowania. Pozostałe odpowiedzi nie wynikają z treści pierwszego akapitu."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-2.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 13
+      }
+    },
+    {
+      "id": "pl-2026-14",
+      "sessionId": "polski-2026-05-glowny",
+      "number": 14,
+      "maxPoints": 1,
+      "instruction": "Wyjaśnij, jaki związek zachodzi między treścią akapitów 3. i 4.",
+      "stimulusIds": [
+        "pl-2026-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-14",
+          "label": "14",
+          "maxPoints": 1,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Akapit 4. nawiązuje do treści akapitu 3. Autor stwierdza, że ciekawość towarzyszy mu również w pracy naukowej, tylko teraz dotyczy budowy wszechświata, a nie – jak w dzieciństwie – zabawek."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "odpowiedź poprawna"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-2.4"
+          ],
+          "exemplars": [
+            {
+              "points": 1,
+              "content": "Akapit 4. nawiązuje do treści akapitu 3. Autor stwierdza, że ciekawość towarzyszy mu również w pracy naukowej, tylko teraz dotyczy budowy wszechświata, a nie – jak w dzieciństwie – zabawek.",
+              "ref": {
+                "source": "klucz",
+                "page": 9
+              }
+            },
+            {
+              "points": 1,
+              "content": "W obu akapitach autor ukazuje, jak ważna jest w życiu dociekliwość.",
+              "ref": {
+                "source": "klucz",
+                "page": 9
+              }
+            },
+            {
+              "points": 0,
+              "content": "Jeden akapit następuje po drugim.",
+              "ref": {
+                "source": "klucz",
+                "page": 9
+              }
+            },
+            {
+              "points": 0,
+              "content": "Dociekliwość nigdy nie znika.",
+              "ref": {
+                "source": "klucz",
+                "page": 9
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-2.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "pl-2026-15",
+      "sessionId": "polski-2026-05-glowny",
+      "number": 15,
+      "maxPoints": 2,
+      "instruction": "Spośród lektur obowiązkowych wybierz tę, której bohater w swoim postępowaniu kierował się zasadą Najważniejsze, aby się nie poddawać. Podaj tytuł tej lektury i jej bohatera.\n\nUzasadnij swój wybór. W uzasadnieniu przywołaj sytuację z tej lektury, ilustrującą Twoją argumentację.\n\nUwaga! Lista lektur obowiązkowych znajduje się na stronach 3 i 4 tego arkusza egzaminacyjnego.\n\nTytuł lektury: …\nBohater lektury: …\nUzasadnienie: …",
+      "stimulusIds": [
+        "pl-2026-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-15",
+          "label": "15",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Tytuł lektury: „Pan Tadeusz”\nBohater lektury: Jacek Soplica\nUzasadnienie: Jacek Soplica w młodości popełnił zbrodnię. Następne lata życia poświęcił na odkupienie win. Przez wiele lat służył jako emisariusz. Zaangażował się również w wychowanie Zosi i Tadeusza. Po wielu latach wyznał swoje winy. Został też zrehabilitowany."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "podanie tytułu lektury obowiązkowej i bohatera, poprawne uzasadnienie zilustrowane sytuacją z lektury."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "podanie tytułu lektury obowiązkowej i bohatera, poprawne uzasadnienie bez zilustrowania sytuacją z lektury."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.9",
+            "pl-gen-III",
+            "pl-78-1.4"
+          ],
+          "explanation": "Trzeba wskazać lekturę obowiązkową i bohatera, który mimo trudności nie rezygnował z działania, czyli kierował się zasadą, że najważniejsze jest, aby się nie poddawać. W uzasadnieniu należy przywołać konkretną sytuację z książki, np. Jacka Soplicę, który po popełnionej zbrodni przez lata pracował na odkupienie win, albo Zośkę podejmującego akcje sabotażowe w czasie wojny. Pełne 2 punkty dostaje odpowiedź, w której uzasadnienie jest zilustrowane taką sytuacją z lektury.",
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "Tytuł lektury: „Pan Tadeusz”\nBohater lektury: Jacek Soplica\nUzasadnienie: Jacek Soplica w młodości popełnił zbrodnię. Następne lata życia poświęcił na odkupienie win. Przez wiele lat służył jako emisariusz. Zaangażował się również w wychowanie Zosi i Tadeusza. Po wielu latach wyznał swoje winy. Został też zrehabilitowany.",
+              "ref": {
+                "source": "klucz",
+                "page": 10
+              }
+            },
+            {
+              "points": 1,
+              "content": "Tytuł lektury: „Kamienie na szaniec”\nBohater lektury: Zośka\nUzasadnienie: Bohater, mimo tego, że trwała wojna, nie poddawał się. Podejmował różne akcje sabotażowe przeciwko wrogowi.",
+              "ref": {
+                "source": "klucz",
+                "page": 10
+              }
+            },
+            {
+              "points": 0,
+              "content": "Tytuł lektury: „Mały Książę”\nBohater lektury: Mały Książę\nUzasadnienie: Bohater, mimo problemów, jakie sprawiała Róża, nie poddawał się.",
+              "ref": {
+                "source": "klucz",
+                "page": 10
+              }
+            }
+          ],
+          "scoringNotes": [
+            "W przypadku, gdy zdający wskaże poprawnie tytuł lektury, nie wskaże bohatera, ale uzasadnienie pozwala go zidentyfikować, otrzymuje maksymalnie 1 punkt.",
+            "W przypadku, gdy zdający nie wskaże tytułu lektury, wskaże poprawnie bohatera i poprawnie uzasadni swój wybór, otrzymuje maksymalnie 1 punkt.",
+            "W przypadku, gdy zdający wskaże poprawnie tytuł lektury i bohatera, ale błędnie uzasadni swój wybór, otrzymuje 0 punktów.",
+            "W przypadku, gdy zdający wskaże poprawnie tytuł lektury i bohatera, ale nie uzasadni swojego wyboru, otrzymuje 0 punktów."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-1.9",
+        "pl-gen-III",
+        "pl-78-1.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "pl-2026-16",
+      "sessionId": "polski-2026-05-glowny",
+      "number": 16,
+      "maxPoints": 1,
+      "instruction": "Oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.",
+      "stimulusIds": [
+        "pl-2026-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-16",
+          "label": "16",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "W wypowiedzeniu Kształt przyszłości zależy od $\\underline{was}$ podkreślony wyraz pełni funkcję podmiotu. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "W wypowiedzeniu Kształt $\\underline{przyszłości}$ zależy od was podkreślony wyraz pełni funkcję przydawki. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "F",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-1.8"
+          ],
+          "explanation": "W wypowiedzeniu „Kształt przyszłości zależy od was” podkreślony wyraz „was” odpowiada na pytanie „od kogo?” (zależy od was), więc jest dopełnieniem, a nie podmiotem – pierwsze stwierdzenie jest fałszywe. Podkreślony wyraz „przyszłości” odpowiada na pytanie „czyj?” (kształt czego? – przyszłości), więc jest przydawką – drugie stwierdzenie jest prawdziwe. Dlatego poprawne oznaczenia to F dla pierwszego stwierdzenia i P dla drugiego."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-1.8"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "pl-2026-17",
+      "sessionId": "polski-2026-05-glowny",
+      "number": 17,
+      "maxPoints": 3,
+      "instruction": "Zredaguj ogłoszenie o wykładzie na temat **Wybitni naukowcy**. Zachęć do udziału w tym wydarzeniu, używając dwóch argumentów, z których co najmniej jeden będzie nawiązywał do tematyki wykładu.\nUwaga: w ocenie wypowiedzi będzie brana pod uwagę poprawność językowa, ortograficzna i interpunkcyjna.\n\n**OGŁOSZENIE** ![Kolaż ilustracji matematycznych (m.in. znak sumy, wykresy, figury geometryczne, modele brył) umieszczony przy nagłówku OGŁOSZENIE w ramce przeznaczonej na odpowiedź.](stimulus:pl-2026-17-fig1)",
+      "stimulusIds": [
+        "pl-2026-tekst-2",
+        "pl-2026-17-fig1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-17",
+          "label": "17",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Informujemy, że 11 maja o godzinie 12:00 w bibliotece szkolnej odbędzie się wykład dla klas siódmych i ósmych na temat „Wybitni naukowcy”. Podczas spotkania znany naukowiec opowie nam o swojej pracy i zadaniach, które wykonuje, a najbardziej aktywnym uczniom wręczy książkę pt. „Wszechświat”. Po spotkaniu dla wszystkich uczestników odbędą się warsztaty, które będzie prowadził nasz gość specjalny.\n\nSamorząd Uczniowski"
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "Treść i forma: 2 pkt – treść zgodna z poleceniem, uwzględnione 2 argumenty, z których co najmniej jeden nawiązuje do tematyki wykładu; uwzględnionych 5 elementów dotyczących formy: kto ogłasza? komu ogłasza? co ogłasza? kiedy się odbywa? gdzie się odbywa? ORAZ poprawność językowa, ortograficzna i interpunkcyjna: 1 pkt – łącznie nie więcej niż dwa błędy (językowe, ortograficzne, interpunkcyjne)."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "Treść i forma: 2 pkt – treść zgodna z poleceniem, uwzględnione 2 argumenty, z których co najmniej jeden nawiązuje do tematyki wykładu; uwzględnionych 5 elementów dotyczących formy: kto ogłasza? komu ogłasza? co ogłasza? kiedy się odbywa? gdzie się odbywa? ORAZ poprawność językowa, ortograficzna i interpunkcyjna: 0 pkt – łącznie trzy lub więcej błędów (językowych, ortograficznych, interpunkcyjnych).",
+                  "Treść i forma: 1 pkt – treść zgodna z poleceniem, uwzględnione 2 argumenty, z których co najmniej jeden nawiązuje do tematyki wykładu; uwzględnione 4 elementy dotyczące formy: kto ogłasza? ORAZ/ALBO komu ogłasza? ORAZ/ALBO co ogłasza? ORAZ/ALBO kiedy się odbywa? ORAZ/ALBO gdzie się odbywa? ORAZ poprawność językowa, ortograficzna i interpunkcyjna: 1 pkt – łącznie nie więcej niż dwa błędy (językowe, ortograficzne, interpunkcyjne)."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "Treść i forma: 1 pkt – treść zgodna z poleceniem, uwzględnione 2 argumenty, z których co najmniej jeden nawiązuje do tematyki wykładu; uwzględnione 4 elementy dotyczące formy: kto ogłasza? ORAZ/ALBO komu ogłasza? ORAZ/ALBO co ogłasza? ORAZ/ALBO kiedy się odbywa? ORAZ/ALBO gdzie się odbywa? ORAZ poprawność językowa, ortograficzna i interpunkcyjna: 0 pkt – łącznie trzy lub więcej błędów (językowych, ortograficznych, interpunkcyjnych).",
+                  "Treść i forma: 0 pkt – treść niezgodna z poleceniem ALBO treść zgodna z poleceniem, ale uwzględnione tylko 3 elementy dotyczące formy: kto ogłasza? ORAZ/ALBO komu ogłasza? ORAZ/ALBO co ogłasza? ORAZ/ALBO kiedy się odbywa? ORAZ/ALBO gdzie się odbywa? ORAZ poprawność językowa, ortograficzna i interpunkcyjna: 1 pkt – łącznie nie więcej niż dwa błędy (językowe, ortograficzne, interpunkcyjne)."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "Treść i forma: 0 pkt – treść niezgodna z poleceniem ALBO treść zgodna z poleceniem, ale uwzględnione tylko 3 elementy dotyczące formy: kto ogłasza? ORAZ/ALBO komu ogłasza? ORAZ/ALBO co ogłasza? ORAZ/ALBO kiedy się odbywa? ORAZ/ALBO gdzie się odbywa? ORAZ poprawność językowa, ortograficzna i interpunkcyjna: 0 pkt – łącznie trzy lub więcej błędów (językowych, ortograficznych, interpunkcyjnych)."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-4.1",
+            "pl-gen-III",
+            "pl-46-2.1"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "Informujemy, że 11 maja o godzinie 12:00 w bibliotece szkolnej odbędzie się wykład dla klas siódmych i ósmych na temat „Wybitni naukowcy”. Podczas spotkania znany naukowiec opowie nam o swojej pracy i zadaniach, które wykonuje, a najbardziej aktywnym uczniom wręczy książkę pt. „Wszechświat”. Po spotkaniu dla wszystkich uczestników odbędą się warsztaty, które będzie prowadził nasz gość specjalny.\n\nSamorząd Uczniowski",
+              "ref": {
+                "source": "klucz",
+                "page": 12
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Jeżeli uczeń uwzględnia 5 elementów ogłoszenia, a podaje tylko jeden argument, w kryterium „Treść i forma” otrzymuje 1 punkt.",
+            "Jeżeli uczeń uwzględnia 5 elementów ogłoszenia i podaje dwa argumenty, ale żaden z nich nie nawiązuje do tematyki wykładu, w kryterium „Treść i forma” otrzymuje 1 punkt.",
+            "Kategorie „Treść i forma” oraz „Poprawność językowa, ortograficzna i interpunkcyjna” oceniamy rozłącznie.",
+            "UCZNIOWIE ZE SPECYFICZNYMI TRUDNOŚCIAMI W UCZENIU SIĘ Poprawność językowa, ortograficzna i interpunkcyjna: 1 pkt – łącznie nie więcej niż trzy błędy (językowe, ortograficzne, interpunkcyjne). 0 pkt – łącznie cztery lub więcej błędów (językowych, ortograficznych, interpunkcyjnych)."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-4.1",
+        "pl-gen-III",
+        "pl-46-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 15
+      }
+    },
+    {
+      "id": "pl-2026-18",
+      "sessionId": "polski-2026-05-glowny",
+      "number": 18,
+      "maxPoints": 20,
+      "instruction": "Wybierz **jeden** z podanych tematów i napisz wypracowanie.\n\n- Pamiętaj o zachowaniu formy wypowiedzi wskazanej w temacie: napisz **przemówienie** albo **opowiadanie**.\n- W wypracowaniu odwołaj się do **wybranej lektury obowiązkowej**. Lista lektur obowiązkowych znajduje się na stronach 3 i 4 tego arkusza egzaminacyjnego.\n- Innym utworem literackim w przemówieniu może być także lektura obowiązkowa.\n- Twoja praca powinna liczyć co najmniej **200 wyrazów**.\n- Zapisz wypracowanie w wyznaczonym miejscu. Nie pisz na marginesie.\n- Pisz czytelnie.\n- Pamiętaj, że zabronione jest pisanie wypowiedzi obraźliwych, wulgarnych lub propagujących postępowanie niezgodne z prawem albo wypowiedzi aprobujących nieetyczne postępowanie bohatera.",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "pl-2026-18",
+          "label": "18",
+          "maxPoints": 20,
+          "response": {
+            "type": "extended_text",
+            "minWords": 200,
+            "topics": [
+              {
+                "id": "1",
+                "text": "Temat 1.\n**Napisz przemówienie skierowane do swoich rówieśników, w którym przekonasz ich, że każdy może kształtować swoją przyszłość. W argumentacji odwołaj się do wybranej lektury obowiązkowej oraz do innego utworu literackiego.**",
+                "form": "przemówienie"
+              },
+              {
+                "id": "2",
+                "text": "Temat 2.\n**Napisz opowiadanie o spotkaniu z bohaterem wybranej lektury obowiązkowej. Podczas wspólnej przygody znaleźliście przedmiot o niezwykłych właściwościach, dzięki któremu Wasza przygoda zakończyła się pomyślnie. Wypracowanie powinno dowodzić, że dobrze znasz wybraną lekturę obowiązkową.**",
+                "form": "opowiadanie"
+              }
+            ]
+          },
+          "key": {},
+          "scoring": {
+            "type": "rubric",
+            "rubrics": [
+              {
+                "topic": "1",
+                "rubricId": "pl-2026-18-t1"
+              },
+              {
+                "topic": "2",
+                "rubricId": "pl-2026-18-t2"
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-1.7",
+            "pl-gen-II",
+            "pl-46-4.1",
+            "pl-78-3.2",
+            "pl-gen-III",
+            "pl-78-1.1",
+            "pl-78-2.1",
+            "pl-46-2.1",
+            "pl-78-1.2"
+          ],
+          "scoringNotes": [
+            "Uwaga. Liczone są wszystkie wyrazy: samodzielne i niesamodzielne.",
+            "Uwagi.\n• Argumentowanie nie polega na streszczaniu utworów.\n• Argumentacja musi być zgodna z poleceniem, wybraną lekturą obowiązkową oraz innym utworem literackim (może to być inna lektura obowiązkowa).",
+            "Uwaga dotycząca formy wypowiedzi.\nWypracowanie musi zawierać cechy charakterystyczne przemówienia jako wypowiedzi o charakterze argumentacyjnym, przeznaczonej do wygłoszenia:\na) bezpośredni zwrot do adresata,\nb) retoryczne środki językowe, np.: pytanie retoryczne, powtórzenie, porównanie, słownictwo wartościujące,\nc) czasowniki w trybie rozkazującym,\nd) czasowniki w 1. i 2. osobie l. mn. służące podtrzymaniu kontaktu z odbiorcami lub pełniące funkcję perswazyjną,\ne) zaimki odnoszące się do 1. i 2. osoby l. mn. służące podtrzymaniu kontaktu z odbiorcami lub pełniące funkcję perswazyjną,\nf) zjednywanie przychylności odbiorców, np. podkreślenie ich znaczenia, kompetencji itp.",
+            "Uczeń może otrzymać 2 punkty, jeżeli:\n• w jego wypracowaniu pojawią się bezpośredni zwrot do adresata oraz przynajmniej dwie różne cechy wybrane spośród b) – f); każda cecha powinna być potwierdzona przynajmniej jeden raz, np. uczeń w wypracowaniu użył jednego porównania i jednego zaimka odnoszącego się do 1 osoby l. mn., tym samym zrealizował podpunkty b) i e),\n• wszystkie pozostałe elementy polecenia zostały uwzględnione,\n• wypowiedź w całości dotyczy problemu wskazanego w poleceniu.",
+            "Uczeń może otrzymać 1 punkt, jeżeli:\n• w jego wypracowaniu pojawią się bezpośredni zwrot do adresata oraz przynajmniej jedna cecha wybrana spośród b) – f), wybrana cecha powinna być potwierdzona przynajmniej jeden raz, np. uczeń w wypracowaniu użył jednego porównania i tym samym zrealizował podpunkt b), ALBO w wypracowaniu występują dwie różne cechy przemówienia spośród b) – f), a nie występuje bezpośredni zwrot do adresata, ALBO występuje tylko bezpośredni zwrot do adresata,\n• nieuwzględniony został jeden element polecenia (inny niż forma) ORAZ/LUB\n• w pracy występują fragmenty niedotyczące problemu wskazanego w poleceniu.",
+            "Uwagi.\n• W opowiadaniu uwzględnione są następujące elementy: wspólna przygoda, wprowadzenie do fabuły opowiadania przedmiotu o niezwykłych właściwościach, pomyślne zakończenie przygody.\n• Opowiadanie ma charakter twórczy, nie może być streszczeniem wybranej lektury obowiązkowej.",
+            "Przykładowo, za wypowiedź, w której uczeń użył zadowalającego zakresu środków językowych i popełnił 6 błędów językowych, egzaminator przyzna 2 pkt w tym kryterium.",
+            "Kryteria oceny prac uczniów ze specyficznymi trudnościami w uczeniu się\n1. Za błędy ortograficzne w przypadku uczniów ze specyficznymi trudnościami w uczeniu się uznaje się:\n− błędy w zapisie wyrazów z u – ó, ż – rz, h – ch\n− łamanie zasady pisania wielką literą na początku zdania.\n2. W ocenie poprawności ortograficznej w pracach uczniów ze specyficznymi trudnościami w uczeniu się egzaminator nie będzie uwzględniał innych niż wymienione w punkcie 1. błędów w zapisie (tzn. nie będzie liczył ich jako błędy ortograficzne), w tym:\n− dodawania, opuszczania, przestawiania liter, sylab lub całych wyrazów\n− mylenia liter\n✓ o podobnym kształcie (a – o, l – ł – t, n – r, m – n, u – w, e – ę, a – ą, i – j, u – y)\n✓ dużych i małych (z wyjątkiem początku zdania)\n✓ odpowiedników głosek zbliżonych fonetycznie (b – p, d – t, w – f, g – k, dz – c, sz – s, i – y, ę – em – en, ą – om – on, ś – ź, ć – dź)\n✓ różniących się w położeniu w stosunku do osi pionowej (p – b, d – b) lub poziomej (m – w, n – u, b – p, d – g, p – g)\n− ominięcia drobnych elementów graficznych, w tym\n✓ oznaczania miękkości nad literami\n✓ kropek (dż, ż, i, j)\n✓ „ogonków” przy literach ą lub ę i kreski (wężyka) przy literach ó, t lub ł\n− błędów dotyczących podziału wyrazu\n− błędów dotyczących dźwięczności (kóska zamiast kózka, proźba zamiast prośba)\n− błędów wynikających ze schematycznego stosowania zasad ortografii, np. startóje bo startować\n− mylenia przedrostków z przyimkami (pode szły)\n− błędnego zapisywania przyimków z rzeczownikami i przysłówkami (wklasie, zachwilę, napewno)\n− niewłaściwego zapisu spółgłosek miękkich (słonice zamiast słońce, rosinie zamiast rośnie)."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-1.7",
+        "pl-gen-II",
+        "pl-46-4.1",
+        "pl-78-3.2",
+        "pl-gen-III",
+        "pl-78-1.1",
+        "pl-78-2.1",
+        "pl-46-2.1",
+        "pl-78-1.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 16
+      }
+    }
+  ],
+  "rubrics": [
+    {
+      "id": "pl-2026-18-t1",
+      "maxPoints": 20,
+      "criteria": [
+        {
+          "id": "realizacja",
+          "name": "Realizacja tematu wypowiedzi",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\nWszystkie pozostałe elementy polecenia uwzględnione.\nWypowiedź w całości dotyczy problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\nNieuwzględniony jeden element polecenia (inny niż forma). ORAZ/LUB\nW pracy występują fragmenty niedotyczące problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Forma wypowiedzi niezgodna z formą wskazaną w poleceniu. ALBO\nNieuwzględnione co najmniej dwa elementy polecenia (inne niż forma)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "retoryczne",
+          "name": "Elementy retoryczne",
+          "type": "levels",
+          "max": 5,
+          "levels": [
+            {
+              "points": 5,
+              "paths": [
+                "Pogłębiona argumentacja.\nArgumenty odwołujące się np. do faktów, logiki, emocji, zilustrowane odpowiednimi przykładami ORAZ/LUB wykorzystanie przykładów w funkcji argumentacyjnej.\nArgumenty/przykłady uporządkowane, np. zhierarchizowane."
+              ]
+            },
+            {
+              "points": 4,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 3 pkt i niektóre na 5 pkt."
+              ]
+            },
+            {
+              "points": 3,
+              "paths": [
+                "Powierzchowna argumentacja; w wypowiedzi brak wnikliwości.\nNiektóre argumenty zilustrowane odpowiednimi przykładami ORAZ/LUB wykorzystanie przykładów w funkcji argumentacyjnej.\nArgumenty/przykłady częściowo uporządkowane."
+              ]
+            },
+            {
+              "points": 2,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 1 pkt i niektóre na 3 pkt."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Podjęta próba argumentowania.\nOgraniczenie do wyliczenia powierzchownie omówionych przykładów, powiązanych z problemem określonym w temacie."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompetencje",
+          "name": "Kompetencje literackie i kulturowe",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\nPoprawność rzeczowa."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\nALBO\nCzęściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\nALBO\nCzęściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\nDopuszczalne 1–2 błędy rzeczowe."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompozycja",
+          "name": "Kompozycja tekstu",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi.\nGraficznie wyodrębnione akapity.\nDopuszczalna 1 usterka w zakresie spójności ALBO logiki wypowiedzi, ALBO podziału wypowiedzi na funkcjonalne akapity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi.\nGraficznie wyodrębnione akapity.\nDopuszczalne łącznie 2–3 usterki w zakresie spójności ORAZ/ALBO logiki wypowiedzi."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "styl",
+          "name": "Styl",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Odpowiedni do treści i formy wypowiedzi.\nJednolity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Sporadyczne usterki w odpowiedniości ORAZ/LUB jednolitości stylu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia wymagań określonych na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jezyk",
+          "name": "Język",
+          "type": "matrix",
+          "max": 4,
+          "rows": "Szeroki zakres środków językowych, tzn. zróżnicowana składnia, zróżnicowana leksyka, w tym np. bogata frazeologia, precyzyjne słownictwo, umożliwiające pełną i swobodną realizację tematu.\nZadowalający zakres środków językowych, tzn. składnia i leksyka stosowne/odpowiednie do realizacji tematu.\nWąski zakres środków językowych, tzn. składnia i leksyka proste/ograniczone, utrudniające realizację tematu.",
+          "cols": "Nie więcej niż 4 błędy językowe\n5–7 błędów językowych\n8–10 błędów językowych\n11–13 błędów językowych\n14 lub więcej błędów językowych",
+          "table": {
+            "Szeroki zakres środków językowych, tzn. zróżnicowana składnia, zróżnicowana leksyka, w tym np. bogata frazeologia, precyzyjne słownictwo, umożliwiające pełną i swobodną realizację tematu.": {
+              "Nie więcej niż 4 błędy językowe": 4,
+              "5–7 błędów językowych": 3,
+              "8–10 błędów językowych": 2,
+              "11–13 błędów językowych": 1,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Zadowalający zakres środków językowych, tzn. składnia i leksyka stosowne/odpowiednie do realizacji tematu.": {
+              "Nie więcej niż 4 błędy językowe": 3,
+              "5–7 błędów językowych": 2,
+              "8–10 błędów językowych": 1,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Wąski zakres środków językowych, tzn. składnia i leksyka proste/ograniczone, utrudniające realizację tematu.": {
+              "Nie więcej niż 4 błędy językowe": 2,
+              "5–7 błędów językowych": 1,
+              "8–10 błędów językowych": 0,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            }
+          }
+        },
+        {
+          "id": "ortografia",
+          "name": "Ortografia",
+          "type": "error_count",
+          "max": 2,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 1,
+                "points": 2
+              },
+              {
+                "maxErrors": 3,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 3,
+                "points": 2
+              },
+              {
+                "maxErrors": 6,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "interpunkcja",
+          "name": "Interpunkcja",
+          "type": "error_count",
+          "max": 1,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 9,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 11,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        }
+      ],
+      "gates": [
+        {
+          "ifCriterion": "realizacja",
+          "equals": 0,
+          "thenAllOthers": 0
+        }
+      ]
+    },
+    {
+      "id": "pl-2026-18-t2",
+      "maxPoints": 20,
+      "criteria": [
+        {
+          "id": "realizacja",
+          "name": "Realizacja tematu wypowiedzi",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\nWszystkie pozostałe elementy polecenia uwzględnione.\nWypowiedź w całości dotyczy problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\nNieuwzględniony jeden element polecenia (inny niż forma). ORAZ/LUB\nW pracy występują fragmenty niedotyczące problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Forma wypowiedzi niezgodna z formą wskazaną w poleceniu. ALBO\nNieuwzględnione co najmniej dwa elementy polecenia (inne niż forma)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tworcze",
+          "name": "Elementy twórcze",
+          "type": "levels",
+          "max": 5,
+          "levels": [
+            {
+              "points": 5,
+              "paths": [
+                "Funkcjonalna narracja.\nLogiczny układ zdarzeń.\nUrozmaicona fabuła, w tym funkcjonalne wykorzystanie co najmniej 6 spośród następujących elementów: opis, charakterystyka bohatera, czas akcji, miejsce akcji, zwrot akcji, puenta, punkt kulminacyjny, dialog, monolog, retrospekcja.\nTwórcze wykorzystanie treści lektury."
+              ]
+            },
+            {
+              "points": 4,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 3 pkt i niektóre na 5 pkt."
+              ]
+            },
+            {
+              "points": 3,
+              "paths": [
+                "Funkcjonalna narracja.\nLogiczny układ zdarzeń.\nProsta fabuła, w tym funkcjonalne wykorzystanie co najmniej 4 spośród następujących elementów: opis, charakterystyka bohatera, czas akcji, miejsce akcji, zwrot akcji, puenta, punkt kulminacyjny, dialog, monolog, retrospekcja."
+              ]
+            },
+            {
+              "points": 2,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 1 pkt i niektóre na 3 pkt."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Narracja częściowo funkcjonalna.\nDopuszczalne usterki w logicznym układzie zdarzeń.\nProsta fabuła."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompetencje",
+          "name": "Kompetencje literackie i kulturowe",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\nPoprawność rzeczowa."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\nALBO\nCzęściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\nALBO\nCzęściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\nDopuszczalne 1–2 błędy rzeczowe."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompozycja",
+          "name": "Kompozycja tekstu",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi.\nGraficznie wyodrębnione akapity.\nDopuszczalna 1 usterka w zakresie spójności ALBO logiki wypowiedzi, ALBO podziału wypowiedzi na funkcjonalne akapity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi.\nGraficznie wyodrębnione akapity.\nDopuszczalne łącznie 2–3 usterki w zakresie spójności ORAZ/ALBO logiki wypowiedzi."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "styl",
+          "name": "Styl",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Odpowiedni do treści i formy wypowiedzi.\nJednolity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Sporadyczne usterki w odpowiedniości ORAZ/LUB jednolitości stylu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia wymagań określonych na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jezyk",
+          "name": "Język",
+          "type": "matrix",
+          "max": 4,
+          "rows": "Szeroki zakres środków językowych, tzn. zróżnicowana składnia, zróżnicowana leksyka, w tym np. bogata frazeologia, precyzyjne słownictwo, umożliwiające pełną i swobodną realizację tematu.\nZadowalający zakres środków językowych, tzn. składnia i leksyka stosowne/odpowiednie do realizacji tematu.\nWąski zakres środków językowych, tzn. składnia i leksyka proste/ograniczone, utrudniające realizację tematu.",
+          "cols": "Nie więcej niż 4 błędy językowe\n5–7 błędów językowych\n8–10 błędów językowych\n11–13 błędów językowych\n14 lub więcej błędów językowych",
+          "table": {
+            "Szeroki zakres środków językowych, tzn. zróżnicowana składnia, zróżnicowana leksyka, w tym np. bogata frazeologia, precyzyjne słownictwo, umożliwiające pełną i swobodną realizację tematu.": {
+              "Nie więcej niż 4 błędy językowe": 4,
+              "5–7 błędów językowych": 3,
+              "8–10 błędów językowych": 2,
+              "11–13 błędów językowych": 1,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Zadowalający zakres środków językowych, tzn. składnia i leksyka stosowne/odpowiednie do realizacji tematu.": {
+              "Nie więcej niż 4 błędy językowe": 3,
+              "5–7 błędów językowych": 2,
+              "8–10 błędów językowych": 1,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Wąski zakres środków językowych, tzn. składnia i leksyka proste/ograniczone, utrudniające realizację tematu.": {
+              "Nie więcej niż 4 błędy językowe": 2,
+              "5–7 błędów językowych": 1,
+              "8–10 błędów językowych": 0,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            }
+          }
+        },
+        {
+          "id": "ortografia",
+          "name": "Ortografia",
+          "type": "error_count",
+          "max": 2,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 1,
+                "points": 2
+              },
+              {
+                "maxErrors": 3,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 3,
+                "points": 2
+              },
+              {
+                "maxErrors": 6,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "interpunkcja",
+          "name": "Interpunkcja",
+          "type": "error_count",
+          "max": 1,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 9,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 11,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        }
+      ],
+      "gates": [
+        {
+          "ifCriterion": "realizacja",
+          "equals": 0,
+          "thenAllOthers": 0
+        }
+      ]
+    }
+  ],
+  "audio": []
+}

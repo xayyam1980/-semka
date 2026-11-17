@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { app, ipcMain } from "electron";
 import type { StudentSettings } from "@osemka/schema";
 import { IPC, type AppInfo, type Scope } from "../shared/ipc";
@@ -45,6 +46,12 @@ export function registerIpc(ctx: { db: Db; dbFile: string; runs: number; content
 
   ipcMain.handle(IPC.listSessions, () => content.list());
   ipcMain.handle(IPC.getSession, (_e, id: unknown) => content.publicSession(str(id, "session id")) ?? null);
+  ipcMain.handle(IPC.getRecording, (_e, id: unknown) => {
+    const sessionId = str(id, "session id");
+    const rel = content.publicSession(sessionId)?.recording?.asset;
+    const file = rel ? content.assetPath(sessionId, rel) : undefined;
+    return file ? new Uint8Array(readFileSync(file)) : null;
+  });
 
   ipcMain.handle(IPC.listAttempts, (_e, sessionId: unknown) => at.list(sessionId === undefined ? undefined : str(sessionId, "session id")));
   ipcMain.handle(IPC.startPractice, (_e, sessionId: unknown, s: unknown) => at.startPractice(str(sessionId, "session id"), scope(s)));
