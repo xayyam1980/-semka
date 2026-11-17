@@ -1,6 +1,6 @@
 {
   "sessionId": "matematyka-2026-05-glowny",
-  "at": "2026-11-16T23:59:09.255Z",
+  "at": "2026-11-17T12:12:23.147Z",
   "model": "qwen · qwen3.8-max · token-plan.maas.qwencloudapi.com",
   "segmentation": {
     "sheetTasks": 20,
@@ -184,16 +184,16 @@
       "number": 15,
       "problems": [],
       "notes": [
-        "Klucz nie rozróżnia wersji X i Y dla tego zadania otwartego; podano jeden wpis keys (wersja X).",
-        "W IV sposobie rysunek pasków ilustrujących zależności między liczbami kartek zastąpono opisem w nawiasach kwadratowych; tabelę z V sposobu przepisano jako tabelę Markdown."
+        "W przykładowym rozwiązaniu IV sposób klucz zawiera ilustrację graficzną (paski) zależności między liczbami kartek; rysunku nie odwzorowano, zastąpiono go opisem słownym w nawiasach kwadratowych.",
+        "Klucz nie rozróżnia wersji X i Y dla tego zadania otwartego, dlatego podano jeden wpis keys z wersją X."
       ],
       "usage": {
-        "input": 13628,
-        "output": 11941,
+        "input": 13820,
+        "output": 10236,
         "cacheRead": 0,
         "cacheWrite": 0
       },
-      "cached": true
+      "cached": false
     },
     {
       "number": 16,
@@ -328,11 +328,22 @@
       "name": "Stimuli referenced by tasks exist",
       "ok": true,
       "details": []
+    },
+    {
+      "name": "No control characters in the text",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every formula renders",
+      "ok": true,
+      "details": []
     }
   ],
   "ok": true,
   "tokens": {
-    "input": 0,
-    "output": 0
-  }
+    "input": 13820,
+    "output": 10236
+  },
+  "approvedAt": "2026-11-17T12:18:46.505Z"
 }

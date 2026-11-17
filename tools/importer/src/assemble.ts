@@ -142,6 +142,11 @@ function linkFigures(text: string, refs: Map<string, string>, problems: string[]
   });
 }
 
+/** Normalises answer-slot markers ("[A B]", "[A|B]", "[[ C | D ]]") to the canonical "[[A|B]]". */
+export function normalizeSlots(text: string): string {
+  return text.replace(/\[\[?\s*([A-F1-4])\s*[|\s]\s*([A-F1-4])\s*\]\]?(?!\()/g, "[[$1|$2]]");
+}
+
 export function assemble(draft: DraftTask, expected: { number: number; maxPoints: number }, ctx: AssembleCtx): Assembled {
   const problems: string[] = [];
   const id = taskId(ctx.subjectId, ctx.year, expected.number);
@@ -153,7 +158,7 @@ export function assemble(draft: DraftTask, expected: { number: number; maxPoints
   // Figures become stimuli; the instruction refers to them as ![opis](stimulus:ID).
   const figures: Assembled["figures"] = [];
   const figRefs = new Map<string, string>();
-  let instruction = draft.instruction;
+  let instruction = normalizeSlots(draft.instruction);
   for (const f of draft.figures) {
     const page = ctx.sheetPageOf(f.imageIndex);
     if (page === undefined || f.box.length !== 4) {
@@ -190,7 +195,7 @@ export function assemble(draft: DraftTask, expected: { number: number; maxPoints
       id: draft.items.length === 1 ? id : `${id}-${d.label.split(".").at(-1)}`,
       label: d.label,
       maxPoints: d.maxPoints,
-      ...(d.prompt ? { prompt: linkFigures(d.prompt, figRefs, problems, `${d.label} prompt`) } : {}),
+      ...(d.prompt ? { prompt: linkFigures(normalizeSlots(d.prompt), figRefs, problems, `${d.label} prompt`) } : {}),
       response: response(d, ctx.subjectId),
       key: keys,
       scoring: scoring(d, problems),

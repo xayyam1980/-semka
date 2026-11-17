@@ -22,6 +22,7 @@ Rules:
 - Copy Polish text exactly as printed, including diacritics and the wording of instructions such as "Wybierz właściwą odpowiedź spośród podanych." Do not translate, shorten or fix it.
 - Write all mathematics in LaTeX between $…$ (for example $\\sqrt{100-64}-2$, $\\frac{48\\,\\text{km}}{40\\,\\text{min}}$). Keep units as printed.
 - Use Markdown only for paragraphs, bold that is bold in the sheet, lists and tables.
+- Inside JSON strings every LaTeX backslash must be escaped: write "\\\\frac", "\\\\cdot", "\\\\sqrt", never a single backslash (in JSON "\\f", "\\t", "\\n", "\\b", "\\r" are control characters).
 - Figures, charts and drawings are not redrawn: give their position as a box on the sheet page image and refer to them in the text as ![](fig:ID).
 - Answer boxes printed inside a sentence (for example a box with "A | B" or "C | D", or "P | F") are not figures: write them in the text as [[A|B]], [[C|D]] or [[P|F]].
 - Closed tasks marked on the answer card with codes: plain A–D is single_choice; two statements answered P/F with codes like "PF" is true_false (statements in order, ids "1", "2"); a choice from one group plus a choice from a second group with codes like "AD" or "B2" is choice_with_reason. Put the code exactly as the key prints it in keys[].answer.

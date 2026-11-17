@@ -1,3 +1,4 @@
 {
-  "6": "The two boxes in the sentences (A | B and C | D) are answer slots, not figures. Return no figures for this task and write the slots in the text as [[A|B]] and [[C|D]]."
+  "6": "The two boxes in the sentences (A | B and C | D) are answer slots, not figures. Return no figures for this task and write the slots in the text as [[A|B]] and [[C|D]].",
+  "15": "Some LaTeX in the model solution and the example solutions came out damaged (\\frac and \\cdot lost their backslash, and the inequality signs in the trial-and-error table were lost). Escape every LaTeX backslash in JSON (write \\\\frac, \\\\cdot), and write inequality signs as \\\\neq, \\\\lt, \\\\gt or plain < and >."
 }

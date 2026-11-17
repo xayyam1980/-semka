@@ -1,12 +1,46 @@
 // Stage 7: checks on the finished session before it may be published (see design/osemka-data-model.html §10).
 import { existsSync } from "node:fs";
 import { join } from "node:path";
+import katex from "katex";
 import { SessionBundle, type SkillTag, type Task } from "@osemka/schema";
 
 export interface Check {
   name: string;
   ok: boolean;
   details: string[];
+}
+
+/** Every string in the bundle, with a readable path, for text-level checks. */
+function strings(o: unknown, path: string, out: { path: string; text: string }[] = []): { path: string; text: string }[] {
+  if (typeof o === "string") out.push({ path, text: o });
+  else if (Array.isArray(o)) o.forEach((v, i) => strings(v, `${path}[${i}]`, out));
+  else if (o && typeof o === "object") for (const [k, v] of Object.entries(o)) strings(v, path ? `${path}.${k}` : k, out);
+  return out;
+}
+
+/** Math segments: $$…$$ and $…$. */
+export function mathSegments(text: string): { tex: string; display: boolean }[] {
+  const out: { tex: string; display: boolean }[] = [];
+  for (const m of text.matchAll(/\$\$([\s\S]+?)\$\$|\$([^$\n]+?)\$/g)) out.push({ tex: (m[1] ?? m[2])!, display: m[1] !== undefined });
+  return out;
+}
+
+/** Lines with an odd number of single "$" (outside $$…$$ blocks). */
+export function unclosedDollars(text: string): string[] {
+  return text
+    .replace(/\$\$[\s\S]+?\$\$/g, "")
+    .split("\n")
+    .filter((line) => (line.match(/(?<!\\)\$/g)?.length ?? 0) % 2 === 1);
+}
+
+/** Problems with a formula: KaTeX can't parse it. */
+export function formulaProblem(tex: string, display: boolean): string | undefined {
+  try {
+    katex.renderToString(tex, { throwOnError: true, displayMode: display, strict: "ignore" });
+    return undefined;
+  } catch (e) {
+    return (e as Error).message.replace(/^KaTeX parse error: /, "").slice(0, 120);
+  }
 }
 
 function optionTexts(r: Task["items"][number]["response"]): string[] {
@@ -111,6 +145,25 @@ export function validateBundle(
   add(
     "Stimuli referenced by tasks exist",
     tasks.flatMap((t) => t.stimulusIds.filter((id) => !stimuli.some((s) => s.id === id)).map((id) => `Zadanie ${t.number}: ${id}`)),
+  );
+
+  // Text checks on tasks only (session metadata holds paths and hashes).
+  const texts = strings(tasks, "tasks");
+  add(
+    "No control characters in the text",
+    // Typical cause: a LaTeX command such as \\frac written with one backslash inside JSON (\\f is a form feed).
+    texts.filter((t) => /[\u0000-\u0008\u000b\u000c\u000e-\u001f]/.test(t.text)).map((t) => `${t.path}: ${JSON.stringify(t.text.match(/.{0,20}[\u0000-\u0008\u000b\u000c\u000e-\u001f].{0,12}/s)?.[0])}`),
+  );
+  add(
+    "Every formula renders",
+    texts.flatMap((t) => [
+      ...mathSegments(t.text).flatMap((m) => {
+        const p = formulaProblem(m.tex, m.display);
+        return p ? [`${t.path}: $${m.tex.slice(0, 40)}$: ${p}`] : [];
+      }),
+      // A "$" that opens on a line and never closes there means the formula was split (e.g. by a stray line break).
+      ...unclosedDollars(t.text).map((line) => `${t.path}: unclosed $ in "${line.slice(0, 60)}"`),
+    ]),
   );
 
   return { checks, ok: checks.every((c) => c.ok) };

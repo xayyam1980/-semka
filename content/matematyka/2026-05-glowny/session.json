@@ -52,8 +52,8 @@
         "pages": 26
       }
     ],
-    "status": "draft",
-    "contentVersion": "c39629c1684b1e2f"
+    "contentVersion": "96ed925136ca91a0",
+    "status": "published"
   },
   "stimuli": [
     {
@@ -557,7 +557,7 @@
       "sessionId": "matematyka-2026-05-glowny",
       "number": 8,
       "maxPoints": 1,
-      "instruction": "Sumę $S = 1 + 2 + 3 + \\ldots + n$ kolejnych liczb naturalnych od $1$ do $n$ można obliczyć ze wzoru\n\n$S = \\frac{1}{2} n(n + 1)$\n\n**Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nSuma stu kolejnych liczb naturalnych od $1$ do $100$ jest równa [A B].\n\nWzór na sumę $S$ po poprawnym przekształceniu ma postać [C D].",
+      "instruction": "Sumę $S = 1 + 2 + 3 + \\ldots + n$ kolejnych liczb naturalnych od $1$ do $n$ można obliczyć ze wzoru\n\n$S = \\frac{1}{2} n(n + 1)$\n\n**Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nSuma stu kolejnych liczb naturalnych od $1$ do $100$ jest równa [[A|B]].\n\nWzór na sumę $S$ po poprawnym przekształceniu ma postać [[C|D]].",
       "stimulusIds": [],
       "items": [
         {
@@ -979,7 +979,7 @@
       "sessionId": "matematyka-2026-05-glowny",
       "number": 15,
       "maxPoints": 2,
-      "instruction": "Do wykonania origami Ela przygotowała łącznie $160$ kartek. Każda z tych kartek była w jednym z czterech kolorów: białym, niebieskim, zielonym lub czerwonym. Kartek białych było $37$. Kartek niebieskich było $1,5$ raza więcej niż czerwonych, a kartek zielonych było o $10$ mniej niż czerwonych.\n\n**Oblicz, ile kartek niebieskich przygotowała Ela. Zapisz obliczenia.**",
+      "instruction": "Do wykonania origami Ela przygotowała łącznie 160 kartek. Każda z tych kartek była w jednym z czterech kolorów: białym, niebieskim, zielonym lub czerwonym. Kartek białych było 37. Kartek niebieskich było 1,5 raza więcej niż czerwonych, a kartek zielonych było o 10 mniej niż czerwonych.\n\n**Oblicz, ile kartek niebieskich przygotowała Ela. Zapisz obliczenia.**",
       "stimulusIds": [],
       "items": [
         {
@@ -992,7 +992,7 @@
           "key": {
             "X": {
               "type": "model_solution",
-              "solution": "**I sposób**\nKartek w czterech kolorach było razem $160$.\nKartek białych było $37$.\nLiczbę kartek czerwonych oznaczymy jako $x$.\nZapiszemy wyrażenia algebraiczne opisujące liczby kartek niebieskich i zielonych:\n$1,5x$ – liczba kartek niebieskich\n$x - 10$ – liczba kartek zielonych\nObliczymy liczbę kartek czerwonych.\nZapiszemy i rozwiążemy równanie spełniające wszystkie warunki zadania:\n$x + 1,5x + (x - 10) + 37 = 160$\n$3,5x = 160 - 37 + 10$\n$3,5x = 133$\n$x = 38$\nObliczymy liczbę kartek niebieskich:\n$1,5 \ncdot 38 = 57$\nOdpowiedź: Ela przygotowała $57$ kartek niebieskich."
+              "solution": "I sposób\nKartek w czterech kolorach było razem 160.\nKartek białych było 37.\nLiczbę kartek czerwonych oznaczymy jako $x$.\nZapiszemy wyrażenia algebraiczne opisujące liczby kartek niebieskich i zielonych:\n$1,5x$ – liczba kartek niebieskich\n$x - 10$ – liczba kartek zielonych\nObliczymy liczbę kartek czerwonych.\nZapiszemy i rozwiążemy równanie spełniające wszystkie warunki zadania:\n$x + 1,5x + (x - 10) + 37 = 160$\n$3,5x = 160 - 37 + 10$\n$3,5x = 133$\n$x = 38$\nObliczymy liczbę kartek niebieskich:\n$1,5 \\cdot 38 = 57$\nOdpowiedź: Ela przygotowała 57 kartek niebieskich."
             }
           },
           "scoring": {
@@ -1001,15 +1001,15 @@
               {
                 "points": 2,
                 "paths": [
-                  "poprawny sposób obliczenia liczby kartek niebieskich przygotowanych przez Elę, prawidłowe obliczenia **oraz** prawidłowy wynik liczbowy $(57)$",
-                  "zastosowanie metody prób i błędów – sprawdzenie wszystkich warunków zadania dla co najmniej dwóch różnych zestawów liczb kartek poszczególnych kolorów (czerwone, niebieskie, zielone, białe), wśród których **jest** prawidłowa liczba kartek niebieskich, prawidłowe obliczenia **oraz** wskazanie spośród nich prawidłowego wyniku liczbowego $(57)$."
+                  "poprawny sposób obliczenia liczby kartek niebieskich przygotowanych przez Elę,\nprawidłowe obliczenia **oraz** prawidłowy wynik liczbowy (57)",
+                  "zastosowanie metody prób i błędów – sprawdzenie wszystkich warunków zadania dla co najmniej dwóch różnych zestawów liczb kartek poszczególnych kolorów (czerwone, niebieskie, zielone, białe), wśród których **jest** prawidłowa liczba kartek niebieskich,\nprawidłowe obliczenia **oraz** wskazanie spośród nich prawidłowego wyniku liczbowego (57)."
                 ]
               },
               {
                 "points": 1,
                 "paths": [
-                  "zapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia liczby kartek w jednym spośród trzech kolorów: czerwonym albo niebieskim, albo zielonym, np. $x + 1,5x + (x - 10) + 37 = 160$, gdzie $x$ oznacza liczbę kartek czerwonych albo $n + n : 1,5 + (n : 1,5 - 10) + 37 = 160$, gdzie $n$ oznacza liczbę kartek niebieskich, albo $z + (z + 10) + 1,5 · (z + 10) + 37 = 160$, gdzie $z$ oznacza liczbę kartek zielonych (lub zapisy równoważne)",
-                  "zapisanie poprawnego wyrażenia arytmetycznego prowadzącego do obliczenia liczby kartek czerwonych, np. $(160 - 37 + 10) : 3,5$,",
+                  "zapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia liczby kartek w jednym spośród trzech kolorów: czerwonym albo niebieskim, albo zielonym, np.\n$x + 1,5x + (x - 10) + 37 = 160$, gdzie $x$ oznacza liczbę kartek czerwonych\nalbo\n$n + n : 1,5 + (n : 1,5 - 10) + 37 = 160$, gdzie $n$ oznacza liczbę kartek niebieskich,\nalbo\n$z + (z + 10) + 1,5 \\cdot (z + 10) + 37 = 160$, gdzie $z$ oznacza liczbę kartek zielonych\n(lub zapisy równoważne)",
+                  "zapisanie poprawnego wyrażenia arytmetycznego prowadzącego do obliczenia liczby kartek czerwonych, np.\n$(160 - 37 + 10) : 3,5$,",
                   "zastosowanie metody prób i błędów – sprawdzenie wszystkich warunków zadania dla co najmniej dwóch różnych zestawów liczb kartek poszczególnych kolorów (czerwone, niebieskie, zielone, białe), wśród których **nie ma** prawidłowej liczby kartek niebieskich,",
                   "zastosowanie metody prób i błędów – sprawdzenie wszystkich warunków zadania dla co najmniej dwóch różnych zestawów liczb kartek poszczególnych kolorów (czerwone, niebieskie, zielone, białe), wśród których **jest** prawidłowa liczba kartek niebieskich **bez wskazania** prawidłowego wyniku liczbowego."
                 ]
@@ -1027,13 +1027,10 @@
             "ma-46-XIV.5",
             "ma-78-VI.4"
           ],
-          "scoringNotes": [
-            "Uwaga: Jeżeli uczeń sprawdza wszystkie warunki zadania tylko dla jednego zestawu liczb kartek poszczególnych kolorów: czerwone $38$, niebieskie $57$, zielone $28$, białe $37$, i nie popełnia błędów rachunkowych, to otrzymuje 1 punkt."
-          ],
           "exemplars": [
             {
               "points": 2,
-              "content": "**I sposób**\nKartek w czterech kolorach było razem $160$.\nKartek białych było $37$.\nLiczbę kartek czerwonych oznaczymy jako $x$.\nZapiszemy wyrażenia algebraiczne opisujące liczby kartek niebieskich i zielonych:\n$1,5x$ – liczba kartek niebieskich\n$x - 10$ – liczba kartek zielonych\nObliczymy liczbę kartek czerwonych.\nZapiszemy i rozwiążemy równanie spełniające wszystkie warunki zadania:\n$x + 1,5x + (x - 10) + 37 = 160$\n$3,5x = 160 - 37 + 10$\n$3,5x = 133$\n$x = 38$\nObliczymy liczbę kartek niebieskich:\n$1,5 · 38 = 57$\nOdpowiedź: Ela przygotowała $57$ kartek niebieskich.",
+              "content": "I sposób\nKartek w czterech kolorach było razem 160.\nKartek białych było 37.\nLiczbę kartek czerwonych oznaczymy jako $x$.\nZapiszemy wyrażenia algebraiczne opisujące liczby kartek niebieskich i zielonych:\n$1,5x$ – liczba kartek niebieskich\n$x - 10$ – liczba kartek zielonych\nObliczymy liczbę kartek czerwonych.\nZapiszemy i rozwiążemy równanie spełniające wszystkie warunki zadania:\n$x + 1,5x + (x - 10) + 37 = 160$\n$3,5x = 160 - 37 + 10$\n$3,5x = 133$\n$x = 38$\nObliczymy liczbę kartek niebieskich:\n$1,5 \\cdot 38 = 57$\nOdpowiedź: Ela przygotowała 57 kartek niebieskich.",
               "ref": {
                 "source": "klucz",
                 "page": 11
@@ -1041,7 +1038,7 @@
             },
             {
               "points": 2,
-              "content": "**II sposób**\nKartek w czterech kolorach było razem $160$.\nKartek białych było $37$.\nLiczbę kartek niebieskich oznaczymy jako $n$.\nZapiszemy wyrażenia algebraiczne opisujące liczby kartek czerwonych i zielonych:\n$n : 1,5$ – liczba kartek czerwonych\n$n : 1,5 - 10$ – liczba kartek zielonych\nObliczymy liczbę kartek niebieskich.\nZapiszemy i rozwiążemy równanie spełniające wszystkie warunki zadania:\n$n + n : 1,5 + (n : 1,5 - 10) + 37 = 160$\n$n + \u0002rac{2}{3}n + \u0002rac{2}{3}n - 10 = 160 - 37$\n$\u0002rac{7}{3}n = 133$\n$n = 57$\nOdpowiedź: Ela przygotowała $57$ kartek niebieskich.",
+              "content": "II sposób\nKartek w czterech kolorach było razem 160.\nKartek białych było 37.\nLiczbę kartek niebieskich oznaczymy jako $n$.\nZapiszemy wyrażenia algebraiczne opisujące liczby kartek czerwonych i zielonych:\n$n : 1,5$ – liczba kartek czerwonych\n$n : 1,5 - 10$ – liczba kartek zielonych\nObliczymy liczbę kartek niebieskich.\nZapiszemy i rozwiążemy równanie spełniające wszystkie warunki zadania:\n$n + n : 1,5 + (n : 1,5 - 10) + 37 = 160$\n$n + \\frac{2}{3}n + \\frac{2}{3}n - 10 = 160 - 37$\n$\\frac{7}{3}n = 133$\n$n = 57$\nOdpowiedź: Ela przygotowała 57 kartek niebieskich.",
               "ref": {
                 "source": "klucz",
                 "page": 11
@@ -1049,7 +1046,7 @@
             },
             {
               "points": 2,
-              "content": "**III sposób**\nKartek w czterech kolorach było razem $160$.\nKartek białych było $37$.\nLiczbę kartek zielonych oznaczymy jako $z$.\nZapiszemy wyrażenia algebraiczne opisujące liczby kartek czerwonych i niebieskich:\n$z + 10$ – liczba kartek czerwonych\n$1,5 · (z + 10)$ – liczba kartek niebieskich\nObliczymy liczbę kartek zielonych.\nZapiszemy i rozwiążemy równanie spełniające wszystkie warunki zadania:\n$z + (z + 10) + 1,5 · (z + 10) + 37 = 160$\n$z + z + 10 + 1,5z + 15 + 37 = 160$\n$3,5z = 98$\n$z = 28$\nObliczymy liczbę kartek niebieskich:\n$1,5 · (28 + 10) = 57$\nOdpowiedź: Ela przygotowała $57$ kartek niebieskich.",
+              "content": "III sposób\nKartek w czterech kolorach było razem 160.\nKartek białych było 37.\nLiczbę kartek zielonych oznaczymy jako $z$.\nZapiszemy wyrażenia algebraiczne opisujące liczby kartek czerwonych i niebieskich:\n$z + 10$ – liczba kartek czerwonych\n$1,5 \\cdot (z + 10)$ – liczba kartek niebieskich\nObliczymy liczbę kartek zielonych.\nZapiszemy i rozwiążemy równanie spełniające wszystkie warunki zadania:\n$z + (z + 10) + 1,5 \\cdot (z + 10) + 37 = 160$\n$z + z + 10 + 1,5z + 15 + 37 = 160$\n$3,5z = 98$\n$z = 28$\nObliczymy liczbę kartek niebieskich:\n$1,5 \\cdot (28 + 10) = 57$\nOdpowiedź: Ela przygotowała 57 kartek niebieskich.",
               "ref": {
                 "source": "klucz",
                 "page": 12
@@ -1057,7 +1054,7 @@
             },
             {
               "points": 2,
-              "content": "**IV sposób**\nKartek w czterech kolorach było razem $160$.\nKartek białych było $37$.\nZilustrujemy graficznie zależności między liczbami kartek w trzech kolorach:\nczerwone: [pasek]\nniebieskie: [pasek o połowę dłuższy]\nzielone: [pasek] $- 10$\nObliczymy liczbę kartek czerwonych:\n$(160 - 37 + 10) : 3,5 = 38$\nObliczymy liczbę kartek niebieskich:\n$1,5 · 38 = 57$\nOdpowiedź: Ela przygotowała $57$ kartek niebieskich.",
+              "content": "IV sposób\nKartek w czterech kolorach było razem 160.\nKartek białych było 37.\nZilustrujemy graficznie zależności między liczbami kartek w trzech kolorach (paski: czerwone – jeden odcinek, niebieskie – jeden i pół odcinka, zielone – jeden odcinek pomniejszony o 10):\nczerwone: [pasek]\nniebieskie: [pasek i pół paska]\nzielone: [pasek] $- 10$\nObliczymy liczbę kartek czerwonych:\n$(160 - 37 + 10) : 3,5 = 38$\nObliczymy liczbę kartek niebieskich:\n$1,5 \\cdot 38 = 57$\nOdpowiedź: Ela przygotowała 57 kartek niebieskich.",
               "ref": {
                 "source": "klucz",
                 "page": 12
@@ -1065,12 +1062,15 @@
             },
             {
               "points": 2,
-              "content": "**V sposób**\nMetoda prób i błędów:\n\n| Liczba kartek z uwzględnieniem warunków zadania | | | | Liczba wszystkich kartek | |\n|---|---|---|---|---|---|\n| czerwonych | niebieskich 1,5 razy więcej niż czerwonych | zielonych o 10 mniej niż czerwonych | białych | suma | sprawdzenie |\n| $30$ | $45$ | $20$ | $37$ | $132$ | $132 \u0000 160$ |\n| $40$ | $60$ | $30$ | $37$ | $167$ | $167 \u0000 160$ |\n| **$38$** | **$57$** | **$28$** | **$37$** | **$160$** | **$160 = 160$** |\n\nOdpowiedź: Ela przygotowała $57$ kartek niebieskich.",
+              "content": "V sposób\nMetoda prób i błędów:\n\n| czerwonych | niebieskich 1,5 razy więcej niż czerwonych | zielonych o 10 mniej niż czerwonych | białych | suma | sprawdzenie |\n|---|---|---|---|---|---|\n| 30 | 45 | 20 | 37 | 132 | $132 \\neq 160$ |\n| 40 | 60 | 30 | 37 | 167 | $167 \\neq 160$ |\n| **38** | **57** | **28** | **37** | **160** | **$160 = 160$** |\n\nOdpowiedź: Ela przygotowała 57 kartek niebieskich.",
               "ref": {
                 "source": "klucz",
                 "page": 13
               }
             }
+          ],
+          "scoringNotes": [
+            "Jeżeli uczeń sprawdza wszystkie warunki zadania tylko dla jednego zestawu liczb kartek poszczególnych kolorów: czerwone 38, niebieskie 57, zielone 28, białe 37, i nie popełnia błędów rachunkowych, to otrzymuje 1 punkt."
           ]
         }
       ],
@@ -1147,9 +1147,6 @@
             "ma-gen-IV",
             "ma-46-XII.9"
           ],
-          "scoringNotes": [
-            "Błąd w zamianie jednostek lub zapisanie niewłaściwej jednostki w wyniku końcowym traktuje się jako błąd rachunkowy."
-          ],
           "exemplars": [
             {
               "points": 3,
@@ -1199,6 +1196,9 @@
                 "page": 17
               }
             }
+          ],
+          "scoringNotes": [
+            "Błąd w zamianie jednostek lub zapisanie niewłaściwej jednostki w wyniku końcowym traktuje się jako błąd rachunkowy."
           ]
         }
       ],
@@ -1360,9 +1360,6 @@
             "ma-78-XI.2",
             "ma-78-III.3"
           ],
-          "scoringNotes": [
-            "Jeśli uczeń do rozwiązania zadania wykonuje obliczenia wyłącznie na konkretnych liczbach, to otrzymuje 0 punktów."
-          ],
           "exemplars": [
             {
               "points": 2,
@@ -1388,6 +1385,9 @@
                 "page": 22
               }
             }
+          ],
+          "scoringNotes": [
+            "Jeśli uczeń do rozwiązania zadania wykonuje obliczenia wyłącznie na konkretnych liczbach, to otrzymuje 0 punktów."
           ]
         }
       ],
@@ -1457,10 +1457,6 @@
             "ma-46-XI.3",
             "ma-46-XIV.5"
           ],
-          "scoringNotes": [
-            "1. Nie ocenia się stosowania jednostek. Błąd w zamianie jednostek traktuje się jako błąd rachunkowy.",
-            "2. Jeżeli uczeń przedstawia niepoprawny sposób obliczenia pola powierzchni ogródka i otrzyma wynik, który a) nie jest wielokrotnością liczby 25, a następnie zgodnie z otrzymanym wynikiem poprawnie oblicza minimalną liczbę opakowań z nasionami potrzebnych na obsianie jego powierzchni oraz doprowadza rozwiązanie zadania do końca bez błędów rachunkowych, to za całe rozwiązanie zadania otrzymuje 1 punkt. b) jest wielokrotnością liczby 25, to za całe rozwiązanie zadania otrzymuje 0 punktów."
-          ],
           "exemplars": [
             {
               "points": 3,
@@ -1478,6 +1474,10 @@
                 "page": 23
               }
             }
+          ],
+          "scoringNotes": [
+            "1. Nie ocenia się stosowania jednostek. Błąd w zamianie jednostek traktuje się jako błąd rachunkowy.",
+            "2. Jeżeli uczeń przedstawia niepoprawny sposób obliczenia pola powierzchni ogródka i otrzyma wynik, który a) nie jest wielokrotnością liczby 25, a następnie zgodnie z otrzymanym wynikiem poprawnie oblicza minimalną liczbę opakowań z nasionami potrzebnych na obsianie jego powierzchni oraz doprowadza rozwiązanie zadania do końca bez błędów rachunkowych, to za całe rozwiązanie zadania otrzymuje 1 punkt. b) jest wielokrotnością liczby 25, to za całe rozwiązanie zadania otrzymuje 0 punktów."
           ]
         }
       ],
@@ -1552,10 +1552,6 @@
             "ma-78-II.4",
             "ma-78-VIII.7"
           ],
-          "scoringNotes": [
-            "1. Nie akceptuje się rozwiązań zadania opartych na pomiarze, np. linijką.",
-            "2. Jeżeli uczeń rozwiązuje zadanie bez błędów rachunkowych, ale do obliczenia obwodu równoległoboku stosuje przybliżenia pierwiastków, to za rozwiązanie zadania otrzymuje 2 punkty."
-          ],
           "exemplars": [
             {
               "points": 3,
@@ -1573,6 +1569,10 @@
                 "page": 25
               }
             }
+          ],
+          "scoringNotes": [
+            "1. Nie akceptuje się rozwiązań zadania opartych na pomiarze, np. linijką.",
+            "2. Jeżeli uczeń rozwiązuje zadanie bez błędów rachunkowych, ale do obliczenia obwodu równoległoboku stosuje przybliżenia pierwiastków, to za rozwiązanie zadania otrzymuje 2 punkty."
           ]
         }
       ],
