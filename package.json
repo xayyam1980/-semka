@@ -12,6 +12,9 @@
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r test",
     "smoke": "pnpm --filter @osemka/desktop smoke",
-    "importer": "pnpm --filter @osemka/importer importer"
+    "importer": "pnpm --filter @osemka/importer importer",
+    "dist:mac": "pnpm --filter @osemka/desktop dist:mac",
+    "dist:win": "pnpm --filter @osemka/desktop dist:win",
+    "dist:win:mac": "pnpm --filter @osemka/desktop dist:win:mac"
   }
 }
