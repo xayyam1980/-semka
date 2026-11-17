@@ -1,7 +1,7 @@
 // Turns AI drafts into content-schema tasks, stimuli (figures) and skill tags.
 // Every conversion that can fail is reported as a problem rather than guessed.
-import type { Item, KeySpec, ResponseSpec, ScoringRule, SheetVersion, SkillTag, Stimulus, SubjectId, Task } from "@osemka/schema";
-import type { DraftItem, DraftTask } from "./draft.ts";
+import type { Criterion, Item, KeySpec, ResponseSpec, Rubric, ScoringRule, SheetVersion, SkillTag, Stimulus, SubjectId, Task } from "@osemka/schema";
+import type { DraftEssay, DraftItem, DraftTask } from "./draft.ts";
 
 const PREFIX: Record<SubjectId, string> = { matematyka: "ma", polski: "pl", angielski: "en" };
 
@@ -16,10 +16,13 @@ export interface AssembleCtx {
   fromPage: number;
   /** Where the task text was read from: the sheet, or the open-task booklet in math. */
   sheetSource: "arkusz" | "karta_otwarte";
+  /** Shared reading texts this task belongs to (linked by position on the sheet). */
+  stimulusIds?: string[];
 }
 
 export interface Assembled {
   task: Task;
+  rubrics: Rubric[];
   figures: { stimulus: Stimulus; sheetPage: number; box: [number, number, number, number] }[];
   tags: SkillTag[];
   problems: string[];
@@ -35,7 +38,8 @@ export function taskId(subjectId: SubjectId, year: number, n: number): string {
 /** "XII. Obliczenia praktyczne." → { roman: "XII", name: "Obliczenia praktyczne" } */
 function splitRoman(s: string | null): { roman: string; name: string } | undefined {
   if (!s) return undefined;
-  const m = /^\s*([IVXL]+)\.\s*(.+?)\.?\s*(Uczeń:?)?\s*$/.exec(s.replace(/\s+/g, " "));
+  // Math sections use Roman numerals ("XII. Obliczenia praktyczne."), Polish ones Arabic ("2. Odbiór tekstów kultury.").
+  const m = /^\s*([IVXL]+|\d+)\.\s*(.+?)\.?\s*(Uczeń:?)?\s*$/.exec(s.replace(/\s+/g, " "));
   return m ? { roman: m[1]!, name: m[2]!.replace(/\.\s*Uczeń.*$/, "").trim() } : undefined;
 }
 
@@ -64,7 +68,7 @@ export function tagsFor(subjectId: SubjectId, req: DraftItem["requirements"][num
   return tags;
 }
 
-function response(d: DraftItem, subjectId: SubjectId): ResponseSpec {
+function response(d: DraftItem, subjectId: SubjectId, essay: DraftEssay | null): ResponseSpec {
   switch (d.responseType) {
     case "single_choice": return { type: "single_choice", options: d.options };
     case "true_false": return { type: "true_false", statements: d.statements };
@@ -72,7 +76,13 @@ function response(d: DraftItem, subjectId: SubjectId): ResponseSpec {
     case "matching": return { type: "matching", slots: d.slots, options: d.options };
     case "short_text": return { type: "short_text", gaps: Math.max(1, d.gaps), language: subjectId === "angielski" ? "en" : "pl" };
     case "worked_solution": return { type: "worked_solution" };
-    case "extended_text": return { type: "extended_text" };
+    case "extended_text":
+      return {
+        type: "extended_text",
+        ...(essay?.minWords ? { minWords: essay.minWords } : {}),
+        // A topic picker only when there is a choice (one-topic tasks, e.g. an announcement, have none).
+        ...(essay && essay.topics.length > 1 ? { topics: essay.topics.map((t) => ({ id: t.id, text: t.text, ...(t.form ? { form: t.form } : {}) })) } : {}),
+      };
   }
 }
 
@@ -113,7 +123,7 @@ function key(d: DraftItem, k: DraftItem["keys"][number], problems: string[]): Ke
   }
 }
 
-function scoring(d: DraftItem, problems: string[]): ScoringRule {
+function scoring(d: DraftItem, problems: string[], rubricIds: { topic: string | null; rubricId: string }[]): ScoringRule {
   switch (d.scoring.type) {
     case "levels": {
       const levels = [...d.scoring.levels].sort((a, b) => b.points - a.points);
@@ -126,7 +136,9 @@ function scoring(d: DraftItem, problems: string[]): ScoringRule {
       return { type: "per_part", pointsEach: d.maxPoints / parts };
     }
     case "text_match": return { type: "text_match", strictness: "communicative" };
-    case "rubric": return { type: "rubric", rubricId: `rubric-${d.label}` };
+    case "rubric":
+      if (!rubricIds.length) problems.push(`${d.label}: scored by a rubric, but the AI returned no rubric`);
+      return { type: "rubric", rubrics: rubricIds.length ? rubricIds : [{ topic: null, rubricId: "missing" }] };
     case "all_or_nothing": return { type: "all_or_nothing" };
   }
 }
@@ -145,6 +157,34 @@ function linkFigures(text: string, refs: Map<string, string>, problems: string[]
 /** Normalises answer-slot markers ("[A B]", "[A|B]", "[[ C | D ]]") to the canonical "[[A|B]]". */
 export function normalizeSlots(text: string): string {
   return text.replace(/\[\[?\s*([A-F1-4])\s*[|\s]\s*([A-F1-4])\s*\]\]?(?!\()/g, "[[$1|$2]]");
+}
+
+/** Turns the AI's essay section into one validated rubric per topic. */
+export function buildRubrics(taskId: string, maxPoints: number, essay: DraftEssay, problems: string[]): Rubric[] {
+  return essay.topics.map((topic) => {
+    const criteria: Criterion[] = topic.criteria.map((c) => {
+      if (c.type === "error_count") {
+        const std = [...c.standardThresholds].sort((a, b) => a.maxErrors - b.maxErrors);
+        const dys = [...(c.dyslexiaThresholds.length ? c.dyslexiaThresholds : c.standardThresholds)].sort((a, b) => a.maxErrors - b.maxErrors);
+        if (!std.length) problems.push(`Temat ${topic.id}, ${c.name}: no error thresholds`);
+        return { id: c.id, name: c.name, type: "error_count", max: c.max, thresholds: { standard: std, dyslexia: dys } };
+      }
+      if (c.type === "matrix") {
+        const table: Record<string, Record<string, number>> = {};
+        for (const cell of c.matrix?.cells ?? []) (table[cell.row] ??= {})[cell.col] = cell.points;
+        if (!c.matrix) problems.push(`Temat ${topic.id}, ${c.name}: matrix criterion without a table`);
+        return { id: c.id, name: c.name, type: "matrix", max: c.max, rows: c.matrix?.rows ?? "", cols: c.matrix?.cols ?? "", table };
+      }
+      const levels = [...c.levels].sort((a, b) => b.points - a.points);
+      if (levels[0]?.points !== c.max) problems.push(`Temat ${topic.id}, ${c.name}: top level ${levels[0]?.points}, criterion max ${c.max}`);
+      if (levels.at(-1)?.points !== 0) problems.push(`Temat ${topic.id}, ${c.name}: no 0-point level`);
+      return { id: c.id, name: c.name, type: "levels", max: c.max, levels };
+    });
+    const sum = criteria.reduce((a, c) => a + c.max, 0);
+    if (sum !== maxPoints) problems.push(`Temat ${topic.id}: criteria add up to ${sum}, the essay is worth ${maxPoints}`);
+    for (const g of topic.gates) if (!criteria.some((c) => c.id === g.ifCriterion)) problems.push(`Temat ${topic.id}: gate refers to unknown criterion ${g.ifCriterion}`);
+    return { id: `${taskId}-t${topic.id}`, maxPoints, criteria, gates: topic.gates };
+  });
 }
 
 export function assemble(draft: DraftTask, expected: { number: number; maxPoints: number }, ctx: AssembleCtx): Assembled {
@@ -176,13 +216,16 @@ export function assemble(draft: DraftTask, expected: { number: number; maxPoints
   }
   instruction = linkFigures(instruction, figRefs, problems, "instruction");
 
+  const rubrics = draft.essay ? buildRubrics(id, expected.maxPoints, draft.essay, problems) : [];
+  const rubricIds = rubrics.map((r, i) => ({ topic: draft.essay!.topics.length > 1 ? draft.essay!.topics[i]!.id : null, rubricId: r.id }));
   const tagMap = new Map<string, SkillTag>();
   const items: Item[] = draft.items.map((d) => {
     const itemTags = d.requirements.flatMap((r) => tagsFor(ctx.subjectId, r));
     for (const t of itemTags) tagMap.set(t.id, t);
     if (!itemTags.length) problems.push(`${d.label}: no skill tag could be derived`);
     const keys: Item["key"] = {};
-    for (const v of ctx.versions) {
+    // Items scored by a rubric (essays) have no answer key: the rubric is the key.
+    for (const v of d.scoring.type === "rubric" ? [] : ctx.versions) {
       const k = d.keys.find((x) => x.version === v);
       if (!k) {
         problems.push(`${d.label}: no key for version ${v}`);
@@ -196,9 +239,9 @@ export function assemble(draft: DraftTask, expected: { number: number; maxPoints
       label: d.label,
       maxPoints: d.maxPoints,
       ...(d.prompt ? { prompt: linkFigures(normalizeSlots(d.prompt), figRefs, problems, `${d.label} prompt`) } : {}),
-      response: response(d, ctx.subjectId),
+      response: response(d, ctx.subjectId, draft.essay),
       key: keys,
-      scoring: scoring(d, problems),
+      scoring: scoring(d, problems, rubricIds),
       skillTags: [...new Set(itemTags.map((t) => t.id))],
       // Sheet versions are an importer detail; students never see "(wersja X)".
       ...(d.explanation ? { explanation: d.explanation.replace(/\s*\((?:dla )?wersj[ia] [XY](?: arkusza)?\)/g, "") } : {}),
@@ -221,11 +264,11 @@ export function assemble(draft: DraftTask, expected: { number: number; maxPoints
     number: expected.number,
     maxPoints: expected.maxPoints,
     instruction,
-    stimulusIds: figures.map((f) => f.stimulus.id),
+    stimulusIds: [...(ctx.stimulusIds ?? []), ...figures.map((f) => f.stimulus.id)],
     items,
     format: draft.format,
     skillTags: [...new Set(items.flatMap((i) => i.skillTags ?? []))],
     ref: { source: ctx.sheetSource, page: ctx.fromPage },
   };
-  return { task, figures, tags: [...tagMap.values()], problems, notes: draft.notes };
+  return { task, rubrics, figures, tags: [...tagMap.values()], problems, notes: draft.notes };
 }

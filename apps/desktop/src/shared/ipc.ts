@@ -1,6 +1,7 @@
 // The only functions the app window can call. Implemented in src/main/ipc.ts, exposed by src/preload.
 // Tasks reach the window without keys; answers are checked in the main process.
-import type { Exemplar, Item, KeySpec, Level, Mode, ResponseSpec, ResponseValue, StudentSettings, SubjectId, Task } from "@osemka/schema";
+import type { Exemplar, Item, KeySpec, Level, Mode, ResponseSpec, ResponseValue, Rubric, StudentSettings, SubjectId, Task } from "@osemka/schema";
+import type { RubricInput, RubricResult } from "@osemka/scoring";
 import type { AttemptTotals, ItemOutcome } from "@osemka/scoring";
 
 export interface AppInfo {
@@ -52,8 +53,13 @@ export interface PublicStimulus {
   id: string;
   kind: string;
   title?: string;
+  author?: string;
   asset?: string;
   lines?: string[];
+  lineNumbering?: "every" | "every5" | "none";
+  source?: string;
+  footnotes?: { mark: string; text: string }[];
+  wordCount?: number;
 }
 
 export interface PublicSession {
@@ -96,6 +102,8 @@ export interface SavedResponse {
   selfPoints?: number | null;
   gradeSource?: "self" | "ai_accepted" | "self_over_ai";
   aiSuggestion?: AiSuggestion;
+  /** Essays: what the student chose per criterion, to show the grading again. */
+  rubricGrade?: { topic: string | null; input: RubricInput; result: RubricResult };
 }
 
 export interface AiSuggestion {
@@ -148,6 +156,10 @@ export interface CheckResult {
     scoringNotes?: string[];
     levels?: Level[];
     exemplars?: Exemplar[];
+    /** Essays: the rubric for each topic (the window shows the one for the chosen topic). */
+    rubrics?: { topic: string | null; rubric: Rubric }[];
+    /** Whether this attempt uses the thresholds for students with dyslexia. */
+    dyslexia?: boolean;
   };
 }
 
@@ -177,6 +189,8 @@ export interface OsemkaApi {
   setAiKey(key: string | null): Promise<AiStatus>;
   testAi(): Promise<{ ok: true; model: string } | { ok: false; error: string }>;
   suggestGrade(attemptId: string, itemId: string): Promise<AiSuggestion>;
+  /** Essays: grade by the rubric of the chosen topic. Returns the scored result. */
+  gradeRubric(attemptId: string, itemId: string, topic: string | null, input: RubricInput): Promise<RubricResult>;
 }
 
 export const IPC = {
@@ -198,6 +212,7 @@ export const IPC = {
   setAiKey: "ai:set-key",
   testAi: "ai:test",
   suggestGrade: "ai:suggest-grade",
+  gradeRubric: "attempt:grade-rubric",
 } as const;
 
 /** URL of a session asset in the window, served by the main process. */

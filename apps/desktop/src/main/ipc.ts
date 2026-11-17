@@ -70,6 +70,10 @@ export function registerIpc(ctx: { db: Db; dbFile: string; runs: number; content
     return ctx.ai.setKey(key);
   });
   ipcMain.handle(IPC.testAi, () => ctx.ai.test());
+  ipcMain.handle(IPC.gradeRubric, (_e, id: unknown, itemId: unknown, topic: unknown, input: unknown) => {
+    if (topic !== null && typeof topic !== "string") throw new Error("Invalid topic");
+    return at.gradeRubric(str(id, "attempt id"), str(itemId, "item id"), topic, input);
+  });
   ipcMain.handle(IPC.suggestGrade, (_e, id: unknown, itemId: unknown) => at.suggestGrade(str(id, "attempt id"), str(itemId, "item id"), ctx.ai));
   ipcMain.handle(IPC.finishAttempt, (_e, id: unknown, activeMs: unknown) => at.finishAttempt(str(id, "attempt id"), typeof activeMs === "number" ? activeMs : 0));
 }

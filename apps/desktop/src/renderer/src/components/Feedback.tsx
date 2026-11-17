@@ -1,6 +1,8 @@
 // The panel after "Sprawdź": result, the key's answer, explanation, and for open tasks the levels to grade yourself.
 import { useState } from "react";
+import type { RubricInput } from "@osemka/scoring";
 import type { AiSuggestion, CheckResult, PublicItem, SavedResponse } from "../../../shared/ipc";
+import { RubricGrader } from "./RubricGrader";
 import { Rich, type RichContext } from "./Rich";
 
 interface Props {
@@ -17,6 +19,12 @@ interface Props {
     /** Whether there is typed work the AI can read. */
     hasText: boolean;
     onSuggest: () => Promise<void>;
+  };
+  /** Essays: the student's chosen topic, the saved rubric grade, and how to save one. */
+  essay?: {
+    topic: string | null;
+    saved?: SavedResponse["rubricGrade"];
+    onSave: (topic: string | null, input: RubricInput) => Promise<void>;
   };
 }
 
@@ -51,7 +59,7 @@ function keyText(item: PublicItem, check: CheckResult): string | null {
   return null;
 }
 
-export function Feedback({ item, check, selfPoints, onGrade, ctx, ai }: Props) {
+export function Feedback({ item, check, selfPoints, onGrade, ctx, ai, essay }: Props) {
   const levels = check.reveal.levels;
   const solution = check.reveal.key?.type === "model_solution" ? check.reveal.key.solution : null;
   const answer = keyText(item, check);
@@ -112,6 +120,8 @@ export function Feedback({ item, check, selfPoints, onGrade, ctx, ai }: Props) {
       )}
 
       {levels && ai && <AiBox ai={ai} selfPoints={selfPoints} onGrade={onGrade} ctx={ctx} />}
+
+      {check.reveal.rubrics && essay && <EssayRubric reveal={check.reveal} essay={essay} ctx={ctx} />}
 
       {check.reveal.scoringNotes && (
         <div className="rounded-md border-l-[3px] border-[var(--warn)] bg-[var(--warn-soft)] px-3 py-2 text-sm">
@@ -188,6 +198,40 @@ function AiBox({ ai, selfPoints, onGrade, ctx }: { ai: NonNullable<Props["ai"]>;
         <p className="text-sm text-muted">Sugestie AI możesz włączyć w Ustawieniach.</p>
       )}
       {error && <p className="text-sm text-[var(--bad)]" role="alert">{error}</p>}
+    </div>
+  );
+}
+
+function EssayRubric({ reveal, essay, ctx }: { reveal: CheckResult["reveal"]; essay: NonNullable<Props["essay"]>; ctx: RichContext }) {
+  const all = reveal.rubrics ?? [];
+  const [topic, setTopic] = useState<string | null>(essay.saved?.topic ?? essay.topic ?? (all.length === 1 ? all[0]!.topic : null));
+  const chosen = all.find((r) => r.topic === topic) ?? (all.length === 1 ? all[0] : undefined);
+  return (
+    <div className="flex flex-col gap-3">
+      {all.length > 1 && (
+        <div className="flex flex-wrap items-center gap-2 text-sm">
+          <span className="text-muted">Temat:</span>
+          {all.map((r) => (
+            <button key={r.topic} className={`btn ghost ${topic === r.topic ? "!border-accent !bg-accent-soft !text-accent" : ""}`} onClick={() => setTopic(r.topic)} aria-pressed={topic === r.topic}>
+              Temat {r.topic}
+            </button>
+          ))}
+        </div>
+      )}
+      {essay.saved && <p className="text-sm text-muted">Zapisana ocena: <b>{essay.saved.result.total} / {essay.saved.result.maxPoints} pkt</b></p>}
+      {chosen ? (
+        <RubricGrader
+          key={chosen.rubric.id}
+          rubric={chosen.rubric}
+          dyslexia={!!reveal.dyslexia}
+          {...(essay.saved && essay.saved.topic === chosen.topic ? { initial: essay.saved.input } : {})}
+          saved={!!essay.saved}
+          onSave={(input) => essay.onSave(chosen.topic, input)}
+          ctx={ctx}
+        />
+      ) : (
+        <p className="text-sm text-muted">Wybierz temat, który pisałeś/aś, aby zobaczyć kryteria.</p>
+      )}
     </div>
   );
 }

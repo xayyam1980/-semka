@@ -27,7 +27,8 @@ const itemOf = (n: number) => content.get(SESSION)!.tasks.find((t) => t.number =
 
 describe("content for the window", () => {
   it("lists the published session", () => {
-    expect(content.list().map((s) => [s.id, s.taskCount, s.maxPoints, s.closedPoints, s.openPoints])).toEqual([[SESSION, 20, 30, 14, 16]]);
+    const rows = content.list().map((s) => [s.id, s.taskCount, s.maxPoints, s.closedPoints, s.openPoints]);
+    expect(rows).toContainEqual([SESSION, 20, 30, 14, 16]);
   });
 
   it("never contains keys, explanations, levels or sample solutions", () => {

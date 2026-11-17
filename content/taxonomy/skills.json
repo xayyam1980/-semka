@@ -8,6 +8,14 @@
     "stage": "IV–VI"
   },
   {
+    "id": "ma-46-II.15",
+    "subjectId": "matematyka",
+    "general": "I. Sprawność rachunkowa. 1. Wykonywanie nieskomplikowanych obliczeń w pamięci lub pisemnie oraz wykorzystanie tych umiejętności w sytuacjach praktycznych.",
+    "specific": "II. Działania na liczbach naturalnych. Uczeń: 15) wyznacza wynik dzielenia z resztą liczby $a$ przez liczbę $b$ […].",
+    "area": "Działania na liczbach naturalnych",
+    "stage": "IV–VI"
+  },
+  {
     "id": "ma-46-II.6",
     "subjectId": "matematyka",
     "general": "IV. Rozumowanie i argumentacja. 1. Przeprowadzanie prostego rozumowania, podawanie argumentów uzasadniających poprawność rozumowania, rozróżnianie dowodu od przykładu.",
@@ -16,11 +24,83 @@
     "stage": "IV–VI"
   },
   {
+    "id": "ma-46-III.2",
+    "subjectId": "matematyka",
+    "general": "II. Wykorzystanie i tworzenie informacji. 1. Odczytywanie i interpretowanie danych przedstawionych w różnej formie oraz ich przetwarzanie.",
+    "specific": "III. Liczby całkowite. Uczeń: 2) interpretuje liczby całkowite na osi liczbowej;",
+    "area": "Liczby całkowite",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "ma-46-III.5",
+    "subjectId": "matematyka",
+    "general": "II. Wykorzystanie i tworzenie informacji. 1. Odczytywanie i interpretowanie danych przedstawionych w różnej formie oraz ich przetwarzanie.",
+    "specific": "III. Liczby całkowite. Uczeń: 5) wykonuje proste rachunki pamięciowe na liczbach całkowitych.",
+    "area": "Liczby całkowite",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "ma-46-IV.1",
+    "subjectId": "matematyka",
+    "general": "IV. Rozumowanie i argumentacja. 3. Stosowanie strategii wynikającej z treści zadania, tworzenie strategii rozwiązania problemu, również w rozwiązaniach wieloetapowych oraz w takich, które wymagają umiejętności łączenia wiedzy z różnych działów matematyki.",
+    "specific": "IV. Ułamki zwykłe i dziesiętne. Uczeń: 1) opisuje część danej całości za pomocą ułamka.",
+    "area": "Ułamki zwykłe i dziesiętne",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "ma-46-IV.3",
+    "subjectId": "matematyka",
+    "general": "IV. Rozumowanie i argumentacja.\n1. Przeprowadzanie prostego rozumowania, podawanie argumentów uzasadniających poprawność rozumowania, rozróżnianie dowodu od przykładu.",
+    "specific": "IV. Ułamki zwykłe i dziesiętne. Uczeń: 3) skraca i rozszerza ułamki zwykłe.",
+    "area": "Ułamki zwykłe i dziesiętne",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "ma-46-IX.3",
+    "subjectId": "matematyka",
+    "general": "III. Wykorzystanie i interpretowanie reprezentacji.\n1. Używanie prostych, dobrze znanych obiektów matematycznych, interpretowanie pojęć matematycznych i operowanie obiektami matematycznymi.",
+    "specific": "IX. Wielokąty, koła i okręgi. 3) stosuje twierdzenie o sumie kątów wewnętrznych trójkąta;",
+    "area": "Wielokąty, koła i okręgi",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "ma-46-IX.5",
+    "subjectId": "matematyka",
+    "general": "III. Wykorzystanie i interpretowanie reprezentacji.\n1. Używanie prostych, dobrze znanych obiektów matematycznych, interpretowanie pojęć matematycznych i operowanie obiektami matematycznymi.",
+    "specific": "IX. Wielokąty, koła i okręgi. 5) zna najważniejsze własności […] równoległoboku i trapezu […].",
+    "area": "Wielokąty, koła i okręgi",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "ma-46-V.1",
+    "subjectId": "matematyka",
+    "general": "IV. Rozumowanie i argumentacja.\n1. Przeprowadzanie prostego rozumowania, podawanie argumentów uzasadniających poprawność rozumowania, rozróżnianie dowodu od przykładu.",
+    "specific": "V. Działania na ułamkach zwykłych i dziesiętnych. Uczeń: 1) dodaje, odejmuje […] ułamki zwykłe o mianownikach jedno- lub dwucyfrowych, a także liczby mieszane.",
+    "area": "Działania na ułamkach zwykłych i dziesiętnych",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "ma-46-V.7",
+    "subjectId": "matematyka",
+    "general": "I. Sprawność rachunkowa. 1. Wykonywanie nieskomplikowanych obliczeń w pamięci lub pisemnie oraz wykorzystanie tych umiejętności w sytuacjach praktycznych.",
+    "specific": "V. Działania na ułamkach zwykłych i dziesiętnych. Uczeń: 7) oblicza wartości wyrażeń arytmetycznych, wymagających stosowania działań arytmetycznych na liczbach całkowitych lub na liczbach zapisanych za pomocą ułamków zwykłych […], także wymiernych ujemnych, z uwzględnieniem reguł dotyczących kolejności wykonywania działań […].",
+    "area": "Działania na ułamkach zwykłych i dziesiętnych",
+    "stage": "IV–VI"
+  },
+  {
     "id": "ma-46-VI.2",
     "subjectId": "matematyka",
     "general": "III. Wykorzystanie i interpretowanie reprezentacji. 2. Dobieranie modelu matematycznego do prostej sytuacji oraz budowanie go w różnych kontekstach, także w kontekście praktycznym.",
     "specific": "VI. Elementy algebry. Uczeń: 2) stosuje oznaczenia literowe nieznanych wielkości liczbowych i zapisuje proste wyrażenia algebraiczne na podstawie informacji osadzonych w kontekście praktycznym […].",
     "area": "Elementy algebry",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "ma-46-VIII.6",
+    "subjectId": "matematyka",
+    "general": "III. Wykorzystanie i interpretowanie reprezentacji.\n1. Używanie prostych, dobrze znanych obiektów matematycznych, interpretowanie pojęć matematycznych i operowanie obiektami matematycznymi.",
+    "specific": "VIII. Kąty. 6) rozpoznaje kąty wierzchołkowe i przyległe oraz korzysta z ich własności.",
+    "area": "Kąty",
     "stage": "IV–VI"
   },
   {
@@ -48,6 +128,30 @@
     "stage": "IV–VI"
   },
   {
+    "id": "ma-46-XI.5",
+    "subjectId": "matematyka",
+    "general": "IV. Rozumowanie i argumentacja. 3. Stosowanie strategii wynikającej z treści zadania, tworzenie strategii rozwiązania problemu, również w rozwiązaniach wieloetapowych oraz w takich, które wymagają umiejętności łączenia wiedzy z różnych działów matematyki.",
+    "specific": "XI. Obliczenia w geometrii. Uczeń: 5) oblicza pola wielokątów metodą podziału na mniejsze wielokąty lub uzupełniania do większych wielokątów […].",
+    "area": "Obliczenia w geometrii",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "ma-46-XI.6",
+    "subjectId": "matematyka",
+    "general": "II. Wykorzystanie i tworzenie informacji. 1. Odczytywanie i interpretowanie danych przedstawionych w różnej formie oraz ich przetwarzanie.",
+    "specific": "XI. Obliczenia w geometrii. Uczeń: 6) oblicza […] pole powierzchni prostopadłościanu przy danych długościach krawędzi.",
+    "area": "Obliczenia w geometrii",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "ma-46-XII.8",
+    "subjectId": "matematyka",
+    "general": "III. Wykorzystanie i interpretowanie reprezentacji. 2. Dobieranie modelu matematycznego do prostej sytuacji oraz budowanie go w różnych kontekstach, także w kontekście praktycznym.",
+    "specific": "XII. Obliczenia praktyczne. Uczeń: 8) oblicza rzeczywistą długość odcinka, gdy dana jest jego długość w skali oraz długość odcinka w skali, gdy dana jest jego rzeczywista długość.",
+    "area": "Obliczenia praktyczne",
+    "stage": "IV–VI"
+  },
+  {
     "id": "ma-46-XII.9",
     "subjectId": "matematyka",
     "general": "IV. Rozumowanie i argumentacja. 1. Przeprowadzanie prostego rozumowania, podawanie argumentów uzasadniających poprawność rozumowania, rozróżnianie dowodu od przykładu.",
@@ -68,6 +172,14 @@
     "subjectId": "matematyka",
     "general": "I. Sprawność rachunkowa. 1. Wykonywanie nieskomplikowanych obliczeń w pamięci lub pisemnie oraz wykorzystanie tych umiejętności w sytuacjach praktycznych.",
     "specific": "I. Potęgi o podstawach wymiernych. Uczeń: 2) mnoży […] potęgi o wykładnikach całkowitych dodatnich.",
+    "area": "Potęgi o podstawach wymiernych",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "ma-78-I.4",
+    "subjectId": "matematyka",
+    "general": "III. Wykorzystanie i interpretowanie reprezentacji. 1. Używanie prostych, dobrze znanych obiektów matematycznych, interpretowanie pojęć matematycznych i operowanie obiektami matematycznymi.",
+    "specific": "I. Potęgi o podstawach wymiernych. 4) podnosi potęgę do potęgi.",
     "area": "Potęgi o podstawach wymiernych",
     "stage": "VII–VIII"
   },
@@ -144,11 +256,35 @@
     "stage": "VII–VIII"
   },
   {
+    "id": "ma-78-VI.5",
+    "subjectId": "matematyka",
+    "general": "II. Wykorzystanie i tworzenie informacji. 1. Odczytywanie i interpretowanie danych przedstawionych w różnej formie oraz ich przetwarzanie.",
+    "specific": "VI. Równania z jedną niewiadomą. 5) przekształca proste wzory, aby wyznaczyć zadaną wielkość we wzorach geometrycznych (np. pól figur) […].",
+    "area": "Równania z jedną niewiadomą",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "ma-78-VIII.3",
+    "subjectId": "matematyka",
+    "general": "III. Wykorzystanie i interpretowanie reprezentacji.\n1. Używanie prostych, dobrze znanych obiektów matematycznych, interpretowanie pojęć matematycznych i operowanie obiektami matematycznymi.",
+    "specific": "VIII. Własności figur geometrycznych na płaszczyźnie. 3) korzysta z własności prostych równoległych, w szczególności stosuje równość kątów odpowiadających i naprzemianległych.",
+    "area": "Własności figur geometrycznych na płaszczyźnie",
+    "stage": "VII–VIII"
+  },
+  {
     "id": "ma-78-VIII.7",
     "subjectId": "matematyka",
     "general": "II. Wykorzystanie i tworzenie informacji. 3. Używanie języka matematycznego do opisu rozumowania i uzyskanych wyników.",
     "specific": "VIII. Własności figur geometrycznych na płaszczyźnie. Uczeń: 7) zna i stosuje w sytuacjach praktycznych twierdzenie Pitagorasa (bez twierdzenia odwrotnego).",
     "area": "Własności figur geometrycznych na płaszczyźnie",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "ma-78-X.2",
+    "subjectId": "matematyka",
+    "general": "II. Wykorzystanie i tworzenie informacji. 1. Odczytywanie i interpretowanie danych przedstawionych w różnej formie oraz ich przetwarzanie.",
+    "specific": "X. Oś liczbowa. Układ współrzędnych na płaszczyźnie. Uczeń: 2) znajduje współrzędne danych (na rysunku) punktów kratowych w układzie współrzędnych na płaszczyźnie.",
+    "area": "Oś liczbowa. Układ współrzędnych na płaszczyźnie",
     "stage": "VII–VIII"
   },
   {
@@ -160,11 +296,27 @@
     "stage": "VII–VIII"
   },
   {
+    "id": "ma-78-XI.1",
+    "subjectId": "matematyka",
+    "general": "IV. Rozumowanie i argumentacja. 3. Stosowanie strategii wynikającej z treści zadania, tworzenie strategii rozwiązania problemu, również w rozwiązaniach wieloetapowych oraz w takich, które wymagają umiejętności łączenia wiedzy z różnych działów matematyki.",
+    "specific": "XI. Geometria przestrzenna. Uczeń: 1) rozpoznaje […] ostrosłupy […] prawidłowe.",
+    "area": "Geometria przestrzenna",
+    "stage": "VII–VIII"
+  },
+  {
     "id": "ma-78-XI.2",
     "subjectId": "matematyka",
     "general": "IV. Rozumowanie i argumentacja. 3. Stosowanie strategii wynikającej z treści zadania, tworzenie strategii rozwiązania problemu, również w rozwiązaniach wieloetapowych oraz w takich, które wymagają umiejętności łączenia wiedzy z różnych działów matematyki.",
     "specific": "XI. Geometria przestrzenna. Uczeń: 2) oblicza objętości […] graniastosłupów prostych, prawidłowych i takich, które nie są prawidłowe […]; 3) oblicza objętości ostrosłupów […] prawidłowych, i takich które nie są prawidłowe […].",
     "area": "Geometria przestrzenna",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "ma-78-XII.2",
+    "subjectId": "matematyka",
+    "general": "III. Wykorzystanie i interpretowanie reprezentacji. 1. Używanie prostych, dobrze znanych obiektów matematycznych, interpretowanie pojęć matematycznych i operowanie obiektami matematycznymi.",
+    "specific": "XII. Wprowadzenie do kombinatoryki i rachunku prawdopodobieństwa. 2) przeprowadza proste doświadczenia losowe […] analizuje je i oblicza prawdopodobieństwa zdarzeń w doświadczeniach losowych.",
+    "area": "Wprowadzenie do kombinatoryki i rachunku prawdopodobieństwa",
     "stage": "VII–VIII"
   },
   {
@@ -206,5 +358,165 @@
     "subjectId": "matematyka",
     "general": "IV. Rozumowanie i argumentacja. 1. Przeprowadzanie prostego rozumowania, podawanie argumentów uzasadniających poprawność rozumowania, rozróżnianie dowodu od przykładu.",
     "area": "Rozumowanie i argumentacja. 1. Przeprowadzanie prostego rozumowania, podawanie argumentów uzasadniających poprawność rozumowania, rozróżnianie dowodu od przykładu"
+  },
+  {
+    "id": "pl-46-1.3",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe.",
+    "specific": "1. Gramatyka języka polskiego. 3) [...] rozpoznaje bezosobowe formy czasownika [...].",
+    "area": "Gramatyka języka polskiego",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-1.4",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe.",
+    "specific": "1. Gramatyka języka polskiego. 4) rozpoznaje formy [...] osoby [...] czasownika [...].",
+    "area": "Gramatyka języka polskiego",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-1.7",
+    "subjectId": "polski",
+    "general": "I. Kształcenie literackie i kulturowe.",
+    "specific": "1. Czytanie utworów literackich. 7) opowiada o wydarzeniach fabuły [...].",
+    "area": "Czytanie utworów literackich",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-1.9",
+    "subjectId": "polski",
+    "general": "I. Kształcenie literackie i kulturowe.",
+    "specific": "1. Czytanie utworów literackich. 9) charakteryzuje […] bohaterów w czytanych utworach.",
+    "area": "Czytanie utworów literackich",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-2.1",
+    "subjectId": "polski",
+    "general": "III. Tworzenie wypowiedzi.",
+    "specific": "2. Mówienie i pisanie. 1) tworzy spójne wypowiedzi w formach gatunkowych: [...] ogłoszenie […].",
+    "area": "Mówienie i pisanie",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-2.12",
+    "subjectId": "polski",
+    "general": "I. Kształcenie literackie i kulturowe.",
+    "specific": "2. Odbiór tekstów kultury. 12) dokonuje odczytania tekstów poprzez przekład intersemiotyczny […].",
+    "area": "Odbiór tekstów kultury",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-2.2",
+    "subjectId": "polski",
+    "general": "I. Kształcenie literackie i kulturowe.",
+    "specific": "2. Odbiór tekstów kultury. 2) wyszukuje w tekście informacje wyrażone wprost i pośrednio.",
+    "area": "Odbiór tekstów kultury",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-2.3",
+    "subjectId": "polski",
+    "general": "I. Kształcenie literackie i kulturowe.",
+    "specific": "2. Odbiór tekstów kultury. 3) określa temat i główną myśl tekstu.",
+    "area": "Odbiór tekstów kultury",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-2.5",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe.",
+    "specific": "2. Zróżnicowanie języka. 5) rozpoznaje w wypowiedziach związki frazeologiczne, rozumie ich znaczenie oraz poprawnie stosuje w wypowiedziach.",
+    "area": "Zróżnicowanie języka",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-4.1",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe.",
+    "specific": "4. Ortografia i interpunkcja. 1) pisze poprawnie pod względem ortograficznym [...].",
+    "area": "Ortografia i interpunkcja",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-4.2",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe.",
+    "specific": "4. Ortografia i interpunkcja. 2) poprawnie używa znaków interpunkcyjnych: [...] przecinka [...].",
+    "area": "Ortografia i interpunkcja",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-IV.5",
+    "subjectId": "polski",
+    "general": "IV. Samokształcenie.",
+    "specific": "IV. Samokształcenie. 5) korzysta ze słowników ogólnych języka polskiego [...].",
+    "area": "Samokształcenie",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-78-1.4",
+    "subjectId": "polski",
+    "general": "III. Tworzenie wypowiedzi.",
+    "specific": "1. Elementy retoryki. 4) wykorzystuje znajomość zasad tworzenia argumentów przy tworzeniu [...] innych tekstów argumentacyjnych.",
+    "area": "Elementy retoryki",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "pl-78-1.5",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe.",
+    "specific": "1. Gramatyka języka polskiego. 5) rozróżnia wypowiedzenia wielokrotnie złożone.",
+    "area": "Gramatyka języka polskiego",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "pl-78-1.7",
+    "subjectId": "polski",
+    "general": "I. Kształcenie literackie i kulturowe.",
+    "specific": "1. Czytanie utworów literackich. 7) określa w poznawanych tekstach problematykę egzystencjalną i poddaje ją refleksji;",
+    "area": "Czytanie utworów literackich",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "pl-78-2.1",
+    "subjectId": "polski",
+    "general": "III. Tworzenie wypowiedzi.",
+    "specific": "2. Mówienie i pisanie. 1) tworzy spójne wypowiedzi w formach gatunkowych: [...] przemówienie [...].",
+    "area": "Mówienie i pisanie",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "pl-78-2.2",
+    "subjectId": "polski",
+    "general": "III. Tworzenie wypowiedzi.",
+    "specific": "2. Mówienie i pisanie. 2) wykonuje przekształcenia na tekście cudzym […] streszcza […].",
+    "area": "Mówienie i pisanie",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "pl-gen-I",
+    "subjectId": "polski",
+    "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia utworów literackich [...]. 2. Znajomość wybranych utworów z literatury polskiej i światowej [...]. 3. Kształtowanie umiejętności uczestniczenia w kulturze polskiej i europejskiej [...].",
+    "area": "Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia utworów literackich [...]. 2. Znajomość wybranych utworów z literatury polskiej i światowej [...]. 3. Kształtowanie umiejętności uczestniczenia w kulturze polskiej i europejskiej [...]"
+  },
+  {
+    "id": "pl-gen-II",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe. 2. Rozwijanie rozumienia twórczego i sprawczego charakteru działań językowych oraz formowanie odpowiedzialności za własne zachowania językowe.",
+    "area": "Kształcenie językowe. 2. Rozwijanie rozumienia twórczego i sprawczego charakteru działań językowych oraz formowanie odpowiedzialności za własne zachowania językowe"
+  },
+  {
+    "id": "pl-gen-III",
+    "subjectId": "polski",
+    "general": "III. Tworzenie wypowiedzi. 1. Rozwijanie umiejętności wypowiadania się w określonych formach wypowiedzi [...] pisemnych. 4. Rozwijanie umiejętności stosowania środków stylistycznych i dbałości o estetykę tekstu oraz umiejętności organizacji tekstu.",
+    "area": "Tworzenie wypowiedzi. 1. Rozwijanie umiejętności wypowiadania się w określonych formach wypowiedzi [...] pisemnych. 4. Rozwijanie umiejętności stosowania środków stylistycznych i dbałości o estetykę tekstu oraz umiejętności organizacji tekstu"
+  },
+  {
+    "id": "pl-gen-IV",
+    "subjectId": "polski",
+    "general": "IV. Samokształcenie.",
+    "area": "Samokształcenie"
   }
 ]

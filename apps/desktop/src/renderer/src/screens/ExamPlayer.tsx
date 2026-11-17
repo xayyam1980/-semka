@@ -6,6 +6,7 @@ import type { AttemptView, PublicSession, PublicTask } from "../../../shared/ipc
 import { AnswerInput, hasAnswer } from "../components/AnswerInput";
 import { Rich } from "../components/Rich";
 import { TaskText } from "../components/TaskText";
+import { ReadingPane, readingTextOf } from "../components/ReadingPane";
 import { clock, plural, sessionLabel } from "../lib/format";
 
 const SAVE_DELAY_MS = 400;
@@ -159,6 +160,7 @@ export function ExamPlayer() {
   const unanswered = tasks.filter((t) => !answeredTask(t));
   const flaggedTasks = tasks.filter((t) => flags[t.items[0]!.id]);
   const timerState = remaining <= CRITICAL_MS ? "critical" : remaining <= WARN_MS ? "warn" : "";
+  const reading = readingTextOf(task.stimulusIds, session.stimuli);
 
   return (
     <div className="exam-shell flex h-full flex-col" data-ready="1" data-testid="exam-player">
@@ -191,7 +193,9 @@ export function ExamPlayer() {
       )}
 
       <main className="scroll-pane flex-1 px-6 py-6">
-        <article className="mx-auto flex max-w-4xl flex-col gap-5">
+        <div className={reading ? "with-reading mx-auto max-w-7xl" : "mx-auto max-w-4xl"}>
+          {reading && <ReadingPane text={reading} ctx={ctx} />}
+        <article className="flex min-w-0 flex-col gap-5">
           <div className="flex items-center gap-3">
             <h1 className="text-2xl font-bold">
               Zadanie {task.number}. <span className="font-normal text-muted">(0–{task.maxPoints})</span>
@@ -210,6 +214,7 @@ export function ExamPlayer() {
           ))}
           <p className="text-sm text-muted">Odpowiedzi zapisują się same. Klucz zobaczysz po oddaniu arkusza.</p>
         </article>
+        </div>
       </main>
 
       <footer className="flex items-center gap-3 border-t border-line bg-surface px-6 py-3">

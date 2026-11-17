@@ -56,6 +56,10 @@ export const Stimulus = z.object({
   lineNumbering: z.enum(["every", "every5", "none"]).optional(),
   asset: RelPath.optional(),
   audioSegmentIds: z.array(z.string()).optional(),
+  /** Reading texts: bibliographic line under the text, footnotes, and the printed word count. */
+  source: z.string().optional(),
+  footnotes: z.array(z.object({ mark: z.string(), text: z.string() })).optional(),
+  wordCount: z.number().int().positive().optional(),
   ref: PageRef,
 });
 export type Stimulus = z.infer<typeof Stimulus>;
@@ -70,7 +74,13 @@ export const ResponseSpec = z.discriminatedUnion("type", [
   z.object({ type: z.literal("choice_with_reason"), choices: z.array(Option).min(2), reasons: z.array(Option).min(2) }),
   z.object({ type: z.literal("short_text"), gaps: z.number().int().positive(), language: z.enum(["pl", "en"]) }),
   z.object({ type: z.literal("worked_solution") }),
-  z.object({ type: z.literal("extended_text"), minWords: z.number().int().positive().optional(), form: z.string().optional() }),
+  z.object({
+    type: z.literal("extended_text"),
+    minWords: z.number().int().positive().optional(),
+    form: z.string().optional(),
+    /** Essays offer a choice of topics ("Temat 1.", "Temat 2."); each is scored with its own rubric. */
+    topics: z.array(z.object({ id: z.string(), text: z.string(), form: z.string().optional() })).optional(),
+  }),
 ]);
 export type ResponseSpec = z.infer<typeof ResponseSpec>;
 
@@ -103,7 +113,11 @@ export const ScoringRule = z.discriminatedUnion("type", [
   z.object({ type: z.literal("per_part"), pointsEach: z.number().positive() }),
   z.object({ type: z.literal("text_match"), strictness: TextStrictness }),
   z.object({ type: z.literal("levels"), levels: z.array(Level).min(2) }),
-  z.object({ type: z.literal("rubric"), rubricId: z.string() }),
+  z.object({
+    type: z.literal("rubric"),
+    /** One rubric per topic; topic null when the task has a single topic (e.g. the English e-mail). */
+    rubrics: z.array(z.object({ topic: z.string().nullable(), rubricId: z.string() })).min(1),
+  }),
 ]);
 export type ScoringRule = z.infer<typeof ScoringRule>;
 

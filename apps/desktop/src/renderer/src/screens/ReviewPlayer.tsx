@@ -7,6 +7,7 @@ import { AnswerInput } from "../components/AnswerInput";
 import { Feedback } from "../components/Feedback";
 import { Rich } from "../components/Rich";
 import { TaskText } from "../components/TaskText";
+import { ReadingPane, readingTextOf } from "../components/ReadingPane";
 import { sessionLabel } from "../lib/format";
 
 export function ReviewPlayer() {
@@ -51,6 +52,7 @@ export function ReviewPlayer() {
     return !tt.answered ? "" : tt.pending ? "answered" : tt.earned === tt.maxPoints ? "ok" : "bad";
   };
 
+  const reading = readingTextOf(task.stimulusIds, session.stimuli);
   const grade = async (itemId: string, points: number) => {
     try {
       await window.osemka.gradeItem(attemptId, itemId, points);
@@ -72,7 +74,9 @@ export function ReviewPlayer() {
         </span>
       </header>
       <main className="scroll-pane flex-1 px-6 py-6">
-        <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_minmax(0,420px)] gap-6">
+        <div className={reading ? "with-reading mx-auto max-w-7xl" : "mx-auto max-w-6xl"}>
+          {reading && <ReadingPane text={reading} ctx={ctx} />}
+        <div className={`grid gap-6 ${reading ? "grid-cols-1" : "grid-cols-[minmax(0,1fr)_minmax(0,420px)]"}`}>
           <article className="flex min-w-0 flex-col gap-5">
             <h1 className="text-2xl font-bold">
               Zadanie {task.number}. <span className="font-normal text-muted">(0–{task.maxPoints})</span>
@@ -96,6 +100,14 @@ export function ReviewPlayer() {
                   selfPoints={view.responses[it.id]?.selfPoints}
                   onGrade={(p) => void grade(it.id, p)}
                   ctx={ctx}
+                  essay={{
+                    topic: (() => { const v = values[it.id]; return v?.type === "essay" ? v.topic ?? null : null; })(),
+                    saved: view.responses[it.id]?.rubricGrade,
+                    onSave: async (topic, input) => {
+                      await window.osemka.gradeRubric(attemptId, it.id, topic, input);
+                      await load();
+                    },
+                  }}
                   ai={{
                     ready: aiReady,
                     suggestion: view.responses[it.id]?.aiSuggestion,
@@ -110,6 +122,7 @@ export function ReviewPlayer() {
               ) : null,
             )}
           </div>
+        </div>
         </div>
       </main>
       <footer className="flex items-center gap-3 border-t border-line bg-surface px-6 py-3">

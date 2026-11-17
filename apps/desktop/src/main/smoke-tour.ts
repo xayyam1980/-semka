@@ -8,6 +8,7 @@ const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 export async function runTour(win: BrowserWindow, outDir: string): Promise<string[]> {
   if (process.env.OSEMKA_DEV_SIM_SECONDS) return runTimeUpTour(win, outDir);
+  if (process.env.OSEMKA_TOUR === "polski") return runPolishTour(win, outDir);
   const js = <T>(code: string) => win.webContents.executeJavaScript(code) as Promise<T>;
   const shots: string[] = [];
   const shot = async (name: string) => {
@@ -107,5 +108,48 @@ async function runTimeUpTour(win: BrowserWindow, outDir: string): Promise<string
   await shot("czas-minal");
   const text = await js<string>("document.body.innerText");
   if (!/Czas minął/.test(text)) throw new Error("time-up notice not shown");
+  return shots;
+}
+
+/** OSEMKA_TOUR=polski: reading pane, a task with a figure, the short-form rubric and the essay rubric. */
+async function runPolishTour(win: BrowserWindow, outDir: string): Promise<string[]> {
+  const js = <T>(code: string) => win.webContents.executeJavaScript(code) as Promise<T>;
+  const shots: string[] = [];
+  const shot = async (name: string) => {
+    await wait(500);
+    const file = join(outDir, `polski-${shots.length + 1}-${name}-${process.platform}.png`);
+    writeFileSync(file, (await win.webContents.capturePage()).toPNG());
+    shots.push(file);
+  };
+  const click = (selector: string) => js(`(() => { const el = document.querySelector(${JSON.stringify(selector)}); if (!el) throw new Error("missing ${selector.replace(/"/g, "'")}"); el.click(); })()`);
+  const clickText = (text: string) =>
+    js(`(() => { const el = [...document.querySelectorAll("button")].find(b => b.textContent.trim() === ${JSON.stringify(text)}); if (!el) throw new Error("no button ${text}"); el.click(); })()`);
+  const type = (selector: string, text: string) =>
+    js(`(() => { const t = document.querySelector(${JSON.stringify(selector)}); const set = Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, "value").set; set.call(t, ${JSON.stringify(text)}); t.dispatchEvent(new Event("input", { bubbles: true })); })()`);
+  const scrollTo = (selector: string) => js(`document.querySelector(${JSON.stringify(selector)})?.scrollIntoView({ block: "start" })`);
+
+  const session = process.env.OSEMKA_TOUR_SESSION ?? "polski-2025-05-glowny";
+  await js(`location.hash = "#/arkusze/${session}"`);
+  await wait(500);
+  await shot("start");
+  await click('[data-testid="start-practice"]');
+  await wait(700);
+  await shot("zadanie-1-tekst");
+  await clickText("11");
+  await shot("zadanie-11-rysunek");
+  await clickText("18");
+  await type("textarea", "Ogłoszenie\n\nSamorząd Uczniowski zaprasza uczniów klas 7 i 8 na spotkanie w sprawie przedstawienia „Przyjaciel na zawsze”. Spotkanie odbędzie się 24 maja o 12.30 w sali 21. Przyjdź – poznasz nowych ludzi i zagrasz w spektaklu o przyjaźni!");
+  await click('[data-testid="check"]');
+  await wait(600);
+  await scrollTo('[data-testid="rubric-grader"]');
+  await shot("zadanie-18-ocena");
+  await clickText("19");
+  await click('[data-topic="2"]');
+  await type("textarea", "Tego dnia szedłem polną drogą, gdy zobaczyłem przy drogowskazie smutnego chłopca. ".repeat(20));
+  await shot("zadanie-19-temat");
+  await click('[data-testid="check"]');
+  await wait(600);
+  await scrollTo('[data-testid="rubric-grader"]');
+  await shot("zadanie-19-ocena");
   return shots;
 }

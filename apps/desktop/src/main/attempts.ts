@@ -2,7 +2,7 @@
 import { randomUUID } from "node:crypto";
 import { and, desc, eq } from "drizzle-orm";
 import { ResponseValue, SUBJECTS, type Item, type ItemScore, type SessionBundle, type SheetVersion, type StudentSettings } from "@osemka/schema";
-import { scoreAttempt, scoreItem, validateLevel, type AttemptTotals } from "@osemka/scoring";
+import { scoreAttempt, scoreItem, scoreRubric, validateLevel, type AttemptTotals, type RubricInput, type RubricResult } from "@osemka/scoring";
 import type { AiSuggestion, AttemptSummary, AttemptView, CheckResult, SavedResponse, Scope } from "../shared/ipc";
 import type { AiService } from "./ai";
 import type { ContentStore } from "./content";
@@ -113,7 +113,9 @@ export class AttemptService {
   }
 
   startPractice(sessionId: string, scope: Scope): AttemptView {
-    return this.view(this.insertAttempt(sessionId, "nauka", scope))!;
+    // Practice has no time limit, but the dyslexia criteria apply to essay grading here too.
+    const dys = !!this.settings()?.dyslexiaCriteria;
+    return this.view(this.insertAttempt(sessionId, "nauka", scope, undefined, { extendedTime: false, dyslexiaCriteria: dys }))!;
   }
 
   /** Starts a timed simulation of the whole sheet, or returns the one already running for this session. */
@@ -175,7 +177,7 @@ export class AttemptService {
     if (r) this.db.update(responses).set({ checkedAt: t, updatedAt: t }).where(and(eq(responses.attemptId, attemptId), eq(responses.itemId, itemId))).run();
     else this.db.insert(responses).values({ attemptId, itemId, value: null, checkedAt: t, updatedAt: t }).run();
     if (outcome.points !== null) this.upsertScore(attemptId, itemId, { points: outcome.points, source: "auto", ...(outcome.kind === "auto" ? { autoResult: outcome.result } : {}) });
-    return this.reveal(item, a.version as SheetVersion, outcome);
+    return this.reveal(item, a.version as SheetVersion, outcome, dysOf(a));
   }
 
   /** After submission: every item with its outcome and the key (for the review screen). */
@@ -186,7 +188,7 @@ export class AttemptService {
     const values = new Map(this.db.select().from(responses).where(eq(responses.attemptId, attemptId)).all().map((r) => [r.itemId, r.value ? ResponseValue.parse(JSON.parse(r.value)) : null]));
     const out: Record<string, CheckResult> = {};
     for (const t of this.tasksInScope(b, JSON.parse(a.scope) as Scope)) {
-      for (const it of t.items) out[it.id] = this.reveal(it, a.version as SheetVersion, scoreItem(it, values.get(it.id), a.version as SheetVersion));
+      for (const it of t.items) out[it.id] = this.reveal(it, a.version as SheetVersion, scoreItem(it, values.get(it.id), a.version as SheetVersion), dysOf(a));
     }
     return out;
   }
@@ -203,6 +205,12 @@ export class AttemptService {
       if (!r?.checkedAt && a.status === "in_progress") throw new Error("Show the solution before grading");
     }
     return { a, item };
+  }
+
+  /** Session that contains an item (items ids are unique across sessions: "<subject>-<year>-NN…"). */
+  private sessionOfItem(itemId: string): string {
+    for (const s of this.content.list()) if (this.content.get(s.id)!.tasks.some((t) => t.items.some((i) => i.id === itemId))) return s.id;
+    return "";
   }
 
   private scoreRow(attemptId: string, itemId: string) {
@@ -243,6 +251,26 @@ export class AttemptService {
     return suggestion;
   }
 
+  /** Essays: scores the student's choices with the chosen topic's rubric; complete gradings only. */
+  gradeRubric(attemptId: string, itemId: string, topic: string | null, input: unknown): RubricResult {
+    const { a, item } = this.assertCanGrade(attemptId, itemId);
+    if (item.scoring.type !== "rubric") throw new Error(`${item.label} is not scored by a rubric`);
+    const ref = item.scoring.rubrics.find((r) => r.topic === topic) ?? (item.scoring.rubrics.length === 1 ? item.scoring.rubrics[0] : undefined);
+    if (!ref) throw new Error("Wybierz temat wypracowania.");
+    const rubric = this.bundle(a.sessionId).rubrics.find((r) => r.id === ref.rubricId);
+    if (!rubric) throw new Error(`Rubric ${ref.rubricId} missing`);
+    const clean = sanitizeRubricInput(input);
+    const dyslexia = (JSON.parse(a.accommodations) as { dyslexiaCriteria?: boolean }).dyslexiaCriteria ?? false;
+    const result = scoreRubric(rubric, clean, { dyslexia });
+    if (result.problems.length) throw new Error(result.problems.join("; "));
+    if (result.missing.length) throw new Error(`Uzupełnij wszystkie kryteria (brakuje: ${result.missing.length}).`);
+    const row = this.scoreRow(attemptId, itemId);
+    const data = JSON.stringify({ ...(row?.data ? JSON.parse(row.data) : {}), rubricGrade: { topic: ref.topic, input: clean, result } });
+    this.upsertScore(attemptId, itemId, { points: result.total, source: "self", data });
+    if (a.status === "submitted" && this.totals(attemptId).pending === 0) this.db.update(attempts).set({ status: "graded" }).where(eq(attempts.id, attemptId)).run();
+    return result;
+  }
+
   /** Practice: "Zakończ". Simulation: "Oddaj". */
   finishAttempt(attemptId: string, activeMs: number): AttemptTotals {
     const a = this.enforceDeadline(attemptId);
@@ -274,7 +302,7 @@ export class AttemptService {
         value,
         flagged: r.flagged,
         timeSpentMs: r.timeSpentMs,
-        ...(r.checkedAt ? { checkedAt: r.checkedAt, check: this.reveal(item, a.version as SheetVersion, scoreItem(item, value, a.version as SheetVersion)) } : {}),
+        ...(r.checkedAt ? { checkedAt: r.checkedAt, check: this.reveal(item, a.version as SheetVersion, scoreItem(item, value, a.version as SheetVersion), dysOf(a)) } : {}),
         ...gradeFields(score, this.suggestionOf(score)),
       };
     }
@@ -354,11 +382,19 @@ export class AttemptService {
     this.db.insert(itemScores).values(values).onConflictDoUpdate({ target: [itemScores.attemptId, itemScores.itemId], set: values }).run();
   }
 
-  private reveal(item: Item, version: SheetVersion, outcome: CheckResult["outcome"]): CheckResult {
+  private reveal(item: Item, version: SheetVersion, outcome: CheckResult["outcome"], dyslexia = false): CheckResult {
     const key = item.key[version];
+    const rubrics =
+      item.scoring.type === "rubric"
+        ? item.scoring.rubrics.flatMap((ref) => {
+            const r = this.content.get(this.sessionOfItem(item.id))?.rubrics.find((x) => x.id === ref.rubricId);
+            return r ? [{ topic: ref.topic, rubric: r }] : [];
+          })
+        : [];
     return {
       outcome,
       reveal: {
+        ...(rubrics.length ? { rubrics, dyslexia } : {}),
         ...(key ? { key } : {}),
         ...(item.explanation ? { explanation: item.explanation } : {}),
         ...(item.scoringNotes?.length ? { scoringNotes: item.scoringNotes } : {}),
@@ -372,9 +408,23 @@ export class AttemptService {
 const GRADE_SOURCES = new Set(["self", "ai_accepted", "self_over_ai"]);
 
 /** The student's grade (if any), its source, and the AI suggestion (if any), for the window. */
-function gradeFields(score: { points: number | null; source: string } | undefined, suggestion: AiSuggestion | undefined): Partial<SavedResponse> {
+function gradeFields(score: { points: number | null; source: string; data?: string | null } | undefined, suggestion: AiSuggestion | undefined): Partial<SavedResponse> {
+  const rubricGrade = score?.data ? (JSON.parse(score.data) as { rubricGrade?: SavedResponse["rubricGrade"] }).rubricGrade : undefined;
   return {
     ...(score && GRADE_SOURCES.has(score.source) ? { selfPoints: score.points, gradeSource: score.source as SavedResponse["gradeSource"] } : {}),
     ...(suggestion ? { aiSuggestion: suggestion } : {}),
+    ...(rubricGrade ? { rubricGrade } : {}),
   };
 }
+
+/** Accepts only plain numbers and strings from the window. */
+function sanitizeRubricInput(v: unknown): RubricInput {
+  const o = (v ?? {}) as Record<string, unknown>;
+  const nums = (x: unknown) => Object.fromEntries(Object.entries((x ?? {}) as Record<string, unknown>).filter(([, n]) => typeof n === "number" && Number.isInteger(n) && n >= 0 && n < 1000)) as Record<string, number>;
+  const cells = Object.fromEntries(
+    Object.entries((o.matrix ?? {}) as Record<string, { row?: unknown; col?: unknown }>).filter(([, c]) => typeof c?.row === "string" && typeof c?.col === "string").map(([k, c]) => [k, { row: c.row as string, col: c.col as string }]),
+  );
+  return { levels: nums(o.levels), errorCounts: nums(o.errorCounts), matrix: cells };
+}
+
+const dysOf = (a: { accommodations: string }) => !!(JSON.parse(a.accommodations) as { dyslexiaCriteria?: boolean }).dyslexiaCriteria;

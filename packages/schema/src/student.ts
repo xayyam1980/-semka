@@ -58,7 +58,7 @@ export const ResponseValue = z.discriminatedUnion("type", [
   z.object({ type: z.literal("choices"), value: z.record(z.string(), z.string()) }),
   z.object({ type: z.literal("text"), value: z.array(z.string()) }),
   z.object({ type: z.literal("work"), text: z.string().optional(), photoIds: z.array(z.string()).optional(), onPaper: z.boolean().optional() }),
-  z.object({ type: z.literal("essay"), text: z.string().optional(), photoIds: z.array(z.string()).optional(), wordCount: z.number().int().optional() }),
+  z.object({ type: z.literal("essay"), topic: z.string().optional(), text: z.string().optional(), photoIds: z.array(z.string()).optional(), wordCount: z.number().int().optional() }),
 ]);
 export type ResponseValue = z.infer<typeof ResponseValue>;
 

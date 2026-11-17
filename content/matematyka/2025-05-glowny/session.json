@@ -1,0 +1,1690 @@
+{
+  "session": {
+    "id": "matematyka-2025-05-glowny",
+    "subjectId": "matematyka",
+    "year": 2025,
+    "month": 5,
+    "term": "glowny",
+    "formCode": "OMAP-100",
+    "versions": [
+      "X"
+    ],
+    "maxPoints": 30,
+    "taskOrder": [
+      "ma-2025-01",
+      "ma-2025-02",
+      "ma-2025-03",
+      "ma-2025-04",
+      "ma-2025-05",
+      "ma-2025-06",
+      "ma-2025-07",
+      "ma-2025-08",
+      "ma-2025-09",
+      "ma-2025-10",
+      "ma-2025-11",
+      "ma-2025-12",
+      "ma-2025-13",
+      "ma-2025-14",
+      "ma-2025-15",
+      "ma-2025-16",
+      "ma-2025-17",
+      "ma-2025-18",
+      "ma-2025-19",
+      "ma-2025-20",
+      "ma-2025-21"
+    ],
+    "sources": [
+      {
+        "kind": "karta_otwarte",
+        "path": "Matematyka/Maj 2025/arkusz-zadania-otwarte.pdf",
+        "sha256": "cbf4dd55665f88f0c2d087c3a5dbcf581257f288fb8eed38107df91c22570d7e",
+        "pages": 8
+      },
+      {
+        "kind": "arkusz",
+        "path": "Matematyka/Maj 2025/arkusz.pdf",
+        "sha256": "1ed4eba4edf7e9a78b72b5a01e5825b8e7790f069427c36c4f3bb70c31338ac5",
+        "pages": 20
+      },
+      {
+        "kind": "klucz",
+        "path": "Matematyka/Maj 2025/klucz.pdf",
+        "sha256": "a76de95a56deb91f571a5c569dd8c2308df87bdbf5289620a1faaba84440e913",
+        "pages": 26
+      }
+    ],
+    "contentVersion": "dd18228486048f1a",
+    "status": "published"
+  },
+  "stimuli": [
+    {
+      "id": "ma-2025-01-fig1",
+      "kind": "figure",
+      "title": "Poziomy diagram słupkowy przedstawiający kwoty (w zł) odłożone przez Aldonę w kolejnych miesiącach: styczeń – 50, luty – 40, marzec – 60, kwiecień – 30.",
+      "asset": "assets/ma-2025-01-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2025-05-fig1",
+      "kind": "figure",
+      "title": "Wklęsły pięciokąt o bokach oznaczonych literami: dwa boki o długości a, dwa boki o długości b oraz jeden bok o długości c.",
+      "asset": "assets/ma-2025-05-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2025-11-fig1",
+      "kind": "figure",
+      "title": "Trójkąt prostokątny ABC z kątem prostym przy wierzchołku B; punkt D leży na środku boku AB, odcinek DC ma długość 50 cm, odcinki AD i DB mają po 30 cm, a trójkąt DBC jest zacieniowany.",
+      "asset": "assets/ma-2025-11-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2025-12-fig1",
+      "kind": "figure",
+      "title": "Oś liczbowa z zaznaczonymi punktami A, B i C oraz podziałkami opisanymi liczbami 56 i 83; odcinek AC jest podzielony na 6 równych części.",
+      "asset": "assets/ma-2025-12-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2025-13-fig1",
+      "kind": "figure",
+      "title": "Trapez ABCD podzielony odcinkami GE i GF na kwadrat AEGD, trójkąt EFG o bokach 6, 8 i 10 oraz romb FBCG.",
+      "asset": "assets/ma-2025-13-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2025-14-fig1",
+      "kind": "figure",
+      "title": "Układ współrzędnych na płaszczyźnie z zaznaczonymi punktami kratowymi A, C i D.",
+      "asset": "assets/ma-2025-14-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "ma-2025-15-fig1",
+      "kind": "figure",
+      "title": "Rysunek prostopadłościanu z zaznaczonymi długościami trzech krawędzi wychodzących z jednego wierzchołka: 5, 6 i 7.",
+      "asset": "assets/ma-2025-15-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "ma-2025-18-fig1",
+      "kind": "figure",
+      "title": "Trapez ABCD z odcinkiem EC dzielącym go na równoległobok AECD i trójkąt EBC; zaznaczono kąt BCE o mierze 57° i kąt ABC o mierze 48°.",
+      "asset": "assets/ma-2025-18-fig1.png",
+      "ref": {
+        "source": "karta_otwarte",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2025-20-fig1",
+      "kind": "figure",
+      "title": "Kwadrat ABCD z zaznaczonymi punktami F na boku DC i E na boku BC oraz zacieniowanym na zielono czworokątem AECF.",
+      "asset": "assets/ma-2025-20-fig1.png",
+      "ref": {
+        "source": "karta_otwarte",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2025-21-fig1",
+      "kind": "figure",
+      "title": "Rysunek ostrosłupa prawidłowego czworokątnego z zaznaczoną wysokością ściany bocznej poprowadzoną do krawędzi podstawy, opisaną 12 cm.",
+      "asset": "assets/ma-2025-21-fig1.png",
+      "ref": {
+        "source": "karta_otwarte",
+        "page": 7
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "ma-2025-01",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 1,
+      "maxPoints": 1,
+      "instruction": "Deskorolka kosztuje 180 zł. Na diagramie przedstawiono kwoty, które Aldona odłożyła w styczniu, w lutym, w marcu i w kwietniu na zakup deskorolki.\n\n![Poziomy diagram słupkowy przedstawiający kwoty (w zł) odłożone przez Aldonę w kolejnych miesiącach: styczeń – 50, luty – 40, marzec – 60, kwiecień – 30.](stimulus:ma-2025-01-fig1)\n\n**Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nW styczniu i lutym łącznie Aldona odłożyła [[A|B]] kwoty potrzebnej na zakup deskorolki.\n\nW marcu Aldona odłożyła kwotę o [[C|D]] większą od kwoty odłożonej w styczniu.",
+      "stimulusIds": [
+        "ma-2025-01-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2025-01",
+          "label": "1",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "45%"
+              },
+              {
+                "id": "B",
+                "text": "50%"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "10%"
+              },
+              {
+                "id": "D",
+                "text": "20%"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "B",
+                "reason": "D"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-78-V.3",
+            "ma-78-XIII.1"
+          ],
+          "explanation": "Z diagramu odczytujemy kwoty odłożone w poszczególnych miesiącach: styczeń – 50 zł, luty – 40 zł, marzec – 60 zł, kwiecień – 30 zł. W styczniu i lutym łącznie Aldona odłożyła $50+40=90$ zł, a 90 zł to połowa ze 180 zł, czyli 50% kwoty potrzebnej na zakup deskorolki, więc pierwsza odpowiedź to B. W marcu Aldona odłożyła 60 zł, czyli o 10 zł więcej niż w styczniu, a 10 zł to 20% kwoty 50 zł odłożonej w styczniu, więc druga odpowiedź to D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-78-V.3",
+        "ma-78-XIII.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2025-02",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 2,
+      "maxPoints": 1,
+      "instruction": "Dane jest wyrażenie\n\n$\\left(2,4 - 5\\frac{1}{3}\\right) : (-2)$\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nWartość tego wyrażenia jest równa",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-02",
+          "label": "2",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$\\left(-1\\frac{8}{15}\\right)$"
+              },
+              {
+                "id": "B",
+                "text": "$\\left(-1\\frac{7}{15}\\right)$"
+              },
+              {
+                "id": "C",
+                "text": "$1\\frac{7}{15}$"
+              },
+              {
+                "id": "D",
+                "text": "$1\\frac{8}{15}$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-46-V.7"
+          ],
+          "explanation": "Najpierw obliczamy wartość wyrażenia w nawiasie: $2,4 - 5\\frac{1}{3} = \\frac{12}{5} - \\frac{16}{3} = \\frac{36}{15} - \\frac{80}{15} = -\\frac{44}{15}$. Następnie dzielimy wynik przez $-2$: $-\\frac{44}{15} : (-2) = \\frac{44}{30} = \\frac{22}{15} = 1\\frac{7}{15}$. Dlatego wartość wyrażenia jest równa $1\\frac{7}{15}$, czyli poprawna jest odpowiedź C."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-46-V.7"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2025-03",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 3,
+      "maxPoints": 1,
+      "instruction": "Dane są liczby: $91$, $92$, $95$, $97$.\n\n**Która z podanych liczb przy dzieleniu przez $7$ daje resztę $1$? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-03",
+          "label": "3",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$91$"
+              },
+              {
+                "id": "B",
+                "text": "$92$"
+              },
+              {
+                "id": "C",
+                "text": "$95$"
+              },
+              {
+                "id": "D",
+                "text": "$97$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-46-II.15"
+          ],
+          "explanation": "Sprawdzamy dzielenie każdej liczby przez $7$: $91 = 7 \\cdot 13$ (reszta $0$), $92 = 7 \\cdot 13 + 1$ (reszta $1$), $95 = 7 \\cdot 13 + 4$ (reszta $4$), $97 = 7 \\cdot 13 + 6$ (reszta $6$). Tylko liczba $92$ daje resztę $1$ przy dzieleniu przez $7$, więc właściwa jest odpowiedź B."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-46-II.15"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2025-04",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 4,
+      "maxPoints": 1,
+      "instruction": "Średnia arytmetyczna czterech liczb $a$, $b$, $c$, $d$ jest równa $9$, a średnia arytmetyczna dwóch liczb $e$ i $f$ jest równa $6$.\n\n**Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nSuma liczb $a$, $b$, $c$, $d$ jest o [[A|B]] większa od sumy liczb $e$ i $f$.\n\nŚrednia arytmetyczna liczb $a$, $b$, $c$, $d$, $e$, $f$ jest równa [[C|D]].",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-04",
+          "label": "4",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "3"
+              },
+              {
+                "id": "B",
+                "text": "24"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "8"
+              },
+              {
+                "id": "D",
+                "text": "7,5"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "B",
+                "reason": "C"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-XIII.3"
+          ],
+          "explanation": "Skoro średnia arytmetyczna czterech liczb $a$, $b$, $c$, $d$ wynosi $9$, to ich suma jest równa $4 \\cdot 9 = 36$. Suma liczb $e$ i $f$, których średnia wynosi $6$, to $2 \\cdot 6 = 12$. Różnica tych sum wynosi $36 - 12 = 24$, więc pierwsze zdanie uzupełnia odpowiedź B. Średnia arytmetyczna wszystkich sześciu liczb to $(36 + 12) : 6 = 48 : 6 = 8$, więc drugie zdanie uzupełnia odpowiedź C."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-XIII.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2025-05",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 5,
+      "maxPoints": 1,
+      "instruction": "Obwód pięciokąta przedstawionego na rysunku wyraża się wzorem $L = 2a + 2b + c$.\n\n![Wklęsły pięciokąt o bokach oznaczonych literami: dwa boki o długości a, dwa boki o długości b oraz jeden bok o długości c.](stimulus:ma-2025-05-fig1)\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nWielkość $a$ wyznaczoną poprawnie z podanego wzoru opisuje równanie",
+      "stimulusIds": [
+        "ma-2025-05-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2025-05",
+          "label": "5",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$a = \\frac{L - 2b - c}{2}$"
+              },
+              {
+                "id": "B",
+                "text": "$a = \\frac{L - 2b + c}{2}$"
+              },
+              {
+                "id": "C",
+                "text": "$a = L + 2b - c$"
+              },
+              {
+                "id": "D",
+                "text": "$a = L - 2b - c$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-78-VI.5"
+          ],
+          "explanation": "Obwód pięciokąta to suma długości wszystkich jego boków, dlatego $L = 2a + 2b + c$. Aby wyznaczyć $a$, przenosimy wyrazy bez $a$ na drugą stronę równania: $L - 2b - c = 2a$, czyli $2a = L - 2b - c$. Dzielimy obie strony przez 2 i otrzymujemy $a = \\frac{L - 2b - c}{2}$."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-78-VI.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2025-06",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 6,
+      "maxPoints": 1,
+      "instruction": "W pudełku znajdują się wyłącznie piłki białe, fioletowe i czarne. Piłek białych jest 4 razy więcej niż fioletowych i o 3 mniej niż czarnych. Liczbę piłek fioletowych oznaczymy przez $x$.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nŁączną liczbę wszystkich piłek w pudełku opisuje wyrażenie",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-06",
+          "label": "6",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$9x + 3$"
+              },
+              {
+                "id": "B",
+                "text": "$9x - 3$"
+              },
+              {
+                "id": "C",
+                "text": "$6x + 3$"
+              },
+              {
+                "id": "D",
+                "text": "$6x - 3$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-III.3"
+          ],
+          "explanation": "Piłek fioletowych jest $x$, więc piłek białych jest $4x$. Piłek białych jest o 3 mniej niż czarnych, zatem piłek czarnych jest $4x + 3$. Łączna liczba wszystkich piłek to $x + 4x + (4x + 3) = 9x + 3$, czyli szukane wyrażenie to $9x + 3$."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-III.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2025-07",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 7,
+      "maxPoints": 1,
+      "instruction": "Dane są wyrażenia:\n\n$K = \\frac{1}{9} \\cdot \\sqrt{\\frac{1}{16}} - \\frac{1}{16} \\cdot \\sqrt{\\frac{1}{9}}$\n\n$L = 9 \\cdot \\sqrt{16} - 16 \\cdot \\sqrt{9}$\n\n**Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-07",
+          "label": "7",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Wyrażenie $K$ ma wartość ujemną. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Wartość wyrażenia $L$ jest większa od wartości wyrażenia $K$. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "F",
+                "2": "F"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-46-V.7",
+            "ma-78-II.1"
+          ],
+          "explanation": "Obliczamy wartość wyrażenia $K$: $K = \\frac{1}{9} \\cdot \\frac{1}{4} - \\frac{1}{16} \\cdot \\frac{1}{3} = \\frac{1}{36} - \\frac{1}{48} = \\frac{4}{144} - \\frac{3}{144} = \\frac{1}{144}$, czyli dodatnią, więc pierwsze zdanie jest fałszywe (F). Wartość wyrażenia $L$ to $L = 9 \\cdot 4 - 16 \\cdot 3 = 36 - 48 = -12$, czyli mniejsza od wartości wyrażenia $K$, więc drugie zdanie też jest fałszywe (F). Odpowiedź: FF.",
+          "scoringNotes": [
+            "1 pkt – odpowiedź poprawna.",
+            "0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+          ]
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-46-V.7",
+        "ma-78-II.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2025-08",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 8,
+      "maxPoints": 1,
+      "instruction": "**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nWartość wyrażenia $8^6 : 4^3$ zapisana w postaci potęgi liczby $2$ jest równa",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-08",
+          "label": "8",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$2^2$"
+              },
+              {
+                "id": "B",
+                "text": "$2^3$"
+              },
+              {
+                "id": "C",
+                "text": "$2^4$"
+              },
+              {
+                "id": "D",
+                "text": "$2^{12}$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-I.2",
+            "ma-78-I.4"
+          ],
+          "explanation": "Zamieniamy obie podstawy potęg na liczbę 2: $8^6 = (2^3)^6 = 2^{18}$ oraz $4^3 = (2^2)^3 = 2^6$. Dzieląc potęgi o tej samej podstawie, odejmujemy wykładniki: $2^{18} : 2^6 = 2^{18-6} = 2^{12}$. Dlatego wartość wyrażenia zapisana w postaci potęgi liczby 2 to $2^{12}$."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-I.2",
+        "ma-78-I.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2025-09",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 9,
+      "maxPoints": 1,
+      "instruction": "Rowerzysta pokonał odcinek drogi o długości $100$ m z prędkością $5\\,\\frac{\\text{m}}{\\text{s}}$.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nRowerzysta pokonał ten odcinek drogi w czasie",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-09",
+          "label": "9",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "50 sekund."
+              },
+              {
+                "id": "B",
+                "text": "20 sekund."
+              },
+              {
+                "id": "C",
+                "text": "500 sekund."
+              },
+              {
+                "id": "D",
+                "text": "200 sekund."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-XII.9"
+          ],
+          "explanation": "Czas ruchu obliczamy, dzieląc drogę przez prędkość: $t = \\frac{100\\,\\text{m}}{5\\,\\frac{\\text{m}}{\\text{s}}} = 20\\,\\text{s}$. Zatem rowerzysta pokonał ten odcinek drogi w czasie 20 sekund."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-XII.9"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2025-10",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 10,
+      "maxPoints": 1,
+      "instruction": "Na loterię przygotowano 72 losy i ponumerowano je kolejnymi liczbami naturalnymi od 1 do 72. Wygrywają losy o numerach od 1 do 9 i od 46 do 72. Pozostałe losy są puste. Ada jako pierwsza wyciąga jeden los.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nPrawdopodobieństwo wyciągnięcia przez Adę losu pustego jest równe",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-10",
+          "label": "10",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$\\frac{26}{72}$"
+              },
+              {
+                "id": "B",
+                "text": "$\\frac{27}{72}$"
+              },
+              {
+                "id": "C",
+                "text": "$\\frac{35}{72}$"
+              },
+              {
+                "id": "D",
+                "text": "$\\frac{36}{72}$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-XII.2"
+          ],
+          "explanation": "Losów wygrywających jest 9 (numery od 1 do 9) oraz 27 (numery od 46 do 72), czyli łącznie $9 + 27 = 36$. Losów pustych jest zatem $72 - 36 = 36$. Prawdopodobieństwo wyciągnięcia losu pustego wynosi więc $\\frac{36}{72}$, co odpowiada odpowiedzi D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-XII.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2025-11",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 11,
+      "maxPoints": 1,
+      "instruction": "Dany jest trójkąt prostokątny $ABC$. Na środku boku $AB$ zaznaczono punkt $D$. Następnie poprowadzono odcinek $DC$, dzielący trójkąt $ABC$ na dwa trójkąty $ADC$ i $DBC$. Ponadto $|AD| = |DB| = 30$ cm oraz $|DC| = 50$ cm (zobacz rysunek).\n\n![Trójkąt prostokątny ABC z kątem prostym przy wierzchołku B; punkt D leży na środku boku AB, odcinek DC ma długość 50 cm, odcinki AD i DB mają po 30 cm, a trójkąt DBC jest zacieniowany.](stimulus:ma-2025-11-fig1)\n\n**Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "ma-2025-11-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2025-11",
+          "label": "11",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Pole trójkąta $DBC$ jest równe $600$ cm$^2$. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Pole trójkąta $ABC$ jest dwa razy większe od pola trójkąta $ADC$. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-46-XI.3",
+            "ma-78-VIII.7"
+          ],
+          "explanation": "Trójkąt $DBC$ ma kąt prosty przy wierzchołku $B$, więc z twierdzenia Pitagorasa $|BC| = \\sqrt{50^2 - 30^2} = \\sqrt{2500 - 900} = \\sqrt{1600} = 40$ cm i pole trójkąta $DBC$ wynosi $\\frac{30 \\cdot 40}{2} = 600$ cm$^2$ – pierwsze zdanie jest prawdziwe. Punkt $D$ jest środkiem boku $AB$, więc trójkąty $ADC$ i $DBC$ mają równe podstawy ($|AD| = |DB|$) i wspólną wysokość opuszczoną z wierzchołka $C$, czyli równe pola; dlatego pole trójkąta $ABC$ jest dwa razy większe od pola trójkąta $ADC$ – drugie zdanie też jest prawdziwe."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-46-XI.3",
+        "ma-78-VIII.7"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2025-12",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 12,
+      "maxPoints": 1,
+      "instruction": "Na osi liczbowej zaznaczono punkty $A$, $B$ i $C$. Odcinek $AC$ jest podzielony na 6 równych części.\n\n![Oś liczbowa z zaznaczonymi punktami A, B i C oraz podziałkami opisanymi liczbami 56 i 83; odcinek AC jest podzielony na 6 równych części.](stimulus:ma-2025-12-fig1)\n\n**Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "ma-2025-12-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2025-12",
+          "label": "12",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Współrzędna punktu $C$ jest liczbą parzystą. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Współrzędna punktu $B$ jest liczbą mniejszą od $74$. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "F",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-46-III.2",
+            "ma-46-III.5"
+          ],
+          "explanation": "Między liczbami $56$ i $83$ mieszczą się trzy równe części odcinka, więc każda część ma długość $27:3=9$. Współrzędna punktu $C$ to $83+9+9=101$, czyli liczba nieparzysta, dlatego pierwsze zdanie jest fałszywe. Punkt $B$ leży między podziałkami $65$ i $74$, więc jego współrzędna jest mniejsza od $74$ i drugie zdanie jest prawdziwe."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-46-III.2",
+        "ma-46-III.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2025-13",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 13,
+      "maxPoints": 1,
+      "instruction": "Trapez $ABCD$ podzielono na trzy figury: kwadrat $AEGD$, trójkąt $EFG$ i romb $FBCG$ (zobacz rysunek). Na rysunku podano również długości boków trójkąta $EFG$.\n\n![Trapez ABCD podzielony odcinkami GE i GF na kwadrat AEGD, trójkąt EFG o bokach 6, 8 i 10 oraz romb FBCG.](stimulus:ma-2025-13-fig1)\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nObwód trapezu $ABCD$ jest równy",
+      "stimulusIds": [
+        "ma-2025-13-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2025-13",
+          "label": "13",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "56"
+              },
+              {
+                "id": "B",
+                "text": "72"
+              },
+              {
+                "id": "C",
+                "text": "88"
+              },
+              {
+                "id": "D",
+                "text": "120"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-IX.5",
+            "ma-46-XI.2"
+          ],
+          "explanation": "Kwadrat $AEGD$ ma wszystkie boki równe 6, więc $AE = EG = GD = DA = 6$. Romb $FBCG$ ma wszystkie boki równe 10 (bo $GF = 10$), więc $FB = BC = CG = 10$. Dolna podstawa trapezu to $AB = AE + EF + FB = 6 + 8 + 10 = 24$, górna podstawa to $DC = DG + GC = 6 + 10 = 16$, a ramiona to $AD = 6$ i $BC = 10$. Obwód trapezu wynosi zatem $24 + 16 + 6 + 10 = 56$."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-IX.5",
+        "ma-46-XI.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2025-14",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 14,
+      "maxPoints": 1,
+      "instruction": "W układzie współrzędnych $(x, y)$ zaznaczono trzy punkty, które są wierzchołkami równoległoboku $ABCD$: $A = (-3, -2)$, $C = (4, 2)$, $D = (-1, 2)$ (zobacz rysunek).\n\n![Układ współrzędnych na płaszczyźnie z zaznaczonymi punktami kratowymi A, C i D.](stimulus:ma-2025-14-fig1)\n\nWspółrzędna $x$ wierzchołka $B$, niezaznaczonego na rysunku, jest liczbą dodatnią.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nNiezaznaczony na rysunku wierzchołek $B$ tego równoległoboku ma współrzędne",
+      "stimulusIds": [
+        "ma-2025-14-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2025-14",
+          "label": "14",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$(4, -2)$"
+              },
+              {
+                "id": "B",
+                "text": "$(3, -2)$"
+              },
+              {
+                "id": "C",
+                "text": "$(2, -2)$"
+              },
+              {
+                "id": "D",
+                "text": "$(6, -2)$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-46-IX.5",
+            "ma-78-X.2"
+          ],
+          "explanation": "W równoległoboku $ABCD$ boki $AB$ i $DC$ są równoległe i mają tę samą długość, więc przesunięcie z punktu $D$ do punktu $C$ jest takie samo jak z punktu $A$ do punktu $B$. Punkt $D = (-1, 2)$ przesuwamy o $5$ w prawo do $C = (4, 2)$, zatem $B = (-3 + 5, -2) = (2, -2)$. Współrzędna $x$ punktu $B$ jest dodatnia, zgodnie z treścią zadania."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-46-IX.5",
+        "ma-78-X.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "ma-2025-15",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 15,
+      "maxPoints": 1,
+      "instruction": "Trzy krawędzie wychodzące z jednego wierzchołka prostopadłościanu mają długości: $5$, $6$, $7$ (zobacz rysunek).\n\n![Rysunek prostopadłościanu z zaznaczonymi długościami trzech krawędzi wychodzących z jednego wierzchołka: 5, 6 i 7.](stimulus:ma-2025-15-fig1)\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nPole powierzchni całkowitej tego prostopadłościanu jest równe",
+      "stimulusIds": [
+        "ma-2025-15-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2025-15",
+          "label": "15",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "107"
+              },
+              {
+                "id": "B",
+                "text": "172"
+              },
+              {
+                "id": "C",
+                "text": "210"
+              },
+              {
+                "id": "D",
+                "text": "214"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-46-XI.6"
+          ],
+          "explanation": "Pole powierzchni całkowitej prostopadłościanu to suma pól wszystkich sześciu ścian, czyli $P_c = 2 \\cdot (5 \\cdot 6 + 5 \\cdot 7 + 6 \\cdot 7)$. Obliczamy: $2 \\cdot (30 + 35 + 42) = 2 \\cdot 107 = 214$. Dlatego poprawna jest odpowiedź 214."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-46-XI.6"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "ma-2025-16",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 16,
+      "maxPoints": 2,
+      "instruction": "Liczbę $\\frac{7}{15}$ zapisano w postaci sumy trzech ułamków zwykłych, z których jeden jest równy $\\frac{1}{5}$, a drugi $\\frac{1}{6}$.\n\n**Uzasadnij, że trzeci składnik tej sumy można przedstawić w postaci ułamka zwykłego, którego licznik jest równy 1, a mianownik jest liczbą całkowitą dodatnią.**\n\n**Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-16",
+          "label": "16",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "**I sposób**\nObliczymy trzeci składnik sumy:\n$\\frac{7}{15}-\\left(\\frac{1}{5}+\\frac{1}{6}\\right)=\\frac{14}{30}-\\frac{11}{30}=\\frac{3}{30}=\\frac{1}{10}$\nTrzeci składnik sumy można przedstawić w postaci ułamka $\\frac{1}{10}$, który spełnia warunki zadania."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób uzasadnienia, że trzeci składnik sumy można przedstawić w postaci ułamka zwykłego o liczniku 1, prawidłowe obliczenia oraz prawidłowy wynik liczbowy $\\left(\\frac{1}{10}\\right)$."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "zapisanie poprawnych wyrażeń arytmetycznych prowadzących do obliczenia trzeciego składnika sumy, np. $\\frac{7}{15}-\\left(\\frac{1}{5}+\\frac{1}{6}\\right)$",
+                  "zapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia trzeciego składnika sumy, np. $\\frac{1}{5}+\\frac{1}{6}+x=\\frac{7}{15}$,",
+                  "zapisanie równości $\\frac{1}{5}+\\frac{1}{6}+\\frac{3}{30}=\\frac{7}{15}$ albo $\\frac{1}{5}+\\frac{1}{6}+\\frac{1}{10}=\\frac{7}{15}$ bez uzasadnienia (obliczeń)."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-46-V.1",
+            "ma-46-IV.3"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "**I sposób**\nObliczymy trzeci składnik sumy:\n$\\frac{7}{15}-\\left(\\frac{1}{5}+\\frac{1}{6}\\right)=\\frac{14}{30}-\\frac{11}{30}=\\frac{3}{30}=\\frac{1}{10}$\nTrzeci składnik sumy można przedstawić w postaci ułamka $\\frac{1}{10}$, który spełnia warunki zadania.",
+              "ref": {
+                "source": "klucz",
+                "page": 11
+              }
+            },
+            {
+              "points": 2,
+              "content": "**II sposób**\nZapiszemy i rozwiążemy równanie:\n$\\frac{1}{5}+\\frac{1}{6}+x=\\frac{7}{15}$\n$\\frac{11}{30}+x=\\frac{14}{30}$\n$x=\\frac{3}{30}$\n$x=\\frac{1}{10}$\nTrzeci składnik sumy można przedstawić w postaci ułamka $\\frac{1}{10}$, który spełnia warunki zadania.",
+              "ref": {
+                "source": "klucz",
+                "page": 12
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-46-V.1",
+        "ma-46-IV.3"
+      ],
+      "ref": {
+        "source": "karta_otwarte",
+        "page": 2
+      }
+    },
+    {
+      "id": "ma-2025-17",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 17,
+      "maxPoints": 3,
+      "instruction": "Troje przyjaciół – Andrzej, Basia i Marek – zbiera plakaty. Andrzej ma o 28 plakatów więcej od Basi, a Marek ma ich 3 razy mniej od Basi. Andrzej i Marek mają razem 2 razy więcej plakatów od Basi.\n\n**Oblicz, ile plakatów ma każde z tych przyjaciół.**\n**Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-17",
+          "label": "17",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "**I sposób**\n$b$ – liczba plakatów Basi\n$b + 28$ – liczba plakatów Andrzeja\n$\\frac{b}{3}$ – liczba plakatów Marka\nZapiszemy równanie wynikające z warunków zadania i obliczymy liczbę plakatów Basi:\n$b + 28 + \\frac{b}{3} = 2b$\n$\\frac{2}{3}b = 28$\n$b = 42$\nObliczymy liczbę plakatów Marka:\n$\\frac{b}{3} = \\frac{42}{3} = 14$\nObliczymy liczbę plakatów Andrzeja:\n$b + 28 = 42 + 28 = 70$\nOdpowiedź: Basia ma 42 plakaty, Marek ma 14 plakatów, Andrzej ma 70 plakatów."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia liczby plakatów Basi, Marka i Andrzeja, prawidłowe obliczenia **oraz** prawidłowe wyniki liczbowe (Basia: 42, Marek: 14, Andrzej: 70)",
+                  "zastosowanie metody prób i błędów – sprawdzenie wszystkich warunków zadania dla co najmniej dwóch różnych zestawów trzech liczb, wśród których **jest** prawidłowy zestaw liczb plakatów (42, 14, 70), prawidłowe obliczenia **oraz** wskazanie spośród nich rozwiązania (Basia: 42, Marek: 14, Andrzej: 70),",
+                  "przedstawienie w sposób graficzny poprawnych zależności między liczbą plakatów Basi, Marka i Andrzeja **oraz** między łączną liczbą plakatów Marka i Andrzeja a liczbą plakatów Basi **oraz** prawidłowy wynik liczbowy (Basia: 42, Marek: 14, Andrzej: 70)."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "zapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia liczby plakatów Basi lub Marka, lub Andrzeja, np. $b + 28 + \\frac{b}{3} = 2b$ (lub zapisy równoważne)",
+                  "przedstawienie w sposób graficzny poprawnych zależności między liczbą plakatów Basi, Marka i Andrzeja **oraz** poprawnych zależności między łączną liczbą plakatów Marka i Andrzeja a liczbą plakatów Basi."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "zapisanie poprawnych wyrażeń algebraicznych **tej samej zmiennej**, opisujących liczbę plakatów Basi, Marka i Andrzeja zgodnie z warunkami zadania, np. $b$ – liczba plakatów Basi **oraz** $b + 28$ – liczba plakatów Andrzeja **oraz** $\\frac{b}{3}$ – liczba plakatów Marka (lub zapisy równoważne)",
+                  "zastosowanie metody prób i błędów – sprawdzenie wszystkich warunków zadania dla co najmniej dwóch różnych zestawów trzech liczb plakatów (Basi, Marka i Andrzeja), wśród których **nie ma** prawidłowego zestawu liczb plakatów (42, 14, 70),",
+                  "przedstawienie w sposób graficzny poprawnych zależności między liczbą plakatów Basi, Marka i Andrzeja."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-VI.4"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "**I sposób**\n$b$ – liczba plakatów Basi\n$b + 28$ – liczba plakatów Andrzeja\n$\\frac{b}{3}$ – liczba plakatów Marka\nZapiszemy równanie wynikające z warunków zadania i obliczymy liczbę plakatów Basi:\n$b + 28 + \\frac{b}{3} = 2b$\n$\\frac{2}{3}b = 28$\n$b = 42$\nObliczymy liczbę plakatów Marka:\n$\\frac{b}{3} = \\frac{42}{3} = 14$\nObliczymy liczbę plakatów Andrzeja:\n$b + 28 = 42 + 28 = 70$\nOdpowiedź: Basia ma 42 plakaty, Marek ma 14 plakatów, Andrzej ma 70 plakatów.",
+              "ref": {
+                "source": "klucz",
+                "page": 13
+              }
+            },
+            {
+              "points": 3,
+              "content": "**II sposób**\n$a$ – liczba plakatów Andrzeja\n$a - 28$ – liczba plakatów Basi\n$\\frac{a - 28}{3}$ – liczba plakatów Marka\nZapiszemy równanie i obliczymy liczbę plakatów Andrzeja:\n$a + \\frac{a - 28}{3} = 2(a - 28)$\n$3a + a - 28 = 6a - 168$\n$a = 70$\nObliczymy liczbę plakatów Basi, a następnie obliczymy liczbę plakatów Marka:\n$a - 28 = 70 - 28 = 42$\n$\\frac{a - 28}{3} = \\frac{70 - 28}{3} = 14$\nOdpowiedź: Basia ma 42 plakaty, Marek ma 14 plakatów, Andrzej ma 70 plakatów.",
+              "ref": {
+                "source": "klucz",
+                "page": 14
+              }
+            },
+            {
+              "points": 3,
+              "content": "**III sposób**\n$m$ – liczba plakatów Marka\n$3m$ – liczba plakatów Basi\n$3m + 28$ – liczba plakatów Andrzeja\nZapiszemy równanie i obliczymy liczbę plakatów Marka, a następnie liczbę plakatów Basi i Andrzeja:\n$3m + 28 + m = 6m$\n$2m = 28$\n$m = 14$\n$3m = 42$\n$3m + 28 = 42 + 28 = 70$\nOdpowiedź: Basia ma 42 plakaty, Marek ma 14 plakatów, Andrzej ma 70 plakatów.",
+              "ref": {
+                "source": "klucz",
+                "page": 14
+              }
+            },
+            {
+              "points": 3,
+              "content": "**IV sposób**\nMetoda prób i błędów.\n\n| Basia | Andrzej o 28 więcej niż Basia | Marek 3 razy mniej niż Basia | Marek i Andrzej łącznie | 2 razy więcej niż Basia | Sprawdzenie |\n|---|---|---|---|---|---|\n| 30 | 58 | 10 | 68 | 60 | $68 \\neq 60$ |\n| 36 | 64 | 12 | 76 | 72 | $76 \\neq 72$ |\n| 48 | 76 | 16 | 92 | 96 | $92 \\neq 96$ |\n| **42** | **70** | **14** | **84** | **84** | **$84 = 84$** |\n\nOdpowiedź: Basia ma 42 plakaty, Marek ma 14 plakatów, Andrzej ma 70 plakatów.",
+              "ref": {
+                "source": "klucz",
+                "page": 15
+              }
+            },
+            {
+              "points": 3,
+              "content": "**V sposób**\nSposób graficzny:\nMarek ma 1 część: (odcinek z 1 części)\nBasia ma 3 części: (odcinek z 3 części)\nAndrzej ma o 28 plakatów więcej od Basi: (odcinek z 3 części i dodatkowy odcinek oznaczony 28)\nAndrzej i Marek mają łącznie 2 razy więcej plakatów od Basi: (odcinek z 4 części i dodatkowy odcinek oznaczony 28 zestawiony z odcinkiem z 6 części)\nStąd wynika, że 28 plakatów stanowią 2 części, czyli 1 część stanowi 14 plakatów.\nZatem Basia ma 42 plakaty, Marek ma 14 plakatów, Andrzej ma 70 plakatów.",
+              "ref": {
+                "source": "klucz",
+                "page": 15
+              }
+            }
+          ],
+          "scoringNotes": [
+            "1. Jeżeli uczeń sprawdza wszystkie warunki zadania tylko dla jednego zestawu trzech liczb plakatów (Basia: 42, Marek: 14, Andrzej: 70) **oraz**\na) nie popełnia błędów rachunkowych, to otrzymuje 1 punkt.\nb) popełnia błędy rachunkowe, to otrzymuje 0 punktów.",
+            "2. Jeżeli uczeń w całym rozwiązaniu zadania posługuje się wyłącznie przybliżeniami ułamków zwykłych, to za rozwiązanie zadania otrzymuje 0 punktów.",
+            "3. Jeżeli uczeń zapisuje poprawne wyrażenia algebraiczne tej samej zmiennej opisujące liczbę plakatów, ale zamienia ze sobą imiona przyjaciół, doprowadza rozwiązanie zadania do końca\na) bez błędów rachunkowych, to otrzymuje 2 punkty.\nb) z błędami rachunkowymi, to otrzymuje 1 punkt."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-VI.4"
+      ],
+      "ref": {
+        "source": "karta_otwarte",
+        "page": 3
+      }
+    },
+    {
+      "id": "ma-2025-18",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 18,
+      "maxPoints": 2,
+      "instruction": "Na rysunku przedstawiono trapez $ABCD$, w którym kąt $ABC$ ma miarę $48^\\circ$. Odcinek $EC$ dzieli ten trapez na równoległobok $AECD$ i trójkąt $EBC$, w którym kąt $BCE$ ma miarę $57^\\circ$ (zobacz rysunek ![Trapez ABCD z odcinkiem EC dzielącym go na równoległobok AECD i trójkąt EBC; zaznaczono kąt BCE o mierze 57° i kąt ABC o mierze 48°.](stimulus:ma-2025-18-fig1)).\n\n**Oblicz miary kątów $DAB$, $BCD$, $CDA$ trapezu $ABCD$. Zapisz obliczenia.**",
+      "stimulusIds": [
+        "ma-2025-18-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2025-18",
+          "label": "18",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "**I sposób**\nObliczymy miarę kąta wewnętrznego $BCD$ trapezu $ABCD$. Wykorzystamy własność, że suma miar kątów wewnętrznych przy jednym ramieniu trapezu jest równa $180^\\circ$.\n$180^\\circ - 48^\\circ = 132^\\circ$\nObliczymy miarę kąta wewnętrznego $ECD$ równoległoboku $AECD$:\n$132^\\circ - 57^\\circ = 75^\\circ$\nKąt wewnętrzny $DAE$ ($DAB$) ma także miarę równą $75^\\circ$.\nObliczymy miarę kąta wewnętrznego $CDA$ trapezu $ABCD$:\n$180^\\circ - 75^\\circ = 105^\\circ$\nOdpowiedź: Kąty trapezu $ABCD$ mają miary:\n$|\\measuredangle DAB| = 75^\\circ$, $|\\measuredangle BCD| = 132^\\circ$, $|\\measuredangle CDA| = 105^\\circ$."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia miar trzech kątów trapezu $ABCD$ oraz zapisanie prawidłowych wartości liczbowych ($|\\measuredangle DAB| = 75^\\circ$, $|\\measuredangle BCD| = 132^\\circ$, $|\\measuredangle CDA| = 105^\\circ$)."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia miar dwóch kątów trapezu $ABCD$",
+                  "ustalenie miar dwóch kątów trapezu $ABCD$ bez podania sposobu ich obliczenia, np. zapisanie na rysunku."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-VIII.6",
+            "ma-46-IX.3",
+            "ma-78-VIII.3"
+          ],
+          "explanation": "W trójkącie $EBC$ suma miar kątów wewnętrznych wynosi $180^\\circ$, więc $|\\measuredangle CEB| = 180^\\circ - 48^\\circ - 57^\\circ = 75^\\circ$. Kąty $CEB$ i $ECD$ są naprzemianległe przy równoległych prostych $AB$ i $DC$, zatem $|\\measuredangle ECD| = 75^\\circ$. W równoległoboku $AECD$ przeciwległe kąty są równe, dlatego $|\\measuredangle DAB| = 75^\\circ$ oraz $|\\measuredangle CDA| = |\\measuredangle AEC| = 180^\\circ - 75^\\circ = 105^\\circ$, a $|\\measuredangle BCD| = 57^\\circ + 75^\\circ = 132^\\circ$.",
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "**I sposób**\nObliczymy miarę kąta wewnętrznego $BCD$ trapezu $ABCD$. Wykorzystamy własność, że suma miar kątów wewnętrznych przy jednym ramieniu trapezu jest równa $180^\\circ$.\n$180^\\circ - 48^\\circ = 132^\\circ$\nObliczymy miarę kąta wewnętrznego $ECD$ równoległoboku $AECD$:\n$132^\\circ - 57^\\circ = 75^\\circ$\nKąt wewnętrzny $DAE$ ($DAB$) ma także miarę równą $75^\\circ$.\nObliczymy miarę kąta wewnętrznego $CDA$ trapezu $ABCD$:\n$180^\\circ - 75^\\circ = 105^\\circ$\nOdpowiedź: Kąty trapezu $ABCD$ mają miary:\n$|\\measuredangle DAB| = 75^\\circ$, $|\\measuredangle BCD| = 132^\\circ$, $|\\measuredangle CDA| = 105^\\circ$.",
+              "ref": {
+                "source": "klucz",
+                "page": 16
+              }
+            },
+            {
+              "points": 2,
+              "content": "**II sposób**\nSuma miar kątów wewnętrznych trójkąta jest równa $180^\\circ$, zatem:\n$|\\measuredangle CEB| = 180^\\circ - 48^\\circ - 57^\\circ = 75^\\circ$\nSkoro\n$|\\measuredangle CEB| + |\\measuredangle AEC| = 180^\\circ$, to $|\\measuredangle AEC| = 180^\\circ - 75^\\circ = 105^\\circ$\nKąty $AEC$ i $CDA$ są równe, więc $|\\measuredangle CDA| = 105^\\circ$.\nSkoro\n$|\\measuredangle CDA| + |\\measuredangle DAE| = 180^\\circ$, to $|\\measuredangle DAE| = 180^\\circ - 105^\\circ = 75^\\circ$.\nKąty $DAE$ i $ECD$ są równe, więc $|\\measuredangle BCD| = 75^\\circ + 57^\\circ = 132^\\circ$.\nOdpowiedź: Kąty trapezu $ABCD$ mają miary:\n$|\\measuredangle DAB| = 75^\\circ$, $|\\measuredangle BCD| = 132^\\circ$, $|\\measuredangle CDA| = 105^\\circ$.",
+              "ref": {
+                "source": "klucz",
+                "page": 17
+              }
+            },
+            {
+              "points": 2,
+              "content": "**III sposób**\nSuma miar kątów wewnętrznych trójkąta jest równa $180^\\circ$, zatem:\n$|\\measuredangle CEB| = 180^\\circ - 48^\\circ - 57^\\circ = 75^\\circ$\nKąty $CEB$ i $ECD$ są naprzemianległe, zatem:\n$|\\measuredangle CEB| = |\\measuredangle ECD| = 75^\\circ$\nPonadto:\nkąty $ECD$ i $DAE$ ($DAB$) są równe, więc\n$|\\measuredangle ECD| = |\\measuredangle DAE| = 75^\\circ$\nObliczymy miarę kąta $BCD$:\n$|\\measuredangle BCD| = 57^\\circ + 75^\\circ = 132^\\circ$\nSkoro\n$|\\measuredangle AEC| + |\\measuredangle ECD| = 180^\\circ$, to $|\\measuredangle AEC| = 180^\\circ - 75^\\circ = 105^\\circ$.\nKąty $AEC$ i $CDA$ są równe, więc\n$|\\measuredangle CDA| = 105^\\circ$\nOdpowiedź: Kąty trapezu $ABCD$ mają miary:\n$|\\measuredangle DAB| = 75^\\circ$, $|\\measuredangle BCD| = 132^\\circ$, $|\\measuredangle CDA| = 105^\\circ$.",
+              "ref": {
+                "source": "klucz",
+                "page": 17
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-VIII.6",
+        "ma-46-IX.3",
+        "ma-78-VIII.3"
+      ],
+      "ref": {
+        "source": "karta_otwarte",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2025-19",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 19,
+      "maxPoints": 2,
+      "instruction": "Na ścianie wiszą dwie tablice: mała kwadratowa i duża prostokątna. Mała tablica narysowana w skali $1:20$ jest kwadratem o boku $3$ cm. Rzeczywiste wymiary dużej prostokątnej tablicy są równe $240$ cm i $90$ cm.\n\n**Oblicz, ile razy pole dużej tablicy jest większe od pola małej tablicy. Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-19",
+          "label": "19",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Obliczymy długość boku małej kwadratowej tablicy w rzeczywistości:\n$3\\ \\text{cm} \\cdot 20 = 60\\ \\text{cm}$\nObliczymy pole małej kwadratowej tablicy w rzeczywistości:\n$P_{\\text{małej tablicy}} = 60\\ \\text{cm} \\cdot 60\\ \\text{cm} = 3\\,600\\ \\text{cm}^2$\nObliczymy pole dużej prostokątnej tablicy w rzeczywistości:\n$P_{\\text{dużej tablicy}} = 240\\ \\text{cm} \\cdot 90\\ \\text{cm} = 21\\,600\\ \\text{cm}^2$\nObliczymy, ile razy pole dużej prostokątnej tablicy jest większe od pola małej kwadratowej tablicy:\n$\\frac{P_{\\text{dużej tablicy}}}{P_{\\text{małej tablicy}}} = \\frac{21\\,600\\ \\text{cm}^2}{3\\,600\\ \\text{cm}^2} = 6$\nOdpowiedź: Pole dużej tablicy jest 6 razy większe od pola małej tablicy."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia, ile razy pole dużej tablicy jest większe od pola małej tablicy, prawidłowe obliczenia oraz prawidłowy wynik liczbowy ($6$ razy)",
+                  "ustalenie poprawnych zależności między długościami boków prostokąta a długością boku kwadratu oraz ustalenie (na podstawie odpowiednio zwymiarowanych względem siebie figur na rysunku lub na podstawie prawidłowego działania arytmetycznego), że pole dużej tablicy jest $6$ razy większe od pola małej tablicy."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia długości boku małej kwadratowej tablicy w rzeczywistości oraz poprawny sposób obliczenia pola dużej prostokątnej tablicy w rzeczywistości",
+                  "poprawny sposób obliczenia długości boku małej kwadratowej tablicy w rzeczywistości oraz poprawny sposób obliczenia pola małej kwadratowej tablicy w rzeczywistości,",
+                  "poprawny sposób obliczenia długości boków dużej prostokątnej tablicy na rysunku w skali $1:20$ oraz poprawny sposób obliczenia pola małej kwadratowej tablicy narysowanej w skali $1:20$,",
+                  "poprawny sposób obliczenia długości boków dużej prostokątnej tablicy na rysunku w skali $1:20$ oraz poprawny sposób obliczenia pola dużej prostokątnej tablicy narysowanej w skali $1:20$,",
+                  "poprawny sposób ustalenia zależności między długościami boków prostokąta a długością boku kwadratu, np. zapisanie: $240 : 60$ oraz $90 : 60$ albo $12 : 3$ oraz $4,5 : 3$",
+                  "narysowanie odpowiednio zwymiarowanych względem siebie figur: kwadratu oraz prostokąta, którego długość krótszego boku stanowi $1,5$ długości boku kwadratu, a długość drugiego boku prostokąta jest $4$ razy większa od długości boku kwadratu."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-XI.3",
+            "ma-46-XII.8"
+          ],
+          "explanation": "Bok małej kwadratowej tablicy w rzeczywistości ma długość $3\\ \\text{cm} \\cdot 20 = 60\\ \\text{cm}$, więc jej pole wynosi $60\\ \\text{cm} \\cdot 60\\ \\text{cm} = 3\\,600\\ \\text{cm}^2$. Pole dużej prostokątnej tablicy to $240\\ \\text{cm} \\cdot 90\\ \\text{cm} = 21\\,600\\ \\text{cm}^2$. Dzieląc pole dużej tablicy przez pole małej: $21\\,600 : 3\\,600 = 6$, więc pole dużej tablicy jest 6 razy większe od pola małej tablicy.",
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "I sposób\nObliczymy długość boku małej kwadratowej tablicy w rzeczywistości:\n$3\\ \\text{cm} \\cdot 20 = 60\\ \\text{cm}$\nObliczymy pole małej kwadratowej tablicy w rzeczywistości:\n$P_{\\text{małej tablicy}} = 60\\ \\text{cm} \\cdot 60\\ \\text{cm} = 3\\,600\\ \\text{cm}^2$\nObliczymy pole dużej prostokątnej tablicy w rzeczywistości:\n$P_{\\text{dużej tablicy}} = 240\\ \\text{cm} \\cdot 90\\ \\text{cm} = 21\\,600\\ \\text{cm}^2$\nObliczymy, ile razy pole dużej prostokątnej tablicy jest większe od pola małej kwadratowej tablicy:\n$\\frac{P_{\\text{dużej tablicy}}}{P_{\\text{małej tablicy}}} = \\frac{21\\,600\\ \\text{cm}^2}{3\\,600\\ \\text{cm}^2} = 6$\nOdpowiedź: Pole dużej tablicy jest 6 razy większe od pola małej tablicy.",
+              "ref": {
+                "source": "klucz",
+                "page": 19
+              }
+            },
+            {
+              "points": 2,
+              "content": "II sposób\nObliczymy długości boków dużej prostokątnej tablicy na rysunku w skali $1:20$:\n$240\\ \\text{cm} : 20 = 12\\ \\text{cm}$\n$90\\ \\text{cm} : 20 = 4,5\\ \\text{cm}$\nObliczymy pole dużej prostokątnej tablicy na rysunku w skali $1:20$:\n$P_{\\text{rysunku dużej tablicy}} = 12\\ \\text{cm} \\cdot 4,5\\ \\text{cm} = 54\\ \\text{cm}^2$\nObliczymy pole małej kwadratowej tablicy na rysunku w skali $1:20$:\n$P_{\\text{rysunku małej tablicy}} = 3\\ \\text{cm} \\cdot 3\\ \\text{cm} = 9\\ \\text{cm}^2$\nObliczymy, ile razy pole dużej prostokątnej tablicy jest większe od pola małej kwadratowej tablicy:\n$\\frac{P_{\\text{dużej tablicy}}}{P_{\\text{małej tablicy}}} = \\frac{P_{\\text{rysunku dużej tablicy}}}{P_{\\text{rysunku małej tablicy}}} = \\frac{54\\ \\text{cm}^2}{9\\ \\text{cm}^2} = 6$\nOdpowiedź: Pole dużej tablicy jest 6 razy większe od pola małej tablicy.",
+              "ref": {
+                "source": "klucz",
+                "page": 19
+              }
+            },
+            {
+              "points": 2,
+              "content": "III sposób\nObliczymy długość boku małej kwadratowej tablicy w rzeczywistości:\n$3\\ \\text{cm} \\cdot 20 = 60\\ \\text{cm}$\nObliczymy stosunek długości boków prostokątnej tablicy do długości boku kwadratowej tablicy:\n$240\\ \\text{cm} : 60\\ \\text{cm} = 4$\n$90\\ \\text{cm} : 60\\ \\text{cm} = 1,5$\nObliczymy, ile razy pole dużej prostokątnej tablicy jest większe od pola małej kwadratowej tablicy:\n$4 \\cdot 1,5 = 6$\nOdpowiedź: Pole dużej tablicy jest 6 razy większe od pola małej tablicy.",
+              "ref": {
+                "source": "klucz",
+                "page": 20
+              }
+            },
+            {
+              "points": 2,
+              "content": "IV sposób\nSposób graficzny: na rysunku w kratkę narysowano kwadrat o boku 60 cm (bok małej tablicy w rzeczywistości) oraz prostokąt o bokach 240 cm i 90 cm (duża tablica), który pokrywa się dokładnie z sześcioma kwadratami o boku 60 cm ponumerowanymi 1–6.\nOdpowiedź: Pole dużej tablicy jest 6 razy większe od pola małej tablicy.",
+              "ref": {
+                "source": "klucz",
+                "page": 20
+              }
+            }
+          ],
+          "scoringNotes": [
+            "1. Nie ocenia się stosowania jednostki.",
+            "2. Jeżeli uczeń poprawnie obliczy pola obu tablic w wymiarach rzeczywistych albo w skali $1:20$, a następnie proporcjonalnie zmniejszy lub zwiększy te pola oraz obliczy ich iloraz bez błędów rachunkowych, to otrzymuje 2 punkty."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-XI.3",
+        "ma-46-XII.8"
+      ],
+      "ref": {
+        "source": "karta_otwarte",
+        "page": 5
+      }
+    },
+    {
+      "id": "ma-2025-20",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 20,
+      "maxPoints": 3,
+      "instruction": "Dany jest kwadrat $ABCD$ o boku długości $15$ cm. Każdy z boków $AB$ i $CD$ podzielono na trzy równe części, a każdy z boków $AD$ i $BC$ podzielono na pięć równych części.\nNa boku $BC$ zaznaczono punkt $E$, na boku $CD$ zaznaczono punkt $F$, a ponadto poprowadzono odcinki $AE$ i $AF$ (zobacz rysunek).\n**Oblicz pole czworokąta $AECF$. Zapisz obliczenia.**\n![Kwadrat ABCD z zaznaczonymi punktami F na boku DC i E na boku BC oraz zacieniowanym na zielono czworokątem AECF.](stimulus:ma-2025-20-fig1)",
+      "stimulusIds": [
+        "ma-2025-20-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2025-20",
+          "label": "20",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Obliczymy pole trójkąta $ABE$:\n$|AB| = 15$ (cm)\n$|BE| = 2 \\cdot (15 : 5) = 6$ (cm)\n$P_{ABE} = \\frac{1}{2} \\cdot |AB| \\cdot |BE|$\n$P_{ABE} = \\frac{1}{2} \\cdot 15 \\cdot 6 = 45$ (cm$^2$)\nObliczymy pole trójkąta $ADF$:\n$|AD| = 15$ (cm)\n$|DF| = 2 \\cdot (15 : 3) = 10$ (cm)\n$P_{ADF} = \\frac{1}{2} \\cdot |AD| \\cdot |DF|$\n$P_{ADF} = \\frac{1}{2} \\cdot 15 \\cdot 10 = 75$ (cm$^2$)\nZauważymy, że pole czworokąta $AECF$ jest różnicą pola kwadratu $ABCD$ i pól trójkątów $ABE$ i $ADF$:\n$P_{AECF} = P_{ABCD} - P_{ABE} - P_{ADF}$\n$P_{AECF} = 225 - 45 - 75 = 105$ (cm$^2$)\nOdpowiedź: Pole czworokąta $AECF$ jest równe $105$ cm$^2$."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia pola czworokąta $AECF$, prawidłowe obliczenia **oraz** prawidłowy wynik liczbowy zgodny z zastosowaną jednostką ($105$ cm$^2$)."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia pola czworokąta $AECF$, np. zapisanie $P_{AECF} = 15^2 - \\frac{[2 \\cdot (15 : 5)] \\cdot 15}{2} - \\frac{[2 \\cdot (15 : 3)] \\cdot 15}{2}$ albo $P_{AECF} = \\frac{[3 \\cdot (15 : 5)] \\cdot 15}{2} + \\frac{(15 : 3) \\cdot 15}{2}$, albo $P_{AECF} = \\frac{(15 + 15 : 3) \\cdot 15}{2} - \\frac{[2 \\cdot (15 : 5)] \\cdot 15}{2}$",
+                  "poprawny sposób obliczenia, jaką częścią pola kwadratu $ABCD$ jest pole czworokąta $AECF$."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia pola jednego z trójkątów $ABE$, $ADF$, $AEC$, $ACF$, np. $P_{ABE} = \\frac{1}{2} \\cdot 15 \\cdot 2 \\cdot (15 : 5)$ lub $P_{ADF} = \\frac{1}{2} \\cdot 15 \\cdot 2 \\cdot (15 : 3)$ lub $P_{AEC} = \\frac{1}{2} \\cdot 15 \\cdot 3 \\cdot (15 : 5)$ lub $P_{ACF} = \\frac{1}{2} \\cdot 15 \\cdot (15 : 3)$",
+                  "poprawny sposób obliczenia pola jednego z trapezów $ABCF$, $AECD$, np. zapisanie $P_{ABCF} = \\frac{1}{2} \\cdot [15 + (15 : 3)] \\cdot 15$ lub $P_{AECD} = \\frac{1}{2} \\cdot [15 + (3 \\cdot (15 : 5))] \\cdot 15$,",
+                  "poprawny sposób wyznaczenia, jaką częścią pola kwadratu $ABCD$ jest pole jednego z trójkątów $ABE$, $ADF$, $AEC$, $ACF$,",
+                  "zapisanie, że pole czworokąta $AECF$ jest różnicą pola kwadratu $ABCD$ i sumy pól trójkątów $ABE$ i $ADF$ z uwzględnieniem długości boku kwadratu, np. $P_{AECF} = 15^2 - \\frac{1}{2} \\cdot 15 \\cdot |BE| - \\frac{1}{2} \\cdot 15 \\cdot |DF|$ (lub zapisy równoważne),",
+                  "zapisanie, że pole czworokąta $AECF$ jest różnicą pola trapezu $ABCF$ i pola trójkąta $ABE$ z uwzględnieniem długości boku kwadratu, np. $P_{AECF} = \\frac{1}{2} \\cdot (15 + |FC|) \\cdot 15 - \\frac{1}{2} \\cdot 15 \\cdot |BE|$ (lub zapisy równoważne),",
+                  "zapisanie, że pole czworokąta $AECF$ jest sumą pola trójkąta $AEC$ i pola trójkąta $ACF$ z uwzględnieniem długości boku kwadratu, np. $P_{AECF} = \\frac{1}{2} \\cdot 15 \\cdot |EC| + \\frac{1}{2} \\cdot 15 \\cdot |CF|$ (lub zapisy równoważne)."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-46-XI.3",
+            "ma-46-XI.5",
+            "ma-46-IV.1"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "I sposób\nObliczymy pole trójkąta $ABE$:\n$|AB| = 15$ (cm)\n$|BE| = 2 \\cdot (15 : 5) = 6$ (cm)\n$P_{ABE} = \\frac{1}{2} \\cdot |AB| \\cdot |BE|$\n$P_{ABE} = \\frac{1}{2} \\cdot 15 \\cdot 6 = 45$ (cm$^2$)\nObliczymy pole trójkąta $ADF$:\n$|AD| = 15$ (cm)\n$|DF| = 2 \\cdot (15 : 3) = 10$ (cm)\n$P_{ADF} = \\frac{1}{2} \\cdot |AD| \\cdot |DF|$\n$P_{ADF} = \\frac{1}{2} \\cdot 15 \\cdot 10 = 75$ (cm$^2$)\nZauważymy, że pole czworokąta $AECF$ jest różnicą pola kwadratu $ABCD$ i pól trójkątów $ABE$ i $ADF$:\n$P_{AECF} = P_{ABCD} - P_{ABE} - P_{ADF}$\n$P_{AECF} = 225 - 45 - 75 = 105$ (cm$^2$)\nOdpowiedź: Pole czworokąta $AECF$ jest równe $105$ cm$^2$.",
+              "ref": {
+                "source": "klucz",
+                "page": 22
+              }
+            },
+            {
+              "points": 3,
+              "content": "II sposób\nObliczymy pole trójkąta $AEC$:\n$|AB| = 15$ (cm)\n$|EC| = 3 \\cdot (15 : 5) = 9$ (cm)\n$P_{AEC} = \\frac{1}{2} \\cdot |EC| \\cdot |AB|$\n$P_{AEC} = \\frac{1}{2} \\cdot 9 \\cdot 15 = 67,5$ (cm$^2$)\nObliczymy pole trójkąta $ACF$:\n$|AD| = 15$ (cm)\n$|CF| = 15 : 3 = 5$ (cm)\n$P_{ACF} = \\frac{1}{2} \\cdot |CF| \\cdot |AD|$\n$P_{ACF} = \\frac{1}{2} \\cdot 5 \\cdot 15 = 37,5$ (cm$^2$)\nPole czworokąta $AECF$ jest sumą pól trójkątów $AEC$ i $ACF$.\nObliczymy pole czworokąta $AECF$:\n$P_{AECF} = P_{AEC} + P_{ACF}$\n$P_{AECF} = 67,5 + 37,5 = 105$ (cm$^2$)\nOdpowiedź: Pole czworokąta $AECF$ jest równe $105$ cm$^2$.",
+              "ref": {
+                "source": "klucz",
+                "page": 23
+              }
+            },
+            {
+              "points": 3,
+              "content": "III sposób\nObliczymy, jaką część pola kwadratu $ABCD$ stanowią pola trójkątów $AEC$ i $ACF$. Wykorzystamy fakt, że stosunek pól trójkątów o tych samych wysokościach jest równy stosunkowi długości ich podstaw:\n$P_{AEC} = \\frac{3}{5} \\cdot P_{ABC} = \\frac{3}{5} \\cdot \\frac{1}{2} P_{ABCD} = \\frac{3}{10} P_{ABCD}$\n$P_{ACF} = \\frac{1}{3} \\cdot P_{ACD} = \\frac{1}{3} \\cdot \\frac{1}{2} P_{ABCD} = \\frac{1}{6} P_{ABCD}$\nObliczymy pole czworokąta $AECF$:\n$P_{AECF} = P_{AEC} + P_{ACF}$\n$P_{AECF} = \\frac{3}{10} P_{ABCD} + \\frac{1}{6} P_{ABCD}$\n$P_{AECF} = \\frac{7}{15} P_{ABCD} = \\frac{7}{15} \\cdot 225 = 105$ (cm$^2$)\nOdpowiedź: Pole czworokąta $AECF$ jest równe $105$ cm$^2$.",
+              "ref": {
+                "source": "klucz",
+                "page": 23
+              }
+            },
+            {
+              "points": 3,
+              "content": "IV sposób\nObliczymy długość podstawy $FC$ trapezu $ABCF$:\n$|FC| = 15 : 3 = 5$ (cm)\nObliczymy pole trapezu $ABCF$:\n$|AB| = 15$ (cm)\n$|BC| = 15$ (cm)\n$P_{ABCF} = \\frac{1}{2} \\cdot (|AB| + |FC|) \\cdot |BC|$\n$P_{ABCF} = \\frac{1}{2} \\cdot (15 + 5) \\cdot 15 = 150$ (cm$^2$)\nObliczymy pole trójkąta $ABE$:\n$|AB| = 15$ (cm)\n$|BE| = 2 \\cdot (15 : 5) = 6$ (cm)\n$P_{ABE} = \\frac{1}{2} \\cdot |AB| \\cdot |BE|$\n$P_{ABE} = \\frac{1}{2} \\cdot 15 \\cdot 6 = 45$ (cm$^2$)\nZauważymy, że pole czworokąta $AECF$ jest różnicą pola trapezu $ABCF$ i pola trójkąta prostokątnego $ABE$:\n$P_{AECF} = P_{ABCF} - P_{ABE}$\n$P_{AECF} = 150 - 45 = 105$ (cm$^2$)\nOdpowiedź: Pole czworokąta $AECF$ jest równe $105$ cm$^2$.",
+              "ref": {
+                "source": "klucz",
+                "page": 24
+              }
+            },
+            {
+              "points": 3,
+              "content": "V sposób\nObliczymy, jaką część pola kwadratu $ABCD$ stanowią pola trójkątów $ABE$ i $ADF$. Wykorzystamy fakt, że stosunek pól trójkątów o tych samych wysokościach jest równy stosunkowi długości ich podstaw:\n$P_{ABE} = \\frac{2}{5} \\cdot P_{ABC} = \\frac{2}{5} \\cdot \\frac{1}{2} P_{ABCD} = \\frac{1}{5} P_{ABCD}$\n$P_{ADF} = \\frac{2}{3} \\cdot P_{ACD} = \\frac{2}{3} \\cdot \\frac{1}{2} P_{ABCD} = \\frac{1}{3} P_{ABCD}$\nZauważymy, że pole czworokąta $AECF$ jest różnicą pola kwadratu $ABCD$ oraz pól trójkątów $ABE$ i $ADF$:\n$P_{AECF} = P_{ABCD} - P_{ABE} - P_{ADF}$\nObliczymy pole czworokąta $AECF$:\n$P_{AECF} = P_{ABCD} - \\frac{1}{5} P_{ABCD} - \\frac{1}{3} P_{ABCD}$\n$P_{AECF} = \\frac{7}{15} P_{ABCD} = \\frac{7}{15} \\cdot 225 = 105$ (cm$^2$)\nOdpowiedź: Pole czworokąta $AECF$ jest równe $105$ cm$^2$.",
+              "ref": {
+                "source": "klucz",
+                "page": 24
+              }
+            }
+          ],
+          "scoringNotes": [
+            "1. Brak jednostki lub zapisanie niewłaściwej jednostki w wyniku końcowym traktuje się jako błąd rachunkowy.",
+            "2. Nie akceptuje się rozwiązań zadania opartych na pomiarze, np. linijką."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-46-XI.3",
+        "ma-46-XI.5",
+        "ma-46-IV.1"
+      ],
+      "ref": {
+        "source": "karta_otwarte",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2025-21",
+      "sessionId": "matematyka-2025-05-glowny",
+      "number": 21,
+      "maxPoints": 3,
+      "instruction": "Dany jest ostrosłup prawidłowy czworokątny, w którym wysokość ściany bocznej poprowadzona do krawędzi podstawy jest równa $12$ cm (zobacz rysunek). Pole powierzchni jednej ściany bocznej tego ostrosłupa jest równe $108$ cm$^2$.\n\n![Rysunek ostrosłupa prawidłowego czworokątnego z zaznaczoną wysokością ściany bocznej poprowadzoną do krawędzi podstawy, opisaną 12 cm.](stimulus:ma-2025-21-fig1)\n\n**Oblicz sumę długości wszystkich krawędzi tego ostrosłupa. Zapisz obliczenia.**",
+      "stimulusIds": [
+        "ma-2025-21-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2025-21",
+          "label": "21",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Oznaczymy na rysunku długość krawędzi podstawy ostrosłupa jako $a$ oraz długość krawędzi bocznej jako $c$.\n\nObliczymy długość krawędzi podstawy ostrosłupa:\n$P = \\frac{1}{2} \\cdot a \\cdot 12$\n$108 = a \\cdot 6$\n$a = 18$ (cm)\n\nObliczymy długość krawędzi bocznej ostrosłupa z twierdzenia Pitagorasa:\n$c^2 = 12^2 + \\left(\\frac{a}{2}\\right)^2$\n$c^2 = 12^2 + 9^2$\n$c^2 = 225$\n$c = \\sqrt{225}$\n$c = 15$\n\nObliczymy sumę długości wszystkich krawędzi ostrosłupa:\n$4 \\cdot a + 4 \\cdot c = 4 \\cdot 18 + 4 \\cdot 15 = 132$ (cm)\n\nOdpowiedź: Suma długości wszystkich krawędzi ostrosłupa jest równa 132 cm."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia sumy długości wszystkich krawędzi ostrosłupa, prawidłowe obliczenia oraz prawidłowy wynik liczbowy zgodny z zastosowaną jednostką długości (132 cm)."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia długości krawędzi podstawy oraz poprawny sposób obliczenia długości krawędzi bocznej ostrosłupa, czyli poprawne zastosowanie twierdzenia Pitagorasa, np. zapisanie $108 : \\left(\\frac{1}{2} \\cdot 12\\right)$ oraz $12^2 + \\left[\\frac{1}{2} \\cdot 108 : \\left(\\frac{1}{2} \\cdot 12\\right)\\right]^2 = c^2$, gdzie $c$ jest długością krawędzi bocznej ostrosłupa (lub zapisy równoważne)",
+                  "poprawny sposób obliczenia długości krawędzi podstawy oraz prawidłowy wynik liczbowy (18 cm) oraz ustalenie (np. zapisanie na rysunku) długości krawędzi bocznej ostrosłupa bez przedstawienia sposobu jej obliczenia (15 cm), np. zapisanie $108 : \\left(\\frac{1}{2} \\cdot 12\\right) = 18$ oraz $c = 15$, gdzie $c$ jest długością krawędzi bocznej ostrosłupa (lub zapisy równoważne)."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia długości krawędzi podstawy ostrosłupa, tzn. zapisanie równania z jedną niewiadomą lub wyrażeń arytmetycznych z wykorzystaniem wzoru na pole trójkąta z uwzględnieniem wszystkich danych liczbowych (pola powierzchni jednej ściany bocznej i wysokości ściany bocznej), np. $108 = \\frac{1}{2} \\cdot a \\cdot 12$, gdzie $a$ jest długością krawędzi podstawy ostrosłupa, albo $108 : \\left(\\frac{1}{2} \\cdot 12\\right)$",
+                  "zastosowanie twierdzenia Pitagorasa do wyznaczenia długości krawędzi bocznej ostrosłupa, czyli zapisanie zgodnie z przyjętymi oznaczeniami poprawnej zależności między wysokością ściany bocznej a połową długości krawędzi podstawy ostrosłupa oraz długością krawędzi bocznej ostrosłupa, np. $12^2 + \\left(\\frac{1}{2}a\\right)^2 = c^2$, gdzie: $a$ jest długością poprawnie zidentyfikowanej krawędzi podstawy oraz $c$ jest długością poprawnie zidentyfikowanej krawędzi bocznej ostrosłupa (lub zapisy równoważne)."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-78-VIII.7",
+            "ma-78-IX.2",
+            "ma-78-XI.1"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "Oznaczymy na rysunku długość krawędzi podstawy ostrosłupa jako $a$ oraz długość krawędzi bocznej jako $c$.\n\nObliczymy długość krawędzi podstawy ostrosłupa:\n$P = \\frac{1}{2} \\cdot a \\cdot 12$\n$108 = a \\cdot 6$\n$a = 18$ (cm)\n\nObliczymy długość krawędzi bocznej ostrosłupa z twierdzenia Pitagorasa:\n$c^2 = 12^2 + \\left(\\frac{a}{2}\\right)^2$\n$c^2 = 12^2 + 9^2$\n$c^2 = 225$\n$c = \\sqrt{225}$\n$c = 15$\n\nObliczymy sumę długości wszystkich krawędzi ostrosłupa:\n$4 \\cdot a + 4 \\cdot c = 4 \\cdot 18 + 4 \\cdot 15 = 132$ (cm)\n\nOdpowiedź: Suma długości wszystkich krawędzi ostrosłupa jest równa 132 cm.",
+              "ref": {
+                "source": "klucz",
+                "page": 26
+              }
+            }
+          ],
+          "scoringNotes": [
+            "1. Nie ocenia się stosowania jednostki.",
+            "2. Jeżeli uczeń ustala długość krawędzi podstawy (18 cm) i długość krawędzi bocznej (15 cm), np. zapisuje na rysunku bez przedstawienia sposobów ich obliczenia oraz przedstawia poprawny sposób obliczenia sumy długości wszystkich krawędzi ostrosłupa oraz doprowadza rozwiązanie zadania do końca bez błędów rachunkowych, to otrzymuje 2 punkty."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-78-VIII.7",
+        "ma-78-IX.2",
+        "ma-78-XI.1"
+      ],
+      "ref": {
+        "source": "karta_otwarte",
+        "page": 7
+      }
+    }
+  ],
+  "rubrics": [],
+  "audio": []
+}

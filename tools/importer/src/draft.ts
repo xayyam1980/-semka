@@ -72,5 +72,56 @@ export const DraftTask = z.object({
   figures: z.array(Figure),
   items: z.array(DraftItem).min(1),
   notes: z.array(z.string()).describe("Anything uncertain for the human reviewer (unreadable symbol, ambiguous key). Empty if none"),
+  essay: z.lazy(() => DraftEssay).nullable().default(null).describe("Only for an essay (wypracowanie) task: topics and the full rubric for each topic; otherwise null"),
 });
 export type DraftTask = z.infer<typeof DraftTask>;
+
+// ── Essays: one rubric per topic, transcribed from the key ──
+const DraftThreshold = z.object({
+  maxErrors: z.number().int().describe("Upper bound of errors for these points; use 999 for 'or more'"),
+  points: z.number().int(),
+});
+
+export const DraftCriterion = z.object({
+  id: z.string().describe('Short id, e.g. "realizacja", "retoryczne", "jezyk", "ortografia"'),
+  name: z.string().describe('Criterion name exactly as in the key, e.g. "Realizacja tematu wypowiedzi"'),
+  max: z.number().int(),
+  type: z.enum(["levels", "error_count", "matrix"]).describe("error_count: points come from a number of errors (ortografia, interpunkcja); matrix: a 2-D table"),
+  levels: z.array(Level).describe("levels: every level from max down to 0 with the key's descriptions; otherwise empty"),
+  standardThresholds: z.array(DraftThreshold).describe("error_count: thresholds for students without dyslexia; otherwise empty"),
+  dyslexiaThresholds: z.array(DraftThreshold).describe("error_count: thresholds for students with dyslexia (specyficzne trudności w uczeniu się); same as standard if the key gives one table; otherwise empty"),
+  matrix: z
+    .object({ rows: z.string(), cols: z.string(), cells: z.array(z.object({ row: z.string(), col: z.string(), points: z.number().int() })) })
+    .nullable()
+    .describe("matrix: the table, one cell per row/column pair; otherwise null"),
+});
+
+export const DraftEssay = z.object({
+  topics: z
+    .array(
+      z.object({
+        id: z.string().describe('"1", "2"'),
+        text: z.string().describe("The full topic (Temat) text, Markdown"),
+        form: z.string().nullable().describe('Required form, e.g. "przemówienie", "opowiadanie", "rozprawka"'),
+        criteria: z.array(DraftCriterion).min(1),
+        gates: z.array(z.object({ ifCriterion: z.string(), equals: z.number().int(), thenAllOthers: z.number().int() })).describe('E.g. "0 for Realizacja tematu → 0 in all other criteria"'),
+      }),
+    )
+    .min(1),
+  minWords: z.number().int().nullable().describe('From "Twoja praca powinna liczyć co najmniej N wyrazów"'),
+});
+export type DraftEssay = z.infer<typeof DraftEssay>;
+
+// ── Reading texts shared by a group of tasks ──
+export const DraftStimulus = z.object({
+  kind: z.enum(["text", "poem"]),
+  title: z.string().nullable(),
+  author: z.string().nullable(),
+  paragraphs: z.array(z.string()).min(1).describe("Prose: one entry per paragraph. Poem: one entry per verse line (empty string between stanzas). Copy exactly; keep footnote marks like ¹ as superscript digits"),
+  lineNumbering: z.enum(["none", "every", "every5"]).describe("Whether the sheet prints line numbers next to the text"),
+  source: z.string().nullable().describe("The bibliographic line under the text, e.g. 'Stanisław Lem, Przyjaciel Automateusza, [w:] …'"),
+  footnotes: z.array(z.object({ mark: z.string(), text: z.string() })),
+  wordCount: z.number().int().nullable().describe('From "[579 wyrazów]" if printed'),
+  notes: z.array(z.string()),
+});
+export type DraftStimulus = z.infer<typeof DraftStimulus>;

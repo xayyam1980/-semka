@@ -20,6 +20,7 @@ const api: OsemkaApi = {
   setAiKey: (key) => ipcRenderer.invoke(IPC.setAiKey, key),
   testAi: () => ipcRenderer.invoke(IPC.testAi),
   suggestGrade: (id, itemId) => ipcRenderer.invoke(IPC.suggestGrade, id, itemId),
+  gradeRubric: (id, itemId, topic, input) => ipcRenderer.invoke(IPC.gradeRubric, id, itemId, topic, input),
 };
 
 contextBridge.exposeInMainWorld("osemka", api);

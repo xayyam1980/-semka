@@ -78,7 +78,7 @@ export function validateBundle(
 
   add(
     "Every item has a key for each usable sheet version",
-    tasks.flatMap((t) => t.items.flatMap((i) => session.versions.filter((v) => !i.key[v]).map((v) => `${i.label}: no key for ${v}`))),
+    tasks.flatMap((t) => t.items.filter((i) => i.scoring.type !== "rubric").flatMap((i) => session.versions.filter((v) => !i.key[v]).map((v) => `${i.label}: no key for ${v}`))),
   );
 
   add(
@@ -127,6 +127,22 @@ export function validateBundle(
   );
 
   add("Every figure file exists", stimuli.filter((s) => s.asset && !existsSync(join(opts.sessionDir, s.asset))).map((s) => s.asset!));
+
+  add(
+    "Rubric items point to rubrics that add up to the item's points",
+    tasks.flatMap((t) =>
+      t.items.flatMap((i) => {
+        if (i.scoring.type !== "rubric") return [];
+        return i.scoring.rubrics.flatMap((ref) => {
+          const r = parsed.data.rubrics.find((x) => x.id === ref.rubricId);
+          if (!r) return [`${i.label}: rubric ${ref.rubricId} missing`];
+          const sum = r.criteria.reduce((a, c) => a + c.max, 0);
+          const topicOk = ref.topic === null || (i.response.type === "extended_text" && i.response.topics?.some((tp) => tp.id === ref.topic));
+          return [...(sum === i.maxPoints && r.maxPoints === i.maxPoints ? [] : [`${r.id}: criteria ${sum}, rubric ${r.maxPoints}, item ${i.maxPoints}`]), ...(topicOk ? [] : [`${r.id}: unknown topic ${ref.topic}`])];
+        });
+      }),
+    ),
+  );
 
   const stimIds = new Set(stimuli.map((s) => s.id));
   add(

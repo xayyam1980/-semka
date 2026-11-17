@@ -2,12 +2,14 @@
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
-import { SUBJECTS, type SessionBundle, type SkillTag, type SourceFile, type Stimulus, type Task } from "@osemka/schema";
+import { SUBJECTS, type Rubric, type SessionBundle, type SkillTag, type SourceFile, type Stimulus, type Task } from "@osemka/schema";
 import { assemble } from "./assemble.ts";
-import { estimateInputTokens, providerFromEnv, structureTask, type TaskInput } from "./ai.ts";
+import { estimateInputTokens, inputHash, providerFromEnv, structureTask, type TaskInput } from "./ai.ts";
 import { fileOf, type FoundSession } from "./discover.ts";
 import { cropPng, decodePng, openPdf, readPages, renderPage, type PdfPage } from "./pdf.ts";
 import { snapFigure } from "./figures.ts";
+import { findTextGroups, stimulusFromDraft, textCacheFile, transcribeText } from "./texts.ts";
+import { taskId as makeTaskId } from "./assemble.ts";
 import { compareSheetAndKey, segment } from "./segment.ts";
 import { validateBundle, type Check } from "./validate.ts";
 
@@ -16,6 +18,8 @@ export interface RunOptions {
   contentRoot: string;
   cacheRoot: string;
   dryRun: boolean;
+  /** Write cache/manual-plan.json: for each task and reading text, its pages and the cache file a draft must go to. */
+  plan?: boolean;
   onlyTasks?: number[];
   log: (msg: string) => void;
 }
@@ -65,7 +69,8 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
   if (kartaSeg) opts.log(`Open-task booklet: tasks ${kartaSeg.spans.map((k) => k.number).join(", ")}`);
 
   const sheetSeg = segment(sheetPages, { maxPagesPerTask: 3 });
-  const keySeg = segment(keyPages, { maxPagesPerTask: 6 });
+  // Essay keys run over many pages; a span only ever reaches the next task's heading anyway.
+  const keySeg = segment(keyPages, { maxPagesPerTask: 10 });
   const segProblems = [...sheetSeg.problems.map((p) => `arkusz: ${p}`), ...keySeg.problems.map((p) => `klucz: ${p}`), ...compareSheetAndKey(sheetSeg, keySeg)];
   opts.log(`Sheet: ${sheetSeg.spans.length} tasks, ${sheetSeg.totalPoints} pts. Key: ${keySeg.spans.length} tasks, ${keySeg.totalPoints} pts.`);
   for (const p of segProblems) opts.log(`  ! ${p}`);
@@ -101,6 +106,25 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
   const notesFile = join(sessionDirForNotes, "review-notes.json");
   const reviewNotes: Record<string, string> = existsSync(notesFile) ? JSON.parse(readFileSync(notesFile, "utf8")) : {};
   const wanted = sheetSeg.spans.filter((t) => !opts.onlyTasks || opts.onlyTasks.includes(t.number));
+  const textGroups = findTextGroups(sheetPages, sheetSeg.spans);
+  const textOfTask = new Map(textGroups.flatMap((g) => g.tasks.map((n) => [n, g] as const)));
+  const textId = (g: { index: number }) => makeTaskId(s.subjectId, s.year, 0).replace(/-00$/, `-tekst-${g.index}`);
+  // A task ends where the next reading text begins (e.g. task 10 must not include text 2's pages).
+  for (const span of sheetSeg.spans) {
+    const g = textGroups.find((x) => (x.page > span.page || (x.page === span.page && x.y > span.y)) && x.page <= span.toPage);
+    if (g) span.toPage = Math.max(span.page, g.y <= 130 ? g.page - 1 : g.page);
+  }
+  // Essay keys: from the heading to the dyslexia criteria page (inclusive), which ends the scoring rules.
+  for (const span of keySeg.spans) {
+    if (span.maxPoints < 10) continue;
+    const dys = keyPages.find((p) => p.page >= span.page && p.lines.some((l) => /KRYTERIA OCENY PRAC UCZNI[ÓO]W ZE SPECYFICZNYMI/i.test(l.text)));
+    span.toPage = dys ? dys.page : Math.min(keyPages.length, span.page + 13);
+  }
+  // Over-long sheet spans that are not explained by a reading text are worth a look in the review.
+  for (const span of sheetSeg.spans) {
+    if (span.toPage - span.page + 1 >= 3 && !textGroups.some((g) => g.page > span.page && g.page <= span.toPage + 1)) opts.log(`  note: Zadanie ${span.number} spans pages ${span.page}–${span.toPage}`);
+  }
+  if (textGroups.length) opts.log(`Reading texts: ${textGroups.map((g) => `${g.index} (p.${g.fromPage}–${g.toPage}, tasks ${g.tasks.join(",")})`).join("; ")}`);
   const inputs: TaskInput[] = [];
   const sheetSourceOf = new Map<number, { kind: "arkusz" | "karta_otwarte"; fromPage: number }>();
   for (const span of wanted) {
@@ -118,10 +142,34 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
       keyPages: await Promise.all(range(k.fromPage, k.toPage).map(async (p) => ({ page: p, png: await png("klucz", p), text: keyPages[p - 1]! }))),
       sheetSha: src.sha,
       ...(reviewNotes[String(span.number)] ? { reviewerNote: reviewNotes[String(span.number)] } : {}),
+      ...(textOfTask.has(span.number) ? { contextNote: `This task uses reading text ${textOfTask.get(span.number)!.index}, which is transcribed separately and shown next to the task. Do not copy it into the instruction.` } : {}),
       keySha: keyFile.sha256,
     });
   }
   opts.log(`Rendered pages to ${pagesDir}`);
+
+  if (opts.plan) {
+    const { cacheKey } = providerFromEnv(process.env);
+    const items = [
+      ...textGroups.map((g) => {
+        const pagesList = Array.from({ length: g.toPage - g.fromPage + 1 }, (_, i) => g.fromPage + i);
+        return { kind: "text", index: g.index, sheetPages: pagesList, tasks: g.tasks, cacheFile: textCacheFile(g, pagesList, sheetFile.sha256, join(cacheDir, "ai"), cacheKey) };
+      }),
+      ...inputs.map((t) => ({
+        kind: "task",
+        number: t.number,
+        maxPoints: t.maxPoints,
+        sheetPages: t.sheetPages.map((p) => p.page),
+        keyPages: t.keyPages.map((p) => p.page),
+        ...(t.contextNote ? { contextNote: t.contextNote } : {}),
+        cacheFile: join(cacheDir, "ai", `task-${String(t.number).padStart(2, "0")}-${inputHash(t, cacheKey)}.json`),
+      })),
+    ];
+    mkdirSync(join(cacheDir, "ai"), { recursive: true });
+    writeFileSync(join(cacheDir, "manual-plan.json"), JSON.stringify({ cacheKey, items }, null, 2));
+    opts.log(`Plan for ${cacheKey}: ${items.length} drafts → ${join(cacheDir, "manual-plan.json")}`);
+    return report;
+  }
 
   if (opts.dryRun) {
     const w = Math.round(595 * RENDER_SCALE), h = Math.round(842 * RENDER_SCALE);
@@ -140,11 +188,27 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
   const sessionDir = join(opts.contentRoot, s.subjectId, `${s.year}-${String(s.month).padStart(2, "0")}-glowny`);
   mkdirSync(join(sessionDir, "assets"), { recursive: true });
 
-  const tasks: Task[] = [];
-  const stimuli: Stimulus[] = [];
   const tags = new Map<string, SkillTag>();
   let cost = 0;
   const tokens = { input: 0, output: 0 };
+  const tasks: Task[] = [];
+  const stimuli: Stimulus[] = [];
+  const rubrics: Rubric[] = [];
+  for (const g of textGroups) {
+    if (opts.onlyTasks && !g.tasks.some((n) => opts.onlyTasks!.includes(n))) continue;
+    opts.log(`Reading text ${g.index}: transcribing…`);
+    const pagesForText = await Promise.all(
+      Array.from({ length: g.toPage - g.fromPage + 1 }, (_, i) => g.fromPage + i).map(async (p) => ({ page: p, png: await png("arkusz", p), text: sheetPages[p - 1]! })),
+    );
+    const t = await transcribeText(provider, g, pagesForText, sheetFile.sha256, join(cacheDir, "ai"), cacheKey);
+    if (t.usage) {
+      tokens.input += t.usage.input;
+      tokens.output += t.usage.output;
+    }
+    stimuli.push(stimulusFromDraft(textId(g), t.draft, g.fromPage));
+    opts.log(`  ${t.cached ? "cached" : `${t.usage!.input}+${t.usage!.output} tokens`} · ${t.draft.paragraphs.length} paragraphs${t.draft.title ? ` · ${t.draft.title}` : ""}`);
+  }
+
   for (const input of inputs) {
     const span = wanted.find((w) => w.number === input.number)!;
     const src = sheetSourceOf.get(input.number)!;
@@ -159,7 +223,9 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
       keyPageOf: (i) => input.keyPages[i]?.page,
       fromPage: src.fromPage,
       sheetSource: src.kind,
+      ...(textOfTask.has(input.number) ? { stimulusIds: [textId(textOfTask.get(input.number)!)] } : {}),
     });
+    rubrics.push(...a.rubrics);
     if (a.figures.length) {
       // Crop from the task's own area: the AI's box only chooses which drawing it means.
       const seg = src.kind === "karta_otwarte" ? kartaSeg! : sheetSeg;
@@ -213,7 +279,7 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
     },
     stimuli,
     tasks,
-    rubrics: [],
+    rubrics,
     audio: [],
   };
   const contentVersion = createHash("sha256").update(JSON.stringify(bundleNoVersion)).digest("hex").slice(0, 16);

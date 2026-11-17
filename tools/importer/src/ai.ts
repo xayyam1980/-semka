@@ -25,6 +25,9 @@ Rules:
 - Open tasks (format "otwarte") with partial credit are worked_solution with scoring.levels: one entry per level from the maximum down to 0, each with every alternative path the key lists after "LUB", copied faithfully. Include the key's example solutions ("Przykładowe rozwiązania") as exemplars, and its scoring remarks ("Uwaga", "Uwagi") as scoringNotes.
 - Requirements: copy the "Wymaganie ogólne" and "Wymagania szczegółowe" that the key lists for this task. A task can have several.
 - The key may give answers for sheet versions X and Y; return a keys[] entry for each version printed.
+- Shared reading texts ("Przeczytaj tekst i wykonaj zadania.") are transcribed separately: never copy them into a task's instruction. Short texts printed inside one task (a definition, a short quotation or excerpt) do belong to that task's instruction.
+- Open written answers (for example Polish "krótka odpowiedź" tasks) are worked_solution scored by levels; put the key's example answers in the level paths or exemplars.
+- An essay (wypracowanie) is one item: responseType extended_text, scoring.type rubric, and the essay field filled with every topic (Temat) and, for each topic, every criterion of the key with all its levels, error thresholds (also those for students with dyslexia) and gates.
 - Explanations are for a 14-year-old student: never mention sheet versions (X, Y), the key or answer cards; explain the mathematics or the reasoning.
 - If something is unreadable or ambiguous, say so in notes rather than guessing.`;
 
@@ -39,6 +42,8 @@ export interface TaskInput {
   keySha: string;
   /** Reviewer note from review-notes.json, added to the prompt; changes the cache key of this task only. */
   reviewerNote?: string;
+  /** E.g. "this task uses reading text 1, transcribed separately". Part of the cache key only when present. */
+  contextNote?: string;
 }
 
 
@@ -57,7 +62,7 @@ const pageText = (p: PdfPage) => p.lines.map((l) => l.text).join("\n");
 
 export function inputHash(t: TaskInput, providerKey = "anthropic:claude-opus-5-5"): string {
   return createHash("sha256")
-    .update(JSON.stringify([PROMPT_VERSION, providerKey, t.sheetSha, t.keySha, t.number, t.sheetPages.map((p) => p.page), t.keyPages.map((p) => p.page), ...(t.reviewerNote ? [t.reviewerNote] : [])]))
+    .update(JSON.stringify([PROMPT_VERSION, providerKey, t.sheetSha, t.keySha, t.number, t.sheetPages.map((p) => p.page), t.keyPages.map((p) => p.page), ...(t.reviewerNote ? [t.reviewerNote] : []), ...(t.contextNote ? [t.contextNote] : [])]))
     .digest("hex")
     .slice(0, 16);
 }
@@ -71,6 +76,7 @@ function closingText(t: TaskInput): string {
     `Text layer of the sheet pages:\n<sheet_text>\n${t.sheetPages.map((p) => `--- page ${p.page}\n${pageText(p.text)}`).join("\n")}\n</sheet_text>\n\n` +
     `Text layer of the key pages:\n<key_text>\n${t.keyPages.map((p) => `--- page ${p.page}\n${pageText(p.text)}`).join("\n")}\n</key_text>\n\n` +
     `Return Zadanie ${t.number} only. Its points must add up to ${t.maxPoints}.` +
+    (t.contextNote ? `\n\n${t.contextNote}` : "") +
     (t.reviewerNote ? `\n\nA human reviewer checked an earlier conversion of this task and asks: ${t.reviewerNote}` : "")
   );
 }
@@ -117,6 +123,8 @@ export async function structureTask(provider: Provider | null, t: TaskInput, cac
 
 /** Picks the provider from environment / .env. */
 export function providerFromEnv(env: NodeJS.ProcessEnv): { provider: Provider | null; cacheKey: string; description: string } {
+  // "manual": drafts are written by a person (or an assistant in a coding session) into the cache; no API calls.
+  if ((env.OSEMKA_AI_PROVIDER ?? "").toLowerCase() === "manual") return { provider: null, cacheKey: "manual", description: "manual (drafts written into the cache, no API)" };
   const which = (env.OSEMKA_AI_PROVIDER ?? (env.QWEN_API_KEY ? "qwen" : "anthropic")).toLowerCase();
   if (which === "qwen" || which === "openai-compatible") {
     const model = env.QWEN_MODEL ?? "qwen3.7-plus";

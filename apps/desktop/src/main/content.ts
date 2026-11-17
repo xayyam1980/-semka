@@ -70,7 +70,18 @@ export function openContent(root: string, opts: { includeDrafts: boolean }): Con
         maxPoints: b.session.maxPoints,
         contentVersion: b.session.contentVersion,
         tasks: b.tasks.map(publicTask),
-        stimuli: b.stimuli.map((s) => ({ id: s.id, kind: s.kind, ...(s.title ? { title: s.title } : {}), ...(s.asset ? { asset: s.asset } : {}), ...(s.lines ? { lines: s.lines } : {}) })),
+        stimuli: b.stimuli.map((s) => ({
+          id: s.id,
+          kind: s.kind,
+          ...(s.title ? { title: s.title } : {}),
+          ...(s.author ? { author: s.author } : {}),
+          ...(s.asset ? { asset: s.asset } : {}),
+          ...(s.lines ? { lines: s.lines } : {}),
+          ...(s.lineNumbering ? { lineNumbering: s.lineNumbering } : {}),
+          ...(s.source ? { source: s.source } : {}),
+          ...(s.footnotes ? { footnotes: s.footnotes } : {}),
+          ...(s.wordCount ? { wordCount: s.wordCount } : {}),
+        })),
       };
     },
     assetPath(sessionId, rel) {

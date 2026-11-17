@@ -7,6 +7,7 @@ import { AnswerInput, hasAnswer } from "../components/AnswerInput";
 import { Feedback } from "../components/Feedback";
 import { Rich, type RichContext } from "../components/Rich";
 import { TaskText } from "../components/TaskText";
+import { ReadingPane, readingTextOf } from "../components/ReadingPane";
 import { clock, sessionLabel } from "../lib/format";
 
 const SAVE_DELAY_MS = 400;
@@ -23,6 +24,7 @@ export function PracticePlayer() {
   const [aiReady, setAiReady] = useState(false);
   const [suggestions, setSuggestions] = useState<Record<string, AiSuggestion>>({});
   const [sources, setSources] = useState<Record<string, SavedResponse["gradeSource"]>>({});
+  const [rubricGrades, setRubricGrades] = useState<Record<string, SavedResponse["rubricGrade"]>>({});
   const [index, setIndex] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [elapsed, setElapsed] = useState(0);
@@ -47,6 +49,7 @@ export function PracticePlayer() {
       setFlags(Object.fromEntries(Object.entries(v.responses).map(([k, r]) => [k, r.flagged])));
       setSuggestions(Object.fromEntries(Object.entries(v.responses).flatMap(([k, r]) => (r.aiSuggestion ? [[k, r.aiSuggestion]] : []))));
       setSources(Object.fromEntries(Object.entries(v.responses).flatMap(([k, r]) => (r.gradeSource ? [[k, r.gradeSource]] : []))));
+      setRubricGrades(Object.fromEntries(Object.entries(v.responses).flatMap(([k, r]) => (r.rubricGrade ? [[k, r.rubricGrade]] : []))));
       setAiReady((await window.osemka.getAiStatus()).ready);
       // Resume at the first task not yet checked.
       const tasksInScope = v.taskIds.map((id) => s.tasks.find((t) => t.id === id)!);
@@ -167,6 +170,7 @@ export function PracticePlayer() {
   if (!view || !session || !task || !ctxBase) return <p className="p-8 text-muted">Ładowanie…</p>;
 
   const allChecked = task.items.every((i) => checks[i.id]);
+  const reading = readingTextOf(task.stimulusIds, session.stimuli);
   const anyAnswer = task.items.some((i) => hasAnswer(i, values[i.id] ?? null));
   const checkedItems = Object.keys(checks).length;
   const correctItems = Object.values(checks).filter((c) => c.outcome.kind === "auto" && c.outcome.result === "correct").length;
@@ -204,7 +208,9 @@ export function PracticePlayer() {
       </div>
 
       <main className="scroll-pane flex-1 px-6 py-6">
-        <div className={`mx-auto grid max-w-6xl gap-6 ${allChecked ? "grid-cols-[minmax(0,1fr)_minmax(0,420px)]" : "grid-cols-1"}`}>
+        <div className={reading ? "with-reading mx-auto max-w-7xl" : "mx-auto max-w-6xl"}>
+          {reading && <ReadingPane text={reading} ctx={ctxBase} />}
+        <div className={`grid gap-6 ${allChecked && !reading ? "grid-cols-[minmax(0,1fr)_minmax(0,420px)]" : "grid-cols-1"}`}>
           <article className="flex min-w-0 flex-col gap-5">
             <div className="flex items-center gap-3">
               <h1 className="text-2xl font-bold">
@@ -245,6 +251,16 @@ export function PracticePlayer() {
                   selfPoints={selfPoints[it.id]}
                   onGrade={(p) => void grade(it.id, p)}
                   ctx={ctxBase}
+                  essay={{
+                    topic: (() => { const v = values[it.id]; return v?.type === "essay" ? v.topic ?? null : null; })(),
+                    saved: rubricGrades[it.id],
+                    onSave: async (topic, input) => {
+                      await window.osemka.gradeRubric(attemptId, it.id, topic, input);
+                      const fresh = await window.osemka.getAttempt(attemptId);
+                      if (fresh?.responses[it.id]?.rubricGrade) setRubricGrades((m) => ({ ...m, [it.id]: fresh.responses[it.id]!.rubricGrade }));
+                      setSelfPoints((m) => ({ ...m, [it.id]: fresh?.responses[it.id]?.selfPoints ?? null }));
+                    },
+                  }}
                   ai={{
                     ready: aiReady,
                     suggestion: suggestions[it.id],
@@ -259,6 +275,7 @@ export function PracticePlayer() {
               ))}
             </div>
           )}
+        </div>
         </div>
       </main>
 

@@ -148,6 +148,47 @@ export function AnswerInput({ item, value, onChange, revealedKey, ctx }: Props) 
     );
   }
 
+  if (r.type === "extended_text" && r.topics?.length) {
+    const v = value?.type === "essay" ? value : undefined;
+    const text = v?.text ?? "";
+    const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+    const topic = v?.topic;
+    const setEssay = (patch: { topic?: string; text?: string }) => {
+      const t = patch.text ?? text;
+      onChange({ type: "essay", ...(patch.topic ?? topic ? { topic: patch.topic ?? topic } : {}), text: t, wordCount: t.trim() ? t.trim().split(/\s+/).length : 0 });
+    };
+    return (
+      <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-2" role="radiogroup" aria-label="Temat wypracowania">
+          {r.topics.map((tp) => (
+            <button key={tp.id} className={`opt top ${topic === tp.id ? "sel" : ""}`} disabled={locked} onClick={() => setEssay({ topic: tp.id })} role="radio" aria-checked={topic === tp.id} data-topic={tp.id}>
+              <span className="k">{tp.id}</span>
+              <span className="flex flex-col gap-1 text-[15px]">
+                {tp.form && <b className="uppercase tracking-wider text-[12px] text-muted">{tp.form}</b>}
+                <Rich text={tp.text} ctx={ctx} />
+              </span>
+            </button>
+          ))}
+        </div>
+        <textarea
+          id={`essay-${item.id}`}
+          className="min-h-72 w-full rounded-md border border-line bg-surface p-3 font-[var(--f-read)] text-[17px] leading-relaxed"
+          placeholder={topic ? "Napisz wypracowanie…" : "Najpierw wybierz temat."}
+          disabled={locked || !topic}
+          value={text}
+          lang="pl"
+          spellCheck={false}
+          onChange={(e) => setEssay({ text: e.target.value })}
+        />
+        <div className="flex justify-end text-sm">
+          <span className={`tabular ${r.minWords && words < r.minWords ? "text-[var(--warn)]" : "text-muted"}`}>
+            {words} wyrazów{r.minWords ? ` (minimum ${r.minWords})` : ""}
+          </span>
+        </div>
+      </div>
+    );
+  }
+
   if (r.type === "worked_solution" || r.type === "extended_text") {
     const v = value && (value.type === "work" || value.type === "essay") ? value : undefined;
     const text = v?.text ?? "";

@@ -1,0 +1,5 @@
+{
+  "5": "The explanation ends with an unclosed $: close every inline formula with $ (the last one is a = \\\\frac{L - 2b - c}{2}).",
+  "11": "The text links ![](fig:1) but no figure was returned. The sheet page shows a right triangle ABC with point D on AB and segment DC: return that drawing as figure fig1 with its box, and link it as ![...](fig:fig1).",
+  "18": "The text links ![](fig:1) but no figure was returned. The page shows trapezoid ABCD with segment EC and the marked angles 48° and 57°: return that drawing as figure fig1 with its box, and link it as ![...](fig:fig1)."
+}

@@ -50,10 +50,11 @@ async function main(): Promise<number> {
         contentRoot,
         cacheRoot,
         dryRun: flag("--dry-run"),
+        plan: flag("--plan"),
         ...(tasks?.length ? { onlyTasks: tasks } : {}),
         log: (m) => console.log(m),
       });
-      if (!flag("--dry-run") && report.tasks.length) {
+      if (!flag("--dry-run") && !flag("--plan") && report.tasks.length) {
         const page = writeReview({ sessionDir: sessionDirOf(s.id), cacheDir: join(cacheRoot, s.id), tagsFile: join(contentRoot, "taxonomy", "skills.json") });
         console.log(`Review page: ${page}`);
       }

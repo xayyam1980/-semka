@@ -62,7 +62,7 @@ export function writeReview(opts: { sessionDir: string; cacheDir: string; tagsFi
   const tasksHtml = bundle.tasks.map((t) => {
     const rep = report.tasks.find((r) => r.number === t.number);
     const keyPages = [...new Set(t.items.flatMap((i) => i.exemplars?.map((e) => e.ref.page) ?? []))];
-    const figs = bundle.stimuli.filter((s) => t.stimulusIds.includes(s.id));
+    const figs = bundle.stimuli.filter((s) => t.stimulusIds.includes(s.id) && s.asset);
     const problems = rep?.problems ?? [];
     const notes = rep?.notes ?? [];
     return `<section class="task ${problems.length ? "bad" : ""}" id="z${t.number}">

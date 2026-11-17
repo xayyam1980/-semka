@@ -18,6 +18,8 @@ export interface Segmentation {
   spans: TaskSpan[];
   totalPoints: number;
   problems: string[];
+  /** Spans cut at the page limit; may be fine once reading texts are cut off (see run.ts). */
+  warnings: string[];
 }
 
 // Some PDFs put spaces inside numbers ("Zadanie 1 1 . (0 – 2)"), so digits may be separated by spaces.
@@ -40,6 +42,7 @@ export function findAnchors(pages: PdfPage[]): Anchor[] {
 
 export function segment(pages: PdfPage[], opts: { maxPagesPerTask: number }): Segmentation {
   const problems: string[] = [];
+  const warnings: string[] = [];
   const all = findAnchors(pages);
 
   // Keep the first heading per task number; later repeats (e.g. the answer sheet) are reported.
@@ -64,12 +67,12 @@ export function segment(pages: PdfPage[], opts: { maxPagesPerTask: number }): Se
     let toPage = next ? (next.y <= TOP_OF_PAGE_PT ? next.page - 1 : next.page) : lastPage;
     toPage = Math.max(a.page, Math.min(toPage, a.page + opts.maxPagesPerTask - 1));
     if (next && next.page - a.page + 1 > opts.maxPagesPerTask) {
-      problems.push(`Zadanie ${a.number} spans more than ${opts.maxPagesPerTask} pages; only the first ${opts.maxPagesPerTask} are used`);
+      warnings.push(`Zadanie ${a.number} spans more than ${opts.maxPagesPerTask} pages; only the first ${opts.maxPagesPerTask} are used`);
     }
     return { ...a, fromPage: a.page, toPage };
   });
 
-  return { spans, totalPoints: spans.reduce((s, t) => s + t.maxPoints, 0), problems };
+  return { spans, totalPoints: spans.reduce((s, t) => s + t.maxPoints, 0), problems, warnings };
 }
 
 /** Last page with real content (not just a footer such as "Strona 15 z 15" or "BRUDNOPIS"). */

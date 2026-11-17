@@ -1,0 +1,2100 @@
+{
+  "session": {
+    "id": "polski-2025-05-glowny",
+    "subjectId": "polski",
+    "year": 2025,
+    "month": 5,
+    "term": "glowny",
+    "formCode": "OPOP-100",
+    "versions": [
+      "X"
+    ],
+    "maxPoints": 45,
+    "taskOrder": [
+      "pl-2025-01",
+      "pl-2025-02",
+      "pl-2025-03",
+      "pl-2025-04",
+      "pl-2025-05",
+      "pl-2025-06",
+      "pl-2025-07",
+      "pl-2025-08",
+      "pl-2025-09",
+      "pl-2025-10",
+      "pl-2025-11",
+      "pl-2025-12",
+      "pl-2025-13",
+      "pl-2025-14",
+      "pl-2025-15",
+      "pl-2025-16",
+      "pl-2025-17",
+      "pl-2025-18",
+      "pl-2025-19"
+    ],
+    "sources": [
+      {
+        "kind": "arkusz",
+        "path": "Język polski/Maj 2025/arkusz.pdf",
+        "sha256": "53dcf18cb3ea7e18b8422f0c5df2d9bdfeab6a09e0bb4c8af0646c40dc86e1f5",
+        "pages": 24
+      },
+      {
+        "kind": "klucz",
+        "path": "Język polski/Maj 2025/klucz.pdf",
+        "sha256": "aea9acb1f3acf12f686e7c4ecdc95f571329ab3f2f903b1b9af95f7f78bfa99c",
+        "pages": 28
+      }
+    ],
+    "contentVersion": "df19bffccd2e98da",
+    "status": "published"
+  },
+  "stimuli": [
+    {
+      "id": "pl-2025-tekst-1",
+      "kind": "text",
+      "title": "CHŁOPCY Z PLACU BRONI",
+      "author": "Ferenc Molnár",
+      "lines": [
+        "Wreszcie Pastorowie puścili go i Nemeczek wygramolił się ze stawu. Kiedy ujrzano go w ociekającym i zabłoconym ubraniu, wesołość wybuchła ze zdwojoną siłą. […] Prześcigano się w szyderstwach. [...]",
+        "Nemeczek nie reagował na te kpiny. Gorzko się uśmiechał i wygładzał mokrą kurtkę. Wtedy podszedł do niego Gereb i, szczerząc zęby w szerokim uśmiechu i kiwając głową, zapytał:",
+        "– No i co, dobrze było?",
+        "Nemeczek podniósł na niego swoje duże, niebieskie oczy i odparł:",
+        "– Dobrze – powiedział cicho i już głośniej dodał: – Było mi znacznie lepiej niż tobie, kiedy stałeś na brzegu i wyśmiewałeś się ze słabszego. I wolałbym siedzieć w tej wodzie po szyję nawet do nowego roku, niż knuć z wrogami moich przyjaciół. Nie żałuję, że zanurzyliście mnie w wodzie. Poprzednim razem, kiedy sam wpadłem do wody, też cię widziałem wśród nich na tej wyspie. I choćbyście mnie zapraszali, przypochlebiali się, a nawet dawali prezenty, nie chcę mieć z wami nic wspólnego. Możecie mnie wsadzić do wody po sto i po tysiąc razy, ja i tak przyjdę tu jutro i pojutrze! I schowam się gdzieś tak, że mnie nie znajdziecie. Nie boję się nikogo z was. A gdy przyjdziecie do nas, na Plac Broni, zabrać nam naszą ziemię, to będziemy na was czekać. I pokażę wam, że kiedy będzie nas dziesięciu, tyle samo co was, to zupełnie inaczej porozmawiamy. Teraz jestem tu sam. Łatwo było mnie pokonać! Silniejszy zawsze wygrywa. Pastorowie ukradli mi moje kulki¹ w Ogrodzie Muzealnym, bo byli silniejsi. W dziesięciu łatwo stawać przeciw jednemu. Ale ja nie żałuję. Możecie mnie nawet zabić, jeśli wam się tak spodoba. Nie musiałem przecież włazić do tej wody. Wystarczyłoby przystać do was. Ale ja tego nie chciałem. Możecie mnie utopić, zatłuc na śmierć, ale ja nigdy nie będę zdrajcą, jak ten ktoś, kto stoi wśród was, o... tam...",
+        "W tym momencie wyciągnął rękę i wskazał na Gereba, któremu śmiech uwiązł w gardle. Światło latarni padło na ładną, jasną głowę Nemeczka, oświetliło ociekające wodą ubranie. Odważnie, dumnie i ze spokojem patrzył Nemeczek Gerebowi prosto w oczy, a ten poczuł nagle jakiś ogromny ciężar na duszy. Spochmurniał i opuścił głowę. W tym momencie wszyscy umilkli i zapadła cisza niczym w kościele. Wyraźnie było słychać, jak z ubrania Nemeczka spadają na twardą ziemię krople wody.",
+        "Milczenie przerwał głos Nemeczka:",
+        "– Czy mogę odejść?",
+        "Nikt mu nie odpowiedział. Zapytał więc raz jeszcze:",
+        "– Nie zbijecie mnie? Mogę odejść?",
+        "A ponieważ nadal nikt nie odpowiedział, Nemeczek powoli ruszył w stronę mostku. Wszyscy stali nieruchomo, nikt nie drgnął, żeby go zatrzymać. […] Stojący przy moście dwaj wartownicy, którzy widzieli wszystko, co zaszło, patrzyli w milczeniu na Nemeczka. Nie śmieli go nawet dotknąć.",
+        "Kiedy Nemeczek wszedł na most, rozległ się grzmiący, głęboki głos Acza:",
+        "– Prezentuj broń! Obaj wartownicy stanęli na baczność i unieśli wysoko w górę włócznie ze srebrnymi grotami. A w ślad za nimi wszyscy chłopcy trzasnęli obcasami i podnieśli swoje włócznie. I nikt nie odzywał się, jedynie ostrza włóczni błyszczały w poświacie księżyca."
+      ],
+      "lineNumbering": "none",
+      "source": "Ferenc Molnár, Chłopcy z Placu Broni, tłum. Tadeusz Olszański, Warszawa 2007.",
+      "footnotes": [
+        {
+          "mark": "¹",
+          "text": "Kulki – używane w popularnej dawniej grze."
+        }
+      ],
+      "wordCount": 492,
+      "ref": {
+        "source": "arkusz",
+        "page": 5
+      }
+    },
+    {
+      "id": "pl-2025-tekst-2",
+      "kind": "text",
+      "title": "CZYIM JESTEŚ PRZYJACIELEM?",
+      "author": "Anna Vivarelli",
+      "lines": [
+        "Przyjaźń fascynuje filozofów od najdawniejszych czasów. Może uznasz, że to dziwne, bo przecież nie ma nic prostszego niż przyjaźń: ja jestem twoją przyjaciółką, ty jesteś moim przyjacielem. Zapraszam cię do grona znajomych jednym kliknięciem, a ty jednym kliknięciem akceptujesz zaproszenie.",
+        "Dlaczego zatem tak wielu filozofów poświęciło tyle czasu i trudu, aby zdefiniować pojęcie przyjaźni? Może dlatego, że bycie czyimś przyjacielem wcale nie jest takie proste, jak się na ogół wydaje. Starożytny myśliciel Empedokles był przekonany, że przyjaźń jest siłą kosmiczną, rodzajem bóstwa, które utrzymuje w harmonii cały wszechświat i wszystkie jego żywioły: ziemię, powietrze, wodę, ogień. Dziś zapewne uznamy tę wizję za nieco przesadną. Trudno się jednak nie zgodzić, że przyjaźń między dwiema osobami to rodzaj harmonii, która potrafi połączyć zupełnie różne charaktery.",
+        "Filozofem, który bliżej przyjrzał się przyjaźni, był Arystoteles – jeden z najznakomitszych umysłów wszech czasów. Twierdził on, że przyjaźń jest potrzebna każdemu człowiekowi i dlatego nikt nie chciałby żyć bez przyjaciół, nawet gdyby posiadł wszystkie inne dobra. Według tego wybitnego filozofa przyjaźń jest ważna w każdym momencie życia, ale najbardziej potrzebujemy jej w młodości – by nie popełniać błędów i stawać się lepszymi ludźmi. „Kiedy dwóch idzie razem, każdy z nich lepiej działa i myśli” – tak mówił o przyjaciołach.",
+        "Arystoteles wyróżnił trzy rodzaje przyjaźni. Pierwszy to ten, który opiera się na użyteczności. Dwie osoby zostają przyjaciółmi, ponieważ czerpią z tej relacji wspólną korzyść. Jest to jednak przyjaźń już u swych podstaw wadliwa. Szybko się kończy, ponieważ nie wynika z prawdziwego uczucia. Istnieją tysiące przykładów takiej udawanej przyjaźni: czasem zaczynamy się z kimś kolegować, bo jest lubiany w klasie, a my sądzimy, że dzięki niemu też zdobędziemy popularność. Albo dlatego, że jest dobry z jakichś przedmiotów, a my mamy nadzieję, że pomoże nam na sprawdzianie. Zazwyczaj nie zdarza się ani jedno, ani drugie...",
+        "Drugi rodzaj przyjaźni jest z pewnością bardziej wartościowy: to ten, który opiera się na przyjemności przebywania w czyimś towarzystwie. Zostajemy przyjaciółmi, ponieważ lubimy spędzać razem czas, bo kiedy jesteśmy razem, śmiejemy się i nigdy się nie nudzimy. Ale... jest jedno „ale”. Przyjaźń, która opiera się wyłącznie na przyjemności przebywania razem, zawsze w końcu wygasa. Dorastamy, zainteresowania się zmieniają i nagle przepada wszystko, co nas łączyło. Przestajemy się widywać i kiedy znów po jakimś czasie wpadamy na siebie, zazwyczaj mamy już nowych przyjaciół.",
+        "Jest wreszcie trzeci rodzaj przyjaźni: przyjaźń doskonała, taka, którą można przeżyć jedynie z nielicznymi osobami. Dzieje się tak wtedy, kiedy żywimy względem drugiej osoby bezinteresowne uczucia. To przyjaźń, która nie zna ani zazdrości, ani zawiści. Pozwala nam cieszyć się sukcesami przyjaciela, sprawia, że potrafimy dzielić z nim także ból. Zapuszcza w nas głęboko korzenie i nie przemija. Daje odwagę, aby upomnieć przyjaciela, kiedy popełnia błąd, i pozwala przyjąć krytykę, gdy sami zbłądzimy.",
+        "To bardzo rzadko spotykane uczucie i Arystoteles dobrze o tym wiedział."
+      ],
+      "lineNumbering": "none",
+      "source": "Na podstawie: Anna Vivarelli, Czyim jesteś przyjacielem?, [w:] tejże, Kto by pomyślał, tłum. E. Nicewicz-Staszowska, Wrocław 2018.",
+      "wordCount": 475,
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "pl-2025-11-fig1",
+      "kind": "figure",
+      "title": "Sześć kart do gry A–F: studnia na pustyni i samolot; ruiny zamku; niedźwiedź w lesie; duch spętany łańcuchami; cmentarz nocą; król na tronie w kosmosie",
+      "asset": "assets/pl-2025-11-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "pl-2025-19-fig1",
+      "kind": "figure",
+      "title": "Dwie ilustracje: wędrowiec z kijem i plecakiem przy drogowskazie podchodzi do smutnego chłopca siedzącego przy ścieżce; dwa balony, z kosza jednego bohater podaje linę do kosza drugiego",
+      "asset": "assets/pl-2025-19-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 16
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "pl-2025-01",
+      "sessionId": "polski-2025-05-glowny",
+      "number": 1,
+      "maxPoints": 1,
+      "instruction": "**Na podstawie przytoczonego fragmentu utworu *Chłopcy z Placu Broni* oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "pl-2025-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-01",
+          "label": "1",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Postawa Nemeczka świadczy o tym, że dochowanie wierności przyjaciołom wymaga odwagi."
+              },
+              {
+                "id": "2",
+                "text": "Zachowanie Acza wobec Nemeczka jest wyrazem lekceważenia przeciwnika."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "F"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "Nemeczek mimo upokorzenia i strachu nie zdradza przyjaciół – to wymaga odwagi, więc pierwsze zdanie jest prawdziwe. Acz każe na koniec „prezentować broń”, czyli okazuje Nemeczkowi szacunek, a nie lekceważenie – drugie zdanie jest fałszywe."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "pl-2025-02",
+      "sessionId": "polski-2025-05-glowny",
+      "number": 2,
+      "maxPoints": 1,
+      "instruction": "**Na podstawie przytoczonego fragmentu utworu *Chłopcy z Placu Broni* oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "pl-2025-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-02",
+          "label": "2",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Postawa Nemeczka wpłynęła na zmianę zachowania jego przeciwników."
+              },
+              {
+                "id": "2",
+                "text": "Nemeczek nie był pewny reakcji swoich przeciwników na wypowiedziane przez siebie słowa."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "Po słowach Nemeczka przeciwnicy milkną, a na koniec oddają mu honory – ich zachowanie się zmienia. Nemeczek dwa razy pyta, czy może odejść i czy go nie zbiją, więc nie był pewny ich reakcji. Oba zdania są prawdziwe."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "pl-2025-03",
+      "sessionId": "polski-2025-05-glowny",
+      "number": 3,
+      "maxPoints": 1,
+      "instruction": "**Na podstawie przytoczonego fragmentu utworu *Chłopcy z Placu Broni* dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nW przytoczonym fragmencie utworu postawę Nemeczka charakteryzuje",
+      "stimulusIds": [
+        "pl-2025-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-03",
+          "label": "3",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "zawiść."
+              },
+              {
+                "id": "B",
+                "text": "ciekawość."
+              },
+              {
+                "id": "C",
+                "text": "nieugiętość."
+              },
+              {
+                "id": "D",
+                "text": "nieodpowiedzialność."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.9"
+          ],
+          "explanation": "Nemeczek mówi, że mogą go wrzucać do wody „po sto i po tysiąc razy”, a on i tak nie zostanie zdrajcą – nie daje się złamać. To nieugiętość."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-1.9"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "pl-2025-04",
+      "sessionId": "polski-2025-05-glowny",
+      "number": 4,
+      "maxPoints": 1,
+      "instruction": "**Spośród podanych pytań wskaż to, na które nie można znaleźć odpowiedzi w przytoczonym fragmencie utworu *Chłopcy z Placu Broni*. Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [
+        "pl-2025-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-04",
+          "label": "4",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Kto siłą przytrzymywał Nemeczka w wodzie?"
+              },
+              {
+                "id": "B",
+                "text": "W jakim celu Nemeczek pojawił się na wyspie?"
+              },
+              {
+                "id": "C",
+                "text": "W jaki sposób Feri Acz zareagował na słowa Nemeczka?"
+              },
+              {
+                "id": "D",
+                "text": "Kogo Nemeczek oskarżył o nielojalność wobec chłopców z Placu Broni?"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "Fragment mówi, że trzymali go Pastorowie (A), że Acz kazał prezentować broń (C) i że Nemeczek wskazał Gereba (D). Nie dowiadujemy się z niego, po co Nemeczek przyszedł na wyspę."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 7
+      }
+    },
+    {
+      "id": "pl-2025-05",
+      "sessionId": "polski-2025-05-glowny",
+      "number": 5,
+      "maxPoints": 1,
+      "instruction": "W przytoczonym fragmencie utworu *Chłopcy z Placu Broni* Nemeczek stwierdza, że *silniejszy zawsze wygrywa*.\n\n**Uzasadnij, że w sytuacji opisanej w przytoczonym fragmencie utworu to Nemeczek okazał się silniejszy.**",
+      "stimulusIds": [
+        "pl-2025-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-05",
+          "label": "5",
+          "maxPoints": 1,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Nemeczek, mimo że był słabszy i był sam, pokonał wrogów swoją odwagą: nie zdradził przyjaciół, choć spodziewał się, że chłopcy z przeciwnej drużyny mogą zrobić mu coś złego."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "odpowiedź poprawna: uzasadnienie, że Nemeczek okazał się silniejszy (np. siłą charakteru, odwagą, wiernością przyjaciołom)"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.9"
+          ],
+          "exemplars": [
+            {
+              "points": 1,
+              "content": "Uważam, że w sytuacji opisanej w przytoczonym fragmencie utworu to Nemeczek okazał się silniejszy, ponieważ odważnie przeciwstawił się wrogom. Nie zdradził przyjaciół, chociaż spodziewał się, że chłopaki z przeciwnej drużyny mogą zrobić mu coś złego.",
+              "ref": {
+                "source": "klucz",
+                "page": 3
+              }
+            },
+            {
+              "points": 1,
+              "content": "Nemeczek, mimo że był słabszy i był sam, pokonał wrogów swoją odwagą.",
+              "ref": {
+                "source": "klucz",
+                "page": 3
+              }
+            },
+            {
+              "points": 0,
+              "content": "Mimo że Nemeczek okazał się słabszy fizycznie, to jednak był on silniejszy.",
+              "ref": {
+                "source": "klucz",
+                "page": 3
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Akceptowane są wszystkie odpowiedzi merytorycznie poprawne, spełniające warunki zadania. Błąd rzeczowy dotyczący lektur obowiązkowych skutkuje przyznaniem 0 punktów."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-1.9"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 7
+      }
+    },
+    {
+      "id": "pl-2025-06",
+      "sessionId": "polski-2025-05-glowny",
+      "number": 6,
+      "maxPoints": 1,
+      "instruction": "**Na podstawie przytoczonego fragmentu utworu *Chłopcy z Placu Broni* wyjaśnij, dlaczego podczas spotkania z Nemeczkiem Gereb najpierw szczerzył zęby w uśmiechu, a potem śmiech uwiązł mu w gardle.**",
+      "stimulusIds": [
+        "pl-2025-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-06",
+          "label": "6",
+          "maxPoints": 1,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Gereb najpierw szczerzył zęby, bo gnębienie Nemeczka sprawiało mu radość i czuł się silniejszy; potem śmiech uwiązł mu w gardle, bo Nemeczek przy wszystkich nazwał go zdrajcą."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "odpowiedź poprawna, uwzględniająca znaczenie obu sformułowań"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.9"
+          ],
+          "exemplars": [
+            {
+              "points": 1,
+              "content": "Podczas spotkania z Nemeczkiem Gereb najpierw „szczerzył zęby w uśmiechu”, ponieważ czuł się lepszy i silniejszy od chłopca. Upokorzony Nemeczek swoją postawą i słowami uświadomił Gerebowi, że ten jest zdrajcą. Właśnie dlatego Gerebowi „śmiech uwiązł w gardle”.",
+              "ref": {
+                "source": "klucz",
+                "page": 4
+              }
+            },
+            {
+              "points": 1,
+              "content": "Gereb podczas spotkania z Nemeczkiem szczerzył zęby w uśmiechu, ponieważ gnębienie bohatera sprawiało mu radość; potem śmiech uwiązł mu w gardle, ponieważ Nemeczek powiedział prawdę o zdradzie Gereba.",
+              "ref": {
+                "source": "klucz",
+                "page": 4
+              }
+            },
+            {
+              "points": 0,
+              "content": "Ponieważ Nemeczek przy wszystkich oskarżył Gereba o zdradę, co spowodowało w nim pewną refleksję i zmusiło do zastanowienia.",
+              "ref": {
+                "source": "klucz",
+                "page": 4
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Akceptowane są wszystkie odpowiedzi merytorycznie poprawne, spełniające warunki zadania. Błąd rzeczowy dotyczący lektur obowiązkowych skutkuje przyznaniem 0 punktów."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-1.9"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 7
+      }
+    },
+    {
+      "id": "pl-2025-07",
+      "sessionId": "polski-2025-05-glowny",
+      "number": 7,
+      "maxPoints": 2,
+      "instruction": "**Spośród lektur obowiązkowych – innych niż *Chłopcy z Placu Broni* – wybierz tę, której bohater w sytuacji zagrożenia zachował godną postawę. Podaj tytuł tej lektury oraz jej bohatera.**\n\n**Uzasadnij swój wybór. W uzasadnieniu przywołaj sytuację z tej lektury, ilustrującą Twoją argumentację.**\n\n*Uwaga! Lista lektur obowiązkowych znajduje się na stronach 3 i 4 arkusza egzaminacyjnego.*\n\nTytuł lektury: …\n\nBohater lektury: …\n\nUzasadnienie wyboru: …",
+      "stimulusIds": [
+        "pl-2025-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-07",
+          "label": "7",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Tytuł lektury: „Kamienie na szaniec”. Bohater lektury: Rudy. Uzasadnienie: Rudy, mimo że był torturowany przez Niemców, dzielnie znosił ból i nie wydał swoich kolegów."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "podanie tytułu lektury obowiązkowej i bohatera, poprawne uzasadnienie zilustrowane sytuacją z lektury"
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "podanie tytułu lektury obowiązkowej i bohatera, poprawne uzasadnienie bez zilustrowania sytuacją z lektury"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-gen-III",
+            "pl-78-1.4"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "Tytuł lektury: „Kamienie na szaniec”\nBohater lektury: Rudy\nUzasadnienie wyboru: Rudy, mimo że był torturowany przez Niemców, dzielnie znosił ból i nie wydał swoich kolegów.",
+              "ref": {
+                "source": "klucz",
+                "page": 5
+              }
+            },
+            {
+              "points": 2,
+              "content": "Tytuł lektury: „Hobbit, czyli tam i z powrotem”\nBohater lektury: Bilbo Baggins\nUzasadnienie wyboru: Bilbo wykazał się niezwykłą odwagą i godną postawą w sytuacji, gdy jego przyjaciele zostali schwytani w puszczy przez wielkie pająki. Wiele osób okazałoby strach i uciekło, lecz nie Bilbo. Bohater użył pierścienia i za pomocą miecza pokonał pająki, a następnie uwolnił towarzyszy.",
+              "ref": {
+                "source": "klucz",
+                "page": 5
+              }
+            },
+            {
+              "points": 1,
+              "content": "Tytuł lektury: „Kamienie na szaniec”\nBohater lektury: Rudy, Zośka oraz Alek\nUzasadnienie wyboru: Chłopcy walczyli o wolność Polski. Podejmowali różne trudne działania, wykonywali zadania, które zagrażały ich życiu. Wiedzieli, że w każdym momencie mogą zginąć, ale się nie poddawali. Zachowywali więc godną postawę.",
+              "ref": {
+                "source": "klucz",
+                "page": 6
+              }
+            },
+            {
+              "points": 0,
+              "content": "Tytuł lektury: „Mały Książę”\nBohater lektury: Mały Książę\nUzasadnienie wyboru: Mały Książę zachował się godnie, gdy po dotarciu na Ziemię wiele razy rozmawiał z lisem.",
+              "ref": {
+                "source": "klucz",
+                "page": 6
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Akceptowane są wszystkie odpowiedzi merytorycznie poprawne, spełniające warunki zadania. Błąd rzeczowy dotyczący lektur obowiązkowych skutkuje przyznaniem 0 punktów.",
+            "W przypadku, gdy zdający wskaże poprawnie tytuł lektury, nie wskaże bohatera, ale uzasadnienie pozwala go zidentyfikować, otrzymuje maksymalnie 1 punkt.",
+            "W przypadku, gdy zdający nie wskaże tytułu lektury, wskaże poprawnie bohatera i poprawnie uzasadni swój wybór, otrzymuje maksymalnie 1 punkt.",
+            "W przypadku, gdy zdający wskaże poprawnie tytuł lektury i bohatera, ale błędnie uzasadni swój wybór albo go nie uzasadni, otrzymuje 0 punktów."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-gen-III",
+        "pl-78-1.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "pl-2025-08",
+      "sessionId": "polski-2025-05-glowny",
+      "number": 8,
+      "maxPoints": 1,
+      "instruction": "**Uzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nZnaczenia wyrazu podkreślonego w zdaniu *Prześcigano się w* ***szyderstwach*** należy szukać w słowniku [[A|B]]. Aby zachować sens tego zdania, podkreślony wyraz można zastąpić wyrazem [[C|D]].",
+      "stimulusIds": [
+        "pl-2025-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-08",
+          "label": "8",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "frazeologicznym"
+              },
+              {
+                "id": "B",
+                "text": "języka polskiego"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "*drwinach*"
+              },
+              {
+                "id": "D",
+                "text": "*napominaniach*"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "B",
+                "reason": "C"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-IV",
+            "pl-46-IV.5"
+          ],
+          "explanation": "„Szyderstwa” to pojedynczy wyraz, a nie związek frazeologiczny, więc jego znaczenia szukamy w słowniku języka polskiego. Szyderstwa to złośliwe żarty, czyli drwiny."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-IV",
+        "pl-46-IV.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "pl-2025-09",
+      "sessionId": "polski-2025-05-glowny",
+      "number": 9,
+      "maxPoints": 1,
+      "instruction": "**Uzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nW zdaniu *Wystarczyłoby* ***przystać*** *do was* podkreślony czasownik wystąpił w formie [[A|B]]. W trzeciej osobie liczby pojedynczej czasu przeszłego ten czasownik ma postać [[C|D]].",
+      "stimulusIds": [
+        "pl-2025-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-09",
+          "label": "9",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "osobowej"
+              },
+              {
+                "id": "B",
+                "text": "nieosobowej"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "*przystał*"
+              },
+              {
+                "id": "D",
+                "text": "*przystanął*"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "B",
+                "reason": "C"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-1.3",
+            "pl-46-1.4"
+          ],
+          "explanation": "„Przystać” to bezokolicznik, czyli forma nieosobowa czasownika. „Przystać” znaczy „zgodzić się, dołączyć”; w 3. osobie liczby pojedynczej czasu przeszłego to „przystał” („przystanął” pochodzi od innego czasownika: „przystanąć”)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-1.3",
+        "pl-46-1.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 9
+      }
+    },
+    {
+      "id": "pl-2025-10",
+      "sessionId": "polski-2025-05-glowny",
+      "number": 10,
+      "maxPoints": 1,
+      "instruction": "Uczniowie w ramach projektu przygotowali krótkie notatki na temat okoliczności powstania wybranych lektur szkolnych. W jednej z notatek zabrakło trzech przecinków.\n\n**Uzupełnij poniższy zapis tak, aby był zgodny z zasadami interpunkcji.**\n\n> W 1906 r. profesor Kornel Rupp poprosił Ferenca Molnára, który był już wtedy znanym dziennikarzem o pomoc. Chodziło o wsparcie szkolnego tygodnika, którego Rupp był redaktorem. Wspólnie wpadli na pomysł aby w czasopiśmie publikować w odcinkach powieść dla młodzieży. Rok później ukazało się pierwsze wydanie „Chłopców z Placu Broni”, książki, która przyniosła autorowi sławę. Utwór został przetłumaczony na ponad 40 języków co przyczyniło się do jego popularności na świecie.\n\nWypisz wyrazy, po których brakuje przecinków, albo przepisz tekst z przecinkami.",
+      "stimulusIds": [
+        "pl-2025-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-10",
+          "label": "10",
+          "maxPoints": 1,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "W 1906 r. profesor Kornel Rupp poprosił Ferenca Molnára, który był już wtedy znanym dziennikarzem**,** o pomoc. Chodziło o wsparcie szkolnego tygodnika, którego Rupp był redaktorem. Wspólnie wpadli na pomysł**,** aby w czasopiśmie publikować w odcinkach powieść dla młodzieży. Rok później ukazało się pierwsze wydanie „Chłopców z Placu Broni”, książki, która przyniosła autorowi sławę. Utwór został przetłumaczony na ponad 40 języków**,** co przyczyniło się do jego popularności na świecie."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "wszystkie trzy przecinki wstawione poprawnie: po „dziennikarzem” (koniec wtrąconego zdania), po „pomysł” (przed „aby”), po „języków” (przed „co”)"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-4.2"
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-4.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 9
+      }
+    },
+    {
+      "id": "pl-2025-11",
+      "sessionId": "polski-2025-05-glowny",
+      "number": 11,
+      "maxPoints": 3,
+      "instruction": "Na lekcji języka polskiego uczniowie jednej z klas otrzymali karty do gry przygotowanej na podstawie utworów literackich. Poniżej znajdują się wybrane karty do tej gry.\n\n![Sześć kart do gry A–F: studnia na pustyni i samolot; ruiny zamku; niedźwiedź w lesie; duch spętany łańcuchami; cmentarz nocą; król na tronie w kosmosie](stimulus:pl-2025-11-fig1)\n\n**Spośród zaprezentowanych kart do gry wybierz dwie, na których umieszczono elementy graficzne nawiązujące tematycznie do jednej lektury obowiązkowej. Podaj tytuł tej lektury i wyjaśnij związek wybranych przez Ciebie kart z treścią utworu.**\n\n*Uwaga! Lista lektur obowiązkowych znajduje się na stronach 3 i 4 arkusza egzaminacyjnego.*\n\nWybieram karty oznaczone literami … oraz … .\n\nTytuł lektury obowiązkowej: …\n\nWyjaśnienie: …",
+      "stimulusIds": [
+        "pl-2025-tekst-1",
+        "pl-2025-11-fig1"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-11",
+          "label": "11",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Wybieram karty F oraz A. Tytuł lektury: „Mały Książę”. Postać króla nawiązuje do mieszkańca jednej z planet, którą odwiedził Mały Książę, natomiast studnia łączy się z poszukiwaniem wody na pustyni przez Małego Księcia i Pilota."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "trafny dobór dwóch kart nawiązujących tematycznie do jednej lektury obowiązkowej, podanie tytułu tej lektury i wyjaśnienie, w jaki sposób każda z tych kart łączy się z treścią lektury"
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "trafny dobór dwóch kart, podanie tytułu lektury i wyjaśnienie, w jaki sposób jedna z tych kart łączy się z treścią lektury"
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "trafny dobór dwóch kart nawiązujących tematycznie do jednej lektury obowiązkowej i podanie tytułu tej lektury"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-2.12"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "Wybieram karty oznaczone literami F oraz A\nTytuł lektury obowiązkowej: „Mały Książę”\nWyjaśnienie: Postać króla nawiązuje do mieszkańca jednej z planet, którą odwiedził Mały Książę, natomiast studnia łączy się z poszukiwaniem wody na pustyni przez Małego Księcia i Pilota.",
+              "ref": {
+                "source": "klucz",
+                "page": 8
+              }
+            },
+            {
+              "points": 3,
+              "content": "Wybieram karty oznaczone literami B oraz C\nTytuł lektury obowiązkowej: „Pan Tadeusz”\nWyjaśnienie: Na ilustracji B ukazany jest zamek, który mógłby należeć do Horeszków – jego historię poznajemy dzięki Gerwazemu. Karta C nawiązuje do sceny, w której Tadeusz i Hrabia zostali w lesie zaatakowani przez niedźwiedzia.",
+              "ref": {
+                "source": "klucz",
+                "page": 8
+              }
+            },
+            {
+              "points": 3,
+              "content": "Wybieram karty oznaczone literami D oraz E\nTytuł lektury obowiązkowej: „Opowieść wigilijna”\nWyjaśnienie: Karta D przedstawia ducha oplecionego łańcuchami – to Jakub Marley, dawny wspólnik Ebenezera, który zapowiedział przyjście trzech Duchów. Karta E ukazuje cmentarz, który Scrooge zobaczył podczas podróży z Duchem Przyszłych Świąt.",
+              "ref": {
+                "source": "klucz",
+                "page": 8
+              }
+            },
+            {
+              "points": 3,
+              "content": "Wybieram karty oznaczone literami D oraz E\nTytuł lektury obowiązkowej: „Dziady” cz. II\nWyjaśnienie: Na karcie D ukazano ducha, a na karcie E – cmentarz. W utworze Mickiewicza w cmentarnej kaplicy Guślarz przywołuje duchy; jednym z nich jest Widmo Złego Pana, przykute do ziemi „zbrodni łańcuchem”.",
+              "ref": {
+                "source": "klucz",
+                "page": 8
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Akceptowane są wszystkie odpowiedzi merytorycznie poprawne, spełniające warunki zadania. Błąd rzeczowy dotyczący lektur obowiązkowych skutkuje przyznaniem 0 punktów.",
+            "Związek każdej karty z treścią lektury obowiązkowej należy ocenić oddzielnie.",
+            "W przypadku, gdy zdający popełnia błąd rzeczowy w wyjaśnieniu dotyczącym jednej z kart, może otrzymać punkt za poprawne wyjaśnienie dotyczące drugiej karty.",
+            "W przypadku, gdy zdający nie podaje tytułu lektury, otrzymuje 0 punktów."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-2.12"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "pl-2025-12",
+      "sessionId": "polski-2025-05-glowny",
+      "number": 12,
+      "maxPoints": 2,
+      "instruction": "**Uzupełnij poniższe zdania tak, aby powstało streszczenie tekstu *Czyim jesteś przyjacielem?*.**\n\nTematem tekstu Anny Vivarelli jest …\n\nNa początku autorka zastanawia się …\n\nW kolejnych akapitach …\n\nW zakończeniu …",
+      "stimulusIds": [
+        "pl-2025-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-12",
+          "label": "12",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Tematem tekstu Anny Vivarelli jest przyjaźń. Na początku autorka zastanawia się nad tym, dlaczego tak wiele uwagi poświęca się zagadnieniu przyjaźni. W kolejnych akapitach przywołuje poglądy Arystotelesa, który wyróżnił trzy rodzaje przyjaźni. W zakończeniu podkreśla, że prawdziwa przyjaźń jest czymś niezwykle rzadkim."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawne określenie tematu i tego, co na ten temat powiedziano w tekście; zachowanie właściwego poziomu uogólnienia"
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawne określenie tematu i tego, co na ten temat powiedziano w tekście; zaburzony poziom uogólnienia"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-2.3",
+            "pl-gen-III",
+            "pl-78-2.2"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "Tematem tekstu Anny Vivarelli jest przyjaźń.\nNa początku autorka zastanawia się, dlaczego to pojęcie interesowało w przeszłości wielu filozofów.\nW kolejnych akapitach mówi o trzech rodzajach przyjaźni wyróżnionych przez Arystotelesa: przyjaźni opierającej się na użyteczności, na przyjemności oraz o przyjaźni doskonałej.\nW zakończeniu podkreśla, iż trzeci rodzaj przyjaźni jest bardzo rzadko spotykanym uczuciem.",
+              "ref": {
+                "source": "klucz",
+                "page": 8
+              }
+            },
+            {
+              "points": 1,
+              "content": "Tematem tekstu Anny Vivarelli jest przyjaźń.\nNa początku autorka zastanawia się, czym jest przyjaźń.\nW kolejnych akapitach opowiada o twierdzeniach Empedoklesa i Arystotelesa.\nW zakończeniu potwierdza poglądy Arystotelesa.",
+              "ref": {
+                "source": "klucz",
+                "page": 8
+              }
+            },
+            {
+              "points": 0,
+              "content": "Tematem tekstu Anny Vivarelli jest przyjaźń od najdawniejszych czasów.\nNa początku autorka zastanawia się dlaczego tak wielu filozofów poświęciło tyle czasu i trudu, aby zdefiniować pojęcie przyjaźni.\nW kolejnych akapitach Arystoteles wyróżnił trzy rodzaje przyjaźni.\nW zakończeniu przyjaźń to bardzo rzadko spotykane uczuciem i Arystoteles dobrze o tym wiedział.",
+              "ref": {
+                "source": "klucz",
+                "page": 8
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Uczeń otrzymuje 0 punktów, jeśli jego wypowiedź w całości składa się z fragmentów przepisanych z tekstu „Czyim jesteś przyjacielem?”."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-2.3",
+        "pl-gen-III",
+        "pl-78-2.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 13
+      }
+    },
+    {
+      "id": "pl-2025-13",
+      "sessionId": "polski-2025-05-glowny",
+      "number": 13,
+      "maxPoints": 1,
+      "instruction": "**Na podstawie przytoczonego tekstu *Czyim jesteś przyjacielem?* oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "pl-2025-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-13",
+          "label": "13",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Według Empedoklesa przyjaźń pozwala na harmonijne współistnienie przeciwieństw."
+              },
+              {
+                "id": "2",
+                "text": "Według Arystotelesa przyjaźń zobowiązuje do przemilczenia błędów popełnionych przez przyjaciela."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "F"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-2.2"
+          ],
+          "explanation": "Empedokles widział w przyjaźni siłę, która utrzymuje w harmonii nawet przeciwne żywioły – pierwsze zdanie jest prawdziwe. Arystoteles pisał, że prawdziwa przyjaźń daje odwagę, by upomnieć przyjaciela, gdy popełnia błąd – nie każe ich przemilczać, więc drugie zdanie jest fałszywe."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-2.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 13
+      }
+    },
+    {
+      "id": "pl-2025-14",
+      "sessionId": "polski-2025-05-glowny",
+      "number": 14,
+      "maxPoints": 1,
+      "instruction": "**Które z podanych niżej zdań jest niezgodne z treścią tekstu *Czyim jesteś przyjacielem?* Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [
+        "pl-2025-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-14",
+          "label": "14",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Różnica charakterów nie przeszkadza w zawarciu trwałej przyjaźni."
+              },
+              {
+                "id": "B",
+                "text": "Prawdziwie bezinteresowna przyjaźń nie jest powszechnym zjawiskiem."
+              },
+              {
+                "id": "C",
+                "text": "Radość z przebywania z przyjacielem wystarczy, aby taka relacja nie wygasła."
+              },
+              {
+                "id": "D",
+                "text": "O wartości przyjaźni przekonuje fakt, że dla wielu filozofów było to ważne zagadnienie."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "Autorka pisze, że przyjaźń oparta wyłącznie na przyjemności przebywania razem „zawsze w końcu wygasa”. Zdanie C mówi coś przeciwnego, więc jest niezgodne z tekstem."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 13
+      }
+    },
+    {
+      "id": "pl-2025-15",
+      "sessionId": "polski-2025-05-glowny",
+      "number": 15,
+      "maxPoints": 2,
+      "instruction": "**Przeczytaj poniższy fragment utworu.**\n\n> – Proszę, oswój mnie – powiedział. [...] – Ludzie nie mają czasu na poznawanie czegokolwiek. Kupują gotowe rzeczy w sklepach. Ponieważ jednak nie istnieją sklepy z przyjaciółmi, ludzie nie mają przyjaciół. Jeśli chcesz mieć przyjaciela, oswój mnie!",
+      "stimulusIds": [
+        "pl-2025-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-15-1",
+          "label": "15.1",
+          "maxPoints": 1,
+          "prompt": "**Podaj tytuł lektury obowiązkowej, z której pochodzi powyższy fragment utworu.**",
+          "response": {
+            "type": "short_text",
+            "gaps": 1,
+            "language": "pl"
+          },
+          "key": {
+            "X": {
+              "type": "text",
+              "expected": [
+                "Mały Książę"
+              ],
+              "accepted": [
+                "„Mały Książę”",
+                "Mały Książę Antoine de Saint-Exupéry",
+                "Antoine de Saint-Exupéry, Mały Książę"
+              ],
+              "rejected": []
+            }
+          },
+          "scoring": {
+            "type": "text_match",
+            "strictness": "communicative"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.7"
+          ],
+          "explanation": "To słowa lisa, który prosi Małego Księcia, by go oswoił – fragment pochodzi z „Małego Księcia” Antoine’a de Saint-Exupéry’ego."
+        },
+        {
+          "id": "pl-2025-15-2",
+          "label": "15.2",
+          "maxPoints": 1,
+          "prompt": "**Na podstawie znajomości całego utworu, z którego pochodzi powyższy fragment, napisz, co jest niezbędne, aby zyskać przyjaciela. Swoją odpowiedź zilustruj odpowiednim przykładem z tego utworu.**",
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Aby zyskać przyjaciela, niezbędny jest czas. Lis powiedział Małemu Księciu, aby codziennie do niego przychodził i spędzał z nim trochę czasu. Każdego dnia chłopiec miał bliżej podchodzić do lisa, aż zwierzę oswoi się całkowicie."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "odpowiedź poprawna, zilustrowana przykładem z utworu"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.7"
+          ],
+          "exemplars": [
+            {
+              "points": 1,
+              "content": "Aby zyskać przyjaciela, niezbędny jest czas. Lis powiedział Małemu Księciu, aby codziennie do niego przychodził i spędzał z nim trochę czasu. Każdego dnia chłopiec miał bliżej podchodzić do lisa, aż zwierzę oswoi się całkowicie.",
+              "ref": {
+                "source": "klucz",
+                "page": 11
+              }
+            },
+            {
+              "points": 0,
+              "content": "Aby zyskać przyjaciela, należy spędzać razem czas, być wyrozumiałym, rozmawiać o problemach. Niestety przyjaciela nie da się kupić, możemy jedynie go poszukiwać.",
+              "ref": {
+                "source": "klucz",
+                "page": 11
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Akceptowane są wszystkie odpowiedzi merytorycznie poprawne, spełniające warunki zadania. Błąd rzeczowy dotyczący lektur obowiązkowych skutkuje przyznaniem 0 punktów."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-1.7"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "pl-2025-16",
+      "sessionId": "polski-2025-05-glowny",
+      "number": 16,
+      "maxPoints": 1,
+      "instruction": "**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nWypowiedzenie *Kiedy dwóch idzie razem, każdy z nich lepiej działa i myśli* jest zdaniem",
+      "stimulusIds": [
+        "pl-2025-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-16",
+          "label": "16",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "pojedynczym."
+              },
+              {
+                "id": "B",
+                "text": "złożonym podrzędnie."
+              },
+              {
+                "id": "C",
+                "text": "wielokrotnie złożonym."
+              },
+              {
+                "id": "D",
+                "text": "złożonym współrzędnie."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-78-1.5"
+          ],
+          "explanation": "W wypowiedzeniu są trzy orzeczenia: „idzie”, „działa” i „myśli”, więc są w nim trzy zdania składowe – to zdanie wielokrotnie złożone."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-78-1.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "pl-2025-17",
+      "sessionId": "polski-2025-05-glowny",
+      "number": 17,
+      "maxPoints": 1,
+      "instruction": "**Które z podanych niżej powiedzeń wyraża podobną myśl, co słowa Arystotelesa *Kiedy dwóch idzie razem, każdy z nich lepiej działa i myśli*? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [
+        "pl-2025-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-17",
+          "label": "17",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Działać na dwa fronty."
+              },
+              {
+                "id": "B",
+                "text": "Co dwie głowy, to nie jedna."
+              },
+              {
+                "id": "C",
+                "text": "Trzymać dwie sroki za ogon."
+              },
+              {
+                "id": "D",
+                "text": "Upiec dwie pieczenie na jednym ogniu."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-2.5"
+          ],
+          "explanation": "„Co dwie głowy, to nie jedna” znaczy, że razem łatwiej coś wymyślić i zrobić – tak jak u Arystotelesa. Pozostałe powiedzenia mówią o robieniu kilku rzeczy naraz albo o osiąganiu dwóch celów jednym działaniem."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-2.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "pl-2025-18",
+      "sessionId": "polski-2025-05-glowny",
+      "number": 18,
+      "maxPoints": 3,
+      "instruction": "**Zredaguj ogłoszenie informujące o spotkaniu uczniów chętnych do udziału w szkolnym przedstawieniu pt. *Przyjaciel na zawsze*. Zachęć do przyjścia na spotkanie, używając dwóch argumentów, z których co najmniej jeden będzie nawiązywał do tematyki spotkania.**\n\n*Uwaga: w ocenie wypowiedzi będzie brana pod uwagę poprawność językowa, ortograficzna i interpunkcyjna.*",
+      "stimulusIds": [
+        "pl-2025-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-18",
+          "label": "18",
+          "maxPoints": 3,
+          "response": {
+            "type": "extended_text"
+          },
+          "key": {},
+          "scoring": {
+            "type": "rubric",
+            "rubrics": [
+              {
+                "topic": null,
+                "rubricId": "pl-2025-18-t1"
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-4.1",
+            "pl-gen-III",
+            "pl-46-2.1"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "Uprzejmie informujemy, że 24 maja 2025 r. w naszej szkole, w sali nr 21, odbędzie się spotkanie uczniów klas siódmych i ósmych chętnych do udziału w przedstawieniu „Przyjaciel na zawsze”. Spotkanie rozpocznie się o godz. 12.30 i potrwa godzinę.\nZachęcamy do przyjścia. Będzie to dobra okazja do poznania nowych, ciekawych osób, a także zdobycia szczegółowych informacji na temat planowanego przedstawienia.\nSamorząd Uczniowski",
+              "ref": {
+                "source": "klucz",
+                "page": 13
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Jeżeli uczeń uwzględnia 5 elementów ogłoszenia, a podaje tylko jeden argument, w kryterium „Treść i forma” otrzymuje 1 punkt.",
+            "Jeżeli uczeń uwzględnia 5 elementów ogłoszenia i podaje dwa argumenty, ale żaden z nich nie nawiązuje do tematyki spotkania, w kryterium „Treść i forma” otrzymuje 1 punkt.",
+            "Kategorie „Treść i forma” oraz „Poprawność językowa, ortograficzna i interpunkcyjna” ocenia się rozłącznie."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-4.1",
+        "pl-gen-III",
+        "pl-46-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 15
+      }
+    },
+    {
+      "id": "pl-2025-19",
+      "sessionId": "polski-2025-05-glowny",
+      "number": 19,
+      "maxPoints": 20,
+      "instruction": "Wybierz **jeden** z podanych tematów i napisz wypracowanie.\n\n- Pamiętaj o zachowaniu formy wypowiedzi wskazanej w temacie: napisz **przemówienie** albo **opowiadanie**.\n- W wypracowaniu odwołaj się do **wybranej lektury obowiązkowej**. Lista lektur obowiązkowych znajduje się na stronach 3 i 4 arkusza egzaminacyjnego.\n- Innym utworem literackim w przemówieniu może być także lektura obowiązkowa.\n- Twoja praca powinna liczyć co najmniej **200 wyrazów**.\n- Pamiętaj, że zabronione jest pisanie wypowiedzi obraźliwych, wulgarnych lub propagujących postępowanie niezgodne z prawem albo wypowiedzi aprobujących nieetyczne postępowanie bohatera.\n\nIlustracje do tematu 2:\n\n![Dwie ilustracje: wędrowiec z kijem i plecakiem przy drogowskazie podchodzi do smutnego chłopca siedzącego przy ścieżce; dwa balony, z kosza jednego bohater podaje linę do kosza drugiego](stimulus:pl-2025-19-fig1)",
+      "stimulusIds": [
+        "pl-2025-19-fig1"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-19",
+          "label": "19",
+          "maxPoints": 20,
+          "response": {
+            "type": "extended_text",
+            "minWords": 200,
+            "topics": [
+              {
+                "id": "1",
+                "text": "Napisz **przemówienie**, w którym przekonasz rówieśników, że *przyjaźń między dwiema osobami to rodzaj harmonii, która potrafi połączyć zupełnie różne charaktery*. W argumentacji odwołaj się do wybranej lektury obowiązkowej oraz do innego utworu literackiego.",
+                "form": "przemówienie"
+              },
+              {
+                "id": "2",
+                "text": "Wyobraź sobie, że spotkałeś bohatera jednej z lektur obowiązkowych. Podczas Waszej wspólnej przygody dokonał on czynu godnego podziwu. Napisz o tym **opowiadanie**. Wypracowanie powinno dowodzić, że dobrze znasz wybranego bohatera. Elementem fabuły opowiadania uczyń sytuację przedstawioną na jednej z ilustracji (pod treścią zadania).",
+                "form": "opowiadanie"
+              }
+            ]
+          },
+          "key": {},
+          "scoring": {
+            "type": "rubric",
+            "rubrics": [
+              {
+                "topic": "1",
+                "rubricId": "pl-2025-19-t1"
+              },
+              {
+                "topic": "2",
+                "rubricId": "pl-2025-19-t2"
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-1.7",
+            "pl-gen-III",
+            "pl-78-2.1",
+            "pl-gen-II",
+            "pl-46-4.1"
+          ],
+          "scoringNotes": [
+            "Jeżeli wypowiedź w całości jest nie na temat, egzaminator oceni ją na 0 punktów.",
+            "Jeżeli w wypowiedzi uczeń w ogóle nie odwołał się do treści lektury obowiązkowej wskazanej w poleceniu, za całą wypowiedź egzaminator przyzna 0 punktów.",
+            "Jeżeli wypowiedź nie zawiera w ogóle rozwinięcia (np. uczeń napisał tylko wstęp), egzaminator przyzna 0 punktów w każdym kryterium.",
+            "Samo przywołanie imienia bohatera literackiego nie jest funkcjonalnym wykorzystaniem utworu.",
+            "Za utwór literacki w wypracowaniu nie uznaje się: powieści obrazkowej, mangi, scenariusza filmowego, gry komputerowej.",
+            "Jeżeli wypowiedź zawiera 180 wyrazów lub mniej, jest oceniana wyłącznie w kryteriach: Realizacja tematu wypowiedzi, Elementy twórcze / Elementy retoryczne oraz Kompetencje literackie i kulturowe. W pozostałych kryteriach przyznaje się 0 punktów. Liczone są wszystkie wyrazy.",
+            "Temat 1 (przemówienie): na 2 pkt w kryterium Realizacja tematu potrzebny jest bezpośredni zwrot do adresata oraz co najmniej dwie różne cechy przemówienia: retoryczne środki językowe, czasowniki w trybie rozkazującym, czasowniki lub zaimki w 1. i 2. osobie l. mn. podtrzymujące kontakt z odbiorcami, zjednywanie przychylności odbiorców.",
+            "Temat 2 (opowiadanie): w opowiadaniu muszą się znaleźć wspólna przygoda, czyn godny podziwu i sytuacja z jednej z ilustracji jako element fabuły; opowiadanie nie może być streszczeniem lektury."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-1.7",
+        "pl-gen-III",
+        "pl-78-2.1",
+        "pl-gen-II",
+        "pl-46-4.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 16
+      }
+    }
+  ],
+  "rubrics": [
+    {
+      "id": "pl-2025-18-t1",
+      "maxPoints": 3,
+      "criteria": [
+        {
+          "id": "tresc",
+          "name": "Treść i forma",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Treść zgodna z poleceniem, uwzględnione 2 argumenty, z których co najmniej jeden nawiązuje do tematyki spotkania; uwzględnionych 5 elementów dotyczących formy: kto ogłasza? komu ogłasza? co ogłasza? kiedy się odbywa? gdzie się odbywa?"
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Treść zgodna z poleceniem, uwzględnione 2 argumenty, z których co najmniej jeden nawiązuje do tematyki spotkania; uwzględnione 4 z 5 elementów dotyczących formy."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Treść niezgodna z poleceniem ALBO treść zgodna z poleceniem, ale uwzględnione tylko 3 elementy dotyczące formy."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "poprawnosc",
+          "name": "Poprawność językowa, ortograficzna i interpunkcyjna",
+          "type": "error_count",
+          "max": 1,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 2,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 3,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        }
+      ],
+      "gates": []
+    },
+    {
+      "id": "pl-2025-19-t1",
+      "maxPoints": 20,
+      "criteria": [
+        {
+          "id": "realizacja",
+          "name": "Realizacja tematu wypowiedzi",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu. Wszystkie pozostałe elementy polecenia uwzględnione. Wypowiedź w całości dotyczy problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu. Nieuwzględniony jeden element polecenia (inny niż forma) ORAZ/LUB w pracy występują fragmenty niedotyczące problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Forma wypowiedzi niezgodna z formą wskazaną w poleceniu ALBO nieuwzględnione co najmniej dwa elementy polecenia (inne niż forma)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "retoryczne",
+          "name": "Elementy retoryczne",
+          "type": "levels",
+          "max": 5,
+          "levels": [
+            {
+              "points": 5,
+              "paths": [
+                "Pogłębiona argumentacja. Argumenty odwołujące się np. do faktów, logiki, emocji, zilustrowane odpowiednimi przykładami ORAZ/LUB wykorzystanie przykładów w funkcji argumentacyjnej. Argumenty/przykłady uporządkowane, np. zhierarchizowane."
+              ]
+            },
+            {
+              "points": 4,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 3 pkt i niektóre na 5 pkt."
+              ]
+            },
+            {
+              "points": 3,
+              "paths": [
+                "Powierzchowna argumentacja; w wypowiedzi brak wnikliwości. Niektóre argumenty zilustrowane odpowiednimi przykładami ORAZ/LUB wykorzystanie przykładów w funkcji argumentacyjnej. Argumenty/przykłady częściowo uporządkowane."
+              ]
+            },
+            {
+              "points": 2,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 1 pkt i niektóre na 3 pkt."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Podjęta próba argumentowania. Ograniczenie do wyliczenia powierzchownie omówionych przykładów, powiązanych z problemem określonym w temacie."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompetencje",
+          "name": "Kompetencje literackie i kulturowe",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). Poprawność rzeczowa."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Funkcjonalne albo częściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej (oraz funkcjonalne lub częściowo funkcjonalne wykorzystanie innego tekstu, jeżeli polecenie tego wymaga) – jedno z nich tylko częściowo funkcjonalne. Dopuszczalne 1–2 błędy rzeczowe."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompozycja",
+          "name": "Kompozycja tekstu",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi. Graficznie wyodrębnione akapity. Dopuszczalna 1 usterka w zakresie spójności ALBO logiki wypowiedzi, ALBO podziału wypowiedzi na funkcjonalne akapity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi. Graficznie wyodrębnione akapity. Dopuszczalne łącznie 2–3 usterki w zakresie spójności ORAZ/ALBO logiki wypowiedzi."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "styl",
+          "name": "Styl",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Odpowiedni do treści i formy wypowiedzi. Jednolity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Sporadyczne usterki w odpowiedniości ORAZ/LUB jednolitości stylu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia wymagań określonych na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jezyk",
+          "name": "Język",
+          "type": "matrix",
+          "max": 4,
+          "rows": "zakres środków językowych",
+          "cols": "liczba błędów językowych",
+          "table": {
+            "Szeroki zakres środków językowych (zróżnicowana składnia i leksyka, np. bogata frazeologia, precyzyjne słownictwo)": {
+              "nie więcej niż 4 błędy": 4,
+              "5–7 błędów": 3,
+              "8–10 błędów": 2,
+              "11–13 błędów": 1,
+              "14 lub więcej błędów": 0
+            },
+            "Zadowalający zakres środków językowych (składnia i leksyka stosowne do realizacji tematu)": {
+              "nie więcej niż 4 błędy": 3,
+              "5–7 błędów": 2,
+              "8–10 błędów": 1,
+              "11–13 błędów": 0,
+              "14 lub więcej błędów": 0
+            },
+            "Wąski zakres środków językowych (składnia i leksyka proste, utrudniające realizację tematu)": {
+              "nie więcej niż 4 błędy": 2,
+              "5–7 błędów": 1,
+              "8–10 błędów": 0,
+              "11–13 błędów": 0,
+              "14 lub więcej błędów": 0
+            }
+          }
+        },
+        {
+          "id": "ortografia",
+          "name": "Ortografia",
+          "type": "error_count",
+          "max": 2,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 1,
+                "points": 2
+              },
+              {
+                "maxErrors": 3,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 3,
+                "points": 2
+              },
+              {
+                "maxErrors": 6,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "interpunkcja",
+          "name": "Interpunkcja",
+          "type": "error_count",
+          "max": 1,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 9,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 11,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        }
+      ],
+      "gates": [
+        {
+          "ifCriterion": "realizacja",
+          "equals": 0,
+          "thenAllOthers": 0
+        }
+      ]
+    },
+    {
+      "id": "pl-2025-19-t2",
+      "maxPoints": 20,
+      "criteria": [
+        {
+          "id": "realizacja",
+          "name": "Realizacja tematu wypowiedzi",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu. Wszystkie pozostałe elementy polecenia uwzględnione. Wypowiedź w całości dotyczy problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu. Nieuwzględniony jeden element polecenia (inny niż forma) ORAZ/LUB w pracy występują fragmenty niedotyczące problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Forma wypowiedzi niezgodna z formą wskazaną w poleceniu ALBO nieuwzględnione co najmniej dwa elementy polecenia (inne niż forma)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tworcze",
+          "name": "Elementy twórcze",
+          "type": "levels",
+          "max": 5,
+          "levels": [
+            {
+              "points": 5,
+              "paths": [
+                "Funkcjonalna narracja. Logiczny układ zdarzeń. Urozmaicona fabuła, w tym funkcjonalne wykorzystanie co najmniej 6 spośród elementów: opis, charakterystyka bohatera, czas akcji, miejsce akcji, zwrot akcji, puenta, punkt kulminacyjny, dialog, monolog, retrospekcja. Twórcze wykorzystanie treści lektury."
+              ]
+            },
+            {
+              "points": 4,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 3 pkt i niektóre na 5 pkt."
+              ]
+            },
+            {
+              "points": 3,
+              "paths": [
+                "Funkcjonalna narracja. Logiczny układ zdarzeń. Prosta fabuła, w tym funkcjonalne wykorzystanie co najmniej 4 spośród elementów: opis, charakterystyka bohatera, czas akcji, miejsce akcji, zwrot akcji, puenta, punkt kulminacyjny, dialog, monolog, retrospekcja."
+              ]
+            },
+            {
+              "points": 2,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 1 pkt i niektóre na 3 pkt."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Narracja częściowo funkcjonalna. Dopuszczalne usterki w logicznym układzie zdarzeń. Prosta fabuła."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompetencje",
+          "name": "Kompetencje literackie i kulturowe",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). Poprawność rzeczowa."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Funkcjonalne albo częściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej (oraz funkcjonalne lub częściowo funkcjonalne wykorzystanie innego tekstu, jeżeli polecenie tego wymaga) – jedno z nich tylko częściowo funkcjonalne. Dopuszczalne 1–2 błędy rzeczowe."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompozycja",
+          "name": "Kompozycja tekstu",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi. Graficznie wyodrębnione akapity. Dopuszczalna 1 usterka w zakresie spójności ALBO logiki wypowiedzi, ALBO podziału wypowiedzi na funkcjonalne akapity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi. Graficznie wyodrębnione akapity. Dopuszczalne łącznie 2–3 usterki w zakresie spójności ORAZ/ALBO logiki wypowiedzi."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "styl",
+          "name": "Styl",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Odpowiedni do treści i formy wypowiedzi. Jednolity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Sporadyczne usterki w odpowiedniości ORAZ/LUB jednolitości stylu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia wymagań określonych na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jezyk",
+          "name": "Język",
+          "type": "matrix",
+          "max": 4,
+          "rows": "zakres środków językowych",
+          "cols": "liczba błędów językowych",
+          "table": {
+            "Szeroki zakres środków językowych (zróżnicowana składnia i leksyka, np. bogata frazeologia, precyzyjne słownictwo)": {
+              "nie więcej niż 4 błędy": 4,
+              "5–7 błędów": 3,
+              "8–10 błędów": 2,
+              "11–13 błędów": 1,
+              "14 lub więcej błędów": 0
+            },
+            "Zadowalający zakres środków językowych (składnia i leksyka stosowne do realizacji tematu)": {
+              "nie więcej niż 4 błędy": 3,
+              "5–7 błędów": 2,
+              "8–10 błędów": 1,
+              "11–13 błędów": 0,
+              "14 lub więcej błędów": 0
+            },
+            "Wąski zakres środków językowych (składnia i leksyka proste, utrudniające realizację tematu)": {
+              "nie więcej niż 4 błędy": 2,
+              "5–7 błędów": 1,
+              "8–10 błędów": 0,
+              "11–13 błędów": 0,
+              "14 lub więcej błędów": 0
+            }
+          }
+        },
+        {
+          "id": "ortografia",
+          "name": "Ortografia",
+          "type": "error_count",
+          "max": 2,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 1,
+                "points": 2
+              },
+              {
+                "maxErrors": 3,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 3,
+                "points": 2
+              },
+              {
+                "maxErrors": 6,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "interpunkcja",
+          "name": "Interpunkcja",
+          "type": "error_count",
+          "max": 1,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 9,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 11,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        }
+      ],
+      "gates": [
+        {
+          "ifCriterion": "realizacja",
+          "equals": 0,
+          "thenAllOthers": 0
+        }
+      ]
+    }
+  ],
+  "audio": []
+}
