@@ -1,6 +1,7 @@
 // S2 Arkusze: sessions grouped by subject, with the student's attempts on each.
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link, useNavigate, useSearchParams } from "react-router";
+import { SUBJECTS } from "@osemka/schema";
 import type { AttemptSummary, SessionSummary } from "../../../shared/ipc";
 import { clock, pct, plural, sessionLabel, SUBJECT_TONE } from "../lib/format";
 
@@ -8,6 +9,9 @@ export function ExamBrowser() {
   const [sessions, setSessions] = useState<SessionSummary[] | null>(null);
   const [attempts, setAttempts] = useState<AttemptSummary[]>([]);
   const navigate = useNavigate();
+  // ?przedmiot=polski shows one subject (from the dashboard's "Ćwicz"); tabs switch or show all.
+  const [params, setParams] = useSearchParams();
+  const only = params.get("przedmiot");
 
   useEffect(() => {
     void window.osemka.listSessions().then(setSessions);
@@ -16,7 +20,7 @@ export function ExamBrowser() {
 
   if (!sessions) return <p className="text-muted">Ładowanie…</p>;
 
-  const subjects = [...new Set(sessions.map((s) => s.subjectName))];
+  const subjects = [...new Set(sessions.filter((s) => !only || s.subjectId === only).map((s) => s.subjectName))];
 
   return (
     <section className="flex flex-col gap-8" data-testid="exam-browser">
@@ -24,6 +28,16 @@ export function ExamBrowser() {
         <h1 className="text-4xl font-bold">Arkusze</h1>
         <p className="text-muted">Prawdziwe arkusze CKE z kluczem odpowiedzi. Wybierz arkusz, aby ćwiczyć.</p>
       </div>
+
+      {sessions.length > 0 && (
+        <div className="flex flex-wrap gap-1" role="tablist" aria-label="Przedmiot">
+          {[{ id: null, name: "Wszystkie" }, ...Object.values(SUBJECTS).map((s) => ({ id: s.id as string | null, name: s.name }))].map((t) => (
+            <button key={t.name} role="tab" aria-selected={only === t.id} className={`btn ${only === t.id ? "primary" : "ghost"}`} onClick={() => setParams(t.id ? { przedmiot: t.id } : {})} data-subject-tab={t.id ?? "all"}>
+              {t.name}
+            </button>
+          ))}
+        </div>
+      )}
 
       {sessions.length === 0 && (
         <div className="card rounded-[10px] border border-line bg-surface p-6">

@@ -69,7 +69,7 @@ export function Analysis() {
       ) : !data.timeline.length ? (
         <p className="text-muted">
           W tym okresie nie ma jeszcze wyników z tego przedmiotu.{" "}
-          <Link to="/arkusze" className="font-bold text-accent">
+          <Link to={`/arkusze?przedmiot=${subject}`} className="font-bold text-accent">
             Wybierz arkusz →
           </Link>
         </p>

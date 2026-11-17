@@ -30,6 +30,12 @@ export async function runTour(win: BrowserWindow, outDir: string): Promise<strin
   const clickText = (text: string) =>
     js(`(() => { const el = [...document.querySelectorAll("button")].find(b => b.textContent.trim().startsWith(${JSON.stringify(text)})); if (!el) throw new Error("no button ${text}"); el.click(); })()`);
 
+  await go("#/");
+  await js(`[...document.querySelectorAll('[data-testid="subject-polski"] a')].find((a) => a.textContent.trim() === "Ćwicz")?.click()`);
+  await wait(400);
+  if (!(await js<string>("location.hash")).includes("przedmiot=polski")) throw new Error("Ćwicz on the Polish card does not open Polish papers");
+  await shot("arkusze-polski");
+
   await go("#/arkusze");
   await shot("arkusze");
 

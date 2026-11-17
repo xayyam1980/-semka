@@ -158,7 +158,7 @@ export function Dashboard() {
                     Ćwicz
                   </button>
                 ) : (
-                  <Link className="btn ghost" to="/arkusze">
+                  <Link className="btn ghost" to={`/arkusze?przedmiot=${s.id}`}>
                     Ćwicz
                   </Link>
                 )}
