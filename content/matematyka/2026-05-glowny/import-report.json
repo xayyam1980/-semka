@@ -1,6 +1,6 @@
 {
   "sessionId": "matematyka-2026-05-glowny",
-  "at": "2026-11-17T12:12:23.147Z",
+  "at": "2026-11-17T12:31:08.025Z",
   "model": "qwen · qwen3.8-max · token-plan.maas.qwencloudapi.com",
   "segmentation": {
     "sheetTasks": 20,
@@ -27,14 +27,16 @@
     {
       "number": 2,
       "problems": [],
-      "notes": [],
+      "notes": [
+        "Tekst zadania na otrzymanej stronie arkusza (kod OMAP-100-2605) prowadzi do kodu 4994, czyli odpowiedzi B; klucz podaje jednak dla wersji Y odpowiedź C, a przypis 2 stwierdza, że odpowiedzi w wersji Y dotyczą wyłącznie arkusza OMAP-100-2605. Odpowiedzi obu wersji przepisano z klucza bez zmian, bez rozstrzygania tej niezgodności."
+      ],
       "usage": {
-        "input": 7237,
-        "output": 2132,
+        "input": 7424,
+        "output": 9318,
         "cacheRead": 0,
         "cacheWrite": 0
       },
-      "cached": true
+      "cached": false
     },
     {
       "number": 3,
@@ -65,12 +67,12 @@
       "problems": [],
       "notes": [],
       "usage": {
-        "input": 7227,
-        "output": 2771,
+        "input": 7414,
+        "output": 3572,
         "cacheRead": 0,
         "cacheWrite": 0
       },
-      "cached": true
+      "cached": false
     },
     {
       "number": 6,
@@ -193,7 +195,7 @@
         "cacheRead": 0,
         "cacheWrite": 0
       },
-      "cached": false
+      "cached": true
     },
     {
       "number": 16,
@@ -342,8 +344,8 @@
   ],
   "ok": true,
   "tokens": {
-    "input": 13820,
-    "output": 10236
+    "input": 14838,
+    "output": 12890
   },
-  "approvedAt": "2026-11-17T12:18:46.505Z"
+  "approvedAt": "2026-11-17T12:35:54.953Z"
 }

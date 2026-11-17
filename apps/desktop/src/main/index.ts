@@ -1,9 +1,23 @@
-import { mkdirSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
-import { app, BrowserWindow, shell } from "electron";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { extname, join } from "node:path";
+import { app, BrowserWindow, dialog, protocol, shell } from "electron";
+import { AttemptService } from "./attempts";
+import { openContent } from "./content";
 import { migrationsPath, openDb, readSettings, recordRun } from "./db";
 import { registerIpc } from "./ipc";
+import { runTour } from "./smoke-tour";
 import { applyTheme, windowBackground } from "./theme";
+
+// Figures and other session assets are served to the window from osemka-content://<session>/<path>.
+protocol.registerSchemesAsPrivileged([{ scheme: "osemka-content", privileges: { standard: true, secure: true, supportFetchAPI: true } }]);
+
+/** content/ next to the repository in development; inside the installed app's resources later (P9). */
+function contentRoot(): string {
+  if (process.env.OSEMKA_CONTENT_ROOT) return process.env.OSEMKA_CONTENT_ROOT;
+  return app.isPackaged ? join(process.resourcesPath, "content") : join(app.getAppPath(), "..", "..", "content");
+}
+
+const MIME: Record<string, string> = { ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".svg": "image/svg+xml", ".mp3": "audio/mpeg" };
 
 // ASCII folder name on purpose: %APPDATA%\Osemka on Windows, ~/Library/Application Support/Osemka on macOS.
 // OSEMKA_USER_DATA lets tests run against a throwaway folder.
@@ -50,6 +64,20 @@ function createWindow(): BrowserWindow {
     if (url.startsWith("https://")) void shell.openExternal(url);
     return { action: "deny" };
   });
+  // The exam page blocks unloading (beforeunload); ask the student, and let them close if they insist.
+  win.webContents.on("will-prevent-unload", (e) => {
+    if (smoke) return e.preventDefault();
+    const choice = dialog.showMessageBoxSync(win, {
+      type: "warning",
+      buttons: ["Zostań", "Zamknij"],
+      defaultId: 0,
+      cancelId: 0,
+      title: "Egzamin trwa",
+      message: "Egzamin trwa",
+      detail: "Twoje odpowiedzi są zapisane, ale czas biegnie dalej także po zamknięciu aplikacji.",
+    });
+    if (choice === 1) e.preventDefault();
+  });
   win.webContents.on("will-navigate", (e, url) => {
     if (url !== win.webContents.getURL()) e.preventDefault();
   });
@@ -67,7 +95,20 @@ app.whenReady().then(() => {
   const { db, close } = openDb(dbFile, migrationsPath(app.getAppPath()));
   const runs = recordRun(db, app.getVersion(), process.platform);
   applyTheme(readSettings(db).theme);
-  registerIpc({ db, dbFile, runs });
+  const content = openContent(contentRoot(), { includeDrafts: process.env.OSEMKA_INCLUDE_DRAFTS === "1" });
+  const devSeconds = !app.isPackaged && process.env.OSEMKA_DEV_SIM_SECONDS ? Number(process.env.OSEMKA_DEV_SIM_SECONDS) : undefined;
+  const attemptService = new AttemptService(db, content, {
+    settings: () => readSettings(db),
+    ...(devSeconds && devSeconds > 0 ? { devSimulationSeconds: devSeconds } : {}),
+  });
+  registerIpc({ db, dbFile, runs, content, attemptService });
+
+  protocol.handle("osemka-content", (req) => {
+    const url = new URL(req.url);
+    const file = content.assetPath(decodeURIComponent(url.host), decodeURIComponent(url.pathname.replace(/^\//, "")));
+    if (!file) return new Response("Not found", { status: 404 });
+    return new Response(readFileSync(file), { headers: { "content-type": MIME[extname(file).toLowerCase()] ?? "application/octet-stream" } });
+  });
   app.on("will-quit", close);
 
   mainWindow = createWindow();
@@ -94,7 +135,7 @@ function runSmoke(win: BrowserWindow, info: { dbFile: string; runs: number }): v
   const fail = setTimeout(() => {
     process.stdout.write(`SMOKE ${JSON.stringify({ ok: false, error: "timeout" })}\n`);
     app.exit(1);
-  }, 20000);
+  }, process.env.OSEMKA_SMOKE_TOUR === "1" ? 120000 : 20000);
   win.webContents.on("did-finish-load", async () => {
     try {
       const ready = await win.webContents.executeJavaScript(
@@ -105,7 +146,8 @@ function runSmoke(win: BrowserWindow, info: { dbFile: string; runs: number }): v
       const png = join(out, `shell-${process.platform}.png`);
       writeFileSync(png, shot.toPNG());
       clearTimeout(fail);
-      process.stdout.write(`SMOKE ${JSON.stringify({ ok: ready, runs: info.runs, dbFile: info.dbFile, png, textSample: text.slice(0, 300) })}\n`);
+      const tour = ready && process.env.OSEMKA_SMOKE_TOUR === "1" ? await runTour(win, out) : [];
+      process.stdout.write(`SMOKE ${JSON.stringify({ ok: ready, runs: info.runs, dbFile: info.dbFile, png, tour, textSample: text.slice(0, 300) })}\n`);
       app.exit(ready ? 0 : 1);
     } catch (err) {
       process.stdout.write(`SMOKE ${JSON.stringify({ ok: false, error: String(err) })}\n`);

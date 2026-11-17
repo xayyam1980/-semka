@@ -1,0 +1,195 @@
+// Inputs for each answer type. After checking, inputs lock and show right/wrong per option or part.
+import type { KeySpec, ResponseValue } from "@osemka/schema";
+import type { PublicItem } from "../../../shared/ipc";
+import { Rich, type RichContext } from "./Rich";
+
+interface Props {
+  item: PublicItem;
+  value: ResponseValue | null;
+  onChange: (v: ResponseValue | null) => void;
+  /** Present once checked: the key, used to colour options. */
+  revealedKey?: KeySpec | undefined;
+  ctx: RichContext;
+}
+
+type Choices = Record<string, string>;
+
+export function AnswerInput({ item, value, onChange, revealedKey, ctx }: Props) {
+  const locked = !!revealedKey;
+  const r = item.response;
+
+  if (r.type === "single_choice") {
+    const chosen = value?.type === "choice" ? value.value : "";
+    const correct = revealedKey?.type === "choice" ? revealedKey.correct : undefined;
+    return (
+      <div className={`grid gap-2 ${r.options.every((o) => o.text.length < 24) ? "grid-cols-2" : "grid-cols-1"}`} role="radiogroup" aria-label={`Odpowiedź do zadania ${item.label}`}>
+        {r.options.map((o) => {
+          const state = !locked ? (chosen === o.id ? "sel" : "") : o.id === correct ? (chosen === o.id ? "ok" : "rev") : chosen === o.id ? "bad" : "";
+          return (
+            <button key={o.id} className={`opt ${state}`} role="radio" aria-checked={chosen === o.id} disabled={locked} onClick={() => onChange({ type: "choice", value: o.id })} data-option={o.id}>
+              <span className="k">{o.id}</span>
+              <Rich text={o.text} ctx={ctx} inline />
+              {state === "ok" && <span className="st">✓ dobrze</span>}
+              {state === "bad" && <span className="st">× Twój wybór</span>}
+              {state === "rev" && <span className="st">poprawna</span>}
+            </button>
+          );
+        })}
+      </div>
+    );
+  }
+
+  if (r.type === "true_false") {
+    const chosen: Choices = value?.type === "choices" ? value.value : {};
+    const key: Choices = revealedKey?.type === "choices" ? revealedKey.correct : {};
+    const set = (id: string, v: string) => onChange({ type: "choices", value: { ...chosen, [id]: v } });
+    return (
+      <table className="w-full border-collapse overflow-hidden rounded-[10px] border border-line">
+        <tbody>
+          {r.statements.map((s) => (
+            <tr key={s.id} className="border-b border-line last:border-0">
+              <td className="p-3">
+                <Rich text={s.text} ctx={ctx} inline />
+              </td>
+              {["P", "F"].map((v) => {
+                const picked = chosen[s.id] === v;
+                const state = !locked ? (picked ? "sel" : "") : key[s.id] === v ? "ok" : picked ? "bad" : "";
+                return (
+                  <td key={v} className="w-14 p-2 text-center">
+                    <button className={`pf ${state}`} disabled={locked} aria-pressed={picked} onClick={() => set(s.id, v)} aria-label={`${v === "P" ? "Prawda" : "Fałsz"}: zdanie ${s.id}`}>
+                      {v}
+                    </button>
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    );
+  }
+
+  if (r.type === "choice_with_reason") {
+    const chosen: Choices = value?.type === "choices" ? value.value : {};
+    const key: Choices = revealedKey?.type === "choices" ? revealedKey.correct : {};
+    const group = (part: "choice" | "reason", opts: { id: string; text: string }[]) => (
+      <div className="grid grid-cols-2 gap-2">
+        {opts.map((o) => {
+          const picked = chosen[part] === o.id;
+          const state = !locked ? (picked ? "sel" : "") : key[part] === o.id ? (picked ? "ok" : "rev") : picked ? "bad" : "";
+          return (
+            <button key={o.id} className={`opt ${state}`} disabled={locked} aria-pressed={picked} onClick={() => onChange({ type: "choices", value: { ...chosen, [part]: o.id } })} data-option={o.id}>
+              <span className="k">{o.id}</span>
+              <Rich text={o.text} ctx={ctx} inline />
+              {state === "rev" && <span className="st">poprawna</span>}
+            </button>
+          );
+        })}
+      </div>
+    );
+    return (
+      <div className="flex flex-col gap-3">
+        {group("choice", r.choices)}
+        {group("reason", r.reasons)}
+      </div>
+    );
+  }
+
+  if (r.type === "matching") {
+    const chosen: Choices = value?.type === "choices" ? value.value : {};
+    const key: Choices = revealedKey?.type === "choices" ? revealedKey.correct : {};
+    return (
+      <div className="flex flex-col gap-2">
+        {r.slots.map((slot) => (
+          <label key={slot} className="flex items-center gap-3">
+            <span className="tabular w-12 font-bold">{slot}</span>
+            <select
+              className="rounded-md border border-line bg-surface px-3 py-2"
+              disabled={locked}
+              value={chosen[slot] ?? ""}
+              onChange={(e) => onChange({ type: "choices", value: { ...chosen, [slot]: e.target.value } })}
+            >
+              <option value="">–</option>
+              {r.options.map((o) => (
+                <option key={o.id} value={o.id}>
+                  {o.id}
+                </option>
+              ))}
+            </select>
+            {locked && <span className={`chip ${chosen[slot] === key[slot] ? "ok" : "bad"}`}>{chosen[slot] === key[slot] ? "✓" : `× ${key[slot]}`}</span>}
+          </label>
+        ))}
+      </div>
+    );
+  }
+
+  if (r.type === "short_text") {
+    const vals = value?.type === "text" ? value.value : [];
+    return (
+      <div className="flex flex-col gap-2">
+        {Array.from({ length: r.gaps }, (_, g) => (
+          <input
+            key={g}
+            id={`gap-${item.id}-${g}`}
+            className="max-w-md rounded-md border border-line bg-surface px-3 py-2"
+            disabled={locked}
+            value={vals[g] ?? ""}
+            lang={r.language}
+            spellCheck={false}
+            aria-label={r.gaps > 1 ? `Luka ${g + 1}` : "Odpowiedź"}
+            onChange={(e) => {
+              const next = [...vals];
+              next[g] = e.target.value;
+              onChange({ type: "text", value: next });
+            }}
+          />
+        ))}
+      </div>
+    );
+  }
+
+  if (r.type === "worked_solution" || r.type === "extended_text") {
+    const v = value && (value.type === "work" || value.type === "essay") ? value : undefined;
+    const text = v?.text ?? "";
+    const onPaper = value?.type === "work" ? !!value.onPaper : false;
+    const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+    return (
+      <div className="flex flex-col gap-2">
+        <textarea
+          id={`work-${item.id}`}
+          className="min-h-48 w-full rounded-md border border-line bg-surface p-3 font-[var(--f-mono)] text-[15px] leading-relaxed"
+          placeholder={r.type === "worked_solution" ? "Zapisz obliczenia…" : "Napisz wypracowanie…"}
+          disabled={locked}
+          value={text}
+          onChange={(e) => onChange(r.type === "worked_solution" ? { type: "work", text: e.target.value, onPaper } : { type: "essay", text: e.target.value, wordCount: e.target.value.trim().split(/\s+/).filter(Boolean).length })}
+        />
+        <div className="flex items-center justify-between text-sm text-muted">
+          {r.type === "worked_solution" ? (
+            <label className="flex items-center gap-2">
+              <input id={`paper-${item.id}`} type="checkbox" disabled={locked} checked={onPaper} onChange={(e) => onChange({ type: "work", text, onPaper: e.target.checked })} />
+              Rozwiązałem/am na kartce
+            </label>
+          ) : (
+            <span />
+          )}
+          <span className="tabular">{words} słów</span>
+        </div>
+      </div>
+    );
+  }
+
+  return null;
+}
+
+/** True when the student has given something to check. */
+export function hasAnswer(item: PublicItem, v: ResponseValue | null): boolean {
+  if (!v) return false;
+  switch (v.type) {
+    case "choice": return !!v.value;
+    case "choices": return Object.values(v.value).some(Boolean);
+    case "text": return v.value.some((x) => x.trim());
+    case "work": return !!v.text?.trim() || !!v.onPaper || !!v.photoIds?.length;
+    case "essay": return !!v.text?.trim();
+  }
+  return item.response.type === "worked_solution";
+}

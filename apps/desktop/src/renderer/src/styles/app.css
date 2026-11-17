@@ -13,6 +13,7 @@
   --color-accent-ink: var(--accent-ink);
   --color-accent-soft: var(--accent-soft);
   --color-exam: var(--exam);
+  --color-exam-soft: var(--exam-soft);
   --color-pl: var(--pl);
   --color-pl-soft: var(--pl-soft);
   --color-ma: var(--ma);
@@ -50,3 +51,81 @@ h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.1
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* ── Task text (Rich) ─────────────────────────────────────────── */
+.rich { font-size: calc(17px * var(--font-scale)); line-height: 1.65; max-width: 68ch; }
+.rich p { margin: 0 0 0.75em; }
+.rich p:last-child { margin-bottom: 0; }
+.rich strong { font-weight: 700; }
+.rich table { border-collapse: collapse; margin: 0.5em 0 1em; font-size: 0.95em; }
+.rich th, .rich td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; }
+.rich th { background: var(--sunk); }
+.rich-figure { margin: 0.75em 0 1em; }
+.rich-figure img { max-width: min(100%, 520px); max-height: 420px; object-fit: contain; background: #fff; border-radius: var(--r-s); padding: 6px; }
+.rich-slot { display: inline-flex; vertical-align: middle; border: 1.5px solid var(--ink); border-radius: 4px; overflow: hidden; margin: 0 2px; }
+.rich-slot b { padding: 0 8px; font-weight: 700; font-size: 0.85em; line-height: 1.6; }
+.rich-slot b + b { border-left: 1.5px solid var(--ink); }
+.rich-slot.filled { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); padding: 0 8px; font-weight: 700; }
+.rich-missing { color: var(--bad); }
+.katex { font-size: 1.08em; }
+
+/* ── Answer options (design system: 5 states) ─────────────────── */
+.opt { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; padding: 10px 14px; min-height: 48px; border-radius: var(--r-s); border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; font-size: calc(16px * var(--font-scale)); }
+.opt:hover:not(:disabled) { border-color: var(--accent); }
+/* Tall options (scoring levels): badge at the top. A plain rule, because Tailwind utilities sit in a layer this file overrides. */
+.opt.top { align-items: flex-start; }
+.opt.top .k { margin-top: 2px; }
+.opt:disabled { cursor: default; }
+.opt .k { width: 28px; height: 28px; flex: none; display: grid; place-items: center; border-radius: 50%; border: 1.5px solid var(--line); font-weight: 700; font-size: 13px; }
+.opt .st { margin-left: auto; font-size: 13px; font-weight: 700; white-space: nowrap; }
+.opt.sel { border-color: var(--accent); background: var(--accent-soft); }
+.opt.sel .k { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.opt.ok { border-color: var(--ok); background: var(--ok-soft); }
+.opt.ok .k { background: var(--ok); border-color: var(--ok); color: var(--surface); }
+.opt.ok .st { color: var(--ok); }
+.opt.bad { border-color: var(--bad); background: var(--bad-soft); }
+.opt.bad .k { border-color: var(--bad); color: var(--bad); }
+.opt.bad .st { color: var(--bad); }
+.opt.rev { border-style: dashed; border-color: var(--ok); }
+.opt.rev .st { color: var(--ok); }
+
+.pf { display: inline-grid; place-items: center; width: 44px; height: 38px; border: 1.5px solid var(--line); border-radius: var(--r-s); font-weight: 700; background: var(--surface); color: var(--ink); cursor: pointer; }
+.pf.sel { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.pf.ok { background: var(--ok); border-color: var(--ok); color: var(--surface); }
+.pf.bad { background: var(--bad-soft); border-color: var(--bad); color: var(--bad); }
+.pf:disabled { cursor: default; }
+
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: 13px; font-weight: 700; }
+.chip.ok { background: var(--ok-soft); color: var(--ok); }
+.chip.bad { background: var(--bad-soft); color: var(--bad); }
+.chip.warn { background: var(--warn-soft); color: var(--warn); }
+.chip.muted { background: var(--sunk); color: var(--muted); }
+
+.qnum { width: 36px; height: 36px; display: grid; place-items: center; border-radius: var(--r-s); border: 1.5px solid var(--line); font-family: var(--f-mono); font-size: 13px; background: var(--surface); color: var(--ink); position: relative; cursor: pointer; }
+.qnum.answered { background: var(--sunk); border-color: var(--sunk); }
+.qnum.ok { background: var(--ok-soft); border-color: var(--ok); color: var(--ok); }
+.qnum.bad { background: var(--bad-soft); border-color: var(--bad); color: var(--bad); }
+.qnum.cur { outline: 2px solid var(--accent); outline-offset: 1px; font-weight: 700; }
+.qnum.flag::after { content: ""; position: absolute; top: -4px; right: -4px; width: 10px; height: 10px; border-radius: 50%; background: var(--warn); border: 2px solid var(--surface); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 9px 18px; border-radius: var(--r-s); font-weight: 700; font-size: 15px; border: 1.5px solid transparent; cursor: pointer; }
+.btn.primary { background: var(--accent); color: var(--accent-ink); }
+.btn.primary:hover:not(:disabled) { filter: brightness(1.05); }
+.btn.ghost { background: var(--surface); border-color: var(--line); color: var(--ink); }
+.btn.ghost:hover:not(:disabled) { border-color: var(--accent); }
+.btn:disabled { opacity: 0.5; cursor: default; }
+.practice-band { background: var(--accent-soft); color: var(--accent); }
+
+/* ── Simulation focus shell ───────────────────────────────────── */
+.exam-band { background: var(--exam); color: var(--surface); }
+.exam-timer { font-size: 20px; font-weight: 600; padding: 4px 12px; border-radius: 999px; border: 1.5px solid color-mix(in srgb, var(--surface) 45%, transparent); }
+.exam-timer.warn { background: var(--warn-soft); color: var(--warn); border-color: var(--warn); }
+.exam-timer.critical { background: var(--bad-soft); color: var(--bad); border-color: var(--bad); animation: exam-pulse 60s infinite; }
+@keyframes exam-pulse { 0%, 2% { box-shadow: 0 0 0 0 var(--bad); } 4% { box-shadow: 0 0 0 6px transparent; } 100% { box-shadow: none; } }
+.exam-ghost { color: inherit; opacity: 0.85; font-size: 13px; text-decoration: underline; background: none; border: 0; cursor: pointer; }
+.btn.exam-submit { background: var(--surface); color: var(--exam); border-color: var(--surface); }
+.exam-shell .btn.exam-submit:hover { filter: brightness(0.97); }
+[role="dialog"] .btn.exam-submit { background: var(--exam); color: var(--surface); }
+@media (forced-colors: active) { .exam-timer { border: 1px solid CanvasText; } }
+
+.btn.ghost.flagged { border-color: var(--warn); color: var(--warn); background: var(--warn-soft); }

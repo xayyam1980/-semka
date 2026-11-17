@@ -200,7 +200,8 @@ export function assemble(draft: DraftTask, expected: { number: number; maxPoints
       key: keys,
       scoring: scoring(d, problems),
       skillTags: [...new Set(itemTags.map((t) => t.id))],
-      ...(d.explanation ? { explanation: d.explanation } : {}),
+      // Sheet versions are an importer detail; students never see "(wersja X)".
+      ...(d.explanation ? { explanation: d.explanation.replace(/\s*\((?:dla )?wersj[ia] [XY](?: arkusza)?\)/g, "") } : {}),
       ...(d.scoringNotes.length ? { scoringNotes: d.scoringNotes } : {}),
       ...(d.exemplars.length
         ? {

@@ -1,7 +1,13 @@
 import { NavLink, Route, Routes } from "react-router";
 import { SettingsProvider, useSettings } from "./settings";
 import { Dashboard } from "./screens/Dashboard";
+import { AttemptResult } from "./screens/AttemptResult";
+import { ExamBrowser } from "./screens/ExamBrowser";
+import { ExamPlayer } from "./screens/ExamPlayer";
 import { Placeholder } from "./screens/Placeholder";
+import { PracticePlayer } from "./screens/PracticePlayer";
+import { ReviewPlayer } from "./screens/ReviewPlayer";
+import { StartScreen } from "./screens/StartScreen";
 import { SettingsScreen } from "./screens/SettingsScreen";
 
 const NAV = [
@@ -24,7 +30,7 @@ function Shell() {
             <NavLink
               key={n.to}
               to={n.to}
-              end
+              end={n.to === "/"}
               className={({ isActive }) =>
                 `nav-link rounded-md px-3 py-1.5 text-[15px] ${isActive ? "bg-accent-soft font-bold text-accent" : "text-muted hover:bg-sunk hover:text-ink"}`
               }
@@ -44,7 +50,9 @@ function Shell() {
         <div className="mx-auto max-w-5xl">
           <Routes>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/arkusze" element={<Placeholder title="Arkusze" phase="P3" />} />
+            <Route path="/arkusze" element={<ExamBrowser />} />
+            <Route path="/arkusze/:sessionId" element={<StartScreen />} />
+            <Route path="/proba/:attemptId/wynik" element={<AttemptResult />} />
             <Route path="/historia" element={<Placeholder title="Historia" phase="P7" />} />
             <Route path="/analiza" element={<Placeholder title="Analiza" phase="P7" />} />
             <Route path="/ustawienia" element={<SettingsScreen />} />
@@ -58,7 +66,13 @@ function Shell() {
 export function App() {
   return (
     <SettingsProvider>
-      <Shell />
+      <Routes>
+        {/* An attempt has its own full-window layout, without the main navigation. */}
+        <Route path="/proba/:attemptId" element={<PracticePlayer />} />
+        <Route path="/proba/:attemptId/przeglad" element={<ReviewPlayer />} />
+        <Route path="/egzamin/:attemptId" element={<ExamPlayer />} />
+        <Route path="*" element={<Shell />} />
+      </Routes>
     </SettingsProvider>
   );
 }

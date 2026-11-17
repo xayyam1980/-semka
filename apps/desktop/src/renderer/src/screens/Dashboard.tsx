@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 import { SUBJECTS, type SubjectId } from "@osemka/schema";
 import type { AppInfo } from "../../../shared/ipc";
 
@@ -20,7 +21,12 @@ export function Dashboard() {
     <section className="flex flex-col gap-8">
       <div>
         <h1 className="text-4xl font-bold">Pulpit</h1>
-        <p className="text-muted">Arkusze pojawią się po imporcie pierwszej sesji (etap P1).</p>
+        <p className="text-muted">
+          Ćwicz na prawdziwych arkuszach CKE:{" "}
+          <Link to="/arkusze" className="font-bold text-accent">
+            przejdź do arkuszy →
+          </Link>
+        </p>
       </div>
 
       <div className="grid grid-cols-3 gap-4">

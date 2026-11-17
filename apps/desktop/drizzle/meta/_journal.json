@@ -8,6 +8,13 @@
       "when": 1794868437479,
       "tag": "0000_soft_katie_power",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1794918233202,
+      "tag": "0001_material_khan",
+      "breakpoints": true
     }
   ]
 }

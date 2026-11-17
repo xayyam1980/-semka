@@ -52,7 +52,7 @@
         "pages": 26
       }
     ],
-    "contentVersion": "96ed925136ca91a0",
+    "contentVersion": "7ddd9645f0fbc020",
     "status": "published"
   },
   "stimuli": [
@@ -177,7 +177,7 @@
             "ma-78-V.5",
             "ma-78-XIII.1"
           ],
-          "explanation": "Suma podanych na diagramie procentów wynosi 20% + 25% + 15% + 5% = 65%, zatem zadania z arytmetyki stanowią 100% − 65% = 35% wszystkich zadań testu. 35% z 40 zadań to 0,35 · 40 = 14 zadań. Dlatego poprawna odpowiedź to A (wersja X)."
+          "explanation": "Suma podanych na diagramie procentów wynosi 20% + 25% + 15% + 5% = 65%, zatem zadania z arytmetyki stanowią 100% − 65% = 35% wszystkich zadań testu. 35% z 40 zadań to 0,35 · 40 = 14 zadań. Dlatego poprawna odpowiedź to A."
         }
       ],
       "format": "zamkniete",
@@ -237,7 +237,7 @@
             "ma-gen-I",
             "ma-46-II.11"
           ],
-          "explanation": "Największy wspólny dzielnik liczb $18$ i $27$ to $9$, więc $X = 9$. Najmniejsza wspólna wielokrotność liczb $2$ i $4$ to $4$, więc $Y = 4$. Kod $YXXY$ ma zatem postać $4994$, co w wersji X arkusza odpowiada odpowiedzi B."
+          "explanation": "Największy wspólny dzielnik liczb 18 i 27 to 9, zatem $X = 9$. Najmniejsza wspólna wielokrotność liczb 2 i 4 to 4, zatem $Y = 4$. Kod $YXXY$ tworzymy, podstawiając cyfry w kolejności: $Y$, $X$, $X$, $Y$, czyli $4$, $9$, $9$, $4$, co daje kod $4994$."
         }
       ],
       "format": "zamkniete",
@@ -296,7 +296,7 @@
             "ma-gen-I",
             "ma-78-II.1"
           ],
-          "explanation": "Obliczamy wartości kolejnych liczb: $w = \\sqrt{36}-2 = 6-2 = 4$, $x = 12-\\sqrt{100} = 12-10 = 2$, $y = \\sqrt{9}-3 = 3-3 = 0$, $z = 7-\\sqrt{25} = 7-5 = 2$. Tylko liczba $y$ jest równa $0$, więc poprawna jest odpowiedź C (wersja X)."
+          "explanation": "Obliczamy wartości kolejnych liczb: $w = \\sqrt{36}-2 = 6-2 = 4$, $x = 12-\\sqrt{100} = 12-10 = 2$, $y = \\sqrt{9}-3 = 3-3 = 0$, $z = 7-\\sqrt{25} = 7-5 = 2$. Tylko liczba $y$ jest równa $0$, więc poprawna jest odpowiedź C."
         }
       ],
       "format": "zamkniete",
@@ -373,7 +373,7 @@
       "sessionId": "matematyka-2026-05-glowny",
       "number": 5,
       "maxPoints": 1,
-      "instruction": "W pewnej hodowli rasowy kocur kosztuje $x$ złotych, a rasowa kotka kosztuje $y$ złotych.\nJanek kupił z tej hodowli rasowego kocura ze zniżką 40% oraz rasową kotkę ze zniżką 20%.\n\n**Które wyrażenie poprawnie opisuje, ile złotych zapłacił Janek za te koty?**\n\n**Wybierz właściwą odpowiedź spośród podanych.**",
+      "instruction": "W pewnej hodowli rasowy kocur kosztuje $x$ złotych, a rasowa kotka kosztuje $y$ złotych. Janek kupił z tej hodowli rasowego kocura ze zniżką 40% oraz rasową kotkę ze zniżką 20%.\n\n**Które wyrażenie poprawnie opisuje, ile złotych zapłacił Janek za te koty?**\n**Wybierz właściwą odpowiedź spośród podanych.**",
       "stimulusIds": [],
       "items": [
         {
@@ -415,7 +415,7 @@
             "ma-46-VI.2",
             "ma-78-V.5"
           ],
-          "explanation": "Kocur kupiony ze zniżką 40% kosztuje 60% ceny początkowej, czyli $0,6x$, a kotka kupiona ze zniżką 20% kosztuje 80% ceny początkowej, czyli $0,8y$. Łączny koszt zakupu to zatem $0,6x + 0,8y$ złotych, co odpowiada odpowiedzi D w wersji X (odpowiedzi A w wersji Y odpowiada to samo wyrażenie przy innym układzie liter)."
+          "explanation": "Zniżka 40% oznacza, że Janek zapłacił za kocura 60% jego ceny, czyli $0,6x$ złotych. Zniżka 20% oznacza, że za kotkę zapłacił 80% jej ceny, czyli $0,8y$ złotych. Łącznie Janek zapłacił więc $0,6x + 0,8y$ złotych i to wyrażenie poprawnie opisuje koszt zakupu obu kotów."
         }
       ],
       "format": "zamkniete",
@@ -664,7 +664,7 @@
             "ma-gen-III",
             "ma-78-XIII.3"
           ],
-          "explanation": "Średnia arytmetyczna liczb $x$ i $y$ równa $4$ oznacza, że $x + y = 2 \\cdot 4 = 8$. Średnia arytmetyczna liczb $x$, $y$, $z$ równa $5$ oznacza, że $x + y + z = 3 \\cdot 5 = 15$. Zatem $z = 15 - 8 = 7$, czyli poprawna jest odpowiedź D (wersja X)."
+          "explanation": "Średnia arytmetyczna liczb $x$ i $y$ równa $4$ oznacza, że $x + y = 2 \\cdot 4 = 8$. Średnia arytmetyczna liczb $x$, $y$, $z$ równa $5$ oznacza, że $x + y + z = 3 \\cdot 5 = 15$. Zatem $z = 15 - 8 = 7$, czyli poprawna jest odpowiedź D."
         }
       ],
       "format": "zamkniete",
@@ -900,7 +900,7 @@
             "ma-gen-III",
             "ma-78-IX.2"
           ],
-          "explanation": "Pole trójkąta $ADE$ wyraża się wzorem $\\frac{1}{2}\\cdot AD\\cdot 7 = 28$, skąd $AD = 8$. Bok kwadratu $ABCD$ ma więc długość $8$, a jego pole jest równe $8^2 = 64$. Zatem poprawna odpowiedź to D (wersja X)."
+          "explanation": "Pole trójkąta $ADE$ wyraża się wzorem $\\frac{1}{2}\\cdot AD\\cdot 7 = 28$, skąd $AD = 8$. Bok kwadratu $ABCD$ ma więc długość $8$, a jego pole jest równe $8^2 = 64$. Zatem poprawna odpowiedź to D."
         }
       ],
       "format": "zamkniete",
@@ -961,7 +961,7 @@
             "ma-gen-III",
             "ma-78-XI.2"
           ],
-          "explanation": "Z trzech sześcianów o krawędzi $5$ ustawionych jeden na drugim powstaje prostopadłościan o podstawie $5 \\times 5$ i wysokości $15$. Pole powierzchni całkowitej wynosi $2 \\cdot 5 \\cdot 5 + 4 \\cdot 5 \\cdot 15 = 50 + 300 = 350$. Dlatego poprawna jest odpowiedź A (wersja X)."
+          "explanation": "Z trzech sześcianów o krawędzi $5$ ustawionych jeden na drugim powstaje prostopadłościan o podstawie $5 \\times 5$ i wysokości $15$. Pole powierzchni całkowitej wynosi $2 \\cdot 5 \\cdot 5 + 4 \\cdot 5 \\cdot 15 = 50 + 300 = 350$. Dlatego poprawna jest odpowiedź A."
         }
       ],
       "format": "zamkniete",

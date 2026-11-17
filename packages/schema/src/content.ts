@@ -113,6 +113,7 @@ export const Exemplar = z.object({
   note: z.string().optional(),
   ref: PageRef,
 });
+export type Exemplar = z.infer<typeof Exemplar>;
 
 export const Item = z.object({
   id: z.string(),

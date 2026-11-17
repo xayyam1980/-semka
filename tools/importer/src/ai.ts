@@ -29,6 +29,7 @@ Rules:
 - Open tasks (format "otwarte") with partial credit are worked_solution with scoring.levels: one entry per level from the maximum down to 0, each with every alternative path the key lists after "LUB", copied faithfully. Include the key's example solutions ("Przykładowe rozwiązania") as exemplars, and its scoring remarks ("Uwaga", "Uwagi") as scoringNotes.
 - Requirements: copy the "Wymaganie ogólne" and "Wymagania szczegółowe" that the key lists for this task. A task can have several.
 - The key may give answers for sheet versions X and Y; return a keys[] entry for each version printed.
+- Explanations are for a 14-year-old student: never mention sheet versions (X, Y), the key or answer cards; explain the mathematics or the reasoning.
 - If something is unreadable or ambiguous, say so in notes rather than guessing.`;
 
 export interface TaskInput {

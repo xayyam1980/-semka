@@ -5,7 +5,7 @@ import { defineConfig } from "electron-vite";
 import type { Plugin } from "vite";
 
 // Workspace packages ship TypeScript source, so they are bundled rather than left as runtime imports.
-const bundleWorkspace = { exclude: ["@osemka/schema"] };
+const bundleWorkspace = { exclude: ["@osemka/schema", "@osemka/scoring"] };
 
 /** Strict Content-Security-Policy in production builds only (dev needs Vite's inline HMR script). */
 function productionCsp(): Plugin {
@@ -14,7 +14,7 @@ function productionCsp(): Plugin {
     "script-src 'self'",
     "style-src 'self' 'unsafe-inline'",
     "font-src 'self' data:",
-    "img-src 'self' data: blob:",
+    "img-src 'self' data: blob: osemka-content:",
     "media-src 'self' blob:",
     "connect-src 'self'",
     "object-src 'none'",
