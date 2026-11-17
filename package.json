@@ -3,12 +3,15 @@
   "private": true,
   "description": "Ósemka: egzamin ósmoklasisty practice app (Windows + macOS desktop)",
   "packageManager": "pnpm@11.12.0",
-  "engines": { "node": ">=24" },
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "dev": "pnpm --filter @osemka/desktop dev",
     "build": "pnpm -r build",
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r test",
-    "smoke": "pnpm --filter @osemka/desktop smoke"
+    "smoke": "pnpm --filter @osemka/desktop smoke",
+    "importer": "pnpm --filter @osemka/importer importer"
   }
 }

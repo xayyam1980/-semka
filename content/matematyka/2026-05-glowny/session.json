@@ -1,0 +1,1594 @@
+{
+  "session": {
+    "id": "matematyka-2026-05-glowny",
+    "subjectId": "matematyka",
+    "year": 2026,
+    "month": 5,
+    "term": "glowny",
+    "formCode": "OMAP-100",
+    "versions": [
+      "X"
+    ],
+    "maxPoints": 30,
+    "taskOrder": [
+      "ma-2026-01",
+      "ma-2026-02",
+      "ma-2026-03",
+      "ma-2026-04",
+      "ma-2026-05",
+      "ma-2026-06",
+      "ma-2026-07",
+      "ma-2026-08",
+      "ma-2026-09",
+      "ma-2026-10",
+      "ma-2026-11",
+      "ma-2026-12",
+      "ma-2026-13",
+      "ma-2026-14",
+      "ma-2026-15",
+      "ma-2026-16",
+      "ma-2026-17",
+      "ma-2026-18",
+      "ma-2026-19",
+      "ma-2026-20"
+    ],
+    "sources": [
+      {
+        "kind": "karta_otwarte",
+        "path": "Matematyka/Maj 2026/arkusz-zadania-otwarte.pdf",
+        "sha256": "cd7308328fdc669f55eac5b65ffac2329504a92dbff12b8170f8b6b50f756735",
+        "pages": 8
+      },
+      {
+        "kind": "arkusz",
+        "path": "Matematyka/Maj 2026/arkusz.pdf",
+        "sha256": "1a984cba5fd8a97c36a62cae98fa5ff64c0a587f3ee974253fddb39ecb95ae8f",
+        "pages": 16
+      },
+      {
+        "kind": "klucz",
+        "path": "Matematyka/Maj 2026/klucz.pdf",
+        "sha256": "c42713ba58bcd75dfc4cea4ae3d592dab06fb4d168175f1e6a878162399af627",
+        "pages": 26
+      }
+    ],
+    "status": "draft",
+    "contentVersion": "c39629c1684b1e2f"
+  },
+  "stimuli": [
+    {
+      "id": "ma-2026-01-fig1",
+      "kind": "figure",
+      "title": "Diagram kołowy z pięcioma wycinkami: statystyka 20%, algebra 25%, planimetria 15%, stereometria 5% oraz arytmetyka bez podanej wartości procentowej.",
+      "asset": "assets/ma-2026-01-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2026-12-fig1",
+      "kind": "figure",
+      "title": "Rysunek na kartce w kratkę z punktami W, S i M połączonymi odcinkami, kierunkami świata (północ, południe, zachód, wschód) oraz kwadratem o boku 1 km jako skalą kratki.",
+      "asset": "assets/ma-2026-12-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2026-13-fig1",
+      "kind": "figure",
+      "title": "Rysunek pięciokąta ABCDE złożonego z trójkąta ADE umieszczonego nad kwadratem ABCD, z przekątną AD zaznaczoną linią przerywaną.",
+      "asset": "assets/ma-2026-13-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2026-14-fig1",
+      "kind": "figure",
+      "title": "Rysunek przedstawia trzy jednakowe sześciany ustawione jeden na drugim, tworzące wysoki prostopadłościan.",
+      "asset": "assets/ma-2026-14-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2026-18-fig1",
+      "kind": "figure",
+      "title": "Sześcian $ABCDEFGH$ z zaznaczonym na zielono ostrosłupem trójkątnym $ACDS$, którego wierzchołek $S$ jest środkiem krawędzi $DH$.",
+      "asset": "assets/ma-2026-18-fig1.png",
+      "ref": {
+        "source": "karta_otwarte",
+        "page": 5
+      }
+    },
+    {
+      "id": "ma-2026-20-fig1",
+      "kind": "figure",
+      "title": "Prostokąt ABCD z wierzchołkami D i C u góry oraz A i B u dołu, podpisany jako Rysunek 1.",
+      "asset": "assets/ma-2026-20-fig1.png",
+      "ref": {
+        "source": "karta_otwarte",
+        "page": 7
+      }
+    },
+    {
+      "id": "ma-2026-20-fig2",
+      "kind": "figure",
+      "title": "Równoległobok KLMN z wierzchołkami N i M u góry oraz K i L u dołu, podpisany jako Rysunek 2.",
+      "asset": "assets/ma-2026-20-fig2.png",
+      "ref": {
+        "source": "karta_otwarte",
+        "page": 7
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "ma-2026-01",
+      "sessionId": "matematyka-2026-05-glowny",
+      "number": 1,
+      "maxPoints": 1,
+      "instruction": "Test z matematyki składa się z 40 zadań. Na diagramie przedstawiono procentowy podział liczby zadań w teście na zadania z pięciu działów: algebry, planimetrii, stereometrii, arytmetyki, statystyki.\n\n![Diagram kołowy z pięcioma wycinkami: statystyka 20%, algebra 25%, planimetria 15%, stereometria 5% oraz arytmetyka bez podanej wartości procentowej.](stimulus:ma-2026-01-fig1)\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nLiczba zadań z arytmetyki w tym teście jest równa",
+      "stimulusIds": [
+        "ma-2026-01-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-01",
+          "label": "1",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "14"
+              },
+              {
+                "id": "B",
+                "text": "18"
+              },
+              {
+                "id": "C",
+                "text": "26"
+              },
+              {
+                "id": "D",
+                "text": "35"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-78-V.5",
+            "ma-78-XIII.1"
+          ],
+          "explanation": "Suma podanych na diagramie procentów wynosi 20% + 25% + 15% + 5% = 65%, zatem zadania z arytmetyki stanowią 100% − 65% = 35% wszystkich zadań testu. 35% z 40 zadań to 0,35 · 40 = 14 zadań. Dlatego poprawna odpowiedź to A (wersja X)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-78-V.5",
+        "ma-78-XIII.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2026-02",
+      "sessionId": "matematyka-2026-05-glowny",
+      "number": 2,
+      "maxPoints": 1,
+      "instruction": "Ola otwiera swoją szafkę za pomocą czterocyfrowego kodu $YXXY$, gdzie $X$ jest największym wspólnym dzielnikiem liczb $18$ i $27$, a $Y$ jest najmniejszą wspólną wielokrotnością liczb $2$ i $4$.\n\n**Jaki jest kod do otwarcia szafki Oli? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-02",
+          "label": "2",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "4334"
+              },
+              {
+                "id": "B",
+                "text": "4994"
+              },
+              {
+                "id": "C",
+                "text": "8338"
+              },
+              {
+                "id": "D",
+                "text": "8998"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-46-II.11"
+          ],
+          "explanation": "Największy wspólny dzielnik liczb $18$ i $27$ to $9$, więc $X = 9$. Najmniejsza wspólna wielokrotność liczb $2$ i $4$ to $4$, więc $Y = 4$. Kod $YXXY$ ma zatem postać $4994$, co w wersji X arkusza odpowiada odpowiedzi B."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-46-II.11"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2026-03",
+      "sessionId": "matematyka-2026-05-glowny",
+      "number": 3,
+      "maxPoints": 1,
+      "instruction": "Dane są cztery liczby:\n\n$w = \\sqrt{100-64}-2$\n\n$x = 12-\\sqrt{64+36}$\n\n$y = \\sqrt{25-16}-3$\n\n$z = 7-\\sqrt{9+16}$\n\n**Która z tych liczb jest równa $0$? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-03",
+          "label": "3",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$w$"
+              },
+              {
+                "id": "B",
+                "text": "$x$"
+              },
+              {
+                "id": "C",
+                "text": "$y$"
+              },
+              {
+                "id": "D",
+                "text": "$z$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-78-II.1"
+          ],
+          "explanation": "Obliczamy wartości kolejnych liczb: $w = \\sqrt{36}-2 = 6-2 = 4$, $x = 12-\\sqrt{100} = 12-10 = 2$, $y = \\sqrt{9}-3 = 3-3 = 0$, $z = 7-\\sqrt{25} = 7-5 = 2$. Tylko liczba $y$ jest równa $0$, więc poprawna jest odpowiedź C (wersja X)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-78-II.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2026-04",
+      "sessionId": "matematyka-2026-05-glowny",
+      "number": 4,
+      "maxPoints": 1,
+      "instruction": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWartość wyrażenia $2^5 \\cdot 3 \\cdot 3^4 \\cdot 2^3$ jest równa wartości wyrażenia",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-04",
+          "label": "4",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$2^8 \\cdot 3^5$"
+              },
+              {
+                "id": "B",
+                "text": "$4^8 \\cdot 9^5$"
+              },
+              {
+                "id": "C",
+                "text": "$2^{15} \\cdot 3^4$"
+              },
+              {
+                "id": "D",
+                "text": "$4^{15} \\cdot 9^4$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-78-I.2"
+          ],
+          "explanation": "Mnożąc potęgi o tych samych podstawach, dodajemy ich wykładniki: $2^5 \\cdot 2^3 = 2^8$ oraz $3 \\cdot 3^4 = 3^5$. Zatem wartość danego wyrażenia jest równa $2^8 \\cdot 3^5$, co odpowiada odpowiedzi A."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-78-I.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2026-05",
+      "sessionId": "matematyka-2026-05-glowny",
+      "number": 5,
+      "maxPoints": 1,
+      "instruction": "W pewnej hodowli rasowy kocur kosztuje $x$ złotych, a rasowa kotka kosztuje $y$ złotych.\nJanek kupił z tej hodowli rasowego kocura ze zniżką 40% oraz rasową kotkę ze zniżką 20%.\n\n**Które wyrażenie poprawnie opisuje, ile złotych zapłacił Janek za te koty?**\n\n**Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-05",
+          "label": "5",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$0,4x + 0,2y$"
+              },
+              {
+                "id": "B",
+                "text": "$0,2x + 0,4y$"
+              },
+              {
+                "id": "C",
+                "text": "$0,8x + 0,6y$"
+              },
+              {
+                "id": "D",
+                "text": "$0,6x + 0,8y$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-VI.2",
+            "ma-78-V.5"
+          ],
+          "explanation": "Kocur kupiony ze zniżką 40% kosztuje 60% ceny początkowej, czyli $0,6x$, a kotka kupiona ze zniżką 20% kosztuje 80% ceny początkowej, czyli $0,8y$. Łączny koszt zakupu to zatem $0,6x + 0,8y$ złotych, co odpowiada odpowiedzi D w wersji X (odpowiedzi A w wersji Y odpowiada to samo wyrażenie przy innym układzie liter)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-VI.2",
+        "ma-78-V.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2026-06",
+      "sessionId": "matematyka-2026-05-glowny",
+      "number": 6,
+      "maxPoints": 1,
+      "instruction": "W pudełku było jedenaście kul ponumerowanych kolejnymi liczbami naturalnymi od 1 do 11. Z tego pudełka wylosowano pięć kul. Suma liczb na dowolnych dwóch kulach, które pozostały w pudełku, jest parzysta.\n\n**Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nPo losowaniu w pudełku zostały wyłącznie kule ponumerowane liczbami [[A|B]].\n\nSuma liczb na pięciu wylosowanych kulach jest równa [[C|D]].",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-06",
+          "label": "6",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "nieparzystymi"
+              },
+              {
+                "id": "B",
+                "text": "parzystymi"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "30"
+              },
+              {
+                "id": "D",
+                "text": "36"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "A",
+                "reason": "C"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-46-II.6"
+          ],
+          "explanation": "Po wylosowaniu pięciu kul w pudełku pozostaje sześć kul. Skoro suma liczb na dowolnych dwóch pozostałych kulach jest parzysta, wszystkie pozostałe kule muszą być ponumerowane liczbami tej samej parzystości. Wśród liczb od 1 do 11 jest sześć nieparzystych i pięć parzystych, więc pozostać mogły tylko kule z liczbami nieparzystymi (odpowiedź A). Wylosowano zatem pięć kul parzystych: 2, 4, 6, 8, 10, których suma wynosi 30 (odpowiedź C)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-46-II.6"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2026-07",
+      "sessionId": "matematyka-2026-05-glowny",
+      "number": 7,
+      "maxPoints": 1,
+      "instruction": "Do 10 pustych koszy włożono jabłka i pomarańcze, łącznie 400 sztuk tych owoców. W każdym koszu łączna liczba owoców jest taka sama oraz w każdym koszu liczba jabłek jest o 6 większa od liczby pomarańczy.\n\n**Ile sztuk jabłek jest łącznie w tych 10 koszach? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-07",
+          "label": "7",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "210"
+              },
+              {
+                "id": "B",
+                "text": "230"
+              },
+              {
+                "id": "C",
+                "text": "240"
+              },
+              {
+                "id": "D",
+                "text": "260"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-46-XIV.5"
+          ],
+          "explanation": "W każdym koszu jest tyle samo owoców, czyli $400 : 10 = 40$ sztuk. Jeśli liczba pomarańczy w koszu wynosi $p$, to liczba jabłek wynosi $p + 6$, więc $p + (p + 6) = 40$, skąd $p = 17$ i jabłek w koszu jest $23$. Łącznie w 10 koszach jest $10 \\cdot 23 = 230$ jabłek, zatem poprawna jest odpowiedź B."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-46-XIV.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2026-08",
+      "sessionId": "matematyka-2026-05-glowny",
+      "number": 8,
+      "maxPoints": 1,
+      "instruction": "Sumę $S = 1 + 2 + 3 + \\ldots + n$ kolejnych liczb naturalnych od $1$ do $n$ można obliczyć ze wzoru\n\n$S = \\frac{1}{2} n(n + 1)$\n\n**Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nSuma stu kolejnych liczb naturalnych od $1$ do $100$ jest równa [A B].\n\nWzór na sumę $S$ po poprawnym przekształceniu ma postać [C D].",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-08",
+          "label": "8",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "5001"
+              },
+              {
+                "id": "B",
+                "text": "5050"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "$S = \\frac{1}{2} n^2 + 1$"
+              },
+              {
+                "id": "D",
+                "text": "$S = \\frac{1}{2} n^2 + \\frac{1}{2} n$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "B",
+                "reason": "D"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-III.2",
+            "ma-78-IV.3"
+          ],
+          "explanation": "Podstawiając $n = 100$ do wzoru, otrzymujemy $S = \\frac{1}{2} \\cdot 100 \\cdot (100 + 1) = \\frac{1}{2} \\cdot 100 \\cdot 101 = 5050$, więc poprawna jest odpowiedź B. Przekształcając wzór, mamy $S = \\frac{1}{2} n(n + 1) = \\frac{1}{2} n^2 + \\frac{1}{2} n$, więc poprawna jest odpowiedź D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-III.2",
+        "ma-78-IV.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2026-09",
+      "sessionId": "matematyka-2026-05-glowny",
+      "number": 9,
+      "maxPoints": 1,
+      "instruction": "Średnia arytmetyczna dwóch liczb $x$ i $y$ jest równa $4$, a średnia arytmetyczna trzech liczb $x$, $y$, $z$ jest równa $5$.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nLiczba $z$ jest równa",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-09",
+          "label": "9",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "4"
+              },
+              {
+                "id": "B",
+                "text": "5"
+              },
+              {
+                "id": "C",
+                "text": "6"
+              },
+              {
+                "id": "D",
+                "text": "7"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-XIII.3"
+          ],
+          "explanation": "Średnia arytmetyczna liczb $x$ i $y$ równa $4$ oznacza, że $x + y = 2 \\cdot 4 = 8$. Średnia arytmetyczna liczb $x$, $y$, $z$ równa $5$ oznacza, że $x + y + z = 3 \\cdot 5 = 15$. Zatem $z = 15 - 8 = 7$, czyli poprawna jest odpowiedź D (wersja X)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-XIII.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2026-10",
+      "sessionId": "matematyka-2026-05-glowny",
+      "number": 10,
+      "maxPoints": 1,
+      "instruction": "Dany jest trójkąt równoboczny o boku długości $2$ cm.\n\n**Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-10",
+          "label": "10",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Wysokość tego trójkąta jest równa $\\sqrt{3}$ cm."
+              },
+              {
+                "id": "2",
+                "text": "Pole tego trójkąta jest równe $\\sqrt{3}$ cm$^2$."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-IX.2",
+            "ma-78-VIII.7"
+          ],
+          "explanation": "Wysokość trójkąta równobocznego o boku $a=2$ cm obliczamy ze wzoru $h=\\frac{a\\sqrt{3}}{2}=\\frac{2\\sqrt{3}}{2}=\\sqrt{3}$ cm, więc pierwsze zdanie jest prawdziwe. Pole tego trójkąta wynosi $P=\\frac{a^2\\sqrt{3}}{4}=\\frac{4\\sqrt{3}}{4}=\\sqrt{3}$ cm$^2$, więc drugie zdanie również jest prawdziwe. Dlatego poprawna odpowiedź to PP."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-IX.2",
+        "ma-78-VIII.7"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2026-11",
+      "sessionId": "matematyka-2026-05-glowny",
+      "number": 11,
+      "maxPoints": 1,
+      "instruction": "Kąty wewnętrzne czworokąta oznaczono: $\\alpha$, $\\beta$, $\\gamma$ oraz $\\delta$. Miara kąta $\\beta$ jest o $70^\\circ$ większa od miary kąta $\\alpha$, miara kąta $\\gamma$ jest dwukrotnie większa od miary kąta $\\alpha$. Kąt $\\delta$ jest kątem prostym.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nMiara kąta $\\beta$ jest równa",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-11",
+          "label": "11",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$50^\\circ$"
+              },
+              {
+                "id": "B",
+                "text": "$85^\\circ$"
+              },
+              {
+                "id": "C",
+                "text": "$120^\\circ$"
+              },
+              {
+                "id": "D",
+                "text": "$155^\\circ$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-XI.1",
+            "ma-78-VI.4"
+          ],
+          "explanation": "Suma miar kątów wewnętrznych czworokąta wynosi $360^\\circ$, więc $\\alpha + (\\alpha + 70^\\circ) + 2\\alpha + 90^\\circ = 360^\\circ$, czyli $4\\alpha = 200^\\circ$ i $\\alpha = 50^\\circ$. Stąd miara kąta $\\beta$ jest równa $50^\\circ + 70^\\circ = 120^\\circ$."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-XI.1",
+        "ma-78-VI.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2026-12",
+      "sessionId": "matematyka-2026-05-glowny",
+      "number": 12,
+      "maxPoints": 1,
+      "instruction": "Na kartce w kratkę Jurek wykonał rysunek. Na tym rysunku punkty $M$, $W$, $S$ oznaczają położenia odpowiednio: muzeum, wieży widokowej oraz schroniska. Wieża widokowa znajduje się $3\\,\\text{km}$ na północ i $4\\,\\text{km}$ na zachód od schroniska. Muzeum znajduje się $5\\,\\text{km}$ na wschód od schroniska.\n\n![Rysunek na kartce w kratkę z punktami W, S i M połączonymi odcinkami, kierunkami świata (północ, południe, zachód, wschód) oraz kwadratem o boku 1 km jako skalą kratki.](stimulus:ma-2026-12-fig1)\n\n**Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "ma-2026-12-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-12",
+          "label": "12",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Odległość w linii prostej schroniska od muzeum jest równa odległości w linii prostej schroniska od wieży widokowej."
+              },
+              {
+                "id": "2",
+                "text": "Odległość w linii prostej muzeum od wieży widokowej jest mniejsza niż $10\\,\\text{km}$."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-46-XIV.5",
+            "ma-78-X.5"
+          ],
+          "explanation": "Przyjmijmy schronisko jako punkt $S=(0,0)$; wtedy wieża widokowa to $W=(-4,3)$, a muzeum to $M=(5,0)$. Odległość $SW=\\sqrt{4^2+3^2}=5\\,\\text{km}$ jest równa odległości $SM=5\\,\\text{km}$, więc pierwsze zdanie jest prawdziwe. Odległość $WM=\\sqrt{9^2+3^2}=\\sqrt{90}\\approx 9,49\\,\\text{km}$ jest mniejsza niż $10\\,\\text{km}$, więc drugie zdanie również jest prawdziwe. Stąd odpowiedź PP."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-46-XIV.5",
+        "ma-78-X.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2026-13",
+      "sessionId": "matematyka-2026-05-glowny",
+      "number": 13,
+      "maxPoints": 1,
+      "instruction": "Przekątna $AD$ dzieli pięciokąt $ABCDE$ na trójkąt $ADE$ i na kwadrat $ABCD$ (zobacz rysunek). Pole trójkąta $ADE$ jest równe $28$, a wysokość poprowadzona z wierzchołka $E$ na bok $AD$ jest równa $7$.\n\n![Rysunek pięciokąta ABCDE złożonego z trójkąta ADE umieszczonego nad kwadratem ABCD, z przekątną AD zaznaczoną linią przerywaną.](stimulus:ma-2026-13-fig1)\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nPole kwadratu $ABCD$ jest równe",
+      "stimulusIds": [
+        "ma-2026-13-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-13",
+          "label": "13",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$16$"
+              },
+              {
+                "id": "B",
+                "text": "$32$"
+              },
+              {
+                "id": "C",
+                "text": "$49$"
+              },
+              {
+                "id": "D",
+                "text": "$64$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-IX.2"
+          ],
+          "explanation": "Pole trójkąta $ADE$ wyraża się wzorem $\\frac{1}{2}\\cdot AD\\cdot 7 = 28$, skąd $AD = 8$. Bok kwadratu $ABCD$ ma więc długość $8$, a jego pole jest równe $8^2 = 64$. Zatem poprawna odpowiedź to D (wersja X)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-IX.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2026-14",
+      "sessionId": "matematyka-2026-05-glowny",
+      "number": 14,
+      "maxPoints": 1,
+      "instruction": "Trzy jednakowe sześciany o krawędzi długości $5$ ustawiono jeden na drugim i otrzymano prostopadłościan (zobacz rysunek).\n\n![Rysunek przedstawia trzy jednakowe sześciany ustawione jeden na drugim, tworzące wysoki prostopadłościan.](stimulus:ma-2026-14-fig1)\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nPole powierzchni całkowitej otrzymanego prostopadłościanu jest równe",
+      "stimulusIds": [
+        "ma-2026-14-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-14",
+          "label": "14",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "350"
+              },
+              {
+                "id": "B",
+                "text": "375"
+              },
+              {
+                "id": "C",
+                "text": "400"
+              },
+              {
+                "id": "D",
+                "text": "450"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-XI.2"
+          ],
+          "explanation": "Z trzech sześcianów o krawędzi $5$ ustawionych jeden na drugim powstaje prostopadłościan o podstawie $5 \\times 5$ i wysokości $15$. Pole powierzchni całkowitej wynosi $2 \\cdot 5 \\cdot 5 + 4 \\cdot 5 \\cdot 15 = 50 + 300 = 350$. Dlatego poprawna jest odpowiedź A (wersja X)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-XI.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2026-15",
+      "sessionId": "matematyka-2026-05-glowny",
+      "number": 15,
+      "maxPoints": 2,
+      "instruction": "Do wykonania origami Ela przygotowała łącznie $160$ kartek. Każda z tych kartek była w jednym z czterech kolorów: białym, niebieskim, zielonym lub czerwonym. Kartek białych było $37$. Kartek niebieskich było $1,5$ raza więcej niż czerwonych, a kartek zielonych było o $10$ mniej niż czerwonych.\n\n**Oblicz, ile kartek niebieskich przygotowała Ela. Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-15",
+          "label": "15",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "**I sposób**\nKartek w czterech kolorach było razem $160$.\nKartek białych było $37$.\nLiczbę kartek czerwonych oznaczymy jako $x$.\nZapiszemy wyrażenia algebraiczne opisujące liczby kartek niebieskich i zielonych:\n$1,5x$ – liczba kartek niebieskich\n$x - 10$ – liczba kartek zielonych\nObliczymy liczbę kartek czerwonych.\nZapiszemy i rozwiążemy równanie spełniające wszystkie warunki zadania:\n$x + 1,5x + (x - 10) + 37 = 160$\n$3,5x = 160 - 37 + 10$\n$3,5x = 133$\n$x = 38$\nObliczymy liczbę kartek niebieskich:\n$1,5 \ncdot 38 = 57$\nOdpowiedź: Ela przygotowała $57$ kartek niebieskich."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia liczby kartek niebieskich przygotowanych przez Elę, prawidłowe obliczenia **oraz** prawidłowy wynik liczbowy $(57)$",
+                  "zastosowanie metody prób i błędów – sprawdzenie wszystkich warunków zadania dla co najmniej dwóch różnych zestawów liczb kartek poszczególnych kolorów (czerwone, niebieskie, zielone, białe), wśród których **jest** prawidłowa liczba kartek niebieskich, prawidłowe obliczenia **oraz** wskazanie spośród nich prawidłowego wyniku liczbowego $(57)$."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "zapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia liczby kartek w jednym spośród trzech kolorów: czerwonym albo niebieskim, albo zielonym, np. $x + 1,5x + (x - 10) + 37 = 160$, gdzie $x$ oznacza liczbę kartek czerwonych albo $n + n : 1,5 + (n : 1,5 - 10) + 37 = 160$, gdzie $n$ oznacza liczbę kartek niebieskich, albo $z + (z + 10) + 1,5 · (z + 10) + 37 = 160$, gdzie $z$ oznacza liczbę kartek zielonych (lub zapisy równoważne)",
+                  "zapisanie poprawnego wyrażenia arytmetycznego prowadzącego do obliczenia liczby kartek czerwonych, np. $(160 - 37 + 10) : 3,5$,",
+                  "zastosowanie metody prób i błędów – sprawdzenie wszystkich warunków zadania dla co najmniej dwóch różnych zestawów liczb kartek poszczególnych kolorów (czerwone, niebieskie, zielone, białe), wśród których **nie ma** prawidłowej liczby kartek niebieskich,",
+                  "zastosowanie metody prób i błędów – sprawdzenie wszystkich warunków zadania dla co najmniej dwóch różnych zestawów liczb kartek poszczególnych kolorów (czerwone, niebieskie, zielone, białe), wśród których **jest** prawidłowa liczba kartek niebieskich **bez wskazania** prawidłowego wyniku liczbowego."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-XIV.5",
+            "ma-78-VI.4"
+          ],
+          "scoringNotes": [
+            "Uwaga: Jeżeli uczeń sprawdza wszystkie warunki zadania tylko dla jednego zestawu liczb kartek poszczególnych kolorów: czerwone $38$, niebieskie $57$, zielone $28$, białe $37$, i nie popełnia błędów rachunkowych, to otrzymuje 1 punkt."
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "**I sposób**\nKartek w czterech kolorach było razem $160$.\nKartek białych było $37$.\nLiczbę kartek czerwonych oznaczymy jako $x$.\nZapiszemy wyrażenia algebraiczne opisujące liczby kartek niebieskich i zielonych:\n$1,5x$ – liczba kartek niebieskich\n$x - 10$ – liczba kartek zielonych\nObliczymy liczbę kartek czerwonych.\nZapiszemy i rozwiążemy równanie spełniające wszystkie warunki zadania:\n$x + 1,5x + (x - 10) + 37 = 160$\n$3,5x = 160 - 37 + 10$\n$3,5x = 133$\n$x = 38$\nObliczymy liczbę kartek niebieskich:\n$1,5 · 38 = 57$\nOdpowiedź: Ela przygotowała $57$ kartek niebieskich.",
+              "ref": {
+                "source": "klucz",
+                "page": 11
+              }
+            },
+            {
+              "points": 2,
+              "content": "**II sposób**\nKartek w czterech kolorach było razem $160$.\nKartek białych było $37$.\nLiczbę kartek niebieskich oznaczymy jako $n$.\nZapiszemy wyrażenia algebraiczne opisujące liczby kartek czerwonych i zielonych:\n$n : 1,5$ – liczba kartek czerwonych\n$n : 1,5 - 10$ – liczba kartek zielonych\nObliczymy liczbę kartek niebieskich.\nZapiszemy i rozwiążemy równanie spełniające wszystkie warunki zadania:\n$n + n : 1,5 + (n : 1,5 - 10) + 37 = 160$\n$n + \u0002rac{2}{3}n + \u0002rac{2}{3}n - 10 = 160 - 37$\n$\u0002rac{7}{3}n = 133$\n$n = 57$\nOdpowiedź: Ela przygotowała $57$ kartek niebieskich.",
+              "ref": {
+                "source": "klucz",
+                "page": 11
+              }
+            },
+            {
+              "points": 2,
+              "content": "**III sposób**\nKartek w czterech kolorach było razem $160$.\nKartek białych było $37$.\nLiczbę kartek zielonych oznaczymy jako $z$.\nZapiszemy wyrażenia algebraiczne opisujące liczby kartek czerwonych i niebieskich:\n$z + 10$ – liczba kartek czerwonych\n$1,5 · (z + 10)$ – liczba kartek niebieskich\nObliczymy liczbę kartek zielonych.\nZapiszemy i rozwiążemy równanie spełniające wszystkie warunki zadania:\n$z + (z + 10) + 1,5 · (z + 10) + 37 = 160$\n$z + z + 10 + 1,5z + 15 + 37 = 160$\n$3,5z = 98$\n$z = 28$\nObliczymy liczbę kartek niebieskich:\n$1,5 · (28 + 10) = 57$\nOdpowiedź: Ela przygotowała $57$ kartek niebieskich.",
+              "ref": {
+                "source": "klucz",
+                "page": 12
+              }
+            },
+            {
+              "points": 2,
+              "content": "**IV sposób**\nKartek w czterech kolorach było razem $160$.\nKartek białych było $37$.\nZilustrujemy graficznie zależności między liczbami kartek w trzech kolorach:\nczerwone: [pasek]\nniebieskie: [pasek o połowę dłuższy]\nzielone: [pasek] $- 10$\nObliczymy liczbę kartek czerwonych:\n$(160 - 37 + 10) : 3,5 = 38$\nObliczymy liczbę kartek niebieskich:\n$1,5 · 38 = 57$\nOdpowiedź: Ela przygotowała $57$ kartek niebieskich.",
+              "ref": {
+                "source": "klucz",
+                "page": 12
+              }
+            },
+            {
+              "points": 2,
+              "content": "**V sposób**\nMetoda prób i błędów:\n\n| Liczba kartek z uwzględnieniem warunków zadania | | | | Liczba wszystkich kartek | |\n|---|---|---|---|---|---|\n| czerwonych | niebieskich 1,5 razy więcej niż czerwonych | zielonych o 10 mniej niż czerwonych | białych | suma | sprawdzenie |\n| $30$ | $45$ | $20$ | $37$ | $132$ | $132 \u0000 160$ |\n| $40$ | $60$ | $30$ | $37$ | $167$ | $167 \u0000 160$ |\n| **$38$** | **$57$** | **$28$** | **$37$** | **$160$** | **$160 = 160$** |\n\nOdpowiedź: Ela przygotowała $57$ kartek niebieskich.",
+              "ref": {
+                "source": "klucz",
+                "page": 13
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-XIV.5",
+        "ma-78-VI.4"
+      ],
+      "ref": {
+        "source": "karta_otwarte",
+        "page": 2
+      }
+    },
+    {
+      "id": "ma-2026-16",
+      "sessionId": "matematyka-2026-05-glowny",
+      "number": 16,
+      "maxPoints": 3,
+      "instruction": "Z Polanki do Dębiny prowadzi jedna droga przez Jodłowo i ma długość $123$ km.\nDroga z Polanki do Jodłowa ma długość $48$ km i samochód przejechał ją w czasie $40$ minut.\nDrogę z Jodłowa do Dębiny ten samochód pokonał z taką samą prędkością, jak drogę z Polanki do Jodłowa.\n\n**Uzasadnij, że przejazd tego samochodu z Jodłowa do Dębiny trwał dłużej niż godzinę.**\n**Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-16",
+          "label": "16",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "**I sposób**\nObliczymy drogę z Jodłowa do Dębiny:\n$123 - 48 = 75$ (km)\nObliczymy prędkość, z jaką samochód przejechał z Polanki do Jodłowa.\nSkorzystamy ze wzoru na prędkość:\n$v = \\frac{s}{t}$, gdzie:\n$v$ – prędkość\n$s = 48$ km – droga\n$t = 40$ minut $= 40 \\cdot \\frac{1}{60}$ h $= \\frac{2}{3}$ h – czas\n$v = \\frac{48\\ \\text{km}}{\\frac{2}{3}\\ \\text{h}} = 48 \\cdot \\frac{3}{2}\\ \\frac{\\text{km}}{\\text{h}} = 72\\ \\frac{\\text{km}}{\\text{h}}$\nSamochód jechał z prędkością $72\\ \\frac{\\text{km}}{\\text{h}}$, więc przejechanie $75$ km z tą samą, stałą prędkością trwało dłużej niż $1$ godzinę."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia **prędkości**, z jaką samochód jechał z Polanki do Jodłowa, prawidłowe obliczenia **oraz** prawidłowy wynik liczbowy $\\left(72\\ \\frac{\\text{km}}{\\text{h}}\\right)$ **oraz** sformułowanie wniosku, że przejechanie 75 km z tą samą prędkością trwało dłużej niż 1 godzinę",
+                  "poprawny sposób obliczenia **drogi** przebytej przez samochód w ciągu 1 godziny, gdyby samochód jechał ze stałą prędkością, taką jak prędkość na trasie z Polanki do Jodłowa **oraz** prawidłowy wynik liczbowy $(72\\ \\text{km})$ **oraz** sformułowanie wniosku, że przejechanie 75 km z tą samą prędkością trwało dłużej niż 1 godzinę,",
+                  "poprawny sposób obliczenia **czasu** przejazdu samochodu z Jodłowa do Dębiny, prawidłowe obliczenia, prawidłowy wynik liczbowy zgodny z zastosowaną jednostką $(62{,}5\\ \\text{min})$ **oraz** sformułowanie poprawnego wniosku, np. zapisanie $(62{,}5\\ \\text{min} > 1\\ \\text{h})$."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia **prędkości**, z jaką samochód przejechał z Polanki do Jodłowa **oraz** poprawny sposób obliczenia drogi z Jodłowa do Dębiny, np. zapisanie $v = \\frac{48\\ \\text{km}}{40\\ \\text{min}}$ lub $v = \\frac{48\\ \\text{km}}{\\frac{2}{3}\\ \\text{h}}$ (lub zapisy równoważne) **oraz** $123\\ \\text{km} - 48\\ \\text{km}$",
+                  "poprawny sposób obliczenia **drogi** przebytej przez samochód w ciągu 1 godziny (1 minuty, 1 sekundy), gdyby samochód jechał ze stałą prędkością, taką jak prędkość na trasie z Polanki do Jodłowa, czyli zastosowanie poprawnego związku między drogą a czasem z wykorzystaniem własności wielkości wprost proporcjonalnych **oraz** poprawny sposób obliczenia drogi z Jodłowa do Dębiny np. zapisanie $\\frac{s}{48\\ \\text{km}} = \\frac{60\\ \\text{min}}{40\\ \\text{min}}$ lub $\\frac{s}{60\\ \\text{min}} = \\frac{48\\ \\text{km}}{40\\ \\text{min}}$ (lub zapisy równoważne) **oraz** $123\\ \\text{km} - 48\\ \\text{km}$,",
+                  "poprawny sposób obliczenia **czasu** przejazdu samochodu z Jodłowa do Dębiny, gdyby samochód jechał ze stałą prędkością, taką jak prędkość na trasie z Polanki do Jodłowa, czyli zastosowanie poprawnego związku między czasem a drogą z wykorzystaniem własności wielkości wprost proporcjonalnych, np. zapisanie $\\frac{75\\ \\text{km}}{48\\ \\text{km}} = \\frac{t}{40\\ \\text{min}}$ lub $\\frac{75\\ \\text{km}}{t} = \\frac{48\\ \\text{km}}{40\\ \\text{min}}$ (lub zapisy równoważne),",
+                  "poprawny sposób obliczenia **czasu** przejazdu samochodu z Polanki do Dębiny, gdyby samochód jechał ze stałą prędkością, taką jak prędkość na trasie z Polanki do Jodłowa, czyli zastosowanie poprawnego związku między czasem a drogą z wykorzystaniem własności wielkości wprost proporcjonalnych **oraz** poprawny sposób obliczenia czasu przejazdu z Jodłowa do Dębiny, np. zapisanie $\\frac{123\\ \\text{km}}{48\\ \\text{km}} = \\frac{t}{40\\ \\text{min}}$ lub $\\frac{123\\ \\text{km}}{t} = \\frac{48\\ \\text{km}}{40\\ \\text{min}}$ **oraz** $t - 40\\ \\text{min}$."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia **prędkości**, z jaką samochód przejechał z Polanki do Jodłowa, np. zapisanie $v = \\frac{48\\ \\text{km}}{40\\ \\text{min}}$ (lub zapisy równoważne)",
+                  "poprawny sposób obliczenia **drogi** z Jodłowa do Dębiny, np. zapisanie $123\\ \\text{km} - 48\\ \\text{km}$,",
+                  "poprawny sposób obliczenia **drogi** przebytej przez samochód w ciągu 1 godziny (1 minuty, 1 sekundy), gdyby samochód jechał ze stałą prędkością, taką jak prędkość na trasie z Polanki do Jodłowa, czyli zastosowanie poprawnego związku między drogą a czasem z wykorzystaniem własności wielkości wprost proporcjonalnych, np. zapisanie $\\frac{s}{48\\ \\text{km}} = \\frac{60\\ \\text{min}}{40\\ \\text{min}}$ lub $\\frac{s}{60\\ \\text{min}} = \\frac{48\\ \\text{km}}{40\\ \\text{min}}$ (lub zapisy równoważne),",
+                  "poprawny sposób obliczenia **czasu** przejazdu samochodu z Polanki do Dębiny, np. zapisanie $\\frac{123\\ \\text{km}}{48\\ \\text{km}} = \\frac{t}{40\\ \\text{min}}$ lub $\\frac{123\\ \\text{km}}{t} = \\frac{48\\ \\text{km}}{40\\ \\text{min}}$ (lub zapisy równoważne)."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-46-XII.9"
+          ],
+          "scoringNotes": [
+            "Błąd w zamianie jednostek lub zapisanie niewłaściwej jednostki w wyniku końcowym traktuje się jako błąd rachunkowy."
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "**I sposób**\nObliczymy drogę z Jodłowa do Dębiny:\n$123 - 48 = 75$ (km)\nObliczymy prędkość, z jaką samochód przejechał z Polanki do Jodłowa.\nSkorzystamy ze wzoru na prędkość:\n$v = \\frac{s}{t}$, gdzie:\n$v$ – prędkość\n$s = 48$ km – droga\n$t = 40$ minut $= 40 \\cdot \\frac{1}{60}$ h $= \\frac{2}{3}$ h – czas\n$v = \\frac{48\\ \\text{km}}{\\frac{2}{3}\\ \\text{h}} = 48 \\cdot \\frac{3}{2}\\ \\frac{\\text{km}}{\\text{h}} = 72\\ \\frac{\\text{km}}{\\text{h}}$\nSamochód jechał z prędkością $72\\ \\frac{\\text{km}}{\\text{h}}$, więc przejechanie $75$ km z tą samą, stałą prędkością trwało dłużej niż $1$ godzinę.",
+              "ref": {
+                "source": "klucz",
+                "page": 15
+              }
+            },
+            {
+              "points": 3,
+              "content": "**II sposób**\nObliczymy drogę z Jodłowa do Dębiny:\n$123 - 48 = 75$ (km)\nObliczymy, ile kilometrów przejechałby samochód, gdyby jechał ze stałą prędkością, w ciągu 60 minut (1 godziny):\n48 km w 40 minut\n12 km w 10 minut\n72 km w 60 minut\nSamochód przejechałby w ciągu 1 godziny 72 km, więc przejechanie drogi z Jodłowa do Dębiny (75 km) – z tą samą, stałą prędkością – trwało dłużej niż 1 godzinę.",
+              "ref": {
+                "source": "klucz",
+                "page": 15
+              }
+            },
+            {
+              "points": 3,
+              "content": "**III sposób**\nObliczymy drogę z Jodłowa do Dębiny:\n$123 - 48 = 75$ (km)\nObliczymy czas potrzebny na przejazd samochodu (ze stałą prędkością) z Jodłowa do Dębiny:\n48 km w 40 min\n6 km w 5 min\n3 km w 2,5 min\n75 km w 62,5 min\n1 h = 60 min\n62,5 min > 60 min\nPrzejazd samochodu z Jodłowa do Dębiny trwał 62,5 min, czyli dłużej niż 1 godzinę.",
+              "ref": {
+                "source": "klucz",
+                "page": 16
+              }
+            },
+            {
+              "points": 3,
+              "content": "**IV sposób**\nObliczymy drogę z Jodłowa do Dębiny:\n$123 - 48 = 75$ (km)\nObliczymy, ile kilometrów samochód przejechałby w ciągu 1 godziny (60 min), gdyby jechał z tą samą, stałą prędkością:\n48 km w 40 min\n$x$ km w 60 min\n$x = \\frac{60\\ \\text{min} \\cdot 48\\ \\text{km}}{40\\ \\text{min}}$\n$x = 72$ km\nSamochód przejechałby w ciągu 1 godziny 72 km, więc przejechanie drogi z Jodłowa do Dębiny (75 km), z tą samą prędkością, trwało dłużej niż 1 godzinę.",
+              "ref": {
+                "source": "klucz",
+                "page": 16
+              }
+            },
+            {
+              "points": 3,
+              "content": "**V sposób**\nObliczymy drogę z Jodłowa do Dębiny:\n$123 - 48 = 75$ (km)\nObliczymy czas potrzebny na przejazd samochodu (ze stałą prędkością) z Jodłowa do Dębiny:\n48 km w 40 min\n75 km w $x$ min\n$x = \\frac{75\\ \\text{km} \\cdot 40\\ \\text{min}}{48\\ \\text{km}}$\n$x = 62,5$ min\n1 h = 60 min\n62,5 min > 60 min\nPrzejazd samochodu z Jodłowa do Dębiny trwał 62,5 min, czyli dłużej niż 1 godzinę.",
+              "ref": {
+                "source": "klucz",
+                "page": 17
+              }
+            },
+            {
+              "points": 3,
+              "content": "**VI sposób**\nObliczymy czas potrzebny na przejazd samochodu (ze stałą prędkością) z Polanki do Dębiny:\n48 km w 40 min\n123 km w $x$ min\n$x = \\frac{123\\ \\text{km} \\cdot 40\\ \\text{min}}{48\\ \\text{km}}$\n$x = 102,5$ min\nObliczymy czas potrzebny na przejazd samochodu z Jodłowa do Dębiny:\n102,5 min − 40 min = 62,5 min\n62,5 min > 60 min\nPrzejazd samochodu z Jodłowa do Dębiny trwał 62,5 min, czyli dłużej niż 1 godzinę.",
+              "ref": {
+                "source": "klucz",
+                "page": 17
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-46-XII.9"
+      ],
+      "ref": {
+        "source": "karta_otwarte",
+        "page": 3
+      }
+    },
+    {
+      "id": "ma-2026-17",
+      "sessionId": "matematyka-2026-05-glowny",
+      "number": 17,
+      "maxPoints": 3,
+      "instruction": "Podczas Dnia Sportu w pewnej szkole rozegrano trzy turnieje sportowe. Każde dziecko, które było uczestnikiem tego Dnia Sportu, wzięło udział w dokładnie jednym turnieju sportowym. W tabeli podano informacje dotyczące liczby dzieci biorących udział w poszczególnych turniejach. Łączna liczba dziewcząt była o 8 większa od łącznej liczby chłopców uczestniczących w tym Dniu Sportu.\n\n| | Turniej piłki nożnej | Turniej tańca | Turniej tenisa stołowego |\n|---|---|---|---|\n| Liczba dziewcząt | 15 | 65 | ? |\n| Liczba chłopców | 46 | 16 | 34 |\n\n**Oblicz, ile procent liczby wszystkich uczestników Dnia Sportu stanowi liczba dzieci, które brały udział w turnieju tenisa stołowego. Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-17",
+          "label": "17",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "I sposób\nNa podstawie danych z tabeli obliczymy, ilu chłopców uczestniczyło w Dniu Sportu:\n$46 + 16 + 34 = 96$\nObliczymy liczbę wszystkich dziewcząt, które brały udział w Dniu Sportu:\n$96 + 8 = 104$\nObliczymy liczbę wszystkich uczestników Dnia Sportu:\n$96 + 104 = 200$\nObliczymy liczbę wszystkich uczestników turnieju tenisa stołowego:\n$200 - (46 + 16 + 15 + 65) = 200 - 142 = 58$\nObliczymy, ile procent liczby wszystkich uczestników Dnia Sportu stanowi liczba uczestników turnieju tenisa stołowego:\n$\\frac{58}{200} = \\frac{29}{100} = 0{,}29 = 29\\%$\nOdpowiedź: Liczba dzieci, które brały udział w turnieju tenisa stołowego, stanowi $29\\%$ liczby wszystkich uczestników Dnia Sportu."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia, ile procent liczby wszystkich uczestników Dnia Sportu stanowi liczba dzieci, które brały udział w turnieju tenisa stołowego, prawidłowe obliczenia oraz prawidłowy wynik liczbowy ($29\\%$)."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia liczby wszystkich uczestników Dnia Sportu oraz poprawny sposób obliczenia liczby dzieci, które brały udział w turnieju tenisa stołowego."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia liczby wszystkich dziewcząt, które brały udział w Dniu Sportu",
+                  "poprawny sposób obliczenia liczby wszystkich uczestników Dnia Sportu,",
+                  "poprawny sposób obliczenia liczby dziewcząt, które brały udział w turnieju tenisa stołowego."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-78-XIII.1",
+            "ma-78-V.3"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "I sposób\nNa podstawie danych z tabeli obliczymy, ilu chłopców uczestniczyło w Dniu Sportu:\n$46 + 16 + 34 = 96$\nObliczymy liczbę wszystkich dziewcząt, które brały udział w Dniu Sportu:\n$96 + 8 = 104$\nObliczymy liczbę wszystkich uczestników Dnia Sportu:\n$96 + 104 = 200$\nObliczymy liczbę wszystkich uczestników turnieju tenisa stołowego:\n$200 - (46 + 16 + 15 + 65) = 200 - 142 = 58$\nObliczymy, ile procent liczby wszystkich uczestników Dnia Sportu stanowi liczba uczestników turnieju tenisa stołowego:\n$\\frac{58}{200} = \\frac{29}{100} = 0{,}29 = 29\\%$\nOdpowiedź: Liczba dzieci, które brały udział w turnieju tenisa stołowego, stanowi $29\\%$ liczby wszystkich uczestników Dnia Sportu.",
+              "ref": {
+                "source": "klucz",
+                "page": 18
+              }
+            },
+            {
+              "points": 3,
+              "content": "II sposób\nObliczymy liczbę wszystkich uczestników Dnia Sportu:\n$96 + (96 + 8) = 200$\nObliczymy liczbę dziewcząt, które uczestniczyły w turnieju tenisa stołowego:\n$(96 + 8) - (15 + 65) = 24$\nObliczymy liczbę wszystkich uczestników turnieju tenisa stołowego:\n$34 + 24 = 58$\nObliczymy, ile procent liczby wszystkich uczestników Dnia Sportu stanowi liczba uczestników turnieju tenisa stołowego:\n$\\frac{58}{200} \\cdot 100\\% = 29\\%$\nOdpowiedź: Liczba dzieci, które brały udział w turnieju tenisa stołowego, stanowi $29\\%$ liczby wszystkich uczestników Dnia Sportu.",
+              "ref": {
+                "source": "klucz",
+                "page": 19
+              }
+            },
+            {
+              "points": 3,
+              "content": "III sposób\nLiczba dziewcząt biorących udział w turnieju tenisa stołowego: $x$\nLiczba dziewcząt biorących udział w Dniu Sportu: $15 + 65 + x = 80 + x$\nLiczba chłopców biorących udział w Dniu Sportu: $46 + 16 + 34 = 96$\nZapiszemy i rozwiążemy równanie prowadzące do obliczenia liczby dziewcząt, które brały udział w turnieju tenisa stołowego:\n$80 + x = 96 + 8$\n$80 + x = 104$\n$x = 24$\nObliczymy liczbę wszystkich uczestników turnieju tenisa stołowego:\n$34 + 24 = 58$\nObliczymy liczbę wszystkich uczestników Dnia Sportu:\n$96 + 104 = 200$\nObliczymy, ile procent liczby wszystkich uczestników Dnia Sportu stanowi liczba uczestników turnieju tenisa stołowego:\n$\\frac{58}{200} \\cdot 100\\% = \\frac{29}{100} \\cdot 100\\% = 29\\%$\nOdpowiedź: Liczba dzieci, które brały udział w turnieju tenisa stołowego, stanowi $29\\%$ liczby wszystkich uczestników Dnia Sportu.",
+              "ref": {
+                "source": "klucz",
+                "page": 19
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-78-XIII.1",
+        "ma-78-V.3"
+      ],
+      "ref": {
+        "source": "karta_otwarte",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2026-18",
+      "sessionId": "matematyka-2026-05-glowny",
+      "number": 18,
+      "maxPoints": 2,
+      "instruction": "Dany jest sześcian $ABCDEFGH$ o krawędzi długości $a$. Punkt $S$ jest środkiem krawędzi $DH$ tego sześcianu. Punkty $A$, $C$, $D$, $S$ są wierzchołkami ostrosłupa trójkątnego (zobacz rysunek).\n\n**Oblicz, ile razy objętość ostrosłupa $ACDS$ jest mniejsza od objętości sześcianu $ABCDEFGH$. Zapisz obliczenia.**\n\n![Sześcian $ABCDEFGH$ z zaznaczonym na zielono ostrosłupem trójkątnym $ACDS$, którego wierzchołek $S$ jest środkiem krawędzi $DH$.](stimulus:ma-2026-18-fig1)",
+      "stimulusIds": [
+        "ma-2026-18-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-18",
+          "label": "18",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "**I sposób**\n\nZapiszemy wzór na objętość sześcianu $ABCDEFGH$:\n$V_{ABCDEFGH} = a^3$\nZauważymy, że pole trójkąta $ACD$, który jest podstawą ostrosłupa $ACDS$, stanowi połowę pola kwadratu $ABCD$:\n$P_{ACD} = \\frac{1}{2} \\cdot a \\cdot a$\nUstalimy długość odcinka $DS$, który jest wysokością ostrosłupa $ACDS$:\n$|DS| = \\frac{1}{2} \\cdot a$\nZapiszemy wzór na objętość ostrosłupa $ACDS$:\n$V_{ACDS} = \\frac{1}{3} \\cdot P_{ACD} \\cdot |DS|$\n$V_{ACDS} = \\frac{1}{3} \\cdot \\frac{1}{2} \\cdot a \\cdot a \\cdot \\frac{1}{2} \\cdot a = \\frac{1}{12} \\cdot a^3$\nZatem:\n$V_{ACDS} = \\frac{1}{12} \\cdot V_{ABCDEFGH}$\nOdpowiedź: Objętość ostrosłupa $ACDS$ jest 12 razy mniejsza od objętości sześcianu $ABCDEFGH$."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia objętości ostrosłupa, prawidłowe obliczenia oraz poprawne ustalenie, że objętość ostrosłupa jest 12 razy mniejsza od objętości sześcianu."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "zapisanie poprawnego wyrażenia jednej zmiennej opisującego objętość ostrosłupa $ACDS$ w zależności od długości krawędzi sześcianu, np. $V_{ACDS} = \\frac{1}{3} \\cdot \\frac{1}{2} \\cdot a \\cdot a \\cdot \\frac{1}{2} \\cdot a$ (lub zapisy równoważne)",
+                  "zapisanie poprawnego wzoru na objętość sześcianu $ABCDEFGH$ oraz zapisanie poprawnego wzoru na objętość ostrosłupa $ACDS$ z uwzględnieniem zależności między polami podstaw a wysokościami tych brył, np. zapisanie $V_s = P_{ABCD} \\cdot |DH|$ oraz $V_o = \\frac{1}{3} \\cdot \\frac{1}{2} \\cdot P_{ABCD} \\cdot \\frac{1}{2} \\cdot |DH|$ (lub zapisy równoważne)."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-78-XI.2",
+            "ma-78-III.3"
+          ],
+          "scoringNotes": [
+            "Jeśli uczeń do rozwiązania zadania wykonuje obliczenia wyłącznie na konkretnych liczbach, to otrzymuje 0 punktów."
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "**I sposób**\n\nZapiszemy wzór na objętość sześcianu $ABCDEFGH$:\n$V_{ABCDEFGH} = a^3$\nZauważymy, że pole trójkąta $ACD$, który jest podstawą ostrosłupa $ACDS$, stanowi połowę pola kwadratu $ABCD$:\n$P_{ACD} = \\frac{1}{2} \\cdot a \\cdot a$\nUstalimy długość odcinka $DS$, który jest wysokością ostrosłupa $ACDS$:\n$|DS| = \\frac{1}{2} \\cdot a$\nZapiszemy wzór na objętość ostrosłupa $ACDS$:\n$V_{ACDS} = \\frac{1}{3} \\cdot P_{ACD} \\cdot |DS|$\n$V_{ACDS} = \\frac{1}{3} \\cdot \\frac{1}{2} \\cdot a \\cdot a \\cdot \\frac{1}{2} \\cdot a = \\frac{1}{12} \\cdot a^3$\nZatem:\n$V_{ACDS} = \\frac{1}{12} \\cdot V_{ABCDEFGH}$\nOdpowiedź: Objętość ostrosłupa $ACDS$ jest 12 razy mniejsza od objętości sześcianu $ABCDEFGH$.",
+              "ref": {
+                "source": "klucz",
+                "page": 20
+              }
+            },
+            {
+              "points": 2,
+              "content": "**II sposób**\n\nZapiszemy wzór na objętość sześcianu $ABCDEFGH$:\n$V_{ABCDEFGH} = a^3$\nUstalimy długość odcinka $DS$:\n$|DS| = \\frac{1}{2} \\cdot a$\nZauważymy, że krawędź $AD$ jest wysokością ostrosłupa $ACDS$ oraz trójkąt $SDC$ jest podstawą tego ostrosłupa. Obliczymy pole trójkąta $SDC$:\n$P_{SDC} = \\frac{1}{2} \\cdot |DS| \\cdot a$\n$P_{SDC} = \\frac{1}{2} \\cdot \\frac{1}{2} \\cdot a \\cdot a = \\frac{1}{4} a^2$\nZapiszemy wzór na objętość ostrosłupa $ACDS$:\n$V_{ACDS} = \\frac{1}{3} \\cdot P_{SDC} \\cdot |AD|$\n$V_{ACDS} = \\frac{1}{3} \\cdot \\frac{1}{4} \\cdot a^2 \\cdot a = \\frac{1}{12} \\cdot a^3$\nZatem:\n$V_{ACDS} = \\frac{1}{12} \\cdot V_{ABCDEFGH}$\nOdpowiedź: Objętość ostrosłupa $ACDS$ jest 12 razy mniejsza od objętości sześcianu $ABCDEFGH$.",
+              "ref": {
+                "source": "klucz",
+                "page": 21
+              }
+            },
+            {
+              "points": 2,
+              "content": "**III sposób**\n\nZauważymy, że pole trójkąta $ACD$, który jest podstawą ostrosłupa $ACDS$, stanowi połowę pola kwadratu $ABCD$, który jest podstawą sześcianu $ABCDEFGH$.\nPonadto, wysokość $DS$ ostrosłupa $ACDS$ stanowi połowę długości krawędzi $DH$ sześcianu $ABCDEFGH$.\nSkorzystamy ze wzoru na objętość ostrosłupa i zapiszemy:\n$V_{ACDS} = \\frac{1}{3} \\cdot P_{ACD} \\cdot |DS| = \\frac{1}{3} \\cdot \\frac{1}{2} P_{ABCD} \\cdot \\frac{1}{2} |DH| = \\frac{1}{12} P_{ABCD} \\cdot |DH| = \\frac{1}{12} V_{ABCDEFGH}$\nOdpowiedź: Objętość ostrosłupa $ACDS$ jest 12 razy mniejsza od objętości sześcianu $ABCDEFGH$.",
+              "ref": {
+                "source": "klucz",
+                "page": 22
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-78-XI.2",
+        "ma-78-III.3"
+      ],
+      "ref": {
+        "source": "karta_otwarte",
+        "page": 5
+      }
+    },
+    {
+      "id": "ma-2026-19",
+      "sessionId": "matematyka-2026-05-glowny",
+      "number": 19,
+      "maxPoints": 3,
+      "instruction": "Ogródek pani Anny ma kształt trapezu, którego podstawy mają długości $18\\,\\text{m}$ i $12\\,\\text{m}$, a wysokość jest równa $9\\,\\text{m}$. Pani Anna chce zmienić swój ogródek w łąkę kwietną. Jedno opakowanie z nasionami wybrane przez panią Annę wystarcza na obsianie $25\\,\\text{m}^2$ powierzchni i kosztuje $23{,}80$ zł.\n\n**Oblicz, ile złotych musi zapłacić pani Anna za najmniejszą liczbę opakowań z nasionami potrzebnych na obsianie całej powierzchni tego ogródka. Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-19",
+          "label": "19",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "**I sposób**\nObliczymy pole powierzchni ogródka. Skorzystamy ze wzoru na pole trapezu:\n$P_{ogródka} = \\frac{(18 + 12)}{2} \\cdot 9 = \\frac{30}{2} \\cdot 9 = 135\\ (\\text{m}^2)$\nObliczymy liczbę potrzebnych opakowań z nasionami:\n$135 : 25 = 5{,}4$\nLiczba potrzebnych opakowań musi być liczbą naturalną. Najmniejszą liczbą naturalną większą od $5{,}4$ jest $6$.\nObliczymy koszt zakupu $6$ opakowań z nasionami:\n$6 \\cdot 23{,}80 = 142{,}80$ (zł)\nOdpowiedź: Pani Anna musi zapłacić za opakowania z nasionami $142{,}80$ zł."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia kosztu zakupu najmniejszej liczby opakowań z nasionami potrzebnych na obsianie całej powierzchni ogródka, prawidłowe obliczenia oraz prawidłowy wynik liczbowy ($142{,}80$ zł)."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia najmniejszej liczby opakowań z nasionami potrzebnych na obsianie całej powierzchni ogródka."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia pola powierzchni ogródka."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-XI.3",
+            "ma-46-XIV.5"
+          ],
+          "scoringNotes": [
+            "1. Nie ocenia się stosowania jednostek. Błąd w zamianie jednostek traktuje się jako błąd rachunkowy.",
+            "2. Jeżeli uczeń przedstawia niepoprawny sposób obliczenia pola powierzchni ogródka i otrzyma wynik, który a) nie jest wielokrotnością liczby 25, a następnie zgodnie z otrzymanym wynikiem poprawnie oblicza minimalną liczbę opakowań z nasionami potrzebnych na obsianie jego powierzchni oraz doprowadza rozwiązanie zadania do końca bez błędów rachunkowych, to za całe rozwiązanie zadania otrzymuje 1 punkt. b) jest wielokrotnością liczby 25, to za całe rozwiązanie zadania otrzymuje 0 punktów."
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "**I sposób**\nObliczymy pole powierzchni ogródka. Skorzystamy ze wzoru na pole trapezu:\n$P_{ogródka} = \\frac{(18 + 12)}{2} \\cdot 9 = \\frac{30}{2} \\cdot 9 = 135\\ (\\text{m}^2)$\nObliczymy liczbę potrzebnych opakowań z nasionami:\n$135 : 25 = 5{,}4$\nLiczba potrzebnych opakowań musi być liczbą naturalną. Najmniejszą liczbą naturalną większą od $5{,}4$ jest $6$.\nObliczymy koszt zakupu $6$ opakowań z nasionami:\n$6 \\cdot 23{,}80 = 142{,}80$ (zł)\nOdpowiedź: Pani Anna musi zapłacić za opakowania z nasionami $142{,}80$ zł.",
+              "ref": {
+                "source": "klucz",
+                "page": 23
+              }
+            },
+            {
+              "points": 3,
+              "content": "**II sposób**\nObliczymy pole powierzchni ogródka. Skorzystamy ze wzoru na pole trapezu:\n$P_{ogródka} = \\frac{(18 + 12)}{2} \\cdot 9 = \\frac{30}{2} \\cdot 9 = 135\\ (\\text{m}^2)$\nObliczymy liczbę opakowań z nasionami potrzebnych na obsianie $135\\ \\text{m}^2$ ogródka:\n1 opakowanie z nasionami wystarczy na obsianie $25\\ \\text{m}^2$ ogródka, więc:\n4 opakowania: $4 \\cdot 25 = 100\\ (\\text{m}^2)$ (za mało)\n5 opakowań: $5 \\cdot 25 = 125\\ (\\text{m}^2)$ (za mało)\n6 opakowań: $6 \\cdot 25 = 150\\ (\\text{m}^2)$ (wystarczy)\nObliczymy koszt zakupu $6$ opakowań z nasionami:\n$6 \\cdot 23{,}80 = 142{,}80$ (zł)\nOdpowiedź: Pani Anna musi zapłacić za opakowania z nasionami $142{,}80$ zł.",
+              "ref": {
+                "source": "klucz",
+                "page": 23
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-XI.3",
+        "ma-46-XIV.5"
+      ],
+      "ref": {
+        "source": "karta_otwarte",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2026-20",
+      "sessionId": "matematyka-2026-05-glowny",
+      "number": 20,
+      "maxPoints": 3,
+      "instruction": "Z kartonu wycięto prostokąt $ABCD$ o wymiarach $3$ i $9$ (zobacz rysunek 1.). Następnie ten prostokąt rozcięto na dwie figury: trapez prostokątny oraz trójkąt prostokątny równoramienny. Z tych figur złożono równoległobok $KLMN$, który nie jest prostokątem (zobacz rysunek 2.).\n\n**Oblicz obwód równoległoboku $KLMN$. Zapisz obliczenia.**\n\n![Prostokąt ABCD z wierzchołkami D i C u góry oraz A i B u dołu, podpisany jako Rysunek 1.](stimulus:ma-2026-20-fig1) ![Równoległobok KLMN z wierzchołkami N i M u góry oraz K i L u dołu, podpisany jako Rysunek 2.](stimulus:ma-2026-20-fig2)",
+      "stimulusIds": [
+        "ma-2026-20-fig1",
+        "ma-2026-20-fig2"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-20",
+          "label": "20",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "**I sposób**\n\nZaznaczymy na rysunku 1. długości boków prostokąta $ABCD$ oraz linię rozcięcia tego prostokąta na dwie figury: trapez prostokątny i trójkąt prostokątny równoramienny. Zauważymy, że przesunięcie trójkąta prostokątnego równoramiennego w sposób pokazany na rysunku 2. prowadzi do otrzymania równoległoboku $KLMN$.\n\nObliczymy długość boku $KN$ równoległoboku $KLMN$. Skorzystamy z twierdzenia Pitagorasa:\n\n$|KN|^2 = 3^2 + 3^2$\n\n$|KN|^2 = 18$\n\n$|KN| = \\sqrt{18} = 3\\sqrt{2}$\n\nObliczymy obwód równoległoboku $KLMN$:\n\n$O_{KLMN} = 2 \\cdot 9 + 2 \\cdot 3\\sqrt{2}$\n\n$O_{KLMN} = 18 + 6\\sqrt{2}$\n\nOdpowiedź: Obwód równoległoboku $KLMN$ jest równy $18 + 6\\sqrt{2}$."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia obwodu równoległoboku $KLMN$, prawidłowe obliczenia oraz prawidłowy wynik liczbowy ($18 + 2\\sqrt{18}$ lub $18 + 6\\sqrt{2}$)."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia obwodu równoległoboku $KLMN$."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia długości przeciwprostokątnej trójkąta prostokątnego równoramiennego o przyprostokątnej długości $3$ z wykorzystaniem twierdzenia Pitagorasa, np. zapisanie $c^2 = 3^2 + 3^2$, gdzie $c$ jest długością przeciwprostokątnej tego trójkąta",
+                  "ustalenie długości przeciwprostokątnej trójkąta prostokątnego równoramiennego o przyprostokątnej długości $3$ bez przedstawienia sposobu jej obliczenia ($3\\sqrt{2}$), np. zapisanie na rysunku."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-46-XI.2",
+            "ma-78-II.4",
+            "ma-78-VIII.7"
+          ],
+          "scoringNotes": [
+            "1. Nie akceptuje się rozwiązań zadania opartych na pomiarze, np. linijką.",
+            "2. Jeżeli uczeń rozwiązuje zadanie bez błędów rachunkowych, ale do obliczenia obwodu równoległoboku stosuje przybliżenia pierwiastków, to za rozwiązanie zadania otrzymuje 2 punkty."
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "**I sposób**\n\nZaznaczymy na rysunku 1. długości boków prostokąta $ABCD$ oraz linię rozcięcia tego prostokąta na dwie figury: trapez prostokątny i trójkąt prostokątny równoramienny. Zauważymy, że przesunięcie trójkąta prostokątnego równoramiennego w sposób pokazany na rysunku 2. prowadzi do otrzymania równoległoboku $KLMN$.\n\nObliczymy długość boku $KN$ równoległoboku $KLMN$. Skorzystamy z twierdzenia Pitagorasa:\n\n$|KN|^2 = 3^2 + 3^2$\n\n$|KN|^2 = 18$\n\n$|KN| = \\sqrt{18} = 3\\sqrt{2}$\n\nObliczymy obwód równoległoboku $KLMN$:\n\n$O_{KLMN} = 2 \\cdot 9 + 2 \\cdot 3\\sqrt{2}$\n\n$O_{KLMN} = 18 + 6\\sqrt{2}$\n\nOdpowiedź: Obwód równoległoboku $KLMN$ jest równy $18 + 6\\sqrt{2}$.",
+              "ref": {
+                "source": "klucz",
+                "page": 25
+              }
+            },
+            {
+              "points": 3,
+              "content": "**II sposób**\n\nZaznaczymy na rysunku 1. długości boków prostokąta $ABCD$ oraz punkt $E$, który jest jednym z wierzchołków trójkąta prostokątnego równoramiennego $EBC$ o przyprostokątnych długości $3$.\n\nZ wierzchołka $E$ narysujemy odcinek prostopadły do boków $AB$ i $CD$ prostokąta.\n\nZauważymy, że przeciwprostokątna $EC$ trójkąta $EBC$ jest także przekątną kwadratu o boku długości $3$. Stąd otrzymujemy:\n\n$|EC| = 3\\sqrt{2}$\n\nPonadto:\n\n$|EC| = |KN| = |LM|$\n\nObliczymy obwód równoległoboku $KLMN$:\n\n$O_{KLMN} = 2 \\cdot 9 + 2 \\cdot 3\\sqrt{2}$\n\n$O_{KLMN} = 18 + 6\\sqrt{2}$\n\nOdpowiedź: Obwód równoległoboku $KLMN$ jest równy $18 + 6\\sqrt{2}$.",
+              "ref": {
+                "source": "klucz",
+                "page": 25
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-46-XI.2",
+        "ma-78-II.4",
+        "ma-78-VIII.7"
+      ],
+      "ref": {
+        "source": "karta_otwarte",
+        "page": 7
+      }
+    }
+  ],
+  "rubrics": [],
+  "audio": []
+}

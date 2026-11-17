@@ -1,0 +1,210 @@
+[
+  {
+    "id": "ma-46-II.11",
+    "subjectId": "matematyka",
+    "general": "I. Sprawność rachunkowa.\n1. Wykonywanie nieskomplikowanych obliczeń w pamięci lub pisemnie oraz wykorzystanie tych umiejętności w sytuacjach praktycznych.",
+    "specific": "II. Działania na liczbach naturalnych. 11) znajduje największy wspólny dzielnik (NWD) […] i najmniejszą wspólną wielokrotność (NWW) dwóch liczb naturalnych co najwyżej trzycyfrowych metodą rozkładu na czynniki.",
+    "area": "Działania na liczbach naturalnych",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "ma-46-II.6",
+    "subjectId": "matematyka",
+    "general": "IV. Rozumowanie i argumentacja. 1. Przeprowadzanie prostego rozumowania, podawanie argumentów uzasadniających poprawność rozumowania, rozróżnianie dowodu od przykładu.",
+    "specific": "II. Działania na liczbach naturalnych. Uczeń: 6) rozpoznaje liczby podzielne przez 2, 3, 4, 5, 9, 10, 100.",
+    "area": "Działania na liczbach naturalnych",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "ma-46-VI.2",
+    "subjectId": "matematyka",
+    "general": "III. Wykorzystanie i interpretowanie reprezentacji. 2. Dobieranie modelu matematycznego do prostej sytuacji oraz budowanie go w różnych kontekstach, także w kontekście praktycznym.",
+    "specific": "VI. Elementy algebry. Uczeń: 2) stosuje oznaczenia literowe nieznanych wielkości liczbowych i zapisuje proste wyrażenia algebraiczne na podstawie informacji osadzonych w kontekście praktycznym […].",
+    "area": "Elementy algebry",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "ma-46-XI.1",
+    "subjectId": "matematyka",
+    "general": "III. Wykorzystanie i interpretowanie reprezentacji.\n2. Dobieranie modelu matematycznego do prostej sytuacji oraz budowanie go w różnych kontekstach, także w kontekście praktycznym.",
+    "specific": "XI. Obliczenia w geometrii. 1) oblicza miary kątów, stosując przy tym poznane własności kątów i wielokątów.",
+    "area": "Obliczenia w geometrii",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "ma-46-XI.2",
+    "subjectId": "matematyka",
+    "general": "II. Wykorzystanie i tworzenie informacji. 3. Używanie języka matematycznego do opisu rozumowania i uzyskanych wyników.",
+    "specific": "XI. Obliczenia w geometrii. Uczeń: 2) oblicza obwód wielokąta o danych długościach boków.",
+    "area": "Obliczenia w geometrii",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "ma-46-XI.3",
+    "subjectId": "matematyka",
+    "general": "III. Wykorzystanie i interpretowanie reprezentacji. 2. Dobieranie modelu matematycznego do prostej sytuacji oraz budowanie go w różnych kontekstach, także w kontekście praktycznym.",
+    "specific": "XI. Obliczenia w geometrii. Uczeń: 3) oblicza pola: […] trapezu […] w sytuacjach praktycznych […].",
+    "area": "Obliczenia w geometrii",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "ma-46-XII.9",
+    "subjectId": "matematyka",
+    "general": "IV. Rozumowanie i argumentacja. 1. Przeprowadzanie prostego rozumowania, podawanie argumentów uzasadniających poprawność rozumowania, rozróżnianie dowodu od przykładu.",
+    "specific": "XII. Obliczenia praktyczne. 9) w sytuacji praktycznej oblicza: […] prędkość przy danej drodze i czasie, czas przy danej drodze i prędkości oraz stosuje jednostki prędkości km/h i m/s.",
+    "area": "Obliczenia praktyczne",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "ma-46-XIV.5",
+    "subjectId": "matematyka",
+    "general": "III. Wykorzystanie i interpretowanie reprezentacji. 2. Dobieranie modelu matematycznego do prostej sytuacji oraz budowanie go w różnych kontekstach, także w kontekście praktycznym.",
+    "specific": "XIV. Zadania tekstowe. Uczeń: 5) do rozwiązywania zadań osadzonych w kontekście praktycznym stosuje poznaną wiedzę z zakresu arytmetyki i geometrii oraz nabyte umiejętności rachunkowe, a także własne poprawne metody.",
+    "area": "Zadania tekstowe",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "ma-78-I.2",
+    "subjectId": "matematyka",
+    "general": "I. Sprawność rachunkowa. 1. Wykonywanie nieskomplikowanych obliczeń w pamięci lub pisemnie oraz wykorzystanie tych umiejętności w sytuacjach praktycznych.",
+    "specific": "I. Potęgi o podstawach wymiernych. Uczeń: 2) mnoży […] potęgi o wykładnikach całkowitych dodatnich.",
+    "area": "Potęgi o podstawach wymiernych",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "ma-78-II.1",
+    "subjectId": "matematyka",
+    "general": "I. Sprawność rachunkowa.\n1. Wykonywanie nieskomplikowanych obliczeń w pamięci lub pisemnie oraz wykorzystanie tych umiejętności w sytuacjach praktycznych.",
+    "specific": "II. Pierwiastki. Uczeń: 1) oblicza wartości pierwiastków kwadratowych i sześciennych z liczb, które są odpowiednio kwadratami lub sześcianami liczb wymiernych.",
+    "area": "Pierwiastki",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "ma-78-II.4",
+    "subjectId": "matematyka",
+    "general": "II. Wykorzystanie i tworzenie informacji. 3. Używanie języka matematycznego do opisu rozumowania i uzyskanych wyników.",
+    "specific": "II. Pierwiastki. Uczeń: 4) oblicza pierwiastek z iloczynu i ilorazu dwóch liczb, wyłącza liczbę przed znak pierwiastka […].",
+    "area": "Pierwiastki",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "ma-78-III.2",
+    "subjectId": "matematyka",
+    "general": "III. Wykorzystanie i interpretowanie reprezentacji. 1. Używanie prostych, dobrze znanych obiektów matematycznych, interpretowanie pojęć matematycznych i operowanie obiektami matematycznymi.",
+    "specific": "III. Tworzenie wyrażeń algebraicznych z jedną i wieloma zmiennymi. Uczeń: 2) oblicza wartości liczbowe wyrażeń algebraicznych.",
+    "area": "Tworzenie wyrażeń algebraicznych z jedną i wieloma zmiennymi",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "ma-78-III.3",
+    "subjectId": "matematyka",
+    "general": "IV. Rozumowanie i argumentacja. 3. Stosowanie strategii wynikającej z treści zadania, tworzenie strategii rozwiązania problemu, również w rozwiązaniach wieloetapowych oraz w takich, które wymagają umiejętności łączenia wiedzy z różnych działów matematyki.",
+    "specific": "III. Tworzenie wyrażeń algebraicznych z jedną i wieloma zmiennymi. Uczeń: 3) zapisuje zależności przedstawione w zadaniach w postaci wyrażeń algebraicznych jednej lub kilku zmiennych.",
+    "area": "Tworzenie wyrażeń algebraicznych z jedną i wieloma zmiennymi",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "ma-78-IV.3",
+    "subjectId": "matematyka",
+    "general": "III. Wykorzystanie i interpretowanie reprezentacji. 1. Używanie prostych, dobrze znanych obiektów matematycznych, interpretowanie pojęć matematycznych i operowanie obiektami matematycznymi.",
+    "specific": "IV. Przekształcanie wyrażeń algebraicznych. Sumy algebraiczne i działania na nich. Uczeń: 3) mnoży sumy algebraiczne przez jednomian i dodaje wyrażenia powstałe z mnożenia sum algebraicznych przez jednomiany.",
+    "area": "Przekształcanie wyrażeń algebraicznych. Sumy algebraiczne i działania na nich",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "ma-78-IX.2",
+    "subjectId": "matematyka",
+    "general": "III. Wykorzystanie i interpretowanie reprezentacji. 1. Używanie prostych, dobrze znanych obiektów matematycznych, interpretowanie pojęć matematycznych i operowanie obiektami matematycznymi.",
+    "specific": "IX. Wielokąty. Uczeń: 2) stosuje wzory na pole trójkąta […], kwadratu […], a także do wyznaczania długości odcinków […].",
+    "area": "Wielokąty",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "ma-78-V.3",
+    "subjectId": "matematyka",
+    "general": "II. Wykorzystanie i tworzenie informacji. 1. Odczytywanie i interpretowanie danych przedstawionych w różnej formie oraz ich przetwarzanie.",
+    "specific": "V. Obliczenia procentowe. Uczeń: 3) oblicza, jaki procent danej liczby $b$ stanowi liczba $a$.",
+    "area": "Obliczenia procentowe",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "ma-78-V.5",
+    "subjectId": "matematyka",
+    "general": "III. Wykorzystanie i interpretowanie reprezentacji. 2. Dobieranie modelu matematycznego do prostej sytuacji oraz budowanie go w różnych kontekstach, także w kontekście praktycznym.",
+    "specific": "V. Obliczenia procentowe. Uczeń: 5) stosuje obliczenia procentowe do rozwiązywania problemów w kontekście praktycznym […].",
+    "area": "Obliczenia procentowe",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "ma-78-VI.4",
+    "subjectId": "matematyka",
+    "general": "III. Wykorzystanie i interpretowanie reprezentacji. 2. Dobieranie modelu matematycznego do prostej sytuacji oraz budowanie go w różnych kontekstach, także w kontekście praktycznym.",
+    "specific": "VI. Równania z jedną niewiadomą. 4) rozwiązuje zadania tekstowe za pomocą równań pierwszego stopnia z jedną niewiadomą […].",
+    "area": "Równania z jedną niewiadomą",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "ma-78-VIII.7",
+    "subjectId": "matematyka",
+    "general": "II. Wykorzystanie i tworzenie informacji. 3. Używanie języka matematycznego do opisu rozumowania i uzyskanych wyników.",
+    "specific": "VIII. Własności figur geometrycznych na płaszczyźnie. Uczeń: 7) zna i stosuje w sytuacjach praktycznych twierdzenie Pitagorasa (bez twierdzenia odwrotnego).",
+    "area": "Własności figur geometrycznych na płaszczyźnie",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "ma-78-X.5",
+    "subjectId": "matematyka",
+    "general": "II. Wykorzystanie i tworzenie informacji. 1. Odczytywanie i interpretowanie danych przedstawionych w różnej formie oraz ich przetwarzanie.",
+    "specific": "X. Oś liczbowa. Układ współrzędnych na płaszczyźnie. 5) oblicza długość odcinka, którego końce są danymi punktami kratowymi w układzie współrzędnych.",
+    "area": "Oś liczbowa. Układ współrzędnych na płaszczyźnie",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "ma-78-XI.2",
+    "subjectId": "matematyka",
+    "general": "IV. Rozumowanie i argumentacja. 3. Stosowanie strategii wynikającej z treści zadania, tworzenie strategii rozwiązania problemu, również w rozwiązaniach wieloetapowych oraz w takich, które wymagają umiejętności łączenia wiedzy z różnych działów matematyki.",
+    "specific": "XI. Geometria przestrzenna. Uczeń: 2) oblicza objętości […] graniastosłupów prostych, prawidłowych i takich, które nie są prawidłowe […]; 3) oblicza objętości ostrosłupów […] prawidłowych, i takich które nie są prawidłowe […].",
+    "area": "Geometria przestrzenna",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "ma-78-XIII.1",
+    "subjectId": "matematyka",
+    "general": "II. Wykorzystanie i tworzenie informacji. 1. Odczytywanie i interpretowanie danych przedstawionych w różnej formie oraz ich przetwarzanie.",
+    "specific": "XIII. Odczytywanie danych i elementy statystyki opisowej. Uczeń: 1) interpretuje dane przedstawione za pomocą tabel […].",
+    "area": "Odczytywanie danych i elementy statystyki opisowej",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "ma-78-XIII.3",
+    "subjectId": "matematyka",
+    "general": "III. Wykorzystanie i interpretowanie reprezentacji. 1. Używanie prostych, dobrze znanych obiektów matematycznych, interpretowanie pojęć matematycznych i operowanie obiektami matematycznymi.",
+    "specific": "XIII. Odczytywanie danych i elementy statystyki opisowej. Uczeń: 3) oblicza średnią arytmetyczną kilku liczb.",
+    "area": "Odczytywanie danych i elementy statystyki opisowej",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "ma-gen-I",
+    "subjectId": "matematyka",
+    "general": "I. Sprawność rachunkowa.\n1. Wykonywanie nieskomplikowanych obliczeń w pamięci lub pisemnie oraz wykorzystanie tych umiejętności w sytuacjach praktycznych.",
+    "area": "Sprawność rachunkowa. 1. Wykonywanie nieskomplikowanych obliczeń w pamięci lub pisemnie oraz wykorzystanie tych umiejętności w sytuacjach praktycznych"
+  },
+  {
+    "id": "ma-gen-II",
+    "subjectId": "matematyka",
+    "general": "II. Wykorzystanie i tworzenie informacji. 3. Używanie języka matematycznego do opisu rozumowania i uzyskanych wyników.",
+    "area": "Wykorzystanie i tworzenie informacji. 3. Używanie języka matematycznego do opisu rozumowania i uzyskanych wyników"
+  },
+  {
+    "id": "ma-gen-III",
+    "subjectId": "matematyka",
+    "general": "III. Wykorzystanie i interpretowanie reprezentacji. 2. Dobieranie modelu matematycznego do prostej sytuacji oraz budowanie go w różnych kontekstach, także w kontekście praktycznym.",
+    "area": "Wykorzystanie i interpretowanie reprezentacji. 2. Dobieranie modelu matematycznego do prostej sytuacji oraz budowanie go w różnych kontekstach, także w kontekście praktycznym"
+  },
+  {
+    "id": "ma-gen-IV",
+    "subjectId": "matematyka",
+    "general": "IV. Rozumowanie i argumentacja. 1. Przeprowadzanie prostego rozumowania, podawanie argumentów uzasadniających poprawność rozumowania, rozróżnianie dowodu od przykładu.",
+    "area": "Rozumowanie i argumentacja. 1. Przeprowadzanie prostego rozumowania, podawanie argumentów uzasadniających poprawność rozumowania, rozróżnianie dowodu od przykładu"
+  }
+]

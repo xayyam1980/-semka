@@ -1,0 +1,3 @@
+{
+  "6": "The two boxes in the sentences (A | B and C | D) are answer slots, not figures. Return no figures for this task and write the slots in the text as [[A|B]] and [[C|D]]."
+}

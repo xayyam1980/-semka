@@ -1,0 +1,338 @@
+{
+  "sessionId": "matematyka-2026-05-glowny",
+  "at": "2026-11-16T23:59:09.255Z",
+  "model": "qwen · qwen3.8-max · token-plan.maas.qwencloudapi.com",
+  "segmentation": {
+    "sheetTasks": 20,
+    "sheetPoints": 30,
+    "keyTasks": 20,
+    "keyPoints": 30,
+    "problems": []
+  },
+  "tasks": [
+    {
+      "number": 1,
+      "problems": [],
+      "notes": [
+        "Przypis 2 w kluczu: „Odpowiedzi w wersji Y dotyczą wyłącznie arkusza OMAP-100-2605.” – otrzymany arkusz nosi kod OMAP-100-2605, zatem odpowiedź D (wersja Y) odnosi się do tego arkusza, a odpowiedź A (wersja X) do innego wariantu arkusza."
+      ],
+      "usage": {
+        "input": 7237,
+        "output": 4052,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 2,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 7237,
+        "output": 2132,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 3,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 8112,
+        "output": 2819,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 4,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 7137,
+        "output": 2179,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 5,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 7227,
+        "output": 2771,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 6,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 7345,
+        "output": 5992,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 7,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 8365,
+        "output": 1970,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 8,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 7035,
+        "output": 5256,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 9,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 7009,
+        "output": 4262,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 10,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 8154,
+        "output": 2313,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 11,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 7074,
+        "output": 2849,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 12,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 8220,
+        "output": 4415,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 13,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 6879,
+        "output": 3322,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 14,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9832,
+        "output": 2932,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 15,
+      "problems": [],
+      "notes": [
+        "Klucz nie rozróżnia wersji X i Y dla tego zadania otwartego; podano jeden wpis keys (wersja X).",
+        "W IV sposobie rysunek pasków ilustrujących zależności między liczbami kartek zastąpono opisem w nawiasach kwadratowych; tabelę z V sposobu przepisano jako tabelę Markdown."
+      ],
+      "usage": {
+        "input": 13628,
+        "output": 11941,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 16,
+      "problems": [],
+      "notes": [
+        "Klucz nie rozróżnia wersji X i Y dla tego zadania otwartego; podano jeden wpis keys z wersją X.",
+        "Ramka z kratką na rozwiązania na stronie 3 arkusza to miejsce na odpowiedź ucznia, nie rysunek zadania, dlatego nie uwzględniono jej jako figura."
+      ],
+      "usage": {
+        "input": 13626,
+        "output": 12172,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 17,
+      "problems": [],
+      "notes": [
+        "Klucz nie wyróżnia wersji X/Y dla tego zadania otwartego; podano jeden wpis keys[] z wersją X.",
+        "Przykładowe rozwiązanie I sposób zaczyna się na stronie 18 klucza (image 0) i kończy na stronie 19 (image 1); jako keyImageIndex exemplara podano stronę początkową."
+      ],
+      "usage": {
+        "input": 10125,
+        "output": 5904,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 18,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 11249,
+        "output": 7574,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 19,
+      "problems": [],
+      "notes": [
+        "Klucz dla zadania 19 nie rozróżnia wersji X i Y arkusza; podano jeden wpis keys z wersją X."
+      ],
+      "usage": {
+        "input": 10323,
+        "output": 5151,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 20,
+      "problems": [],
+      "notes": [
+        "Klucz nie rozróżnia wersji X/Y dla tego zadania otwartego; podano jeden wpis keys z wersją X i rozwiązaniem wzorcowym (I sposób).",
+        "Przykładowe rozwiązanie „II sposób” zaczyna się na stronie 25 klucza (obraz 1) i kończy na stronie 26 (obraz 2); jako keyImageIndex podano 1, treść obejmuje obie strony.",
+        "Rysunki pomocnicze w przykładowych rozwiązaniach klucza (z zaznaczonymi długościami 9, 3, 3 i zacieniowanym trójkątem) nie zostały odwzorowane; opisano je słownie w treści rozwiązań."
+      ],
+      "usage": {
+        "input": 10140,
+        "output": 9797,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "Matches the content schema",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Task points add up to the session total",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Each task equals the sum of its items",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Task numbers run 1…N without gaps",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every item has a key for each usable sheet version",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Choice keys point to options that exist",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Levels go from the item's points down to 0",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every item has a skill tag, and every tag has an area",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Page references are within the files",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every figure file exists",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every image in the text points to an existing figure",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Stimuli referenced by tasks exist",
+      "ok": true,
+      "details": []
+    }
+  ],
+  "ok": true,
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

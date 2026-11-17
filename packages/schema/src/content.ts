@@ -125,6 +125,8 @@ export const Item = z.object({
   skillTags: z.array(z.string()).optional(),
   explanation: z.string().optional(),
   exemplars: z.array(Exemplar).optional(),
+  /** The key's "Uwaga" remarks on scoring, e.g. how unit errors are treated. Shown during self-grading. */
+  scoringNotes: z.array(z.string()).optional(),
 });
 export type Item = z.infer<typeof Item>;
 
