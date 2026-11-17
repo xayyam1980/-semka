@@ -11,6 +11,11 @@ import { runTour } from "./smoke-tour";
 import { applyTheme, windowBackground } from "./theme";
 
 // Figures and other session assets are served to the window from osemka-content://<session>/<path>.
+// Playing audio (listening tasks, the sound test) makes Chromium listen for the keyboard's media keys system-wide,
+// and macOS then asks for "Input Monitoring" ("receive keystrokes from any application"). The app never uses media
+// keys, so that listener is switched off; keys inside the window work as before.
+app.commandLine.appendSwitch("disable-features", "HardwareMediaKeyHandling,MediaSessionService");
+
 protocol.registerSchemesAsPrivileged([{ scheme: "osemka-content", privileges: { standard: true, secure: true, supportFetchAPI: true } }]);
 
 /** content/ next to the repository in development; inside the installed app's resources later (P9). */
