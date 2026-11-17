@@ -8,6 +8,17 @@ executableName: Osemka
 npmRebuild: false
 # Installers are attached by hand or downloaded from CI artifacts; never published automatically.
 publish: null
+# Electron fuses: switch off what the app does not use (Electron security checklist, "Check which fuses you can change").
+electronFuses:
+  runAsNode: false                            # the binary cannot be used as a plain Node.js (ELECTRON_RUN_AS_NODE)
+  enableNodeOptionsEnvironmentVariable: false # NODE_OPTIONS / NODE_EXTRA_CA_CERTS ignored
+  enableNodeCliInspectArguments: false        # no --inspect debugger on the installed app
+  enableCookieEncryption: true
+  enableEmbeddedAsarIntegrityValidation: true # app.asar is checked against the hash in the signed binary
+  onlyLoadAppFromAsar: true                   # …and nothing else can be loaded in its place
+  # Still needed: the window is loaded from file:// and its scripts are ES modules. Turn off after moving the
+  # window to the app's own protocol.
+  grantFileProtocolExtraPrivileges: true
 directories:
   output: release
   buildResources: build

@@ -1,8 +1,8 @@
 // S1 Pulpit: how ready am I, what should I do now, where am I losing points.
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router";
-import { SUBJECTS, type SubjectId } from "@osemka/schema";
-import type { AppInfo, AttemptSummary, Overview, SessionSummary } from "../../../shared/ipc";
+import { NEXT_EXAM, SUBJECTS, type SubjectId } from "@osemka/schema";
+import type { AppInfo, AttemptSummary, Overview, ReviewOverview, SessionSummary } from "../../../shared/ipc";
 import { Delta, Meter, Sparkline, StatusTag } from "../components/Charts";
 import { plural, sessionLabel, shortDate, SUBJECT_TONE } from "../lib/format";
 
@@ -29,13 +29,20 @@ export function Dashboard() {
   const [attempts, setAttempts] = useState<AttemptSummary[]>([]);
   const [sessions, setSessions] = useState<SessionSummary[]>([]);
   const [ov, setOv] = useState<Overview | null>(null);
+  const [review, setReview] = useState<ReviewOverview | null>(null);
   const practice = usePracticeArea();
+  const navigate = useNavigate();
   useEffect(() => {
     void window.osemka.appInfo().then(setInfo);
     void window.osemka.listSessions().then(setSessions);
     void window.osemka.listAttempts().then(setAttempts);
     void window.osemka.analyticsOverview().then(setOv);
+    void window.osemka.reviewOverview().then(setReview);
   }, []);
+  const startReview = async (sessionId: string) => {
+    const id = await window.osemka.practiceReview(sessionId);
+    if (id) navigate(`/proba/${id}`);
+  };
 
   // Finished attempts with open tasks still waiting for self-grading.
   const toGrade = attempts.filter((a) => a.status === "submitted" && a.pending > 0);
@@ -49,6 +56,7 @@ export function Dashboard() {
     <section className="flex flex-col gap-6">
       <div>
         <h1 className="text-4xl font-bold">Pulpit</h1>
+        <Countdown />
         {ov && !ov.hasData && <p className="text-muted">Tu zobaczysz swoją gotowość do egzaminu i to, gdzie tracisz punkty.</p>}
       </div>
 
@@ -92,6 +100,48 @@ export function Dashboard() {
               </li>
             ))}
           </ul>
+        </article>
+      )}
+
+      {review && (review.due > 0 || review.inReview > 0) && (
+        <article className="card flex flex-col gap-3 rounded-[10px] border border-line bg-surface p-5" data-testid="review">
+          <div className="flex flex-wrap items-baseline gap-3">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-muted">Powtórka błędów</h2>
+            <span className="text-sm text-muted">
+              Zadania z błędem wracają po 1, 3, 7 i 21 dniach. Opanowane: {review.mastered}.
+            </span>
+          </div>
+          {review.due > 0 ? (
+            <>
+              <p className="text-lg">
+                Dziś do powtórzenia: <b>{review.due}</b> {plural(review.due, "zadanie", "zadania", "zadań")}.
+              </p>
+              <ul className="flex list-none flex-col gap-2 p-0">
+                {review.groups.map((g) => (
+                  <li key={g.sessionId} className="flex flex-wrap items-center gap-3">
+                    <span className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${SUBJECT_TONE[g.subjectId]!.bg} ${SUBJECT_TONE[g.subjectId]!.fg}`}>{SUBJECT_TONE[g.subjectId]!.tag}</span>
+                    <span className="font-bold">{label(g.sessionId)}</span>
+                    <span className="text-sm text-muted">
+                      {g.items} {plural(g.items, "pytanie", "pytania", "pytań")} w {g.taskIds.length} {plural(g.taskIds.length, "zadaniu", "zadaniach", "zadaniach")}
+                    </span>
+                    <button className="btn primary ml-auto" onClick={() => void startReview(g.sessionId)} data-testid="review-start">
+                      Powtórz
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : (
+            <p className="text-[15px]">
+              Na dziś wszystko powtórzone.{" "}
+              {review.next && (
+                <span className="text-muted">
+                  Następna powtórka: {dayLabel(review.next)}
+                  {review.week > 0 ? ` (w tym tygodniu ${review.week} ${plural(review.week, "pytanie", "pytania", "pytań")})` : ""}.
+                </span>
+              )}
+            </p>
+          )}
         </article>
       )}
 
@@ -267,4 +317,31 @@ export function Dashboard() {
       </details>
     </section>
   );
+}
+
+const DAY = 86_400_000;
+
+/** "Do egzaminu zostało 173 dni": days until the first exam day of the next main term (Polish). */
+function Countdown() {
+  const dates = Object.values(NEXT_EXAM).map((d) => Date.parse(d)).sort((x, y) => x - y);
+  const first = dates[0]!, last = dates.at(-1)!;
+  const days = Math.ceil((first - Date.now()) / DAY);
+  if (days < 0) return null;
+  // "10–12 maja 2027" from the dates themselves (shortDate gives "10 maja, 09:00").
+  const [d1, month] = shortDate(new Date(first).toISOString()).split(",")[0]!.split(" ");
+  const d2 = new Date(last).getDate();
+  const range = `${d1}${String(d2) !== d1 ? `–${d2}` : ""} ${month} ${new Date(first).getFullYear()}`;
+  return (
+    <p className="text-muted" data-testid="countdown">
+      {days === 0 ? "Egzamin zaczyna się dziś." : `Do egzaminu ${plural(days, "został", "zostały", "zostało")} ${days} ${days === 1 ? "dzień" : "dni"}`}
+      {days > 0 && ` (${range}: polski, matematyka, angielski).`}
+    </p>
+  );
+}
+
+/** "dziś", "jutro" or "19 listopada" for a date. */
+function dayLabel(iso: string): string {
+  const d = new Date(iso), today = new Date();
+  const days = Math.round((new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime() - new Date(today.getFullYear(), today.getMonth(), today.getDate()).getTime()) / DAY);
+  return days <= 0 ? "dziś" : days === 1 ? "jutro" : shortDate(iso).split(",")[0]!;
 }

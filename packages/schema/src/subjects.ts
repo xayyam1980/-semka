@@ -10,6 +10,15 @@ export const SUBJECTS: Readonly<Record<SubjectId, Subject>> = {
   angielski: { id: "angielski", name: "Język angielski", examCode: "OJAP", standardMinutes: 110, extendedMinutesDefault: 145 },
 };
 
+/**
+ * Main term of the next exam (harmonogram CKE 2026/2027: 10, 11 and 12 May 2027, 9:00). Update each school year.
+ */
+export const NEXT_EXAM: Readonly<Record<SubjectId, string>> = {
+  polski: "2027-05-10T09:00:00+02:00",
+  matematyka: "2027-05-11T09:00:00+02:00",
+  angielski: "2027-05-12T09:00:00+02:00",
+};
+
 /** Source folder name → subject. Compared in NFC, see paths.ts. */
 export const SUBJECT_FOLDERS: Readonly<Record<string, SubjectId>> = {
   "Język polski": "polski",

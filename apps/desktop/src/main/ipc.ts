@@ -7,6 +7,7 @@ import { IPC, type AppInfo, type Scope } from "../shared/ipc";
 import type { AiService } from "./ai";
 import { overview, practicePlan, subjectAnalysis } from "./analytics";
 import { clearHistory, exportCsv, exportJson } from "./data";
+import { dueGroups, reviewState, reviewSummary } from "./review";
 import type { AttemptService } from "./attempts";
 import type { ContentStore } from "./content";
 import { readSettings, writeSettings, type Db } from "./db";
@@ -84,6 +85,24 @@ export function registerIpc(ctx: { db: Db; dbFile: string; runs: number; content
     };
     const res = win ? await dialog.showMessageBox(win, options) : await dialog.showMessageBox(options);
     return res.response === 1 ? clearHistory(ctx.db) : null;
+  });
+  // Essays and other long writing are not repeated as review items.
+  const reviewable = (itemId: string) => {
+    for (const s of content.list()) {
+      const item = content.get(s.id)!.tasks.flatMap((t) => t.items).find((i) => i.id === itemId);
+      if (item) return item.response.type !== "extended_text";
+    }
+    return false;
+  };
+  ipcMain.handle(IPC.reviewOverview, () => {
+    const now = Date.now();
+    const state = reviewState(at.facts(), reviewable);
+    return { ...reviewSummary(state, now), groups: dueGroups(state, now) };
+  });
+  ipcMain.handle(IPC.practiceReview, (_e, sessionId: unknown) => {
+    const id = str(sessionId, "session id");
+    const group = dueGroups(reviewState(at.facts(), reviewable), Date.now()).find((g) => g.sessionId === id);
+    return group ? at.startPractice(id, { taskIds: group.taskIds }).summary.id : null;
   });
   ipcMain.handle(IPC.analyticsOverview, () => overview(at.facts(), Date.now()));
   ipcMain.handle(IPC.analyticsSubject, (_e, subjectId: unknown, opts: unknown) => {

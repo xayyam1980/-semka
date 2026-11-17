@@ -124,6 +124,18 @@ export interface SubjectAnalysis {
   improved: { area: string; from: number; to: number; n: number }[];
 }
 
+/** Spaced review of mistakes: counts, and what is due now grouped by session. */
+export interface ReviewOverview {
+  due: number;
+  /** Due within the next 7 days (not yet due). */
+  week: number;
+  inReview: number;
+  mastered: number;
+  /** When the next not-yet-due item comes back. */
+  next: string | null;
+  groups: { sessionId: string; subjectId: SubjectId; taskIds: string[]; items: number }[];
+}
+
 export type Scope = "all" | "closed" | "open" | { taskIds: string[] };
 
 export interface AttemptSummary {
@@ -230,6 +242,10 @@ export interface OsemkaApi {
   listAttempts(sessionId?: string): Promise<AttemptSummary[]>;
   /** P7: readiness, next step, subject cards and the top gaps. */
   analyticsOverview(): Promise<Overview>;
+  /** Spaced review of mistakes: what is due now and later. */
+  reviewOverview(): Promise<ReviewOverview>;
+  /** Starts a practice attempt with the due review tasks of one session; returns the attempt id, or null. */
+  practiceReview(sessionId: string): Promise<string | null>;
   /** P8: asks where to save, then writes the history; resolves to the file path, or null if cancelled. */
   exportHistory(format: "json" | "csv"): Promise<string | null>;
   /** P8: asks for confirmation in a system dialog, then deletes every attempt; resolves to the number deleted, or null. */
@@ -268,6 +284,8 @@ export const IPC = {
   getRecording: "content:recording",
   listAttempts: "attempt:list",
   analyticsOverview: "analytics:overview",
+  reviewOverview: "review:overview",
+  practiceReview: "review:practice",
   exportHistory: "data:export",
   clearHistory: "data:clear",
   analyticsSubject: "analytics:subject",
