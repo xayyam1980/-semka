@@ -6,7 +6,7 @@ import { AttemptService } from "../src/main/attempts";
 import { openContent, type ContentStore } from "../src/main/content";
 import { clearHistory, exportCsv, exportJson } from "../src/main/data";
 import { openDb, readSettings, writeSettings, type Db } from "../src/main/db";
-import { itemScores, responses } from "../src/main/db/schema";
+import { itemScores, responses, settings as settingsTable } from "../src/main/db/schema";
 
 const migrations = resolve(__dirname, "../drizzle");
 const contentRoot = resolve(__dirname, "../../../content");
@@ -64,5 +64,18 @@ describe("export and clear history", () => {
     expect(db.select().from(responses).all()).toEqual([]);
     expect(db.select().from(itemScores).all()).toEqual([]);
     expect(readSettings(db).extendedTime).toBe(true);
+  });
+});
+
+describe("settings migration", () => {
+  it("moves untouched pre-2027 extended-time defaults (225/185/165) to the CKE 2027 maximum (195/165/145)", () => {
+    db.insert(settingsTable).values({ id: 1, json: JSON.stringify({ extendedTime: true, extendedMinutes: { polski: 225, matematyka: 185, angielski: 165 } }), updatedAt: "2026-11-01T00:00:00Z" }).run();
+    expect(readSettings(db).extendedMinutes).toEqual({ polski: 195, matematyka: 165, angielski: 145 });
+    expect(readSettings(db).extendedTime).toBe(true);
+  });
+
+  it("keeps values the student chose", () => {
+    writeSettings(db, { extendedMinutes: { polski: 180, matematyka: 150, angielski: 130 } });
+    expect(readSettings(db).extendedMinutes).toEqual({ polski: 180, matematyka: 150, angielski: 130 });
   });
 });

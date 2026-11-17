@@ -140,7 +140,7 @@ export function SettingsScreen() {
           ))}
         </div>
         <p className="text-sm text-muted">
-          Domyślnie najdłuższe wydłużenie z komunikatu CKE o dostosowaniach (polski +75, matematyka +60, angielski +55 min). Ustaw tyle, ile przysługuje Ci na egzaminie. Zmiana dotyczy nowych symulacji.
+          Domyślnie najdłuższe wydłużenie z komunikatu CKE o dostosowaniach na 2027 r. (polski +45, matematyka +40, angielski +35 min). Ustaw tyle, ile przysługuje Ci na egzaminie. Zmiana dotyczy nowych symulacji.
         </p>
         <label className="flex items-start gap-2">
           <input type="checkbox" className="mt-1" checked={settings.dyslexiaCriteria} onChange={(e) => void update({ dyslexiaCriteria: e.target.checked })} id="dyslexia-criteria" />

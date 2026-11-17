@@ -31,7 +31,11 @@ export function recordRun(db: Db, appVersion: string, platform: string): number 
 
 export function readSettings(db: Db): StudentSettings {
   const row = db.select().from(schema.settings).where(eq(schema.settings.id, 1)).get();
-  const parsed = StudentSettings.safeParse(row ? JSON.parse(row.json) : {});
+  const raw = row ? (JSON.parse(row.json) as Record<string, unknown>) : {};
+  // Up to 0.1: defaults of 225/185/165 min, above the 2027 CKE maximum (195/165/145). Untouched old defaults move to the new ones.
+  const m = raw.extendedMinutes as Record<string, number> | undefined;
+  if (m && m.polski === 225 && m.matematyka === 185 && m.angielski === 165) raw.extendedMinutes = { polski: 195, matematyka: 165, angielski: 145 };
+  const parsed = StudentSettings.safeParse(raw);
   // A damaged or older settings row falls back to defaults instead of breaking the app.
   return parsed.success ? parsed.data : StudentSettings.parse({});
 }

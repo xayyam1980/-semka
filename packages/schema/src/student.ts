@@ -21,7 +21,7 @@ export const StudentSettings = z.object({
   // Defaults to confirm against the current CKE accommodations notice.
   extendedMinutes: z
     .record(SubjectId, z.number().int().positive())
-    .default({ polski: 225, matematyka: 185, angielski: 165 }),
+    .default({ polski: 195, matematyka: 165, angielski: 145 }),
   dyslexiaCriteria: z.boolean().default(false),
   defaultPlaybackRate: z.union([z.literal(0.75), z.literal(0.9), z.literal(1)]).default(1),
   /** Starting volume of recordings, 0–1. */

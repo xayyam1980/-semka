@@ -42,9 +42,9 @@ describe("simulation timing", () => {
   it("uses extended time from settings and snapshots it", () => {
     settings = StudentSettings.parse({ extendedTime: true });
     const v = service().startSimulation(SESSION);
-    expect(v.timing).toMatchObject({ timeLimitMin: 185, extendedTime: true, deadlineAt: new Date(START + 185 * MIN).toISOString() });
+    expect(v.timing).toMatchObject({ timeLimitMin: 165, extendedTime: true, deadlineAt: new Date(START + 165 * MIN).toISOString() });
     settings = StudentSettings.parse({}); // turning it off later does not change a running exam
-    expect(service().view(v.summary.id)!.timing.timeLimitMin).toBe(185);
+    expect(service().view(v.summary.id)!.timing.timeLimitMin).toBe(165);
   });
 
   it("starting again resumes the running simulation instead of a fresh clock", () => {

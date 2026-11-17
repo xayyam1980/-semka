@@ -70,6 +70,6 @@ describe("student settings", () => {
   it("fills defaults from an empty object", () => {
     const s = StudentSettings.parse({});
     expect(s.theme).toBe("system");
-    expect(s.extendedMinutes).toEqual({ polski: 225, matematyka: 185, angielski: 165 });
+    expect(s.extendedMinutes).toEqual({ polski: 195, matematyka: 165, angielski: 145 });
   });
 });
