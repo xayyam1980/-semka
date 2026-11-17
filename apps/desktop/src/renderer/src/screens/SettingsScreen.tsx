@@ -1,4 +1,5 @@
 import type { Theme } from "@osemka/schema";
+import { AiSettingsCard } from "../components/AiSettingsCard";
 import { useSettings } from "../settings";
 
 const THEMES: { value: Theme; label: string }[] = [
@@ -35,6 +36,7 @@ export function SettingsScreen() {
           ))}
         </div>
       </fieldset>
+      <AiSettingsCard />
       <p className="text-sm text-muted">Rozmiar tekstu, dostosowania egzaminacyjne i kopia zapasowa pojawią się w etapie P8.</p>
     </section>
   );

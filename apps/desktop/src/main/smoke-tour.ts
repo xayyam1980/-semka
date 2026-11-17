@@ -75,6 +75,13 @@ export async function runTour(win: BrowserWindow, outDir: string): Promise<strin
   await click('[data-level="3"]');
   await wait(500);
   await shot("symulacja-przeglad-ocena");
+
+  // AI settings: choose a provider (no key is saved in the tour).
+  await go("#/ustawienia");
+  await click("#ai-openai-compatible");
+  await wait(400);
+  await shot("ustawienia-ai");
+  await click("#ai-off");
   return shots;
 }
 

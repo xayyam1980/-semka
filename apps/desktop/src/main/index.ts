@@ -1,7 +1,9 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { extname, join } from "node:path";
 import { app, BrowserWindow, dialog, protocol, shell } from "electron";
+import { AiService } from "./ai";
 import { AttemptService } from "./attempts";
+import { electronCipher, SecretStore } from "./secrets";
 import { openContent } from "./content";
 import { migrationsPath, openDb, readSettings, recordRun } from "./db";
 import { registerIpc } from "./ipc";
@@ -90,7 +92,7 @@ function createWindow(): BrowserWindow {
   return win;
 }
 
-app.whenReady().then(() => {
+app.whenReady().then(async () => {
   const dbFile = join(userData, "osemka.db");
   const { db, close } = openDb(dbFile, migrationsPath(app.getAppPath()));
   const runs = recordRun(db, app.getVersion(), process.platform);
@@ -101,7 +103,8 @@ app.whenReady().then(() => {
     settings: () => readSettings(db),
     ...(devSeconds && devSeconds > 0 ? { devSimulationSeconds: devSeconds } : {}),
   });
-  registerIpc({ db, dbFile, runs, content, attemptService });
+  const ai = new AiService(new SecretStore(db, await electronCipher()), () => readSettings(db).ai);
+  registerIpc({ db, dbFile, runs, content, attemptService, ai });
 
   protocol.handle("osemka-content", (req) => {
     const url = new URL(req.url);

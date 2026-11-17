@@ -3,7 +3,8 @@ import { randomUUID } from "node:crypto";
 import { and, desc, eq } from "drizzle-orm";
 import { ResponseValue, SUBJECTS, type Item, type ItemScore, type SessionBundle, type SheetVersion, type StudentSettings } from "@osemka/schema";
 import { scoreAttempt, scoreItem, validateLevel, type AttemptTotals } from "@osemka/scoring";
-import type { AttemptSummary, AttemptView, CheckResult, SavedResponse, Scope } from "../shared/ipc";
+import type { AiSuggestion, AttemptSummary, AttemptView, CheckResult, SavedResponse, Scope } from "../shared/ipc";
+import type { AiService } from "./ai";
 import type { ContentStore } from "./content";
 import type { Db } from "./db";
 import { attempts, itemScores, responses } from "./db/schema";
@@ -191,20 +192,55 @@ export class AttemptService {
   }
 
   /** Self-grading of an open item: in practice after showing the solution, in a simulation after submitting. */
-  gradeItem(attemptId: string, itemId: string, points: number): void {
+  /** Grading (and AI suggestions) is allowed in practice after showing the solution, in a simulation after submitting. */
+  private assertCanGrade(attemptId: string, itemId: string) {
     const a = this.enforceDeadline(attemptId);
     const item = this.item(this.bundle(a.sessionId), itemId);
-    const problem = validateLevel(item, points);
-    if (problem) throw new Error(problem);
     if (a.mode === "symulacja") {
       if (a.status === "in_progress") throw new Error("Grade yourself after submitting");
     } else {
       const r = this.db.select().from(responses).where(and(eq(responses.attemptId, attemptId), eq(responses.itemId, itemId))).get();
       if (!r?.checkedAt && a.status === "in_progress") throw new Error("Show the solution before grading");
     }
-    this.upsertScore(attemptId, itemId, { points, source: "self" });
+    return { a, item };
+  }
+
+  private scoreRow(attemptId: string, itemId: string) {
+    return this.db.select().from(itemScores).where(and(eq(itemScores.attemptId, attemptId), eq(itemScores.itemId, itemId))).get();
+  }
+
+  private suggestionOf(row: { data: string | null } | undefined): AiSuggestion | undefined {
+    if (!row?.data) return undefined;
+    return (JSON.parse(row.data) as { aiSuggestion?: AiSuggestion }).aiSuggestion;
+  }
+
+  gradeItem(attemptId: string, itemId: string, points: number): void {
+    const { a, item } = this.assertCanGrade(attemptId, itemId);
+    const problem = validateLevel(item, points);
+    if (problem) throw new Error(problem);
+    // Where the points came from: the student alone, or after an AI suggestion (taken or not).
+    const row = this.scoreRow(attemptId, itemId);
+    const sug = this.suggestionOf(row);
+    const source = !sug ? "self" : sug.points === points ? "ai_accepted" : "self_over_ai";
+    this.upsertScore(attemptId, itemId, { points, source, ...(row?.data ? { data: row.data } : {}) });
     // A submitted attempt becomes "graded" once nothing is pending.
     if (a.status === "submitted" && this.totals(attemptId).pending === 0) this.db.update(attempts).set({ status: "graded" }).where(eq(attempts.id, attemptId)).run();
+  }
+
+  /** Asks the AI for a suggested level. Stored as advice; points change only when the student grades. */
+  async suggestGrade(attemptId: string, itemId: string, ai: AiService): Promise<AiSuggestion> {
+    const { a } = this.assertCanGrade(attemptId, itemId);
+    const b = this.bundle(a.sessionId);
+    const task = b.tasks.find((t) => t.items.some((i) => i.id === itemId))!;
+    const item = this.item(b, itemId);
+    const r = this.db.select().from(responses).where(and(eq(responses.attemptId, attemptId), eq(responses.itemId, itemId))).get();
+    const value = r?.value ? ResponseValue.parse(JSON.parse(r.value)) : null;
+    const suggestion = await ai.suggest(task, item, value);
+    const row = this.scoreRow(attemptId, itemId);
+    const data = JSON.stringify({ ...(row?.data ? JSON.parse(row.data) : {}), aiSuggestion: suggestion });
+    if (row) this.db.update(itemScores).set({ data }).where(and(eq(itemScores.attemptId, attemptId), eq(itemScores.itemId, itemId))).run();
+    else this.upsertScore(attemptId, itemId, { points: null, source: "ai_suggested", data });
+    return suggestion;
   }
 
   /** Practice: "Zakończ". Simulation: "Oddaj". */
@@ -239,11 +275,11 @@ export class AttemptService {
         flagged: r.flagged,
         timeSpentMs: r.timeSpentMs,
         ...(r.checkedAt ? { checkedAt: r.checkedAt, check: this.reveal(item, a.version as SheetVersion, scoreItem(item, value, a.version as SheetVersion)) } : {}),
-        ...(score && score.source !== "auto" ? { selfPoints: score.points } : {}),
+        ...gradeFields(score, this.suggestionOf(score)),
       };
     }
     // Self-grades for items that have no saved response row (e.g. graded blank in review).
-    for (const [itemId, s] of scores) if (!out[itemId] && s.source !== "auto") out[itemId] = { value: null, flagged: false, timeSpentMs: 0, selfPoints: s.points };
+    for (const [itemId, s] of scores) if (!out[itemId] && s.source !== "auto") out[itemId] = { value: null, flagged: false, timeSpentMs: 0, ...gradeFields(s, this.suggestionOf(s)) };
     const totals = this.totals(attemptId);
     const answered = new Set(saved.filter((r) => r.value !== null).map((r) => r.itemId));
     return {
@@ -307,14 +343,14 @@ export class AttemptService {
         .from(itemScores)
         .where(eq(itemScores.attemptId, attemptId))
         .all()
-        .filter((s) => s.source !== "auto")
+        .filter((s) => s.source !== "auto" && s.source !== "ai_suggested")
         .map((s) => [s.itemId, { points: s.points, source: s.source as ItemScore["source"] }]),
     );
     return scoreAttempt(tasks, values, a.version as SheetVersion, grades);
   }
 
-  private upsertScore(attemptId: string, itemId: string, s: { points: number | null; source: string; autoResult?: string }): void {
-    const values = { attemptId, itemId, points: s.points, source: s.source, autoResult: s.autoResult ?? null, gradedAt: this.iso() };
+  private upsertScore(attemptId: string, itemId: string, s: { points: number | null; source: string; autoResult?: string; data?: string }): void {
+    const values = { attemptId, itemId, points: s.points, source: s.source, autoResult: s.autoResult ?? null, data: s.data ?? null, gradedAt: this.iso() };
     this.db.insert(itemScores).values(values).onConflictDoUpdate({ target: [itemScores.attemptId, itemScores.itemId], set: values }).run();
   }
 
@@ -331,4 +367,14 @@ export class AttemptService {
       },
     };
   }
+}
+
+const GRADE_SOURCES = new Set(["self", "ai_accepted", "self_over_ai"]);
+
+/** The student's grade (if any), its source, and the AI suggestion (if any), for the window. */
+function gradeFields(score: { points: number | null; source: string } | undefined, suggestion: AiSuggestion | undefined): Partial<SavedResponse> {
+  return {
+    ...(score && GRADE_SOURCES.has(score.source) ? { selfPoints: score.points, gradeSource: score.source as SavedResponse["gradeSource"] } : {}),
+    ...(suggestion ? { aiSuggestion: suggestion } : {}),
+  };
 }

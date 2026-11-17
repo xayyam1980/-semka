@@ -2,7 +2,7 @@
 import type { ResponseValue } from "@osemka/schema";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router";
-import type { AttemptView, CheckResult, PublicSession, PublicTask } from "../../../shared/ipc";
+import type { AiSuggestion, AttemptView, CheckResult, PublicSession, PublicTask, SavedResponse } from "../../../shared/ipc";
 import { AnswerInput, hasAnswer } from "../components/AnswerInput";
 import { Feedback } from "../components/Feedback";
 import { Rich, type RichContext } from "../components/Rich";
@@ -20,6 +20,9 @@ export function PracticePlayer() {
   const [checks, setChecks] = useState<Record<string, CheckResult>>({});
   const [selfPoints, setSelfPoints] = useState<Record<string, number | null>>({});
   const [flags, setFlags] = useState<Record<string, boolean>>({});
+  const [aiReady, setAiReady] = useState(false);
+  const [suggestions, setSuggestions] = useState<Record<string, AiSuggestion>>({});
+  const [sources, setSources] = useState<Record<string, SavedResponse["gradeSource"]>>({});
   const [index, setIndex] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [elapsed, setElapsed] = useState(0);
@@ -42,6 +45,9 @@ export function PracticePlayer() {
       setChecks(Object.fromEntries(Object.entries(v.responses).flatMap(([k, r]) => (r.check ? [[k, r.check]] : []))));
       setSelfPoints(Object.fromEntries(Object.entries(v.responses).flatMap(([k, r]) => (r.selfPoints !== undefined ? [[k, r.selfPoints]] : []))));
       setFlags(Object.fromEntries(Object.entries(v.responses).map(([k, r]) => [k, r.flagged])));
+      setSuggestions(Object.fromEntries(Object.entries(v.responses).flatMap(([k, r]) => (r.aiSuggestion ? [[k, r.aiSuggestion]] : []))));
+      setSources(Object.fromEntries(Object.entries(v.responses).flatMap(([k, r]) => (r.gradeSource ? [[k, r.gradeSource]] : []))));
+      setAiReady((await window.osemka.getAiStatus()).ready);
       // Resume at the first task not yet checked.
       const tasksInScope = v.taskIds.map((id) => s.tasks.find((t) => t.id === id)!);
       const firstOpen = tasksInScope.findIndex((t) => t.items.some((i) => !v.responses[i.id]?.check));
@@ -108,6 +114,8 @@ export function PracticePlayer() {
     try {
       await window.osemka.gradeItem(attemptId, itemId, points);
       setSelfPoints((s) => ({ ...s, [itemId]: points }));
+      const sug = suggestions[itemId];
+      setSources((s) => ({ ...s, [itemId]: !sug ? "self" : sug.points === points ? "ai_accepted" : "self_over_ai" }));
     } catch (e) {
       setError((e as Error).message);
     }
@@ -230,7 +238,24 @@ export function PracticePlayer() {
           {allChecked && (
             <div className="flex min-w-0 flex-col gap-4">
               {task.items.map((it) => (
-                <Feedback key={it.id} item={it} check={checks[it.id]!} selfPoints={selfPoints[it.id]} onGrade={(p) => void grade(it.id, p)} ctx={ctxBase} />
+                <Feedback
+                  key={it.id}
+                  item={it}
+                  check={checks[it.id]!}
+                  selfPoints={selfPoints[it.id]}
+                  onGrade={(p) => void grade(it.id, p)}
+                  ctx={ctxBase}
+                  ai={{
+                    ready: aiReady,
+                    suggestion: suggestions[it.id],
+                    gradeSource: sources[it.id],
+                    hasText: (() => { const v = values[it.id]; return !!(v && (v.type === "work" || v.type === "essay") && v.text?.trim()); })(),
+                    onSuggest: async () => {
+                      const s = await window.osemka.suggestGrade(attemptId, it.id);
+                      setSuggestions((m) => ({ ...m, [it.id]: s }));
+                    },
+                  }}
+                />
               ))}
             </div>
           )}

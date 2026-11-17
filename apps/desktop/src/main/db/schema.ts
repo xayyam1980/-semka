@@ -68,3 +68,10 @@ export const itemScores = sqliteTable(
   },
   (t) => [primaryKey({ columns: [t.attemptId, t.itemId] })],
 );
+
+/** Secrets encrypted by the operating system (Electron safeStorage). Only the main process reads them. */
+export const secrets = sqliteTable("secrets", {
+  name: text("name").primaryKey(),
+  value: text("value").notNull(), // base64 of the encrypted bytes
+  updatedAt: text("updated_at").notNull(),
+});

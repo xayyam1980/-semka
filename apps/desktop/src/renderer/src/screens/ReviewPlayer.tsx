@@ -16,6 +16,10 @@ export function ReviewPlayer() {
   const [session, setSession] = useState<PublicSession | null>(null);
   const [review, setReview] = useState<Record<string, CheckResult>>({});
   const [error, setError] = useState<string | null>(null);
+  const [aiReady, setAiReady] = useState(false);
+  useEffect(() => {
+    void window.osemka.getAiStatus().then((s) => setAiReady(s.ready));
+  }, []);
 
   const load = useCallback(async () => {
     const v = await window.osemka.getAttempt(attemptId);
@@ -31,7 +35,9 @@ export function ReviewPlayer() {
   }, [attemptId]);
 
   const tasks: PublicTask[] = useMemo(() => (view && session ? view.taskIds.map((id) => session.tasks.find((t) => t.id === id)!).filter(Boolean) : []), [view, session]);
-  const index = Math.max(0, tasks.findIndex((t) => String(t.number) === params.get("zad")));
+  // Without ?zad=, start at the first task still waiting for self-grading.
+  const firstPending = view ? tasks.findIndex((t) => (view.tasks.find((x) => x.taskId === t.id)?.pending ?? 0) > 0) : -1;
+  const index = params.get("zad") ? Math.max(0, tasks.findIndex((t) => String(t.number) === params.get("zad"))) : Math.max(0, firstPending);
   const task = tasks[index];
   const ctx = useMemo(() => (session ? { sessionId: session.id, stimuli: session.stimuli } : null), [session]);
   const go = (i: number) => tasks[i] && setParams({ zad: String(tasks[i]!.number) }, { replace: true });
@@ -82,7 +88,26 @@ export function ReviewPlayer() {
           </article>
           <div className="flex min-w-0 flex-col gap-4">
             {task.items.map((it) =>
-              review[it.id] ? <Feedback key={it.id} item={it} check={review[it.id]!} selfPoints={view.responses[it.id]?.selfPoints} onGrade={(p) => void grade(it.id, p)} ctx={ctx} /> : null,
+              review[it.id] ? (
+                <Feedback
+                  key={it.id}
+                  item={it}
+                  check={review[it.id]!}
+                  selfPoints={view.responses[it.id]?.selfPoints}
+                  onGrade={(p) => void grade(it.id, p)}
+                  ctx={ctx}
+                  ai={{
+                    ready: aiReady,
+                    suggestion: view.responses[it.id]?.aiSuggestion,
+                    gradeSource: view.responses[it.id]?.gradeSource,
+                    hasText: (() => { const v = values[it.id]; return !!(v && (v.type === "work" || v.type === "essay") && v.text?.trim()); })(),
+                    onSuggest: async () => {
+                      await window.osemka.suggestGrade(attemptId, it.id);
+                      await load();
+                    },
+                  }}
+                />
+              ) : null,
             )}
           </div>
         </div>

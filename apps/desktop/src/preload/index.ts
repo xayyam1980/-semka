@@ -16,6 +16,10 @@ const api: OsemkaApi = {
   checkItem: (id, itemId) => ipcRenderer.invoke(IPC.checkItem, id, itemId),
   gradeItem: (id, itemId, points) => ipcRenderer.invoke(IPC.gradeItem, id, itemId, points),
   finishAttempt: (id, activeMs) => ipcRenderer.invoke(IPC.finishAttempt, id, activeMs),
+  getAiStatus: () => ipcRenderer.invoke(IPC.getAiStatus),
+  setAiKey: (key) => ipcRenderer.invoke(IPC.setAiKey, key),
+  testAi: () => ipcRenderer.invoke(IPC.testAi),
+  suggestGrade: (id, itemId) => ipcRenderer.invoke(IPC.suggestGrade, id, itemId),
 };
 
 contextBridge.exposeInMainWorld("osemka", api);

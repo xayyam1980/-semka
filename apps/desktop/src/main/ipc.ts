@@ -1,6 +1,7 @@
 import { app, ipcMain } from "electron";
 import type { StudentSettings } from "@osemka/schema";
 import { IPC, type AppInfo, type Scope } from "../shared/ipc";
+import type { AiService } from "./ai";
 import type { AttemptService } from "./attempts";
 import type { ContentStore } from "./content";
 import { readSettings, writeSettings, type Db } from "./db";
@@ -20,7 +21,7 @@ function scope(v: unknown): Scope {
   throw new Error("Invalid scope");
 }
 
-export function registerIpc(ctx: { db: Db; dbFile: string; runs: number; content: ContentStore; attemptService: AttemptService }): void {
+export function registerIpc(ctx: { db: Db; dbFile: string; runs: number; content: ContentStore; attemptService: AttemptService; ai: AiService }): void {
   const { attemptService: at, content } = ctx;
 
   ipcMain.handle(IPC.appInfo, (): AppInfo => ({
@@ -63,5 +64,12 @@ export function registerIpc(ctx: { db: Db; dbFile: string; runs: number; content
     if (typeof points !== "number" || !Number.isInteger(points)) throw new Error("Invalid points");
     at.gradeItem(str(id, "attempt id"), str(itemId, "item id"), points);
   });
+  ipcMain.handle(IPC.getAiStatus, () => ctx.ai.status());
+  ipcMain.handle(IPC.setAiKey, (_e, key: unknown) => {
+    if (key !== null && (typeof key !== "string" || key.length > 500)) throw new Error("Invalid key");
+    return ctx.ai.setKey(key);
+  });
+  ipcMain.handle(IPC.testAi, () => ctx.ai.test());
+  ipcMain.handle(IPC.suggestGrade, (_e, id: unknown, itemId: unknown) => at.suggestGrade(str(id, "attempt id"), str(itemId, "item id"), ctx.ai));
   ipcMain.handle(IPC.finishAttempt, (_e, id: unknown, activeMs: unknown) => at.finishAttempt(str(id, "attempt id"), typeof activeMs === "number" ? activeMs : 0));
 }

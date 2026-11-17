@@ -15,6 +15,7 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^1.8.0",
     "@napi-rs/canvas": "^1.1.1",
+    "@osemka/ai": "workspace:*",
     "@osemka/schema": "workspace:*",
     "katex": "^0.19.1",
     "openai": "^7.57.0",

@@ -94,6 +94,27 @@ export interface SavedResponse {
   /** Present once checked (practice) or graded. */
   check?: CheckResult;
   selfPoints?: number | null;
+  gradeSource?: "self" | "ai_accepted" | "self_over_ai";
+  aiSuggestion?: AiSuggestion;
+}
+
+export interface AiSuggestion {
+  points: number;
+  matchedPath: string | null;
+  rationale: string;
+  missing: string | null;
+  model: string;
+  at: string;
+}
+
+export interface AiStatus {
+  provider: "off" | "anthropic" | "openai-compatible";
+  baseURL?: string;
+  model?: string;
+  hasKey: boolean;
+  encryptionAvailable: boolean;
+  /** Provider chosen, key saved, address/model set where needed. */
+  ready: boolean;
 }
 
 export interface AttemptView {
@@ -150,6 +171,12 @@ export interface OsemkaApi {
   /** Self-grading of an open item in practice: points must be one of the key's levels. */
   gradeItem(attemptId: string, itemId: string, points: number): Promise<void>;
   finishAttempt(attemptId: string, activeMs: number): Promise<AttemptTotals>;
+
+  getAiStatus(): Promise<AiStatus>;
+  /** Saves (encrypted) or removes the API key. The key can never be read back by the window. */
+  setAiKey(key: string | null): Promise<AiStatus>;
+  testAi(): Promise<{ ok: true; model: string } | { ok: false; error: string }>;
+  suggestGrade(attemptId: string, itemId: string): Promise<AiSuggestion>;
 }
 
 export const IPC = {
@@ -167,6 +194,10 @@ export const IPC = {
   checkItem: "attempt:check-item",
   gradeItem: "attempt:grade-item",
   finishAttempt: "attempt:finish",
+  getAiStatus: "ai:status",
+  setAiKey: "ai:set-key",
+  testAi: "ai:test",
+  suggestGrade: "ai:suggest-grade",
 } as const;
 
 /** URL of a session asset in the window, served by the main process. */

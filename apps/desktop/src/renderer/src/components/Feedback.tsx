@@ -1,5 +1,6 @@
 // The panel after "Sprawdź": result, the key's answer, explanation, and for open tasks the levels to grade yourself.
-import type { PublicItem, CheckResult } from "../../../shared/ipc";
+import { useState } from "react";
+import type { AiSuggestion, CheckResult, PublicItem, SavedResponse } from "../../../shared/ipc";
 import { Rich, type RichContext } from "./Rich";
 
 interface Props {
@@ -8,6 +9,15 @@ interface Props {
   selfPoints: number | null | undefined;
   onGrade: (points: number) => void;
   ctx: RichContext;
+  /** Optional AI grading help for open items. */
+  ai?: {
+    ready: boolean;
+    suggestion?: AiSuggestion | undefined;
+    gradeSource?: SavedResponse["gradeSource"];
+    /** Whether there is typed work the AI can read. */
+    hasText: boolean;
+    onSuggest: () => Promise<void>;
+  };
 }
 
 function ResultChip({ check }: { check: CheckResult }) {
@@ -41,7 +51,7 @@ function keyText(item: PublicItem, check: CheckResult): string | null {
   return null;
 }
 
-export function Feedback({ item, check, selfPoints, onGrade, ctx }: Props) {
+export function Feedback({ item, check, selfPoints, onGrade, ctx, ai }: Props) {
   const levels = check.reveal.levels;
   const solution = check.reveal.key?.type === "model_solution" ? check.reveal.key.solution : null;
   const answer = keyText(item, check);
@@ -101,6 +111,8 @@ export function Feedback({ item, check, selfPoints, onGrade, ctx }: Props) {
         </div>
       )}
 
+      {levels && ai && <AiBox ai={ai} selfPoints={selfPoints} onGrade={onGrade} ctx={ctx} />}
+
       {check.reveal.scoringNotes && (
         <div className="rounded-md border-l-[3px] border-[var(--warn)] bg-[var(--warn-soft)] px-3 py-2 text-sm">
           <b>Uwaga z klucza:</b>
@@ -124,5 +136,58 @@ export function Feedback({ item, check, selfPoints, onGrade, ctx }: Props) {
         </details>
       )}
     </aside>
+  );
+}
+
+const SOURCE_LABEL = { self: "Twoja ocena", ai_accepted: "Twoja ocena (zgodna z sugestią AI)", self_over_ai: "Twoja ocena (inna niż sugestia AI)" } as const;
+
+function AiBox({ ai, selfPoints, onGrade, ctx }: { ai: NonNullable<Props["ai"]>; selfPoints: number | null | undefined; onGrade: (p: number) => void; ctx: RichContext }) {
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const ask = async () => {
+    setBusy(true);
+    setError(null);
+    try {
+      await ai.onSuggest();
+    } catch (e) {
+      setError((e as Error).message.replace(/^Error invoking remote method '[^']+': (Error: )?/, ""));
+    } finally {
+      setBusy(false);
+    }
+  };
+  const s = ai.suggestion;
+  return (
+    <div className="flex flex-col gap-2 rounded-md border border-dashed border-exam p-3" data-testid="ai-box">
+      {selfPoints !== undefined && selfPoints !== null && ai.gradeSource && <p className="text-sm text-muted">{SOURCE_LABEL[ai.gradeSource]}: <b>{selfPoints} pkt</b></p>}
+      {s ? (
+        <div className="flex flex-col gap-1.5">
+          <p className="text-sm">
+            <b className="text-exam">Sugestia AI: {s.points} pkt</b> <span className="text-muted">· to tylko podpowiedź, decyzja należy do Ciebie</span>
+          </p>
+          <Rich text={s.rationale} ctx={ctx} />
+          {s.missing && (
+            <p className="text-sm">
+              <b>Do wyższego poziomu brakuje:</b> <Rich text={s.missing} ctx={ctx} inline />
+            </p>
+          )}
+          {selfPoints !== s.points && (
+            <button className="btn ghost self-start" onClick={() => onGrade(s.points)} data-testid="ai-accept">
+              Przyjmij {s.points} pkt
+            </button>
+          )}
+        </div>
+      ) : ai.ready ? (
+        ai.hasText ? (
+          <button className="btn ghost self-start" disabled={busy} onClick={() => void ask()} data-testid="ai-suggest">
+            {busy ? "AI sprawdza rozwiązanie…" : "Poproś AI o sugestię oceny"}
+          </button>
+        ) : (
+          <p className="text-sm text-muted">Sugestia AI działa dla rozwiązań zapisanych w aplikacji, nie tylko na kartce.</p>
+        )
+      ) : (
+        <p className="text-sm text-muted">Sugestie AI możesz włączyć w Ustawieniach.</p>
+      )}
+      {error && <p className="text-sm text-[var(--bad)]" role="alert">{error}</p>}
+    </div>
   );
 }

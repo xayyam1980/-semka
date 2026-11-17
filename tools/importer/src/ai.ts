@@ -1,14 +1,10 @@
 // Stage 4–5: one AI call per task turns page images + text into a DraftTask.
-// Two providers: Anthropic (schema enforced by the API) and any OpenAI-compatible endpoint such as Qwen
-// (JSON mode; with images the schema is not enforced there, so it is checked here with Zod and retried).
+// Providers, retries and schema checks live in @osemka/ai; this file holds the prompt, the parts and the cache.
 // Responses are cached by input hash, so re-running the importer never pays twice for the same task.
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import Anthropic from "@anthropic-ai/sdk";
-import { betaZodOutputFormat } from "@anthropic-ai/sdk/helpers/beta/zod";
-import OpenAI from "openai";
-import { z } from "zod";
+import { anthropicModel, askJson, openAiCompatibleModel, type JsonModel, type Part, type Usage } from "@osemka/ai";
 import { DraftTask } from "./draft.ts";
 import { toJpeg, type PdfPage } from "./pdf.ts";
 
@@ -45,12 +41,6 @@ export interface TaskInput {
   reviewerNote?: string;
 }
 
-export interface Usage {
-  input: number;
-  output: number;
-  cacheRead: number;
-  cacheWrite: number;
-}
 
 export interface TaskResult {
   draft: DraftTask;
@@ -60,14 +50,8 @@ export interface TaskResult {
   attempts: number;
 }
 
-export interface Provider {
-  /** Shown in logs and reports, and part of the cache key. */
-  id: string;
-  model: string;
-  /** Per-million-token prices in USD, when known (pay-per-token APIs). */
-  price?: { input: number; output: number; cacheRead: number; cacheWrite: number };
-  structure(t: TaskInput, retryHint?: string): Promise<{ raw: unknown; usage: Usage; model: string }>;
-}
+/** A configured model (see @osemka/ai). */
+export type Provider = JsonModel;
 
 const pageText = (p: PdfPage) => p.lines.map((l) => l.text).join("\n");
 
@@ -91,14 +75,14 @@ function closingText(t: TaskInput): string {
   );
 }
 
-/** Ordered parts of the request, shared by both providers. */
-function parts(t: TaskInput): ({ kind: "text"; text: string } | { kind: "image"; png: Buffer })[] {
-  return [
-    { kind: "text", text: introText(t) },
-    ...t.sheetPages.flatMap((p, i) => [{ kind: "text" as const, text: `SHEET image ${i} = PDF page ${p.page}:` }, { kind: "image" as const, png: p.png }]),
-    ...t.keyPages.flatMap((p, i) => [{ kind: "text" as const, text: `KEY image ${i} = klucz PDF page ${p.page}:` }, { kind: "image" as const, png: p.png }]),
-    { kind: "text", text: closingText(t) },
-  ];
+/** Ordered parts of the request; images as JPEG for endpoints that prefer smaller uploads. */
+async function parts(t: TaskInput, jpeg: boolean): Promise<Part[]> {
+  const img = async (png: Buffer): Promise<Part> => (jpeg ? { kind: "image", data: await toJpeg(png), mediaType: "image/jpeg" } : { kind: "image", data: png, mediaType: "image/png" });
+  const out: Part[] = [{ kind: "text", text: introText(t) }];
+  for (const [i, p] of t.sheetPages.entries()) out.push({ kind: "text", text: `SHEET image ${i} = PDF page ${p.page}:` }, await img(p.png));
+  for (const [i, p] of t.keyPages.entries()) out.push({ kind: "text", text: `KEY image ${i} = klucz PDF page ${p.page}:` }, await img(p.png));
+  out.push({ kind: "text", text: closingText(t) });
+  return out;
 }
 
 /** Rough input size before calling, for the cost estimate in --dry-run. Images ≈ width×height/750 tokens. */
@@ -106,123 +90,6 @@ export function estimateInputTokens(t: TaskInput, imageWidth: number, imageHeigh
   const images = t.sheetPages.length + t.keyPages.length;
   const text = [...t.sheetPages, ...t.keyPages].reduce((s, p) => s + pageText(p.text).length, 0) + SYSTEM.length;
   return Math.round(images * ((imageWidth * imageHeight) / 750) + text / 3.2);
-}
-
-// ───────────────────────── Anthropic ─────────────────────────
-
-export function anthropicProvider(opts: { apiKey: string; baseURL?: string; model?: string }): Provider {
-  const model = opts.model ?? "claude-opus-5-5";
-  const client = new Anthropic({ apiKey: opts.apiKey, authToken: null, baseURL: opts.baseURL ?? "https://api.anthropic.com" });
-  return {
-    id: "anthropic",
-    model,
-    price: { input: 4, output: 20, cacheRead: 0.2, cacheWrite: 5 },
-    async structure(t, retryHint) {
-      const content: Anthropic.Beta.BetaContentBlockParam[] = parts(t).map((p) =>
-        p.kind === "text" ? { type: "text", text: p.text } : { type: "image", source: { type: "base64", media_type: "image/png", data: p.png.toString("base64") } },
-      );
-      if (retryHint) content.push({ type: "text", text: retryHint });
-      // Streamed: long open tasks can take minutes, and the SDK requires streaming for large max_tokens.
-      const stream = client.beta.messages.stream({
-        model,
-        max_tokens: 32000,
-        betas: ["server-side-fallback-2026-07-01"],
-        fallbacks: "default",
-        thinking: { type: "adaptive" },
-        output_config: { effort: "high", format: betaZodOutputFormat(DraftTask) },
-        system: [{ type: "text", text: SYSTEM, cache_control: { type: "ephemeral" } }],
-        messages: [{ role: "user", content }],
-      });
-      const r = await stream.finalMessage();
-      if (r.stop_reason === "refusal") throw new Error(`Zadanie ${t.number}: the model declined (${r.stop_details?.category ?? "no category"})`);
-      if (r.stop_reason === "max_tokens") throw new Error(`Zadanie ${t.number}: output hit max_tokens`);
-      return {
-        raw: r.parsed_output,
-        model: r.model,
-        usage: { input: r.usage.input_tokens, output: r.usage.output_tokens, cacheRead: r.usage.cache_read_input_tokens ?? 0, cacheWrite: r.usage.cache_creation_input_tokens ?? 0 },
-      };
-    },
-  };
-}
-
-// ───────────────────────── OpenAI-compatible (Qwen, …) ─────────────────────────
-
-const DRAFT_JSON_SCHEMA = JSON.stringify(z.toJSONSchema(DraftTask), null, 1);
-
-export function openAiCompatibleProvider(opts: { id: string; apiKey: string; baseURL: string; model: string }): Provider {
-  const client = new OpenAI({ apiKey: opts.apiKey, baseURL: opts.baseURL, maxRetries: 0, timeout: 15 * 60 * 1000 });
-  return {
-    id: opts.id,
-    model: opts.model,
-    async structure(t, retryHint) {
-      // JPEG keeps the request small: large PNG uploads time out on some gateways.
-      const content: OpenAI.Chat.Completions.ChatCompletionContentPart[] = await Promise.all(
-        parts(t).map(async (p): Promise<OpenAI.Chat.Completions.ChatCompletionContentPart> =>
-          p.kind === "text" ? { type: "text", text: p.text } : { type: "image_url", image_url: { url: `data:image/jpeg;base64,${(await toJpeg(p.png)).toString("base64")}` } },
-        ),
-      );
-      content.push({ type: "text", text: `Answer with one JSON object that follows this JSON Schema exactly (all properties required; use null or [] where the schema allows):\n${DRAFT_JSON_SCHEMA}` });
-      if (retryHint) content.push({ type: "text", text: retryHint });
-      // Streamed: gateways drop long-running non-streaming requests (open tasks take minutes).
-      const r = await withRetry(async () => {
-        const stream = await client.chat.completions.create({
-          model: opts.model,
-          max_tokens: 16384,
-          stream: true,
-          stream_options: { include_usage: true },
-          // With image input the schema can't be enforced by the endpoint; JSON mode plus our own Zod check.
-          response_format: { type: "json_object" },
-          messages: [
-            { role: "system", content: SYSTEM },
-            { role: "user", content },
-          ],
-        });
-        let text = "", finish: string | null = null, model = opts.model;
-        let usage = { prompt_tokens: 0, completion_tokens: 0 };
-        for await (const chunk of stream) {
-          model = chunk.model || model;
-          const c = chunk.choices[0];
-          if (c?.delta?.content) text += c.delta.content;
-          if (c?.finish_reason) finish = c.finish_reason;
-          if (chunk.usage) usage = chunk.usage;
-        }
-        return { text, finish, model, usage };
-      });
-      if (r.finish === "length") throw new Error(`Zadanie ${t.number}: output hit max_tokens`);
-      const text = r.text;
-      let raw: unknown;
-      try {
-        raw = JSON.parse(stripFences(text));
-      } catch {
-        raw = { __unparseable: text.slice(0, 2000) };
-      }
-      return { raw, model: r.model, usage: { input: r.usage.prompt_tokens, output: r.usage.completion_tokens, cacheRead: 0, cacheWrite: 0 } };
-    },
-  };
-}
-
-const stripFences = (s: string) => s.trim().replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "");
-
-/**
- * Retries transient failures: 429 rate limits (wait about a minute, as the Qwen docs advise), timeouts,
- * dropped connections and 5xx (short backoff). Quota exhaustion and other 4xx errors are not retried.
- */
-async function withRetry<T>(fn: () => Promise<T>): Promise<T> {
-  for (let attempt = 0; ; attempt++) {
-    try {
-      return await fn();
-    } catch (err) {
-      const e = err as { status?: number; code?: string; message?: string; name?: string };
-      const msg = e.message ?? "";
-      const quota = e.code === "insufficient_quota" || /insufficient_quota/.test(msg);
-      const rate = e.status === 429 && !quota;
-      const transient = /timed out|timeout|ECONNRESET|socket hang up|terminated|network/i.test(msg) || e.name === "APIConnectionError" || e.name === "APIConnectionTimeoutError" || (e.status ?? 0) >= 500;
-      if (quota || (!rate && !transient) || attempt >= 5) throw err;
-      const wait = rate ? 65_000 : 5_000 * 2 ** attempt;
-      console.warn(`  retrying after ${rate ? "rate limit" : `"${msg.slice(0, 80)}"`} in ${Math.round(wait / 1000)} s…`);
-      await new Promise((r) => setTimeout(r, wait));
-    }
-  }
 }
 
 // ───────────────────────── shared: cache, validation, one retry ─────────────────────────
@@ -236,22 +103,16 @@ export async function structureTask(provider: Provider | null, t: TaskInput, cac
   }
   if (!provider) throw new Error("No AI provider configured: see .env.example (or run with --dry-run to stop before this stage).");
 
-  const total: Usage = { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 };
-  let hint: string | undefined;
-  for (let attempt = 1; attempt <= 2; attempt++) {
-    const res = await provider.structure(t, hint);
-    for (const k of Object.keys(total) as (keyof Usage)[]) total[k] += res.usage[k];
-    const parsed = DraftTask.safeParse(res.raw);
-    if (parsed.success) {
-      writeFileSync(file, JSON.stringify({ draft: parsed.data, model: res.model, provider: provider.id, usage: total, attempts: attempt, at: new Date().toISOString() }, null, 2));
-      return { draft: parsed.data, model: res.model, usage: total, cached: false, attempts: attempt };
-    }
-    const issues = parsed.error.issues.slice(0, 15).map((i) => `- ${i.path.join(".") || "(root)"}: ${i.message}`).join("\n");
-    // Keep the rejected output for debugging; it is never used as content.
-    writeFileSync(file.replace(/\.json$/, `.rejected-${attempt}.json`), JSON.stringify({ raw: res.raw, issues }, null, 2));
-    hint = `Your previous answer did not match the schema:\n${issues}\nReturn the complete corrected JSON object.`;
+  try {
+    const res = await askJson(provider, { system: SYSTEM, parts: await parts(t, provider.prefersJpeg), schema: DraftTask, maxTokens: 32000, effort: "high" });
+    writeFileSync(file, JSON.stringify({ draft: res.data, model: res.model, provider: provider.id, usage: res.usage, attempts: res.attempts, at: new Date().toISOString() }, null, 2));
+    return { draft: res.data, model: res.model, usage: res.usage, cached: false, attempts: res.attempts };
+  } catch (err) {
+    // Keep rejected outputs for debugging; they are never used as content.
+    const rejected = (err as { rejected?: unknown[] }).rejected ?? [];
+    rejected.forEach((r, i) => writeFileSync(file.replace(/\.json$/, `.rejected-${i + 1}.json`), JSON.stringify(r, null, 2)));
+    throw new Error(`Zadanie ${t.number}: ${(err as Error).message}${rejected.length ? ` (see the .rejected-*.json files in ${cacheDir})` : ""}`);
   }
-  throw new Error(`Zadanie ${t.number}: the response did not match the draft schema after 2 attempts (see the .rejected-*.json files in ${cacheDir})`);
 }
 
 /** Picks the provider from environment / .env. */
@@ -263,12 +124,12 @@ export function providerFromEnv(env: NodeJS.ProcessEnv): { provider: Provider | 
     const key = env.QWEN_API_KEY;
     const cacheKey = `${which}:${model}`;
     if (!key || !baseURL) return { provider: null, cacheKey, description: `${which} (QWEN_API_KEY or QWEN_BASE_URL missing)` };
-    return { provider: openAiCompatibleProvider({ id: which, apiKey: key, baseURL, model }), cacheKey, description: `${which} · ${model} · ${new URL(baseURL).host}` };
+    return { provider: openAiCompatibleModel({ id: which, apiKey: key, baseURL, model }), cacheKey, description: `${which} · ${model} · ${new URL(baseURL).host}` };
   }
   const model = env.OSEMKA_ANTHROPIC_MODEL ?? "claude-opus-5-5";
   const cacheKey = `anthropic:${model}`;
   if (!env.ANTHROPIC_API_KEY) return { provider: null, cacheKey, description: "anthropic (ANTHROPIC_API_KEY missing)" };
   const opts: { apiKey: string; baseURL?: string; model: string } = { apiKey: env.ANTHROPIC_API_KEY, model };
   if (env.OSEMKA_ANTHROPIC_BASE_URL) opts.baseURL = env.OSEMKA_ANTHROPIC_BASE_URL;
-  return { provider: anthropicProvider(opts), cacheKey, description: `anthropic · ${model}` };
+  return { provider: anthropicModel(opts), cacheKey, description: `anthropic · ${model}` };
 }

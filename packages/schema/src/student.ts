@@ -5,6 +5,13 @@ import { SheetVersion, SubjectId } from "./content.ts";
 export const Theme = z.enum(["system", "light", "dark"]);
 export type Theme = z.infer<typeof Theme>;
 
+export const AiSettings = z.object({
+  provider: z.enum(["off", "anthropic", "openai-compatible"]).default("off"),
+  baseURL: z.url({ protocol: /^https$/ }).optional(),
+  model: z.string().min(1).max(100).optional(),
+});
+export type AiSettings = z.infer<typeof AiSettings>;
+
 export const StudentSettings = z.object({
   theme: Theme.default("system"),
   fontScale: z.number().min(0.9).max(1.4).default(1),
@@ -17,6 +24,8 @@ export const StudentSettings = z.object({
     .default({ polski: 225, matematyka: 185, angielski: 165 }),
   dyslexiaCriteria: z.boolean().default(false),
   defaultPlaybackRate: z.union([z.literal(0.75), z.literal(0.9), z.literal(1)]).default(1),
+  /** Optional AI grading suggestions. The key itself is stored encrypted elsewhere, never in settings. */
+  ai: AiSettings.default({ provider: "off" }),
 });
 export type StudentSettings = z.infer<typeof StudentSettings>;
 
