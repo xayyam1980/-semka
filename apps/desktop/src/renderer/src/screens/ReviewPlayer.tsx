@@ -1,6 +1,6 @@
 // Review after a finished attempt: your answer, the key, the explanation; open tasks are graded here.
 import type { ResponseValue } from "@osemka/schema";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState, useRef } from "react";
 import { Link, useParams, useSearchParams } from "react-router";
 import type { AttemptView, CheckResult, PublicSession, PublicTask } from "../../../shared/ipc";
 import { AnswerInput } from "../components/AnswerInput";
@@ -40,6 +40,16 @@ export function ReviewPlayer() {
   // Without ?zad=, start at the first task still waiting for self-grading.
   const firstPending = view ? tasks.findIndex((t) => (view.tasks.find((x) => x.taskId === t.id)?.pending ?? 0) > 0) : -1;
   const index = params.get("zad") ? Math.max(0, tasks.findIndex((t) => String(t.number) === params.get("zad"))) : Math.max(0, firstPending);
+  // Screen readers: announce the new task by moving focus to its heading (not on the first render).
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const firstTask = useRef(true);
+  useEffect(() => {
+    if (firstTask.current) {
+      firstTask.current = false;
+      return;
+    }
+    headingRef.current?.focus({ preventScroll: false });
+  }, [index]);
   const task = tasks[index];
   const ctx = useMemo(() => (session ? { sessionId: session.id, stimuli: session.stimuli } : null), [session]);
   const go = (i: number) => tasks[i] && setParams({ zad: String(tasks[i]!.number) }, { replace: true });
@@ -76,12 +86,12 @@ export function ReviewPlayer() {
           {view.summary.earned} / {view.summary.maxPoints} pkt{view.summary.pending ? ` · ${view.summary.pending} do oceny` : ""}
         </span>
       </header>
-      <main className="scroll-pane flex-1 px-6 py-6">
+      <main id="main" className="scroll-pane flex-1 px-6 py-6">
         <div className={reading ? "with-reading mx-auto max-w-7xl" : "mx-auto max-w-6xl"}>
           {reading && <ReadingPane text={reading} ctx={ctx} />}
         <div className={`grid gap-6 ${reading ? "grid-cols-1" : "grid-cols-[minmax(0,1fr)_minmax(0,420px)]"}`}>
           <article className="flex min-w-0 flex-col gap-5">
-            <h1 className="text-2xl font-bold">
+            <h1 className="text-2xl font-bold outline-none" tabIndex={-1} ref={headingRef}>
               Zadanie {task.number}. <span className="font-normal text-muted">(0–{task.maxPoints})</span>
             </h1>
             {listening && <ListeningPlayer sessionId={session.id} stimulus={listening} available={!!session.recording} />}

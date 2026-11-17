@@ -24,6 +24,8 @@ export const StudentSettings = z.object({
     .default({ polski: 225, matematyka: 185, angielski: 165 }),
   dyslexiaCriteria: z.boolean().default(false),
   defaultPlaybackRate: z.union([z.literal(0.75), z.literal(0.9), z.literal(1)]).default(1),
+  /** Starting volume of recordings, 0–1. */
+  defaultVolume: z.number().min(0).max(1).default(1),
   /** Optional AI grading suggestions. The key itself is stored encrypted elsewhere, never in settings. */
   ai: AiSettings.default({ provider: "off" }),
 });

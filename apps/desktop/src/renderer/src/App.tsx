@@ -22,6 +22,9 @@ function Shell() {
   const { settings } = useSettings();
   return (
     <div className="flex h-full flex-col" data-ready={settings ? "1" : "0"}>
+      <button className="skip-link" onClick={() => document.getElementById("main")?.focus()}>
+        Przejdź do treści
+      </button>
       <header className="flex items-center gap-6 border-b border-line bg-surface px-6 py-3">
         <span className="font-display text-xl font-bold">
           Ósemka<span className="text-accent">.</span>
@@ -47,7 +50,7 @@ function Shell() {
           Ustawienia
         </NavLink>
       </header>
-      <main className="scroll-pane flex-1 px-6 py-8">
+      <main id="main" tabIndex={-1} className="scroll-pane flex-1 px-6 py-8 outline-none">
         <div className="mx-auto max-w-5xl">
           <Routes>
             <Route path="/" element={<Dashboard />} />

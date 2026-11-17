@@ -20,6 +20,10 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
     if (settings.theme === "system") delete root.dataset.theme;
     else root.dataset.theme = settings.theme;
     root.style.setProperty("--font-scale", String(settings.fontScale));
+    // Reading font for texts and tasks: the serif from the design, the UI sans, or OpenDyslexic.
+    root.dataset.readingFont = settings.readingFont;
+    if (settings.reduceMotion) root.dataset.motion = "reduce";
+    else delete root.dataset.motion;
   }, [settings]);
 
   const update = useCallback(async (patch: Partial<StudentSettings>) => {

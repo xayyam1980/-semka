@@ -139,7 +139,8 @@ function runSmoke(win: BrowserWindow, info: { dbFile: string; runs: number }): v
     process.stdout.write(`SMOKE ${JSON.stringify({ ok: false, error: "timeout" })}\n`);
     app.exit(1);
   }, process.env.OSEMKA_SMOKE_TOUR === "1" ? 120000 : 20000);
-  win.webContents.on("did-finish-load", async () => {
+  // Once: a tour may reload the page, which must not start a second check.
+  win.webContents.once("did-finish-load", async () => {
     try {
       const ready = await win.webContents.executeJavaScript(
         `new Promise(r => { const t = Date.now(); (function poll(){ const el = document.querySelector('[data-ready="1"]'); if (el || Date.now() - t > 8000) r(!!el); else setTimeout(poll, 100); })(); })`,

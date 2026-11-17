@@ -230,6 +230,10 @@ export interface OsemkaApi {
   listAttempts(sessionId?: string): Promise<AttemptSummary[]>;
   /** P7: readiness, next step, subject cards and the top gaps. */
   analyticsOverview(): Promise<Overview>;
+  /** P8: asks where to save, then writes the history; resolves to the file path, or null if cancelled. */
+  exportHistory(format: "json" | "csv"): Promise<string | null>;
+  /** P8: asks for confirmation in a system dialog, then deletes every attempt; resolves to the number deleted, or null. */
+  clearHistory(): Promise<number | null>;
   /** P7: one subject; days null = all time. */
   analyticsSubject(subjectId: SubjectId, opts: { days: number | null; mode: "oba" | "nauka" | "symulacja" }): Promise<SubjectAnalysis>;
   /** P7: starts a practice attempt with tasks for one area; returns the attempt id, or null if no task fits. */
@@ -264,6 +268,8 @@ export const IPC = {
   getRecording: "content:recording",
   listAttempts: "attempt:list",
   analyticsOverview: "analytics:overview",
+  exportHistory: "data:export",
+  clearHistory: "data:clear",
   analyticsSubject: "analytics:subject",
   practiceArea: "analytics:practice",
   startPractice: "attempt:start-practice",

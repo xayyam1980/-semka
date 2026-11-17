@@ -11,6 +11,7 @@ export async function runTour(win: BrowserWindow, outDir: string): Promise<strin
   if (process.env.OSEMKA_TOUR === "polski") return runPolishTour(win, outDir);
   if (process.env.OSEMKA_TOUR === "angielski") return runEnglishTour(win, outDir);
   if (process.env.OSEMKA_TOUR === "analiza") return runAnalyticsTour(win, outDir);
+  if (process.env.OSEMKA_TOUR === "ustawienia") return runSettingsTour(win, outDir);
   const js = <T>(code: string) => win.webContents.executeJavaScript(code) as Promise<T>;
   const shots: string[] = [];
   const shot = async (name: string) => {
@@ -271,5 +272,39 @@ async function runAnalyticsTour(win: BrowserWindow, outDir: string): Promise<str
   await wait(600);
   await js(`document.querySelector('[data-testid="next-step-practice"]')?.click()`);
   await shot("cwiczenie-z-pulpitu");
+  return shots;
+}
+
+/** OSEMKA_TOUR=ustawienia: the settings screen, then the dyslexia font at 130 % on a Polish reading text, in light mode. */
+async function runSettingsTour(win: BrowserWindow, outDir: string): Promise<string[]> {
+  const js = <T>(code: string) => win.webContents.executeJavaScript(code, true) as Promise<T>;
+  const shots: string[] = [];
+  const shot = async (name: string) => {
+    await wait(700);
+    const file = join(outDir, `ustawienia-${shots.length + 1}-${name}-${process.platform}.png`);
+    writeFileSync(file, (await win.webContents.capturePage()).toPNG());
+    shots.push(file);
+  };
+  const waitFor = (selector: string) =>
+    js(`new Promise((ok, no) => { const t = Date.now(); (function poll() { const b = document.querySelector(${JSON.stringify(selector)}); if (b) ok(true); else if (Date.now() - t > 8000) no(new Error("missing ${selector.replace(/"/g, "'")}")); else setTimeout(poll, 100); })(); })`);
+  await js(`location.hash = "#/ustawienia"`);
+  await waitFor('[data-testid="settings-appearance"]');
+  await shot("ekran");
+  await js(`document.querySelector('[data-testid="settings-sound"]').scrollIntoView({ block: "start" })`);
+  await shot("dzwiek-dane");
+  // The screen's own controls: reading font, text size, theme.
+  await js(`document.querySelector('input[name="Czcionka tekstów"][data-value="dyslexic"]').click()`);
+  await js(`(() => { const r = document.getElementById("font-scale"); Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value").set.call(r, "1.3"); r.dispatchEvent(new Event("input", { bubbles: true })); })()`);
+  await js(`document.querySelector('input[name="Motyw"][data-value="light"]').click()`);
+  await js(`document.querySelector('[data-testid="settings-appearance"]').scrollIntoView({ block: "start" })`);
+  await shot("dysleksja-jasny");
+  await js(`location.hash = "#/arkusze/polski-2025-05-glowny"`);
+  await waitFor('[data-testid="start-practice"]');
+  await js(`document.querySelector('[data-testid="start-practice"]').click()`);
+  await waitFor(".reading-pane");
+  await shot("tekst-dysleksja-130");
+  const applied = await js<string>(`JSON.stringify({ font: document.documentElement.dataset.readingFont, scale: getComputedStyle(document.documentElement).getPropertyValue("--font-scale"), theme: document.documentElement.dataset.theme })`);
+  writeFileSync(join(outDir, "ustawienia-applied.txt"), applied);
+  await js(`window.osemka.updateSettings({ readingFont: "literata", fontScale: 1, theme: "system" })`);
   return shots;
 }

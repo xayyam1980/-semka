@@ -2,6 +2,7 @@
 // going back. Its position follows the clock (time since the exam started), so reopening the app resumes it.
 import { useEffect, useRef, useState } from "react";
 import type { PublicStimulus } from "../../../shared/ipc";
+import { useSettings } from "../settings";
 import { useRecording } from "./useRecording";
 
 const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
@@ -18,7 +19,8 @@ export function RecordingBar({ sessionId, asset, startedAtLocal, stimuli, taskNu
   const [duration, setDuration] = useState<number>();
   const [pos, setPos] = useState(0);
   const [blocked, setBlocked] = useState(false);
-  const [volume, setVolume] = useState(1);
+  const { settings } = useSettings();
+  const [volume, setVolume] = useState(settings?.defaultVolume ?? 1);
   const src = useRecording(sessionId, !!asset);
   const elapsed = () => (Date.now() - startedAtLocal) / 1000;
 

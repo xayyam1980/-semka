@@ -3,6 +3,7 @@
 // In a simulation the whole recording plays once instead (RecordingBar).
 import { useEffect, useRef, useState } from "react";
 import type { PublicStimulus } from "../../../shared/ipc";
+import { useSettings } from "../settings";
 import { useRecording } from "./useRecording";
 
 const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
@@ -18,6 +19,11 @@ export function ListeningPlayer({ sessionId, stimulus, available }: { sessionId:
   const [pos, setPos] = useState(seg.startSec);
   const length = seg.endSec - seg.startSec;
   const src = useRecording(sessionId, available);
+  const { settings } = useSettings();
+  const [rate, setRate] = useState<number>(settings?.defaultPlaybackRate ?? 1);
+  useEffect(() => {
+    if (audio.current) audio.current.playbackRate = rate;
+  }, [rate, src]);
 
   // A new task (another segment of the same file): stop and go back to its start.
   useEffect(() => {
@@ -56,7 +62,11 @@ export function ListeningPlayer({ sessionId, stimulus, available }: { sessionId:
         ref={audio}
         src={src}
         preload="metadata"
-        onLoadedMetadata={(e) => (e.currentTarget.currentTime = seg.startSec)}
+        onLoadedMetadata={(e) => {
+          e.currentTarget.currentTime = seg.startSec;
+          e.currentTarget.volume = settings?.defaultVolume ?? 1;
+          e.currentTarget.playbackRate = rate;
+        }}
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
         onTimeUpdate={(e) => {
@@ -84,6 +94,14 @@ export function ListeningPlayer({ sessionId, stimulus, available }: { sessionId:
       <span className="tabular text-sm text-muted">
         {fmt(pos - seg.startSec)} / {fmt(length)}
       </span>
+      <label className="flex items-center gap-1 text-sm">
+        Tempo
+        <select className="rounded-md border border-line bg-surface px-1.5 py-1" value={rate} onChange={(e) => setRate(Number(e.target.value))} aria-label="Tempo nagrania" data-testid="listen-rate">
+          <option value={0.75}>0,75×</option>
+          <option value={0.9}>0,9×</option>
+          <option value={1}>1×</option>
+        </select>
+      </label>
       {inReadingTime && (
         <button className="btn ghost" onClick={() => seek(seg.playsStartSec!)} data-testid="listen-skip">
           Pomiń czas na zapoznanie się z zadaniem

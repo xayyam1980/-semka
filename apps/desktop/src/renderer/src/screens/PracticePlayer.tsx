@@ -68,6 +68,16 @@ export function PracticePlayer() {
   }, []);
 
   const tasks: PublicTask[] = useMemo(() => (view && session ? view.taskIds.map((id) => session.tasks.find((t) => t.id === id)!).filter(Boolean) : []), [view, session]);
+  // Screen readers: announce the new task by moving focus to its heading (not on the first render).
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const firstTask = useRef(true);
+  useEffect(() => {
+    if (firstTask.current) {
+      firstTask.current = false;
+      return;
+    }
+    headingRef.current?.focus({ preventScroll: false });
+  }, [index]);
   const task = tasks[index];
 
   const ctxBase = useMemo(() => (session ? { sessionId: session.id, stimuli: session.stimuli } : null), [session]);
@@ -210,13 +220,13 @@ export function PracticePlayer() {
         </span>
       </div>
 
-      <main className="scroll-pane flex-1 px-6 py-6">
+      <main id="main" className="scroll-pane flex-1 px-6 py-6">
         <div className={reading ? "with-reading mx-auto max-w-7xl" : "mx-auto max-w-6xl"}>
           {reading && <ReadingPane text={reading} ctx={ctxBase} />}
         <div className={`grid gap-6 ${allChecked && !reading ? "grid-cols-[minmax(0,1fr)_minmax(0,420px)]" : "grid-cols-1"}`}>
           <article className="flex min-w-0 flex-col gap-5">
             <div className="flex items-center gap-3">
-              <h1 className="text-2xl font-bold">
+              <h1 className="text-2xl font-bold outline-none" tabIndex={-1} ref={headingRef}>
                 Zadanie {task.number}. <span className="font-normal text-muted">(0–{task.maxPoints})</span>
               </h1>
               <button className={`btn ghost ml-auto ${flagged ? "flagged" : ""}`} onClick={toggleFlag} aria-pressed={flagged} title="Oznacz do powtórki (F)">

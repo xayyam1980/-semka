@@ -1,9 +1,12 @@
 import { readFileSync } from "node:fs";
-import { app, ipcMain } from "electron";
+import { writeFileSync } from "node:fs";
+import { join } from "node:path";
+import { app, BrowserWindow, dialog, ipcMain } from "electron";
 import { SUBJECTS, type StudentSettings, type SubjectId } from "@osemka/schema";
 import { IPC, type AppInfo, type Scope } from "../shared/ipc";
 import type { AiService } from "./ai";
 import { overview, practicePlan, subjectAnalysis } from "./analytics";
+import { clearHistory, exportCsv, exportJson } from "./data";
 import type { AttemptService } from "./attempts";
 import type { ContentStore } from "./content";
 import { readSettings, writeSettings, type Db } from "./db";
@@ -58,6 +61,30 @@ export function registerIpc(ctx: { db: Db; dbFile: string; runs: number; content
     if (typeof v !== "string" || !(v in SUBJECTS)) throw new Error("Unknown subject");
     return v as SubjectId;
   };
+  ipcMain.handle(IPC.exportHistory, async (e, format: unknown) => {
+    const csv = format === "csv";
+    const win = BrowserWindow.fromWebContents(e.sender) ?? undefined;
+    const name = `osemka-historia-${new Date().toISOString().slice(0, 10)}.${csv ? "csv" : "json"}`;
+    const options = { title: "Eksportuj historię", defaultPath: join(app.getPath("documents"), name), filters: [csv ? { name: "CSV", extensions: ["csv"] } : { name: "JSON", extensions: ["json"] }] };
+    const res = win ? await dialog.showSaveDialog(win, options) : await dialog.showSaveDialog(options);
+    if (res.canceled || !res.filePath) return null;
+    writeFileSync(res.filePath, csv ? exportCsv(at, content) : JSON.stringify(exportJson(ctx.db, at, app.getVersion()), null, 2));
+    return res.filePath;
+  });
+  ipcMain.handle(IPC.clearHistory, async (e) => {
+    const win = BrowserWindow.fromWebContents(e.sender) ?? undefined;
+    const options = {
+      type: "warning" as const,
+      title: "Wyczyść historię",
+      message: "Usunąć całą historię prób?",
+      detail: "Znikną wszystkie odpowiedzi, oceny i wyniki (także analiza). Ustawienia zostaną. Tego nie da się cofnąć – jeśli chcesz zachować kopię, najpierw wyeksportuj historię.",
+      buttons: ["Anuluj", "Usuń historię"],
+      defaultId: 0,
+      cancelId: 0,
+    };
+    const res = win ? await dialog.showMessageBox(win, options) : await dialog.showMessageBox(options);
+    return res.response === 1 ? clearHistory(ctx.db) : null;
+  });
   ipcMain.handle(IPC.analyticsOverview, () => overview(at.facts(), Date.now()));
   ipcMain.handle(IPC.analyticsSubject, (_e, subjectId: unknown, opts: unknown) => {
     const o = (opts ?? {}) as { days?: unknown; mode?: unknown };
