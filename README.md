@@ -51,6 +51,7 @@ pnpm importer approve matematyka-2026-05-glowny
 | `apps/desktop` | Electron app: `src/main` (SQLite, IPC), `src/preload` (the only API the window can call), `src/renderer` (React screens) |
 | `tools/importer` | CLI that turns CKE PDFs into session files (pdf.js, Claude, checks, review page) |
 | `content/` | Imported sessions, created by the importer |
+| `packages/scoring` | Pure scoring rules: answers to points as the CKE keys say, rubrics (essay, e-mail), attempt totals |
 | `packages/schema` | Zod schemas for content and student data, plus Windows/macOS-safe path helpers |
 | `design/` | Design documents; `schema.ts` there is the original sketch, `packages/schema` is the source of truth |
 | `Język polski/`, `Matematyka/`, `Język angielski/` | CKE source files, not committed |
