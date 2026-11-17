@@ -32,7 +32,8 @@ function ResultChip({ check }: { check: CheckResult }) {
   const o = check.outcome;
   if (o.kind === "auto") {
     if (o.result === "correct") return <span className="chip ok">✓ Dobrze · {o.points}/{o.maxPoints} pkt</span>;
-    if (o.result === "partial") return <span className="chip warn">Częściowo · {o.points}/{o.maxPoints} pkt</span>;
+    // All-or-nothing tasks: some parts right still give 0 points, so it must not look like a partial success.
+    if (o.result === "partial") return o.points ? <span className="chip warn">Częściowo · {o.points}/{o.maxPoints} pkt</span> : <span className="chip bad">× Częściowo dobrze · 0/{o.maxPoints} pkt</span>;
     return <span className="chip bad">× Do poprawy · 0/{o.maxPoints} pkt</span>;
   }
   if (o.kind === "blank") return <span className="chip muted">Bez odpowiedzi · 0/{o.maxPoints} pkt</span>;
@@ -52,7 +53,13 @@ function keyText(item: PublicItem, check: CheckResult): string | null {
   }
   if (k.type === "choices") {
     if (r.type === "true_false") return r.statements.map((s, i) => `${i + 1}. ${k.correct[s.id] === "P" ? "Prawda" : "Fałsz"}`).join(" · ");
-    if (r.type === "choice_with_reason") return `${k.correct.choice} oraz ${k.correct.reason}`;
+    if (r.type === "choice_with_reason") {
+      const part = (id: string | undefined, opts: { id: string; text: string }[]) => {
+        const o = opts.find((x) => x.id === id);
+        return o ? `${o.id} (${o.text})` : (id ?? "");
+      };
+      return `${part(k.correct.choice, r.choices)} oraz ${part(k.correct.reason, r.reasons)}`;
+    }
     return Object.entries(k.correct).map(([s, v]) => `${s} → ${v}`).join(" · ");
   }
   if (k.type === "text") return [...k.expected, ...k.accepted].join(" · ");
@@ -71,6 +78,9 @@ export function Feedback({ item, check, selfPoints, onGrade, ctx, ai, essay }: P
         <ResultChip check={check} />
         {o.kind === "auto" && o.reason && <span className="text-sm text-muted">Klucz: {o.reason}</span>}
       </div>
+      {o.kind === "auto" && o.result === "partial" && !o.points && !o.reason && (
+        <p className="text-sm text-muted">Część odpowiedzi jest dobra, ale według klucza punkt dostaje się tylko za całość.</p>
+      )}
 
       {answer && (
         <div>

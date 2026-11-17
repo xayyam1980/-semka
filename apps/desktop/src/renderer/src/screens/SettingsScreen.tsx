@@ -2,6 +2,7 @@
 import { useState, type ReactNode } from "react";
 import { SUBJECTS, type StudentSettings, type SubjectId, type Theme } from "@osemka/schema";
 import { AiSettingsCard } from "../components/AiSettingsCard";
+import { plural } from "../lib/format";
 import { useSettings } from "../settings";
 
 const THEMES: { value: Theme; label: string }[] = [
@@ -75,7 +76,7 @@ export function SettingsScreen() {
   };
   const clear = async () => {
     const n = await window.osemka.clearHistory();
-    setMessage(n === null ? "Historia nie została usunięta." : `Usunięto ${n} prób.`);
+    setMessage(n === null ? "Historia nie została usunięta." : `Usunięto ${n} ${plural(n, "próbę", "próby", "prób")}.`);
   };
 
   return (

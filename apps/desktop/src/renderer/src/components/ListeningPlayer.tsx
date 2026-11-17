@@ -81,6 +81,12 @@ export function ListeningPlayer({ sessionId, stimulus, available }: { sessionId:
       <button className="btn primary" onClick={() => void toggle()} data-testid="listen-toggle" aria-label={playing ? "Zatrzymaj nagranie" : "Odtwórz nagranie"}>
         {playing ? "❚❚ Pauza" : pos > seg.startSec + 0.5 && pos < seg.endSec - 0.5 ? "▶ Wznów" : "▶ Odtwórz"}
       </button>
+      <button className="btn ghost !px-2.5" onClick={() => seek(pos - 5)} aria-label="Cofnij o 5 sekund" title="Cofnij o 5 s" data-testid="listen-back">
+        −5 s
+      </button>
+      <button className="btn ghost !px-2.5" onClick={() => seek(pos + 5)} aria-label="Przewiń o 5 sekund do przodu" title="Do przodu o 5 s">
+        +5 s
+      </button>
       <input
         type="range"
         className="listening-bar"

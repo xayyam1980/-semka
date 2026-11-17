@@ -4,6 +4,7 @@ import { Link, useSearchParams } from "react-router";
 import { SUBJECTS, type SubjectId } from "@osemka/schema";
 import type { SubjectAnalysis } from "../../../shared/ipc";
 import { Delta, Meter, Sparkline, StatusTag, Timeline } from "../components/Charts";
+import { plural } from "../lib/format";
 import { usePracticeArea } from "./Dashboard";
 
 const PERIODS = [
@@ -68,7 +69,7 @@ export function Analysis() {
         <p className="text-muted">Ładowanie…</p>
       ) : !data.timeline.length ? (
         <p className="text-muted">
-          W tym okresie nie ma jeszcze wyników z tego przedmiotu.{" "}
+          W tym okresie nie ma jeszcze wyników z tego przedmiotu. Po pierwszej próbie zobaczysz tu wynik w czasie i umiejętności, w których tracisz punkty.{" "}
           <Link to={`/arkusze?przedmiot=${subject}`} className="font-bold text-accent">
             Wybierz arkusz →
           </Link>
@@ -102,14 +103,16 @@ export function Analysis() {
 
           <article className="card rounded-[10px] border border-line bg-surface p-5" data-testid="areas">
             <h2 className="mb-1 text-xs font-bold uppercase tracking-wider text-muted">Umiejętności</h2>
-            <p className="mb-3 text-sm text-muted">Wymagania z podstawy programowej według kluczy CKE. Status od 4 zadań: opanowane od 80 %, do pracy 50–79 %, słabe poniżej 50 %.</p>
+            <p className="mb-3 text-sm text-muted">Wymagania z podstawy programowej według kluczy CKE. Status od 4 zadań: opanowane od 80 %, do pracy 50–79 %, słabe poniżej 50 %. n to liczba zadań, „pp” to punkty procentowe.</p>
             <table className="w-full border-collapse text-[15px]">
               <thead>
                 <tr className="border-b border-line text-left text-sm text-muted">
                   <th className="py-2 font-normal">Obszar</th>
                   <th className="py-2 font-normal">Wynik</th>
-                  <th className="py-2 text-right font-normal">pkt</th>
-                  <th className="py-2 text-right font-normal">n</th>
+                  <th className="whitespace-nowrap py-2 pl-2 text-right font-normal">pkt</th>
+                  <th className="py-2 pl-3 text-right font-normal" title="liczba zadań">
+                    n
+                  </th>
                   <th className="whitespace-nowrap py-2 pl-4 pr-3 font-normal">Ostatnie próby</th>
                   <th className="py-2 pr-3 font-normal">Zmiana</th>
                   <th className="py-2 pr-3 font-normal">Status</th>
@@ -126,10 +129,12 @@ export function Analysis() {
                         <span className="tabular w-12 text-right">{r.percent ?? "–"} %</span>
                       </div>
                     </td>
-                    <td className="tabular py-2 text-right text-sm">
+                    <td className="tabular whitespace-nowrap py-2 pl-2 text-right text-sm">
                       {r.points}/{r.max}
                     </td>
-                    <td className="tabular py-2 text-right text-sm text-muted">{r.n}</td>
+                    <td className="tabular py-2 pl-3 text-right text-sm text-muted" title={`${r.n} ${plural(r.n, "zadanie", "zadania", "zadań")}`}>
+                      {r.n}
+                    </td>
                     <td className="py-2 pl-4">
                       <Sparkline values={r.trend} />
                     </td>
@@ -158,12 +163,12 @@ export function Analysis() {
               <ul className="flex list-none flex-col gap-1 p-0">
                 {data.improved.map((i) => (
                   <li key={i.area}>
-                    <b>{i.area}</b>: z {i.from} % do {i.to} % w ostatnich 30 dniach ({i.n} zadań).
+                    <b>{i.area}</b>: z {i.from} % do {i.to} % w ostatnich 30 dniach ({i.n} {plural(i.n, "zadanie", "zadania", "zadań")}).
                   </li>
                 ))}
               </ul>
             ) : (
-              <p className="text-sm text-muted">Pojawi się, gdy w jakimś obszarze wynik z ostatnich 30 dni będzie wyższy o co najmniej 10 pp (przynajmniej 4 zadania przed i po).</p>
+              <p className="text-sm text-muted">Pojawi się, gdy w jakimś obszarze wynik z ostatnich 30 dni będzie wyższy o co najmniej 10 punktów procentowych (przynajmniej 4 zadania przed i po).</p>
             )}
           </article>
         </>

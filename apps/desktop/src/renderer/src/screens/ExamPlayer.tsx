@@ -3,7 +3,7 @@ import type { ResponseValue } from "@osemka/schema";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import type { AttemptView, PublicSession, PublicTask } from "../../../shared/ipc";
-import { AnswerInput, hasAnswer } from "../components/AnswerInput";
+import { AnswerInput, hasAnswer, isComplete } from "../components/AnswerInput";
 import { Rich } from "../components/Rich";
 import { TaskText } from "../components/TaskText";
 import { ReadingPane, readingTextOf } from "../components/ReadingPane";
@@ -152,6 +152,7 @@ export function ExamPlayer() {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const tag = (e.target as HTMLElement).tagName;
+      if (confirming && e.key === "Escape") return setConfirming(false);
       if (confirming || tag === "TEXTAREA" || tag === "INPUT" || tag === "SELECT" || e.metaKey || e.ctrlKey || e.altKey) return;
       if (e.key === "ArrowRight" || e.key === "k") setIndex((i) => Math.min(tasks.length - 1, i + 1));
       else if (e.key === "ArrowLeft" || e.key === "j") setIndex((i) => Math.max(0, i - 1));
@@ -170,6 +171,8 @@ export function ExamPlayer() {
 
   const answeredTask = (t: PublicTask) => t.items.some((i) => hasAnswer(i, values[i.id] ?? null));
   const unanswered = tasks.filter((t) => !answeredTask(t));
+  // Started but not finished: some parts (1.2, 1.3 …) or statements still empty.
+  const partial = tasks.filter((t) => answeredTask(t) && t.items.some((i) => !isComplete(i, values[i.id] ?? null)));
   const flaggedTasks = tasks.filter((t) => flags[t.items[0]!.id]);
   const timerState = remaining <= CRITICAL_MS ? "critical" : remaining <= WARN_MS ? "warn" : "";
   const reading = readingTextOf(task.stimulusIds, session.stimuli);
@@ -254,15 +257,21 @@ export function ExamPlayer() {
               className={`qnum ${answeredTask(t) ? "answered" : ""} ${i === index ? "cur" : ""} ${flags[t.items[0]!.id] ? "flag" : ""}`}
               onClick={() => setIndex(i)}
               aria-current={i === index ? "step" : undefined}
-              aria-label={`Zadanie ${t.number}${answeredTask(t) ? ", odpowiedź zapisana" : ", bez odpowiedzi"}${flags[t.items[0]!.id] ? ", oznaczone" : ""}`}
+              aria-label={`Zadanie ${t.number}${partial.includes(t) ? ", odpowiedź niepełna" : answeredTask(t) ? ", odpowiedź zapisana" : ", bez odpowiedzi"}${flags[t.items[0]!.id] ? ", oznaczone" : ""}`}
             >
               {t.number}
             </button>
           ))}
         </nav>
-        <button className="btn ghost" onClick={() => setIndex((i) => Math.min(tasks.length - 1, i + 1))} disabled={index === tasks.length - 1}>
-          Następne →
-        </button>
+        {index < tasks.length - 1 ? (
+          <button className="btn ghost" onClick={() => setIndex((i) => Math.min(tasks.length - 1, i + 1))}>
+            Następne →
+          </button>
+        ) : (
+          <button className="btn ghost" onClick={() => setConfirming(true)} data-testid="submit-last">
+            Oddaj arkusz…
+          </button>
+        )}
       </footer>
 
       {confirming && (
@@ -280,6 +289,18 @@ export function ExamPlayer() {
                 <div className="mt-2 flex flex-wrap gap-1.5">
                   {unanswered.map((t) => (
                     <button key={t.id} className="qnum" onClick={() => { setIndex(tasks.indexOf(t)); setConfirming(false); }}>
+                      {t.number}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+            {partial.length > 0 && (
+              <div data-testid="submit-partial">
+                <p className="font-bold">Niepełne odpowiedzi (brakuje części zadania):</p>
+                <div className="mt-2 flex flex-wrap gap-1.5">
+                  {partial.map((t) => (
+                    <button key={t.id} className="qnum answered" onClick={() => { setIndex(tasks.indexOf(t)); setConfirming(false); }}>
                       {t.number}
                     </button>
                   ))}

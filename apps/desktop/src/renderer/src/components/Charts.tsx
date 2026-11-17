@@ -49,7 +49,11 @@ export function StatusTag({ status }: { status: AreaStatus }) {
 export function Delta({ value }: { value: number | null }) {
   if (value === null) return <span className="text-sm text-muted">–</span>;
   if (value === 0) return <span className="text-sm text-muted">━</span>;
-  return <span className={`tabular whitespace-nowrap text-sm ${value > 0 ? "text-[var(--ok)]" : "text-[var(--bad)]"}`}>{value > 0 ? "▲" : "▼"} {Math.abs(value)} pp</span>;
+  return (
+    <span className={`tabular whitespace-nowrap text-sm ${value > 0 ? "text-[var(--ok)]" : "text-[var(--bad)]"}`} title={`${value > 0 ? "wzrost" : "spadek"} o ${Math.abs(value)} punktów procentowych`}>
+      {value > 0 ? "▲" : "▼"} {Math.abs(value)} pp
+    </span>
+  );
 }
 
 /**

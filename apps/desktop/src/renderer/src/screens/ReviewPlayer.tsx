@@ -54,6 +54,18 @@ export function ReviewPlayer() {
   const ctx = useMemo(() => (session ? { sessionId: session.id, stimuli: session.stimuli } : null), [session]);
   const go = (i: number) => tasks[i] && setParams({ zad: String(tasks[i]!.number) }, { replace: true });
 
+  // Keyboard: ←/→ or J/K move between tasks, as in practice and the simulation.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const tag = (e.target as HTMLElement).tagName;
+      if (tag === "TEXTAREA" || tag === "INPUT" || tag === "SELECT" || e.metaKey || e.ctrlKey || e.altKey) return;
+      if (e.key === "ArrowRight" || e.key === "k") go(index + 1);
+      else if (e.key === "ArrowLeft" || e.key === "j") go(index - 1);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  });
+
   if (error) return <p className="p-8 text-[var(--bad)]">{error}</p>;
   if (!view || !session || !task || !ctx) return <p className="p-8 text-muted">Ładowanie…</p>;
 

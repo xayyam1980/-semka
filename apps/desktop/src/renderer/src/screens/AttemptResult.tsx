@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router";
 import type { AttemptView, PublicSession } from "../../../shared/ipc";
-import { clock, pct, sessionLabel, shortDate } from "../lib/format";
+import { clock, pct, plural, sessionLabel, shortDate } from "../lib/format";
 
 export function AttemptResult() {
   const { attemptId = "" } = useParams();
@@ -28,6 +28,7 @@ export function AttemptResult() {
     const y = view.tasks.find((z) => z.taskId === x.id)!;
     return y.answered && !y.pending && y.earned < y.maxPoints;
   });
+  const untouched = view.tasks.filter((x) => !x.answered).length;
   const reviewUrl = (n?: number) => `/proba/${attemptId}/przeglad${n ? `?zad=${n}` : ""}`;
 
   return (
@@ -53,6 +54,11 @@ export function AttemptResult() {
             {s.earned} / {s.maxPoints}
           </p>
           <p className="text-muted">{pct(s.earned, s.maxPoints)} %</p>
+          {!sim && untouched > 0 && (
+            <p className="mt-2 text-sm text-muted" data-testid="untouched-note">
+              {untouched} z {tasks.length} {plural(tasks.length, "zadania", "zadań", "zadań")} bez odpowiedzi: liczą się jako 0 pkt.
+            </p>
+          )}
         </article>
         <article className="card rounded-[10px] border border-line bg-surface p-5">
           <p className="text-sm text-muted">Zamknięte · otwarte</p>

@@ -49,15 +49,31 @@ export function Dashboard() {
     <section className="flex flex-col gap-6">
       <div>
         <h1 className="text-4xl font-bold">Pulpit</h1>
-        {ov && !ov.hasData && (
-          <p className="text-muted">
-            Tu zobaczysz swoją gotowość i to, gdzie tracisz punkty. Zacznij od dowolnego arkusza:{" "}
-            <Link to="/arkusze" className="font-bold text-accent">
-              przejdź do arkuszy →
-            </Link>
-          </p>
-        )}
+        {ov && !ov.hasData && <p className="text-muted">Tu zobaczysz swoją gotowość do egzaminu i to, gdzie tracisz punkty.</p>}
       </div>
+
+      {ov && !ov.hasData && attempts.length === 0 && (
+        <article className="card flex flex-col gap-3 rounded-[10px] border-2 border-accent bg-surface p-5" data-testid="first-steps">
+          <h2 className="text-xl font-bold">Od czego zacząć?</h2>
+          <ol className="flex list-decimal flex-col gap-1.5 pl-5 text-[15px]">
+            <li>
+              <b>Wybierz przedmiot</b> poniżej i kliknij „Ćwicz”. Zobaczysz prawdziwe arkusze CKE z poprzednich lat.
+            </li>
+            <li>
+              <b>Zacznij od trybu nauki</b>: po każdym zadaniu kliknij „Sprawdź”, a zobaczysz poprawną odpowiedź i wyjaśnienie. Możesz przerwać w dowolnym momencie.
+            </li>
+            <li>
+              <b>Gdy poczujesz się pewniej, zrób symulację</b>: cały arkusz na czas, jak w maju na sali.
+            </li>
+            <li>
+              <b>Wróć tutaj</b>: Pulpit pokaże Twoją gotowość, najsłabsze tematy i co ćwiczyć dalej.
+            </li>
+          </ol>
+          <Link to="/arkusze" className="btn primary self-start" data-testid="first-steps-start">
+            Przejdź do arkuszy →
+          </Link>
+        </article>
+      )}
 
       {toGrade.length > 0 && (
         <article className="card flex flex-col gap-3 rounded-[10px] border border-[var(--warn)] bg-[var(--warn-soft)] p-5" data-testid="to-grade">
@@ -143,9 +159,10 @@ export function Dashboard() {
               <p className="tabular text-sm text-muted">
                 {s.standardMinutes} min{card?.last ? ` · ost. ${card.last.percent} %` : ""}
               </p>
+              {!card?.last && ov && <p className="text-sm text-muted">Jeszcze bez wyników.</p>}
               {card?.last && (
                 <div className="flex items-center gap-3">
-                  <Sparkline values={card.trend} />
+                  {card.trend.length > 1 && <Sparkline values={card.trend} />}
                   <span className="tabular text-sm">
                     {card.last.points} / {card.last.max} pkt
                   </span>
@@ -180,6 +197,7 @@ export function Dashboard() {
                 <tr key={`${g.subjectId}:${g.area}`} className="border-b border-line last:border-0">
                   <td className="py-2 pr-3">
                     {g.area} <span className="text-sm text-muted">({SUBJECT_TONE[g.subjectId]!.tag})</span>
+                    {g.status === "za_malo" && <span className="block text-xs text-muted">za mało zadań, żeby ocenić</span>}
                   </td>
                   <td className="w-40 py-2 pr-3">
                     <Meter percent={g.percent} status={g.status} label={g.area} />

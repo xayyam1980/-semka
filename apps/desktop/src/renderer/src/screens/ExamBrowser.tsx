@@ -20,7 +20,9 @@ export function ExamBrowser() {
 
   if (!sessions) return <p className="text-muted">Ładowanie…</p>;
 
-  const subjects = [...new Set(sessions.filter((s) => !only || s.subjectId === only).map((s) => s.subjectName))];
+  // Same order as everywhere else in the app (Pulpit, tabs): polski, matematyka, angielski.
+  const order = Object.keys(SUBJECTS);
+  const subjects = [...new Set(sessions.filter((s) => !only || s.subjectId === only).sort((a, b) => order.indexOf(a.subjectId) - order.indexOf(b.subjectId)).map((s) => s.subjectName))];
 
   return (
     <section className="flex flex-col gap-8" data-testid="exam-browser">
@@ -42,7 +44,7 @@ export function ExamBrowser() {
       {sessions.length === 0 && (
         <div className="card rounded-[10px] border border-line bg-surface p-6">
           <h2 className="text-lg font-bold">Brak opublikowanych arkuszy</h2>
-          <p className="text-muted">Arkusze pojawią się tu po imporcie i zatwierdzeniu (pnpm importer approve …).</p>
+          <p className="text-muted">Nie znaleziono arkuszy egzaminacyjnych. Zainstaluj aplikację ponownie albo poproś o pomoc osobę, która ją instalowała.</p>
         </div>
       )}
 
@@ -74,6 +76,12 @@ export function ExamBrowser() {
                       Zamknięte {s.closedPoints} pkt · otwarte {s.openPoints} pkt
                       <br />
                       {mine.length ? `Twoje próby: ${mine.length}${best !== null ? ` · najlepsza ${best} %` : ""}` : "Jeszcze nie ćwiczono"}
+                      {open && (
+                        <>
+                          <br />
+                          Nauka w toku: {open.answered} z {open.itemCount} odpowiedzi
+                        </>
+                      )}
                     </p>
                     <div className="mt-auto flex flex-wrap gap-2">
                       {exam && (
@@ -83,7 +91,7 @@ export function ExamBrowser() {
                       )}
                       {open && (
                         <button className="btn primary" onClick={() => navigate(`/proba/${open.id}`)}>
-                          Wznów naukę ({open.answered}/{open.itemCount})
+                          Wznów naukę
                         </button>
                       )}
                       <Link className={`btn ${open || exam ? "ghost" : "primary"}`} to={`/arkusze/${s.id}`}>

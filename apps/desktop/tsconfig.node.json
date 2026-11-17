@@ -17,6 +17,7 @@
     "src/shared/**/*"
   ],
   "exclude": [
-    "test/rich.test.ts"
+    "test/rich.test.ts",
+    "test/answers.test.ts"
   ]
 }

@@ -3,6 +3,7 @@
 import type { Criterion, Rubric } from "@osemka/schema";
 import { scoreRubric, type RubricInput } from "@osemka/scoring";
 import { useMemo, useState } from "react";
+import { plural } from "../lib/format";
 import { Rich, type RichContext } from "./Rich";
 
 interface Props {
@@ -50,7 +51,11 @@ export function RubricGrader({ rubric, dyslexia, initial, saved, onSave, ctx }: 
         <span className="tabular text-lg font-bold" data-testid="rubric-total">
           Razem: {result.total} / {rubric.maxPoints}
         </span>
-        {result.missing.length > 0 && <span className="text-sm text-muted">brakuje {result.missing.length} kryt.</span>}
+        {result.missing.length > 0 && (
+          <span className="text-sm text-muted">
+            oceń jeszcze {result.missing.length} {plural(result.missing.length, "kryterium", "kryteria", "kryteriów")}
+          </span>
+        )}
         <button className="btn primary ml-auto" disabled={busy || result.missing.length > 0} onClick={() => void save()} data-testid="rubric-save">
           {saved ? "Zapisz zmiany" : "Zapisz ocenę"}
         </button>

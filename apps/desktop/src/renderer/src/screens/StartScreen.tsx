@@ -11,6 +11,13 @@ const SCOPES: { value: Exclude<Scope, object>; label: string }[] = [
   { value: "open", label: "Tylko otwarte" },
 ];
 
+/** What to have at hand, per subject. */
+const TIPS: Record<string, string> = {
+  matematyka: "Przygotuj kartkę i długopis do obliczeń. Kalkulator na egzaminie jest niedozwolony.",
+  polski: "Przygotuj kartkę na brudnopis. Wypracowanie piszesz w aplikacji; na egzaminie musi mieć co najmniej 200 wyrazów.",
+  angielski: "Przygotuj słuchawki albo głośniki: pierwsze zadania to słuchanie nagrania. Głośność ustawisz w Ustawieniach (Próba dźwięku).",
+};
+
 export function StartScreen() {
   const { sessionId = "" } = useParams();
   const [session, setSession] = useState<SessionSummary | null | undefined>(undefined);
@@ -117,7 +124,7 @@ export function StartScreen() {
           )}
         </article>
       </div>
-      <p className="text-sm text-muted">Przygotuj kartkę i długopis do obliczeń. Kalkulator na egzaminie jest niedozwolony.</p>
+      <p className="text-sm text-muted" data-testid="start-tip">{TIPS[session.subjectId] ?? TIPS.matematyka}</p>
     </section>
   );
 }

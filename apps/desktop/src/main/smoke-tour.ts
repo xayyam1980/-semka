@@ -12,6 +12,7 @@ export async function runTour(win: BrowserWindow, outDir: string): Promise<strin
   if (process.env.OSEMKA_TOUR === "angielski") return runEnglishTour(win, outDir);
   if (process.env.OSEMKA_TOUR === "analiza") return runAnalyticsTour(win, outDir);
   if (process.env.OSEMKA_TOUR === "ustawienia") return runSettingsTour(win, outDir);
+  if (process.env.OSEMKA_TOUR === "uat") return runUatTour(win, outDir);
   const js = <T>(code: string) => win.webContents.executeJavaScript(code) as Promise<T>;
   const shots: string[] = [];
   const shot = async (name: string) => {
@@ -63,6 +64,9 @@ export async function runTour(win: BrowserWindow, outDir: string): Promise<strin
   await shot("zadanie-16-ocena");
 
   await click('[data-testid="finish"]');
+  // Unchecked tasks left: "Zakończ" asks first.
+  await shot("zakoncz-pytanie");
+  await click('[data-testid="finish-confirm"]');
   await wait(600);
   await shot("wynik");
 
@@ -318,5 +322,131 @@ async function runSettingsTour(win: BrowserWindow, outDir: string): Promise<stri
   const applied = await js<string>(`JSON.stringify({ font: document.documentElement.dataset.readingFont, scale: getComputedStyle(document.documentElement).getPropertyValue("--font-scale"), theme: document.documentElement.dataset.theme })`);
   writeFileSync(join(outDir, "ustawienia-applied.txt"), applied);
   await js(`window.osemka.updateSettings({ readingFont: "literata", fontScale: 1, theme: "system" })`);
+  return shots;
+}
+
+/**
+ * OSEMKA_TOUR=uat: a student's first run and the rough edges: empty screens (first run only), a smaller window,
+ * the light theme, a partly answered task, leaving practice, the hand-in summary and keyboard focus.
+ */
+async function runUatTour(win: BrowserWindow, outDir: string): Promise<string[]> {
+  const js = <T>(code: string) => win.webContents.executeJavaScript(code, true) as Promise<T>;
+  const shots: string[] = [];
+  let skipped = 0;
+  const shot = async (name: string) => {
+    await wait(600);
+    // Numbered the same on both runs: the first-run screens (run 1 only) are 1–3.
+    const file = join(outDir, `uat-${shots.length + 1 + skipped}-${name}-${process.platform}.png`);
+    // After a resize the hidden window can hand back its last frame: ask for a fresh paint first.
+    win.webContents.invalidate();
+    await wait(200);
+    writeFileSync(file, (await win.webContents.capturePage()).toPNG());
+    shots.push(file);
+  };
+  const waitFor = (selector: string) =>
+    js(`new Promise((ok, no) => { const t = Date.now(); (function poll() { const b = document.querySelector(${JSON.stringify(selector)}); if (b) ok(true); else if (Date.now() - t > 8000) no(new Error("missing ${selector.replace(/"/g, "'")}")); else setTimeout(poll, 100); })(); })`);
+  const click = async (selector: string) => {
+    await waitFor(selector);
+    await js(`document.querySelector(${JSON.stringify(selector)}).click()`);
+  };
+  const go = async (hash: string, selector: string) => {
+    await js(`location.hash = ${JSON.stringify(hash)}`);
+    await waitFor(selector);
+  };
+
+  // First run: what a student sees before doing anything.
+  const fresh = (await js<unknown[]>("window.osemka.listAttempts()")).length === 0;
+  if (!fresh) skipped = 3;
+  if (fresh) {
+    await go("#/", '[data-testid="first-steps"]');
+    await shot("pierwsze-uruchomienie-pulpit");
+    await go("#/historia", "h1");
+    await shot("pierwsze-uruchomienie-historia");
+    await go("#/analiza?przedmiot=polski", "h1");
+    await shot("pierwsze-uruchomienie-analiza");
+  }
+
+  // A smaller window (laptop at 125 % scaling).
+  win.setContentSize(1024, 640);
+  await go("#/arkusze", '[data-testid="exam-browser"]');
+  await shot("maly-arkusze");
+  await go("#/arkusze/angielski-2026-05-glowny", '[data-testid="start-practice"]');
+  // Keyboard: Tab to the scope choice shows where the focus is.
+  win.webContents.focus();
+  await js(`document.getElementById("scope-all").focus()`);
+  for (const type of ["keyDown", "keyUp"] as const) win.webContents.sendInputEvent({ type, keyCode: "Right" }); // arrow keys move within the radio group
+  await wait(200);
+  const ring = await js<string>(`(() => { const l = document.getElementById("scope-closed")?.closest("label"); return l ? getComputedStyle(l).outlineStyle + " " + document.activeElement?.id : "none"; })()`);
+  if (!ring.startsWith("solid")) throw new Error(`no visible keyboard focus on the scope choice (${ring})`);
+  await shot("maly-start-fokus");
+
+  // Practice: answer only part of a multi-part task before checking.
+  await click('[data-testid="start-practice"]');
+  await waitFor('[data-testid="practice-player"]');
+  await js(`[...document.querySelectorAll("footer nav button")].find((b) => b.textContent.trim() === "5")?.click()`);
+  await wait(400);
+  await js(`document.querySelector('[data-option]')?.click()`);
+  await waitFor('[data-testid="missing-parts"]');
+  await js(`document.querySelector('[data-testid="missing-parts"]').scrollIntoView({ block: "center" })`);
+  await shot("maly-czesciowa-odpowiedz");
+  await js(`document.querySelector('[data-testid="check"]').click()`);
+  await shot("maly-czesciowa-sprawdzona");
+  // The last task, then leaving practice.
+  await js(`[...document.querySelectorAll("footer nav button")].at(-1)?.click()`);
+  await shot("maly-ostatnie-zadanie");
+  await js(`document.querySelector('[data-testid="finish-last"]').click()`);
+  await waitFor('[data-testid="finish-dialog"]');
+  await shot("maly-zakoncz");
+  await js(`document.querySelector('[data-testid="finish-cancel"]').click()`);
+  await click('[data-testid="leave"]');
+  await waitFor('[data-testid="exam-browser"]');
+  await shot("maly-przerwana-nauka");
+  const resumable = await js<boolean>(`[...document.querySelectorAll("button")].some((b) => b.textContent.startsWith("Wznów naukę"))`);
+  if (!resumable) throw new Error("after Przerwij the practice cannot be resumed from Arkusze");
+
+  // Light theme: practice feedback on a two-part choice, a simulation and its hand-in summary.
+  await js(`window.osemka.updateSettings({ theme: "light" })`);
+  await go("#/arkusze/matematyka-2025-05-glowny", '[data-testid="start-practice"]');
+  await click('[data-testid="start-practice"]');
+  await waitFor('[data-testid="practice-player"]');
+  await wait(500);
+  const twoPart = await js<number>(`(async () => { const s = await window.osemka.getSession("matematyka-2025-05-glowny"); return s.tasks.find((t) => t.items[0].response.type === "choice_with_reason")?.number ?? 0; })()`);
+  if (twoPart) {
+    await js(`[...document.querySelectorAll("footer nav button")].find((b) => b.textContent.trim() === "${twoPart}")?.click()`);
+    await wait(400);
+    await js(`(() => { const b = document.querySelectorAll('button[data-option]'); b[0].click(); b[b.length - 1].click(); })()`);
+    await js(`document.querySelector('[data-testid="check"]').click()`);
+    await waitFor('[data-testid="feedback"]');
+    await shot("jasny-dwie-czesci");
+  }
+  win.setContentSize(1280, 800);
+  await go("#/arkusze/angielski-2025-05-glowny", '[data-testid="start-simulation"]');
+  await click('[data-testid="start-simulation"]');
+  await click('[data-testid="confirm-simulation"]');
+  await waitFor('[data-testid="exam-player"]');
+  await js(`document.querySelector('[data-option="A"]').click()`);
+  await shot("jasny-symulacja");
+  await js(`document.querySelector('[data-testid="submit-open"]').click()`);
+  await waitFor('[data-testid="submit-partial"]'); // task 1 has only 1.1 answered
+  await shot("jasny-oddaj");
+  // Escape closes the summary without handing in.
+  await js(`window.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape" }))`);
+  await wait(300);
+  if (await js<boolean>(`!!document.querySelector('[data-testid="submit-dialog"]')`)) throw new Error("Escape does not close the hand-in summary");
+  await js(`document.querySelector('[data-testid="submit-open"]').click()`);
+  await click('[data-testid="submit-confirm"]');
+  await waitFor('[data-testid="attempt-result"]');
+  await shot("jasny-wynik");
+
+  // Text at 140 % in a smaller window.
+  win.setContentSize(1024, 640);
+  await js(`window.osemka.updateSettings({ fontScale: 1.4 })`);
+  await go("#/", '[data-testid="subject-polski"]');
+  await shot("maly-140-pulpit");
+  await go("#/analiza?przedmiot=angielski", "h1");
+  await js(`document.querySelector('[data-testid="areas"]')?.scrollIntoView({ block: "start" })`);
+  await shot("maly-140-analiza");
+  await js(`window.osemka.updateSettings({ fontScale: 1, theme: "system" })`);
+  win.setContentSize(1280, 800);
   return shots;
 }

@@ -2,6 +2,9 @@
 # Matched by extension at subject/session depth so Unicode folder names don't matter.
 /*/*/*.pdf
 /*/*/*.mp3
+# …at any depth too (e.g. Język polski/Additional/Czerwiec 2025/…): CKE files never go into the public repository.
+**/*.pdf
+**/*.mp3
 # Recordings copied next to the imported content (shipped with the installer, not the repository).
 /content/**/*.mp3
 !/design/**

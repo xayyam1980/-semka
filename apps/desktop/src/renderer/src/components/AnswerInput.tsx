@@ -1,6 +1,7 @@
 // Inputs for each answer type. After checking, inputs lock and show right/wrong per option or part.
 import type { KeySpec, ResponseValue } from "@osemka/schema";
 import type { PublicItem } from "../../../shared/ipc";
+import { plural } from "../lib/format";
 import { Rich, type RichContext } from "./Rich";
 
 interface Props {
@@ -81,6 +82,8 @@ export function AnswerInput({ item, value, onChange, revealedKey, ctx }: Props) 
             <button key={o.id} className={`opt ${state}`} disabled={locked} aria-pressed={picked} onClick={() => onChange({ type: "choices", value: { ...chosen, [part]: o.id } })} data-option={o.id}>
               <span className="k">{o.id}</span>
               <Rich text={o.text} ctx={ctx} inline />
+              {state === "ok" && <span className="st">✓ dobrze</span>}
+              {state === "bad" && <span className="st">× Twój wybór</span>}
               {state === "rev" && <span className="st">poprawna</span>}
             </button>
           );
@@ -194,7 +197,7 @@ export function AnswerInput({ item, value, onChange, revealedKey, ctx }: Props) 
         />
         <div className="flex justify-end text-sm">
           <span className={`tabular ${r.minWords && words < r.minWords ? "text-[var(--warn)]" : "text-muted"}`}>
-            {words} wyrazów{r.minWords ? ` (minimum ${r.minWords})` : ""}
+            {words} {plural(words, "wyraz", "wyrazy", "wyrazów")}{r.minWords ? ` (minimum ${r.minWords})` : ""}
           </span>
         </div>
       </div>
@@ -225,7 +228,9 @@ export function AnswerInput({ item, value, onChange, revealedKey, ctx }: Props) 
           ) : (
             <span />
           )}
-          <span className="tabular">{words} słów</span>
+          <span className="tabular">
+            {words} {plural(words, "wyraz", "wyrazy", "wyrazów")}
+          </span>
         </div>
       </div>
     );
@@ -245,4 +250,16 @@ export function hasAnswer(item: PublicItem, v: ResponseValue | null): boolean {
     case "essay": return !!v.text?.trim();
   }
   return item.response.type === "worked_solution";
+}
+
+/** True when every part of the item has an answer (all statements, both parts, every gap or slot). */
+export function isComplete(item: PublicItem, v: ResponseValue | null): boolean {
+  if (!hasAnswer(item, v) || !v) return false;
+  const r = item.response;
+  if (v.type === "choices") {
+    const ids = r.type === "true_false" ? r.statements.map((s) => s.id) : r.type === "choice_with_reason" ? ["choice", "reason"] : r.type === "matching" ? r.slots : [];
+    return ids.every((id) => !!v.value[id]);
+  }
+  if (v.type === "text" && r.type === "short_text") return Array.from({ length: r.gaps }, (_, g) => v.value[g]?.trim()).every(Boolean);
+  return true;
 }

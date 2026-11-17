@@ -3,13 +3,13 @@ import type { ResponseValue } from "@osemka/schema";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router";
 import type { AiSuggestion, AttemptView, CheckResult, PublicSession, PublicTask, SavedResponse } from "../../../shared/ipc";
-import { AnswerInput, hasAnswer } from "../components/AnswerInput";
+import { AnswerInput, hasAnswer, isComplete } from "../components/AnswerInput";
 import { Feedback, TaskTranscript } from "../components/Feedback";
 import { Rich, type RichContext } from "../components/Rich";
 import { TaskText } from "../components/TaskText";
 import { ReadingPane, readingTextOf } from "../components/ReadingPane";
 import { ListeningPlayer, listeningOf } from "../components/ListeningPlayer";
-import { clock, sessionLabel } from "../lib/format";
+import { clock, plural, sessionLabel } from "../lib/format";
 
 const SAVE_DELAY_MS = 400;
 
@@ -29,6 +29,7 @@ export function PracticePlayer() {
   const [index, setIndex] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [elapsed, setElapsed] = useState(0);
+  const [confirmFinish, setConfirmFinish] = useState(false);
   const saveTimers = useRef<Record<string, ReturnType<typeof setTimeout>>>({});
   const taskShownAt = useRef(Date.now());
 
@@ -43,7 +44,8 @@ export function PracticePlayer() {
       if (!s) return setError("Ten arkusz nie jest już dostępny.");
       setView(v);
       setSession(s);
-      setElapsed(v.activeMs);
+      // The stopwatch is saved when practice ends; after a break, continue from the time spent on the tasks so far.
+      setElapsed(Math.max(v.activeMs, Object.values(v.responses).reduce((sum, r) => sum + r.timeSpentMs, 0)));
       setValues(Object.fromEntries(Object.entries(v.responses).map(([k, r]) => [k, r.value])));
       setChecks(Object.fromEntries(Object.entries(v.responses).flatMap(([k, r]) => (r.check ? [[k, r.check]] : []))));
       setSelfPoints(Object.fromEntries(Object.entries(v.responses).flatMap(([k, r]) => (r.selfPoints !== undefined ? [[k, r.selfPoints]] : []))));
@@ -145,6 +147,19 @@ export function PracticePlayer() {
     }
   };
 
+  /** Leaves practice without ending it: answers are saved, and "Wznów naukę" continues later. */
+  const leave = () => {
+    if (task) {
+      const spent = Date.now() - taskShownAt.current;
+      for (const it of task.items) save(it.id, { addTimeMs: spent / task.items.length }, true);
+    }
+    for (const it of Object.keys(saveTimers.current)) {
+      clearTimeout(saveTimers.current[it]);
+      if (!checks[it] && it in values) void window.osemka.saveResponse(attemptId, it, { value: values[it] ?? null });
+    }
+    navigate(session ? `/arkusze?przedmiot=${session.subjectId}` : "/arkusze");
+  };
+
   const finish = async () => {
     for (const id of Object.keys(saveTimers.current)) clearTimeout(saveTimers.current[id]);
     await Promise.all(Object.entries(values).filter(([id]) => !checks[id]).map(([id, v]) => window.osemka.saveResponse(attemptId, id, { value: v })));
@@ -156,6 +171,10 @@ export function PracticePlayer() {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const tag = (e.target as HTMLElement).tagName;
+      if (confirmFinish) {
+        if (e.key === "Escape") setConfirmFinish(false);
+        return;
+      }
       if (tag === "TEXTAREA" || tag === "INPUT" || tag === "SELECT" || e.metaKey || e.ctrlKey || e.altKey) return;
       if (e.key === "ArrowRight" || e.key === "k") goTo(index + 1);
       else if (e.key === "ArrowLeft" || e.key === "j") goTo(index - 1);
@@ -188,6 +207,11 @@ export function PracticePlayer() {
   const checkedItems = Object.keys(checks).length;
   const correctItems = Object.values(checks).filter((c) => c.outcome.kind === "auto" && c.outcome.result === "correct").length;
   const flagged = !!flags[task.items[0]!.id];
+  // Parts left without an answer get 0 points when checked: say which, before the student checks.
+  const missingParts = anyAnswer ? task.items.filter((i) => !isComplete(i, values[i.id] ?? null)) : [];
+  const uncheckedTasks = tasks.filter((t) => !t.items.every((i) => checks[i.id])).length;
+  const askFinish = () => (uncheckedTasks > 0 ? setConfirmFinish(true) : void finish());
+  const scopeLabel = typeof view.scope === "object" ? " · wybrane zadania" : view.scope === "closed" ? " · zadania zamknięte" : view.scope === "open" ? " · zadania otwarte" : "";
 
   const statusOf = (t: PublicTask) => {
     const cs = t.items.map((i) => checks[i.id]);
@@ -203,10 +227,13 @@ export function PracticePlayer() {
     <div className="flex h-full flex-col" data-ready="1" data-testid="practice-player">
       <header className="practice-band flex items-center gap-4 px-6 py-3">
         <span className="font-bold">
-          {session.subjectName} · {sessionLabel(session)} · NAUKA
+          {session.subjectName} · {sessionLabel(session)} · NAUKA{scopeLabel}
         </span>
         <span className="tabular ml-auto" title="Stoper (liczy tylko, gdy okno jest aktywne)">◷ {clock(elapsed)}</span>
-        <button className="btn ghost" onClick={() => void finish()} data-testid="finish">
+        <button className="btn ghost" onClick={leave} title="Wyjdź i wróć później: odpowiedzi zostają zapisane" data-testid="leave">
+          Przerwij
+        </button>
+        <button className="btn ghost" onClick={askFinish} title="Zakończ naukę i zobacz wynik" data-testid="finish">
           Zakończ
         </button>
       </header>
@@ -252,6 +279,13 @@ export function PracticePlayer() {
                   {task.format === "otwarte" ? "Pokaż rozwiązanie i oceń się" : "Sprawdź"}
                 </button>
                 {!anyAnswer && <span className="self-center text-sm text-muted">Bez odpowiedzi sprawdzenie da 0 pkt.</span>}
+                {missingParts.length > 0 && (
+                  <span className="self-center text-sm text-[var(--warn)]" data-testid="missing-parts">
+                    {task.items.length > 1
+                      ? `Bez odpowiedzi: ${missingParts.map((i) => i.label).join(", ")}. Te części dostaną 0 pkt.`
+                      : "Nie wszystko jest uzupełnione. Brakujące części dostaną 0 pkt."}
+                  </span>
+                )}
               </div>
             )}
           </article>
@@ -311,10 +345,41 @@ export function PracticePlayer() {
             </button>
           ))}
         </nav>
-        <button className="btn ghost" onClick={() => goTo(index + 1)} disabled={index === tasks.length - 1}>
-          Następne →
-        </button>
+        {index < tasks.length - 1 ? (
+          <button className="btn ghost" onClick={() => goTo(index + 1)}>
+            Następne →
+          </button>
+        ) : (
+          <button className="btn ghost" onClick={askFinish} data-testid="finish-last">
+            Zakończ naukę →
+          </button>
+        )}
       </footer>
+
+      {confirmFinish && (
+        <div className="fixed inset-0 z-20 grid place-items-center bg-black/40 p-6" role="dialog" aria-modal="true" aria-labelledby="finish-title">
+          <div className="flex w-full max-w-lg flex-col gap-4 rounded-[16px] bg-surface p-6 shadow-xl" data-testid="finish-dialog">
+            <h2 id="finish-title" className="text-2xl font-bold">
+              Zakończyć naukę?
+            </h2>
+            <p>
+              Sprawdzone: {tasks.length - uncheckedTasks} z {tasks.length} {plural(tasks.length, "zadania", "zadań", "zadań")}. Po zakończeniu tej próby nie da się już dokończyć, a zadania bez odpowiedzi dostaną 0 pkt.
+            </p>
+            <p className="text-sm text-muted">Chcesz zrobić przerwę? Wybierz „Przerwij”: odpowiedzi zostaną zapisane, a naukę wznowisz w Arkuszach.</p>
+            <div className="flex flex-wrap justify-end gap-2">
+              <button className="btn ghost" onClick={() => setConfirmFinish(false)} autoFocus data-testid="finish-cancel">
+                Wróć do zadań
+              </button>
+              <button className="btn ghost" onClick={leave}>
+                Przerwij
+              </button>
+              <button className="btn primary" onClick={() => void finish()} data-testid="finish-confirm">
+                Zakończ i pokaż wynik
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
