@@ -12,6 +12,8 @@ export interface ContentStore {
   publicSession(id: string): PublicSession | undefined;
   /** Absolute path for an asset of a session, or undefined if the path escapes the session folder. */
   assetPath(sessionId: string, rel: string): string | undefined;
+  /** Area name of a skill tag from content/taxonomy/skills.json. */
+  tagArea(id: string): string | undefined;
 }
 
 const dirOf = (id: string) => {
@@ -38,8 +40,16 @@ export function openContent(root: string, opts: { includeDrafts: boolean }): Con
     }
   }
 
+  const tagFile = join(root, "taxonomy", "skills.json");
+  const tagAreas = new Map<string, string>();
+  if (existsSync(tagFile)) {
+    const raw = JSON.parse(readFileSync(tagFile, "utf8")) as { id: string; area: string }[] | { tags: { id: string; area: string }[] };
+    for (const t of Array.isArray(raw) ? raw : raw.tags) tagAreas.set(t.id, t.area);
+  }
+
   return {
     root,
+    tagArea: (id) => tagAreas.get(id),
     list: () =>
       [...bundles.values()]
         .map(({ session, tasks }) => ({

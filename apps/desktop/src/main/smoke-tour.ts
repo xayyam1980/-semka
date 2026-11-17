@@ -10,6 +10,7 @@ export async function runTour(win: BrowserWindow, outDir: string): Promise<strin
   if (process.env.OSEMKA_DEV_SIM_SECONDS) return runTimeUpTour(win, outDir);
   if (process.env.OSEMKA_TOUR === "polski") return runPolishTour(win, outDir);
   if (process.env.OSEMKA_TOUR === "angielski") return runEnglishTour(win, outDir);
+  if (process.env.OSEMKA_TOUR === "analiza") return runAnalyticsTour(win, outDir);
   const js = <T>(code: string) => win.webContents.executeJavaScript(code) as Promise<T>;
   const shots: string[] = [];
   const shot = async (name: string) => {
@@ -211,5 +212,64 @@ async function runEnglishTour(win: BrowserWindow, outDir: string): Promise<strin
   await shot("symulacja-nagranie");
   const t = await js<number>(`document.querySelector(".recording audio")?.currentTime ?? -1`);
   console.log(`TOUR recording: ${t.toFixed(1)}s after 3.5 s`);
+  return shots;
+}
+
+/**
+ * OSEMKA_TOUR=analiza: answers some tasks through the window's own API (practice in Matematyka, simulations in
+ * Matematyka and Angielski), then shows the dashboard, the analysis and the history.
+ */
+async function runAnalyticsTour(win: BrowserWindow, outDir: string): Promise<string[]> {
+  const js = <T>(code: string) => win.webContents.executeJavaScript(code, true) as Promise<T>;
+  const shots: string[] = [];
+  const shot = async (name: string) => {
+    await wait(900);
+    const file = join(outDir, `analiza-${shots.length + 1}-${name}-${process.platform}.png`);
+    writeFileSync(file, (await win.webContents.capturePage()).toPNG());
+    shots.push(file);
+  };
+  // Closed answers: the first option everywhere (some right, some wrong); open answers graded at half marks.
+  await js(`(async () => {
+    const o = window.osemka;
+    const first = (it) => {
+      const r = it.response;
+      if (r.type === "single_choice") return { type: "choice", value: r.options[0].id };
+      if (r.type === "true_false") return { type: "choices", value: Object.fromEntries(r.statements.map((s) => [s.id, "P"])) };
+      if (r.type === "choice_with_reason") return { type: "choices", value: { choice: r.choices[0].id, reason: r.reasons[0].id } };
+      if (r.type === "matching") return { type: "choices", value: Object.fromEntries(r.slots.map((s) => [s, r.options[0].id])) };
+      return null;
+    };
+    const p = await o.startPractice("matematyka-2026-05-glowny", "closed");
+    const ms = await o.getSession("matematyka-2026-05-glowny");
+    for (const t of ms.tasks.filter((t) => p.taskIds.includes(t.id))) for (const it of t.items) {
+      await o.saveResponse(p.summary.id, it.id, { value: first(it) });
+      await o.checkItem(p.summary.id, it.id);
+    }
+    for (const id of ["matematyka-2025-05-glowny", "angielski-2025-05-glowny"]) {
+      const s = await o.startSimulation(id);
+      const ses = await o.getSession(id);
+      for (const t of ses.tasks) for (const it of t.items) {
+        const v = first(it);
+        if (v) await o.saveResponse(s.summary.id, it.id, { value: v });
+        else if (it.response.type === "worked_solution") await o.saveResponse(s.summary.id, it.id, { value: { type: "work", text: "rozwiązanie" } });
+      }
+      await o.finishAttempt(s.summary.id, 3600000);
+      for (const t of ses.tasks) for (const it of t.items) if (it.response.type === "worked_solution") await o.gradeItem(s.summary.id, it.id, Math.floor(it.maxPoints / 2));
+    }
+  })()`);
+  await js(`location.hash = "#/"`);
+  await shot("pulpit");
+  await js(`document.querySelector('[data-testid="gaps"]')?.scrollIntoView({ block: "start" })`);
+  await shot("pulpit-dol");
+  await js(`location.hash = "#/analiza?przedmiot=matematyka"`);
+  await shot("analiza-matematyka");
+  await js(`document.querySelector('[data-testid="areas"]')?.scrollIntoView({ block: "start" })`);
+  await shot("analiza-umiejetnosci");
+  await js(`location.hash = "#/historia"`);
+  await shot("historia");
+  await js(`location.hash = "#/"`);
+  await wait(600);
+  await js(`document.querySelector('[data-testid="next-step-practice"]')?.click()`);
+  await shot("cwiczenie-z-pulpitu");
   return shots;
 }

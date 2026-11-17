@@ -78,6 +78,52 @@ export interface PublicSession {
   recording?: { asset: string };
 }
 
+// ── P7 analytics ──
+export type AreaStatus = "opanowane" | "do_pracy" | "slabe" | "za_malo";
+
+/** One skill area: points over the period, a sparkline of recent attempts and the change vs. 30+ days ago. */
+export interface AreaRow {
+  area: string;
+  percent: number | null;
+  /** Number of scored items (or essay criteria). */
+  n: number;
+  points: number;
+  max: number;
+  /** Points lost: max − points. The next step picks the largest. */
+  lost: number;
+  trend: number[];
+  delta: number | null;
+  status: AreaStatus;
+}
+
+export interface GapRow extends AreaRow {
+  subjectId: SubjectId;
+}
+
+export interface SubjectCard {
+  subjectId: SubjectId;
+  last: { percent: number; points: number; max: number; mode: "nauka" | "symulacja"; at: string; attemptId: string } | null;
+  trend: number[];
+  weakest: string | null;
+}
+
+export interface Overview {
+  readiness: { percent: number; confidence: "niska" | "średnia" | "wysoka"; simulated: number; delta30: number | null } | null;
+  nextStep: GapRow | null;
+  subjects: SubjectCard[];
+  gaps: GapRow[];
+  hasData: boolean;
+}
+
+export interface SubjectAnalysis {
+  subjectId: SubjectId;
+  timeline: { attemptId: string; sessionId: string; at: string; mode: "nauka" | "symulacja"; percent: number; points: number; max: number }[];
+  closed: { percent: number | null; n: number };
+  open: { percent: number | null; n: number };
+  areas: AreaRow[];
+  improved: { area: string; from: number; to: number; n: number }[];
+}
+
 export type Scope = "all" | "closed" | "open" | { taskIds: string[] };
 
 export interface AttemptSummary {
@@ -94,6 +140,8 @@ export interface AttemptSummary {
   pending: number;
   answered: number;
   itemCount: number;
+  /** Time spent working (practice) or in the exam (simulation), ms. */
+  activeMs: number;
 }
 
 export interface SavedResponse {
@@ -180,6 +228,12 @@ export interface OsemkaApi {
   getRecording(sessionId: string): Promise<Uint8Array | null>;
 
   listAttempts(sessionId?: string): Promise<AttemptSummary[]>;
+  /** P7: readiness, next step, subject cards and the top gaps. */
+  analyticsOverview(): Promise<Overview>;
+  /** P7: one subject; days null = all time. */
+  analyticsSubject(subjectId: SubjectId, opts: { days: number | null; mode: "oba" | "nauka" | "symulacja" }): Promise<SubjectAnalysis>;
+  /** P7: starts a practice attempt with tasks for one area; returns the attempt id, or null if no task fits. */
+  practiceArea(subjectId: SubjectId, area: string): Promise<string | null>;
   startPractice(sessionId: string, scope: Scope): Promise<AttemptView>;
   /** Starts a timed simulation, or returns the one already running for this session. */
   startSimulation(sessionId: string): Promise<AttemptView>;
@@ -209,6 +263,9 @@ export const IPC = {
   getSession: "content:get",
   getRecording: "content:recording",
   listAttempts: "attempt:list",
+  analyticsOverview: "analytics:overview",
+  analyticsSubject: "analytics:subject",
+  practiceArea: "analytics:practice",
   startPractice: "attempt:start-practice",
   startSimulation: "attempt:start-simulation",
   reviewAttempt: "attempt:review",

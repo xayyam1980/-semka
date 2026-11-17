@@ -1,10 +1,11 @@
 import { NavLink, Route, Routes } from "react-router";
 import { SettingsProvider, useSettings } from "./settings";
 import { Dashboard } from "./screens/Dashboard";
+import { Analysis } from "./screens/Analysis";
+import { History } from "./screens/History";
 import { AttemptResult } from "./screens/AttemptResult";
 import { ExamBrowser } from "./screens/ExamBrowser";
 import { ExamPlayer } from "./screens/ExamPlayer";
-import { Placeholder } from "./screens/Placeholder";
 import { PracticePlayer } from "./screens/PracticePlayer";
 import { ReviewPlayer } from "./screens/ReviewPlayer";
 import { StartScreen } from "./screens/StartScreen";
@@ -53,8 +54,8 @@ function Shell() {
             <Route path="/arkusze" element={<ExamBrowser />} />
             <Route path="/arkusze/:sessionId" element={<StartScreen />} />
             <Route path="/proba/:attemptId/wynik" element={<AttemptResult />} />
-            <Route path="/historia" element={<Placeholder title="Historia" phase="P7" />} />
-            <Route path="/analiza" element={<Placeholder title="Analiza" phase="P7" />} />
+            <Route path="/historia" element={<History />} />
+            <Route path="/analiza" element={<Analysis />} />
             <Route path="/ustawienia" element={<SettingsScreen />} />
           </Routes>
         </div>

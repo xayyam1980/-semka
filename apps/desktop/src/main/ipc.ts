@@ -1,8 +1,9 @@
 import { readFileSync } from "node:fs";
 import { app, ipcMain } from "electron";
-import type { StudentSettings } from "@osemka/schema";
+import { SUBJECTS, type StudentSettings, type SubjectId } from "@osemka/schema";
 import { IPC, type AppInfo, type Scope } from "../shared/ipc";
 import type { AiService } from "./ai";
+import { overview, practicePlan, subjectAnalysis } from "./analytics";
 import type { AttemptService } from "./attempts";
 import type { ContentStore } from "./content";
 import { readSettings, writeSettings, type Db } from "./db";
@@ -53,6 +54,22 @@ export function registerIpc(ctx: { db: Db; dbFile: string; runs: number; content
     return file ? new Uint8Array(readFileSync(file)) : null;
   });
 
+  const subjectOf = (v: unknown): SubjectId => {
+    if (typeof v !== "string" || !(v in SUBJECTS)) throw new Error("Unknown subject");
+    return v as SubjectId;
+  };
+  ipcMain.handle(IPC.analyticsOverview, () => overview(at.facts(), Date.now()));
+  ipcMain.handle(IPC.analyticsSubject, (_e, subjectId: unknown, opts: unknown) => {
+    const o = (opts ?? {}) as { days?: unknown; mode?: unknown };
+    const days = typeof o.days === "number" && o.days > 0 && o.days <= 3650 ? Math.round(o.days) : null;
+    const mode = o.mode === "nauka" || o.mode === "symulacja" ? o.mode : "oba";
+    return subjectAnalysis(at.facts(), subjectOf(subjectId), { days, mode }, Date.now());
+  });
+  ipcMain.handle(IPC.practiceArea, (_e, subjectId: unknown, area: unknown) => {
+    const bundles = content.list().map((s) => content.get(s.id)!);
+    const plan = practicePlan(bundles, at.facts(), subjectOf(subjectId), str(area, "area"), at.areaOfItem);
+    return plan ? at.startPractice(plan.sessionId, { taskIds: plan.taskIds }).summary.id : null;
+  });
   ipcMain.handle(IPC.listAttempts, (_e, sessionId: unknown) => at.list(sessionId === undefined ? undefined : str(sessionId, "session id")));
   ipcMain.handle(IPC.startPractice, (_e, sessionId: unknown, s: unknown) => at.startPractice(str(sessionId, "session id"), scope(s)));
   ipcMain.handle(IPC.startSimulation, (_e, sessionId: unknown) => at.startSimulation(str(sessionId, "session id")));

@@ -1,10 +1,11 @@
 // Attempts in the main process: the only place that sees the keys, and the only clock that counts.
 import { randomUUID } from "node:crypto";
 import { and, desc, eq } from "drizzle-orm";
-import { ResponseValue, SUBJECTS, type Item, type ItemScore, type SessionBundle, type SheetVersion, type StudentSettings } from "@osemka/schema";
+import { ResponseValue, SUBJECTS, type Item, type ItemScore, type SessionBundle, type SheetVersion, type StudentSettings, type Task } from "@osemka/schema";
 import { scoreAttempt, scoreItem, scoreRubric, validateLevel, type AttemptTotals, type RubricInput, type RubricResult } from "@osemka/scoring";
 import type { AiSuggestion, AttemptSummary, AttemptView, CheckResult, SavedResponse, Scope } from "../shared/ipc";
 import type { AiService } from "./ai";
+import { areaOf, criterionArea, type Fact } from "./analytics";
 import type { ContentStore } from "./content";
 import type { Db } from "./db";
 import { attempts, itemScores, responses } from "./db/schema";
@@ -357,6 +358,7 @@ export class AttemptService {
       pending: totals.pending,
       answered,
       itemCount: items.length,
+      activeMs: a.activeMs,
     };
   }
 
@@ -378,6 +380,50 @@ export class AttemptService {
     );
     return scoreAttempt(tasks, values, a.version as SheetVersion, grades);
   }
+
+  /** P7: every scored item (and essay criterion) of every attempt, for the analytics. */
+  facts(): Fact[] {
+    const out: Fact[] = [];
+    for (const row of this.db.select().from(attempts).all()) {
+      const b = this.content.get(row.sessionId);
+      if (!b) continue;
+      const a = row.status === "in_progress" && row.mode === "symulacja" ? this.enforceDeadline(row.id) : row;
+      if (a.mode === "symulacja" && a.status === "in_progress") continue;
+      const totals = this.totals(a.id);
+      const saved = new Map(this.db.select().from(responses).where(eq(responses.attemptId, a.id)).all().map((r) => [r.itemId, r]));
+      const scores = new Map(this.db.select().from(itemScores).where(eq(itemScores.attemptId, a.id)).all().map((s) => [s.itemId, s]));
+      for (const tt of totals.tasks) {
+        const task = b.tasks.find((t) => t.id === tt.taskId)!;
+        const hasAudio = task.stimulusIds.some((id) => b.stimuli.find((s) => s.id === id)?.kind === "audio");
+        for (const item of task.items) {
+          const checkedAt = saved.get(item.id)?.checkedAt;
+          // Practice counts what was checked; a finished simulation counts everything (a blank is a real 0).
+          if (a.mode === "nauka" && !checkedAt) continue;
+          const graded = scores.get(item.id);
+          const points = tt.outcomes[item.id]?.points ?? (graded && graded.source !== "auto" ? graded.points : null);
+          if (points === null || points === undefined) continue;
+          const at = a.mode === "nauka" ? checkedAt! : (a.submittedAt ?? a.startedAt);
+          const base = { attemptId: a.id, sessionId: a.sessionId, subjectId: b.session.subjectId, mode: a.mode as Fact["mode"], at, taskId: task.id, itemId: item.id, format: task.format };
+          out.push({ ...base, area: areaOf(b.session.subjectId, task, item, hasAudio, (id) => this.content.tagArea(id)), points, max: item.maxPoints });
+          // Essays: each rubric criterion is its own area ("Wypracowanie: Język").
+          const rubricGrade = graded?.data ? (JSON.parse(graded.data) as { rubricGrade?: SavedResponse["rubricGrade"] }).rubricGrade : undefined;
+          if (rubricGrade && item.scoring.type === "rubric") {
+            const ref = item.scoring.rubrics.find((r) => r.topic === rubricGrade.topic) ?? item.scoring.rubrics[0];
+            const rubric = b.rubrics.find((r) => r.id === ref?.rubricId);
+            for (const c of rubric?.criteria ?? []) {
+              const p = rubricGrade.result.perCriterion[c.id];
+              if (p !== undefined) out.push({ ...base, area: criterionArea(b.session.subjectId, c.name), points: p, max: c.max });
+            }
+          }
+        }
+      }
+    }
+    return out;
+  }
+
+  /** Areas of every item, for practice plans. */
+  areaOfItem = (b: SessionBundle, t: Task, i: Item) =>
+    areaOf(b.session.subjectId, t, i, t.stimulusIds.some((id) => b.stimuli.find((s) => s.id === id)?.kind === "audio"), (id) => this.content.tagArea(id));
 
   private upsertScore(attemptId: string, itemId: string, s: { points: number | null; source: string; autoResult?: string; data?: string }): void {
     const values = { attemptId, itemId, points: s.points, source: s.source, autoResult: s.autoResult ?? null, data: s.data ?? null, gradedAt: this.iso() };
