@@ -32,3 +32,42 @@ jobs:
           name: smoke-${{ matrix.os }}
           path: apps/desktop/out/smoke/*.png
           if-no-files-found: ignore
+
+  # Builds the installer and launches the packaged app twice (SQLite, content, restart). CI has no recordings
+  # (they are not in git), so listening shows "nagranie niedostępne" here; release builds are made locally.
+  package:
+    name: package-${{ matrix.os }}
+    needs: check
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            dist: dist:win
+            exe: release/win-unpacked/Osemka.exe
+          - os: macos-latest
+            dist: "dist:mac --arm64"
+            exe: release/mac-arm64/Osemka.app/Contents/MacOS/Osemka
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @osemka/desktop ensure:electron
+      - run: pnpm --filter @osemka/desktop ${{ matrix.dist }}
+      - name: Smoke test of the packaged app
+        working-directory: apps/desktop
+        shell: bash
+        run: OSEMKA_SMOKE_EXE="${{ matrix.exe }}" pnpm smoke:packaged
+      # Test builds without recordings: the English listening tasks say the recording is not installed.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: installer-${{ matrix.os }}-no-recordings
+          path: |
+            apps/desktop/release/*.exe
+            apps/desktop/release/*.dmg
+          if-no-files-found: error
+          retention-days: 14

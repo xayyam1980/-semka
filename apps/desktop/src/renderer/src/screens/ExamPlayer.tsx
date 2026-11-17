@@ -204,6 +204,11 @@ export function ExamPlayer() {
           taskNumberOf={(id) => session.tasks.find((t) => t.stimulusIds.includes(id))?.number}
         />
       )}
+      {!session.recording && session.stimuli.some((x) => x.kind === "audio") && (
+        <div className="bg-[var(--warn-soft)] px-6 py-2 text-sm text-[var(--warn)]" role="status" data-testid="recording-missing">
+          <b>Nagranie nie jest zainstalowane.</b> Zadania ze słuchania możesz rozwiązać, ale bez nagrania; transkrypcja pojawi się w przeglądzie po oddaniu.
+        </div>
+      )}
       {banner && (
         <div className="flex items-center gap-3 bg-[var(--warn-soft)] px-6 py-2 text-sm text-[var(--warn)]" role="status">
           <b>{banner}</b>

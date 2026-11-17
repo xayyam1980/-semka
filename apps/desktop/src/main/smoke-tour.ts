@@ -24,7 +24,9 @@ export async function runTour(win: BrowserWindow, outDir: string): Promise<strin
     await js(`location.hash = ${JSON.stringify(hash)}`);
     await wait(300);
   };
-  const click = (selector: string) => js(`(() => { const el = document.querySelector(${JSON.stringify(selector)}); if (!el) throw new Error("missing ${selector.replace(/"/g, "'")}"); el.click(); })()`);
+  // Waits up to 8 s for the element: the packaged app can be slower than development.
+  const click = (selector: string) =>
+    js(`new Promise((ok, no) => { const t = Date.now(); (function poll() { const el = document.querySelector(${JSON.stringify(selector)}); if (el) { el.click(); ok(true); } else if (Date.now() - t > 8000) no(new Error("missing ${selector.replace(/"/g, "'")}")); else setTimeout(poll, 100); })(); })`);
   const clickText = (text: string) =>
     js(`(() => { const el = [...document.querySelectorAll("button")].find(b => b.textContent.trim().startsWith(${JSON.stringify(text)})); if (!el) throw new Error("no button ${text}"); el.click(); })()`);
 
@@ -124,7 +126,9 @@ async function runPolishTour(win: BrowserWindow, outDir: string): Promise<string
     writeFileSync(file, (await win.webContents.capturePage()).toPNG());
     shots.push(file);
   };
-  const click = (selector: string) => js(`(() => { const el = document.querySelector(${JSON.stringify(selector)}); if (!el) throw new Error("missing ${selector.replace(/"/g, "'")}"); el.click(); })()`);
+  // Waits up to 8 s for the element: the packaged app can be slower than development.
+  const click = (selector: string) =>
+    js(`new Promise((ok, no) => { const t = Date.now(); (function poll() { const el = document.querySelector(${JSON.stringify(selector)}); if (el) { el.click(); ok(true); } else if (Date.now() - t > 8000) no(new Error("missing ${selector.replace(/"/g, "'")}")); else setTimeout(poll, 100); })(); })`);
   const clickText = (text: string) =>
     js(`(() => { const el = [...document.querySelectorAll("button")].find(b => b.textContent.trim() === ${JSON.stringify(text)}); if (!el) throw new Error("no button ${text}"); el.click(); })()`);
   const type = (selector: string, text: string) =>
@@ -168,7 +172,9 @@ async function runEnglishTour(win: BrowserWindow, outDir: string): Promise<strin
     writeFileSync(file, (await win.webContents.capturePage()).toPNG());
     shots.push(file);
   };
-  const click = (selector: string) => js(`(() => { const el = document.querySelector(${JSON.stringify(selector)}); if (!el) throw new Error("missing ${selector.replace(/"/g, "'")}"); el.click(); })()`);
+  // Waits up to 8 s for the element: the packaged app can be slower than development.
+  const click = (selector: string) =>
+    js(`new Promise((ok, no) => { const t = Date.now(); (function poll() { const el = document.querySelector(${JSON.stringify(selector)}); if (el) { el.click(); ok(true); } else if (Date.now() - t > 8000) no(new Error("missing ${selector.replace(/"/g, "'")}")); else setTimeout(poll, 100); })(); })`);
   const clickText = (text: string) =>
     js(`(() => { const el = [...document.querySelectorAll("button")].find(b => b.textContent.trim() === ${JSON.stringify(text)}); if (!el) throw new Error("no button ${text}"); el.click(); })()`);
   const type = (selector: string, text: string) =>

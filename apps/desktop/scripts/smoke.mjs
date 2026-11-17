@@ -5,7 +5,7 @@ import { spawnSync } from "node:child_process";
 import { mkdtempSync, rmSync } from "node:fs";
 import { createRequire } from "node:module";
 import { tmpdir } from "node:os";
-import { dirname, join } from "node:path";
+import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const require = createRequire(import.meta.url);
@@ -15,7 +15,9 @@ const dataDir = mkdtempSync(join(tmpdir(), "osemka-smoke-"));
 const outDir = join(appDir, "out", "smoke");
 
 function run(n) {
-  const r = spawnSync(electron, [appDir], {
+  // OSEMKA_SMOKE_EXE: check a packaged app (installer build) instead of the development one.
+  const exe = process.env.OSEMKA_SMOKE_EXE ? resolve(appDir, process.env.OSEMKA_SMOKE_EXE) : undefined;
+  const r = spawnSync(exe ?? electron, exe ? [] : [appDir], {
     env: { ...process.env, OSEMKA_SMOKE: "1", OSEMKA_USER_DATA: dataDir, OSEMKA_SMOKE_OUT: outDir },
     encoding: "utf8",
     timeout: 60000,
