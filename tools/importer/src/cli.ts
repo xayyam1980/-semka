@@ -4,11 +4,12 @@
 //   pnpm importer run matematyka-2026-05-glowny [--dry-run] [--tasks 1,2,16]
 //   pnpm importer review matematyka-2026-05-glowny
 //   pnpm importer approve matematyka-2026-05-glowny
-import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { SessionBundle } from "@osemka/schema";
-import { discover } from "./discover.ts";
+import { discover, fileOf } from "./discover.ts";
+import { auditSession, pdfText } from "./audit.ts";
 import { writeReview } from "./review.ts";
 import { runSession, type RunReport } from "./run.ts";
 
@@ -81,6 +82,39 @@ async function main(): Promise<number> {
       console.log(`${target} published.`);
       return 0;
     }
+    case "audit": {
+      // Every session in content/ (or one): compare it with the text of its CKE PDFs.
+      const found = discover(dataRoot);
+      const ids = target ? [target] : readdirSync(contentRoot).filter((d) => d !== "taxonomy").flatMap((sub) => readdirSync(join(contentRoot, sub)).map((s) => `${sub}-${s}`));
+      let errors = 0;
+      for (const id of ids) {
+        const file = join(sessionDirOf(id), "session.json");
+        const src = found.find((x) => x.id === id);
+        if (!existsSync(file) || !src) {
+          console.error(`${id}: ${!existsSync(file) ? "no session.json" : "source PDFs not found"}`);
+          errors++;
+          continue;
+        }
+        const bundle = SessionBundle.parse(JSON.parse(readFileSync(file, "utf8")));
+        const sheet = fileOf(src, "arkusz"), karta = fileOf(src, "karta_otwarte"), key = fileOf(src, "klucz");
+        if (!sheet || !key) {
+          console.error(`${id}: needs arkusz.pdf and klucz.pdf`);
+          errors++;
+          continue;
+        }
+        const findings = auditSession(
+          bundle,
+          { sheet: pdfText(sheet.abs) + (karta ? `\n${pdfText(karta.abs)}` : ""), key: pdfText(key.abs), keyLayout: pdfText(key.abs, true) },
+          (rel) => existsSync(join(sessionDirOf(id), rel)),
+        );
+        const errs = findings.filter((x) => x.level === "error"), warns = findings.filter((x) => x.level === "warning");
+        errors += errs.length;
+        console.log(`\n${id} (${bundle.session.status}): ${errs.length ? `${errs.length} error(s)` : "no errors"}, ${warns.length} warning(s)`);
+        for (const x of [...errs, ...warns]) console.log(`  ${x.level === "error" ? "✗" : "!"} ${x.where}: ${x.message}`);
+      }
+      console.log(errors ? `\n${errors} error(s): fix before approving.` : "\nNo errors.");
+      return errors ? 1 : 0;
+    }
     default:
       return usage();
   }
@@ -88,7 +122,7 @@ async function main(): Promise<number> {
 
 function usage(msg?: string): number {
   if (msg) console.error(msg);
-  console.error("Commands: scan | run <session-id> [--dry-run] [--tasks 1,2] | review <session-id> | approve <session-id>");
+  console.error("Commands: scan | run <session-id> [--dry-run] [--tasks 1,2] | review <session-id> | audit [session-id] | approve <session-id>");
   return 2;
 }
 
