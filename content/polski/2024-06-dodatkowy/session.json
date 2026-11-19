@@ -46,7 +46,7 @@
         "pages": 24
       }
     ],
-    "contentVersion": "a3b8c4cc04432eb1",
+    "contentVersion": "518a21fd31dab9ab",
     "status": "published"
   },
   "stimuli": [
@@ -225,7 +225,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-2.3"
+            "pl-I.2.3"
           ],
           "explanation": "Kod FP oznacza, że pierwsze stwierdzenie jest fałszywe, a drugie prawdziwe. Winicjuszowi nie zależało na przebywaniu w otoczeniu Nerona – w rozmowie interesuje go tylko Ligia, którą nazywa swoją narzeczoną, dlatego pierwsze stwierdzenie jest fałszywe. Drugie jest prawdziwe, bo tekst wprost opisuje zdziwienie Petroniusza: patrzył on na Winicjusza „z takim zdziwieniem, jakby chciał sprawdzić, czy głowa jego jest w porządku”, czyli był zaskoczony zachowaniem gospodarza."
         }
@@ -233,7 +233,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-2.3"
+        "pl-I.2.3"
       ],
       "ref": {
         "source": "arkusz",
@@ -281,7 +281,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-2.7"
+            "pl-I.2.7"
           ],
           "explanation": "Petroniusz w rozmowie wspomina o dolegliwościach Nerona i o tym, że cezar unika Rzymu, wybierając pobyt w Ancjum – dlatego pierwsze stwierdzenie jest prawdziwe. Winicjusz zwierza się Petroniuszowi z tego, że jest narzeczonym Ligii, a taki sekret powierza się tylko komuś, komu się ufa – dlatego także drugie stwierdzenie jest prawdziwe. Oba stwierdzenia oceniamy zatem jako prawdziwe (P, P)."
         }
@@ -289,7 +289,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-2.7"
+        "pl-I.2.7"
       ],
       "ref": {
         "source": "arkusz",
@@ -342,7 +342,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-2.3"
+            "pl-I.2.3"
           ],
           "explanation": "W przytoczonym fragmencie Petroniusz wspomina o sposobach leczenia chorego gardła Nerona (czyli o stanie jego zdrowia), o swoim pobycie na Palatynie oraz o planowanym wyjeździe do Ancjum. Nie mówi natomiast nic o tytułach zakupionych książek, dlatego poprawna jest odpowiedź D."
         }
@@ -350,7 +350,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-2.3"
+        "pl-I.2.3"
       ],
       "ref": {
         "source": "arkusz",
@@ -398,7 +398,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-2.7"
+            "pl-I.2.7"
           ],
           "explanation": "Winicjusz powiedział Petroniuszowi, że pomówią jeszcze o czymś innym, bo właśnie wtedy zamierzał poinformować go o swoich zaręczynach z Ligią – pierwsze stwierdzenie jest prawdziwe. Petroniusz zadał pytanie: Po jakiemu ty mówisz?, ponieważ zaskoczyły go nieoczekiwane słowa Winicjusza – drugie stwierdzenie też jest prawdziwe. Dlatego oba stwierdzenia oznaczamy literą P."
         }
@@ -406,7 +406,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-2.7"
+        "pl-I.2.7"
       ],
       "ref": {
         "source": "arkusz",
@@ -456,8 +456,8 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-1.7",
-            "pl-2.8"
+            "pl-I.1.7",
+            "pl-I.2.8"
           ],
           "explanation": "Petroniusz porównuje człowieka do motyla, który żyje tylko wtedy, gdy grzeje go słońce: „słońce łaski” to przychylność Nerona. Dopóki cesarz był łaskawy, ludzie żyli bezpiecznie i wygodnie, ale wystarczył jeden „chłodny powiew”, czyli utrata jego łaski, a człowiek ginął – nawet jeśli tego nie chciał. Poprawna odpowiedź musi więc wyjaśnić, że los ludzi zależał całkowicie od kaprysów władcy.",
           "exemplars": [
@@ -507,8 +507,8 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-1.7",
-            "pl-2.8"
+            "pl-I.1.7",
+            "pl-I.2.8"
           ],
           "explanation": "Petroniusz przez długi czas żył „w słońcu łaski”: był przyjacielem i doradcą Nerona, korzystał z dostatku i bezpieczeństwa. Gdy Neron uznał, że Petroniusz nie jest mu już potrzebny, skazał go na śmierć – nastąpił „chłodny powiew”, który zgubił motyla. Dlatego losy Petroniusza potwierdzają trafność przytoczonych słów.",
           "exemplars": [
@@ -529,8 +529,8 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-1.7",
-        "pl-2.8"
+        "pl-I.1.7",
+        "pl-I.2.8"
       ],
       "ref": {
         "source": "arkusz",
@@ -595,7 +595,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-2.9"
+            "pl-I.2.9"
           ],
           "explanation": "W powieści najpierw Ligia zostaje zabrana z domu Aulusa Plaucjusza i trafia na dwór Nerona (C). Potem, podczas uczty w pałacu, rozmawia z Winicjuszem (D). Następnie Ursus i chrześcijanie ukrywają ją (B). Na końcu, po wydarzeniach w arenie, Neron ułaskawia Ligię (A). Właściwa kolejność to więc C, D, B, A.",
           "scoringNotes": [
@@ -606,7 +606,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-2.9"
+        "pl-I.2.9"
       ],
       "ref": {
         "source": "arkusz",
@@ -662,7 +662,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-1.18"
+            "pl-I.1.18"
           ],
           "exemplars": [
             {
@@ -685,7 +685,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-1.18"
+        "pl-I.1.18"
       ],
       "ref": {
         "source": "arkusz",
@@ -743,7 +743,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-2.8"
+            "pl-I.2.8"
           ],
           "explanation": "Związek wyrazowy „łamać sobie głowę” nie oznacza tu dosłownego łamania głowy, lecz intensywne myślenie o czymś, dlatego w tym wypowiedzeniu został użyty w znaczeniu przenośnym (B). Sens wypowiedzi zachowuje tylko sformułowanie „zaprzątać sobie czymś głowę” (C), które znaczy tyle samo co „łamać sobie głowę”. Odpowiedź D („chować głowę w piasek”) oznacza udawanie, że problem nie istnieje, więc zmieniłaby sens zdania."
         }
@@ -751,7 +751,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-2.8"
+        "pl-I.2.8"
       ],
       "ref": {
         "source": "arkusz",
@@ -809,7 +809,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-1.7"
+            "pl-II.1.7"
           ],
           "explanation": "Wyraz mądrość powstał od wyrazu podstawowego mądry przez dodanie przyrostka -ość, więc z pierwszej grupy wybieramy odpowiedź B. Szukamy teraz wyrazu utworzonego w ten sam sposób, czyli też za pomocą przyrostka. Wyraz rozmyślanie powstał od czasownika rozmyślać przez dodanie przyrostka -anie, natomiast pomyśleć to bezokolicznik utworzony od myśleć za pomocą przedrostka po-. Dlatego poprawna odpowiedź to BD."
         }
@@ -817,7 +817,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-II",
-        "pl-1.7"
+        "pl-II.1.7"
       ],
       "ref": {
         "source": "arkusz",
@@ -831,7 +831,6 @@
       "maxPoints": 2,
       "instruction": "Obejrzyj poniższy plakat do filmu będącego ekranizacją powieści *Quo vadis*.\n\n![Plakat filmowy do ekranizacji powieści Quo vadis: duży tytuł, postać Nerona z lirą, scena z areny z bykiem i lwami oraz portrety bohaterów z nazwiskami aktorów (Robert Taylor, Deborah Kerr, Peter Ustinov).](stimulus:pl-2024-06d-10-fig1)\n\nwww.imdb.com\n\n**Twórcy plakatu za pomocą różnych elementów graficznych nawiązali do treści utworu Henryka Sienkiewicza. Wybierz dwa elementy graficzne i wyjaśnij ich sens w kontekście ***Quo vadis***.**\n\nElement graficzny 1.:\n\nWyjaśnienie:\n\nElement graficzny 2.:\n\nWyjaśnienie:",
       "stimulusIds": [
-        "pl-2024-06d-tekst-1",
         "pl-2024-06d-10-fig1"
       ],
       "items": [
@@ -873,7 +872,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-2.11"
+            "pl-I.2.11"
           ],
           "exemplars": [
             {
@@ -893,7 +892,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-2.11"
+        "pl-I.2.11"
       ],
       "ref": {
         "source": "arkusz",
@@ -948,9 +947,9 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-2.1",
+            "pl-I.2.1",
             "pl-gen-III",
-            "pl-2.3"
+            "pl-III.2.3"
           ],
           "exemplars": [
             {
@@ -970,9 +969,9 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-2.1",
+        "pl-I.2.1",
         "pl-gen-III",
-        "pl-2.3"
+        "pl-III.2.3"
       ],
       "ref": {
         "source": "arkusz",
@@ -1025,7 +1024,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-2.3"
+            "pl-I.2.3"
           ],
           "explanation": "W 4. akapicie tekstu Michał Heller pisze o tym, że niezbędna jest medytacja oraz lektura książek, i wyjaśnia, po co filozofowie sięgają po książki niemal każdego dnia – czytanie służy namysłowi nad ważnymi problemami. Na pozostałe pytania (o związek filozofii z namysłem, o wyprzedzanie życia czy o sytuacje, w których filozofia staje się sposobem na życie) ten akapit nie odpowiada. Dlatego poprawna jest odpowiedź C."
         }
@@ -1033,7 +1032,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-2.3"
+        "pl-I.2.3"
       ],
       "ref": {
         "source": "arkusz",
@@ -1081,7 +1080,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-2.3"
+            "pl-I.2.3"
           ],
           "explanation": "Poprawna odpowiedź to FP: pierwsze stwierdzenie jest fałszywe, a drugie prawdziwe. Michał Heller wspomina o usprawiedliwianiu naszych postępków, ale właśnie po to, by to odrzucić: filozofia powinna dostarczać kryteriów postępowania, „a nie – usprawiedliwiać tylko nasze, nie zawsze pochwały godne, postępki”. Taką filozofię autor nazywa „sposobem na hipokryzję”, a nie sposobem na życie, więc nie zachęca do jej wykorzystywania w tym celu. Drugie stwierdzenie jest prawdziwe, bo według autora filozofia ma dostarczać właściwych kryteriów oceny postępowania i wskazówek, jak należy postępować w przyszłości."
         }
@@ -1089,7 +1088,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-2.3"
+        "pl-I.2.3"
       ],
       "ref": {
         "source": "arkusz",
@@ -1142,7 +1141,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-2.3"
+            "pl-I.2.3"
           ],
           "explanation": "W tekście Michał Heller pisze o nieustannym obcowaniu z książką (lektura jest „codziennym pożywieniem” filozofa), o namyśle, rozmyślaniu i medytacji oraz o refleksji nad sobą i ocenie własnego postępowania. Odpowiedzi A, C i D odpowiadają więc tym wątkom: C – namysłowi, medytacji i kontemplacji, D – zastanawianiu się nad swoim postępowaniem. Autor nie wspomina natomiast o tworzeniu koncepcji filozoficznych jako zadaniu filozofa. Dlatego właściwa jest odpowiedź B."
         }
@@ -1150,7 +1149,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-2.3"
+        "pl-I.2.3"
       ],
       "ref": {
         "source": "arkusz",
@@ -1199,8 +1198,8 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-2.3",
-            "pl-2.5"
+            "pl-I.2.3",
+            "pl-I.2.5"
           ],
           "exemplars": [
             {
@@ -1217,8 +1216,8 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-2.3",
-        "pl-2.5"
+        "pl-I.2.3",
+        "pl-I.2.5"
       ],
       "ref": {
         "source": "arkusz",
@@ -1269,7 +1268,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-2.18"
+            "pl-I.2.18"
           ],
           "explanation": "Poprawna odpowiedź wskazuje jedną z książek i uzasadnia wybór tak, aby powiązać ją z zainteresowaniami filozofa. „Mały Książę” skłania czytelnika do zastanowienia się nad sobą i swoim postępowaniem, więc może być źródłem filozoficznych rozważań. „Fraszki” z kolei pokazują różne sytuacje życiowe i przemyślenia autora, dlatego ich lektura może być punktem wyjścia do filozoficznej refleksji. Wystarczy wybrać jedną książkę i wyjaśnić, dlaczego jej treść pasuje do poszukiwań mądrości.",
           "exemplars": [
@@ -1295,7 +1294,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-2.18"
+        "pl-I.2.18"
       ],
       "ref": {
         "source": "arkusz",
@@ -1348,7 +1347,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-1.10"
+            "pl-II.1.10"
           ],
           "explanation": "Wypowiedzenie podrzędnie złożone składa się z zdania głównego i co najmniej jednego zdania podrzędnego, wprowadzonego np. zaimkiem względnym. W odpowiedzi A część „kto filozofuje” jest zdaniem podrzędnym wobec części „Filozofia i życie muszą się spotkać w tym”. Odpowiedź B to równoważnik zdania (brak czasownika), odpowiedź C to wypowiedzenie współrzędnie złożone (zdania połączone spójnikiem „a”), a odpowiedź D to zdanie pojedyncze."
         }
@@ -1356,7 +1355,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-II",
-        "pl-1.10"
+        "pl-II.1.10"
       ],
       "ref": {
         "source": "arkusz",
@@ -1409,7 +1408,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-4.1"
+            "pl-II.4.1"
           ],
           "explanation": "Ó niewymienne to takie, którego w żadnej formie tego wyrazu (ani w wyrazach pokrewnych) nie można zamienić na o, e lub a. W wyrazie „źródłem” (źródło, źródła, źródeł) ó nigdy się nie zmienia, więc jest niewymienne. W pozostałych wyrazach ó jest wymienne: pół – połowa, sposób – sposoby, podróżnej – droga (wyraz pokrewny do „podróż”)."
         }
@@ -1417,7 +1416,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-II",
-        "pl-4.1"
+        "pl-II.4.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -1431,7 +1430,6 @@
       "maxPoints": 3,
       "instruction": "W imieniu przewodniczącego Szkolnego Koła Filozoficznego napisz ogłoszenie o spotkaniu ze znanym filozofem. Zachęć dwoma argumentami koleżanki i kolegów, aby przyszli na to spotkanie.\nUwaga: w ocenie wypowiedzi będzie brana pod uwagę poprawność językowa, ortograficzna i interpunkcyjna.\n\n![Ozdobna ramka z nagłówkiem „OGŁOSZENIE” i wykropkowanymi liniami przeznaczonymi na napisanie treści ogłoszenia.](stimulus:pl-2024-06d-19-fig1)",
       "stimulusIds": [
-        "pl-2024-06d-tekst-2",
         "pl-2024-06d-19-fig1"
       ],
       "items": [
@@ -1454,9 +1452,9 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-4.1",
+            "pl-II.4.1",
             "pl-gen-III",
-            "pl-2.2"
+            "pl-III.2.2"
           ],
           "exemplars": [
             {
@@ -1477,9 +1475,9 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-II",
-        "pl-4.1",
+        "pl-II.4.1",
         "pl-gen-III",
-        "pl-2.2"
+        "pl-III.2.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -1530,14 +1528,14 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-1.15",
+            "pl-I.1.15",
             "pl-gen-II",
-            "pl-3.2",
-            "pl-4.1",
+            "pl-II.3.2",
+            "pl-II.4.1",
             "pl-gen-III",
-            "pl-1.1",
-            "pl-2.1",
-            "pl-1.2"
+            "pl-III.1.1",
+            "pl-III.2.1",
+            "pl-III.1.2"
           ],
           "scoringNotes": [
             "Uwaga. Liczone są wszystkie wyrazy: samodzielne i niesamodzielne.",
@@ -1556,14 +1554,14 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-1.15",
+        "pl-I.1.15",
         "pl-gen-II",
-        "pl-3.2",
-        "pl-4.1",
+        "pl-II.3.2",
+        "pl-II.4.1",
         "pl-gen-III",
-        "pl-1.1",
-        "pl-2.1",
-        "pl-1.2"
+        "pl-III.1.1",
+        "pl-III.2.1",
+        "pl-III.1.2"
       ],
       "ref": {
         "source": "arkusz",

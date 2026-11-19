@@ -16,6 +16,7 @@ const api: OsemkaApi = {
   clearHistory: () => ipcRenderer.invoke(IPC.clearHistory),
   analyticsSubject: (subjectId, opts) => ipcRenderer.invoke(IPC.analyticsSubject, subjectId, opts),
   practiceArea: (subjectId, area) => ipcRenderer.invoke(IPC.practiceArea, subjectId, area),
+  startMixedPractice: (subjectId, opts) => ipcRenderer.invoke(IPC.startMixedPractice, subjectId, opts),
   startPractice: (sessionId, scope) => ipcRenderer.invoke(IPC.startPractice, sessionId, scope),
   startSimulation: (sessionId) => ipcRenderer.invoke(IPC.startSimulation, sessionId),
   reviewAttempt: (id) => ipcRenderer.invoke(IPC.reviewAttempt, id),

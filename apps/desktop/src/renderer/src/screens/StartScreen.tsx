@@ -76,7 +76,7 @@ export function StartScreen() {
         <article className="card flex flex-col gap-3 rounded-[10px] border-2 border-accent bg-surface p-6">
           <h2 className="text-xl font-bold text-accent">Tryb nauki</h2>
           <p className="text-muted">Bez presji czasu</p>
-          <ul className="flex list-none flex-col gap-1 p-0 text-[15px]">
+          <ul className="flex list-none flex-col gap-1 p-0 text-[0.9375rem]">
             <li>✓ sprawdzasz każde zadanie od razu</li>
             <li>✓ wyjaśnienia i zasady oceniania z klucza</li>
             <li>✓ możesz wrócić, oznaczyć zadanie, przerwać</li>
@@ -98,7 +98,7 @@ export function StartScreen() {
         <article className="card flex flex-col gap-3 rounded-[10px] border-2 border-exam bg-surface p-6">
           <h2 className="text-xl font-bold text-exam">Symulacja egzaminu</h2>
           <p className="text-muted">Jak w maju, na sali</p>
-          <ul className="flex list-none flex-col gap-1 p-0 text-[15px]">
+          <ul className="flex list-none flex-col gap-1 p-0 text-[0.9375rem]">
             <li>● {minutes} min{extended ? " (wydłużony czas)" : ""}, odliczanie bez pauzy</li>
             <li>● klucz dopiero po oddaniu</li>
             <li>● zamknięcie aplikacji nie zatrzymuje czasu</li>
@@ -109,14 +109,14 @@ export function StartScreen() {
             </button>
           ) : (
             <div className="mt-auto flex flex-col gap-2 rounded-md bg-exam-soft p-3" role="group" aria-label="Potwierdzenie">
-              <p className="text-[15px]">
+              <p className="text-[0.9375rem]">
                 Zegar ruszy od razu i nie da się go zatrzymać. Masz <b>{minutes} minut</b>. Gotowy/a?
               </p>
               <div className="flex gap-2">
                 <button className="btn bg-exam text-surface" disabled={busy} onClick={() => void startSim()} data-testid="confirm-simulation">
                   Start
                 </button>
-                <button className="btn ghost" onClick={() => setConfirmSim(false)}>
+                <button className="btn ghost" onClick={() => setConfirmSim(false)} autoFocus>
                   Jeszcze nie
                 </button>
               </div>

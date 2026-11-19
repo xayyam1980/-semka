@@ -3,7 +3,7 @@ const MONTHS_GEN = ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca"
 
 /** "Maj 2026"; other terms say so: "Grudzień 2024 (próbny)", "Czerwiec 2025 (dodatkowy)". */
 export const sessionLabel = (s: { month: number; year: number; term?: string }) =>
-  `${MONTHS[s.month - 1]} ${s.year}${s.term === "probny" ? " (próbny)" : s.term === "dodatkowy" ? " (dodatkowy)" : ""}`;
+  s.term === "mix" ? "Trening mieszany" : `${MONTHS[s.month - 1]} ${s.year}${s.term === "probny" ? " (próbny)" : s.term === "dodatkowy" ? " (dodatkowy)" : ""}`;
 
 /** "termin główny" / "termin dodatkowy" / "egzamin próbny" */
 export const termLabel = (term: string) => (term === "probny" ? "egzamin próbny" : term === "dodatkowy" ? "termin dodatkowy" : "termin główny");
@@ -35,3 +35,6 @@ export const SUBJECT_TONE: Record<string, { tag: string; bg: string; fg: string 
   matematyka: { tag: "MA", bg: "bg-ma-soft", fg: "text-ma" },
   angielski: { tag: "EN", bg: "bg-en-soft", fg: "text-en" },
 };
+
+/** Language of the task content (prompts, options, reading texts): English papers are English, the rest is Polish (the page default). */
+export const contentLang = (s: { subjectId: string } | null | undefined): "en" | undefined => (s?.subjectId === "angielski" ? "en" : undefined);

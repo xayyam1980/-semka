@@ -9,7 +9,15 @@ import { Rich } from "../components/Rich";
 import { TaskText } from "../components/TaskText";
 import { ReadingPane, readingTextOf } from "../components/ReadingPane";
 import { ListeningPlayer, listeningOf } from "../components/ListeningPlayer";
-import { sessionLabel } from "../lib/format";
+import { inField, inRadioGroup, shortcutsActive, useDocumentTitle } from "../lib/a11y";
+import { contentLang, sessionLabel } from "../lib/format";
+
+/** ", dobrze 1/1 pkt" / ", błędnie 0/2 pkt" / ", czeka na samoocenę" / ", bez odpowiedzi" for the task map. */
+function resultLabel(t: { answered: boolean; pending: number; earned: number; maxPoints: number } | undefined): string {
+  if (!t || !t.answered) return ", bez odpowiedzi";
+  if (t.pending) return ", czeka na samoocenę";
+  return `${t.earned === t.maxPoints ? ", dobrze" : ", błędnie"} ${t.earned}/${t.maxPoints} pkt`;
+}
 
 export function ReviewPlayer() {
   const { attemptId = "" } = useParams();
@@ -39,7 +47,14 @@ export function ReviewPlayer() {
   const tasks: PublicTask[] = useMemo(() => (view && session ? view.taskIds.map((id) => session.tasks.find((t) => t.id === id)!).filter(Boolean) : []), [view, session]);
   // Without ?zad=, start at the first task still waiting for self-grading.
   const firstPending = view ? tasks.findIndex((t) => (view.tasks.find((x) => x.taskId === t.id)?.pending ?? 0) > 0) : -1;
-  const index = params.get("zad") ? Math.max(0, tasks.findIndex((t) => String(t.number) === params.get("zad"))) : Math.max(0, firstPending);
+  // ?zad= is a task number (links from the result screen) or a task id (mixed sets repeat numbers).
+  const zad = params.get("zad");
+  const index = zad ? Math.max(0, tasks.findIndex((t) => t.id === zad || String(t.number) === zad)) : Math.max(0, firstPending);
+  // One row of task numbers that scrolls; the current one stays in view.
+  const stripRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    stripRef.current?.querySelector(".cur")?.scrollIntoView({ block: "nearest", inline: "nearest" });
+  }, [index]);
   // Screen readers: announce the new task by moving focus to its heading (not on the first render).
   const headingRef = useRef<HTMLHeadingElement>(null);
   const firstTask = useRef(true);
@@ -51,16 +66,18 @@ export function ReviewPlayer() {
     headingRef.current?.focus({ preventScroll: false });
   }, [index]);
   const task = tasks[index];
+  useDocumentTitle(task && session ? `Przegląd zadania ${task.number} – ${session.subjectName}` : "Przegląd");
+  const lang = contentLang(session);
   const ctx = useMemo(() => (session ? { sessionId: session.id, stimuli: session.stimuli } : null), [session]);
-  const go = (i: number) => tasks[i] && setParams({ zad: String(tasks[i]!.number) }, { replace: true });
+  const go = (i: number) => tasks[i] && setParams({ zad: session?.term === "mix" ? tasks[i]!.id : String(tasks[i]!.number) }, { replace: true });
 
   // Keyboard: ←/→ or J/K move between tasks, as in practice and the simulation.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      const tag = (e.target as HTMLElement).tagName;
-      if (tag === "TEXTAREA" || tag === "INPUT" || tag === "SELECT" || e.metaKey || e.ctrlKey || e.altKey) return;
-      if (e.key === "ArrowRight" || e.key === "k") go(index + 1);
-      else if (e.key === "ArrowLeft" || e.key === "j") go(index - 1);
+      if (inField(e) || e.metaKey || e.ctrlKey || e.altKey || inRadioGroup(e)) return;
+      const letters = shortcutsActive(e);
+      if (e.key === "ArrowRight" || (letters && e.key === "k")) go(index + 1);
+      else if (e.key === "ArrowLeft" || (letters && e.key === "j")) go(index - 1);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -90,7 +107,7 @@ export function ReviewPlayer() {
   return (
     <div className="flex h-full flex-col" data-ready="1" data-testid="review-player">
       <header className="flex items-center gap-4 border-b border-line bg-surface px-6 py-3">
-        <Link to={`/proba/${attemptId}/wynik`} className="text-sm text-muted hover:text-ink">← Wynik</Link>
+        <Link to={`/proba/${attemptId}/wynik`} className="text-sm text-muted hover:text-ink"><span aria-hidden="true">←</span> Wynik</Link>
         <span className="font-bold">
           {session.subjectName} · {sessionLabel(session)} · przegląd {view.summary.mode === "symulacja" ? "symulacji" : "nauki"}
         </span>
@@ -100,7 +117,7 @@ export function ReviewPlayer() {
       </header>
       <main id="main" className="scroll-pane flex-1 px-6 py-6">
         <div className={reading ? "with-reading mx-auto max-w-7xl" : "mx-auto max-w-6xl"}>
-          {reading && <ReadingPane text={reading} ctx={ctx} />}
+          {reading && <ReadingPane text={reading} ctx={ctx} lang={lang} />}
         <div className={`grid gap-6 ${reading ? "grid-cols-1" : "grid-cols-[minmax(0,1fr)_minmax(0,420px)]"}`}>
           <article className="flex min-w-0 flex-col gap-5">
             <h1 className="text-2xl font-bold outline-none" tabIndex={-1} ref={headingRef}>
@@ -112,8 +129,8 @@ export function ReviewPlayer() {
             {task.items.map((it) => (
               <div key={it.id} className="flex flex-col gap-3">
                 {task.items.length > 1 && <h2 className="font-bold">{it.label}</h2>}
-                {it.prompt && <Rich text={it.prompt} ctx={ctx} />}
-                <AnswerInput item={it} value={values[it.id] ?? null} onChange={() => {}} revealedKey={review[it.id]?.reveal.key ?? { type: "model_solution", solution: "" }} ctx={ctx} />
+                {it.prompt && <Rich text={it.prompt} ctx={ctx} lang={lang} />}
+                <AnswerInput item={it} value={values[it.id] ?? null} onChange={() => {}} revealedKey={review[it.id]?.reveal.key ?? { type: "model_solution", solution: "" }} ctx={ctx} lang={lang} />
               </div>
             ))}
           </article>
@@ -123,6 +140,7 @@ export function ReviewPlayer() {
                 <Feedback
                   key={it.id}
                   item={it}
+                  lang={lang}
                   check={review[it.id]!}
                   selfPoints={view.responses[it.id]?.selfPoints}
                   onGrade={(p) => void grade(it.id, p)}
@@ -154,17 +172,17 @@ export function ReviewPlayer() {
       </main>
       <footer className="flex items-center gap-3 border-t border-line bg-surface px-6 py-3">
         <button className="btn ghost" onClick={() => go(index - 1)} disabled={index === 0}>
-          ← Poprzednie
+          <span aria-hidden="true">←</span> Poprzednie
         </button>
-        <nav className="flex flex-1 flex-wrap justify-center gap-1.5" aria-label="Zadania">
+        <nav className="qstrip" aria-label="Zadania" ref={stripRef}>
           {tasks.map((t, i) => (
-            <button key={t.id} className={`qnum ${stateOf(t)} ${i === index ? "cur" : ""}`} onClick={() => go(i)} aria-label={`Zadanie ${t.number}`}>
-              {t.number}
+            <button key={t.id} className={`qnum ${stateOf(t)} ${i === index ? "cur" : ""}`} onClick={() => go(i)} aria-current={i === index ? "step" : undefined} aria-label={`${t.origin ? `Zadanie ${i + 1} (zadanie ${t.number}, ${sessionLabel(t.origin)})` : `Zadanie ${t.number}`}${resultLabel(view.tasks.find((x) => x.taskId === t.id))}`}>
+              {t.origin ? i + 1 : t.number}
             </button>
           ))}
         </nav>
         <button className="btn ghost" onClick={() => go(index + 1)} disabled={index === tasks.length - 1}>
-          Następne →
+          Następne <span aria-hidden="true">→</span>
         </button>
       </footer>
     </div>

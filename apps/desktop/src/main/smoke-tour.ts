@@ -13,6 +13,7 @@ export async function runTour(win: BrowserWindow, outDir: string): Promise<strin
   if (process.env.OSEMKA_TOUR === "analiza") return runAnalyticsTour(win, outDir);
   if (process.env.OSEMKA_TOUR === "ustawienia") return runSettingsTour(win, outDir);
   if (process.env.OSEMKA_TOUR === "uat") return runUatTour(win, outDir);
+  if (process.env.OSEMKA_TOUR === "mieszany") return runMixedTour(win, outDir);
   const js = <T>(code: string) => win.webContents.executeJavaScript(code) as Promise<T>;
   const shots: string[] = [];
   const shot = async (name: string) => {
@@ -204,7 +205,7 @@ async function runEnglishTour(win: BrowserWindow, outDir: string): Promise<strin
   await wait(800);
   const afterSkip = await js<number>(`document.querySelector(".listening audio")?.currentTime ?? -1`);
   await click('[data-testid="listen-toggle"]');
-  const diag = await js<string>(`(async () => { const a = document.querySelector(".listening audio"); const r = await fetch(a.src, { headers: { range: "bytes=0-99" } }).catch((e) => ({ status: String(e) })); return JSON.stringify({ src: a.src, err: a.error && a.error.code + " " + a.error.message, ready: a.readyState, net: a.networkState, fetch: r.status, len: r.headers && r.headers.get("content-range") }); })()`);
+  const diag = await js<string>(`(async () => { const a = document.querySelector(".listening audio"); return JSON.stringify({ src: a.src, err: a.error && a.error.code + " " + a.error.message, ready: a.readyState, net: a.networkState, duration: a.duration }); })()`);
   writeFileSync(join(outDir, "angielski-audio.txt"), `audio: ${playing.toFixed(1)}s after 2.5 s, ${afterSkip.toFixed(1)}s after skip\n${diag}\n`);
   await js(`document.querySelectorAll('[data-option="A"]')[0].click()`);
   await js(`document.querySelectorAll('[data-testid="check"]')[0].click()`);
@@ -441,12 +442,69 @@ async function runUatTour(win: BrowserWindow, outDir: string): Promise<string[]>
   // Text at 140 % in a smaller window.
   win.setContentSize(1024, 640);
   await js(`window.osemka.updateSettings({ fontScale: 1.4 })`);
+  // The window reads settings once on start: apply the scale to the open page the way the settings provider does.
+  await js(`document.documentElement.style.setProperty("--font-scale", "1.4")`);
   await go("#/", '[data-testid="subject-polski"]');
   await shot("maly-140-pulpit");
   await go("#/analiza?przedmiot=angielski", "h1");
   await js(`document.querySelector('[data-testid="areas"]')?.scrollIntoView({ block: "start" })`);
   await shot("maly-140-analiza");
   await js(`window.osemka.updateSettings({ fontScale: 1, theme: "system" })`);
+  await js(`document.documentElement.style.setProperty("--font-scale", "1")`);
   win.setContentSize(1280, 800);
   return shots;
 }
+
+/** OSEMKA_TOUR=mieszany: the mixed-practice card, a mixed set with figures from several sheets, checking a task. */
+async function runMixedTour(win: BrowserWindow, outDir: string): Promise<string[]> {
+  const js = <T>(code: string) => win.webContents.executeJavaScript(code) as Promise<T>;
+  const shots: string[] = [];
+  const shot = async (name: string) => {
+    await wait(500);
+    const file = join(outDir, `mieszany-${shots.length + 1}-${name}-${process.platform}.png`);
+    writeFileSync(file, (await win.webContents.capturePage()).toPNG());
+    shots.push(file);
+  };
+  await js(`location.hash = "#/arkusze?przedmiot=matematyka"`);
+  await wait(600);
+  await shot("karta");
+  await js(`document.querySelector('[data-testid="mixed-start-matematyka"]').click()`);
+  await wait(1200);
+  if (!(await js<string>("location.hash")).startsWith("#/proba/")) throw new Error("mixed practice did not start");
+  await shot("zadanie-1");
+  // Keyboard: Enter on a focused answer option chooses it and must not check the task (a11y fix).
+  for (let i = 0; i < 10 && !(await js<boolean>(`!!document.querySelector('main [role="radio"]')`)); i++) {
+    await js(`[...document.querySelectorAll("button")].find((b) => b.textContent.trim().startsWith("Następne"))?.click()`);
+    await wait(400);
+  }
+  await js(`document.querySelectorAll('main [role="radio"]')[1].focus()`);
+  win.webContents.sendInputEvent({ type: "keyDown", keyCode: "Return" });
+  win.webContents.sendInputEvent({ type: "char", keyCode: "\r" });
+  win.webContents.sendInputEvent({ type: "keyUp", keyCode: "Return" });
+  await wait(400);
+  const afterEnter = await js<{ chosen: boolean; checked: boolean }>(
+    `({ chosen: document.querySelectorAll('main [role="radio"]')[1].getAttribute("aria-checked") === "true", checked: !!document.querySelector('[data-testid="feedback"]') })`,
+  );
+  if (!afterEnter.chosen || afterEnter.checked) throw new Error(`Enter on an option: ${JSON.stringify(afterEnter)}`);
+  await shot("enter-na-opcji");
+  // Walk to the first task with a figure, so a figure from another sheet's folder is shown.
+  for (let i = 0; i < 10; i++) {
+    const loaded = await js<boolean>(`[...document.querySelectorAll("main img")].some((img) => img.complete && img.naturalWidth > 0)`);
+    if (loaded) break;
+    await js(`[...document.querySelectorAll("button")].find((b) => b.textContent.trim().startsWith("Następne"))?.click()`);
+    await wait(500);
+  }
+  const broken = await js<number>(`[...document.querySelectorAll("main img")].filter((img) => img.complete && img.naturalWidth === 0).length`);
+  if (broken) throw new Error(`${broken} figure(s) did not load in mixed practice`);
+  await shot("rysunek");
+  // Enlarge the figure with the keyboard, then close it with Escape.
+  await js(`(() => { const f = document.querySelector('main .rich-figure[role="button"]'); f.focus(); f.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter", bubbles: true })); })()`);
+  await wait(300);
+  if (!(await js<boolean>(`!!document.querySelector(".figure-zoom")`))) throw new Error("figure did not open full size");
+  await shot("powiekszenie");
+  win.webContents.sendInputEvent({ type: "keyDown", keyCode: "Escape" });
+  await wait(300);
+  if (await js<boolean>(`!!document.querySelector(".figure-zoom")`)) throw new Error("Escape did not close the enlarged figure");
+  return shots;
+}
+

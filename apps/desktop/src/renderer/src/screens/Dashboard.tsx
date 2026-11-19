@@ -2,11 +2,10 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { NEXT_EXAM, SUBJECTS, type SubjectId } from "@osemka/schema";
-import type { AppInfo, AttemptSummary, Overview, ReviewOverview, SessionSummary } from "../../../shared/ipc";
+import type { AttemptSummary, Overview, ReviewOverview, SessionSummary } from "../../../shared/ipc";
 import { Delta, Meter, Sparkline, StatusTag } from "../components/Charts";
 import { plural, sessionLabel, shortDate, SUBJECT_TONE } from "../lib/format";
 
-const PLATFORM: Record<string, string> = { win32: "Windows", darwin: "macOS", linux: "Linux" };
 
 /** Starts a practice attempt for one weak area and opens it. */
 export function usePracticeArea() {
@@ -25,7 +24,6 @@ export function usePracticeArea() {
 }
 
 export function Dashboard() {
-  const [info, setInfo] = useState<AppInfo | null>(null);
   const [attempts, setAttempts] = useState<AttemptSummary[]>([]);
   const [sessions, setSessions] = useState<SessionSummary[]>([]);
   const [ov, setOv] = useState<Overview | null>(null);
@@ -33,7 +31,6 @@ export function Dashboard() {
   const practice = usePracticeArea();
   const navigate = useNavigate();
   useEffect(() => {
-    void window.osemka.appInfo().then(setInfo);
     void window.osemka.listSessions().then(setSessions);
     void window.osemka.listAttempts().then(setAttempts);
     void window.osemka.analyticsOverview().then(setOv);
@@ -63,7 +60,7 @@ export function Dashboard() {
       {ov && !ov.hasData && attempts.length === 0 && (
         <article className="card flex flex-col gap-3 rounded-[10px] border-2 border-accent bg-surface p-5" data-testid="first-steps">
           <h2 className="text-xl font-bold">Od czego zacząć?</h2>
-          <ol className="flex list-decimal flex-col gap-1.5 pl-5 text-[15px]">
+          <ol className="flex list-decimal flex-col gap-1.5 pl-5 text-[0.9375rem]">
             <li>
               <b>Wybierz przedmiot</b> poniżej i kliknij „Ćwicz”. Zobaczysz prawdziwe arkusze CKE z poprzednich lat.
             </li>
@@ -86,7 +83,7 @@ export function Dashboard() {
       {toGrade.length > 0 && (
         <article className="card flex flex-col gap-3 rounded-[10px] border border-[var(--warn)] bg-[var(--warn-soft)] p-5" data-testid="to-grade">
           <h2 className="text-lg font-bold">Do oceny</h2>
-          <p className="text-[15px]">Te wyniki są tymczasowe, dopóki nie ocenisz zadań otwartych według klucza.</p>
+          <p className="text-[0.9375rem]">Te wyniki są tymczasowe, dopóki nie ocenisz zadań otwartych według klucza.</p>
           <ul className="flex list-none flex-col gap-2 p-0">
             {toGrade.map((a) => (
               <li key={a.id} className="flex flex-wrap items-center gap-3">
@@ -132,7 +129,7 @@ export function Dashboard() {
               </ul>
             </>
           ) : (
-            <p className="text-[15px]">
+            <p className="text-[0.9375rem]">
               Na dziś wszystko powtórzone.{" "}
               {review.next && (
                 <span className="text-muted">
@@ -241,7 +238,7 @@ export function Dashboard() {
       {ov && ov.gaps.length > 0 && (
         <article className="card flex flex-col gap-3 rounded-[10px] border border-line bg-surface p-5" data-testid="gaps">
           <h2 className="text-xs font-bold uppercase tracking-wider text-muted">Gdzie tracisz punkty</h2>
-          <table className="w-full border-collapse text-[15px]">
+          <table className="w-full border-collapse text-[0.9375rem]">
             <tbody>
               {ov.gaps.map((g) => (
                 <tr key={`${g.subjectId}:${g.area}`} className="border-b border-line last:border-0">
@@ -277,7 +274,7 @@ export function Dashboard() {
           <h2 className="text-xs font-bold uppercase tracking-wider text-muted">Ostatnie próby</h2>
           <ul className="flex list-none flex-col gap-1 p-0">
             {recent.map((a) => (
-              <li key={a.id} className="flex flex-wrap items-center gap-3 text-[15px]">
+              <li key={a.id} className="flex flex-wrap items-center gap-3 text-[0.9375rem]">
                 <span className="tabular w-48 whitespace-nowrap text-muted">{shortDate(a.startedAt)}</span>
                 <span className="font-bold">{label(a.sessionId)}</span>
                 <span className="text-sm text-muted">{a.mode === "symulacja" ? "Symulacja" : "Nauka"}</span>
@@ -294,27 +291,6 @@ export function Dashboard() {
         </article>
       )}
 
-      <details className="card rounded-[10px] border border-line bg-surface p-5">
-        <summary className="cursor-pointer text-sm font-bold text-muted">Stan aplikacji</summary>
-        {info ? (
-          <dl className="mt-3 grid grid-cols-[180px_1fr] gap-x-4 gap-y-1 text-[15px]">
-            <dt className="text-muted">System</dt>
-            <dd>{PLATFORM[info.platform] ?? info.platform}</dd>
-            <dt className="text-muted">Wersja</dt>
-            <dd className="tabular">
-              {info.appVersion} · Electron {info.electron}
-            </dd>
-            <dt className="text-muted">Uruchomienia</dt>
-            <dd className="tabular" data-testid="runs">
-              {info.runs}
-            </dd>
-            <dt className="text-muted">Dane</dt>
-            <dd className="tabular break-all text-sm">{info.dbFile}</dd>
-          </dl>
-        ) : (
-          <p className="text-muted">Ładowanie…</p>
-        )}
-      </details>
     </section>
   );
 }

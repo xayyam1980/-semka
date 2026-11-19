@@ -1,4 +1,5 @@
-import { NavLink, Route, Routes } from "react-router";
+import { NavLink, Route, Routes, useLocation } from "react-router";
+import { useDocumentTitle } from "./lib/a11y";
 import { SettingsProvider, useSettings } from "./settings";
 import { Dashboard } from "./screens/Dashboard";
 import { Analysis } from "./screens/Analysis";
@@ -18,8 +19,19 @@ const NAV = [
   { to: "/analiza", label: "Analiza" },
 ] as const;
 
+const TITLES: [RegExp, string][] = [
+  [/^\/arkusze\/.+/, "Wybór trybu"],
+  [/^\/arkusze/, "Arkusze"],
+  [/^\/proba\/.+\/wynik/, "Wynik próby"],
+  [/^\/historia/, "Historia"],
+  [/^\/analiza/, "Analiza"],
+  [/^\/ustawienia/, "Ustawienia"],
+];
+
 function Shell() {
   const { settings } = useSettings();
+  const { pathname } = useLocation();
+  useDocumentTitle(TITLES.find(([re]) => re.test(pathname))?.[1] ?? "Pulpit");
   return (
     <div className="flex h-full flex-col" data-ready={settings ? "1" : "0"}>
       <button className="skip-link" onClick={() => document.getElementById("main")?.focus()}>
@@ -36,7 +48,7 @@ function Shell() {
               to={n.to}
               end={n.to === "/"}
               className={({ isActive }) =>
-                `nav-link rounded-md px-3 py-1.5 text-[15px] ${isActive ? "bg-accent-soft font-bold text-accent" : "text-muted hover:bg-sunk hover:text-ink"}`
+                `nav-link rounded-md px-3 py-1.5 text-[0.9375rem] ${isActive ? "bg-accent-soft font-bold text-accent" : "text-muted hover:bg-sunk hover:text-ink"}`
               }
             >
               {n.label}
@@ -45,7 +57,7 @@ function Shell() {
         </nav>
         <NavLink
           to="/ustawienia"
-          className={({ isActive }) => `nav-link ml-auto rounded-md px-3 py-1.5 text-[15px] ${isActive ? "bg-accent-soft font-bold text-accent" : "text-muted hover:bg-sunk hover:text-ink"}`}
+          className={({ isActive }) => `nav-link ml-auto rounded-md px-3 py-1.5 text-[0.9375rem] ${isActive ? "bg-accent-soft font-bold text-accent" : "text-muted hover:bg-sunk hover:text-ink"}`}
         >
           Ustawienia
         </NavLink>

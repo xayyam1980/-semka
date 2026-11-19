@@ -3,12 +3,13 @@ import { randomUUID } from "node:crypto";
 import { and, desc, eq } from "drizzle-orm";
 import { ResponseValue, SUBJECTS, type Item, type ItemScore, type SessionBundle, type SheetVersion, type StudentSettings, type Task } from "@osemka/schema";
 import { scoreAttempt, scoreItem, scoreRubric, validateLevel, type AttemptTotals, type RubricInput, type RubricResult } from "@osemka/scoring";
-import type { AiSuggestion, AttemptSummary, AttemptView, CheckResult, SavedResponse, Scope } from "../shared/ipc";
+import { isMixSession, type AiSuggestion, type AttemptSummary, type AttemptView, type CheckResult, type SavedResponse, type Scope } from "../shared/ipc";
 import type { AiService } from "./ai";
 import { areaOf, criterionArea, type Fact } from "./analytics";
 import type { ContentStore } from "./content";
 import type { Db } from "./db";
 import { attempts, itemScores, responses } from "./db/schema";
+import { notesFor } from "./rules";
 
 /** Only version X sheets are imported (see the importer); attempts always use it. */
 const VERSION: SheetVersion = "X";
@@ -121,6 +122,7 @@ export class AttemptService {
 
   /** Starts a timed simulation of the whole sheet, or returns the one already running for this session. */
   startSimulation(sessionId: string): AttemptView {
+    if (isMixSession(sessionId)) throw new Error("Trening mieszany nie ma trybu symulacji.");
     const running = this.db
       .select()
       .from(attempts)
@@ -403,7 +405,8 @@ export class AttemptService {
           const points = tt.outcomes[item.id]?.points ?? (graded && graded.source !== "auto" ? graded.points : null);
           if (points === null || points === undefined) continue;
           const at = a.mode === "nauka" ? checkedAt! : (a.submittedAt ?? a.startedAt);
-          const base = { attemptId: a.id, sessionId: a.sessionId, subjectId: b.session.subjectId, mode: a.mode as Fact["mode"], at, taskId: task.id, itemId: item.id, format: task.format };
+          // A mixed set counts towards each task's own sheet (review of mistakes groups by sheet).
+          const base = { attemptId: a.id, sessionId: this.content.originOf(task.id) ?? a.sessionId, subjectId: b.session.subjectId, mode: a.mode as Fact["mode"], at, taskId: task.id, itemId: item.id, format: task.format };
           out.push({ ...base, area: areaOf(b.session.subjectId, task, item, hasAudio, (id) => this.content.tagArea(id)), points, max: item.maxPoints });
           // Essays: each rubric criterion is its own area ("Wypracowanie: Język").
           const rubricGrade = graded?.data ? (JSON.parse(graded.data) as { rubricGrade?: SavedResponse["rubricGrade"] }).rubricGrade : undefined;
@@ -455,7 +458,7 @@ export class AttemptService {
         ...(rubrics.length ? { rubrics, dyslexia } : {}),
         ...(key ? { key } : {}),
         ...(item.explanation ? { explanation: item.explanation } : {}),
-        ...(item.scoringNotes?.length ? { scoringNotes: item.scoringNotes } : {}),
+        ...(notesFor(item).length ? { scoringNotes: notesFor(item) } : {}),
         ...(item.scoring.type === "levels" ? { levels: item.scoring.levels } : {}),
         ...(item.exemplars?.length ? { exemplars: item.exemplars } : {}),
       },

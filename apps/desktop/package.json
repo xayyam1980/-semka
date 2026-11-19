@@ -1,7 +1,7 @@
 {
   "name": "@osemka/desktop",
   "productName": "Ósemka",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "description": "Ósemka: przygotowanie do egzaminu ósmoklasisty",
   "main": "./out/main/index.js",
@@ -14,11 +14,11 @@
     "db:generate": "drizzle-kit generate",
     "rebuild:native": "electron-builder install-app-deps",
     "ensure:electron": "node scripts/ensure-electron.mjs",
-    "dist:mac": "electron-vite build && electron-builder --mac",
-    "dist:win": "electron-vite build && electron-builder --win",
+    "dist:mac": "electron-vite build && electron-builder --config electron-builder.config.cjs --mac",
+    "dist:win": "electron-vite build && electron-builder --config electron-builder.config.cjs --win",
     "icon": "electron scripts/make-icon.cjs",
     "smoke:packaged": "node scripts/smoke.mjs",
-    "dist:win:mac": "electron-vite build && electron-builder --win -c.toolsets.nsis=1.2.1"
+    "dist:win:mac": "electron-vite build && electron-builder --config electron-builder.config.cjs --win -c.toolsets.nsis=1.2.1"
   },
   "devDependencies": {
     "@fontsource-variable/bricolage-grotesque": "^5.3.0",

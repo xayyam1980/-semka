@@ -45,7 +45,7 @@
         "pages": 28
       }
     ],
-    "contentVersion": "df19bffccd2e98da",
+    "contentVersion": "e98c2a7c36cf58c3",
     "status": "published"
   },
   "stimuli": [
@@ -168,7 +168,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "Nemeczek mimo upokorzenia i strachu nie zdradza przyjaciół – to wymaga odwagi, więc pierwsze zdanie jest prawdziwe. Acz każe na koniec „prezentować broń”, czyli okazuje Nemeczkowi szacunek, a nie lekceważenie – drugie zdanie jest fałszywe."
         }
@@ -176,7 +176,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -224,7 +224,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "Po słowach Nemeczka przeciwnicy milkną, a na koniec oddają mu honory – ich zachowanie się zmienia. Nemeczek dwa razy pyta, czy może odejść i czy go nie zbiją, więc nie był pewny ich reakcji. Oba zdania są prawdziwe."
         }
@@ -232,7 +232,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -285,7 +285,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.9"
+            "pl-46-I.1.9"
           ],
           "explanation": "Nemeczek mówi, że mogą go wrzucać do wody „po sto i po tysiąc razy”, a on i tak nie zostanie zdrajcą – nie daje się złamać. To nieugiętość."
         }
@@ -293,7 +293,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-1.9"
+        "pl-46-I.1.9"
       ],
       "ref": {
         "source": "arkusz",
@@ -346,7 +346,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "Fragment mówi, że trzymali go Pastorowie (A), że Acz kazał prezentować broń (C) i że Nemeczek wskazał Gereba (D). Nie dowiadujemy się z niego, po co Nemeczek przyszedł na wyspę."
         }
@@ -354,7 +354,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -403,7 +403,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.9"
+            "pl-46-I.1.9"
           ],
           "exemplars": [
             {
@@ -439,7 +439,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-1.9"
+        "pl-46-I.1.9"
       ],
       "ref": {
         "source": "arkusz",
@@ -488,7 +488,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.9"
+            "pl-46-I.1.9"
           ],
           "exemplars": [
             {
@@ -524,7 +524,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-1.9"
+        "pl-46-I.1.9"
       ],
       "ref": {
         "source": "arkusz",
@@ -580,7 +580,7 @@
           "skillTags": [
             "pl-gen-I",
             "pl-gen-III",
-            "pl-78-1.4"
+            "pl-78-III.1.4"
           ],
           "exemplars": [
             {
@@ -628,7 +628,7 @@
       "skillTags": [
         "pl-gen-I",
         "pl-gen-III",
-        "pl-78-1.4"
+        "pl-78-III.1.4"
       ],
       "ref": {
         "source": "arkusz",
@@ -752,8 +752,8 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-1.3",
-            "pl-46-1.4"
+            "pl-46-II.1.3",
+            "pl-46-II.1.4"
           ],
           "explanation": "„Przystać” to bezokolicznik, czyli forma nieosobowa czasownika. „Przystać” znaczy „zgodzić się, dołączyć”; w 3. osobie liczby pojedynczej czasu przeszłego to „przystał” („przystanął” pochodzi od innego czasownika: „przystanąć”)."
         }
@@ -761,8 +761,8 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-1.3",
-        "pl-46-1.4"
+        "pl-46-II.1.3",
+        "pl-46-II.1.4"
       ],
       "ref": {
         "source": "arkusz",
@@ -811,14 +811,14 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-4.2"
+            "pl-46-II.4.2"
           ]
         }
       ],
       "format": "otwarte",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-4.2"
+        "pl-46-II.4.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -832,7 +832,6 @@
       "maxPoints": 3,
       "instruction": "Na lekcji języka polskiego uczniowie jednej z klas otrzymali karty do gry przygotowanej na podstawie utworów literackich. Poniżej znajdują się wybrane karty do tej gry.\n\n![Sześć kart do gry A–F: studnia na pustyni i samolot; ruiny zamku; niedźwiedź w lesie; duch spętany łańcuchami; cmentarz nocą; król na tronie w kosmosie](stimulus:pl-2025-11-fig1)\n\n**Spośród zaprezentowanych kart do gry wybierz dwie, na których umieszczono elementy graficzne nawiązujące tematycznie do jednej lektury obowiązkowej. Podaj tytuł tej lektury i wyjaśnij związek wybranych przez Ciebie kart z treścią utworu.**\n\n*Uwaga! Lista lektur obowiązkowych znajduje się na stronach 3 i 4 arkusza egzaminacyjnego.*\n\nWybieram karty oznaczone literami … oraz … .\n\nTytuł lektury obowiązkowej: …\n\nWyjaśnienie: …",
       "stimulusIds": [
-        "pl-2025-tekst-1",
         "pl-2025-11-fig1"
       ],
       "items": [
@@ -880,7 +879,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-2.12"
+            "pl-46-I.2.12"
           ],
           "exemplars": [
             {
@@ -927,7 +926,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-2.12"
+        "pl-46-I.2.12"
       ],
       "ref": {
         "source": "arkusz",
@@ -982,9 +981,9 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-2.3",
+            "pl-46-I.2.3",
             "pl-gen-III",
-            "pl-78-2.2"
+            "pl-78-III.2.2"
           ],
           "exemplars": [
             {
@@ -1020,9 +1019,9 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-2.3",
+        "pl-46-I.2.3",
         "pl-gen-III",
-        "pl-78-2.2"
+        "pl-78-III.2.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -1070,7 +1069,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-2.2"
+            "pl-46-I.2.2"
           ],
           "explanation": "Empedokles widział w przyjaźni siłę, która utrzymuje w harmonii nawet przeciwne żywioły – pierwsze zdanie jest prawdziwe. Arystoteles pisał, że prawdziwa przyjaźń daje odwagę, by upomnieć przyjaciela, gdy popełnia błąd – nie każe ich przemilczać, więc drugie zdanie jest fałszywe."
         }
@@ -1078,7 +1077,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-2.2"
+        "pl-46-I.2.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -1131,7 +1130,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "Autorka pisze, że przyjaźń oparta wyłącznie na przyjemności przebywania razem „zawsze w końcu wygasa”. Zdanie C mówi coś przeciwnego, więc jest niezgodne z tekstem."
         }
@@ -1139,7 +1138,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -1152,9 +1151,7 @@
       "number": 15,
       "maxPoints": 2,
       "instruction": "**Przeczytaj poniższy fragment utworu.**\n\n> – Proszę, oswój mnie – powiedział. [...] – Ludzie nie mają czasu na poznawanie czegokolwiek. Kupują gotowe rzeczy w sklepach. Ponieważ jednak nie istnieją sklepy z przyjaciółmi, ludzie nie mają przyjaciół. Jeśli chcesz mieć przyjaciela, oswój mnie!",
-      "stimulusIds": [
-        "pl-2025-tekst-2"
-      ],
+      "stimulusIds": [],
       "items": [
         {
           "id": "pl-2025-15-1",
@@ -1186,7 +1183,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.7"
+            "pl-46-I.1.7"
           ],
           "explanation": "To słowa lisa, który prosi Małego Księcia, by go oswoił – fragment pochodzi z „Małego Księcia” Antoine’a de Saint-Exupéry’ego."
         },
@@ -1223,7 +1220,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.7"
+            "pl-46-I.1.7"
           ],
           "exemplars": [
             {
@@ -1251,7 +1248,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-1.7"
+        "pl-46-I.1.7"
       ],
       "ref": {
         "source": "arkusz",
@@ -1304,7 +1301,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-78-1.5"
+            "pl-78-II.1.5"
           ],
           "explanation": "W wypowiedzeniu są trzy orzeczenia: „idzie”, „działa” i „myśli”, więc są w nim trzy zdania składowe – to zdanie wielokrotnie złożone."
         }
@@ -1312,7 +1309,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-II",
-        "pl-78-1.5"
+        "pl-78-II.1.5"
       ],
       "ref": {
         "source": "arkusz",
@@ -1365,7 +1362,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-2.5"
+            "pl-46-II.2.5"
           ],
           "explanation": "„Co dwie głowy, to nie jedna” znaczy, że razem łatwiej coś wymyślić i zrobić – tak jak u Arystotelesa. Pozostałe powiedzenia mówią o robieniu kilku rzeczy naraz albo o osiąganiu dwóch celów jednym działaniem."
         }
@@ -1373,7 +1370,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-2.5"
+        "pl-46-II.2.5"
       ],
       "ref": {
         "source": "arkusz",
@@ -1386,9 +1383,7 @@
       "number": 18,
       "maxPoints": 3,
       "instruction": "**Zredaguj ogłoszenie informujące o spotkaniu uczniów chętnych do udziału w szkolnym przedstawieniu pt. *Przyjaciel na zawsze*. Zachęć do przyjścia na spotkanie, używając dwóch argumentów, z których co najmniej jeden będzie nawiązywał do tematyki spotkania.**\n\n*Uwaga: w ocenie wypowiedzi będzie brana pod uwagę poprawność językowa, ortograficzna i interpunkcyjna.*",
-      "stimulusIds": [
-        "pl-2025-tekst-2"
-      ],
+      "stimulusIds": [],
       "items": [
         {
           "id": "pl-2025-18",
@@ -1409,9 +1404,9 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-4.1",
+            "pl-46-II.4.1",
             "pl-gen-III",
-            "pl-46-2.1"
+            "pl-46-III.2.1"
           ],
           "exemplars": [
             {
@@ -1433,9 +1428,9 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-4.1",
+        "pl-46-II.4.1",
         "pl-gen-III",
-        "pl-46-2.1"
+        "pl-46-III.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -1488,11 +1483,11 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-1.7",
+            "pl-78-I.1.7",
             "pl-gen-III",
-            "pl-78-2.1",
+            "pl-78-III.2.1",
             "pl-gen-II",
-            "pl-46-4.1"
+            "pl-46-II.4.1"
           ],
           "scoringNotes": [
             "Jeżeli wypowiedź w całości jest nie na temat, egzaminator oceni ją na 0 punktów.",
@@ -1509,11 +1504,11 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-1.7",
+        "pl-78-I.1.7",
         "pl-gen-III",
-        "pl-78-2.1",
+        "pl-78-III.2.1",
         "pl-gen-II",
-        "pl-46-4.1"
+        "pl-46-II.4.1"
       ],
       "ref": {
         "source": "arkusz",

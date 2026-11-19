@@ -45,7 +45,7 @@
         "pages": 24
       }
     ],
-    "contentVersion": "572723600c5c42a5",
+    "contentVersion": "41adcdb303589989",
     "status": "published"
   },
   "stimuli": [
@@ -185,7 +185,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "W przytoczonym fragmencie to podczas podróży Staś opowiada Nel o swoich planach na przyszłość, dlatego zgodna z tekstem jest odpowiedź C. Pozostałe informacje nie pasują do fragmentu: Stasia nie opuszczał dobry humor, a dzieci gawędziły wesoło (więc nie podróżowali w ponurych nastrojach), a w tekście nie ma mowy o wspólnych planach odwiedzenia Polski ani o trudnościach ze zdobyciem pożywienia."
         }
@@ -193,7 +193,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -241,7 +241,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "Kod PF oznacza, że pierwsze stwierdzenie jest prawdziwe, a drugie fałszywe. W fragmencie Staś traktuje opiekę nad Nel jako swój zwykły, oczywisty obowiązek, a nie jako coś wyjątkowego – dlatego pierwsze stwierdzenie jest prawdziwe. Drugie stwierdzenie jest fałszywe, ponieważ według Stasia Nel jest jeszcze za mała i to właśnie jej wiek stoi na przeszkodzie, by była damą."
         }
@@ -249,7 +249,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -302,7 +302,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.9"
+            "pl-46-I.1.9"
           ],
           "explanation": "W przytoczonym fragmencie Nel podczas rozmowy ze Stasiem podkreśla, że jest już duża i chce być traktowana poważnie, więc próbuje go przekonać o swej dorosłości – dlatego poprawna jest odpowiedź B. Pozostałe odpowiedzi nie wynikają z tekstu: Nel nie cieszy się z porównania jej do damy, nie dziękuje Stasiowi za troskliwość i nie potwierdza jego podobieństwa do błędnego rycerza."
         }
@@ -310,7 +310,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-1.9"
+        "pl-46-I.1.9"
       ],
       "ref": {
         "source": "arkusz",
@@ -359,7 +359,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "exemplars": [
             {
@@ -376,7 +376,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -429,7 +429,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "W wypowiedzi Stasia o błędnych rycerzach pojawia się informacja, że opiekowali się swoimi damami, walczyli z olbrzymami i smokami oraz jeździli po świecie w poszukiwaniu przygód. Nie ma natomiast w niej mowy o tym, że bronili swojego honoru. Dlatego właściwa jest odpowiedź A."
         }
@@ -437,7 +437,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -630,7 +630,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-1.1"
+            "pl-46-II.1.1"
           ],
           "explanation": "Wyraz „ich” w zdaniu „poczęły śledzić oczyma ich lot” zastępuje rzeczownik, wskazując, czyj był lot – jest zaimkiem (A). Lot należał do papug („stadko prześlicznych papug”) wymienionych w zdaniu wcześniejszym, więc „ich” odnosi się do wyrazu „papugi” (D)."
         }
@@ -638,7 +638,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-1.1"
+        "pl-46-II.1.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -687,7 +687,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-4.2"
+            "pl-46-II.4.2"
           ],
           "explanation": "Brakujące przecinki stawiamy przed „a inspiracją” (przed spójnikiem „a” łączącym dwa zdania), przed „wykazując się” (oddzielamy przecinkiem imiesłowowy równoważnik zdania) oraz przed „by po licznych przygodach wrócić” (zdanie wyrażające cel)."
         }
@@ -695,7 +695,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-4.2"
+        "pl-46-II.4.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -709,7 +709,6 @@
       "maxPoints": 2,
       "instruction": "Obejrzyj poniższe plakaty do spektaklu teatralnego *Balladyna*.\n\n![Dwa plakaty do spektaklu „Balladyna”: plakat 1 z koroną przebitą sztyletem, wężem i malinami; plakat 2 z maliną w kałuży krwi na tle kamuflażu i drzew.](stimulus:pl-2026-06d-09-fig1)\n\n**Który plakat – Twoim zdaniem – lepiej nawiązuje do treści utworu *Balladyna* Juliusza Słowackiego? Uzasadnij swój wybór. W uzasadnieniu odwołaj się do dwóch elementów graficznych widocznych na wybranym przez Ciebie plakacie.**\n\nWybieram plakat oznaczony numerem ……………..\n\nUzasadnienie: ……………………………",
       "stimulusIds": [
-        "pl-2026-06d-tekst-1",
         "pl-2026-06d-09-fig1"
       ],
       "items": [
@@ -751,7 +750,7 @@
           },
           "skillTags": [
             "pl-gen-III",
-            "pl-78-1.4",
+            "pl-78-III.1.4",
             "pl-gen-I"
           ],
           "exemplars": [
@@ -777,7 +776,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-III",
-        "pl-78-1.4",
+        "pl-78-III.1.4",
         "pl-gen-I"
       ],
       "ref": {
@@ -833,9 +832,9 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-2.3",
+            "pl-46-I.2.3",
             "pl-gen-III",
-            "pl-78-2.2"
+            "pl-78-III.2.2"
           ],
           "exemplars": [
             {
@@ -855,9 +854,9 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-2.3",
+        "pl-46-I.2.3",
         "pl-gen-III",
-        "pl-78-2.2"
+        "pl-78-III.2.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -910,7 +909,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "Drugi akapit mówi o tym, że dzisiejsze myślenie o pięknie pochodzi od starożytnych Greków i że oni rozróżniali piękno wysokie i niższe. To odpowiada na pytanie, skąd wywodzi się nasz sposób myślenia o pięknie (C). O korzyściach, o tym, dlaczego warto doświadczać piękna, i o dzieciństwie mowa jest dopiero w dalszych akapitach."
         }
@@ -918,7 +917,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -966,7 +965,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-2.2"
+            "pl-46-I.2.2"
           ],
           "explanation": "Pierwsze stwierdzenie jest fałszywe: autorka pisze, że codzienne funkcjonowanie dowodzi niezbędności piękna, i podaje przykład zachwytu astronautów. Drugie też jest fałszywe: doświadczenia piękna są ważne już w dzieciństwie, ale w młodości człowiek szuka go coraz bardziej świadomie, więc potrzeba ta nie ogranicza się do dzieciństwa."
         }
@@ -974,7 +973,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-2.2"
+        "pl-46-I.2.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -1022,7 +1021,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "Pierwsze stwierdzenie jest fałszywe, bo już w pierwszym akapicie autorka stawia tezę, że piękno jest niezbędne w rozwoju człowieka, a drugi akapit mówi o tradycji greckiej. Drugie jest prawdziwe: motto mówi, że jest tyle piękna, o które musimy się troszczyć, czyli że trzeba je pielęgnować."
         }
@@ -1030,7 +1029,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -1083,7 +1082,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "W szóstym akapicie autorka pisze, że wartości wyższe, takie jak piękno, nie mogą być traktowane użytecznie, czyli nie mają służyć do czegoś, tylko mają być celem naszych pragnień i dążeń. Dlatego poprawna jest odpowiedź C. W tekście nie ma mowy o tym, że człowiek zawsze stawia piękno na pierwszym miejscu, ani o tym, że brak piękna unieszczęśliwia."
         }
@@ -1091,7 +1090,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -1104,9 +1103,7 @@
       "number": 15,
       "maxPoints": 2,
       "instruction": "**Spośród lektur obowiązkowych – innych niż *W pustyni i w puszczy* – wybierz tę, której bohatera można określić mianem *pięknego człowieka*, nie w sensie urody, ale postawy życiowej. Podaj tytuł tej lektury oraz jej bohatera.**\n\n**Uzasadnij swój wybór. W uzasadnieniu przywołaj sytuację z tej lektury, ilustrującą Twoją argumentację.**\n\n*Uwaga! Lista lektur obowiązkowych znajduje się na stronach 3 i 4 tego arkusza egzaminacyjnego.*\n\nTytuł lektury: ……………………………\n\nBohater lektury: ……………………………\n\nUzasadnienie wyboru: ……………………………",
-      "stimulusIds": [
-        "pl-2026-06d-tekst-2"
-      ],
+      "stimulusIds": [],
       "items": [
         {
           "id": "pl-2026-06d-15",
@@ -1146,7 +1143,7 @@
           },
           "skillTags": [
             "pl-gen-III",
-            "pl-78-1.4",
+            "pl-78-III.1.4",
             "pl-gen-I"
           ],
           "exemplars": [
@@ -1169,7 +1166,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-III",
-        "pl-78-1.4",
+        "pl-78-III.1.4",
         "pl-gen-I"
       ],
       "ref": {
@@ -1218,7 +1215,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-4.2"
+            "pl-46-II.4.2"
           ],
           "explanation": "Oba stwierdzenia są prawdziwe. W drugim akapicie nawiasy wyjaśniają, co oznacza piękno wysokie (duchowe, moralne) i niższe (uchwytne zmysłami). W czwartym akapicie w cudzysłowach zapisano dosłowne słowa astronautów, czyli mowę niezależną."
         }
@@ -1226,7 +1223,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-4.2"
+        "pl-46-II.4.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -1305,9 +1302,7 @@
       "number": 18,
       "maxPoints": 3,
       "instruction": "**Napisz ogłoszenie o spotkaniu z autorem książki pt. *Piękno jest w nas*. Zachęć do uczestnictwa w tym wydarzeniu, używając dwóch argumentów, z których co najmniej jeden będzie nawiązywał do tematyki spotkania.**\n\n**Uwaga: w ocenie wypowiedzi będzie brana pod uwagę poprawność językowa, ortograficzna i interpunkcyjna.**",
-      "stimulusIds": [
-        "pl-2026-06d-tekst-2"
-      ],
+      "stimulusIds": [],
       "items": [
         {
           "id": "pl-2026-06d-18",
@@ -1328,9 +1323,9 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-4.1",
+            "pl-46-II.4.1",
             "pl-gen-III",
-            "pl-46-2.1"
+            "pl-46-III.2.1"
           ],
           "exemplars": [
             {
@@ -1352,9 +1347,9 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-4.1",
+        "pl-46-II.4.1",
         "pl-gen-III",
-        "pl-46-2.1"
+        "pl-46-III.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -1405,14 +1400,14 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-1.7",
+            "pl-78-I.1.7",
             "pl-gen-II",
-            "pl-46-4.1",
-            "pl-78-3.2",
+            "pl-46-II.4.1",
+            "pl-78-II.3.2",
             "pl-gen-III",
-            "pl-78-1.1",
-            "pl-78-2.1",
-            "pl-46-2.1"
+            "pl-78-III.1.1",
+            "pl-78-III.2.1",
+            "pl-46-III.2.1"
           ],
           "scoringNotes": [
             "Jeżeli wypowiedź w całości jest nie na temat, egzaminator oceni ją na 0 punktów. Nie sprawdza i nie zaznacza żadnych błędów w pracy. Egzaminator umieszcza dopisek – „Praca nie na temat”.",
@@ -1437,14 +1432,14 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-1.7",
+        "pl-78-I.1.7",
         "pl-gen-II",
-        "pl-46-4.1",
-        "pl-78-3.2",
+        "pl-46-II.4.1",
+        "pl-78-II.3.2",
         "pl-gen-III",
-        "pl-78-1.1",
-        "pl-78-2.1",
-        "pl-46-2.1"
+        "pl-78-III.1.1",
+        "pl-78-III.2.1",
+        "pl-46-III.2.1"
       ],
       "ref": {
         "source": "arkusz",

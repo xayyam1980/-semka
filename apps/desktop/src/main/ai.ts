@@ -4,6 +4,7 @@ import { askJson, modelFromConfig, type JsonModel } from "@osemka/ai";
 import type { AiSettings, Item, ResponseValue, Task } from "@osemka/schema";
 import { z } from "zod";
 import type { AiStatus, AiSuggestion } from "../shared/ipc";
+import { notesFor } from "./rules";
 import type { SecretStore } from "./secrets";
 
 const KEY_NAME = "ai.apiKey";
@@ -94,7 +95,7 @@ export class AiService {
       "",
       "ZASADY OCENIANIA (poziomy):",
       ...levels.map((l) => `${l.points} pkt:\n${l.paths.map((p) => `  • ${p}`).join("\n  LUB\n")}`),
-      item.scoringNotes?.length ? `\nUWAGI Z KLUCZA:\n${item.scoringNotes.map((n) => `- ${n}`).join("\n")}` : "",
+      notesFor(item).length ? `\nUWAGI Z KLUCZA:\n${notesFor(item).map((n) => `- ${n}`).join("\n")}` : "",
       key ? `\nPRZYKŁADOWE ROZWIĄZANIE Z KLUCZA:\n${key}` : "",
       "",
       "ROZWIĄZANIE UCZNIA (oceniasz tylko to):",

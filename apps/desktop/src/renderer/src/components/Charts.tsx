@@ -1,6 +1,6 @@
 // Small charts for the dashboard and the analysis: one series each, theme colours, a hover title on every mark.
 import type { AreaStatus } from "../../../shared/ipc";
-import { shortDate } from "../lib/format";
+import { plural, shortDate } from "../lib/format";
 
 /** Recent scores as a 2px line with end dot; the percentages are in the title for hover and screen readers. */
 export function Sparkline({ values, width = 84, height = 22 }: { values: number[]; width?: number; height?: number }) {
@@ -69,7 +69,7 @@ export function Timeline({ points }: { points: { at: string; percent: number; mo
   const line = points.map((p, i) => `${i ? "L" : "M"}${x(p.at).toFixed(1)},${y(p.percent).toFixed(1)}`).join(" ");
   return (
     <figure className="m-0 flex flex-col gap-2">
-      <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="Wynik w czasie">
+      <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label={`Wynik w czasie: ${points.length} ${plural(points.length, "próba", "próby", "prób")}, ostatnia ${points.at(-1)!.percent} %. Lista poniżej.`}>
         {[0, 50, 100].map((g) => (
           <g key={g}>
             <line x1={L} x2={W - R} y1={y(g)} y2={y(g)} stroke="var(--line)" strokeWidth={1} />
@@ -97,6 +97,13 @@ export function Timeline({ points }: { points: { at: string; percent: number; mo
           );
         })}
       </svg>
+      <ul className="sr-only">
+        {points.map((p, i) => (
+          <li key={i}>
+            {shortDate(p.at)}, {p.mode === "symulacja" ? "symulacja" : "nauka"}, {p.points} z {p.max} pkt ({p.percent} %)
+          </li>
+        ))}
+      </ul>
       <figcaption className="flex gap-4 text-sm text-muted">
         <span>○ nauka</span>
         <span>◆ symulacja</span>

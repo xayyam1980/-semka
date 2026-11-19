@@ -28,6 +28,15 @@ pnpm smoke
 
 `pnpm smoke` builds the app, opens it twice against a temporary data folder, checks the dashboard renders and that the database survives a restart, and saves a screenshot to `apps/desktop/out/smoke/`. CI runs all three on Windows and macOS (`.github/workflows/ci.yml`).
 
+## Installers
+
+```bash
+pnpm dist:mac        # macOS DMGs (arm64 and x64), in apps/desktop/release/
+pnpm dist:win:mac    # Windows installer, built on a Mac
+```
+
+The installers include the content of `content/`, with the English recordings, which are not in git. They are unsigned until certificates are set up; see [docs/code-signing.md](docs/code-signing.md).
+
 ## Importing an exam session
 
 The importer turns a folder such as `Matematyka/Maj 2026/` into `content/matematyka/2026-05-glowny/session.json`.

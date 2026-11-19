@@ -67,7 +67,7 @@ export function AiSettingsCard() {
   return (
     <fieldset className="card flex flex-col gap-4 rounded-[10px] border border-line bg-surface p-5" data-testid="ai-settings">
       <legend className="px-1 text-sm font-bold uppercase tracking-wider text-muted">Sugestie AI (opcjonalnie)</legend>
-      <p className="max-w-[68ch] text-[15px] text-muted">
+      <p className="max-w-[68ch] text-[0.9375rem] text-muted">
         Przy zadaniach otwartych AI może zaproponować liczbę punktów według klucza CKE. To tylko podpowiedź: ocenę zawsze wybierasz sam/a. Twoje rozwiązanie jest wtedy wysyłane do wybranego dostawcy AI.
       </p>
 
@@ -81,7 +81,7 @@ export function AiSettingsCard() {
       </div>
 
       {ai.provider !== "off" && (
-        <div className="grid max-w-2xl grid-cols-[160px_1fr] items-center gap-x-4 gap-y-3 text-[15px]">
+        <div className="grid max-w-2xl grid-cols-[160px_1fr] items-center gap-x-4 gap-y-3 text-[0.9375rem]">
           <label htmlFor="ai-url">Adres API</label>
           <input
             id="ai-url"

@@ -44,7 +44,7 @@
         "pages": 24
       }
     ],
-    "contentVersion": "58559a2c7b4cf2f4",
+    "contentVersion": "0917ed7c941240c7",
     "status": "published"
   },
   "stimuli": [
@@ -225,7 +225,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "Poprawna odpowiedź to FP. Pierwsze stwierdzenie jest fałszywe: Dick przedstawia się Mary słowami „Jestem Dick”, więc wcześniej się nie znali. Zdanie „Mówił do niej tak, jakby się znali od dawna” oznacza tylko, że chłopiec zachowywał się swobodnie, „jakby” się znali – nie że znali się naprawdę. Drugie stwierdzenie jest prawdziwe: Dick wyjął z kieszeni paczuszki z nasionami i pokazał Mary różne kwiaty, m.in. rezedę i maki.",
           "scoringNotes": [
@@ -237,7 +237,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -285,7 +285,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "W przytoczonym fragmencie Tajemniczego ogrodu Mary na początku rozmowy jest zaskoczona i niepewna w obecności Dicka, czyli czuje się speszona – dlatego pierwsze stwierdzenie jest prawdziwe. Podczas rozmowy o ptakach i zwierzętach dzieci zaczynają się rozumieć: Dick cierpliwie odpowiada na pytania, a Mary słucha z zaciekawieniem, więc między bohaterami nawiązuje się nić porozumienia – drugie stwierdzenie też jest prawdziwe. Oba stwierdzenia oznaczamy więc literą P.",
           "scoringNotes": [
@@ -297,7 +297,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -350,7 +350,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.9"
+            "pl-46-I.1.9"
           ],
           "explanation": "W przytoczonym fragmencie Mary dopytuje Dicka o wiele rzeczy: pyta o list od Marthy, prosi o pokazanie nasion, interesuje się rudzikiem i tym, czy on ją lubi, oraz pyta, czy chłopiec rozumie mowę ptaków. Świadczy to o jej zainteresowaniu otaczającym ją światem, dlatego poprawna jest odpowiedź D. Pozostałe odpowiedzi nie znajdują potwierdzenia w tekście: Mary nie jest zbyt pewna siebie (czuje się onieśmielona), nie ignoruje rudzika ani nie traktuje chłopca z wyższością."
         }
@@ -358,7 +358,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-1.9"
+        "pl-46-I.1.9"
       ],
       "ref": {
         "source": "arkusz",
@@ -422,7 +422,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.9"
+            "pl-46-I.1.9"
           ]
         },
         {
@@ -458,7 +458,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.9"
+            "pl-46-I.1.9"
           ],
           "exemplars": [
             {
@@ -475,7 +475,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-1.9"
+        "pl-46-I.1.9"
       ],
       "ref": {
         "source": "arkusz",
@@ -533,7 +533,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.4"
+            "pl-46-I.1.4"
           ],
           "explanation": "Podkreślone wyrazy „rudą” i „kędzierzawą” to przymiotniki określające cechy czupryny, a więc epitety (odpowiedź A). Opisują one zewnętrzne, widoczne cechy chłopca, czyli cechy jego wyglądu (odpowiedź D). Dlatego uzupełnione zdanie jest poprawne przy wyborze A i D, czyli kod AD."
         }
@@ -541,7 +541,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-1.4"
+        "pl-46-I.1.4"
       ],
       "ref": {
         "source": "arkusz",
@@ -594,7 +594,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-2.5"
+            "pl-46-II.2.5"
           ],
           "explanation": "Podkreślone sformułowanie „wystrychnąć na dudka” to związek frazeologiczny, który oznacza oszukanie kogoś, zwiedzenie go. Takie samo znaczenie ma związek „wyprowadzić w pole”, dlatego poprawna jest odpowiedź C. Pozostałe związki znaczą co innego: „postawić do pionu” to przywołać kogoś do porządku, „wystawić na próbę” to sprawdzić kogoś, a „sprowadzić na ziemię” to skłonić kogoś do realistycznego myślenia."
         }
@@ -602,7 +602,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-2.5"
+        "pl-46-II.2.5"
       ],
       "ref": {
         "source": "arkusz",
@@ -616,7 +616,6 @@
       "maxPoints": 2,
       "instruction": "Spośród poniższych zdjęć wybierz jedno i wyjaśnij, w jaki sposób krajobraz przedstawiony na nim łączy się z losami jednego z bohaterów lektury obowiązkowej wybranej przez Ciebie. Uzasadnij swój wybór.\n\nUwaga! Lista lektur obowiązkowych znajduje się na stronach 3 i 4 tego arkusza egzaminacyjnego.\n\n1. ![Zdjęcie 1: jesienny las we mgle z pochylonym, rozłożystym drzewem na pierwszym planie.](stimulus:pl-2025-06d-07-fig1)\n2. ![Zdjęcie 2: piaszczysta pustynia z wydmami pod błękitnym niebem z chmurami.](stimulus:pl-2025-06d-07-fig2)\n3. ![Zdjęcie 3: skaliste, jasne góry z kamienistym zboczem na pierwszym planie.](stimulus:pl-2025-06d-07-fig3)\n4. ![Zdjęcie 4: wzburzone morze z falą rozbijającą się o skałę wystającą z wody.](stimulus:pl-2025-06d-07-fig4)\n\nWybieram zdjęcie nr: …….\nBohater lektury obowiązkowej: ……………………………………………………………………….\nTytuł lektury obowiązkowej: ………………………………………………………………………......\nUzasadnienie: ………………………………………………………………………………..…………",
       "stimulusIds": [
-        "pl-2025-06d-tekst-1",
         "pl-2025-06d-07-fig1",
         "pl-2025-06d-07-fig2",
         "pl-2025-06d-07-fig3",
@@ -662,7 +661,7 @@
           "skillTags": [
             "pl-gen-I",
             "pl-gen-III",
-            "pl-78-1.4"
+            "pl-78-III.1.4"
           ],
           "exemplars": [
             {
@@ -708,7 +707,7 @@
       "skillTags": [
         "pl-gen-I",
         "pl-gen-III",
-        "pl-78-1.4"
+        "pl-78-III.1.4"
       ],
       "ref": {
         "source": "arkusz",
@@ -763,14 +762,14 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-78-1.4"
+            "pl-78-II.1.4"
           ]
         }
       ],
       "format": "otwarte",
       "skillTags": [
         "pl-gen-II",
-        "pl-78-1.4"
+        "pl-78-II.1.4"
       ],
       "ref": {
         "source": "arkusz",
@@ -825,9 +824,9 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-2.3",
+            "pl-46-I.2.3",
             "pl-gen-III",
-            "pl-78-2.2"
+            "pl-78-III.2.2"
           ],
           "exemplars": [
             {
@@ -847,9 +846,9 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-2.3",
+        "pl-46-I.2.3",
         "pl-gen-III",
-        "pl-78-2.2"
+        "pl-78-III.2.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -902,7 +901,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "W czwartym akapicie tekstu Istota czytania autor pisze o tym, na czym polega proces czytania, od czego zależy dobór techniki czytania oraz dlaczego niektóre teksty wymagają wielokrotnego czytania, więc na pytania A, B i C znajdziemy tam odpowiedź. Nie ma natomiast w tym akapicie informacji o sytuacjach, w których przydaje się umiejętność czytania różnych znaków – ta myśl pojawia się w innej części tekstu. Dlatego poprawna jest odpowiedź D."
         }
@@ -910,7 +909,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -958,7 +957,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-2.2"
+            "pl-46-I.2.2"
           ],
           "explanation": "Pierwsze stwierdzenie jest prawdziwe, ponieważ Sebastian Taboł wskazuje w tekście zdobywanie informacji jako jeden z celów czytania, dlatego oznaczamy je literą P. Drugie stwierdzenie jest fałszywe, bo czytanie powieści i czytanie gazety służą różnym celom – co innego daje czytanie dla przyjemności, a co innego szukanie informacji, dlatego oznaczamy je literą F."
         }
@@ -966,7 +965,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-2.2"
+        "pl-46-I.2.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -1019,7 +1018,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "W tekście Istota czytania Sebastian Taboł pisze, że proces czytania nie ogranicza się do tekstów pisanych i drukowanych, lecz obejmuje wszystkie znaki, które spotykamy w otaczającym nas świecie. Dlatego zdanie poprawnie dokończono odpowiedzią C. Pozostałe odpowiedzi zawężają myśl autora (A, B) lub ją zmieniają (D)."
         }
@@ -1027,7 +1026,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -1080,7 +1079,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "W tekście Istota czytania autor pisze, że umiejętność czytania „jest konieczna w procesie uczenia się”, a samo czytanie zaspokaja nasze codzienne potrzeby: dostarczania informacji i rozrywki, zdobywania wiedzy, kształtowania poglądu na świat i rozwijania osobowości. Dlatego czytanie jest czynnością nieodzowną, czyli niezbędną. Pozostałe odpowiedzi (niepopularna, niecodzienna, nieskomplikowana) nie zgadzają się z myślą autora – czytanie jest przecież procesem bardzo złożonym i potrzebnym na co dzień."
         }
@@ -1088,7 +1087,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -1141,7 +1140,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-4.1"
+            "pl-46-II.4.1"
           ],
           "explanation": "„Rz” wymienne to takie, które w innych formach tego samego wyrazu lub w wyrazach pokrewnych wymienia się na inną głoskę. W wyrazie „wierzymy” „rz” wymienia się na „r”, por. wiara, wierny. W pozostałych wyrazach „rz” się nie wymienia: w „twarzy” pozostaje „rz” (twarz), a w „przykładów” i „przekonujemy” „rz” występuje po „p” w przedrostkach przy- i prze-. Dlatego właściwa jest odpowiedź B."
         }
@@ -1149,7 +1148,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-4.1"
+        "pl-46-II.4.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -1229,7 +1228,6 @@
       "maxPoints": 2,
       "instruction": "Iga Świątek, wybitna polska tenisistka, w styczniu 2023 roku w swoich mediach społecznościowych zamieściła wpis promujący czytanie.\n\n![Wpis z Instagrama Igi Świątek: plakat „Czytam z Igą Świątek w 2023”, #IGAczyta #czytamzIGĄ, „W tym roku przeczytam 12 książek lub więcej! –IGA”, „Dołącz do mnie!”, trzy zdjęcia tenisistki z książką.](stimulus:pl-2025-06d-16-fig1)\n\n**Napisz, w jakiej formie Ty najchętniej poznajesz literaturę – sięgasz po e-book, po papierową książkę czy może po audiobook – i uzasadnij swój wybór, podając dwa argumenty.**\n\nMój wybór: …\n\nArgument 1.: …\n\nArgument 2.: …",
       "stimulusIds": [
-        "pl-2025-06d-tekst-2",
         "pl-2025-06d-16-fig1"
       ],
       "items": [
@@ -1271,7 +1269,7 @@
           },
           "skillTags": [
             "pl-gen-III",
-            "pl-78-1.4"
+            "pl-78-III.1.4"
           ],
           "exemplars": [
             {
@@ -1288,7 +1286,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-III",
-        "pl-78-1.4"
+        "pl-78-III.1.4"
       ],
       "ref": {
         "source": "arkusz",
@@ -1301,9 +1299,7 @@
       "number": 17,
       "maxPoints": 3,
       "instruction": "**Zredaguj zaproszenie na uroczystość wręczenia nagród laureatom konkursu pięknego czytania. Zachęć do udziału w tym wydarzeniu, używając dwóch argumentów, z których co najmniej jeden będzie nawiązywał do tematyki uroczystości.**\n\n*Uwaga: w ocenie wypowiedzi będzie brana pod uwagę poprawność językowa, ortograficzna i interpunkcyjna.*",
-      "stimulusIds": [
-        "pl-2025-06d-tekst-2"
-      ],
+      "stimulusIds": [],
       "items": [
         {
           "id": "pl-2025-06d-17",
@@ -1324,9 +1320,9 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-4.1",
+            "pl-46-II.4.1",
             "pl-gen-III",
-            "pl-46-2.1"
+            "pl-46-III.2.1"
           ],
           "exemplars": [
             {
@@ -1348,9 +1344,9 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-4.1",
+        "pl-46-II.4.1",
         "pl-gen-III",
-        "pl-46-2.1"
+        "pl-46-III.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -1401,14 +1397,14 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-1.7",
+            "pl-78-I.1.7",
             "pl-gen-II",
-            "pl-46-4.1",
-            "pl-78-3.2",
+            "pl-46-II.4.1",
+            "pl-78-II.3.2",
             "pl-gen-III",
-            "pl-78-1.1",
-            "pl-46-2.1",
-            "pl-78-2.1"
+            "pl-78-III.1.1",
+            "pl-46-III.2.1",
+            "pl-78-III.2.1"
           ],
           "scoringNotes": [
             "Jeżeli wypowiedź w całości jest nie na temat, egzaminator oceni ją na 0 punktów. Nie sprawdza i nie zaznacza żadnych błędów w pracy. Egzaminator umieszcza dopisek – „Praca nie na temat”.",
@@ -1429,14 +1425,14 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-1.7",
+        "pl-78-I.1.7",
         "pl-gen-II",
-        "pl-46-4.1",
-        "pl-78-3.2",
+        "pl-46-II.4.1",
+        "pl-78-II.3.2",
         "pl-gen-III",
-        "pl-78-1.1",
-        "pl-46-2.1",
-        "pl-78-2.1"
+        "pl-78-III.1.1",
+        "pl-46-III.2.1",
+        "pl-78-III.2.1"
       ],
       "ref": {
         "source": "arkusz",

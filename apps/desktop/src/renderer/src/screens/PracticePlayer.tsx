@@ -9,9 +9,23 @@ import { Rich, type RichContext } from "../components/Rich";
 import { TaskText } from "../components/TaskText";
 import { ReadingPane, readingTextOf } from "../components/ReadingPane";
 import { ListeningPlayer, listeningOf } from "../components/ListeningPlayer";
-import { clock, plural, sessionLabel } from "../lib/format";
+import { inField, inRadioGroup, onControl, shortcutsActive, useDocumentTitle, useReturnFocus } from "../lib/a11y";
+import { clock, contentLang, plural, sessionLabel } from "../lib/format";
 
 const SAVE_DELAY_MS = 400;
+const STATUS_LABEL: Record<string, string> = { "": "", ok: ", dobrze", bad: ", do poprawy", answered: ", z odpowiedzią" };
+
+/** Spoken result after "Sprawdź": "Zadanie 6: częściowo dobrze, 0 z 1 pkt". */
+function announceResult(number: number, results: CheckResult[]): string {
+  const parts = results.map((c) => {
+    const o = c.outcome;
+    if (o.kind === "auto") return `${o.result === "correct" ? "dobrze" : o.result === "partial" ? "częściowo dobrze" : "do poprawy"}, ${o.points} z ${o.maxPoints} pkt`;
+    if (o.kind === "blank") return `bez odpowiedzi, 0 z ${o.maxPoints} pkt`;
+    if (o.kind === "needs_grading") return "oceń się według klucza";
+    return "porównaj z kluczem";
+  });
+  return `Zadanie ${number}: ${parts.join("; ")}.`;
+}
 
 export function PracticePlayer() {
   const { attemptId = "" } = useParams();
@@ -27,9 +41,16 @@ export function PracticePlayer() {
   const [sources, setSources] = useState<Record<string, SavedResponse["gradeSource"]>>({});
   const [rubricGrades, setRubricGrades] = useState<Record<string, SavedResponse["rubricGrade"]>>({});
   const [index, setIndex] = useState(0);
+  // One row of task numbers that scrolls; the current one stays in view (21-task sheets in a small window).
+  const stripRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    stripRef.current?.querySelector(".cur")?.scrollIntoView({ block: "nearest", inline: "nearest" });
+  }, [index]);
   const [error, setError] = useState<string | null>(null);
   const [elapsed, setElapsed] = useState(0);
   const [confirmFinish, setConfirmFinish] = useState(false);
+  const [announcement, setAnnouncement] = useState("");
+  useReturnFocus(confirmFinish);
   const saveTimers = useRef<Record<string, ReturnType<typeof setTimeout>>>({});
   const taskShownAt = useRef(Date.now());
 
@@ -81,6 +102,8 @@ export function PracticePlayer() {
     headingRef.current?.focus({ preventScroll: false });
   }, [index]);
   const task = tasks[index];
+  useDocumentTitle(task && session ? `Zadanie ${task.number} – ${session.subjectName} – Nauka` : "Nauka");
+  const lang = contentLang(session);
 
   const ctxBase = useMemo(() => (session ? { sessionId: session.id, stimuli: session.stimuli } : null), [session]);
 
@@ -114,12 +137,19 @@ export function PracticePlayer() {
   const check = async () => {
     if (!task) return;
     try {
+      const fresh: CheckResult[] = [];
       for (const it of task.items) {
         if (checks[it.id]) continue;
         clearTimeout(saveTimers.current[it.id]);
         await window.osemka.saveResponse(attemptId, it.id, { value: values[it.id] ?? null });
         const res = await window.osemka.checkItem(attemptId, it.id);
+        fresh.push(res);
         setChecks((s) => ({ ...s, [it.id]: res }));
+      }
+      // The "Sprawdź" button is gone now: say the result and move focus to it, so a screen reader does not lose its place.
+      if (fresh.length) {
+        setAnnouncement(announceResult(task.number, fresh));
+        setTimeout(() => document.querySelector<HTMLElement>("[data-feedback-heading]")?.focus({ preventScroll: true }), 60);
       }
     } catch (e) {
       setError((e as Error).message);
@@ -170,17 +200,19 @@ export function PracticePlayer() {
   // Keyboard: ←/→ or J/K move, F flags, Enter checks, A–D picks an option of a single-choice task.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      const tag = (e.target as HTMLElement).tagName;
       if (confirmFinish) {
         if (e.key === "Escape") setConfirmFinish(false);
         return;
       }
-      if (tag === "TEXTAREA" || tag === "INPUT" || tag === "SELECT" || e.metaKey || e.ctrlKey || e.altKey) return;
-      if (e.key === "ArrowRight" || e.key === "k") goTo(index + 1);
-      else if (e.key === "ArrowLeft" || e.key === "j") goTo(index - 1);
-      else if (e.key === "f") toggleFlag();
-      else if (e.key === "Enter" && task && !task.items.every((i) => checks[i.id])) void check();
-      else if (task && /^[a-d]$/i.test(e.key)) {
+      if (inField(e) || e.metaKey || e.ctrlKey || e.altKey) return;
+      // Arrows move between tasks, except inside a radio group (they choose an option there). Letters and Enter only
+      // act with no control focused: Enter on a button must press that button, not check the task.
+      const letters = shortcutsActive(e);
+      if ((e.key === "ArrowRight" || (letters && e.key === "k")) && !inRadioGroup(e)) goTo(index + 1);
+      else if ((e.key === "ArrowLeft" || (letters && e.key === "j")) && !inRadioGroup(e)) goTo(index - 1);
+      else if (letters && e.key === "f") toggleFlag();
+      else if (e.key === "Enter" && !onControl(e) && task && !task.items.every((i) => checks[i.id])) void check();
+      else if (letters && task && /^[a-d]$/i.test(e.key)) {
         const it = task.items[0]!;
         if (it.response.type === "single_choice" && !checks[it.id] && it.response.options.some((o) => o.id === e.key.toUpperCase())) setValue(it.id, { type: "choice", value: e.key.toUpperCase() });
       }
@@ -211,7 +243,7 @@ export function PracticePlayer() {
   const missingParts = anyAnswer ? task.items.filter((i) => !isComplete(i, values[i.id] ?? null)) : [];
   const uncheckedTasks = tasks.filter((t) => !t.items.every((i) => checks[i.id])).length;
   const askFinish = () => (uncheckedTasks > 0 ? setConfirmFinish(true) : void finish());
-  const scopeLabel = typeof view.scope === "object" ? " · wybrane zadania" : view.scope === "closed" ? " · zadania zamknięte" : view.scope === "open" ? " · zadania otwarte" : "";
+  const scopeLabel = typeof view.scope === "object" && view.scope.label ? ` · ${view.scope.label}` : session.term === "mix" ? "" : typeof view.scope === "object" ? " · wybrane zadania" : view.scope === "closed" ? " · zadania zamknięte" : view.scope === "open" ? " · zadania otwarte" : "";
 
   const statusOf = (t: PublicTask) => {
     const cs = t.items.map((i) => checks[i.id]);
@@ -225,11 +257,15 @@ export function PracticePlayer() {
 
   return (
     <div className="flex h-full flex-col" data-ready="1" data-testid="practice-player">
-      <header className="practice-band flex items-center gap-4 px-6 py-3">
+      <div role="status" className="sr-only" data-testid="check-announcement">{announcement}</div>
+      <header className="practice-band flex items-center gap-4 px-6 py-3" inert={confirmFinish}>
         <span className="font-bold">
           {session.subjectName} · {sessionLabel(session)} · NAUKA{scopeLabel}
         </span>
-        <span className="tabular ml-auto" title="Stoper (liczy tylko, gdy okno jest aktywne)">◷ {clock(elapsed)}</span>
+        <span className="tabular ml-auto" title="Stoper (liczy tylko, gdy okno jest aktywne)">
+          <span aria-hidden="true">◷</span>
+          <span className="sr-only">Czas: </span> {clock(elapsed)}
+        </span>
         <button className="btn ghost" onClick={leave} title="Wyjdź i wróć później: odpowiedzi zostają zapisane" data-testid="leave">
           Przerwij
         </button>
@@ -238,7 +274,7 @@ export function PracticePlayer() {
         </button>
       </header>
 
-      <div className="flex items-center gap-4 border-b border-line bg-surface px-6 py-2 text-sm">
+      <div className="flex items-center gap-4 border-b border-line bg-surface px-6 py-2 text-sm" inert={confirmFinish}>
         <span className="font-bold">
           Zadanie {index + 1} z {tasks.length}
         </span>
@@ -247,17 +283,18 @@ export function PracticePlayer() {
         </span>
       </div>
 
-      <main id="main" className="scroll-pane flex-1 px-6 py-6">
+      <main id="main" className="scroll-pane flex-1 px-6 py-6" inert={confirmFinish}>
         <div className={reading ? "with-reading mx-auto max-w-7xl" : "mx-auto max-w-6xl"}>
-          {reading && <ReadingPane text={reading} ctx={ctxBase} />}
+          {reading && <ReadingPane text={reading} ctx={ctxBase} lang={lang} />}
         <div className={`grid gap-6 ${allChecked && !reading ? "grid-cols-[minmax(0,1fr)_minmax(0,420px)]" : "grid-cols-1"}`}>
           <article className="flex min-w-0 flex-col gap-5">
             <div className="flex items-center gap-3">
               <h1 className="text-2xl font-bold outline-none" tabIndex={-1} ref={headingRef}>
                 Zadanie {task.number}. <span className="font-normal text-muted">(0–{task.maxPoints})</span>
+                {task.origin && <span className="ml-2 align-middle text-sm font-normal text-muted">z arkusza: {sessionLabel(task.origin)}</span>}
               </h1>
-              <button className={`btn ghost ml-auto ${flagged ? "flagged" : ""}`} onClick={toggleFlag} aria-pressed={flagged} title="Oznacz do powtórki (F)">
-                {flagged ? "★ Oznaczone" : "☆ Oznacz"}
+              <button className={`btn ghost ml-auto ${flagged ? "flagged" : ""}`} onClick={toggleFlag} aria-pressed={flagged} aria-label="Oznacz do powtórki" title="Oznacz do powtórki (F)">
+                <span aria-hidden="true">{flagged ? "★ Oznaczone" : "☆ Oznacz"}</span>
               </button>
             </div>
             {listening && <ListeningPlayer sessionId={session.id} stimulus={listening} available={!!session.recording} />}
@@ -268,8 +305,8 @@ export function PracticePlayer() {
               return (
                 <div key={it.id} className="flex flex-col gap-3">
                   {task.items.length > 1 && <h2 className="font-bold">{it.label}</h2>}
-                  {it.prompt && <Rich text={it.prompt} ctx={ctx} />}
-                  <AnswerInput item={it} value={values[it.id] ?? null} onChange={(v) => setValue(it.id, v)} revealedKey={checks[it.id] ? checks[it.id]!.reveal.key ?? { type: "model_solution", solution: "" } : undefined} ctx={ctx} />
+                  {it.prompt && <Rich text={it.prompt} ctx={ctx} lang={lang} />}
+                  <AnswerInput item={it} value={values[it.id] ?? null} onChange={(v) => setValue(it.id, v)} revealedKey={checks[it.id] ? checks[it.id]!.reveal.key ?? { type: "model_solution", solution: "" } : undefined} ctx={ctx} lang={lang} />
                 </div>
               );
             })}
@@ -296,6 +333,7 @@ export function PracticePlayer() {
                 <Feedback
                   key={it.id}
                   item={it}
+                  lang={lang}
                   check={checks[it.id]!}
                   selfPoints={selfPoints[it.id]}
                   onGrade={(p) => void grade(it.id, p)}
@@ -328,30 +366,30 @@ export function PracticePlayer() {
         </div>
       </main>
 
-      <footer className="flex items-center gap-3 border-t border-line bg-surface px-6 py-3">
+      <footer className="flex items-center gap-3 border-t border-line bg-surface px-6 py-3" inert={confirmFinish}>
         <button className="btn ghost" onClick={() => goTo(index - 1)} disabled={index === 0}>
-          ← Poprzednie
+          <span aria-hidden="true">←</span> Poprzednie
         </button>
-        <nav className="flex flex-1 flex-wrap justify-center gap-1.5" aria-label="Zadania">
+        <nav className="qstrip" aria-label="Zadania" ref={stripRef}>
           {tasks.map((t, i) => (
             <button
               key={t.id}
               className={`qnum ${statusOf(t)} ${i === index ? "cur" : ""} ${flags[t.items[0]!.id] ? "flag" : ""}`}
               onClick={() => goTo(i)}
               aria-current={i === index ? "step" : undefined}
-              aria-label={`Zadanie ${t.number}`}
+              aria-label={`${t.origin ? `Zadanie ${i + 1} (zadanie ${t.number}, ${sessionLabel(t.origin)})` : `Zadanie ${t.number}`}${STATUS_LABEL[statusOf(t)]}${flags[t.items[0]!.id] ? ", oznaczone" : ""}`}
             >
-              {t.number}
+              {t.origin ? i + 1 : t.number}
             </button>
           ))}
         </nav>
         {index < tasks.length - 1 ? (
           <button className="btn ghost" onClick={() => goTo(index + 1)}>
-            Następne →
+            Następne <span aria-hidden="true">→</span>
           </button>
         ) : (
           <button className="btn ghost" onClick={askFinish} data-testid="finish-last">
-            Zakończ naukę →
+            Zakończ naukę <span aria-hidden="true">→</span>
           </button>
         )}
       </footer>

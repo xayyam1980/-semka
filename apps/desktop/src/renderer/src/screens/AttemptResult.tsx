@@ -29,7 +29,8 @@ export function AttemptResult() {
     return y.answered && !y.pending && y.earned < y.maxPoints;
   });
   const untouched = view.tasks.filter((x) => !x.answered).length;
-  const reviewUrl = (n?: number) => `/proba/${attemptId}/przeglad${n ? `?zad=${n}` : ""}`;
+  // Mixed sets repeat task numbers, so their links name the task id.
+  const reviewUrl = (t?: { id: string; number: number; origin?: unknown }) => `/proba/${attemptId}/przeglad${t ? `?zad=${t.origin ? t.id : t.number}` : ""}`;
 
   return (
     <section className="flex flex-col gap-6" data-testid="attempt-result">
@@ -80,7 +81,7 @@ export function AttemptResult() {
           {s.pending > 0 ? (
             <>
               <p className="text-sm">Oceń zadania otwarte według klucza, aby wynik był ostateczny.</p>
-              <button className="btn primary self-start" onClick={() => navigate(reviewUrl(firstPending?.number))} data-testid="grade-open">
+              <button className="btn primary self-start" onClick={() => navigate(reviewUrl(firstPending))} data-testid="grade-open">
                 Oceń zadania otwarte →
               </button>
             </>
@@ -93,14 +94,14 @@ export function AttemptResult() {
       <div className="flex flex-col gap-2">
         <h2 className="text-lg font-bold">Zadania</h2>
         <div className="flex flex-wrap gap-1.5">
-          {tasks.map((x) => {
+          {tasks.map((x, i) => {
             const tt = view.tasks.find((y) => y.taskId === x.id)!;
             // Untouched tasks stay neutral; answered ones show right/wrong; waiting for self-grading is amber-neutral.
             const state = !tt.answered ? "" : tt.pending ? "answered" : tt.earned === tt.maxPoints ? "ok" : "bad";
             const label = !tt.answered ? "bez odpowiedzi" : tt.pending ? "czeka na samoocenę" : `${tt.earned}/${tt.maxPoints} pkt`;
             return (
-              <Link key={x.id} to={reviewUrl(x.number)} className={`qnum ${state}`} title={`Zadanie ${x.number}: ${label}`}>
-                {x.number}
+              <Link key={x.id} to={reviewUrl(x)} className={`qnum ${state}`} title={`Zadanie ${x.number}${x.origin ? ` (${sessionLabel(x.origin)})` : ""}: ${label}`} aria-label={`Zadanie ${x.origin ? `${i + 1} (zadanie ${x.number}, ${sessionLabel(x.origin)})` : x.number}: ${label}`}>
+                {x.origin ? i + 1 : x.number}
               </Link>
             );
           })}
@@ -109,7 +110,7 @@ export function AttemptResult() {
       </div>
 
       <div className="flex flex-wrap gap-2">
-        <Link to={reviewUrl(firstWrong?.number)} className="btn primary">
+        <Link to={reviewUrl(firstWrong)} className="btn primary">
           {firstWrong ? "Przejrzyj błędy" : "Przejrzyj odpowiedzi"}
         </Link>
         <Link to={`/arkusze/${session.id}`} className="btn ghost">Nowa próba</Link>

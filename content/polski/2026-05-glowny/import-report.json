@@ -1,6 +1,6 @@
 {
   "sessionId": "polski-2026-05-glowny",
-  "at": "2026-11-17T19:40:05.024Z",
+  "at": "2026-11-19T19:22:13.070Z",
   "model": "qwen · qwen3.8-max · token-plan.maas.qwencloudapi.com",
   "segmentation": {
     "sheetTasks": 18,
@@ -349,5 +349,5 @@
     "input": 0,
     "output": 0
   },
-  "approvedAt": "2026-11-17T19:40:19.976Z"
+  "approvedAt": "2026-11-19T19:22:53.326Z"
 }

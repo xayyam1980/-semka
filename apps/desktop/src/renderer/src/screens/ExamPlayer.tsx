@@ -8,7 +8,8 @@ import { Rich } from "../components/Rich";
 import { TaskText } from "../components/TaskText";
 import { ReadingPane, readingTextOf } from "../components/ReadingPane";
 import { RecordingBar } from "../components/RecordingBar";
-import { clock, plural, sessionLabel } from "../lib/format";
+import { inField, inRadioGroup, shortcutsActive, useDocumentTitle, useReturnFocus } from "../lib/a11y";
+import { clock, contentLang, plural, sessionLabel } from "../lib/format";
 
 const SAVE_DELAY_MS = 400;
 const WARN_MS = 15 * 60_000;
@@ -22,10 +23,16 @@ export function ExamPlayer() {
   const [values, setValues] = useState<Record<string, ResponseValue | null>>({});
   const [flags, setFlags] = useState<Record<string, boolean>>({});
   const [index, setIndex] = useState(0);
+  // One row of task numbers that scrolls; the current one stays in view (21-task sheets in a small window).
+  const stripRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    stripRef.current?.querySelector(".cur")?.scrollIntoView({ block: "nearest", inline: "nearest" });
+  }, [index]);
   const [remaining, setRemaining] = useState<number | null>(null);
   const [hideTime, setHideTime] = useState(false);
-  const [banner, setBanner] = useState<string | null>(null);
+  const [banner, setBanner] = useState<{ text: string; critical: boolean } | null>(null);
   const [confirming, setConfirming] = useState(false);
+  useReturnFocus(confirming);
   const [error, setError] = useState<string | null>(null);
   const saveTimers = useRef<Record<string, ReturnType<typeof setTimeout>>>({});
   const deadline = useRef<number>(0);
@@ -84,10 +91,10 @@ export function ExamPlayer() {
       if (left <= 0) return void timeUp();
       if (left <= CRITICAL_MS && !warned.current.critical) {
         warned.current = { warn: true, critical: true };
-        setBanner("Zostało 5 minut. Sprawdź, czy zaznaczyłeś/aś wszystkie odpowiedzi.");
+        setBanner({ text: "Zostało 5 minut. Sprawdź, czy zaznaczyłeś/aś wszystkie odpowiedzi.", critical: true });
       } else if (left <= WARN_MS && !warned.current.warn) {
         warned.current.warn = true;
-        setBanner("Zostało 15 minut.");
+        setBanner({ text: "Zostało 15 minut.", critical: false });
       }
     };
     tick();
@@ -107,6 +114,8 @@ export function ExamPlayer() {
     headingRef.current?.focus({ preventScroll: false });
   }, [index]);
   const task = tasks[index];
+  useDocumentTitle(task && session ? `Zadanie ${task.number} – ${session.subjectName} – Symulacja` : "Symulacja");
+  const lang = contentLang(session);
   const ctx = useMemo(() => (session ? { sessionId: session.id, stimuli: session.stimuli } : null), [session]);
 
   const save = useCallback(
@@ -151,13 +160,14 @@ export function ExamPlayer() {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      const tag = (e.target as HTMLElement).tagName;
       if (confirming && e.key === "Escape") return setConfirming(false);
-      if (confirming || tag === "TEXTAREA" || tag === "INPUT" || tag === "SELECT" || e.metaKey || e.ctrlKey || e.altKey) return;
-      if (e.key === "ArrowRight" || e.key === "k") setIndex((i) => Math.min(tasks.length - 1, i + 1));
-      else if (e.key === "ArrowLeft" || e.key === "j") setIndex((i) => Math.max(0, i - 1));
-      else if (e.key === "f") toggleFlag();
-      else if (task && /^[a-d]$/i.test(e.key)) {
+      if (confirming || inField(e) || e.metaKey || e.ctrlKey || e.altKey) return;
+      // Arrows move between tasks, except inside a radio group; letter shortcuts act only with no control focused.
+      const letters = shortcutsActive(e);
+      if ((e.key === "ArrowRight" || (letters && e.key === "k")) && !inRadioGroup(e)) setIndex((i) => Math.min(tasks.length - 1, i + 1));
+      else if ((e.key === "ArrowLeft" || (letters && e.key === "j")) && !inRadioGroup(e)) setIndex((i) => Math.max(0, i - 1));
+      else if (letters && e.key === "f") toggleFlag();
+      else if (letters && task && /^[a-d]$/i.test(e.key)) {
         const it = task.items[0]!;
         if (it.response.type === "single_choice" && it.response.options.some((o) => o.id === e.key.toUpperCase())) setValue(it.id, { type: "choice", value: e.key.toUpperCase() });
       }
@@ -179,7 +189,7 @@ export function ExamPlayer() {
 
   return (
     <div className="exam-shell flex h-full flex-col" data-ready="1" data-testid="exam-player">
-      <header className="exam-band flex items-center gap-4 px-6 py-3">
+      <header className="exam-band flex items-center gap-4 px-6 py-3" inert={confirming}>
         <span className="font-bold">
           {session.subjectName} · {sessionLabel(session)} · SYMULACJA
           {view.timing.extendedTime && <span className="ml-2 text-sm font-normal opacity-80">(wydłużony czas)</span>}
@@ -199,6 +209,7 @@ export function ExamPlayer() {
         </button>
       </header>
       {session.recording && view && (
+        <div inert={confirming}>
         <RecordingBar
           sessionId={session.id}
           asset={session.recording.asset}
@@ -206,39 +217,39 @@ export function ExamPlayer() {
           stimuli={session.stimuli}
           taskNumberOf={(id) => session.tasks.find((t) => t.stimulusIds.includes(id))?.number}
         />
+        </div>
       )}
       {!session.recording && session.stimuli.some((x) => x.kind === "audio") && (
-        <div className="bg-[var(--warn-soft)] px-6 py-2 text-sm text-[var(--warn)]" role="status" data-testid="recording-missing">
+        <div className="bg-[var(--warn-soft)] px-6 py-2 text-sm text-[var(--warn)]" role="status" data-testid="recording-missing" inert={confirming}>
           <b>Nagranie nie jest zainstalowane.</b> Zadania ze słuchania możesz rozwiązać, ale bez nagrania; transkrypcja pojawi się w przeglądzie po oddaniu.
         </div>
       )}
-      {banner && (
-        <div className="flex items-center gap-3 bg-[var(--warn-soft)] px-6 py-2 text-sm text-[var(--warn)]" role="status">
-          <b>{banner}</b>
-          <button className="ml-auto underline" onClick={() => setBanner(null)}>
-            OK
-          </button>
-        </div>
-      )}
+      {/* The two live regions are always in the page, so a warning that appears in one is announced: 15 minutes politely, 5 minutes at once. */}
+      <div role="status" aria-live="polite" inert={confirming}>
+        {banner && !banner.critical && <TimeBanner text={banner.text} onClose={() => setBanner(null)} />}
+      </div>
+      <div role="alert" inert={confirming}>
+        {banner?.critical && <TimeBanner text={banner.text} onClose={() => setBanner(null)} />}
+      </div>
 
-      <main id="main" className="scroll-pane flex-1 px-6 py-6">
+      <main id="main" className="scroll-pane flex-1 px-6 py-6" inert={confirming}>
         <div className={reading ? "with-reading mx-auto max-w-7xl" : "mx-auto max-w-4xl"}>
-          {reading && <ReadingPane text={reading} ctx={ctx} />}
+          {reading && <ReadingPane text={reading} ctx={ctx} lang={lang} />}
         <article className="flex min-w-0 flex-col gap-5">
           <div className="flex items-center gap-3">
             <h1 className="text-2xl font-bold outline-none" tabIndex={-1} ref={headingRef}>
               Zadanie {task.number}. <span className="font-normal text-muted">(0–{task.maxPoints})</span>
             </h1>
-            <button className={`btn ghost ml-auto ${flags[task.items[0]!.id] ? "flagged" : ""}`} onClick={toggleFlag} aria-pressed={!!flags[task.items[0]!.id]} title="Oznacz do powrotu (F)">
-              {flags[task.items[0]!.id] ? "★ Oznaczone" : "☆ Oznacz"}
+            <button className={`btn ghost ml-auto ${flags[task.items[0]!.id] ? "flagged" : ""}`} onClick={toggleFlag} aria-pressed={!!flags[task.items[0]!.id]} aria-label="Oznacz do powrotu" title="Oznacz do powrotu (F)">
+              <span aria-hidden="true">{flags[task.items[0]!.id] ? "★ Oznaczone" : "☆ Oznacz"}</span>
             </button>
           </div>
           <TaskText task={task} values={values} ctx={ctx} />
           {task.items.map((it) => (
             <div key={it.id} className="flex flex-col gap-3">
               {task.items.length > 1 && <h2 className="font-bold">{it.label}</h2>}
-              {it.prompt && <Rich text={it.prompt} ctx={ctx} />}
-              <AnswerInput item={it} value={values[it.id] ?? null} onChange={(v) => setValue(it.id, v)} ctx={ctx} />
+              {it.prompt && <Rich text={it.prompt} ctx={ctx} lang={lang} />}
+              <AnswerInput item={it} value={values[it.id] ?? null} onChange={(v) => setValue(it.id, v)} ctx={ctx} lang={lang} />
             </div>
           ))}
           <p className="text-sm text-muted">Odpowiedzi zapisują się same. Klucz zobaczysz po oddaniu arkusza.</p>
@@ -246,11 +257,11 @@ export function ExamPlayer() {
         </div>
       </main>
 
-      <footer className="flex items-center gap-3 border-t border-line bg-surface px-6 py-3">
+      <footer className="flex items-center gap-3 border-t border-line bg-surface px-6 py-3" inert={confirming}>
         <button className="btn ghost" onClick={() => setIndex((i) => Math.max(0, i - 1))} disabled={index === 0}>
-          ← Poprzednie
+          <span aria-hidden="true">←</span> Poprzednie
         </button>
-        <nav className="flex flex-1 flex-wrap justify-center gap-1.5" aria-label="Mapa arkusza">
+        <nav className="qstrip" aria-label="Mapa arkusza" ref={stripRef}>
           {tasks.map((t, i) => (
             <button
               key={t.id}
@@ -265,7 +276,7 @@ export function ExamPlayer() {
         </nav>
         {index < tasks.length - 1 ? (
           <button className="btn ghost" onClick={() => setIndex((i) => Math.min(tasks.length - 1, i + 1))}>
-            Następne →
+            Następne <span aria-hidden="true">→</span>
           </button>
         ) : (
           <button className="btn ghost" onClick={() => setConfirming(true)} data-testid="submit-last">
@@ -288,7 +299,7 @@ export function ExamPlayer() {
                 </p>
                 <div className="mt-2 flex flex-wrap gap-1.5">
                   {unanswered.map((t) => (
-                    <button key={t.id} className="qnum" onClick={() => { setIndex(tasks.indexOf(t)); setConfirming(false); }}>
+                    <button key={t.id} className="qnum" aria-label={`Zadanie ${t.number}`} onClick={() => { setIndex(tasks.indexOf(t)); setConfirming(false); }}>
                       {t.number}
                     </button>
                   ))}
@@ -300,7 +311,7 @@ export function ExamPlayer() {
                 <p className="font-bold">Niepełne odpowiedzi (brakuje części zadania):</p>
                 <div className="mt-2 flex flex-wrap gap-1.5">
                   {partial.map((t) => (
-                    <button key={t.id} className="qnum answered" onClick={() => { setIndex(tasks.indexOf(t)); setConfirming(false); }}>
+                    <button key={t.id} className="qnum answered" aria-label={`Zadanie ${t.number}, odpowiedź niepełna`} onClick={() => { setIndex(tasks.indexOf(t)); setConfirming(false); }}>
                       {t.number}
                     </button>
                   ))}
@@ -312,7 +323,7 @@ export function ExamPlayer() {
                 <p className="font-bold">Oznaczone do powrotu:</p>
                 <div className="mt-2 flex flex-wrap gap-1.5">
                   {flaggedTasks.map((t) => (
-                    <button key={t.id} className="qnum flag" onClick={() => { setIndex(tasks.indexOf(t)); setConfirming(false); }}>
+                    <button key={t.id} className="qnum flag" aria-label={`Zadanie ${t.number}, oznaczone`} onClick={() => { setIndex(tasks.indexOf(t)); setConfirming(false); }}>
                       {t.number}
                     </button>
                   ))}
@@ -331,6 +342,17 @@ export function ExamPlayer() {
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+function TimeBanner({ text, onClose }: { text: string; onClose: () => void }) {
+  return (
+    <div className="flex items-center gap-3 bg-[var(--warn-soft)] px-6 py-2 text-sm text-[var(--warn)]">
+      <b>{text}</b>
+      <button className="ml-auto underline" onClick={onClose}>
+        OK
+      </button>
     </div>
   );
 }

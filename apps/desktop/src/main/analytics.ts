@@ -63,11 +63,11 @@ const pct = (fs: Fact[]) => (sum(fs, "max") ? Math.round((100 * sum(fs, "points"
 /** Facts counted once per item: essay criteria are extra detail, not extra points. */
 const itemsOnly = (fs: Fact[]) => fs.filter((f) => !f.area.includes(": "));
 
-function byAttempt(fs: Fact[]): { attemptId: string; sessionId: string; mode: Fact["mode"]; at: string; points: number; max: number }[] {
+function byAttempt(fs: Fact[]): { attemptId: string; sessionId: string; mode: Fact["mode"]; at: string; points: number; max: number; n: number }[] {
   const m = new Map<string, Fact[]>();
   for (const f of fs) (m.get(f.attemptId) ?? m.set(f.attemptId, []).get(f.attemptId)!).push(f);
   return [...m.values()]
-    .map((g) => ({ attemptId: g[0]!.attemptId, sessionId: g[0]!.sessionId, mode: g[0]!.mode, at: g.map((f) => f.at).sort().at(-1)!, points: sum(g, "points"), max: sum(g, "max") }))
+    .map((g) => ({ attemptId: g[0]!.attemptId, sessionId: g[0]!.sessionId, mode: g[0]!.mode, at: g.map((f) => f.at).sort().at(-1)!, points: sum(g, "points"), max: sum(g, "max"), n: g.length }))
     .sort((a, b) => a.at.localeCompare(b.at));
 }
 
@@ -114,7 +114,7 @@ export function overview(facts: Fact[], now: number): Overview {
   const before = readiness(facts.filter((f) => Date.parse(f.at) < now - 30 * DAY), now - 30 * DAY);
   const gaps: GapRow[] = Object.values(SUBJECTS)
     .flatMap((s) => areaRows(facts.filter((f) => f.subjectId === s.id && Date.parse(f.at) >= now - 90 * DAY), now).map((r) => ({ ...r, subjectId: s.id })))
-    .filter((r) => r.percent !== null && r.percent < 80 && r.n >= 2);
+    .filter((r) => r.percent !== null && r.percent < 80 && r.n >= MIN_N); // same threshold as "za mało danych" in Analiza
   const top = [...gaps].sort((a, b) => a.percent! - b.percent! || b.n - a.n).slice(0, 5);
   // The next step: the most points to win back (max × miss rate), not simply the lowest percentage.
   const next = [...gaps].sort((a, b) => b.lost - a.lost || a.percent! - b.percent!)[0];
@@ -140,13 +140,14 @@ function readiness(facts: Fact[], now: number): { percent: number | null; confid
     if (parts.length) per.push(parts.reduce((s, p) => s + p.w * p.v, 0) / parts.reduce((s, p) => s + p.w, 0));
   }
   if (!per.length) return { percent: null, confidence: "niska", simulated };
-  return { percent: Math.round((100 * per.reduce((a, b) => a + b, 0)) / per.length), confidence: simulated === 3 ? "wysoka" : simulated > 0 ? "średnia" : "niska", simulated };
+  return { percent: Math.round((100 * per.reduce((a, b) => a + b, 0)) / per.length), confidence: simulated === 3 ? "wysoka" : simulated === 2 ? "średnia" : "niska", simulated };
 }
 
 function subjectCard(subjectId: SubjectId, fs: Fact[], now: number): SubjectCard {
-  const attempts = byAttempt(itemsOnly(fs));
+  // A practice with one or two checked tasks says little: the card shows attempts with at least MIN_N items.
+  const attempts = byAttempt(itemsOnly(fs)).filter((a) => a.mode === "symulacja" || a.n >= MIN_N);
   const last = attempts.at(-1);
-  const weakest = areaRows(fs.filter((f) => Date.parse(f.at) >= now - 90 * DAY), now).find((r) => r.percent !== null && r.percent < 80 && r.n >= 2);
+  const weakest = areaRows(fs.filter((f) => Date.parse(f.at) >= now - 90 * DAY), now).find((r) => r.percent !== null && r.percent < 80 && r.n >= MIN_N);
   return {
     subjectId,
     last: last ? { percent: Math.round((100 * last.points) / Math.max(1, last.max)), points: last.points, max: last.max, mode: last.mode, at: last.at, attemptId: last.attemptId } : null,
@@ -178,6 +179,39 @@ export function subjectAnalysis(facts: Fact[], subjectId: SubjectId, opts: { day
     areas,
     improved,
   };
+}
+
+export interface MixOptions {
+  count: number;
+  kind: "all" | "closed" | "open";
+  /** Only tasks with an item in this area (as areaOf names it). */
+  area?: string;
+}
+
+/**
+ * Mixed practice: tasks from every sheet of a subject (the mixed sheet), never tried first in random order, then the
+ * ones with the lowest score. Essays are left out (a 60-minute task does not fit a short mixed set).
+ */
+export function mixedPlan(mix: SessionBundle, facts: Fact[], opts: MixOptions, areaOfItem: (b: SessionBundle, t: Task, i: Item) => string, random: () => number = Math.random): string[] {
+  const scoreOf = new Map<string, { points: number; max: number }>();
+  for (const f of itemsOnly(facts)) {
+    const s = scoreOf.get(f.taskId) ?? { points: 0, max: 0 };
+    scoreOf.set(f.taskId, { points: s.points + f.points, max: s.max + f.max });
+  }
+  const baseArea = opts.area?.split(": ")[0];
+  const pool = mix.tasks.filter(
+    (t) =>
+      !t.items.some((i) => i.response.type === "extended_text" && t.maxPoints >= 10) &&
+      (opts.kind === "all" || (opts.kind === "closed" ? t.format === "zamkniete" : t.format === "otwarte")) &&
+      (!baseArea || t.items.some((i) => areaOfItem(mix, t, i) === baseArea)),
+  );
+  const rank = (t: Task) => {
+    const s = scoreOf.get(t.id);
+    return s ? s.points / Math.max(1, s.max) : -1;
+  };
+  const keyed = pool.map((t) => ({ t, r: rank(t), tie: random() }));
+  keyed.sort((a, b) => a.r - b.r || a.tie - b.tie);
+  return keyed.slice(0, Math.max(1, opts.count)).map((k) => k.t.id);
 }
 
 /**

@@ -124,6 +124,16 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
   const wanted = sheetSeg.spans.filter((t) => !opts.onlyTasks || opts.onlyTasks.includes(t.number));
   const textGroups = findTextGroups(sheetPages, sheetSeg.spans);
   const textOfTask = new Map(textGroups.flatMap((g) => g.tasks.map((n) => [n, g] as const)));
+  // Which reading text the app shows next to a task. Texts are linked by position on the sheet, which also catches tasks
+  // that bring their own material (another lektura's fragment, a poster) or are short writing tasks. Those are left out:
+  // writing tasks (scored by a rubric) by rule, the others by text-links.json { "7": null } (or { "12": 2 } to relink).
+  // Only what the app shows changes; the AI still gets the position-based note, so cached drafts stay valid.
+  const linksFile = join(sessionDirForNotes, "text-links.json");
+  const textLinks: Record<string, number | null> = existsSync(linksFile) ? JSON.parse(readFileSync(linksFile, "utf8")) : {};
+  const shownText = (n: number, draft: { items: { scoring: { type: string } }[] }) => {
+    if (String(n) in textLinks) return textLinks[String(n)] == null ? undefined : textGroups.find((g) => g.index === textLinks[String(n)]);
+    return draft.items.some((i) => i.scoring.type === "rubric") ? undefined : textOfTask.get(n);
+  };
   const textId = (g: { index: number }) => makeTaskId(s.subjectId, s.year, 0, s.month, s.term).replace(/-00$/, `-tekst-${g.index}`);
   // A task ends where the next reading text begins (e.g. task 10 must not include text 2's pages).
   for (const span of sheetSeg.spans) {
@@ -242,7 +252,7 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
       keyPageOf: (i) => input.keyPages[i]?.page,
       fromPage: src.fromPage,
       sheetSource: src.kind,
-      ...(textOfTask.has(input.number) ? { stimulusIds: [textId(textOfTask.get(input.number)!)] } : {}),
+      ...(shownText(input.number, res.draft) ? { stimulusIds: [textId(shownText(input.number, res.draft)!)] } : {}),
     });
     rubrics.push(...a.rubrics);
     if (a.figures.length) {

@@ -1,5 +1,6 @@
 // Inputs for each answer type. After checking, inputs lock and show right/wrong per option or part.
 import type { KeySpec, ResponseValue } from "@osemka/schema";
+import type { KeyboardEvent } from "react";
 import type { PublicItem } from "../../../shared/ipc";
 import { plural } from "../lib/format";
 import { Rich, type RichContext } from "./Rich";
@@ -11,11 +12,26 @@ interface Props {
   /** Present once checked: the key, used to colour options. */
   revealedKey?: KeySpec | undefined;
   ctx: RichContext;
+  /** Language of the prompts and options ("en" on English papers); the Polish interface text around them stays unmarked. */
+  lang?: string | undefined;
+}
+
+/** Arrow keys inside a radio group move the choice (and the focus) like native radios; only the chosen option is a Tab stop. */
+function radioArrows(e: KeyboardEvent<HTMLElement>, ids: string[], pick: (id: string) => void) {
+  const d = e.key === "ArrowDown" || e.key === "ArrowRight" ? 1 : e.key === "ArrowUp" || e.key === "ArrowLeft" ? -1 : 0;
+  if (!d || e.metaKey || e.ctrlKey || e.altKey) return;
+  const radios = [...e.currentTarget.querySelectorAll<HTMLElement>('[role="radio"]:not(:disabled)')];
+  const at = radios.indexOf((e.target as HTMLElement).closest<HTMLElement>('[role="radio"]')!);
+  if (at < 0 || radios.length !== ids.length) return;
+  e.preventDefault();
+  const next = (at + d + radios.length) % radios.length;
+  pick(ids[next]!);
+  radios[next]!.focus();
 }
 
 type Choices = Record<string, string>;
 
-export function AnswerInput({ item, value, onChange, revealedKey, ctx }: Props) {
+export function AnswerInput({ item, value, onChange, revealedKey, ctx, lang }: Props) {
   const locked = !!revealedKey;
   const r = item.response;
 
@@ -23,13 +39,13 @@ export function AnswerInput({ item, value, onChange, revealedKey, ctx }: Props) 
     const chosen = value?.type === "choice" ? value.value : "";
     const correct = revealedKey?.type === "choice" ? revealedKey.correct : undefined;
     return (
-      <div className={`grid gap-2 ${r.options.every((o) => o.text.length < 24) ? "grid-cols-2" : "grid-cols-1"}`} role="radiogroup" aria-label={`Odpowiedź do zadania ${item.label}`}>
-        {r.options.map((o) => {
+      <div className={`grid gap-2 ${r.options.every((o) => o.text.length < 24) ? "grid-cols-2" : "grid-cols-1"}`} role="radiogroup" aria-label={`Odpowiedź do zadania ${item.label}`} onKeyDown={(e) => !locked && radioArrows(e, r.options.map((o) => o.id), (id) => onChange({ type: "choice", value: id }))}>
+        {r.options.map((o, idx) => {
           const state = !locked ? (chosen === o.id ? "sel" : "") : o.id === correct ? (chosen === o.id ? "ok" : "rev") : chosen === o.id ? "bad" : "";
           return (
-            <button key={o.id} className={`opt ${state}`} role="radio" aria-checked={chosen === o.id} disabled={locked} onClick={() => onChange({ type: "choice", value: o.id })} data-option={o.id}>
+            <button key={o.id} className={`opt ${state}`} role="radio" aria-checked={chosen === o.id} tabIndex={chosen === o.id || (!chosen && idx === 0) ? 0 : -1} disabled={locked} onClick={() => onChange({ type: "choice", value: o.id })} data-option={o.id}>
               <span className="k">{o.id}</span>
-              <Rich text={o.text} ctx={ctx} inline />
+              <Rich text={o.text} ctx={ctx} inline lang={lang} />
               {state === "ok" && <span className="st">✓ dobrze</span>}
               {state === "bad" && <span className="st">× Twój wybór</span>}
               {state === "rev" && <span className="st">poprawna</span>}
@@ -50,7 +66,8 @@ export function AnswerInput({ item, value, onChange, revealedKey, ctx }: Props) 
           {r.statements.map((s) => (
             <tr key={s.id} className="border-b border-line last:border-0">
               <td className="p-3">
-                <Rich text={s.text} ctx={ctx} inline />
+                <Rich text={s.text} ctx={ctx} inline lang={lang} />
+                {locked && <span className="sr-only"> Twoja odpowiedź: {chosen[s.id] ?? "brak"}, poprawna: {key[s.id] ?? "?"}.</span>}
               </td>
               {["P", "F"].map((v) => {
                 const picked = chosen[s.id] === v;
@@ -59,6 +76,8 @@ export function AnswerInput({ item, value, onChange, revealedKey, ctx }: Props) 
                   <td key={v} className="w-14 p-2 text-center">
                     <button className={`pf ${state}`} disabled={locked} aria-pressed={picked} onClick={() => set(s.id, v)} aria-label={`${v === "P" ? "Prawda" : "Fałsz"}: zdanie ${s.id}`}>
                       {v}
+                      {state === "ok" && <span className="g" aria-hidden="true">✓</span>}
+                      {state === "bad" && <span className="g" aria-hidden="true">×</span>}
                     </button>
                   </td>
                 );
@@ -81,7 +100,7 @@ export function AnswerInput({ item, value, onChange, revealedKey, ctx }: Props) 
           return (
             <button key={o.id} className={`opt ${state}`} disabled={locked} aria-pressed={picked} onClick={() => onChange({ type: "choices", value: { ...chosen, [part]: o.id } })} data-option={o.id}>
               <span className="k">{o.id}</span>
-              <Rich text={o.text} ctx={ctx} inline />
+              <Rich text={o.text} ctx={ctx} inline lang={lang} />
               {state === "ok" && <span className="st">✓ dobrze</span>}
               {state === "bad" && <span className="st">× Twój wybór</span>}
               {state === "rev" && <span className="st">poprawna</span>}
@@ -106,7 +125,7 @@ export function AnswerInput({ item, value, onChange, revealedKey, ctx }: Props) 
     return (
       <div className="flex flex-col gap-2">
         {listOptions && (
-          <ol className="mb-2 flex flex-col gap-1" data-testid="matching-options">
+          <ol className="mb-2 flex flex-col gap-1" data-testid="matching-options" lang={lang}>
             {r.options.map((o) => (
               <li key={o.id} className="flex gap-2">
                 <b className="w-6 shrink-0">{o.id}.</b>
@@ -174,12 +193,12 @@ export function AnswerInput({ item, value, onChange, revealedKey, ctx }: Props) 
     };
     return (
       <div className="flex flex-col gap-3">
-        <div className="flex flex-col gap-2" role="radiogroup" aria-label="Temat wypracowania">
-          {r.topics.map((tp) => (
-            <button key={tp.id} className={`opt top ${topic === tp.id ? "sel" : ""}`} disabled={locked} onClick={() => setEssay({ topic: tp.id })} role="radio" aria-checked={topic === tp.id} data-topic={tp.id}>
+        <div className="flex flex-col gap-2" role="radiogroup" aria-label="Temat wypracowania" onKeyDown={(e) => !locked && radioArrows(e, r.topics!.map((tp) => tp.id), (id) => setEssay({ topic: id }))}>
+          {r.topics.map((tp, idx) => (
+            <button key={tp.id} className={`opt top ${topic === tp.id ? "sel" : ""}`} tabIndex={topic === tp.id || (!topic && idx === 0) ? 0 : -1} disabled={locked} onClick={() => setEssay({ topic: tp.id })} role="radio" aria-checked={topic === tp.id} data-topic={tp.id}>
               <span className="k">{tp.id}</span>
-              <span className="flex flex-col gap-1 text-[15px]">
-                {tp.form && <b className="uppercase tracking-wider text-[12px] text-muted">{tp.form}</b>}
+              <span className="flex flex-col gap-1 text-[0.9375rem]" lang={lang}>
+                {tp.form && <b className="uppercase tracking-wider text-[0.75rem] text-muted">{tp.form}</b>}
                 <Rich text={tp.text} ctx={ctx} />
               </span>
             </button>
@@ -187,11 +206,11 @@ export function AnswerInput({ item, value, onChange, revealedKey, ctx }: Props) 
         </div>
         <textarea
           id={`essay-${item.id}`}
-          className="min-h-72 w-full rounded-md border border-line bg-surface p-3 font-[var(--f-read)] text-[17px] leading-relaxed"
+          className="min-h-72 w-full rounded-md border border-line bg-surface p-3 font-[var(--f-read)] text-[1.0625rem] leading-relaxed"
           placeholder={topic ? "Napisz wypracowanie…" : "Najpierw wybierz temat."}
           disabled={locked || !topic}
           value={text}
-          lang="pl"
+          lang={lang ?? "pl"}
           spellCheck={false}
           onChange={(e) => setEssay({ text: e.target.value })}
         />
@@ -213,7 +232,7 @@ export function AnswerInput({ item, value, onChange, revealedKey, ctx }: Props) 
       <div className="flex flex-col gap-2">
         <textarea
           id={`work-${item.id}`}
-          className="min-h-48 w-full rounded-md border border-line bg-surface p-3 font-[var(--f-mono)] text-[15px] leading-relaxed"
+          className="min-h-48 w-full rounded-md border border-line bg-surface p-3 font-[var(--f-mono)] text-[0.9375rem] leading-relaxed"
           placeholder={r.type === "worked_solution" ? "Zapisz obliczenia…" : "Napisz wypracowanie…"}
           disabled={locked}
           value={text}

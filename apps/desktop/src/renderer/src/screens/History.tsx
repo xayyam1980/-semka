@@ -70,7 +70,7 @@ export function History() {
                       {best !== null ? `, najlepsza ${best} %` : ""})
                     </span>
                   </summary>
-                  <table className="mt-2 w-full border-collapse text-[15px]">
+                  <table className="mt-2 w-full border-collapse text-[0.9375rem]">
                     <tbody>
                       {rows.map((a) => {
                         const done = a.status !== "in_progress";

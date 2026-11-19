@@ -2,9 +2,10 @@ import { mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import { overview, practicePlan, subjectAnalysis, type Fact } from "../src/main/analytics";
+import { mixedPlan, overview, practicePlan, subjectAnalysis, type Fact } from "../src/main/analytics";
 import { AttemptService } from "../src/main/attempts";
 import { openContent, type ContentStore } from "../src/main/content";
+import { mixSessionId } from "../src/shared/ipc";
 import { openDb, type Db } from "../src/main/db";
 
 const NOW = Date.parse("2026-11-17T12:00:00Z");
@@ -24,7 +25,7 @@ describe("analytics (pure)", () => {
       ...Array.from({ length: 10 }, (_, i) => fact({ attemptId: "pr", mode: "nauka", area: "Procenty", points: i < 9 ? 1 : 0, at: at(2) })), // 90 %
     ];
     const o = overview(facts, NOW);
-    expect(o.readiness).toMatchObject({ percent: 70, confidence: "średnia", simulated: 1 }); // (0.6·1 + 0.9·0.5) / 1.5
+    expect(o.readiness).toMatchObject({ percent: 70, confidence: "niska", simulated: 1 }); // (0.6·1 + 0.9·0.5) / 1.5; one simulated subject is not enough for "średnia"
   });
 
   it("the next step is the area with the most points to win back, not the lowest percentage", () => {
@@ -121,4 +122,38 @@ describe("analytics (from real attempts)", () => {
     const v = svc.startPractice(plan!.sessionId, { taskIds: plan!.taskIds });
     expect(v.taskIds).toEqual(plan!.taskIds);
   });
+
+  it("mixed practice draws from several sheets, skips essays and listening, and counts answers to the real sheet", () => {
+    const mix = content.get(mixSessionId("matematyka"))!;
+    const sheets = content.list().filter((s) => s.subjectId === "matematyka");
+    expect(mix.tasks.length).toBe(sheets.reduce((n, s) => n + s.taskCount, 0));
+    let seed = 1;
+    const ids = mixedPlan(mix, [], { count: 12, kind: "closed" }, svc.areaOfItem, () => ((seed = (seed * 16807) % 2147483647) / 2147483647));
+    expect(ids).toHaveLength(12);
+    expect(new Set(ids.map((id) => content.originOf(id))).size).toBeGreaterThan(1);
+    expect(ids.every((id) => mix.tasks.find((t) => t.id === id)!.format === "zamkniete")).toBe(true);
+
+    const pl = content.get(mixSessionId("polski"))!;
+    expect(mixedPlan(pl, [], { count: 99, kind: "all" }, svc.areaOfItem).some((id) => pl.tasks.find((t) => t.id === id)!.maxPoints >= 10)).toBe(false);
+    const en = content.get(mixSessionId("angielski"))!;
+    expect(en.tasks.some((t) => t.stimulusIds.some((s) => en.stimuli.find((x) => x.id === s)?.kind === "audio"))).toBe(false);
+
+    // Figures of a mixed sheet resolve to their own sheet's folder; the window sees where each task comes from.
+    const fig = mix.stimuli.find((s) => s.kind === "figure" && s.asset)!;
+    expect(content.assetPath(mix.session.id, fig.asset!)).toContain(content.originOf(mix.tasks.find((t) => t.stimulusIds.includes(fig.id))!.id)!.replace(/^matematyka-/, ""));
+    expect(content.publicSession(mix.session.id)!.tasks[0]!.origin).toMatchObject({ sessionId: content.originOf(mix.tasks[0]!.id) });
+
+    // A mixed attempt is an ordinary practice attempt; its answers count towards each task's own sheet.
+    const v = svc.startPractice(mix.session.id, { taskIds: ids.slice(0, 2) });
+    const item = mix.tasks.find((t) => t.id === ids[0])!.items[0]!;
+    const k = item.key.X!;
+    const value = k.type === "choice" ? { type: "choice", value: k.correct } : k.type === "choices" ? { type: "choices", value: k.correct } : null;
+    if (value) {
+      svc.saveResponse(v.summary.id, item.id, { value: value as never });
+      svc.checkItem(v.summary.id, item.id);
+      expect(svc.facts().find((f) => f.itemId === item.id)).toMatchObject({ sessionId: content.originOf(ids[0]!), points: item.maxPoints });
+    }
+    expect(() => svc.startSimulation(mix.session.id)).toThrow();
+  });
 });
+

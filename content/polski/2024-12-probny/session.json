@@ -45,7 +45,7 @@
         "pages": 24
       }
     ],
-    "contentVersion": "879a4ee6068223f7",
+    "contentVersion": "bf096557d56c9064",
     "status": "published"
   },
   "stimuli": [
@@ -193,7 +193,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "Oba stwierdzenia są fałszywe, dlatego poprawny kod odpowiedzi to FF. Narada krasnoludów nie odbyła się we wnętrzu Góry: „Długo stały krasnoludy w ciemnościach pod drzwiami, naradzając się, co robić”. Bilbo także nie czekał spokojnie na decyzję Thorina: w tekście czytamy, że „Bilbo niecierpliwił się bardzo”, a gdy zgadł, o co chodzi Thorinowi, „przerwał mu gniewnie”."
         }
@@ -201,7 +201,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -254,7 +254,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "Thorin przypomina Bilbowi, że czas „by pan Baggins wypełnił zadanie, do którego zobowiązaliśmy go”, czyli że hobbit powinien wypełnić swoje zobowiązania – dlatego poprawna jest odpowiedź C. Odpowiedź A jest błędna, bo Thorin nie mówi o staniu u boku przyjaciół. W odpowiedzi B pojawia się szczęście, ale Thorin tylko chwali Bilba jako „obdarzonego nad zwykłą miarę szczęściem w przygodach”, a o zaufaniu własnemu szczęściu mówi dopiero sam hobbit w swojej odpowiedzi. W odpowiedzi D chodzi o zapłatę, ale Thorin mówi o „obiecanym wynagrodzeniu”, które Bilbo ma dopiero zarobić – nie otrzymał go wcześniej."
         }
@@ -262,7 +262,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -315,7 +315,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "Z przytoczonego fragmentu wynika, że Bilbo samodzielnie podjął decyzję o wejściu do wnętrza Góry – wszedł tam niezależnie od namów Thorina. Pozostałe informacje nie zgadzają się z tekstem: Thorin nie prosił Balina o towarzyszenie hobbitowi ani nie postanowił wyruszyć z nim po skarb, a Bilbo nie uważał skarbów za cenniejsze niż własne życie."
         }
@@ -323,7 +323,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -376,7 +376,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.9"
+            "pl-46-I.1.9"
           ],
           "explanation": "W przytoczonym fragmencie utworu Bilbo, mimo odczuwanego lęku, zdobywa się na odwagę i podejmuje wyzwanie, dlatego charakteryzuje go zdanie „Potrafi pokonać strach”. W tekście nie ma natomiast sygnałów, że bohater liczy na sławę, wątpi w pomyślność losu albo chce zaimponować krasnoludom, więc pozostałe odpowiedzi są niepoprawne."
         }
@@ -384,7 +384,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-1.9"
+        "pl-46-I.1.9"
       ],
       "ref": {
         "source": "arkusz",
@@ -440,7 +440,7 @@
           "skillTags": [
             "pl-gen-I",
             "pl-gen-III",
-            "pl-78-1.4"
+            "pl-78-III.1.4"
           ],
           "exemplars": [
             {
@@ -480,7 +480,7 @@
       "skillTags": [
         "pl-gen-I",
         "pl-gen-III",
-        "pl-78-1.4"
+        "pl-78-III.1.4"
       ],
       "ref": {
         "source": "arkusz",
@@ -528,7 +528,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.4"
+            "pl-46-I.1.4"
           ],
           "explanation": "Powtórzenie „w dół, w dół, w ciemność” podkreśla, że droga hobbita była trudna, niebezpieczna i pełna niepewności, a nie łatwa, dlatego pierwsze stwierdzenie jest fałszywe. Zdrobnienia „mieczyk” i „twarzyczka” wyrażają sympatię oraz czułość narratora wobec małego bohatera, a nie lekceważenie, więc drugie stwierdzenie również jest fałszywe. Poprawna odpowiedź to FF."
         }
@@ -536,7 +536,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-1.4"
+        "pl-46-I.1.4"
       ],
       "ref": {
         "source": "arkusz",
@@ -549,9 +549,7 @@
       "number": 7,
       "maxPoints": 2,
       "instruction": "Przeczytaj poniższy fragment utworu.\n\n> W jednej z dzielnic warszawskich było środowisko młodzieży harcerskiej, które umiało stworzyć atmosferę i warunki, w jakich młodzież czuła się dobrze, pragnęła sama kształcić swe charaktery, sama sobie stawiała cele i sama czyniła wszystko, co w jej mocy, by te cele osiągnąć.\n>\n> Jednym z zespołów tego środowiska był zespół Buków, nazywany tak od częstych wypraw leśnych, jakie czynił rokrocznie.",
-      "stimulusIds": [
-        "pl-2024-12p-tekst-1"
-      ],
+      "stimulusIds": [],
       "items": [
         {
           "id": "pl-2024-12p-07-1",
@@ -586,9 +584,9 @@
           },
           "skillTags": [
             "pl-gen-III",
-            "pl-78-1.4",
+            "pl-78-III.1.4",
             "pl-gen-I",
-            "pl-46-1.9"
+            "pl-46-I.1.9"
           ],
           "explanation": "Fragment opisuje warszawskie środowisko młodzieży harcerskiej i zespół Buków, który wyruszał na wyprawy leśne. Tak zaczyna się lektura obowiązkowa Aleksandra Kamińskiego „Kamienie na szaniec”, więc to jej tytuł należy podać."
         },
@@ -625,9 +623,9 @@
           },
           "skillTags": [
             "pl-gen-III",
-            "pl-78-1.4",
+            "pl-78-III.1.4",
             "pl-gen-I",
-            "pl-46-1.9"
+            "pl-46-I.1.9"
           ],
           "explanation": "Odpowiedź musi zawierać dwie części: imię lub pseudonim bohatera oraz wyjaśnienie, na czym polegała trudność zadania. Na przykład Tadeusz Zawadzki („Zośka”) dowodził akcją pod Arsenałem, a trudność polegała na tym, że więźniarka z Rudym jechała przez centrum miasta i była strzeżona przez umundurowanych Niemców. Samo nazwanie bohatera i zadania bez wyjaśnienia trudności to odpowiedź niepełna.",
           "exemplars": [
@@ -653,9 +651,9 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-III",
-        "pl-78-1.4",
+        "pl-78-III.1.4",
         "pl-gen-I",
-        "pl-46-1.9"
+        "pl-46-I.1.9"
       ],
       "ref": {
         "source": "arkusz",
@@ -709,7 +707,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-4.2"
+            "pl-46-II.4.2"
           ],
           "explanation": "Poprawna odpowiedź to D. W tym zdaniu interpunkcja jest błędna na dwa sposoby: przecinek stoi po wyrazie „języków”, czyli oddziela podmiot od orzeczenia („Jednym ze stworzonych przez niego języków była…”), a przecinka brakuje przed wyrazem „czyli”, który wprowadza dopowiedzenie („mowa elfów, czyli Quenya”). W pozostałych zdaniach interpunkcja jest poprawna: w A przecinek stoi przed „czyli”, w B przed „jak i” w parze „zarówno…, jak i…”, a w C przecinek otwiera zdanie podrzędne („…języki, którymi posługiwali się bohaterowie jego powieści”)."
         }
@@ -717,7 +715,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-4.2"
+        "pl-46-II.4.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -765,8 +763,8 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-1.12",
-            "pl-78-1.5"
+            "pl-46-II.1.12",
+            "pl-78-II.1.5"
           ],
           "explanation": "Pierwsze wypowiedzenie składa się z trzech zdań składowych: „Bilbo także już zdążył poznać dobrze Thorina”, „i od razu zgadł” oraz „o co mu chodzi”, więc jest zdaniem wielokrotnie złożonym – stwierdzenie 1 jest prawdziwe (P). W drugim wypowiedzeniu podkreślony fragment „Kiedy hobbit wsuwał się przez zaczarowane drzwi do wnętrza Góry” zaczyna się od spójnika „kiedy” i jest zdaniem podrzędnym, a nie nadrzędnym, więc stwierdzenie 2 jest fałszywe (F). Poprawny kod odpowiedzi to PF."
         }
@@ -774,8 +772,8 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-1.12",
-        "pl-78-1.5"
+        "pl-46-II.1.12",
+        "pl-78-II.1.5"
       ],
       "ref": {
         "source": "arkusz",
@@ -789,7 +787,6 @@
       "maxPoints": 2,
       "instruction": "Uczniowie jednej z klas przygotowali gazetkę ścienną. Na tablicy umieścili ilustracje wybranych przedmiotów nawiązujących do lektur obowiązkowych.\n\n![Gazetka ścienna zatytułowana „PRZEDMIOT MA ZNACZENIE” z sześcioma przypiętymi ilustracjami przedmiotów oznaczonymi literami A–F: A – monety, B – dzbanek z malinami, C – kolekcja motyli w ramce, D – wianek z kwiatów, E – studnia, F – książka.](stimulus:pl-2024-12p-10-fig1)\n\n**Spośród ilustracji oznaczonych literami A–F wybierz jedną i podaj tytuł lektury obowiązkowej, do której ona nawiązuje. Wyjaśnij związek elementu graficznego przedstawionego na wybranej przez Ciebie ilustracji z losami wybranego bohatera tej lektury.**\n\n*Uwaga! Lista lektur obowiązkowych znajduje się na stronach 3 i 4 tego arkusza egzaminacyjnego.*\n\nWybieram ilustrację oznaczoną literą: …\n\nTytuł lektury obowiązkowej: …\n\nBohater lektury obowiązkowej: …\n\nWyjaśnienie: …",
       "stimulusIds": [
-        "pl-2024-12p-tekst-1",
         "pl-2024-12p-10-fig1"
       ],
       "items": [
@@ -833,7 +830,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-2.12"
+            "pl-46-I.2.12"
           ],
           "exemplars": [
             {
@@ -890,7 +887,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-2.12"
+        "pl-46-I.2.12"
       ],
       "ref": {
         "source": "arkusz",
@@ -945,9 +942,9 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-2.3",
+            "pl-46-I.2.3",
             "pl-gen-III",
-            "pl-78-2.2"
+            "pl-78-III.2.2"
           ],
           "exemplars": [
             {
@@ -983,9 +980,9 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-2.3",
+        "pl-46-I.2.3",
         "pl-gen-III",
-        "pl-78-2.2"
+        "pl-78-III.2.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -1038,7 +1035,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "W ostatnim akapicie tekstu Wojciecha Chudego pojawia się myśl, że „Ważne więc jest, aby nie przekraczać granic ciekawości”. To właśnie odpowiedź na pytanie, kiedy należy pohamować ciekawość, dlatego poprawna jest odpowiedź B. Pozostałe pytania dotyczą innych fragmentów tekstu lub informacji, których w ostatnim akapicie nie ma."
         }
@@ -1046,7 +1043,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -1094,7 +1091,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-2.2"
+            "pl-46-I.2.2"
           ],
           "explanation": "Aby rozwiązać zadanie, trzeba odnaleźć w tekście fragmenty odnoszące się do każdego stwierdzenia. Pierwsze stwierdzenie jest fałszywe (F), ponieważ z tekstu nie wynika, że dzieci przestają zadawać pytania z powodu utraty ciekawości świata – autor wskazuje inne przyczyny tego zjawiska. Drugie stwierdzenie jest prawdziwe (P), bo w tekście pojawia się myśl, że to właśnie ciekawość ludzi prowadziła do odkryć i rozwoju cywilizacji. Dlatego poprawny kod odpowiedzi to FP."
         }
@@ -1102,7 +1099,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-2.2"
+        "pl-46-I.2.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -1115,9 +1112,7 @@
       "number": 14,
       "maxPoints": 2,
       "instruction": "Przeczytaj bajkę Ignacego Krasickiego.\n\n> Ignacy Krasicki  \n> **JOWISZ¹ I OWCE**\n>\n> Naprzykrzały się bogom częstymi prośbami  \n> Owce, chcąc wiedzieć, co się stanie z jagniętami.  \n> Rzekł im Jowisz: «Lepiej to dla was, że nie wiecie.  \n> Ale kiedy koniecznie przyszłość dociec² chcecie,\n>\n> Godna kary ciekawość w uporze zacięta:  \n> I was ludzie wygubią, i wasze jagnięta».  \n> W ścisłym kręgu ciekawość naszą trzeba mieścić:  \n> Wie niebo, co nam taić; wie, co nam obwieścić.\n>\n> *Ignacy Krasicki, Jowisz i owce, [w:] tegoż: Bajki, Wrocław 1989.*\n\n¹ Jowisz – w miologii rzymskiej bóg nieba i ziemi.  \n² Dociec – dowiedzieć się czegoś, zbadać istotę jakiegoś zjawiska.",
-      "stimulusIds": [
-        "pl-2024-12p-tekst-2"
-      ],
+      "stimulusIds": [],
       "items": [
         {
           "id": "pl-2024-12p-14-1",
@@ -1156,8 +1151,8 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.3",
-            "pl-78-1.7"
+            "pl-46-I.1.3",
+            "pl-78-I.1.7"
           ],
           "explanation": "Morał bajki zawiera się w wersach: „W ścisłym kręgu ciekawość naszą trzeba mieścić: / Wie niebo, co nam taić; wie, co nam obwieścić”. Oznacza to, że zbytnia ciekawość może zostać ukarana (A), że w ciekawości trzeba zachować umiar (B) i że niektóre tajemnice powinny pozostać nieodkryte (C). Niezgodne z morałem jest zdanie D, ponieważ bajka przestrzega przed dążeniem do poznania wszystkiego: Jowisz przepowiada owcom, że za natarczywą ciekawość spotka je kara – ludzie wygubią je i ich jagnięta."
         },
@@ -1198,8 +1193,8 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.3",
-            "pl-78-1.7"
+            "pl-46-I.1.3",
+            "pl-78-I.1.7"
           ],
           "explanation": "Morał bajki mówi, że ciekawość trzeba mieścić w ścisłym kręgu, czyli nie przekraczać jej granic – nie wszystko powinno być odkryte i poznane. Podobną myśl wyraża piąty akapit tekstu Wojciecha Chudego, w którym autor zwraca uwagę, że ważne jest, aby nie przekraczać granic ciekawości. Wcześniejsze akapity mówią o ciekawości jako podstawie nauki i filozofii oraz o świecie i ludziach jako naturalnym środowisku człowieka, więc poprawna jest odpowiedź D."
         }
@@ -1207,8 +1202,8 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-1.3",
-        "pl-78-1.7"
+        "pl-46-I.1.3",
+        "pl-78-I.1.7"
       ],
       "ref": {
         "source": "arkusz",
@@ -1266,8 +1261,8 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-1.1",
-            "pl-46-1.8"
+            "pl-46-II.1.1",
+            "pl-46-II.1.8"
           ],
           "explanation": "Podkreślony wyraz „pozytywnie” odpowiada na pytanie „jak?” i określa czasownik „oceniamy”, dlatego jest przysłówkiem. W zdaniu przysłówek ten pełni funkcję okolicznika sposobu. Poprawna odpowiedź to B oraz D."
         }
@@ -1275,8 +1270,8 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-1.1",
-        "pl-46-1.8"
+        "pl-46-II.1.1",
+        "pl-46-II.1.8"
       ],
       "ref": {
         "source": "arkusz",
@@ -1290,7 +1285,6 @@
       "maxPoints": 2,
       "instruction": "Albert Einstein – wybitny fizyk – powiedział:\n\n> *Nie mam żadnych szczególnych uzdolnień. Cechuje mnie tylko niepohamowana ciekawość.*\n\n![Portret Alberta Einsteina wraz z notą biograficzną: „Albert Einstein (1879–1955) Fizyk teoretyk, twórca teorii względności.”](stimulus:pl-2024-12p-16-fig1)\n\n**Uzupełnij poniższe zdanie.**\n\nPartykuła „nie” została zapisana najpierw rozłącznie, ponieważ ………………………………………… …………………………………………, a następnie – łącznie, gdyż ………………………………………… ………………………………………… .",
       "stimulusIds": [
-        "pl-2024-12p-tekst-2",
         "pl-2024-12p-16-fig1"
       ],
       "items": [
@@ -1332,7 +1326,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-4.1"
+            "pl-46-II.4.1"
           ],
           "exemplars": [
             {
@@ -1376,7 +1370,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-4.1"
+        "pl-46-II.4.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -1390,7 +1384,6 @@
       "maxPoints": 3,
       "instruction": "**Zredaguj zaproszenie na spotkanie pod hasłem: _Wynalazki, które zawdzięczamy ludzkiej ciekawości_. Zachęć do udziału w tym wydarzeniu. Użyj dwóch argumentów, z których przynajmniej jeden będzie nawiązywał do tematyki spotkania.**\n**Uwaga: w ocenie wypowiedzi będzie brana pod uwagę poprawność językowa, ortograficzna i interpunkcyjna.**\n\n![Czerwona grafika ozdobna z ikonami wynalazków (lornetka, telefon, teleskop, postać) w lewym górnym rogu ramki zaproszenia.](stimulus:pl-2024-12p-17-fig1)\n\n***Zaproszenie***",
       "stimulusIds": [
-        "pl-2024-12p-tekst-2",
         "pl-2024-12p-17-fig1"
       ],
       "items": [
@@ -1413,9 +1406,9 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-4",
+            "pl-46-II.4",
             "pl-gen-III",
-            "pl-46-2"
+            "pl-46-III.2"
           ],
           "exemplars": [
             {
@@ -1437,9 +1430,9 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-4",
+        "pl-46-II.4",
         "pl-gen-III",
-        "pl-46-2"
+        "pl-46-III.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -1490,15 +1483,15 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-1.7",
+            "pl-78-I.1.7",
             "pl-gen-II",
-            "pl-46-4.1",
-            "pl-78-3.2",
+            "pl-46-II.4.1",
+            "pl-78-II.3.2",
             "pl-gen-III",
-            "pl-78-1.1",
-            "pl-78-2.1",
-            "pl-46-2.1",
-            "pl-78-1.2"
+            "pl-78-III.1.1",
+            "pl-78-III.2.1",
+            "pl-46-III.2.1",
+            "pl-78-III.1.2"
           ],
           "scoringNotes": [
             "1. Jeżeli wypowiedź w całości jest nie na temat, egzaminator oceni ją na 0 punktów. Nie sprawdza i nie zaznacza żadnych błędów w pracy. Egzaminator umieszcza dopisek – „Praca nie na temat”.",
@@ -1534,15 +1527,15 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-1.7",
+        "pl-78-I.1.7",
         "pl-gen-II",
-        "pl-46-4.1",
-        "pl-78-3.2",
+        "pl-46-II.4.1",
+        "pl-78-II.3.2",
         "pl-gen-III",
-        "pl-78-1.1",
-        "pl-78-2.1",
-        "pl-46-2.1",
-        "pl-78-1.2"
+        "pl-78-III.1.1",
+        "pl-78-III.2.1",
+        "pl-46-III.2.1",
+        "pl-78-III.1.2"
       ],
       "ref": {
         "source": "arkusz",

@@ -78,8 +78,8 @@ export function ListeningPlayer({ sessionId, stimulus, available }: { sessionId:
           setPos(Math.min(t, seg.endSec));
         }}
       />
-      <button className="btn primary" onClick={() => void toggle()} data-testid="listen-toggle" aria-label={playing ? "Zatrzymaj nagranie" : "Odtwórz nagranie"}>
-        {playing ? "❚❚ Pauza" : pos > seg.startSec + 0.5 && pos < seg.endSec - 0.5 ? "▶ Wznów" : "▶ Odtwórz"}
+      <button className="btn primary" onClick={() => void toggle()} data-testid="listen-toggle">
+        <span aria-hidden="true">{playing ? "❚❚" : "▶"}</span> {playing ? "Pauza" : pos > seg.startSec + 0.5 && pos < seg.endSec - 0.5 ? "Wznów" : "Odtwórz"}
       </button>
       <button className="btn ghost !px-2.5" onClick={() => seek(pos - 5)} aria-label="Cofnij o 5 sekund" title="Cofnij o 5 s" data-testid="listen-back">
         −5 s
@@ -96,6 +96,7 @@ export function ListeningPlayer({ sessionId, stimulus, available }: { sessionId:
         value={pos - seg.startSec}
         onChange={(e) => seek(seg.startSec + Number(e.target.value))}
         aria-label="Pozycja w nagraniu"
+        aria-valuetext={`${fmt(pos - seg.startSec)} z ${fmt(length)}`}
       />
       <span className="tabular text-sm text-muted">
         {fmt(pos - seg.startSec)} / {fmt(length)}

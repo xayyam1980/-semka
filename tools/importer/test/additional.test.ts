@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { classify, fromCkeName } from "../src/discover.ts";
 import type { PdfPage } from "../src/pdf.ts";
 import { segment } from "../src/segment.ts";
-import { taskId } from "../src/assemble.ts";
+import { tagsFor, taskId } from "../src/assemble.ts";
 
 const page = (n: number, lines: string[]): PdfPage => ({ page: n, width: 595, height: 842, lines: lines.map((text, i) => ({ text, x: 50, y: 90 + i * 20 })) }) as PdfPage; // first line near the top, as on real sheets
 
@@ -52,5 +52,14 @@ describe("Additional/ papers (supplementary and mock exams)", () => {
     expect(taskId("matematyka", 2026, 7, 5, "glowny")).toBe("ma-2026-07");
     expect(taskId("matematyka", 2026, 7, 6, "dodatkowy")).toBe("ma-2026-06d-07");
     expect(taskId("polski", 2024, 3, 12, "probny")).toBe("pl-2024-12p-03");
+  });
+
+  it("keeps Polish section tags apart across general requirements", () => {
+    const ids = (general: string, section: string) =>
+      tagsFor("polski", { general, section, specific: "4) przykład", stage: "VII–VIII" } as never).map((t) => t.id);
+    expect(ids("I. Kształcenie literackie i kulturowe.", "1. Czytanie utworów literackich.")).toContain("pl-78-I.1.4");
+    expect(ids("II. Kształcenie językowe.", "1. Gramatyka języka polskiego.")).toContain("pl-78-II.1.4");
+    expect(ids("III. Tworzenie wypowiedzi.", "1. Elementy retoryki.")).toContain("pl-78-III.1.4");
+    expect(tagsFor("matematyka", { general: "II. Wykorzystanie i interpretowanie reprezentacji.", section: "XII. Obliczenia praktyczne.", specific: "4) x", stage: "VII–VIII" } as never).map((t) => t.id)).toContain("ma-78-XII.4");
   });
 });

@@ -74,8 +74,12 @@ export function tagsFor(subjectId: SubjectId, req: DraftItem["requirements"][num
   const num = req.specific ? /^\s*(\d+)\)/.exec(req.specific)?.[1] : undefined;
   if (section) {
     const stage = req.stage ? `${STAGE_CODE[req.stage]}-` : "";
+    // Polish sections are numbered 1, 2, … again inside each general requirement (I.1 Czytanie utworów literackich,
+    // II.1 Gramatyka, III.1 Elementy retoryki), so their ids carry the general requirement too. Math sections are
+    // Roman numerals, unique on their own.
+    const within = /^\d+$/.test(section.roman) && general ? `${general.roman}.` : "";
     tags.push({
-      id: num ? `${p}-${stage}${section.roman}.${num}` : `${p}-${stage}${section.roman}`,
+      id: num ? `${p}-${stage}${within}${section.roman}.${num}` : `${p}-${stage}${within}${section.roman}`,
       subjectId,
       general: req.general.trim(),
       specific: [req.section?.trim(), req.specific?.trim()].filter(Boolean).join(" "),

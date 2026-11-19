@@ -2,13 +2,13 @@
 import type { PublicStimulus } from "../../../shared/ipc";
 import { Rich, type RichContext } from "./Rich";
 
-export function ReadingPane({ text, ctx }: { text: PublicStimulus; ctx: RichContext }) {
+export function ReadingPane({ text, ctx, lang }: { text: PublicStimulus; ctx: RichContext; lang?: string | undefined }) {
   const lines = text.lines ?? [];
   const poem = text.kind === "poem";
   const numbered = text.lineNumbering === "every" || text.lineNumbering === "every5";
   let verse = 0;
   return (
-    <article className="reading-pane" aria-label={`Tekst: ${text.title ?? "tekst do zadań"}`} data-testid="reading-pane">
+    <article className="reading-pane" lang={lang} aria-label={`Tekst: ${text.title ?? "tekst do zadań"}`} data-testid="reading-pane">
       {text.author && <p className="reading-author">{text.author}</p>}
       {text.title && <h2 className="reading-title">{text.title}</h2>}
       <div className={poem ? "reading-poem" : "reading-prose"}>
@@ -34,7 +34,7 @@ export function ReadingPane({ text, ctx }: { text: PublicStimulus; ctx: RichCont
           ))}
         </ol>
       )}
-      {text.wordCount && <p className="reading-count tabular">[{text.wordCount} wyrazów]</p>}
+      {text.wordCount && <p className="reading-count tabular" lang={lang ? "pl" : undefined}>[{text.wordCount} wyrazów]</p>}
     </article>
   );
 }

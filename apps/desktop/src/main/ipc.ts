@@ -3,9 +3,9 @@ import { writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { app, BrowserWindow, dialog, ipcMain } from "electron";
 import { SUBJECTS, type StudentSettings, type SubjectId } from "@osemka/schema";
-import { IPC, type AppInfo, type Scope } from "../shared/ipc";
+import { IPC, mixSessionId, type AppInfo, type Scope } from "../shared/ipc";
 import type { AiService } from "./ai";
-import { overview, practicePlan, subjectAnalysis } from "./analytics";
+import { mixedPlan, overview, practicePlan, subjectAnalysis, type MixOptions } from "./analytics";
 import { clearHistory, exportCsv, exportJson } from "./data";
 import { dueGroups, reviewState, reviewSummary } from "./review";
 import type { AttemptService } from "./attempts";
@@ -22,7 +22,9 @@ function scope(v: unknown): Scope {
   if (v === "all" || v === "closed" || v === "open") return v;
   if (v && typeof v === "object" && Array.isArray((v as { taskIds?: unknown }).taskIds)) {
     const ids = (v as { taskIds: unknown[] }).taskIds;
-    if (ids.every((x) => typeof x === "string") && ids.length > 0 && ids.length <= 100) return { taskIds: ids as string[] };
+    const label = (v as { label?: unknown }).label;
+    if (ids.every((x) => typeof x === "string") && ids.length > 0 && ids.length <= 100)
+      return { taskIds: ids as string[], ...(typeof label === "string" && label.length <= 80 ? { label } : {}) };
   }
   throw new Error("Invalid scope");
 }
@@ -49,7 +51,7 @@ export function registerIpc(ctx: { db: Db; dbFile: string; runs: number; content
     return next;
   });
 
-  ipcMain.handle(IPC.listSessions, () => content.list());
+  ipcMain.handle(IPC.listSessions, () => [...content.list(), ...content.mixes()]);
   ipcMain.handle(IPC.getSession, (_e, id: unknown) => content.publicSession(str(id, "session id")) ?? null);
   ipcMain.handle(IPC.getRecording, (_e, id: unknown) => {
     const sessionId = str(id, "session id");
@@ -102,7 +104,7 @@ export function registerIpc(ctx: { db: Db; dbFile: string; runs: number; content
   ipcMain.handle(IPC.practiceReview, (_e, sessionId: unknown) => {
     const id = str(sessionId, "session id");
     const group = dueGroups(reviewState(at.facts(), reviewable), Date.now()).find((g) => g.sessionId === id);
-    return group ? at.startPractice(id, { taskIds: group.taskIds }).summary.id : null;
+    return group ? at.startPractice(id, { taskIds: group.taskIds, label: "powtórka błędów" }).summary.id : null;
   });
   ipcMain.handle(IPC.analyticsOverview, () => overview(at.facts(), Date.now()));
   ipcMain.handle(IPC.analyticsSubject, (_e, subjectId: unknown, opts: unknown) => {
@@ -111,10 +113,25 @@ export function registerIpc(ctx: { db: Db; dbFile: string; runs: number; content
     const mode = o.mode === "nauka" || o.mode === "symulacja" ? o.mode : "oba";
     return subjectAnalysis(at.facts(), subjectOf(subjectId), { days, mode }, Date.now());
   });
+  // Practising one area draws from every sheet of the subject, weakest and untried tasks first.
+  const startMixed = (subjectId: SubjectId, opts: MixOptions): string | null => {
+    const mix = content.get(mixSessionId(subjectId));
+    const taskIds = mix ? mixedPlan(mix, at.facts(), opts, at.areaOfItem) : [];
+    return mix && taskIds.length ? at.startPractice(mix.session.id, { taskIds, ...(opts.area ? { label: opts.area } : {}) }).summary.id : null;
+  };
   ipcMain.handle(IPC.practiceArea, (_e, subjectId: unknown, area: unknown) => {
-    const bundles = content.list().map((s) => content.get(s.id)!);
-    const plan = practicePlan(bundles, at.facts(), subjectOf(subjectId), str(area, "area"), at.areaOfItem);
-    return plan ? at.startPractice(plan.sessionId, { taskIds: plan.taskIds }).summary.id : null;
+    const subject = subjectOf(subjectId), name = str(area, "area");
+    const mixed = startMixed(subject, { count: 8, kind: "all", area: name });
+    if (mixed) return mixed;
+    // Listening is not in the mixed sheet (each task plays from its own sheet's recording): practise it on one sheet.
+    const plan = practicePlan(content.list().map((s) => content.get(s.id)!), at.facts(), subject, name, at.areaOfItem);
+    return plan ? at.startPractice(plan.sessionId, { taskIds: plan.taskIds, label: name }).summary.id : null;
+  });
+  ipcMain.handle(IPC.startMixedPractice, (_e, subjectId: unknown, opts: unknown) => {
+    const o = (opts ?? {}) as { count?: unknown; kind?: unknown };
+    const count = typeof o.count === "number" && o.count >= 1 && o.count <= 30 ? Math.round(o.count) : 10;
+    const kind = o.kind === "closed" || o.kind === "open" ? o.kind : "all";
+    return startMixed(subjectOf(subjectId), { count, kind });
   });
   ipcMain.handle(IPC.listAttempts, (_e, sessionId: unknown) => at.list(sessionId === undefined ? undefined : str(sessionId, "session id")));
   ipcMain.handle(IPC.startPractice, (_e, sessionId: unknown, s: unknown) => at.startPractice(str(sessionId, "session id"), scope(s)));

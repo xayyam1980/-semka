@@ -1,6 +1,6 @@
 {
   "sessionId": "polski-2026-01-probny",
-  "at": "2026-11-19T18:01:10.277Z",
+  "at": "2026-11-19T19:22:13.377Z",
   "model": "qwen · qwen3.8-max · token-plan.maas.qwencloudapi.com",
   "segmentation": {
     "sheetTasks": 20,
@@ -360,5 +360,5 @@
     "input": 0,
     "output": 0
   },
-  "approvedAt": "2026-11-19T18:05:10.267Z"
+  "approvedAt": "2026-11-19T19:22:50.628Z"
 }

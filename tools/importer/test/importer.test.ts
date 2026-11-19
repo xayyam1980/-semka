@@ -168,7 +168,7 @@ describe("skill tags", () => {
 describe("Polish requirement sections", () => {
   it("accept Arabic-numbered sections", () => {
     const t = tagsFor("polski", { stage: "VII–VIII", general: "I. Kształcenie literackie i kulturowe.", section: "2. Odbiór tekstów kultury. Uczeń:", specific: "1) wyszukuje w tekście potrzebne informacje [...]." });
-    expect(t.map((x) => [x.id, x.area])).toEqual([["pl-gen-I", "Kształcenie literackie i kulturowe"], ["pl-78-2.1", "Odbiór tekstów kultury"]]);
+    expect(t.map((x) => [x.id, x.area])).toEqual([["pl-gen-I", "Kształcenie literackie i kulturowe"], ["pl-78-I.2.1", "Odbiór tekstów kultury"]]);
   });
 });
 

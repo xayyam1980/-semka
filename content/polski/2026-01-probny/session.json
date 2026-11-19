@@ -47,7 +47,7 @@
         "pages": 24
       }
     ],
-    "contentVersion": "26c7fb137f455c12",
+    "contentVersion": "6ba2b6ce5382e9ad",
     "status": "published"
   },
   "stimuli": [
@@ -202,7 +202,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "Pierwsze stwierdzenie jest fałszywe: z fragmentu wynika, że dopiero w toku rozmowy uczestnicy zaczęli dociekać znaczenia listu i traktować go poważnie, a nie wszyscy interesowali się nim od początku. Drugie stwierdzenie jest prawdziwe: profesor odczytał na głos zaszyfrowaną wiadomość „Strzeżcie DOMU”, powstałą z pierwszych liter wierszy czytanych z góry ku dołowi. Dlatego poprawne oznaczenia to F przy pierwszym stwierdzeniu i P przy drugim."
         }
@@ -210,7 +210,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -263,7 +263,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "Poprawna jest odpowiedź D, ponieważ w fragmencie utworu Kornela Makuszyńskiego list napisany przez Adasia został odczytany kilkakrotnie i tylko ta informacja zgadza się z tekstem. Pozostałe odpowiedzi (A, B, C) opisują wydarzenia, których nie ma w przytoczonym fragmencie albo które przedstawiono inaczej niż w utworze."
         }
@@ -271,7 +271,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -320,7 +320,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.9"
+            "pl-46-I.1.9"
           ],
           "exemplars": [
             {
@@ -345,7 +345,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-1.9"
+        "pl-46-I.1.9"
       ],
       "ref": {
         "source": "arkusz",
@@ -393,7 +393,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "Pierwsze stwierdzenie jest prawdziwe (P), ponieważ w przytoczonym fragmencie brat profesora Gąsowskiego reaguje na list Adasia na różne sposoby. Drugie stwierdzenie jest fałszywe (F), bo to nie brat profesora zauważył w liście błąd w nazwie miejscowości. Dlatego odpowiedzi dla kolejnych stwierdzeń to P i F, czyli kod PF."
         }
@@ -401,7 +401,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -459,7 +459,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-2.4"
+            "pl-46-II.2.4"
           ],
           "explanation": "Sformułowanie „Wiatr hula po młodej głowie” nie mówi o prawdziwym wietrze, więc zostało użyte w znaczeniu przenośnym: oznacza, że młoda osoba bywa zapominalska i nieuważna. Brat profesora Gąsowskiego chciał przez nie powiedzieć, że młodzi ludzie łatwo zapominają i się rozpraszają, czyli zwrócić uwagę na ich roztargnienie. Dlatego właściwe odpowiedzi to B oraz C."
         }
@@ -467,7 +467,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-2.4"
+        "pl-46-II.2.4"
       ],
       "ref": {
         "source": "arkusz",
@@ -520,7 +520,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-2.5"
+            "pl-46-II.2.5"
           ],
           "explanation": "Adaś, choć był uwięziony przez złodziei, znalazł sprytny sposób, by ukryć w liście ostrzeżenie dla rodziny Gąsowskich. Związek frazeologiczny „mieć głowę nie od parady” oznacza być mądrym, zaradnym i pomysłowym, więc dobrze opisuje takie zachowanie chłopca – poprawna jest odpowiedź B. Pozostałe związki znaczą co innego i do Adasia nie pasują: „chować głowę w piasek” to unikać problemów, „mieć przewrócone w głowie” to zadzierać nosa, a „chodzić z głową w chmurach” to bujać w obłokach."
         }
@@ -528,7 +528,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-2.5"
+        "pl-46-II.2.5"
       ],
       "ref": {
         "source": "arkusz",
@@ -578,9 +578,9 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.9",
+            "pl-46-I.1.9",
             "pl-gen-III",
-            "pl-78-1.4"
+            "pl-78-III.1.4"
           ],
           "exemplars": [
             {
@@ -640,9 +640,9 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.9",
+            "pl-46-I.1.9",
             "pl-gen-III",
-            "pl-78-1.4"
+            "pl-78-III.1.4"
           ],
           "exemplars": [
             {
@@ -681,9 +681,9 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-1.9",
+        "pl-46-I.1.9",
         "pl-gen-III",
-        "pl-78-1.4"
+        "pl-78-III.1.4"
       ],
       "ref": {
         "source": "arkusz",
@@ -741,7 +741,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-1.1"
+            "pl-46-II.1.1"
           ],
           "explanation": "Podkreślony wyraz „a” łączy dwa przeciwstawne zdania: „To serdeczne chłopczysko” i „list jest niemalże oschły”, jest więc spójnikiem (odpowiedź B), a nie zaimkiem. Sens przeciwstawienia zachowuje także spójnik „natomiast” (odpowiedź D). Słowo „dlatego” wprowadziłoby związek przyczynowy i zmieniłoby sens wypowiedzi profesora."
         }
@@ -749,7 +749,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-1.1"
+        "pl-46-II.1.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -802,7 +802,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-2.9"
+            "pl-46-II.2.9"
           ],
           "explanation": "Wyraz „przeto” oznacza „więc, zatem, toteż” – wprowadza wniosek wynikający z poprzedniego zdania. Wyrazy więc, toteż i zatem mają takie samo znaczenie, więc po podstawieniu ich sens wypowiedzenia się nie zmienia. Wyraz chociaż wprowadza treść przeciwstawną (ustępstwo), a nie wniosek, dlatego zmienia sens przytoczonego wypowiedzenia. Poprawna jest odpowiedź D."
         }
@@ -810,7 +810,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-2.9"
+        "pl-46-II.2.9"
       ],
       "ref": {
         "source": "arkusz",
@@ -860,14 +860,14 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-4.2"
+            "pl-46-II.4.2"
           ]
         }
       ],
       "format": "otwarte",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-4.2"
+        "pl-46-II.4.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -880,9 +880,7 @@
       "number": 11,
       "maxPoints": 2,
       "instruction": "Przeczytaj poniższy fragment tekstu.\n\n> Taż sama twarz – ta sama. Marley z długim harcapem, w zwykłej kamizelce, w codziennych krótkich spodniach, w butach węgierskich, w zaplamionym surducie. Długi łańcuch, przytwierdzony u bioder, okręcał go kilkakrotnie i tworzył rodzaj ogona, składającego się z dziwacznej mieszaniny skutych razem ryglów, kłódek, kluczy, ksiąg buchalteryjnych, opatrzonych mosiężnymi klamrami, i z ciężkich brudnych worków. […]\n>\n> – Dziś przyszedłem cię ostrzec.",
-      "stimulusIds": [
-        "pl-2026-01p-tekst-1"
-      ],
+      "stimulusIds": [],
       "items": [
         {
           "id": "pl-2026-01p-11-1",
@@ -917,7 +915,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.7"
+            "pl-46-I.1.7"
           ]
         },
         {
@@ -953,7 +951,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.7"
+            "pl-46-I.1.7"
           ],
           "exemplars": [
             {
@@ -978,7 +976,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-1.7"
+        "pl-46-I.1.7"
       ],
       "ref": {
         "source": "arkusz",
@@ -1033,9 +1031,9 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-2.3",
+            "pl-46-I.2.3",
             "pl-gen-III",
-            "pl-78-2.2"
+            "pl-78-III.2.2"
           ],
           "exemplars": [
             {
@@ -1071,9 +1069,9 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-2.3",
+        "pl-46-I.2.3",
         "pl-gen-III",
-        "pl-78-2.2"
+        "pl-78-III.2.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -1121,7 +1119,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "Oba stwierdzenia są prawdziwe. Autorka tekstu pisze, że śmiech wpływa na nas pozytywnie, choć często tego nie doceniamy, czyli nie dostrzegamy wartości śmiechu. W zakończeniu tekstu stwierdza też, że każdy powinien uświadomić sobie, co go bawi, i szukać okazji, aby się pośmiać – dlatego warto wiedzieć, co może nas rozśmieszyć."
         }
@@ -1129,7 +1127,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -1182,7 +1180,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "W 2. akapicie autorka opowiada historię Normana Cousinsa, który dzięki oglądaniu komedii wyleczył się z ciężkiej choroby stawów. To właśnie odpowiedź na pytanie, komu pomogła terapia śmiechem. O klaunoterapii pisze dopiero 3. akapit, a o jodze śmiechu i relacjach z ludźmi – 4. akapit."
         }
@@ -1190,7 +1188,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -1243,7 +1241,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "W 4. akapicie autorka pisze, że śmiech ułatwia komunikację z innymi, bo kiedy jest wesoło, łatwiej się porozumieć. Dotlenienie organizmu i większa odporność są omówione w akapicie 3., a łagodzenie skutków choroby – w akapitach 2. i 3."
         }
@@ -1251,7 +1249,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -1265,7 +1263,6 @@
       "maxPoints": 1,
       "instruction": "**Spośród lektur zaprezentowanych poniżej wybierz tę, w której znajdziesz przykłady komizmu. Przywołaj z wybranej przez siebie lektury sytuację, która mogłaby rozśmieszyć czytelników i napisz, na czym polega komizm tej sytuacji.**\n\n![Dwie okładki lektur: „Zemsta” Aleksandra Fredry (skrzyżowane szable i zamek) oraz „Artysta” Sławomira Mrożka (cyrkowy namiot, lis i kogut)](stimulus:pl-2026-01p-16-fig1)\n\nTytuł lektury: ………………………………………………\n\nSytuacja: ………………………………………………………………………………………..………",
       "stimulusIds": [
-        "pl-2026-01p-tekst-2",
         "pl-2026-01p-16-fig1"
       ],
       "items": [
@@ -1301,9 +1298,9 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-1.5",
+            "pl-78-I.1.5",
             "pl-gen-III",
-            "pl-78-1.4"
+            "pl-78-III.1.4"
           ],
           "exemplars": [
             {
@@ -1336,9 +1333,9 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-1.5",
+        "pl-78-I.1.5",
         "pl-gen-III",
-        "pl-78-1.4"
+        "pl-78-III.1.4"
       ],
       "ref": {
         "source": "arkusz",
@@ -1396,7 +1393,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-1.11"
+            "pl-46-II.1.11"
           ],
           "explanation": "„Sprawdźcie!” to polecenie skierowane do wielu osób, więc czasownik jest w trybie rozkazującym. Autorka zwraca się tak do czytelników, żeby zachęcić ich do skorzystania z jej zaleceń o śmiechu, a nie żeby ich przed czymś ostrzegać."
         }
@@ -1404,7 +1401,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-1.11"
+        "pl-46-II.1.11"
       ],
       "ref": {
         "source": "arkusz",
@@ -1417,9 +1414,7 @@
       "number": 18,
       "maxPoints": 1,
       "instruction": "**Ułóż dwa zdania z wyrazem *staw*, za pomocą których udowodnisz, że wyraz ten jest homonimem.**\n\nZdanie 1. ……………………………………………………………………….……………………………….\n\nZdanie 2. ………………………………………………………………………………………………………..",
-      "stimulusIds": [
-        "pl-2026-01p-tekst-2"
-      ],
+      "stimulusIds": [],
       "items": [
         {
           "id": "pl-2026-01p-18",
@@ -1453,7 +1448,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-78-1.4"
+            "pl-78-II.1.4"
           ],
           "exemplars": [
             {
@@ -1470,7 +1465,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-II",
-        "pl-78-1.4"
+        "pl-78-II.1.4"
       ],
       "ref": {
         "source": "arkusz",
@@ -1483,9 +1478,7 @@
       "number": 19,
       "maxPoints": 3,
       "instruction": "**Zredaguj zaproszenie na wykład pod hasłem *Śmiech to zdrowie!*. Zachęć do uczestnictwa w tym wykładzie, używając dwóch argumentów, z których co najmniej jeden będzie dotyczył tematyki wykładu.**\n**Uwaga: w ocenie wypowiedzi będzie brana pod uwagę poprawność językowa, ortograficzna i interpunkcyjna.**",
-      "stimulusIds": [
-        "pl-2026-01p-tekst-2"
-      ],
+      "stimulusIds": [],
       "items": [
         {
           "id": "pl-2026-01p-19",
@@ -1506,9 +1499,9 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-4.1",
+            "pl-46-II.4.1",
             "pl-gen-III",
-            "pl-46-2.1"
+            "pl-46-III.2.1"
           ],
           "exemplars": [
             {
@@ -1530,9 +1523,9 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-4.1",
+        "pl-46-II.4.1",
         "pl-gen-III",
-        "pl-46-2.1"
+        "pl-46-III.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -1583,14 +1576,14 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-1.7",
+            "pl-78-I.1.7",
             "pl-gen-II",
-            "pl-46-4.1",
-            "pl-78-3.2",
+            "pl-46-II.4.1",
+            "pl-78-II.3.2",
             "pl-gen-III",
-            "pl-78-1.1",
-            "pl-78-2.1",
-            "pl-46-2.1"
+            "pl-78-III.1.1",
+            "pl-78-III.2.1",
+            "pl-46-III.2.1"
           ],
           "scoringNotes": [
             "Jeżeli wypowiedź w całości jest nie na temat, egzaminator oceni ją na 0 punktów. Nie sprawdza i nie zaznacza żadnych błędów w pracy. Egzaminator umieszcza dopisek – „Praca nie na temat”.",
@@ -1613,14 +1606,14 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-1.7",
+        "pl-78-I.1.7",
         "pl-gen-II",
-        "pl-46-4.1",
-        "pl-78-3.2",
+        "pl-46-II.4.1",
+        "pl-78-II.3.2",
         "pl-gen-III",
-        "pl-78-1.1",
-        "pl-78-2.1",
-        "pl-46-2.1"
+        "pl-78-III.1.1",
+        "pl-78-III.2.1",
+        "pl-46-III.2.1"
       ],
       "ref": {
         "source": "arkusz",

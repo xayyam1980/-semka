@@ -985,174 +985,31 @@
     "area": "Zadania tekstowe"
   },
   {
-    "id": "pl-1.1",
-    "subjectId": "polski",
-    "general": "III. Tworzenie wypowiedzi. 1. Rozwijanie umiejętności wypowiadania się w określonych formach wypowiedzi pisemnych. 3. Rozwijanie umiejętności stosowania środków stylistycznych, dbałości o estetykę tekstu oraz umiejętności organizacji tekstu. 4. Poznawanie podstawowych zasad retoryki, w szczególności argumentowania […].",
-    "specific": "1. Elementy retoryki. 1) funkcjonalnie wykorzystuje środki retoryczne oraz rozumie ich oddziaływanie na odbiorcę; 2) gromadzi i porządkuje materiał rzeczowy potrzebny do tworzenia wypowiedzi [...]; 3) tworzy wypowiedź, stosując odpowiednią dla danej formy gatunkowej kompozycję oraz zasady spójności językowej między akapitami; rozumie rolę akapitów jako spójnych całości myślowych w tworzeniu wypowiedzi pisemnych oraz stosuje rytm akapitowy (przeplatanie akapitów dłuższych i krótszych); 4) wykorzystuje znajomość zasad tworzenia tezy i hipotezy oraz argumentów przy tworzeniu rozprawki [...]; 5) odróżnia przykład od argumentu; 6) przeprowadza wnioskowanie jako element wywodu argumentacyjnego; 7) zgadza się z cudzymi poglądami lub polemizuje z nimi, rzeczowo uzasadniając własne zdanie.",
-    "area": "Elementy retoryki"
-  },
-  {
-    "id": "pl-1.10",
-    "subjectId": "polski",
-    "general": "II. Kształcenie językowe. 3. Poznawanie podstawowych pojęć oraz terminów służących do opisywania języka [...].",
-    "specific": "1. Gramatyka języka polskiego. Uczeń: 10) rozpoznaje w tekście zdania [...] złożone ([...] podrzędnie) [...].",
-    "area": "Gramatyka języka polskiego"
-  },
-  {
-    "id": "pl-1.15",
-    "subjectId": "polski",
-    "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia utworów literackich [...]. 2. Znajomość wybranych utworów z literatury polskiej i światowej [...]. 3. Kształtowanie umiejętności uczestniczenia w kulturze polskiej i europejskiej [...].",
-    "specific": "1. Czytanie utworów literackich. 15) określa w poznawanych tekstach problematykę egzystencjalną i poddaje ją refleksji; 18) wykorzystuje w interpretacji utworów literackich odwołania do wartości uniwersalnych związane z postawami społecznymi, narodowymi, religijnymi, etycznymi [...]; 20) wykorzystuje w interpretacji utworów literackich potrzebne konteksty [...]. Zna lektury obowiązkowe.",
-    "area": "Czytanie utworów literackich"
-  },
-  {
-    "id": "pl-1.18",
-    "subjectId": "polski",
-    "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia utworów literackich [...]. 2. Znajomość wybranych utworów z literatury polskiej i światowej […].",
-    "specific": "1. Czytanie utworów literackich. 18) wykorzystuje w interpretacji utworów literackich odwołania do wartości uniwersalnych związane z postawami społecznymi, narodowymi, religijnymi, etycznymi [...]. Lektury obowiązkowe.",
-    "area": "Czytanie utworów literackich"
-  },
-  {
-    "id": "pl-1.2",
-    "subjectId": "polski",
-    "general": "III. Tworzenie wypowiedzi. 1. Rozwijanie umiejętności wypowiadania się w określonych formach wypowiedzi pisemnych. 3. Rozwijanie umiejętności stosowania środków stylistycznych, dbałości o estetykę tekstu oraz umiejętności organizacji tekstu.",
-    "specific": "1. Elementy retoryki. 2) gromadzi i porządkuje materiał rzeczowy potrzebny do tworzenia wypowiedzi [...]; 3) tworzy wypowiedź, stosując odpowiednią dla danej formy gatunkowej kompozycję oraz zasady spójności językowej między akapitami; rozumie rolę akapitów jako spójnych całości myślowych w tworzeniu wypowiedzi pisemnych oraz stosuje rytm akapitowy (przeplatanie akapitów dłuższych i krótszych).",
-    "area": "Elementy retoryki"
-  },
-  {
-    "id": "pl-1.7",
-    "subjectId": "polski",
-    "general": "II. Kształcenie językowe. 2. Rozwijanie rozumienia twórczego i sprawczego charakteru działań językowych [...].",
-    "specific": "1. Gramatyka języka polskiego. Uczeń: 7) […] w wyrazie pochodnym wskazuje [...] formant […].",
-    "area": "Gramatyka języka polskiego"
-  },
-  {
-    "id": "pl-2.1",
-    "subjectId": "polski",
-    "general": "III. Tworzenie wypowiedzi. 1. Rozwijanie umiejętności wypowiadania się w określonych formach wypowiedzi pisemnych. 3. Rozwijanie umiejętności stosowania środków stylistycznych, dbałości o estetykę tekstu oraz umiejętności organizacji tekstu.",
-    "specific": "2. Mówienie i pisanie. 1) tworzy spójne wypowiedzi w następujących formach gatunkowych: [...] opowiadanie [...].",
-    "area": "Mówienie i pisanie"
-  },
-  {
-    "id": "pl-2.11",
-    "subjectId": "polski",
-    "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia […] innych tekstów kultury. 2. Znajomość wybranych utworów z literatury polskiej […].",
-    "specific": "2. Odbiór tekstów kultury. 11) interpretuje dzieła sztuki […]. Lektura obowiązkowa: Henryk Sienkiewicz, *Quo vadis*.",
-    "area": "Odbiór tekstów kultury"
-  },
-  {
-    "id": "pl-2.18",
-    "subjectId": "polski",
-    "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia utworów literackich […]. 2. Znajomość wybranych utworów z literatury polskiej i światowej.",
-    "specific": "2. Odbiór tekstów kultury. Uczeń: 18) wykorzystuje w interpretacji utworów literackich odwołania do wartości uniwersalnych [...].",
-    "area": "Odbiór tekstów kultury"
-  },
-  {
-    "id": "pl-2.2",
-    "subjectId": "polski",
-    "general": "III. Tworzenie wypowiedzi. 1. Rozwijanie umiejętności wypowiadania się w określonych formach wypowiedzi pisemnych.",
-    "specific": "2. Mówienie i pisanie. 2) tworzy spójne wypowiedzi w następujących formach gatunkowych: […] ogłoszenie […].",
-    "area": "Mówienie i pisanie"
-  },
-  {
-    "id": "pl-2.3",
-    "subjectId": "polski",
-    "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia […] innych tekstów kultury.",
-    "specific": "2. Odbiór tekstów kultury. Uczeń: 3) wyszukuje w tekście potrzebne informacje;",
-    "area": "Odbiór tekstów kultury"
-  },
-  {
-    "id": "pl-2.5",
-    "subjectId": "polski",
-    "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia […] innych tekstów kultury.",
-    "specific": "2. Odbiór tekstów kultury. Uczeń: 5) wyszukuje w tekście informacje wyrażone wprost i pośrednio.",
-    "area": "Odbiór tekstów kultury"
-  },
-  {
-    "id": "pl-2.7",
-    "subjectId": "polski",
-    "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia utworów literackich […]. 2. Znajomość wybranych utworów z literatury polskiej […].",
-    "specific": "2. Odbiór tekstów kultury. Uczeń: 7) wyciąga wnioski wynikające z przesłanek zawartych w tekście […]. Lektura obowiązkowa: Henryk Sienkiewicz, Quo vadis.",
-    "area": "Odbiór tekstów kultury"
-  },
-  {
-    "id": "pl-2.8",
+    "id": "pl-46-I.1.13",
     "subjectId": "polski",
     "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia utworów literackich […].",
-    "specific": "2. Odbiór tekstów kultury. Uczeń: 8) rozumie dosłowne i przenośne znaczenie wyrazów w wypowiedzi.",
-    "area": "Odbiór tekstów kultury"
-  },
-  {
-    "id": "pl-2.9",
-    "subjectId": "polski",
-    "general": "I. Kształcenie literackie i kulturowe.\n1. Wyrabianie i rozwijanie zdolności rozumienia utworów literackich […].\n2. Znajomość wybranych utworów z literatury polskiej […].",
-    "specific": "2. Odbiór tekstów kultury. Uczeń: 9) porządkuje informacje w zależności od ich funkcji w przekazie.\nLektura obowiązkowa:\nHenryk Sienkiewicz, Quo vadis.",
-    "area": "Odbiór tekstów kultury"
-  },
-  {
-    "id": "pl-3.2",
-    "subjectId": "polski",
-    "general": "II. Kształcenie językowe. 2. Rozwijanie rozumienia twórczego i sprawczego charakteru działań językowych oraz formowanie odpowiedzialności za własne zachowania językowe.",
-    "specific": "3. Komunikacja językowa i kultura języka. 2) rozróżnia normę językową wzorcową oraz użytkową i stosuje się do nich; 4) świadomie posługuje się różnymi formami językowymi […].",
-    "area": "Komunikacja językowa i kultura języka"
-  },
-  {
-    "id": "pl-4.1",
-    "subjectId": "polski",
-    "general": "II. Kształcenie językowe. 2. Rozwijanie rozumienia twórczego i sprawczego charakteru działań językowych oraz formowanie odpowiedzialności za własne zachowania językowe.",
-    "specific": "4. Ortografia i interpunkcja. 1) pisze poprawnie pod względem ortograficznym; 7) poprawnie używa znaków interpunkcyjnych […].",
-    "area": "Ortografia i interpunkcja"
-  },
-  {
-    "id": "pl-46-1.1",
-    "subjectId": "polski",
-    "general": "II. Kształcenie językowe. 2. Rozwijanie rozumienia twórczego i sprawczego charakteru działań językowych [...].",
-    "specific": "1. Gramatyka języka polskiego. Uczeń: 1) rozpoznaje w wypowiedziach części mowy (przysłówek [...]);",
-    "area": "Gramatyka języka polskiego",
+    "specific": "1. Czytanie utworów literackich. Uczeń: 13) […] omawia wątek główny oraz wątki poboczne.",
+    "area": "Czytanie utworów literackich",
     "stage": "IV–VI"
   },
   {
-    "id": "pl-46-1.11",
+    "id": "pl-46-I.1.3",
     "subjectId": "polski",
-    "general": "II. Kształcenie językowe. 2. Rozwijanie rozumienia twórczego i sprawczego charakteru działań językowych [...].",
-    "specific": "1. Gramatyka języka polskiego. Uczeń: 11) rozpoznaje wypowiedzenia […] rozkazujące […].",
-    "area": "Gramatyka języka polskiego",
+    "general": "I. Kształcenie literackie i kulturowe.\n1. Wyrabianie i rozwijanie zdolności rozumienia utworów literackich […].",
+    "specific": "1. Czytanie utworów literackich. 3) rozpoznaje czytany utwór jako [...] bajkę [...] oraz wskazuje jego cechy gatunkowe [...].",
+    "area": "Czytanie utworów literackich",
     "stage": "IV–VI"
   },
   {
-    "id": "pl-46-1.12",
+    "id": "pl-46-I.1.4",
     "subjectId": "polski",
-    "general": "II. Kształcenie językowe.",
-    "specific": "1. Gramatyka języka polskiego. Uczeń: 12) rozpoznaje w tekście typy wypowiedzeń: zdanie pojedyncze, zdania złożone […];",
-    "area": "Gramatyka języka polskiego",
+    "general": "I. Kształcenie literackie i kulturowe.\n1. Wyrabianie i rozwijanie zdolności rozumienia utworów literackich […].\n2. Znajomość wybranych utworów [...] oraz umiejętność mówienia o nich z wykorzystaniem potrzebnej terminologii.",
+    "specific": "1. Czytanie utworów literackich. Uczeń: 4) zna i rozpoznaje w tekście literackim: epitet [...] oraz określa [jego] funkcje.",
+    "area": "Czytanie utworów literackich",
     "stage": "IV–VI"
   },
   {
-    "id": "pl-46-1.13",
-    "subjectId": "polski",
-    "general": "II. Kształcenie językowe.",
-    "specific": "1. Gramatyka języka polskiego. Uczeń: 13) przekształca konstrukcje składniowe, np. zdania złożone w pojedyncze i odwrotnie […].",
-    "area": "Gramatyka języka polskiego",
-    "stage": "IV–VI"
-  },
-  {
-    "id": "pl-46-1.3",
-    "subjectId": "polski",
-    "general": "II. Kształcenie językowe.",
-    "specific": "1. Gramatyka języka polskiego. 3) [...] rozpoznaje bezosobowe formy czasownika [...].",
-    "area": "Gramatyka języka polskiego",
-    "stage": "IV–VI"
-  },
-  {
-    "id": "pl-46-1.4",
-    "subjectId": "polski",
-    "general": "II. Kształcenie językowe.",
-    "specific": "1. Gramatyka języka polskiego. 4) rozpoznaje formy [...] osoby [...] czasownika [...].",
-    "area": "Gramatyka języka polskiego",
-    "stage": "IV–VI"
-  },
-  {
-    "id": "pl-46-1.7",
+    "id": "pl-46-I.1.7",
     "subjectId": "polski",
     "general": "I. Kształcenie literackie i kulturowe.",
     "specific": "1. Czytanie utworów literackich. 7) opowiada o wydarzeniach fabuły [...].",
@@ -1160,15 +1017,7 @@
     "stage": "IV–VI"
   },
   {
-    "id": "pl-46-1.8",
-    "subjectId": "polski",
-    "general": "II. Kształcenie językowe. 3. Poznawanie podstawowych pojęć oraz terminów służących do opisywania języka […].",
-    "specific": "1. Gramatyka języka polskiego. Uczeń: 8) nazywa części zdania i rozpoznaje ich funkcje składniowe w wypowiedzeniach (podmiot […], przydawka […]).",
-    "area": "Gramatyka języka polskiego",
-    "stage": "IV–VI"
-  },
-  {
-    "id": "pl-46-1.9",
+    "id": "pl-46-I.1.9",
     "subjectId": "polski",
     "general": "I. Kształcenie literackie i kulturowe.",
     "specific": "1. Czytanie utworów literackich. 9) charakteryzuje […] bohaterów w czytanych utworach.",
@@ -1176,23 +1025,7 @@
     "stage": "IV–VI"
   },
   {
-    "id": "pl-46-2",
-    "subjectId": "polski",
-    "general": "III. Tworzenie wypowiedzi. 1. Rozwijanie umiejętności wypowiadania się w określonych formach wypowiedzi pisemnych.",
-    "specific": "2. Mówienie i pisanie. Uczeń: 1) tworzy spójne wypowiedzi w formach gatunkowych: [...] zaproszenie […].",
-    "area": "Mówienie i pisanie",
-    "stage": "IV–VI"
-  },
-  {
-    "id": "pl-46-2.1",
-    "subjectId": "polski",
-    "general": "III. Tworzenie wypowiedzi.",
-    "specific": "2. Mówienie i pisanie. 1) tworzy spójne wypowiedzi w formach gatunkowych: [...] ogłoszenie […].",
-    "area": "Mówienie i pisanie",
-    "stage": "IV–VI"
-  },
-  {
-    "id": "pl-46-2.12",
+    "id": "pl-46-I.2.12",
     "subjectId": "polski",
     "general": "I. Kształcenie literackie i kulturowe.",
     "specific": "2. Odbiór tekstów kultury. 12) dokonuje odczytania tekstów poprzez przekład intersemiotyczny […].",
@@ -1200,7 +1033,7 @@
     "stage": "IV–VI"
   },
   {
-    "id": "pl-46-2.2",
+    "id": "pl-46-I.2.2",
     "subjectId": "polski",
     "general": "I. Kształcenie literackie i kulturowe.",
     "specific": "2. Odbiór tekstów kultury. 2) wyszukuje w tekście informacje wyrażone wprost i pośrednio.",
@@ -1208,7 +1041,7 @@
     "stage": "IV–VI"
   },
   {
-    "id": "pl-46-2.3",
+    "id": "pl-46-I.2.3",
     "subjectId": "polski",
     "general": "I. Kształcenie literackie i kulturowe.",
     "specific": "2. Odbiór tekstów kultury. 3) określa temat i główną myśl tekstu.",
@@ -1216,7 +1049,7 @@
     "stage": "IV–VI"
   },
   {
-    "id": "pl-46-2.4",
+    "id": "pl-46-I.2.4",
     "subjectId": "polski",
     "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia […] innych tekstów kultury.",
     "specific": "2. Odbiór tekstów kultury. Uczeń: 4) dostrzega relacje między częściami wypowiedzi […].",
@@ -1224,7 +1057,71 @@
     "stage": "IV–VI"
   },
   {
-    "id": "pl-46-2.5",
+    "id": "pl-46-II.1.1",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe. 2. Rozwijanie rozumienia twórczego i sprawczego charakteru działań językowych [...].",
+    "specific": "1. Gramatyka języka polskiego. 1) rozpoznaje w wypowiedziach części mowy ([...] spójnik […] ) i określa ich funkcje w tekście.",
+    "area": "Gramatyka języka polskiego",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-II.1.11",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe. 2. Rozwijanie rozumienia twórczego i sprawczego charakteru działań językowych [...].",
+    "specific": "1. Gramatyka języka polskiego. Uczeń: 11) rozpoznaje wypowiedzenia […] rozkazujące […].",
+    "area": "Gramatyka języka polskiego",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-II.1.12",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe.",
+    "specific": "1. Gramatyka języka polskiego. Uczeń: 12) rozpoznaje w tekście typy wypowiedzeń: zdanie pojedyncze, zdania złożone […];",
+    "area": "Gramatyka języka polskiego",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-II.1.13",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe.",
+    "specific": "1. Gramatyka języka polskiego. Uczeń: 13) przekształca konstrukcje składniowe, np. zdania złożone w pojedyncze i odwrotnie […].",
+    "area": "Gramatyka języka polskiego",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-II.1.3",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe.",
+    "specific": "1. Gramatyka języka polskiego. 3) [...] rozpoznaje bezosobowe formy czasownika [...].",
+    "area": "Gramatyka języka polskiego",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-II.1.4",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe.",
+    "specific": "1. Gramatyka języka polskiego. 4) rozpoznaje formy [...] osoby [...] czasownika [...].",
+    "area": "Gramatyka języka polskiego",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-II.1.8",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe. 3. Poznawanie podstawowych pojęć oraz terminów służących do opisywania języka […].",
+    "specific": "1. Gramatyka języka polskiego. Uczeń: 8) nazywa części zdania i rozpoznaje ich funkcje składniowe w wypowiedzeniach (podmiot […], przydawka […]).",
+    "area": "Gramatyka języka polskiego",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-II.2.4",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe. 3. Poznawanie podstawowych pojęć oraz terminów służących do opisywania języka i językowego komunikowania się ludzi.",
+    "specific": "2. Zróżnicowanie języka. Uczeń: 4) rozumie dosłowne i przenośne znaczenie wyrazów w wypowiedzi [...].",
+    "area": "Zróżnicowanie języka",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-II.2.5",
     "subjectId": "polski",
     "general": "II. Kształcenie językowe.",
     "specific": "2. Zróżnicowanie języka. 5) rozpoznaje w wypowiedziach związki frazeologiczne, rozumie ich znaczenie oraz poprawnie stosuje w wypowiedziach.",
@@ -1232,7 +1129,7 @@
     "stage": "IV–VI"
   },
   {
-    "id": "pl-46-2.9",
+    "id": "pl-46-II.2.9",
     "subjectId": "polski",
     "general": "II. Kształcenie językowe. 6. Rozwijanie wiedzy o elementach składowych wypowiedzi […] oraz ich funkcjach w strukturze tekstów i w komunikowaniu się.",
     "specific": "2. Zróżnicowanie języka. Uczeń: 9) zna i stosuje zasady spójności formalnej i semantycznej tekstu.",
@@ -1240,7 +1137,7 @@
     "stage": "IV–VI"
   },
   {
-    "id": "pl-46-4",
+    "id": "pl-46-II.4",
     "subjectId": "polski",
     "general": "II. Kształcenie językowe. 5. Kształcenie umiejętności poprawnego [...] pisania zgodnego z zasadami [...] pisowni polskiej.",
     "specific": "4. Ortografia i interpunkcja. Uczeń: 1) pisze poprawnie pod względem ortograficznym [...]; 2) poprawnie używa znaków interpunkcyjnych […].",
@@ -1248,7 +1145,7 @@
     "stage": "IV–VI"
   },
   {
-    "id": "pl-46-4.1",
+    "id": "pl-46-II.4.1",
     "subjectId": "polski",
     "general": "II. Kształcenie językowe.",
     "specific": "4. Ortografia i interpunkcja. 1) pisze poprawnie pod względem ortograficznym [...].",
@@ -1256,11 +1153,27 @@
     "stage": "IV–VI"
   },
   {
-    "id": "pl-46-4.2",
+    "id": "pl-46-II.4.2",
     "subjectId": "polski",
     "general": "II. Kształcenie językowe.",
     "specific": "4. Ortografia i interpunkcja. 2) poprawnie używa znaków interpunkcyjnych: [...] przecinka [...].",
     "area": "Ortografia i interpunkcja",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-III.2",
+    "subjectId": "polski",
+    "general": "III. Tworzenie wypowiedzi. 1. Rozwijanie umiejętności wypowiadania się w określonych formach wypowiedzi pisemnych.",
+    "specific": "2. Mówienie i pisanie. Uczeń: 1) tworzy spójne wypowiedzi w formach gatunkowych: [...] zaproszenie […].",
+    "area": "Mówienie i pisanie",
+    "stage": "IV–VI"
+  },
+  {
+    "id": "pl-46-III.2.1",
+    "subjectId": "polski",
+    "general": "III. Tworzenie wypowiedzi.",
+    "specific": "2. Mówienie i pisanie. 1) tworzy spójne wypowiedzi w formach gatunkowych: [...] ogłoszenie […].",
+    "area": "Mówienie i pisanie",
     "stage": "IV–VI"
   },
   {
@@ -1272,39 +1185,15 @@
     "stage": "IV–VI"
   },
   {
-    "id": "pl-78-1.1",
+    "id": "pl-78-I.1.5",
     "subjectId": "polski",
-    "general": "III. Tworzenie wypowiedzi. 1. Rozwijanie umiejętności wypowiadania się w określonych formach wypowiedzi [...] pisemnych. 4. Rozwijanie umiejętności stosowania środków stylistycznych i dbałości o estetykę tekstu oraz umiejętności organizacji tekstu. 5. Poznawanie podstawowych zasad retoryki, w szczególności argumentowania […].",
-    "specific": "1. Elementy retoryki. 1) funkcjonalnie wykorzystuje środki retoryczne oraz rozumie ich oddziaływanie na odbiorcę; 2) gromadzi i porządkuje materiał rzeczowy potrzebny do tworzenia wypowiedzi [...]; 3) tworzy wypowiedź, stosując odpowiednią dla danej formy gatunkowej kompozycję oraz zasady spójności językowej między akapitami; rozumie rolę akapitów jako spójnych całości myślowych w tworzeniu wypowiedzi pisemnych; 4) wykorzystuje znajomość zasad tworzenia tezy i hipotezy oraz argumentów przy tworzeniu [...] tekstów argumentacyjnych; 5) odróżnia przykład od argumentu; 6) przeprowadza wnioskowanie jako element wywodu argumentacyjnego; 7) zgadza się z cudzymi poglądami lub polemizuje z nimi, rzeczowo uzasadniając własne zdanie.",
-    "area": "Elementy retoryki",
+    "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia utworów literackich oraz innych tekstów kultury. 2. Znajomość wybranych utworów z literatury polskiej [...].",
+    "specific": "1. Czytanie utworów literackich. Uczeń: 5) zna pojęcie komizmu oraz określa jego funkcje.",
+    "area": "Czytanie utworów literackich",
     "stage": "VII–VIII"
   },
   {
-    "id": "pl-78-1.2",
-    "subjectId": "polski",
-    "general": "III. Tworzenie wypowiedzi. 1. Rozwijanie umiejętności wypowiadania się w określonych formach wypowiedzi [...] pisemnych. 4. Rozwijanie umiejętności stosowania środków stylistycznych i dbałości o estetykę tekstu oraz umiejętności organizacji tekstu.",
-    "specific": "1. Elementy retoryki. 2) gromadzi i porządkuje materiał rzeczowy potrzebny do tworzenia wypowiedzi [...]; 3) tworzy wypowiedź, stosując odpowiednią dla danej formy gatunkowej kompozycję oraz zasady spójności językowej między akapitami; rozumie rolę akapitów jako spójnych całości myślowych w tworzeniu wypowiedzi pisemnych.",
-    "area": "Elementy retoryki",
-    "stage": "VII–VIII"
-  },
-  {
-    "id": "pl-78-1.4",
-    "subjectId": "polski",
-    "general": "III. Tworzenie wypowiedzi.",
-    "specific": "1. Elementy retoryki. 4) wykorzystuje znajomość zasad tworzenia argumentów przy tworzeniu [...] innych tekstów argumentacyjnych.",
-    "area": "Elementy retoryki",
-    "stage": "VII–VIII"
-  },
-  {
-    "id": "pl-78-1.5",
-    "subjectId": "polski",
-    "general": "II. Kształcenie językowe.",
-    "specific": "1. Gramatyka języka polskiego. 5) rozróżnia wypowiedzenia wielokrotnie złożone.",
-    "area": "Gramatyka języka polskiego",
-    "stage": "VII–VIII"
-  },
-  {
-    "id": "pl-78-1.7",
+    "id": "pl-78-I.1.7",
     "subjectId": "polski",
     "general": "I. Kształcenie literackie i kulturowe.",
     "specific": "1. Czytanie utworów literackich. 7) określa w poznawanych tekstach problematykę egzystencjalną i poddaje ją refleksji;",
@@ -1312,7 +1201,71 @@
     "stage": "VII–VIII"
   },
   {
-    "id": "pl-78-2.1",
+    "id": "pl-78-I.2.1",
+    "subjectId": "polski",
+    "general": "I. Kształcenie literackie i kulturowe.",
+    "specific": "2. Odbiór tekstów kultury. 1) wyszukuje w tekście potrzebne informacje [...].",
+    "area": "Odbiór tekstów kultury",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "pl-78-II.1.2",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe. 2. Rozwijanie rozumienia twórczego i sprawczego charakteru działań językowych […]. 3. Poznawanie podstawowych pojęć oraz terminów służących do opisywania języka i językowego komunikowania się ludzi.",
+    "specific": "1. Gramatyka języka polskiego. 2) […] wskazuje funkcje formantów w nadawaniu znaczenia wyrazom pochodnym, rozpoznaje rodzinę wyrazów […].",
+    "area": "Gramatyka języka polskiego",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "pl-78-II.1.4",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe. 3. Poznawanie podstawowych pojęć oraz terminów służących do opisywania języka [...].",
+    "specific": "1. Zróżnicowanie języka. Uczeń: 4) rozumie znaczenie homonimów.",
+    "area": "Zróżnicowanie języka",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "pl-78-II.1.5",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe.",
+    "specific": "1. Gramatyka języka polskiego. 5) rozróżnia wypowiedzenia wielokrotnie złożone.",
+    "area": "Gramatyka języka polskiego",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "pl-78-II.3.2",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe. 2. Rozwijanie rozumienia twórczego i sprawczego charakteru działań językowych oraz formowanie odpowiedzialności za własne zachowania językowe.",
+    "specific": "3. Komunikacja językowa i kultura języka. 2) rozróżnia normę językową wzorcową oraz użytkową i stosuje się do nich.",
+    "area": "Komunikacja językowa i kultura języka",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "pl-78-III.1.1",
+    "subjectId": "polski",
+    "general": "III. Tworzenie wypowiedzi. 1. Rozwijanie umiejętności wypowiadania się w określonych formach wypowiedzi [...] pisemnych. 4. Rozwijanie umiejętności stosowania środków stylistycznych i dbałości o estetykę tekstu oraz umiejętności organizacji tekstu. 5. Poznawanie podstawowych zasad retoryki, w szczególności argumentowania […].",
+    "specific": "1. Elementy retoryki. 1) funkcjonalnie wykorzystuje środki retoryczne oraz rozumie ich oddziaływanie na odbiorcę; 2) gromadzi i porządkuje materiał rzeczowy potrzebny do tworzenia wypowiedzi [...]; 3) tworzy wypowiedź, stosując odpowiednią dla danej formy gatunkowej kompozycję oraz zasady spójności językowej między akapitami; rozumie rolę akapitów jako spójnych całości myślowych w tworzeniu wypowiedzi pisemnych; 4) wykorzystuje znajomość zasad tworzenia tezy i hipotezy oraz argumentów przy tworzeniu [...] tekstów argumentacyjnych; 5) odróżnia przykład od argumentu; 6) przeprowadza wnioskowanie jako element wywodu argumentacyjnego; 7) zgadza się z cudzymi poglądami lub polemizuje z nimi, rzeczowo uzasadniając własne zdanie.",
+    "area": "Elementy retoryki",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "pl-78-III.1.2",
+    "subjectId": "polski",
+    "general": "III. Tworzenie wypowiedzi. 1. Rozwijanie umiejętności wypowiadania się w określonych formach wypowiedzi [...] pisemnych. 4. Rozwijanie umiejętności stosowania środków stylistycznych i dbałości o estetykę tekstu oraz umiejętności organizacji tekstu.",
+    "specific": "1. Elementy retoryki. 2) gromadzi i porządkuje materiał rzeczowy potrzebny do tworzenia wypowiedzi [...]; 3) tworzy wypowiedź, stosując odpowiednią dla danej formy gatunkowej kompozycję oraz zasady spójności językowej między akapitami; rozumie rolę akapitów jako spójnych całości myślowych w tworzeniu wypowiedzi pisemnych.",
+    "area": "Elementy retoryki",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "pl-78-III.1.4",
+    "subjectId": "polski",
+    "general": "III. Tworzenie wypowiedzi.",
+    "specific": "1. Elementy retoryki. 4) wykorzystuje znajomość zasad tworzenia argumentów przy tworzeniu [...] innych tekstów argumentacyjnych.",
+    "area": "Elementy retoryki",
+    "stage": "VII–VIII"
+  },
+  {
+    "id": "pl-78-III.2.1",
     "subjectId": "polski",
     "general": "III. Tworzenie wypowiedzi.",
     "specific": "2. Mówienie i pisanie. 1) tworzy spójne wypowiedzi w formach gatunkowych: [...] przemówienie [...].",
@@ -1320,19 +1273,11 @@
     "stage": "VII–VIII"
   },
   {
-    "id": "pl-78-2.2",
+    "id": "pl-78-III.2.2",
     "subjectId": "polski",
     "general": "III. Tworzenie wypowiedzi.",
     "specific": "2. Mówienie i pisanie. 2) wykonuje przekształcenia na tekście cudzym […] streszcza […].",
     "area": "Mówienie i pisanie",
-    "stage": "VII–VIII"
-  },
-  {
-    "id": "pl-78-3.2",
-    "subjectId": "polski",
-    "general": "II. Kształcenie językowe. 2. Rozwijanie rozumienia twórczego i sprawczego charakteru działań językowych oraz formowanie odpowiedzialności za własne zachowania językowe.",
-    "specific": "3. Komunikacja językowa i kultura języka. 2) rozróżnia normę językową wzorcową oraz użytkową i stosuje się do nich.",
-    "area": "Komunikacja językowa i kultura języka",
     "stage": "VII–VIII"
   },
   {
@@ -1358,5 +1303,145 @@
     "subjectId": "polski",
     "general": "IV. Samokształcenie.",
     "area": "Samokształcenie"
+  },
+  {
+    "id": "pl-I.1.15",
+    "subjectId": "polski",
+    "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia utworów literackich [...]. 2. Znajomość wybranych utworów z literatury polskiej i światowej [...]. 3. Kształtowanie umiejętności uczestniczenia w kulturze polskiej i europejskiej [...].",
+    "specific": "1. Czytanie utworów literackich. 15) określa w poznawanych tekstach problematykę egzystencjalną i poddaje ją refleksji; 18) wykorzystuje w interpretacji utworów literackich odwołania do wartości uniwersalnych związane z postawami społecznymi, narodowymi, religijnymi, etycznymi [...]; 20) wykorzystuje w interpretacji utworów literackich potrzebne konteksty [...]. Zna lektury obowiązkowe.",
+    "area": "Czytanie utworów literackich"
+  },
+  {
+    "id": "pl-I.1.18",
+    "subjectId": "polski",
+    "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia utworów literackich [...]. 2. Znajomość wybranych utworów z literatury polskiej i światowej […].",
+    "specific": "1. Czytanie utworów literackich. 18) wykorzystuje w interpretacji utworów literackich odwołania do wartości uniwersalnych związane z postawami społecznymi, narodowymi, religijnymi, etycznymi [...]. Lektury obowiązkowe.",
+    "area": "Czytanie utworów literackich"
+  },
+  {
+    "id": "pl-I.1.7",
+    "subjectId": "polski",
+    "general": "I. Kształcenie literackie i kulturowe.\n1. Wyrabianie i rozwijanie zdolności rozumienia utworów literackich […].\n2. Znajomość wybranych utworów z literatury polskiej […].",
+    "specific": "1. Czytanie utworów literackich. 7) charakteryzuje i ocenia bohaterów.",
+    "area": "Czytanie utworów literackich"
+  },
+  {
+    "id": "pl-I.2.1",
+    "subjectId": "polski",
+    "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia […] innych tekstów kultury.",
+    "specific": "2. Odbiór tekstów kultury. Uczeń: 1) określa temat i główną myśl tekstu.",
+    "area": "Odbiór tekstów kultury"
+  },
+  {
+    "id": "pl-I.2.11",
+    "subjectId": "polski",
+    "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia […] innych tekstów kultury. 2. Znajomość wybranych utworów z literatury polskiej […].",
+    "specific": "2. Odbiór tekstów kultury. 11) interpretuje dzieła sztuki […]. Lektura obowiązkowa: Henryk Sienkiewicz, *Quo vadis*.",
+    "area": "Odbiór tekstów kultury"
+  },
+  {
+    "id": "pl-I.2.18",
+    "subjectId": "polski",
+    "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia utworów literackich […]. 2. Znajomość wybranych utworów z literatury polskiej i światowej.",
+    "specific": "2. Odbiór tekstów kultury. Uczeń: 18) wykorzystuje w interpretacji utworów literackich odwołania do wartości uniwersalnych [...].",
+    "area": "Odbiór tekstów kultury"
+  },
+  {
+    "id": "pl-I.2.3",
+    "subjectId": "polski",
+    "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia […] innych tekstów kultury.",
+    "specific": "2. Odbiór tekstów kultury. Uczeń: 3) wyszukuje w tekście potrzebne informacje;",
+    "area": "Odbiór tekstów kultury"
+  },
+  {
+    "id": "pl-I.2.5",
+    "subjectId": "polski",
+    "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia […] innych tekstów kultury.",
+    "specific": "2. Odbiór tekstów kultury. Uczeń: 5) wyszukuje w tekście informacje wyrażone wprost i pośrednio.",
+    "area": "Odbiór tekstów kultury"
+  },
+  {
+    "id": "pl-I.2.7",
+    "subjectId": "polski",
+    "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia utworów literackich […]. 2. Znajomość wybranych utworów z literatury polskiej […].",
+    "specific": "2. Odbiór tekstów kultury. Uczeń: 7) wyciąga wnioski wynikające z przesłanek zawartych w tekście […]. Lektura obowiązkowa: Henryk Sienkiewicz, Quo vadis.",
+    "area": "Odbiór tekstów kultury"
+  },
+  {
+    "id": "pl-I.2.8",
+    "subjectId": "polski",
+    "general": "I. Kształcenie literackie i kulturowe. 1. Wyrabianie i rozwijanie zdolności rozumienia utworów literackich […].",
+    "specific": "2. Odbiór tekstów kultury. Uczeń: 8) rozumie dosłowne i przenośne znaczenie wyrazów w wypowiedzi.",
+    "area": "Odbiór tekstów kultury"
+  },
+  {
+    "id": "pl-I.2.9",
+    "subjectId": "polski",
+    "general": "I. Kształcenie literackie i kulturowe.\n1. Wyrabianie i rozwijanie zdolności rozumienia utworów literackich […].\n2. Znajomość wybranych utworów z literatury polskiej […].",
+    "specific": "2. Odbiór tekstów kultury. Uczeń: 9) porządkuje informacje w zależności od ich funkcji w przekazie.\nLektura obowiązkowa:\nHenryk Sienkiewicz, Quo vadis.",
+    "area": "Odbiór tekstów kultury"
+  },
+  {
+    "id": "pl-II.1.10",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe. 3. Poznawanie podstawowych pojęć oraz terminów służących do opisywania języka [...].",
+    "specific": "1. Gramatyka języka polskiego. Uczeń: 10) rozpoznaje w tekście zdania [...] złożone ([...] podrzędnie) [...].",
+    "area": "Gramatyka języka polskiego"
+  },
+  {
+    "id": "pl-II.1.7",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe. 2. Rozwijanie rozumienia twórczego i sprawczego charakteru działań językowych [...].",
+    "specific": "1. Gramatyka języka polskiego. Uczeń: 7) […] w wyrazie pochodnym wskazuje [...] formant […].",
+    "area": "Gramatyka języka polskiego"
+  },
+  {
+    "id": "pl-II.3.2",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe. 2. Rozwijanie rozumienia twórczego i sprawczego charakteru działań językowych oraz formowanie odpowiedzialności za własne zachowania językowe.",
+    "specific": "3. Komunikacja językowa i kultura języka. 2) rozróżnia normę językową wzorcową oraz użytkową i stosuje się do nich; 4) świadomie posługuje się różnymi formami językowymi […].",
+    "area": "Komunikacja językowa i kultura języka"
+  },
+  {
+    "id": "pl-II.4.1",
+    "subjectId": "polski",
+    "general": "II. Kształcenie językowe. 2. Rozwijanie rozumienia twórczego i sprawczego charakteru działań językowych oraz formowanie odpowiedzialności za własne zachowania językowe.",
+    "specific": "4. Ortografia i interpunkcja. 1) pisze poprawnie pod względem ortograficznym; 7) poprawnie używa znaków interpunkcyjnych […].",
+    "area": "Ortografia i interpunkcja"
+  },
+  {
+    "id": "pl-III.1.1",
+    "subjectId": "polski",
+    "general": "III. Tworzenie wypowiedzi. 1. Rozwijanie umiejętności wypowiadania się w określonych formach wypowiedzi pisemnych. 3. Rozwijanie umiejętności stosowania środków stylistycznych, dbałości o estetykę tekstu oraz umiejętności organizacji tekstu. 4. Poznawanie podstawowych zasad retoryki, w szczególności argumentowania […].",
+    "specific": "1. Elementy retoryki. 1) funkcjonalnie wykorzystuje środki retoryczne oraz rozumie ich oddziaływanie na odbiorcę; 2) gromadzi i porządkuje materiał rzeczowy potrzebny do tworzenia wypowiedzi [...]; 3) tworzy wypowiedź, stosując odpowiednią dla danej formy gatunkowej kompozycję oraz zasady spójności językowej między akapitami; rozumie rolę akapitów jako spójnych całości myślowych w tworzeniu wypowiedzi pisemnych oraz stosuje rytm akapitowy (przeplatanie akapitów dłuższych i krótszych); 4) wykorzystuje znajomość zasad tworzenia tezy i hipotezy oraz argumentów przy tworzeniu rozprawki [...]; 5) odróżnia przykład od argumentu; 6) przeprowadza wnioskowanie jako element wywodu argumentacyjnego; 7) zgadza się z cudzymi poglądami lub polemizuje z nimi, rzeczowo uzasadniając własne zdanie.",
+    "area": "Elementy retoryki"
+  },
+  {
+    "id": "pl-III.1.2",
+    "subjectId": "polski",
+    "general": "III. Tworzenie wypowiedzi. 1. Rozwijanie umiejętności wypowiadania się w określonych formach wypowiedzi pisemnych. 3. Rozwijanie umiejętności stosowania środków stylistycznych, dbałości o estetykę tekstu oraz umiejętności organizacji tekstu.",
+    "specific": "1. Elementy retoryki. 2) gromadzi i porządkuje materiał rzeczowy potrzebny do tworzenia wypowiedzi [...]; 3) tworzy wypowiedź, stosując odpowiednią dla danej formy gatunkowej kompozycję oraz zasady spójności językowej między akapitami; rozumie rolę akapitów jako spójnych całości myślowych w tworzeniu wypowiedzi pisemnych oraz stosuje rytm akapitowy (przeplatanie akapitów dłuższych i krótszych).",
+    "area": "Elementy retoryki"
+  },
+  {
+    "id": "pl-III.2.1",
+    "subjectId": "polski",
+    "general": "III. Tworzenie wypowiedzi. 1. Rozwijanie umiejętności wypowiadania się w określonych formach wypowiedzi pisemnych. 3. Rozwijanie umiejętności stosowania środków stylistycznych, dbałości o estetykę tekstu oraz umiejętności organizacji tekstu.",
+    "specific": "2. Mówienie i pisanie. 1) tworzy spójne wypowiedzi w następujących formach gatunkowych: [...] opowiadanie [...].",
+    "area": "Mówienie i pisanie"
+  },
+  {
+    "id": "pl-III.2.2",
+    "subjectId": "polski",
+    "general": "III. Tworzenie wypowiedzi.\n1. Rozwijanie umiejętności wypowiadania się w określonych formach wypowiedzi pisemnych.",
+    "specific": "2. Mówienie i pisanie. Uczeń: 2) tworzy spójne wypowiedzi w następujących formach gatunkowych: […] ogłoszenie […].",
+    "area": "Mówienie i pisanie"
+  },
+  {
+    "id": "pl-III.2.3",
+    "subjectId": "polski",
+    "general": "III. Tworzenie wypowiedzi. 1. Rozwijanie umiejętności wypowiadania się w określonych formach wypowiedzi pisemnych.",
+    "specific": "2. Mówienie i pisanie. Uczeń: 3) wykonuje przekształcenia na tekście cudzym […], streszcza […].",
+    "area": "Mówienie i pisanie"
   }
 ]

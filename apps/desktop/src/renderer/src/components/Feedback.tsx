@@ -11,6 +11,8 @@ interface Props {
   selfPoints: number | null | undefined;
   onGrade: (points: number) => void;
   ctx: RichContext;
+  /** Language of the key's answer ("en" on English papers). */
+  lang?: string | undefined;
   /** Optional AI grading help for open items. */
   ai?: {
     ready: boolean;
@@ -28,13 +30,17 @@ interface Props {
   };
 }
 
+const G = ({ c }: { c: string }) => (
+  <span aria-hidden="true">{c} </span>
+);
+
 function ResultChip({ check }: { check: CheckResult }) {
   const o = check.outcome;
   if (o.kind === "auto") {
-    if (o.result === "correct") return <span className="chip ok">✓ Dobrze · {o.points}/{o.maxPoints} pkt</span>;
+    if (o.result === "correct") return <span className="chip ok"><G c="✓" />Dobrze · {o.points}/{o.maxPoints} pkt</span>;
     // All-or-nothing tasks: some parts right still give 0 points, so it must not look like a partial success.
-    if (o.result === "partial") return o.points ? <span className="chip warn">Częściowo · {o.points}/{o.maxPoints} pkt</span> : <span className="chip bad">× Częściowo dobrze · 0/{o.maxPoints} pkt</span>;
-    return <span className="chip bad">× Do poprawy · 0/{o.maxPoints} pkt</span>;
+    if (o.result === "partial") return o.points ? <span className="chip warn">Częściowo · {o.points}/{o.maxPoints} pkt</span> : <span className="chip bad"><G c="×" />Częściowo dobrze · 0/{o.maxPoints} pkt</span>;
+    return <span className="chip bad"><G c="×" />Do poprawy · 0/{o.maxPoints} pkt</span>;
   }
   if (o.kind === "blank") return <span className="chip muted">Bez odpowiedzi · 0/{o.maxPoints} pkt</span>;
   if (o.kind === "unresolved") return <span className="chip warn">Porównaj z kluczem</span>;
@@ -66,14 +72,17 @@ function keyText(item: PublicItem, check: CheckResult): string | null {
   return null;
 }
 
-export function Feedback({ item, check, selfPoints, onGrade, ctx, ai, essay }: Props) {
+export function Feedback({ item, check, selfPoints, onGrade, ctx, lang, ai, essay }: Props) {
   const levels = check.reveal.levels;
   const solution = check.reveal.key?.type === "model_solution" ? check.reveal.key.solution : null;
   const answer = keyText(item, check);
   const o = check.outcome;
 
   return (
-    <aside className="flex flex-col gap-4 rounded-[10px] border border-line bg-surface p-5" aria-live="polite" data-testid="feedback">
+    <aside className="flex flex-col gap-4 rounded-[10px] border border-line bg-surface p-5" aria-label={`Wynik zadania ${item.label}`} data-testid="feedback">
+      <h2 className="sr-only outline-none" tabIndex={-1} data-feedback-heading>
+        Wynik zadania {item.label}
+      </h2>
       <div className="flex flex-wrap items-center gap-2">
         <ResultChip check={check} />
         {o.kind === "auto" && o.reason && <span className="text-sm text-muted">Klucz: {o.reason}</span>}
@@ -85,7 +94,7 @@ export function Feedback({ item, check, selfPoints, onGrade, ctx, ai, essay }: P
       {answer && (
         <div>
           <h3 className="text-xs font-bold uppercase tracking-wider text-muted">Poprawna odpowiedź</h3>
-          <Rich text={answer} ctx={ctx} />
+          <Rich text={answer} ctx={ctx} lang={check.reveal.key?.type === "choice" || check.reveal.key?.type === "text" ? lang : undefined} />
           {o.kind === "unresolved" && o.closest && <p className="text-sm text-muted">Najbliższa odpowiedź z klucza: {o.closest}. Jeśli Twoja znaczy to samo, policz ją sobie jako dobrą.</p>}
         </div>
       )}
@@ -105,8 +114,8 @@ export function Feedback({ item, check, selfPoints, onGrade, ctx, ai, essay }: P
       )}
 
       {levels && (
-        <div className="flex flex-col gap-2">
-          <h3 className="text-xs font-bold uppercase tracking-wider text-muted">Zasady oceniania · ile punktów sobie przyznajesz?</h3>
+        <div className="flex flex-col gap-2" role="group" aria-labelledby={`levels-${item.id}`}>
+          <h3 id={`levels-${item.id}`} className="text-xs font-bold uppercase tracking-wider text-muted">Zasady oceniania · ile punktów sobie przyznajesz?</h3>
           {levels.map((l) => (
             <button
               key={l.points}
@@ -116,7 +125,7 @@ export function Feedback({ item, check, selfPoints, onGrade, ctx, ai, essay }: P
               data-level={l.points}
             >
               <span className="k">{l.points}</span>
-              <span className="flex flex-col gap-1 text-[15px]">
+              <span className="flex flex-col gap-1 text-[0.9375rem]">
                 {l.paths.map((p, i) => (
                   <span key={i}>
                     {i > 0 && <b className="mr-1 text-muted">LUB</b>}
@@ -251,7 +260,7 @@ export function TaskTranscript({ lines }: { lines: string[] }) {
   return (
     <details className="rounded-md border border-line bg-surface p-3" data-testid="transcript">
       <summary className="cursor-pointer text-xs font-bold uppercase tracking-wider text-muted">Transkrypcja nagrania</summary>
-      <div className="mt-2 flex flex-col gap-1 text-[15px]" lang="en">
+      <div className="mt-2 flex flex-col gap-1 text-[0.9375rem]" lang="en">
         {lines.map((l, i) => (
           <p key={i} className={/^(Tekst|Wypowiedź|Text)\s+\d+\.$/.test(l) ? "mt-2 font-bold" : ""}>
             {l}

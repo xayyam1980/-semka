@@ -36,9 +36,9 @@ export function Analysis() {
     <section className="flex flex-col gap-6">
       <div className="flex flex-wrap items-end gap-4">
         <h1 className="text-4xl font-bold">Analiza</h1>
-        <div className="flex gap-1" role="tablist" aria-label="Przedmiot">
+        <div className="flex gap-1" role="group" aria-label="Przedmiot">
           {Object.values(SUBJECTS).map((s) => (
-            <button key={s.id} role="tab" aria-selected={s.id === subject} className={`btn ${s.id === subject ? "primary" : "ghost"}`} onClick={() => setParams({ przedmiot: s.id })} data-subject={s.id}>
+            <button key={s.id} aria-pressed={s.id === subject} className={`btn ${s.id === subject ? "primary" : "ghost"}`} onClick={() => setParams({ przedmiot: s.id })} data-subject={s.id}>
               {s.name}
             </button>
           ))}
@@ -90,7 +90,7 @@ export function Analysis() {
                 ] as const
               ).map(([name, v]) => (
                 <div key={name} className="flex flex-col gap-1">
-                  <div className="flex justify-between text-[15px]">
+                  <div className="flex justify-between text-[0.9375rem]">
                     <span>{name}</span>
                     <span className="tabular">{v.percent === null ? "–" : `${v.percent} %`}</span>
                   </div>
@@ -104,7 +104,7 @@ export function Analysis() {
           <article className="card rounded-[10px] border border-line bg-surface p-5" data-testid="areas">
             <h2 className="mb-1 text-xs font-bold uppercase tracking-wider text-muted">Umiejętności</h2>
             <p className="mb-3 text-sm text-muted">Wymagania z podstawy programowej według kluczy CKE. Status od 4 zadań: opanowane od 80 %, do pracy 50–79 %, słabe poniżej 50 %. n to liczba zadań, „pp” to punkty procentowe.</p>
-            <table className="w-full border-collapse text-[15px]">
+            <table className="w-full border-collapse text-[0.9375rem]">
               <thead>
                 <tr className="border-b border-line text-left text-sm text-muted">
                   <th className="py-2 font-normal">Obszar</th>

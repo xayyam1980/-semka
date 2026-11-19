@@ -25,7 +25,8 @@ export function ExamBrowser() {
 
   // Same order as everywhere else in the app (Pulpit, tabs): polski, matematyka, angielski.
   const order = Object.keys(SUBJECTS);
-  const subjects = [...new Set(sessions.filter((s) => !only || s.subjectId === only).sort((a, b) => order.indexOf(a.subjectId) - order.indexOf(b.subjectId)).map((s) => s.subjectName))];
+  const mixes = sessions.filter((s) => s.term === "mix");
+  const subjects = [...new Set(sessions.filter((s) => s.term !== "mix" && (!only || s.subjectId === only)).sort((a, b) => order.indexOf(a.subjectId) - order.indexOf(b.subjectId)).map((s) => s.subjectName))];
 
   return (
     <section className="flex flex-col gap-8" data-testid="exam-browser">
@@ -35,9 +36,9 @@ export function ExamBrowser() {
       </div>
 
       {sessions.length > 0 && (
-        <div className="flex flex-wrap gap-1" role="tablist" aria-label="Przedmiot">
+        <div className="flex flex-wrap gap-1" role="group" aria-label="Przedmiot">
           {[{ id: null, name: "Wszystkie" }, ...Object.values(SUBJECTS).map((s) => ({ id: s.id as string | null, name: s.name }))].map((t) => (
-            <button key={t.name} role="tab" aria-selected={only === t.id} className={`btn ${only === t.id ? "primary" : "ghost"}`} onClick={() => setParams(t.id ? { przedmiot: t.id } : {})} data-subject-tab={t.id ?? "all"}>
+            <button key={t.name} aria-pressed={only === t.id} className={`btn ${only === t.id ? "primary" : "ghost"}`} onClick={() => setParams(t.id ? { przedmiot: t.id } : {})} data-subject-tab={t.id ?? "all"}>
               {t.name}
             </button>
           ))}
@@ -52,7 +53,8 @@ export function ExamBrowser() {
       )}
 
       {subjects.map((name) => {
-        const list = sessions.filter((s) => s.subjectName === name);
+        const list = sessions.filter((s) => s.subjectName === name && s.term !== "mix");
+        const mix = mixes.find((m) => m.subjectName === name);
         const tone = SUBJECT_TONE[list[0]!.subjectId]!;
         return (
           <div key={name} className="flex flex-col gap-3">
@@ -61,6 +63,7 @@ export function ExamBrowser() {
               {name}
             </h2>
             <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4">
+              {mix && list.length > 1 && <MixedCard mix={mix} sheets={list.length} open={attempts.find((a) => a.sessionId === mix.id && a.status === "in_progress" && a.answered > 0)} />}
               {list.map((s) => {
                 const mine = attempts.filter((a) => a.sessionId === s.id);
                 const exam = mine.find((a) => a.status === "in_progress" && a.mode === "symulacja");
@@ -109,5 +112,59 @@ export function ExamBrowser() {
         );
       })}
     </section>
+  );
+}
+
+/** Mixed practice: a short set of tasks from every sheet of the subject, untried and weak ones first. */
+function MixedCard({ mix, sheets, open }: { mix: SessionSummary; sheets: number; open?: AttemptSummary }) {
+  const navigate = useNavigate();
+  const [count, setCount] = useState(10);
+  const [kind, setKind] = useState<"all" | "closed" | "open">("all");
+  const [none, setNone] = useState(false);
+  const start = async () => {
+    const id = await window.osemka.startMixedPractice(mix.subjectId, { count, kind });
+    if (id) navigate(`/proba/${id}`);
+    else setNone(true);
+  };
+  return (
+    <article className="card flex flex-col gap-3 rounded-[10px] border border-dashed border-accent bg-surface p-5" data-testid={`mixed-${mix.subjectId}`}>
+      <div>
+        <h3 className="text-lg font-bold">Trening mieszany</h3>
+        <p className="text-sm text-muted">
+          Zadania z {sheets} {plural(sheets, "arkusza", "arkuszy", "arkuszy")} naraz. Najpierw te, których jeszcze nie robiłeś/aś, potem te, które poszły najsłabiej.
+        </p>
+      </div>
+      <div className="flex flex-wrap gap-3 text-sm">
+        <label className="flex items-center gap-2">
+          Liczba zadań
+          <select className="rounded-md border border-line bg-surface px-2 py-1.5" value={count} onChange={(e) => setCount(Number(e.target.value))}>
+            {[5, 10, 15, 20].map((n) => (
+              <option key={n} value={n}>
+                {n}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label className="flex items-center gap-2">
+          Rodzaj
+          <select className="rounded-md border border-line bg-surface px-2 py-1.5" value={kind} onChange={(e) => setKind(e.target.value as typeof kind)}>
+            <option value="all">wszystkie</option>
+            <option value="closed">zamknięte</option>
+            <option value="open">otwarte</option>
+          </select>
+        </label>
+      </div>
+      {none && <p className="text-sm text-muted">Brak zadań tego rodzaju.</p>}
+      <div className="mt-auto flex flex-wrap gap-2">
+        {open && (
+          <button className="btn primary" onClick={() => navigate(`/proba/${open.id}`)}>
+            Wznów trening
+          </button>
+        )}
+        <button className={`btn ${open ? "ghost" : "primary"}`} onClick={() => void start()} data-testid={`mixed-start-${mix.subjectId}`}>
+          {open ? "Nowy trening" : "Losuj zadania"}
+        </button>
+      </div>
+    </article>
   );
 }

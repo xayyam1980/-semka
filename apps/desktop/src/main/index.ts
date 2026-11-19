@@ -1,5 +1,5 @@
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
-import { extname, join } from "node:path";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { extname, join, resolve, sep } from "node:path";
 import { app, BrowserWindow, dialog, protocol, shell } from "electron";
 import { AiService } from "./ai";
 import { AttemptService } from "./attempts";
@@ -16,7 +16,18 @@ import { applyTheme, windowBackground } from "./theme";
 // keys, so that listener is switched off; keys inside the window work as before.
 app.commandLine.appendSwitch("disable-features", "HardwareMediaKeyHandling,MediaSessionService");
 
-protocol.registerSchemesAsPrivileged([{ scheme: "osemka-content", privileges: { standard: true, secure: true, supportFetchAPI: true } }]);
+// The window is served from the app's own origin (osemka-app://app/), not file://: file:// pages share one origin with the
+// whole disk. osemka-content:// serves figures and recordings from content/.
+protocol.registerSchemesAsPrivileged([
+  { scheme: "osemka-app", privileges: { standard: true, secure: true, supportFetchAPI: true, codeCache: true } },
+  { scheme: "osemka-content", privileges: { standard: true, secure: true, supportFetchAPI: true } },
+]);
+
+/** Only the built UI is served on osemka-app://; KaTeX needs inline styles and fonts, recordings play from blob: URLs. */
+const CSP =
+  "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; " +
+  "img-src 'self' data: osemka-content:; media-src 'self' blob: osemka-content:; connect-src 'self'; " +
+  "object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'";
 
 /** content/ next to the repository in development; inside the installed app's resources later (P9). */
 function contentRoot(): string {
@@ -24,7 +35,11 @@ function contentRoot(): string {
   return app.isPackaged ? join(process.resourcesPath, "content") : join(app.getAppPath(), "..", "..", "content");
 }
 
-const MIME: Record<string, string> = { ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".svg": "image/svg+xml", ".mp3": "audio/mpeg" };
+const MIME: Record<string, string> = {
+  ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".svg": "image/svg+xml", ".mp3": "audio/mpeg",
+  ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".css": "text/css; charset=utf-8",
+  ".woff2": "font/woff2", ".woff": "font/woff", ".ttf": "font/ttf", ".json": "application/json", ".ico": "image/x-icon",
+};
 
 // ASCII folder name on purpose: %APPDATA%\Osemka on Windows, ~/Library/Application Support/Osemka on macOS.
 // OSEMKA_USER_DATA lets tests run against a throwaway folder.
@@ -92,7 +107,7 @@ function createWindow(): BrowserWindow {
   if (!app.isPackaged && process.env.ELECTRON_RENDERER_URL) {
     void win.loadURL(process.env.ELECTRON_RENDERER_URL);
   } else {
-    void win.loadFile(join(__dirname, "../renderer/index.html"));
+    void win.loadURL("osemka-app://app/index.html");
   }
   return win;
 }
@@ -110,6 +125,15 @@ app.whenReady().then(async () => {
   });
   const ai = new AiService(new SecretStore(db, await electronCipher()), () => readSettings(db).ai);
   registerIpc({ db, dbFile, runs, content, attemptService, ai });
+
+  const rendererRoot = resolve(__dirname, "../renderer");
+  protocol.handle("osemka-app", (req) => {
+    const url = new URL(req.url);
+    const file = resolve(rendererRoot, decodeURIComponent(url.pathname).replace(/^\/+/, "") || "index.html");
+    if (url.host !== "app" || !file.startsWith(rendererRoot + sep) || !existsSync(file)) return new Response("Not found", { status: 404 });
+    const type = MIME[extname(file).toLowerCase()] ?? "application/octet-stream";
+    return new Response(readFileSync(file), { headers: { "content-type": type, ...(type.startsWith("text/html") ? { "content-security-policy": CSP } : {}) } });
+  });
 
   protocol.handle("osemka-content", (req) => {
     const url = new URL(req.url);
@@ -144,6 +168,11 @@ function runSmoke(win: BrowserWindow, info: { dbFile: string; runs: number }): v
     process.stdout.write(`SMOKE ${JSON.stringify({ ok: false, error: "timeout" })}\n`);
     app.exit(1);
   }, process.env.OSEMKA_SMOKE_TOUR === "1" ? 120000 : 20000);
+  // Anything the page's security policy or the app protocol blocks (a font, a figure, a recording) fails the check.
+  const blocked: string[] = [];
+  win.webContents.on("console-message", (e) => {
+    if (/Content Security Policy|Refused to|net::ERR_|Failed to load resource/i.test(e.message)) blocked.push(e.message.slice(0, 300));
+  });
   // Once: a tour may reload the page, which must not start a second check.
   win.webContents.once("did-finish-load", async () => {
     try {
@@ -156,8 +185,9 @@ function runSmoke(win: BrowserWindow, info: { dbFile: string; runs: number }): v
       writeFileSync(png, shot.toPNG());
       clearTimeout(fail);
       const tour = ready && process.env.OSEMKA_SMOKE_TOUR === "1" ? await runTour(win, out) : [];
-      process.stdout.write(`SMOKE ${JSON.stringify({ ok: ready, runs: info.runs, dbFile: info.dbFile, png, tour, textSample: text.slice(0, 300) })}\n`);
-      app.exit(ready ? 0 : 1);
+      const ok = ready && blocked.length === 0;
+      process.stdout.write(`SMOKE ${JSON.stringify({ ok, runs: info.runs, dbFile: info.dbFile, url: win.webContents.getURL(), png, tour, blocked, textSample: text.slice(0, 300) })}\n`);
+      app.exit(ok ? 0 : 1);
     } catch (err) {
       process.stdout.write(`SMOKE ${JSON.stringify({ ok: false, error: String(err) })}\n`);
       app.exit(1);

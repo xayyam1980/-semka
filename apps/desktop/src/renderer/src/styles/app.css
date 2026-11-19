@@ -26,13 +26,15 @@
   --font-mono: var(--f-mono);
 }
 
+/* Text size: the scale sits on the root, so every rem size (Tailwind text-*, buttons, chips) follows it. */
+html { font-size: calc(100% * var(--font-scale)); }
 html, body, #root { height: 100%; }
 body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
   font-family: var(--f-ui);
-  font-size: calc(16px * var(--font-scale));
+  font-size: 1rem;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -53,7 +55,7 @@ h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.1
 }
 
 /* ── Task text (Rich) ─────────────────────────────────────────── */
-.rich { font-size: calc(17px * var(--font-scale)); line-height: 1.65; max-width: 68ch; }
+.rich { font-size: 1.0625rem; line-height: 1.65; max-width: 68ch; }
 .rich p { margin: 0 0 0.75em; }
 .rich p:last-child { margin-bottom: 0; }
 .rich strong { font-weight: 700; }
@@ -76,14 +78,14 @@ h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.1
 .katex { font-size: 1.08em; }
 
 /* ── Answer options (design system: 5 states) ─────────────────── */
-.opt { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; padding: 10px 14px; min-height: 48px; border-radius: var(--r-s); border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; font-size: calc(16px * var(--font-scale)); }
+.opt { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; padding: 10px 14px; min-height: 48px; border-radius: var(--r-s); border: 1.5px solid var(--field-line); background: var(--surface); color: var(--ink); cursor: pointer; font-size: 1rem; }
 .opt:hover:not(:disabled) { border-color: var(--accent); }
 /* Tall options (scoring levels): badge at the top. A plain rule, because Tailwind utilities sit in a layer this file overrides. */
 .opt.top { align-items: flex-start; }
 .opt.top .k { margin-top: 2px; }
 .opt:disabled { cursor: default; }
-.opt .k { width: 28px; height: 28px; flex: none; display: grid; place-items: center; border-radius: 50%; border: 1.5px solid var(--line); font-weight: 700; font-size: 13px; }
-.opt .st { margin-left: auto; font-size: 13px; font-weight: 700; white-space: nowrap; }
+.opt .k { width: 1.75rem; height: 1.75rem; flex: none; display: grid; place-items: center; border-radius: 50%; border: 1.5px solid var(--line); font-weight: 700; font-size: 0.8125rem; }
+.opt .st { margin-left: auto; font-size: 0.8125rem; font-weight: 700; white-space: nowrap; }
 .opt.sel { border-color: var(--accent); background: var(--accent-soft); }
 .opt.sel .k { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 .opt.ok { border-color: var(--ok); background: var(--ok-soft); }
@@ -95,26 +97,35 @@ h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.1
 .opt.rev { border-style: dashed; border-color: var(--ok); }
 .opt.rev .st { color: var(--ok); }
 
-.pf { display: inline-grid; place-items: center; width: 44px; height: 38px; border: 1.5px solid var(--line); border-radius: var(--r-s); font-weight: 700; background: var(--surface); color: var(--ink); cursor: pointer; }
+.pf { display: inline-flex; align-items: center; justify-content: center; gap: 3px; min-width: 2.75rem; min-height: 2.375rem; padding: 0 6px; border: 1.5px solid var(--field-line); border-radius: var(--r-s); font-weight: 700; background: var(--surface); color: var(--ink); cursor: pointer; }
 .pf.sel { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 .pf.ok { background: var(--ok); border-color: var(--ok); color: var(--surface); }
 .pf.bad { background: var(--bad-soft); border-color: var(--bad); color: var(--bad); }
 .pf:disabled { cursor: default; }
+.pf .g { font-size: 0.75rem; }
 
-.chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: 13px; font-weight: 700; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: 0.8125rem; font-weight: 700; }
 .chip.ok { background: var(--ok-soft); color: var(--ok); }
 .chip.bad { background: var(--bad-soft); color: var(--bad); }
 .chip.warn { background: var(--warn-soft); color: var(--warn); }
 .chip.muted { background: var(--sunk); color: var(--muted); }
 
-.qnum { width: 36px; height: 36px; display: grid; place-items: center; border-radius: var(--r-s); border: 1.5px solid var(--line); font-family: var(--f-mono); font-size: 13px; background: var(--surface); color: var(--ink); position: relative; cursor: pointer; }
-.qnum.answered { background: var(--sunk); border-color: var(--sunk); }
+/* Task numbers in one row that scrolls sideways when it does not fit (UAT: 21 tasks wrapped to two rows at 1024 px). */
+.qstrip { display: flex; flex: 1; min-width: 0; gap: 6px; overflow-x: auto; justify-content: safe center; padding: 7px; scrollbar-width: thin; }
+.qstrip > .qnum { flex: none; }
+.qnum { min-width: 2.25rem; height: 2.25rem; padding: 0 4px; display: grid; place-items: center; border-radius: var(--r-s); border: 1.5px solid var(--field-line); font-family: var(--f-mono); font-size: 0.8125rem; background: var(--surface); color: var(--ink); position: relative; cursor: pointer; }
+.qnum.answered { background: var(--exam-soft); border-color: var(--exam); }
 .qnum.ok { background: var(--ok-soft); border-color: var(--ok); color: var(--ok); }
 .qnum.bad { background: var(--bad-soft); border-color: var(--bad); color: var(--bad); }
+/* Status badge in the corner (✓ / × / •): right and wrong never rely on green vs red alone. */
+.qnum.ok::before, .qnum.bad::before, .qnum.answered::before { position: absolute; right: -5px; bottom: -5px; width: 0.9rem; height: 0.9rem; border-radius: 50%; display: grid; place-items: center; font-family: var(--f-ui); font-size: 0.6875rem; font-weight: 700; line-height: 1; color: var(--surface); border: 1.5px solid var(--surface); }
+.qnum.ok::before { content: "✓"; background: var(--ok); }
+.qnum.bad::before { content: "×"; background: var(--bad); }
+.qnum.answered::before { content: "•"; background: var(--exam); }
 .qnum.cur { outline: 2px solid var(--accent); outline-offset: 1px; font-weight: 700; }
 .qnum.flag::after { content: ""; position: absolute; top: -4px; right: -4px; width: 10px; height: 10px; border-radius: 50%; background: var(--warn); border: 2px solid var(--surface); }
 
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 9px 18px; border-radius: var(--r-s); font-weight: 700; font-size: 15px; border: 1.5px solid transparent; cursor: pointer; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 9px 18px; border-radius: var(--r-s); font-weight: 700; font-size: 0.9375rem; border: 1.5px solid transparent; cursor: pointer; }
 .btn.primary { background: var(--accent); color: var(--accent-ink); }
 .btn.primary:hover:not(:disabled) { filter: brightness(1.05); }
 .btn.ghost { background: var(--surface); border-color: var(--line); color: var(--ink); }
@@ -124,11 +135,12 @@ h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.1
 
 /* ── Simulation focus shell ───────────────────────────────────── */
 .exam-band { background: var(--exam); color: var(--surface); }
-.exam-timer { font-size: 20px; font-weight: 600; padding: 4px 12px; border-radius: 999px; border: 1.5px solid color-mix(in srgb, var(--surface) 45%, transparent); }
+.exam-timer { font-size: 1.25rem; font-weight: 600; padding: 4px 12px; border-radius: 999px; border: 1.5px solid color-mix(in srgb, var(--surface) 45%, transparent); }
 .exam-timer.warn { background: var(--warn-soft); color: var(--warn); border-color: var(--warn); }
 .exam-timer.critical { background: var(--bad-soft); color: var(--bad); border-color: var(--bad); animation: exam-pulse 60s infinite; }
 @keyframes exam-pulse { 0%, 2% { box-shadow: 0 0 0 0 var(--bad); } 4% { box-shadow: 0 0 0 6px transparent; } 100% { box-shadow: none; } }
-.exam-ghost { color: inherit; opacity: 0.85; font-size: 13px; text-decoration: underline; background: none; border: 0; cursor: pointer; }
+.exam-band :focus-visible { outline-color: var(--surface); }
+.exam-ghost { color: inherit; opacity: 0.85; font-size: 0.8125rem; text-decoration: underline; background: none; border: 0; cursor: pointer; }
 .btn.exam-submit { background: var(--surface); color: var(--exam); border-color: var(--surface); }
 .exam-shell .btn.exam-submit:hover { filter: brightness(0.97); }
 [role="dialog"] .btn.exam-submit { background: var(--exam); color: var(--surface); }
@@ -138,7 +150,7 @@ h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.1
 
 /* ── Reading view (S7) ────────────────────────────────────────── */
 .with-reading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
-.reading-pane { position: sticky; top: 0; max-height: calc(100vh - 190px); overflow-y: auto; scrollbar-gutter: stable; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-m); padding: 24px 28px; font-family: var(--f-read); font-size: calc(18px * var(--font-scale)); line-height: 1.7; }
+.reading-pane { position: sticky; top: 0; max-height: calc(100vh - 190px); overflow-y: auto; scrollbar-gutter: stable; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-m); padding: 24px 28px; font-family: var(--f-read); font-size: 1.125rem; line-height: 1.7; }
 .reading-author { margin: 0; color: var(--muted); font-size: 0.85em; }
 .reading-title { margin: 0 0 0.8em; font-family: var(--f-read); font-size: 1.15em; font-weight: 600; letter-spacing: 0.02em; }
 .reading-prose .reading-line { margin: 0 0 0.6em; text-indent: 1.5em; }
@@ -168,6 +180,13 @@ h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.1
 /* All task content (texts, statements, options, answers) in the dyslexia font; numbers keep the mono font, headings the display font. */
 :root[data-reading-font="dyslexic"] main, :root[data-reading-font="dyslexic"] main textarea, :root[data-reading-font="dyslexic"] main input { font-family: var(--f-read); letter-spacing: 0.01em; word-spacing: 0.08em; }
 
+/* Dyslexia font: no all-caps, wide-tracked micro-headings (harder to read for dyslexic readers). */
+:root[data-reading-font="dyslexic"] .uppercase { text-transform: none; }
+:root[data-reading-font="dyslexic"] .tracking-wider { letter-spacing: normal; }
+
+/* Field borders: 3:1 against the page (WCAG 1.4.11); --line stays for decorative dividers. */
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), select, textarea { border-color: var(--field-line); }
+
 /* P8: reduced motion, from the setting or the system */
 :root[data-motion="reduce"] *, :root[data-motion="reduce"] *::before, :root[data-motion="reduce"] *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 @media (prefers-reduced-motion: reduce) {
@@ -178,6 +197,12 @@ h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.1
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
 .skip-link { position: absolute; left: 12px; top: -60px; z-index: 50; padding: 8px 14px; border-radius: var(--r-s); background: var(--accent); color: var(--accent-ink); font-weight: 700; }
 .skip-link:focus { top: 12px; }
-.reading-preview { font-family: var(--f-read); font-size: calc(18px * var(--font-scale)); line-height: 1.7; max-width: 68ch; }
+.reading-preview { font-family: var(--f-read); font-size: 1.125rem; line-height: 1.7; max-width: 68ch; }
 /* Choice chips are labels around a visually hidden radio: show the keyboard focus on the label itself. */
 label:has(> input.sr-only:focus-visible) { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+/* Figure enlarged on click/Enter (Rich). */
+.rich-figure[role="button"] { cursor: zoom-in; }
+.rich-figure[role="button"]:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.figure-zoom { position: fixed; inset: 0; z-index: 60; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 24px; background: rgb(0 0 0 / 0.8); }
+.figure-zoom img { max-width: 100%; max-height: calc(100% - 72px); object-fit: contain; background: #fff; border-radius: var(--r-s); image-rendering: auto; min-width: min(70vw, 900px); }

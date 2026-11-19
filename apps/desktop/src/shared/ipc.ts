@@ -38,9 +38,15 @@ export interface PublicItem {
   response: ResponseSpec;
 }
 
+/** Mixed practice: one virtual sheet per subject holding the tasks of every published sheet ("mix-matematyka"). */
+export const mixSessionId = (subjectId: SubjectId) => `mix-${subjectId}`;
+export const isMixSession = (id: string) => id.startsWith("mix-");
+
 export interface PublicTask {
   id: string;
   number: number;
+  /** Mixed practice: the sheet the task comes from. */
+  origin?: { sessionId: string; year: number; month: number; term: string };
   maxPoints: number;
   instruction: string;
   stimulusIds: string[];
@@ -138,7 +144,8 @@ export interface ReviewOverview {
   groups: { sessionId: string; subjectId: SubjectId; taskIds: string[]; items: number }[];
 }
 
-export type Scope = "all" | "closed" | "open" | { taskIds: string[] };
+/** Practice scope. A task list may carry a label for the header ("Procenty", "powtórka błędów"). */
+export type Scope = "all" | "closed" | "open" | { taskIds: string[]; label?: string };
 
 export interface AttemptSummary {
   id: string;
@@ -256,6 +263,8 @@ export interface OsemkaApi {
   analyticsSubject(subjectId: SubjectId, opts: { days: number | null; mode: "oba" | "nauka" | "symulacja" }): Promise<SubjectAnalysis>;
   /** P7: starts a practice attempt with tasks for one area; returns the attempt id, or null if no task fits. */
   practiceArea(subjectId: SubjectId, area: string): Promise<string | null>;
+  /** Mixed practice across all sheets of a subject; returns the new attempt id, or null if no task fits. */
+  startMixedPractice(subjectId: SubjectId, opts: { count: number; kind: "all" | "closed" | "open" }): Promise<string | null>;
   startPractice(sessionId: string, scope: Scope): Promise<AttemptView>;
   /** Starts a timed simulation, or returns the one already running for this session. */
   startSimulation(sessionId: string): Promise<AttemptView>;
@@ -292,6 +301,7 @@ export const IPC = {
   clearHistory: "data:clear",
   analyticsSubject: "analytics:subject",
   practiceArea: "analytics:practice",
+  startMixedPractice: "attempt:start-mixed",
   startPractice: "attempt:start-practice",
   startSimulation: "attempt:start-simulation",
   reviewAttempt: "attempt:review",

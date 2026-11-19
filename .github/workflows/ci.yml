@@ -57,7 +57,23 @@ jobs:
       - run: corepack enable
       - run: pnpm install --frozen-lockfile
       - run: pnpm --filter @osemka/desktop ensure:electron
+      # Signing turns on only when these secrets exist (see docs/code-signing.md); without them the build is unsigned.
       - run: pnpm --filter @osemka/desktop ${{ matrix.dist }}
+        env:
+          CSC_LINK: ${{ matrix.os == 'macos-latest' && secrets.MAC_CSC_LINK || '' }}
+          CSC_KEY_PASSWORD: ${{ matrix.os == 'macos-latest' && secrets.MAC_CSC_KEY_PASSWORD || '' }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          WIN_CSC_LINK: ${{ secrets.WIN_CSC_LINK }}
+          WIN_CSC_KEY_PASSWORD: ${{ secrets.WIN_CSC_KEY_PASSWORD }}
+          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+          OSEMKA_AZURE_ENDPOINT: ${{ vars.OSEMKA_AZURE_ENDPOINT }}
+          OSEMKA_AZURE_ACCOUNT: ${{ vars.OSEMKA_AZURE_ACCOUNT }}
+          OSEMKA_AZURE_PROFILE: ${{ vars.OSEMKA_AZURE_PROFILE }}
+          OSEMKA_AZURE_PUBLISHER: ${{ vars.OSEMKA_AZURE_PUBLISHER }}
       - name: Smoke test of the packaged app
         working-directory: apps/desktop
         shell: bash

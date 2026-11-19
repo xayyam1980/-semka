@@ -1,11 +1,11 @@
 /* Design tokens from design/osemka-ui-spec.html. Light values on :root; dark follows the system
    (nativeTheme drives prefers-color-scheme) or an explicit data-theme on <html>. */
 :root {
-  --bg: #F5F8F8; --surface: #FFFFFF; --sunk: #EDF2F2; --ink: #1A2A2F; --muted: #56676C; --line: #D8E2E3; --grid: #E3ECEC;
-  --accent: #2C7673; --accent-ink: #FFFFFF; --accent-soft: #DDEFED;
+  --bg: #F5F8F8; --surface: #FFFFFF; --sunk: #EDF2F2; --ink: #1A2A2F; --muted: #56676C; --line: #D8E2E3; --field-line: #7A8B90; --grid: #E3ECEC;
+  --accent: #276B68; --accent-ink: #FFFFFF; --accent-soft: #DDEFED;
   --exam: #3A4787; --exam-soft: #E4E7F5;
-  --pl: #A94C63; --pl-soft: #F6E5EA; --ma: #336BAA; --ma-soft: #E2ECF7; --en: #367E4E; --en-soft: #E1F1E6;
-  --ok: #2B7A4B; --ok-soft: #E0F2E7; --bad: #AE4636; --bad-soft: #F8E6E2; --warn: #9A6614; --warn-soft: #F7EDD9;
+  --pl: #9C4459; --pl-soft: #F6E5EA; --ma: #336BAA; --ma-soft: #E2ECF7; --en: #2F7045; --en-soft: #E1F1E6;
+  --ok: #2B7A4B; --ok-soft: #E0F2E7; --bad: #AE4636; --bad-soft: #F8E6E2; --warn: #8A5A10; --warn-soft: #F7EDD9;
   --f-display: "Bricolage Grotesque Variable", "Segoe UI", system-ui, sans-serif;
   --f-ui: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
   --f-read: "Literata Variable", Georgia, "Times New Roman", serif;
@@ -16,7 +16,7 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #10181B; --surface: #172126; --sunk: #0C1315; --ink: #E2EBEB; --muted: #98AAAE; --line: #283A3F; --grid: #18262A;
+    --bg: #10181B; --surface: #172126; --sunk: #0C1315; --ink: #E2EBEB; --muted: #98AAAE; --line: #283A3F; --field-line: #5F767C; --grid: #18262A;
     --accent: #6CC0BA; --accent-ink: #0B1A1A; --accent-soft: #1A3533;
     --exam: #9AA6E8; --exam-soft: #222A49;
     --pl: #E592A6; --pl-soft: #3A2129; --ma: #82AAE8; --ma-soft: #1C2B40; --en: #7DC796; --en-soft: #1B3224;
@@ -25,7 +25,7 @@
   }
 }
 :root[data-theme="dark"] {
-  --bg: #10181B; --surface: #172126; --sunk: #0C1315; --ink: #E2EBEB; --muted: #98AAAE; --line: #283A3F; --grid: #18262A;
+  --bg: #10181B; --surface: #172126; --sunk: #0C1315; --ink: #E2EBEB; --muted: #98AAAE; --line: #283A3F; --field-line: #5F767C; --grid: #18262A;
   --accent: #6CC0BA; --accent-ink: #0B1A1A; --accent-soft: #1A3533;
   --exam: #9AA6E8; --exam-soft: #222A49;
   --pl: #E592A6; --pl-soft: #3A2129; --ma: #82AAE8; --ma-soft: #1C2B40; --en: #7DC796; --en-soft: #1B3224;

@@ -1,5 +1,6 @@
 // S12 Ustawienia: appearance and reading, exam accommodations, sound, AI, data.
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
+import type { AppInfo } from "../../../shared/ipc";
 import { SUBJECTS, type StudentSettings, type SubjectId, type Theme } from "@osemka/schema";
 import { AiSettingsCard } from "../components/AiSettingsCard";
 import { plural } from "../lib/format";
@@ -94,7 +95,7 @@ export function SettingsScreen() {
           </label>
           <div className="flex items-center gap-3">
             <span className="text-sm">A</span>
-            <input id="font-scale" type="range" min={0.9} max={1.4} step={0.05} value={settings.fontScale} onChange={(e) => void update({ fontScale: Number(e.target.value) })} className="w-64" />
+            <input id="font-scale" aria-valuetext={`${Math.round(settings.fontScale * 100)} %`} type="range" min={0.9} max={1.4} step={0.05} value={settings.fontScale} onChange={(e) => void update({ fontScale: Number(e.target.value) })} className="w-64" />
             <span className="text-xl">A</span>
           </div>
         </div>
@@ -118,7 +119,7 @@ export function SettingsScreen() {
         </label>
         <div className={`grid grid-cols-3 gap-4 ${settings.extendedTime ? "" : "opacity-50"}`}>
           {Object.values(SUBJECTS).map((s) => (
-            <label key={s.id} className="flex flex-col gap-1 text-[15px]">
+            <label key={s.id} className="flex flex-col gap-1 text-[0.9375rem]">
               {s.name}
               <span className="flex items-center gap-2">
                 <span className="tabular text-muted">{s.standardMinutes} →</span>
@@ -157,9 +158,9 @@ export function SettingsScreen() {
           <label htmlFor="default-volume" className="font-bold">
             Głośność domyślna: <span className="tabular">{Math.round(settings.defaultVolume * 100)} %</span>
           </label>
-          <input id="default-volume" type="range" min={0} max={1} step={0.05} value={settings.defaultVolume} onChange={(e) => void update({ defaultVolume: Number(e.target.value) })} className="w-48" />
+          <input id="default-volume" aria-valuetext={`${Math.round(settings.defaultVolume * 100)} %`} type="range" min={0} max={1} step={0.05} value={settings.defaultVolume} onChange={(e) => void update({ defaultVolume: Number(e.target.value) })} className="w-48" />
           <button className="btn ghost" onClick={() => testTone(settings.defaultVolume)} data-testid="test-tone">
-            ► Próba dźwięku
+            <span aria-hidden="true">►</span> Próba dźwięku
           </button>
         </div>
         <label className="flex items-center gap-2">
@@ -178,7 +179,7 @@ export function SettingsScreen() {
       <AiSettingsCard />
 
       <Card title="Dane" testid="settings-data">
-        <p className="text-[15px]">Historia prób jest zapisana tylko na tym komputerze. Możesz ją wyeksportować: JSON zawiera wszystkie odpowiedzi i oceny, CSV – jeden wiersz na próbę (do arkusza kalkulacyjnego).</p>
+        <p className="text-[0.9375rem]">Historia prób jest zapisana tylko na tym komputerze. Możesz ją wyeksportować: JSON zawiera wszystkie odpowiedzi i oceny, CSV – jeden wiersz na próbę (do arkusza kalkulacyjnego).</p>
         <div className="flex flex-wrap gap-2">
           <button className="btn ghost" onClick={() => void exportHistory("json")} data-testid="export-json">
             Eksportuj historię (JSON)
@@ -194,6 +195,42 @@ export function SettingsScreen() {
           {message}
         </p>
       </Card>
+
+      <AboutApp />
     </section>
   );
 }
+
+const PLATFORM: Record<string, string> = { win32: "Windows", darwin: "macOS", linux: "Linux" };
+
+/** Version and where the data lives: for a parent or a teacher helping out, so it sits here and not on the Pulpit. */
+function AboutApp() {
+  const [info, setInfo] = useState<AppInfo | null>(null);
+  useEffect(() => {
+    void window.osemka.appInfo().then(setInfo);
+  }, []);
+  return (
+      <details className="card rounded-[10px] border border-line bg-surface p-5">
+        <summary className="cursor-pointer text-sm font-bold text-muted">O aplikacji</summary>
+        {info ? (
+          <dl className="mt-3 grid grid-cols-[180px_1fr] gap-x-4 gap-y-1 text-[0.9375rem]">
+            <dt className="text-muted">System</dt>
+            <dd>{PLATFORM[info.platform] ?? info.platform}</dd>
+            <dt className="text-muted">Wersja</dt>
+            <dd className="tabular">
+              {info.appVersion} · Electron {info.electron}
+            </dd>
+            <dt className="text-muted">Uruchomienia</dt>
+            <dd className="tabular" data-testid="runs">
+              {info.runs}
+            </dd>
+            <dt className="text-muted">Dane</dt>
+            <dd className="tabular break-all text-sm">{info.dbFile}</dd>
+          </dl>
+        ) : (
+          <p className="text-muted">Ładowanie…</p>
+        )}
+      </details>
+  );
+}
+

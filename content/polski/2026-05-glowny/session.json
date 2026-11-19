@@ -44,7 +44,7 @@
         "pages": 29
       }
     ],
-    "contentVersion": "778225771d80af0f",
+    "contentVersion": "cc6644ed15890ed9",
     "status": "published"
   },
   "stimuli": [
@@ -246,7 +246,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.13"
+            "pl-46-I.1.13"
           ],
           "explanation": "Pierwsze stwierdzenie jest prawdziwe: Automateusz spotkał się z wynalazcą właśnie po to, by ten stworzył elektrycznego przyjaciela, dlatego wybieramy P. Drugie stwierdzenie jest fałszywe: Automateusz szukał w przyjacielu towarzysza i bliskiej duszy, a nie wsparcia podczas podróży – z tekstu nie wynika, by oczekiwał od niego pomocy w drodze, dlatego wybieramy F."
         }
@@ -254,7 +254,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-1.13"
+        "pl-46-I.1.13"
       ],
       "ref": {
         "source": "arkusz",
@@ -307,7 +307,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "Trzeba porównać każdą z podanych informacji z treścią fragmentu. W przytoczonym tekście nie ma wypowiedzi wynalazcy, w której wyjaśniałby on Automateuszowi, że od wagi elektrycznego przyjaciela zależy jego cena – narrator tylko wspomina, że zważono Wucha i wynalazca otrzymał zań brylancik. Pozostałe informacje znajdują potwierdzenie w przytoczonym fragmencie utworu. Dlatego informacją niezgodną z treścią fragmentu jest D."
         }
@@ -315,7 +315,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -368,7 +368,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-2.2"
+            "pl-46-I.2.2"
           ],
           "explanation": "W przytoczonym fragmencie narrator zaznacza, że wynalazca mówi do Automateusza na „ty” zgodnie z zasadami przyjętymi w świecie bajek – w tej bajkowej konwencji wszyscy tak się do siebie zwracają. Dlatego zdanie należy dokończyć odpowiedzią A: „przyjętymi w świecie bajek”. Pozostałe możliwości (komunikowanie się z robotami, zwracanie się do ludzi młodych, zasady wśród znajomych) nie wynikają z tekstu utworu."
         }
@@ -376,7 +376,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-2.2"
+        "pl-46-I.2.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -425,7 +425,7 @@
           },
           "skillTags": [
             "pl-gen-III",
-            "pl-78-1.4"
+            "pl-78-III.1.4"
           ],
           "exemplars": [
             {
@@ -466,7 +466,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-III",
-        "pl-78-1.4"
+        "pl-78-III.1.4"
       ],
       "ref": {
         "source": "arkusz",
@@ -514,7 +514,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.9"
+            "pl-46-I.1.9"
           ],
           "explanation": "W pierwszym akapicie fragmentu narrator ujawnia wnętrze bohatera – pisze, co Automateusz myśli, więc pierwsze stwierdzenie jest prawdziwe. Zdanie umieszczone w nawiasie nie jest wypowiedzią żadnego bohatera, lecz głosem narratora, który komentuje pierwszą wypowiedź wynalazcy, dlatego drugie stwierdzenie także jest prawdziwe. Oba stwierdzenia oznaczamy więc literą P, czyli kod odpowiedzi to PP."
         }
@@ -522,7 +522,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-1.9"
+        "pl-46-I.1.9"
       ],
       "ref": {
         "source": "arkusz",
@@ -570,7 +570,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-78-1.2"
+            "pl-78-II.1.2"
           ],
           "explanation": "Wyrazy brylant i brylancik mają ten sam rdzeń (brylant-), więc należą do tej samej rodziny wyrazów – pierwsze stwierdzenie jest prawdziwe. Formant -ik- w wyrazie brylancik i formant -enko- w wyrazie ziarenko pełnią tę samą funkcję: tworzą zdrobnienia wyrazów podstawowych (brylant, ziarno), więc drugie stwierdzenie również jest prawdziwe. Dlatego oba odpowiedzi to P."
         }
@@ -578,7 +578,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-II",
-        "pl-78-1.2"
+        "pl-78-II.1.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -628,7 +628,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-4.2"
+            "pl-46-II.4.2"
           ],
           "explanation": "Trzy przecinki trzeba wpisać tam, gdzie kończą się lub zaczynają wydzielone części zdania. Po wyrazie „towarzysza” kończy się zdanie podrzędne zaczynające się od „jeśli”, więc oddzielamy je przecinkiem od części „przyjdź do mnie”. W wyliczeniu przymiotników „estetyczny, poręczny i trwały” przecinek stawiamy między pierwszym a drugim wyrazem, bo spójnik „i” łączy dopiero dwie ostatnie pozycje. Po wyrazie „elektroprzyjaciół” kończy się część zdania zaczynająca się od imiesłowu „kupując”, którą też trzeba oddzielić przecinkiem od reszty."
         }
@@ -636,7 +636,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-4.2"
+        "pl-46-II.4.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -694,9 +694,9 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-1.12",
-            "pl-46-1.13",
-            "pl-46-4.2"
+            "pl-46-II.1.12",
+            "pl-46-II.1.13",
+            "pl-46-II.4.2"
           ],
           "explanation": "Pierwsze wypowiedzenie ma jedno orzeczenie („jest”), więc jest zdaniem pojedynczym. Spośród wypowiedzeń C i D tylko D ma jedno orzeczenie („masz”), dlatego również jest zdaniem pojedynczym; wypowiedzenie C ma dwa orzeczenia („reflektował”, „mógłbym odstąpić”) i jest zdaniem złożonym. Zatem poprawna odpowiedź to A i D."
         },
@@ -740,9 +740,9 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-1.12",
-            "pl-46-1.13",
-            "pl-46-4.2"
+            "pl-46-II.1.12",
+            "pl-46-II.1.13",
+            "pl-46-II.4.2"
           ],
           "exemplars": [
             {
@@ -778,9 +778,9 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-1.12",
-        "pl-46-1.13",
-        "pl-46-4.2"
+        "pl-46-II.1.12",
+        "pl-46-II.1.13",
+        "pl-46-II.4.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -794,7 +794,6 @@
       "maxPoints": 2,
       "instruction": "Przygotowujesz prezentację na temat przyjaźni i chcesz ją zilustrować zdjęciami nawiązującymi do treści *Małego Księcia* Antoine'a de Saint-Exupéry'ego.\n\n**Spośród poniższych zdjęć wybierz dwa i wyjaśnij związek każdego z nich z tematem przyjaźni przedstawionej w *Małym Księciu*.**\n\n1. ![Zdjęcie 1: złote kłosy zboża na polu.](stimulus:pl-2026-09-fig1)\n2. ![Zdjęcie 2: piaszczysta pustynia z wydmami.](stimulus:pl-2026-09-fig2)\n3. ![Zdjęcie 3: stado ptaków lecących na tle nieba.](stimulus:pl-2026-09-fig3)\n4. ![Zdjęcie 4: żmija zwinięta na trawie z uniesioną głową.](stimulus:pl-2026-09-fig4)\n5. ![Zdjęcie 5: czerwona róża z zielonymi liśćmi.](stimulus:pl-2026-09-fig5)\n6. ![Zdjęcie 6: lis siedzący na tle pnia drzewa.](stimulus:pl-2026-09-fig6)\n\nwww.pixabay.com",
       "stimulusIds": [
-        "pl-2026-tekst-1",
         "pl-2026-09-fig1",
         "pl-2026-09-fig2",
         "pl-2026-09-fig3",
@@ -841,14 +840,14 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-2.12"
+            "pl-46-I.2.12"
           ]
         }
       ],
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-2.12"
+        "pl-46-I.2.12"
       ],
       "ref": {
         "source": "arkusz",
@@ -860,10 +859,8 @@
       "sessionId": "polski-2026-05-glowny",
       "number": 10,
       "maxPoints": 2,
-      "instruction": "Przeczytaj poniższy fragment utworu.",
-      "stimulusIds": [
-        "pl-2026-tekst-1"
-      ],
+      "instruction": "Przeczytaj poniższy fragment utworu.\n\n> Drugi wynalazek był jeszcze bardziej pomysłowy. Wynalazca nazwał go „wiecznym piórem”. […] Wystarczy powiedzieć, że za jego pomocą można było pisać farbą wielkie i grube litery na wysokości trzech do czterech metrów. Ku pochwale Rudego stwierdzić należy, że „wieczne pióro” było niewielkie i łatwo dawało się ukryć nawet pod marynarką. Dodać trzeba, że w czasie pisania „wiecznym piórem” zbyteczne było maczanie go co chwila w farbie. Całe słowo pisało się jednym zamachem.",
+      "stimulusIds": [],
       "items": [
         {
           "id": "pl-2026-10-1",
@@ -898,9 +895,9 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.9",
+            "pl-46-I.1.9",
             "pl-gen-III",
-            "pl-78-1.4"
+            "pl-78-III.1.4"
           ]
         },
         {
@@ -936,9 +933,9 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.9",
+            "pl-46-I.1.9",
             "pl-gen-III",
-            "pl-78-1.4"
+            "pl-78-III.1.4"
           ],
           "exemplars": [
             {
@@ -971,9 +968,9 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-1.9",
+        "pl-46-I.1.9",
         "pl-gen-III",
-        "pl-78-1.4"
+        "pl-78-III.1.4"
       ],
       "ref": {
         "source": "arkusz",
@@ -1059,7 +1056,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-2.1"
+            "pl-78-I.2.1"
           ],
           "explanation": "Każdemu akapitowi należy przyporządkować to pytanie, na które odpowiedź znajduje się w tym akapicie. W akapicie 3. autor pisze o tym, czym Hawking pasjonował się w dzieciństwie, więc pasuje pytanie A. Akapit 5. zawiera odpowiedź na pytanie, czy kosmologia wyjaśniła już wszystkie zagadki wszechświata (E), a akapit 7. – na pytanie, co może zachęcić uczonych do podjęcia pracy naukowej (D)."
         }
@@ -1067,7 +1064,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-2.1"
+        "pl-78-I.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -1120,7 +1117,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-2.2"
+            "pl-46-I.2.2"
           ],
           "explanation": "Z tekstu wynika, że to połączenie wyobraźni i nauki pozwala lepiej poznawać świat, dlatego zgodne z treścią tekstu jest stwierdzenie A. Pozostałe odpowiedzi przeczą myślom autora: nie pisze on, że obecny stan wiedzy zniechęca do badań, że wpływ nauki i techniki na nasze życie będzie malał, ani że wkrótce odkryjemy wszystkie tajemnice wszechświata."
         }
@@ -1128,7 +1125,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-2.2"
+        "pl-46-I.2.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -1181,7 +1178,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-2.2"
+            "pl-46-I.2.2"
           ],
           "explanation": "W pierwszym akapicie tekstu autor pisze o Einsteinie jako o geniuszu wszech czasów, podkreślając jego odwagę i kreatywność w sposobie rozumowania, czyli umiejętność myślenia inaczej niż wszyscy i łączenia wyobraźni z nauką. Dlatego poprawna jest odpowiedź mówiąca o odwadze i kreatywności w sposobie rozumowania. Pozostałe odpowiedzi nie wynikają z treści pierwszego akapitu."
         }
@@ -1189,7 +1186,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-2.2"
+        "pl-46-I.2.2"
       ],
       "ref": {
         "source": "arkusz",
@@ -1238,7 +1235,7 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-2.4"
+            "pl-46-I.2.4"
           ],
           "exemplars": [
             {
@@ -1279,7 +1276,7 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-2.4"
+        "pl-46-I.2.4"
       ],
       "ref": {
         "source": "arkusz",
@@ -1292,9 +1289,7 @@
       "number": 15,
       "maxPoints": 2,
       "instruction": "Spośród lektur obowiązkowych wybierz tę, której bohater w swoim postępowaniu kierował się zasadą Najważniejsze, aby się nie poddawać. Podaj tytuł tej lektury i jej bohatera.\n\nUzasadnij swój wybór. W uzasadnieniu przywołaj sytuację z tej lektury, ilustrującą Twoją argumentację.\n\nUwaga! Lista lektur obowiązkowych znajduje się na stronach 3 i 4 tego arkusza egzaminacyjnego.\n\nTytuł lektury: …\nBohater lektury: …\nUzasadnienie: …",
-      "stimulusIds": [
-        "pl-2026-tekst-2"
-      ],
+      "stimulusIds": [],
       "items": [
         {
           "id": "pl-2026-15",
@@ -1334,9 +1329,9 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-46-1.9",
+            "pl-46-I.1.9",
             "pl-gen-III",
-            "pl-78-1.4"
+            "pl-78-III.1.4"
           ],
           "explanation": "Trzeba wskazać lekturę obowiązkową i bohatera, który mimo trudności nie rezygnował z działania, czyli kierował się zasadą, że najważniejsze jest, aby się nie poddawać. W uzasadnieniu należy przywołać konkretną sytuację z książki, np. Jacka Soplicę, który po popełnionej zbrodni przez lata pracował na odkupienie win, albo Zośkę podejmującego akcje sabotażowe w czasie wojny. Pełne 2 punkty dostaje odpowiedź, w której uzasadnienie jest zilustrowane taką sytuacją z lektury.",
           "exemplars": [
@@ -1376,9 +1371,9 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-46-1.9",
+        "pl-46-I.1.9",
         "pl-gen-III",
-        "pl-78-1.4"
+        "pl-78-III.1.4"
       ],
       "ref": {
         "source": "arkusz",
@@ -1426,7 +1421,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-1.8"
+            "pl-46-II.1.8"
           ],
           "explanation": "W wypowiedzeniu „Kształt przyszłości zależy od was” podkreślony wyraz „was” odpowiada na pytanie „od kogo?” (zależy od was), więc jest dopełnieniem, a nie podmiotem – pierwsze stwierdzenie jest fałszywe. Podkreślony wyraz „przyszłości” odpowiada na pytanie „czyj?” (kształt czego? – przyszłości), więc jest przydawką – drugie stwierdzenie jest prawdziwe. Dlatego poprawne oznaczenia to F dla pierwszego stwierdzenia i P dla drugiego."
         }
@@ -1434,7 +1429,7 @@
       "format": "zamkniete",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-1.8"
+        "pl-46-II.1.8"
       ],
       "ref": {
         "source": "arkusz",
@@ -1448,7 +1443,6 @@
       "maxPoints": 3,
       "instruction": "Zredaguj ogłoszenie o wykładzie na temat **Wybitni naukowcy**. Zachęć do udziału w tym wydarzeniu, używając dwóch argumentów, z których co najmniej jeden będzie nawiązywał do tematyki wykładu.\nUwaga: w ocenie wypowiedzi będzie brana pod uwagę poprawność językowa, ortograficzna i interpunkcyjna.\n\n**OGŁOSZENIE** ![Kolaż ilustracji matematycznych (m.in. znak sumy, wykresy, figury geometryczne, modele brył) umieszczony przy nagłówku OGŁOSZENIE w ramce przeznaczonej na odpowiedź.](stimulus:pl-2026-17-fig1)",
       "stimulusIds": [
-        "pl-2026-tekst-2",
         "pl-2026-17-fig1"
       ],
       "items": [
@@ -1498,9 +1492,9 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-46-4.1",
+            "pl-46-II.4.1",
             "pl-gen-III",
-            "pl-46-2.1"
+            "pl-46-III.2.1"
           ],
           "exemplars": [
             {
@@ -1523,9 +1517,9 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-II",
-        "pl-46-4.1",
+        "pl-46-II.4.1",
         "pl-gen-III",
-        "pl-46-2.1"
+        "pl-46-III.2.1"
       ],
       "ref": {
         "source": "arkusz",
@@ -1576,15 +1570,15 @@
           },
           "skillTags": [
             "pl-gen-I",
-            "pl-78-1.7",
+            "pl-78-I.1.7",
             "pl-gen-II",
-            "pl-46-4.1",
-            "pl-78-3.2",
+            "pl-46-II.4.1",
+            "pl-78-II.3.2",
             "pl-gen-III",
-            "pl-78-1.1",
-            "pl-78-2.1",
-            "pl-46-2.1",
-            "pl-78-1.2"
+            "pl-78-III.1.1",
+            "pl-78-III.2.1",
+            "pl-46-III.2.1",
+            "pl-78-III.1.2"
           ],
           "scoringNotes": [
             "Uwaga. Liczone są wszystkie wyrazy: samodzielne i niesamodzielne.",
@@ -1601,15 +1595,15 @@
       "format": "otwarte",
       "skillTags": [
         "pl-gen-I",
-        "pl-78-1.7",
+        "pl-78-I.1.7",
         "pl-gen-II",
-        "pl-46-4.1",
-        "pl-78-3.2",
+        "pl-46-II.4.1",
+        "pl-78-II.3.2",
         "pl-gen-III",
-        "pl-78-1.1",
-        "pl-78-2.1",
-        "pl-46-2.1",
-        "pl-78-1.2"
+        "pl-78-III.1.1",
+        "pl-78-III.2.1",
+        "pl-46-III.2.1",
+        "pl-78-III.1.2"
       ],
       "ref": {
         "source": "arkusz",

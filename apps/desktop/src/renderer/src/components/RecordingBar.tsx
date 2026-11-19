@@ -73,10 +73,10 @@ export function RecordingBar({ sessionId, asset, startedAtLocal, stimuli, taskNu
           if (!e.currentTarget.ended && elapsed() < (duration ?? Infinity)) void start();
         }}
       />
-      <span className="font-bold">🎧 Nagranie</span>
+      <span className="font-bold"><span aria-hidden="true">🎧</span> Nagranie</span>
       {blocked ? (
         <button className="btn primary" onClick={() => void start()} data-testid="recording-start">
-          ▶ Włącz nagranie
+          <span aria-hidden="true">▶</span> Włącz nagranie
         </button>
       ) : (
         <span className="text-sm">{done ? "zakończone" : now ? `zadanie ${now}` : duration ? "trwa" : "ładowanie…"}</span>
@@ -89,7 +89,7 @@ export function RecordingBar({ sessionId, asset, startedAtLocal, stimuli, taskNu
       </span>
       <label className="flex items-center gap-1 text-sm">
         Głośność
-        <input type="range" min={0} max={1} step={0.05} value={volume} onChange={(e) => setVolume(Number(e.target.value))} aria-label="Głośność nagrania" />
+        <input type="range" min={0} max={1} step={0.05} value={volume} onChange={(e) => setVolume(Number(e.target.value))} aria-label="Głośność nagrania" aria-valuetext={`${Math.round(volume * 100)} %`} />
       </label>
     </div>
   );

@@ -2,7 +2,7 @@
 // The same scoring function runs in the main process when the grade is saved.
 import type { Criterion, Rubric } from "@osemka/schema";
 import { scoreRubric, type RubricInput } from "@osemka/scoring";
-import { useMemo, useState } from "react";
+import { useId, useMemo, useState } from "react";
 import { plural } from "../lib/format";
 import { Rich, type RichContext } from "./Rich";
 
@@ -75,13 +75,14 @@ function CriterionBlock({ n, c, input, set, dyslexia, points, gated, ctx }: {
   gated: boolean;
   ctx: RichContext;
 }) {
+  const titleId = useId();
   return (
-    <section className={`rounded-md border border-line p-3 ${gated ? "opacity-50" : ""}`}>
+    <section className={`rounded-md border p-3 ${gated ? "border-dashed border-muted" : "border-line"}`} role="group" aria-labelledby={titleId}>
       <header className="mb-2 flex items-baseline gap-2">
-        <b>
+        <b id={titleId}>
           {n}. {c.name}
         </b>
-        <span className="tabular ml-auto text-sm text-muted">{points ?? "–"} / {c.max} pkt</span>
+        <span className="tabular ml-auto text-sm text-muted">{gated ? `0 / ${c.max} pkt (blokada)` : `${points ?? "–"} / ${c.max} pkt`}</span>
       </header>
 
       {c.type === "levels" && (
@@ -89,7 +90,7 @@ function CriterionBlock({ n, c, input, set, dyslexia, points, gated, ctx }: {
           {c.levels.map((l) => (
             <button key={l.points} className={`opt top ${input.levels?.[c.id] === l.points ? "sel" : ""}`} onClick={() => set("levels", c.id, l.points)} aria-pressed={input.levels?.[c.id] === l.points}>
               <span className="k">{l.points}</span>
-              <span className="flex flex-col gap-1 text-[14px]">
+              <span className="flex flex-col gap-1 text-[0.875rem]">
                 {l.paths.map((p, i) => (
                   <Rich key={i} text={p} ctx={ctx} inline />
                 ))}
@@ -100,7 +101,7 @@ function CriterionBlock({ n, c, input, set, dyslexia, points, gated, ctx }: {
       )}
 
       {c.type === "error_count" && (
-        <div className="flex flex-wrap items-center gap-3 text-[15px]">
+        <div className="flex flex-wrap items-center gap-3 text-[0.9375rem]">
           <label htmlFor={`err-${c.id}`}>Liczba błędów:</label>
           <input
             id={`err-${c.id}`}
@@ -133,7 +134,7 @@ function MatrixChoice({ c, value, onChange }: { c: Extract<Criterion, { type: "m
     if (r && k && c.table[r]?.[k] !== undefined) onChange({ row: r, col: k });
   };
   return (
-    <div className="flex flex-col gap-2 text-[14px]">
+    <div className="flex flex-col gap-2 text-[0.875rem]">
       <p className="text-muted">1. {label(c.rows)}</p>
       <div className="flex flex-col gap-1.5">
         {rows.map((r) => (
