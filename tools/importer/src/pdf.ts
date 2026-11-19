@@ -41,6 +41,8 @@ export async function openPdf(file: string) {
 }
 
 /** Text of every page, rebuilt into lines (items on the same baseline joined left to right). */
+const WATERMARK = /arkuszy znajdziesz|arkusze\.pl/i;
+
 export async function readPages(doc: PdfDoc): Promise<PdfPage[]> {
   const pages: PdfPage[] = [];
   for (let n = 1; n <= doc.numPages; n++) {
@@ -48,9 +50,13 @@ export async function readPages(doc: PdfDoc): Promise<PdfPage[]> {
     const vp = page.getViewport({ scale: 1 });
     const content = await page.getTextContent();
     const items: TextLine[] = [];
-    for (const it of content.items) {
-      if (!("str" in it) || !it.str.trim()) continue;
-      const [, , , , e, f] = it.transform as number[];
+    // Copies from arkusze.pl carry a rotated watermark ("Więcej arkuszy znajdziesz na stronie: arkusze.pl") whose
+    // pieces would otherwise end up inside task headings. On such pages rotated text and the phrase are dropped.
+    const raw = content.items.filter((it): it is Extract<typeof it, { str: string }> => "str" in it && !!it.str.trim());
+    const watermarked = raw.some((it) => WATERMARK.test(it.str));
+    for (const it of raw) {
+      const [, b, , , e, f] = it.transform as number[];
+      if (watermarked && (Math.abs(b ?? 0) > 0.01 || WATERMARK.test(it.str))) continue;
       items.push({ text: it.str, x: e ?? 0, y: vp.height - (f ?? 0) });
     }
     items.sort((a, b) => a.y - b.y || a.x - b.x);

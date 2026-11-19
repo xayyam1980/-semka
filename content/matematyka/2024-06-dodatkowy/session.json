@@ -1,0 +1,1425 @@
+{
+  "session": {
+    "id": "matematyka-2024-06-dodatkowy",
+    "subjectId": "matematyka",
+    "year": 2024,
+    "month": 6,
+    "term": "dodatkowy",
+    "formCode": "OMAP-100",
+    "versions": [
+      "X"
+    ],
+    "maxPoints": 25,
+    "taskOrder": [
+      "ma-2024-06d-01",
+      "ma-2024-06d-02",
+      "ma-2024-06d-03",
+      "ma-2024-06d-04",
+      "ma-2024-06d-05",
+      "ma-2024-06d-06",
+      "ma-2024-06d-07",
+      "ma-2024-06d-08",
+      "ma-2024-06d-09",
+      "ma-2024-06d-10",
+      "ma-2024-06d-11",
+      "ma-2024-06d-12",
+      "ma-2024-06d-13",
+      "ma-2024-06d-14",
+      "ma-2024-06d-15",
+      "ma-2024-06d-16",
+      "ma-2024-06d-17",
+      "ma-2024-06d-18",
+      "ma-2024-06d-19"
+    ],
+    "sources": [
+      {
+        "kind": "klucz",
+        "path": "Matematyka/Additional/Czerwiec 2024/matematyka-2024-czerwiec-egzamin-osmoklasisty-dodatkowy-odpowiedzi.pdf",
+        "sha256": "ec94f7f1fb80e423c1e230187de58de261d9506f4004cecfecd32e9b3e9c5008",
+        "pages": 20
+      },
+      {
+        "kind": "arkusz",
+        "path": "Matematyka/Additional/Czerwiec 2024/matematyka-2024-czerwiec-egzamin-osmoklasisty-dodatkowy.pdf",
+        "sha256": "eda641f42702fa869933cfa6ffa30464707e8a8564e42325b24aeac27d78d944",
+        "pages": 20
+      }
+    ],
+    "contentVersion": "8cf0b75df53be5a8",
+    "status": "published"
+  },
+  "stimuli": [
+    {
+      "id": "ma-2024-06d-01-fig1",
+      "kind": "figure",
+      "title": "Siatka kwadratów z czterema zapisanymi wartościami temperatury: −8 °C, −5 °C, −3 °C i −2 °C rozmieszczonymi w różnych polach.",
+      "asset": "assets/ma-2024-06d-01-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2024-06d-05-fig1",
+      "kind": "figure",
+      "title": "Oś liczbowa narysowana na kratce, na której zaznaczono sześć liczb całkowitych: k, m, 1, 3, t, p.",
+      "asset": "assets/ma-2024-06d-05-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2024-06d-11-fig1",
+      "kind": "figure",
+      "title": "Układ współrzędnych z siatką kwadratów jednostkowych i narysowanym trapezem EFGH o wierzchołkach w punktach kratowych.",
+      "asset": "assets/ma-2024-06d-11-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2024-06d-13-fig1",
+      "kind": "figure",
+      "title": "Kwadrat podzielony pięcioma pionowymi odcinkami na 6 jednakowych, pionowych prostokątów.",
+      "asset": "assets/ma-2024-06d-13-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2024-06d-16-fig1",
+      "kind": "figure",
+      "title": "Diagram słupkowy przedstawiający liczbę zawodników gry Kulki dla łącznej liczby zdobytych punktów: 0 punktów – 1 zawodnik, 10 punktów – 2 zawodników, 20 punktów – 4 zawodników, 30 punktów – 3 zawodników, 40 punktów – 1 zawodnik.",
+      "asset": "assets/ma-2024-06d-16-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "ma-2024-06d-18-fig1",
+      "kind": "figure",
+      "title": "Kwadratowy trawnik z prostokątnym kwietnikiem w środku i czterema szarymi ścieżkami prowadzącymi do kwietnika; po prawej stronie legenda: szary prostokąt opisany jako ścieżka.",
+      "asset": "assets/ma-2024-06d-18-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 16
+      }
+    },
+    {
+      "id": "ma-2024-06d-19-fig1",
+      "kind": "figure",
+      "title": "Szkic graniastosłupa prawidłowego czworokątnego z pogrubionymi krawędziami, których suma długości jest równa 27 cm.",
+      "asset": "assets/ma-2024-06d-19-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 17
+      }
+    },
+    {
+      "id": "ma-2024-06d-19-fig2",
+      "kind": "figure",
+      "title": "Szkic tego samego graniastosłupa prawidłowego czworokątnego z pogrubionymi krawędziami, których suma długości jest równa 30 cm.",
+      "asset": "assets/ma-2024-06d-19-fig2.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 17
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "ma-2024-06d-01",
+      "sessionId": "matematyka-2024-06-dodatkowy",
+      "number": 1,
+      "maxPoints": 1,
+      "instruction": "Adam zapisał, w przypadkowej kolejności, podane w programie radiowym wartości temperatury odnotowane pewnego zimowego dnia o godzinie 20 : 30 w Zakopanem, w Wiśle, w Karpaczu i w Szklarskiej Porębie (zobacz rysunek).\n\n![Siatka kwadratów z czterema zapisanymi wartościami temperatury: −8 °C, −5 °C, −3 °C i −2 °C rozmieszczonymi w różnych polach.](stimulus:ma-2024-06d-01-fig1)\n\nTemperatura w Karpaczu była o $6\\,^{\\circ}\\text{C}$ wyższa niż w Szklarskiej Porębie, a w Wiśle była niższa niż w Zakopanem.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nTemperaturę $-5\\,^{\\circ}\\text{C}$ zanotowano w",
+      "stimulusIds": [
+        "ma-2024-06d-01-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2024-06d-01",
+          "label": "1",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Szklarskiej Porębie."
+              },
+              {
+                "id": "B",
+                "text": "Zakopanem."
+              },
+              {
+                "id": "C",
+                "text": "Karpaczu."
+              },
+              {
+                "id": "D",
+                "text": "Wiśle."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-III.2"
+          ],
+          "explanation": "Spośród temperatur −8 °C, −5 °C, −3 °C, −2 °C różnica 6 °C zachodzi tylko między −2 °C a −8 °C, więc w Karpaczu było −2 °C, a w Szklarskiej Porębie −8 °C. Dla Wisły i Zakopanego pozostają −5 °C i −3 °C, a ponieważ w Wiśle było chłodniej niż w Zakopanem, to w Wiśle zanotowano −5 °C (w Zakopanem −3 °C). Dlatego odpowiedź D jest poprawna."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-III.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2024-06d-02",
+      "sessionId": "matematyka-2024-06-dodatkowy",
+      "number": 2,
+      "maxPoints": 1,
+      "instruction": "Dane są cztery liczby:\nI. $-9{,}25$ II. $-1{,}25$ III. $1{,}25$ IV. $9{,}25$\n\n**Do której z liczb I–IV należy dodać liczbę $(-4)$, aby otrzymać liczbę $(-5{,}25)$?**\n**Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-06d-02",
+          "label": "2",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "I"
+              },
+              {
+                "id": "B",
+                "text": "II"
+              },
+              {
+                "id": "C",
+                "text": "III"
+              },
+              {
+                "id": "D",
+                "text": "IV"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-V.2"
+          ],
+          "explanation": "Szukamy liczby, do której dodając $(-4)$, otrzymamy $(-5{,}25)$, czyli liczby $x$ spełniającej $x + (-4) = -5{,}25$. Stąd $x = -5{,}25 + 4 = -1{,}25$, a to jest liczba II. Dlatego poprawna odpowiedź to B."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-V.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2024-06d-03",
+      "sessionId": "matematyka-2024-06-dodatkowy",
+      "number": 3,
+      "maxPoints": 1,
+      "instruction": "**Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-06d-03",
+          "label": "3",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "$\\left(\\frac{1}{5}\\right)^{8} > \\left(\\frac{1}{5}\\right)^{6}$ [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "$2^{2} \\cdot \\left(\\frac{1}{2}\\right)^{2} = (-2)^{3} \\cdot \\left(-\\frac{1}{2}\\right)^{3}$ [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "F",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-VII.2",
+            "ma-IV.12"
+          ],
+          "explanation": "Pierwsze zdanie jest fałszywe: gdy podstawa potęgi jest mniejsza od 1 (tu $\\frac{1}{5}$), im większy wykładnik, tym mniejsza wartość potęgi, więc $\\left(\\frac{1}{5}\\right)^{8} < \\left(\\frac{1}{5}\\right)^{6}$. Drugie zdanie jest prawdziwe, bo lewa strona to $\\left(2 \\cdot \\frac{1}{2}\\right)^{2} = 1^{2} = 1$, a prawa strona to $\\left((-2) \\cdot \\left(-\\frac{1}{2}\\right)\\right)^{3} = 1^{3} = 1$. Dlatego poprawna odpowiedź to F, P."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-VII.2",
+        "ma-IV.12"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2024-06d-04",
+      "sessionId": "matematyka-2024-06-dodatkowy",
+      "number": 4,
+      "maxPoints": 1,
+      "instruction": "W pudełku są kulki czerwone, zielone i niebieskie. Kulek czerwonych jest trzy razy więcej niż zielonych i o dwie mniej niż niebieskich.\n\n**Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nW pudełku najmniej jest kulek [[A|B]].\n\nJeśli liczbę kulek zielonych oznaczymy przez $x$, to liczbę wszystkich kulek w pudełku opisuje wyrażenie [[C|D]].",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-06d-04",
+          "label": "4",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "niebieskich"
+              },
+              {
+                "id": "B",
+                "text": "zielonych"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "$7x-2$"
+              },
+              {
+                "id": "D",
+                "text": "$7x+2$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "B",
+                "reason": "D"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-IX.4",
+            "ma-X.2"
+          ],
+          "explanation": "Niech $x$ oznacza liczbę kulek zielonych. Kulek czerwonych jest trzy razy więcej niż zielonych, czyli $3x$, a kulek niebieskich jest o dwie więcej niż czerwonych (bo czerwonych jest o dwie mniej niż niebieskich), czyli $3x+2$. Najmniej jest więc kulek zielonych, dlatego pierwsza odpowiedź to B. Wszystkich kulek jest $x+3x+3x+2=7x+2$, dlatego druga odpowiedź to D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-IX.4",
+        "ma-X.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2024-06d-05",
+      "sessionId": "matematyka-2024-06-dodatkowy",
+      "number": 5,
+      "maxPoints": 1,
+      "instruction": "Na osi liczbowej zaznaczono sześć liczb całkowitych. Cztery z tych liczb oznaczono literami: $k$, $m$, $t$, $p$.\n\n![Oś liczbowa narysowana na kratce, na której zaznaczono sześć liczb całkowitych: k, m, 1, 3, t, p.](stimulus:ma-2024-06d-05-fig1)\n\n**Które z poniższych wyrażeń ma wartość równą $1$? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [
+        "ma-2024-06d-05-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2024-06d-05",
+          "label": "5",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$k + p$"
+              },
+              {
+                "id": "B",
+                "text": "$k + m + t$"
+              },
+              {
+                "id": "C",
+                "text": "$k + t$"
+              },
+              {
+                "id": "D",
+                "text": "$k + m + p$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-III.1"
+          ],
+          "explanation": "Z osi liczbowej odczytujemy wartości zaznaczonych liczb (jedna kratka to jedna jednostka): $k = -5$, $m = -1$, $t = 5$, $p = 7$. Sprawdzamy kolejne wyrażenia: $k + p = 2$, $k + m + t = -1$, $k + t = 0$, a $k + m + p = -5 + (-1) + 7 = 1$. Wartość równą $1$ ma więc wyrażenie z odpowiedzi D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-III.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2024-06d-06",
+      "sessionId": "matematyka-2024-06-dodatkowy",
+      "number": 6,
+      "maxPoints": 1,
+      "instruction": "**Czy liczba $27\\,733$ jest podzielna przez $3$? Wybierz odpowiedź A albo B i jej uzasadnienie spośród 1., 2. albo 3.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-06d-06",
+          "label": "6",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "Tak, ponieważ"
+              },
+              {
+                "id": "B",
+                "text": "Nie, ponieważ"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "1",
+                "text": "cyfrą jedności tej liczby jest $3$."
+              },
+              {
+                "id": "2",
+                "text": "suma cyfr tej liczby nie jest podzielna przez $3$."
+              },
+              {
+                "id": "3",
+                "text": "dwie ostatnie cyfry tej liczby tworzą liczbę podzielną przez $3$."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "B",
+                "reason": "2"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-II.7"
+          ],
+          "explanation": "Liczba jest podzielna przez 3 wtedy, gdy suma jej cyfr jest podzielna przez 3. Suma cyfr liczby 27 733 to $2+7+7+3+3=22$, a 22 nie dzieli się przez 3, więc ta liczba nie jest podzielna przez 3. Dlatego wybieramy odpowiedź B, a jako uzasadnienie – 2: suma cyfr tej liczby nie jest podzielna przez 3."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-II.7"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2024-06d-07",
+      "sessionId": "matematyka-2024-06-dodatkowy",
+      "number": 7,
+      "maxPoints": 1,
+      "instruction": "Kąty $\\alpha$, $\\beta$, $\\gamma$ pewnego trójkąta spełniają dwa warunki: $\\alpha + \\beta = 130^\\circ$ i $\\alpha + \\gamma = 120^\\circ$.\n\n**Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-06d-07",
+          "label": "7",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Kąt $\\alpha$ ma miarę $70^\\circ$."
+              },
+              {
+                "id": "2",
+                "text": "Różnica miar między kątem największym a kątem najmniejszym w tym trójkącie jest równa $20^\\circ$."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-XVI.3",
+            "ma-XVII.7"
+          ],
+          "explanation": "Suma kątów w trójkącie wynosi $180^\\circ$. Skoro $\\alpha + \\beta = 130^\\circ$, to trzeci kąt $\\gamma = 180^\\circ - 130^\\circ = 50^\\circ$, a skoro $\\alpha + \\gamma = 120^\\circ$, to $\\beta = 180^\\circ - 120^\\circ = 60^\\circ$. Stąd $\\alpha = 180^\\circ - 50^\\circ - 60^\\circ = 70^\\circ$, więc pierwsze zdanie jest prawdziwe. Największy kąt ma miarę $70^\\circ$, najmniejszy $50^\\circ$, a różnica tych miar to $70^\\circ - 50^\\circ = 20^\\circ$, więc drugie zdanie też jest prawdziwe."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-XVI.3",
+        "ma-XVII.7"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2024-06d-08",
+      "sessionId": "matematyka-2024-06-dodatkowy",
+      "number": 8,
+      "maxPoints": 1,
+      "instruction": "W pewnym opakowaniu są płatki owsiane z rodzynkami. Masa zawartości tego opakowania jest równa 320 g, przy czym 15% tej masy stanowią rodzynki. Ola zmieszała całą zawartość tego opakowania z 80 g orzechów.\n\n**Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nW mieszance przygotowanej przez Olę masa orzechów jest większa o [[A|B]] od masy rodzynek.\n\nMieszanka przygotowana przez Olę zawiera [[C|D]] orzechów.",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-06d-08",
+          "label": "8",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "32 g"
+              },
+              {
+                "id": "B",
+                "text": "48 g"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "20%"
+              },
+              {
+                "id": "D",
+                "text": "25%"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "A",
+                "reason": "C"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-XI.2",
+            "ma-XI.3"
+          ],
+          "explanation": "Masa rodzynek w opakowaniu to $15\\%$ z $320$ g, czyli $\\frac{15}{100} \\cdot 320 = 48$ g. Orzechy mają masę $80$ g, więc jest ich o $80 - 48 = 32$ g więcej niż rodzynek, dlatego pierwsza odpowiedź to A. Cała mieszanka waży $320 + 80 = 400$ g, a orzechy stanowią $\\frac{80}{400} = 20\\%$ tej masy, dlatego druga odpowiedź to C."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-XI.2",
+        "ma-XI.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2024-06d-09",
+      "sessionId": "matematyka-2024-06-dodatkowy",
+      "number": 9,
+      "maxPoints": 1,
+      "instruction": "Antek jest zawodnikiem szkolnej drużyny koszykówki. Od początku sezonu jego drużyna zagrała w sześciu meczach. Antek w tych sześciu meczach zdobył łącznie $84$ punkty.\n\n**Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-06d-09",
+          "label": "9",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Średnia liczby punktów zdobytych przez Antka w jednym meczu jest równa $14$. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Średnia liczby punktów zdobytych przez Antka w jednym meczu będzie równa $15$, jeśli w siódmym meczu zdobędzie on $21$ punktów. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-XXI.2"
+          ],
+          "explanation": "Średnia liczba punktów z sześciu meczów to $84 : 6 = 14$, więc pierwsze zdanie jest prawdziwe. Gdyby Antek w siódmym meczu zdobył $21$ punktów, miałby łącznie $84 + 21 = 105$ punktów w siedmiu meczach, czyli średnią $105 : 7 = 15$ – drugie zdanie też jest prawdziwe. Dlatego oba zdania oceniamy jako prawdziwe (P, P)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-XXI.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2024-06d-10",
+      "sessionId": "matematyka-2024-06-dodatkowy",
+      "number": 10,
+      "maxPoints": 1,
+      "instruction": "Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nLiczba $\\sqrt{6\\frac{1}{4}}$ jest równa [[A|B]].\n\nLiczba $\\sqrt[3]{0,064}$ jest równa [[C|D]].",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-06d-10",
+          "label": "10",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "$2\\frac{1}{2}$"
+              },
+              {
+                "id": "B",
+                "text": "$3\\frac{1}{2}$"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "0,4"
+              },
+              {
+                "id": "D",
+                "text": "0,8"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "A",
+                "reason": "C"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-VIII.1"
+          ],
+          "explanation": "Zamieniamy liczbę mieszaną na ułamek niewłaściwy: $6\\frac{1}{4}=\\frac{25}{4}$, a ponieważ $\\sqrt{\\frac{25}{4}}=\\frac{5}{2}=2\\frac{1}{2}$, pierwsza odpowiedź to A. Dla pierwiastka sześciennego zauważamy, że $0,4 \\cdot 0,4 \\cdot 0,4 = 0,064$, więc $\\sqrt[3]{0,064}=0,4$ i druga odpowiedź to C."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-VIII.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2024-06d-11",
+      "sessionId": "matematyka-2024-06-dodatkowy",
+      "number": 11,
+      "maxPoints": 1,
+      "instruction": "W układzie współrzędnych $(x, y)$ narysowano trapez $EFGH$. Wszystkie współrzędne wierzchołków $E$, $F$, $G$ i $H$ są liczbami całkowitymi.\n\n![Układ współrzędnych z siatką kwadratów jednostkowych i narysowanym trapezem EFGH o wierzchołkach w punktach kratowych.](stimulus:ma-2024-06d-11-fig1)\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nPunkty o współrzędnych $(1, 4)$ i $(2, 0)$ to wierzchołki",
+      "stimulusIds": [
+        "ma-2024-06d-11-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2024-06d-11",
+          "label": "11",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$G$ i $H$"
+              },
+              {
+                "id": "B",
+                "text": "$G$ i $E$"
+              },
+              {
+                "id": "C",
+                "text": "$F$ i $H$"
+              },
+              {
+                "id": "D",
+                "text": "$F$ i $E$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-XVIII.1"
+          ],
+          "explanation": "Odczytujemy z rysunku współrzędne wierzchołków trapezu: $E=(2, 0)$, $F=(4, 1)$, $G=(1, 4)$, $H=(0, 2)$. Punkt o współrzędnych $(1, 4)$ to wierzchołek $G$, a punkt o współrzędnych $(2, 0)$ to wierzchołek $E$. Dlatego poprawna jest odpowiedź B."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-XVIII.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2024-06d-12",
+      "sessionId": "matematyka-2024-06-dodatkowy",
+      "number": 12,
+      "maxPoints": 1,
+      "instruction": "Na planie miasta wykonanym w skali $1:5000$ odległość w linii prostej między punktem oznaczającym wejście do papugarni a punktem oznaczającym wejście do muzeum zabawek jest równa $8{,}4\\ \\text{cm}$.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nW terenie odległość między wejściami do tych obiektów jest w linii prostej równa",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-06d-12",
+          "label": "12",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$4{,}2\\ \\text{m}$"
+              },
+              {
+                "id": "B",
+                "text": "$42\\ \\text{m}$"
+              },
+              {
+                "id": "C",
+                "text": "$420\\ \\text{m}$"
+              },
+              {
+                "id": "D",
+                "text": "$4200\\ \\text{m}$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-VI.4"
+          ],
+          "explanation": "Skala $1:5000$ oznacza, że każdy $1\\ \\text{cm}$ na planie odpowiada $5000\\ \\text{cm}$ w terenie. Dlatego $8{,}4\\ \\text{cm}$ na planie odpowiada w terenie $8{,}4 \\cdot 5000 = 42000\\ \\text{cm}$. Zamieniając centymetry na metry: $42000\\ \\text{cm} = 420\\ \\text{m}$, więc poprawna jest odpowiedź C."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-VI.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2024-06d-13",
+      "sessionId": "matematyka-2024-06-dodatkowy",
+      "number": 13,
+      "maxPoints": 1,
+      "instruction": "Na rysunku przedstawiono kwadrat podzielony na 6 jednakowych prostokątów.\nObwód każdego z tych prostokątów jest równy 28.\n\n![Kwadrat podzielony pięcioma pionowymi odcinkami na 6 jednakowych, pionowych prostokątów.](stimulus:ma-2024-06d-13-fig1)\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nObwód kwadratu jest równy",
+      "stimulusIds": [
+        "ma-2024-06d-13-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2024-06d-13",
+          "label": "13",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "48"
+              },
+              {
+                "id": "B",
+                "text": "84"
+              },
+              {
+                "id": "C",
+                "text": "96"
+              },
+              {
+                "id": "D",
+                "text": "144"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-XVII.4"
+          ],
+          "explanation": "Kwadrat o boku $a$ podzielono na 6 jednakowych prostokątów, więc każdy prostokąt ma wymiary $a$ i $\\frac{a}{6}$. Obwód jednego prostokąta to $2\\cdot\\left(a+\\frac{a}{6}\\right)=\\frac{7a}{3}$, czyli $\\frac{7a}{3}=28$, skąd $a=12$. Obwód kwadratu wynosi więc $4\\cdot 12=48$."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-XVII.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2024-06d-14",
+      "sessionId": "matematyka-2024-06-dodatkowy",
+      "number": 14,
+      "maxPoints": 1,
+      "instruction": "Działka ma powierzchnię 200 arów. Warzywa zajmują 130 arów, jabłonie rosną na $\\frac{1}{5}$ pozostałej części działki, a resztę działki zajmują śliwy.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nŚliwy zajmują powierzchnię",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-06d-14",
+          "label": "14",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "14 arów."
+              },
+              {
+                "id": "B",
+                "text": "30 arów."
+              },
+              {
+                "id": "C",
+                "text": "56 arów."
+              },
+              {
+                "id": "D",
+                "text": "70 arów."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-V.5",
+            "ma-II.1"
+          ],
+          "explanation": "Najpierw obliczamy powierzchnię części działki bez warzyw: $200 - 130 = 70$ arów. Jabłonie rosną na $\\frac{1}{5}$ tej pozostałej części, czyli na $\\frac{1}{5} \\cdot 70 = 14$ arów. Śliwy zajmują resztę: $70 - 14 = 56$ arów, więc poprawna jest odpowiedź C."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-V.5",
+        "ma-II.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2024-06d-15",
+      "sessionId": "matematyka-2024-06-dodatkowy",
+      "number": 15,
+      "maxPoints": 1,
+      "instruction": "W pudełku są klocki w kształcie ostrosłupów trójkątnych i sześcianów. Klocków w kształcie ostrosłupów trójkątnych jest trzy razy więcej niż klocków sześciennych. Wszystkie klocki mają łącznie 720 krawędzi.\n\n**Ile klocków w kształcie sześcianu jest w tym pudełku? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-06d-15",
+          "label": "15",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "24"
+              },
+              {
+                "id": "B",
+                "text": "30"
+              },
+              {
+                "id": "C",
+                "text": "39"
+              },
+              {
+                "id": "D",
+                "text": "40"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-XIX.1"
+          ],
+          "explanation": "Ostrosłup trójkątny ma 6 krawędzi, a sześcian ma 12 krawędzi. Jeśli sześcianów jest $x$, to ostrosłupów trójkątnych jest $3x$, więc wszystkie klocki mają łącznie $6 \\cdot 3x + 12 \\cdot x = 30x$ krawędzi. Z równania $30x = 720$ otrzymujemy $x = 24$, czyli w pudełku są 24 sześciany."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-XIX.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2024-06d-16",
+      "sessionId": "matematyka-2024-06-dodatkowy",
+      "number": 16,
+      "maxPoints": 2,
+      "instruction": "Na diagramie przedstawiono rozkład liczby punktów zdobytych przez zawodników biorących udział w grze *Kulki*.\n\n![Diagram słupkowy przedstawiający liczbę zawodników gry Kulki dla łącznej liczby zdobytych punktów: 0 punktów – 1 zawodnik, 10 punktów – 2 zawodników, 20 punktów – 4 zawodników, 30 punktów – 3 zawodników, 40 punktów – 1 zawodnik.](stimulus:ma-2024-06d-16-fig1)\n\n**Oblicz prawdopodobieństwo, że losowo wybrany zawodnik zdobył w tej grze więcej niż 20 punktów. Zapisz obliczenia.**",
+      "stimulusIds": [
+        "ma-2024-06d-16-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2024-06d-16",
+          "label": "16",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Obliczymy liczbę wszystkich zawodników biorących udział w grze *Kulki*:\n$1 + 2 + 4 + 3 + 1 = 11$\nObliczymy liczbę wszystkich zawodników, którzy zdobyli ponad 20 punktów:\n$3 + 1 = 4$\nPrawdopodobieństwo, że losowo wybrany zawodnik zdobył ponad 20 punktów jest równe:\n$\\frac{4}{11}$\nOdpowiedź: Prawdopodobieństwo, że losowo wybrany zawodnik zdobył ponad 20 punktów jest równe $\\frac{4}{11}$."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia prawdopodobieństwa, że losowo wybrany zawodnik zdobył ponad 20 punktów, prawidłowe obliczenia **oraz** prawidłowy wynik $\\left(\\frac{4}{11}\\right)$."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia liczby wszystkich zawodników biorących udział w grze *Kulki*",
+                  "zapisanie liczby wszystkich zawodników biorących udział w grze *Kulki* (11) bez przedstawienia sposobu jej obliczenia,",
+                  "poprawny sposób obliczenia liczby zawodników, którzy zdobyli więcej niż 20 punktów w grze *Kulki*,",
+                  "zapisanie liczby zawodników, którzy zdobyli więcej niż 20 punktów w grze *Kulki* (4) bez przedstawienia sposobu jej obliczenia."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-XXI.1",
+            "ma-XX.2"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "Obliczymy liczbę wszystkich zawodników biorących udział w grze *Kulki*:\n$1 + 2 + 4 + 3 + 1 = 11$\nObliczymy liczbę wszystkich zawodników, którzy zdobyli ponad 20 punktów:\n$3 + 1 = 4$\nPrawdopodobieństwo, że losowo wybrany zawodnik zdobył ponad 20 punktów jest równe:\n$\\frac{4}{11}$\nOdpowiedź: Prawdopodobieństwo, że losowo wybrany zawodnik zdobył ponad 20 punktów jest równe $\\frac{4}{11}$.",
+              "ref": {
+                "source": "klucz",
+                "page": 11
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Jeżeli uczeń tylko zapisze, że prawdopodobieństwo jest równe $\\frac{4}{11}$, to otrzymuje 2 punkty."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-XXI.1",
+        "ma-XX.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "ma-2024-06d-17",
+      "sessionId": "matematyka-2024-06-dodatkowy",
+      "number": 17,
+      "maxPoints": 3,
+      "instruction": "Jednakowe kubki sprzedawane są w dwóch rodzajach opakowań – małych i dużych.\nW małym opakowaniu jest dwa razy mniej kubków niż w dużym.\nW dwóch dużych opakowaniach i sześciu małych znajduje się łącznie 140 kubków.\n\n**Oblicz, ile kubków jest w sześciu dużych opakowaniach. Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-06d-17",
+          "label": "17",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Oznaczymy liczbę kubków w dużym opakowaniu jako $d$ oraz liczbę kubków w małym opakowaniu jako $m$.\nW dużym opakowaniu jest dwa razy więcej kubków niż w małym opakowaniu, zatem:\n$d = 2m$, stąd $3d = 6m$\nW dwóch dużych opakowaniach i sześciu małych jest łącznie 140 kubków, zapiszemy i rozwiążemy równanie:\n$2d + 6m = 140$\n$2d + 3d = 140$\n$5d = 140$\n$d = 28$\nObliczymy liczbę kubków w sześciu dużych opakowaniach:\n$28 \\cdot 6 = 168$\nOdpowiedź: W sześciu dużych opakowaniach jest 168 kubków."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia liczby kubków w sześciu dużych opakowaniach, prawidłowe obliczenia **oraz** prawidłowy wynik liczbowy (168)",
+                  "zastosowanie metody prób i błędów – sprawdzenie wszystkich warunków zadania dla co najmniej dwóch różnych par liczb określających liczby kubków w małych i dużych opakowaniach, w tym odpowiednio dla liczb 14 i 28 **oraz** prawidłowe obliczenie liczby kubków w sześciu dużych opakowaniach (168),",
+                  "zastosowanie metody prób i błędów – sprawdzenie wszystkich warunków zadania tylko dla liczb 14 i 28 **oraz** prawidłowe obliczenie liczby kubków w sześciu dużych opakowaniach (168)."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "zapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia liczby kubków w dużym opakowaniu, np. $2d + 3d = 140$ lub zapisy równoważne",
+                  "zapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia liczby kubków w małym opakowaniu, np. $4m + 6m = 140$ lub zapisy równoważne,",
+                  "zastosowanie niepełnej metody prób i błędów – sprawdzenie wszystkich warunków zadania dla co najmniej dwóch różnych par liczb określających liczbę kubków w małych i dużych opakowaniach, w tym odpowiednio dla liczb 14 i 28 bez obliczenia poprawnej liczby kubków w sześciu dużych opakowaniach."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "zapisanie dwóch poprawnych zależności między liczbą kubków w małym i dużym opakowaniu, np. $d = 2m$ **oraz** $2d + 6m = 140$ albo $m = \\frac{1}{2}d$ **oraz** $2d + 6m = 140$",
+                  "zastosowanie niepełnej metody prób i błędów – sprawdzenie wszystkich warunków zadania dla co najmniej dwóch różnych par liczb określających liczbę kubków w małych i dużych opakowaniach, innych niż liczby 14 i 28,",
+                  "zastosowanie niepełnej metody prób i błędów – sprawdzenie wszystkich warunków zadania tylko dla liczb 14 i 28 bez wskazania poprawnej liczby kubków w dużym opakowaniu."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-XXII.5"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "**I sposób**\nOznaczymy liczbę kubków w dużym opakowaniu jako $d$ oraz liczbę kubków w małym opakowaniu jako $m$.\nW dużym opakowaniu jest dwa razy więcej kubków niż w małym opakowaniu, zatem:\n$d = 2m$, stąd $3d = 6m$\nW dwóch dużych opakowaniach i sześciu małych jest łącznie 140 kubków, zapiszemy i rozwiążemy równanie:\n$2d + 6m = 140$\n$2d + 3d = 140$\n$5d = 140$\n$d = 28$\nObliczymy liczbę kubków w sześciu dużych opakowaniach:\n$28 \\cdot 6 = 168$\nOdpowiedź: W sześciu dużych opakowaniach jest 168 kubków.",
+              "ref": {
+                "source": "klucz",
+                "page": 12
+              }
+            },
+            {
+              "points": 3,
+              "content": "**II sposób**\nW dwóch dużych opakowaniach i sześciu małych znajduje się łącznie 140 kubków:\n$2d + 6m = 140$\nW dużym opakowaniu jest dwa razy więcej kubków niż w małym:\n$d = 2m$\nZapiszemy równanie i obliczymy liczbę kubków w dużym opakowaniu:\n$4m + 6m = 140$\n$m = 14$\n$d = 2 \\cdot 14 = 28$\nObliczymy liczbę kubków w sześciu dużych opakowaniach:\n$6 \\cdot 28 = 168$\nOdpowiedź: W sześciu dużych opakowaniach jest 168 kubków.",
+              "ref": {
+                "source": "klucz",
+                "page": 13
+              }
+            },
+            {
+              "points": 3,
+              "content": "**III sposób**\nW małym opakowaniu jest dwa razy mniej kubków niż w dużym opakowaniu:\n$m = \\frac{1}{2}d$\nZapiszemy i rozwiążemy równanie:\n$2d + 6m = 140$\n$2d + 6 \\cdot \\frac{1}{2}d = 140$\n$2d + 3d = 140$\n$5d = 140$\n$d = 28$\nObliczymy liczbę kubków w sześciu dużych opakowaniach:\n$28 \\cdot 6 = 168$\nOdpowiedź: W sześciu dużych opakowaniach jest 168 kubków.",
+              "ref": {
+                "source": "klucz",
+                "page": 13
+              }
+            },
+            {
+              "points": 3,
+              "content": "**IV sposób**\nMetoda prób i błędów\n\n| Liczba kubków w dużym opakowaniu | 20 | 24 | 28 | 32 |\n| --- | --- | --- | --- | --- |\n| Liczba kubków w małym opakowaniu | 10 | 12 | 14 | 16 |\n| Liczba kubków w 2 dużych i 6 małych opakowaniach | $40 + 60 = 100$ | $48 + 72 = 120$ | $56 + 84 = 140$ | $64 + 96 = 160$ |\n| Wniosek | $100 < 140$ (za mało) | $120 < 140$ (za mało) | $140 = 140$ (dobrze) | $160 > 140$ (za dużo) |\n\nObliczymy liczbę kubków w sześciu dużych opakowaniach:\n$28 \\cdot 6 = 168$\nOdpowiedź: W sześciu dużych opakowaniach jest 168 kubków.",
+              "ref": {
+                "source": "klucz",
+                "page": 14
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-XXII.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 15
+      }
+    },
+    {
+      "id": "ma-2024-06d-18",
+      "sessionId": "matematyka-2024-06-dodatkowy",
+      "number": 18,
+      "maxPoints": 2,
+      "instruction": "Na trawniku w kształcie kwadratu o boku długości 9 metrów wytyczono kwietnik w kształcie prostokąta tak, że jego boki są równoległe do boków trawnika. Do kwietnika prowadzą cztery ścieżki. Dwie krótsze ścieżki mają po 1,5 m długości każda, a dwie dłuższe mają po 2,5 m długości każda (zobacz rysunek).\n\n![Kwadratowy trawnik z prostokątnym kwietnikiem w środku i czterema szarymi ścieżkami prowadzącymi do kwietnika; po prawej stronie legenda: szary prostokąt opisany jako ścieżka.](stimulus:ma-2024-06d-18-fig1)\n\n**Oblicz pole powierzchni wytyczonego kwietnika. Zapisz obliczenia.**",
+      "stimulusIds": [
+        "ma-2024-06d-18-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2024-06d-18",
+          "label": "18",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Oznaczymy na rysunku wymiary trawnika oraz długości ścieżek.\nObliczymy długość krótszego boku kwietnika:\n$9 - 2 \\cdot 2,5 = 4$ (m)\nObliczymy długość dłuższego boku kwietnika:\n$9 - 2 \\cdot 1,5 = 6$ (m)\nObliczymy pole powierzchni kwietnika:\n$P = 4 \\cdot 6 = 24$ (m²)\nOdpowiedź: Pole powierzchni kwietnika jest równe 24 m²."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia pola powierzchni wytyczonego kwietnika, prawidłowe obliczenia oraz prawidłowy wynik liczbowy zgodny z zastosowaną jednostką ($24\\ \\text{m}^2$)."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia długości boków kwietnika, np. zapisanie: $9 - 2 \\cdot 2,5$ oraz $9 - 2 \\cdot 1,5$ albo $6,5 - 2,5$ oraz $7,5 - 1,5$",
+                  "zapisanie zgodnie z oznaczeniami, że pole kwietnika jest różnicą pola trawnika o wymiarach $9\\ \\text{m} \\times 9\\ \\text{m}$ i pól czterech pozostałych prostokątów, na które można podzielić trawnik, np. $P_{\\text{kwietnika}} = 9^2 - (P_A + P_{A'} + P_B + P_{B'})$."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-XVII.5"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "I sposób\nOznaczymy na rysunku wymiary trawnika oraz długości ścieżek.\nObliczymy długość krótszego boku kwietnika:\n$9 - 2 \\cdot 2,5 = 4$ (m)\nObliczymy długość dłuższego boku kwietnika:\n$9 - 2 \\cdot 1,5 = 6$ (m)\nObliczymy pole powierzchni kwietnika:\n$P = 4 \\cdot 6 = 24$ (m²)\nOdpowiedź: Pole powierzchni kwietnika jest równe 24 m².",
+              "ref": {
+                "source": "klucz",
+                "page": 15
+              }
+            },
+            {
+              "points": 2,
+              "content": "II sposób\nTrawnik w kształcie kwadratu możemy podzielić na pięć prostokątów: $A$, $A'$, $B$, $B'$ oraz kwietnik.\nObliczymy długości dłuższych boków prostokątów $A$ i $A'$:\n$9 - 2,5 = 6,5$\nObliczymy pola prostokątów $A$ i $A'$:\n$P_A = P_{A'} = 6,5 \\cdot 1,5 = 9,75$ (m²)\nObliczymy długości dłuższych boków prostokątów $B$ i $B'$:\n$9 - 1,5 = 7,5$\nObliczymy pola prostokątów $B$ i $B'$:\n$P_B = P_{B'} = 7,5 \\cdot 2,5 = 18,75$ (m²)\nObliczymy pole powierzchni kwietnika:\n$P_{\\text{kwietnika}} = P_{\\text{trawnika}} - (P_A + P_{A'} + P_B + P_{B'})$\n$P_{\\text{kwietnika}} = 9^2 - (2 \\cdot 9,75 + 2 \\cdot 18,75)$\n$P_{\\text{kwietnika}} = 81 - (19,5 + 37,5) = 81 - 57 = 24$ (m²)\nOdpowiedź: Pole powierzchni kwietnika jest równe 24 m².",
+              "ref": {
+                "source": "klucz",
+                "page": 16
+              }
+            },
+            {
+              "points": 2,
+              "content": "III sposób\nTrawnik w kształcie kwadratu ma wymiary 9 m × 9 m. Wierzchołki tego kwadratu oznaczymy jako $ABCD$. Zaznaczymy punkty $E$ oraz $F$.\nObliczymy długość odcinka $EB$:\n$9 - 2,5 = 6,5$ (m)\nObliczymy długość odcinka $FC$:\n$9 - 1,5 = 7,5$ (m)\nObliczymy długości boków kwietnika:\n$|EB| - 2,5 = 6,5 - 2,5 = 4$ (m)\n$|FC| - 1,5 = 7,5 - 1,5 = 6$ (m)\nObliczymy pole powierzchni kwietnika:\n$P_{\\text{kwietnika}} = 4 \\cdot 6 = 24$ (m²)\nOdpowiedź: Pole powierzchni kwietnika jest równe 24 m².",
+              "ref": {
+                "source": "klucz",
+                "page": 17
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Nie ocenia się stosowania jednostki."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-XVII.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 16
+      }
+    },
+    {
+      "id": "ma-2024-06d-19",
+      "sessionId": "matematyka-2024-06-dodatkowy",
+      "number": 19,
+      "maxPoints": 3,
+      "instruction": "Dany jest graniastosłup prawidłowy czworokątny, w którym zielone ściany są kwadratami.\nSuma długości jego krawędzi zaznaczonych pogrubioną linią na rysunku 1. jest równa 27 cm.\nSuma długości jego krawędzi zaznaczonych pogrubioną linią na rysunku 2. jest równa 30 cm.\n\n![Szkic graniastosłupa prawidłowego czworokątnego z pogrubionymi krawędziami, których suma długości jest równa 27 cm.](stimulus:ma-2024-06d-19-fig1)\n\n![Szkic tego samego graniastosłupa prawidłowego czworokątnego z pogrubionymi krawędziami, których suma długości jest równa 30 cm.](stimulus:ma-2024-06d-19-fig2)\n\n**Oblicz objętość tego graniastosłupa. Zapisz obliczenia.**",
+      "stimulusIds": [
+        "ma-2024-06d-19-fig1",
+        "ma-2024-06d-19-fig2"
+      ],
+      "items": [
+        {
+          "id": "ma-2024-06d-19",
+          "label": "19",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "I sposób\nMożemy zauważyć, że w porównaniu z rysunkiem 1. na rysunku 2. zaznaczono pogrubioną linią o jedną więcej krótszą krawędź graniastosłupa, a więc krótsza krawędź ma długość równą $3$ cm, gdyż:\n$30\\,\\text{cm} - 27\\,\\text{cm} = 3\\,\\text{cm}$\nObliczymy sumę długości trzech krawędzi bocznych graniastosłupa zaznaczonych na rysunku 1. pogrubioną linią:\n$27 - (3 + 3) = 21$ (cm)\nZatem długość jednej krawędzi bocznej graniastosłupa jest równa:\n$21 : 3 = 7$ (cm)\nObliczymy objętość graniastosłupa:\n$V = 3^2 \\cdot 7 = 63$ ($\\text{cm}^3$)\nOdpowiedź: Objętość tego graniastosłupa jest równa $63\\,\\text{cm}^3$."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia objętości graniastosłupa, prawidłowe obliczenia oraz prawidłowy wynik liczbowy zgodny z zastosowaną jednostką objętości ($63\\,\\text{cm}^3$)."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia długości krawędzi podstawy oraz długości krawędzi bocznej graniastosłupa oraz poprawny sposób obliczenia objętości graniastosłupa (zgodnie z przyjętymi oznaczeniami lub otrzymanymi wartościami liczbowymi), np. zapisanie: $a = 30 - 27$ oraz $b = (27 - 2 \\cdot (30 - 27)) : 3$ oraz $V = a^2 \\cdot b$ lub zapisy równoważne",
+                  "ustalenie (np. zapisanie na rysunku) prawidłowych długości krawędzi podstawy oraz długości krawędzi bocznej graniastosłupa ($3$ cm i $7$ cm) oraz poprawny sposób obliczenia objętości graniastosłupa, tzn. zastosowanie wzoru na objętość i podstawienie wartości liczbowych do wzoru, np. zapisanie: $V = 3^2 \\cdot 7$ albo $V = a^2 \\cdot b$, gdzie $a = 3$ oraz $b = 7$."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "zapisanie poprawnych zależności między długościami krawędzi graniastosłupa, np. $2a + 3b = 27$ oraz $3a + 3b = 30$",
+                  "zapisanie różnicy między długościami krawędzi zaznaczonych na obu rysunkach oraz poprawny sposób obliczenia sumy długości krawędzi bocznych graniastosłupa zaznaczonych pogrubioną linią, np. zapisanie $30 - 27$ oraz $27 - (30 - 27) \\cdot 2$ lub zapisy równoważne,",
+                  "poprawny sposób obliczenia długości krawędzi podstawy oraz poprawny sposób obliczenia pola podstawy graniastosłupa, np. zapisanie $30 - 27 = a$ oraz $P_p = a^2$ lub zapisy równoważne,",
+                  "ustalenie (np. zapisanie na rysunku) poprawnych długości krawędzi podstawy i krawędzi bocznej graniastosłupa ($3$ cm i $7$ cm)."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-XIX.5"
+          ],
+          "explanation": "Porównując oba rysunki, widzimy, że na rysunku 2. pogrubiono o jedną krótszą krawędź (krawędź podstawy) więcej niż na rysunku 1., więc różnica sum $30\\,\\text{cm} - 27\\,\\text{cm} = 3\\,\\text{cm}$ to długość krawędzi podstawy $a = 3$. Z rysunku 1. wynika zależność $2a + 3b = 27$, czyli $2 \\cdot 3 + 3b = 27$, skąd $3b = 21$ i $b = 7$ cm (krawędź boczna). Objętość graniastosłupa prawidłowego czworokątnego to $V = a^2 \\cdot b = 3^2 \\cdot 7 = 63\\,\\text{cm}^3$.",
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "I sposób\nMożemy zauważyć, że w porównaniu z rysunkiem 1. na rysunku 2. zaznaczono pogrubioną linią o jedną więcej krótszą krawędź graniastosłupa, a więc krótsza krawędź ma długość równą $3$ cm, gdyż:\n$30\\,\\text{cm} - 27\\,\\text{cm} = 3\\,\\text{cm}$\nObliczymy sumę długości trzech krawędzi bocznych graniastosłupa zaznaczonych na rysunku 1. pogrubioną linią:\n$27 - (3 + 3) = 21$ (cm)\nZatem długość jednej krawędzi bocznej graniastosłupa jest równa:\n$21 : 3 = 7$ (cm)\nObliczymy objętość graniastosłupa:\n$V = 3^2 \\cdot 7 = 63$ ($\\text{cm}^3$)\nOdpowiedź: Objętość tego graniastosłupa jest równa $63\\,\\text{cm}^3$.",
+              "ref": {
+                "source": "klucz",
+                "page": 19
+              }
+            },
+            {
+              "points": 3,
+              "content": "II sposób\nObliczymy wymiary graniastosłupa. Oznaczymy:\n$a$ – długość krawędzi podstawy graniastosłupa,\n$b$ – długość krawędzi bocznej graniastosłupa\nObliczymy długość krawędzi podstawy graniastosłupa:\n$2a + 3b = 27$ oraz $3a + 3b = 30$\n$3a + 3b - 2a - 3b = 30 - 27$\n$a = 3$\nObliczymy długość krawędzi bocznej graniastosłupa:\n$2a + 3b = 27$\n$a = 3$\n$2 \\cdot 3 + 3b = 27$\n$3b = 27 - 6$\n$3b = 21$\n$b = 7$\nObliczymy pole podstawy graniastosłupa o krawędzi $a = 3$ cm:\n$P_p = 3^2 = 9$ ($\\text{cm}^2$)\nObliczymy objętość graniastosłupa:\n$V = 9 \\cdot 7 = 63$ ($\\text{cm}^3$)\nOdpowiedź: Objętość tego graniastosłupa jest równa $63\\,\\text{cm}^3$.",
+              "ref": {
+                "source": "klucz",
+                "page": 20
+              }
+            }
+          ],
+          "scoringNotes": [
+            "1. Jeżeli uczeń ustali nieprawidłowe długości dwóch krawędzi (np. zapisze na rysunku) bez zapisania sposobu obliczenia każdej z nich, to za całe rozwiązanie otrzymuje 0 punktów.",
+            "2. Jeżeli uczeń ustali nieprawidłową długość jednej krawędzi bez zapisania sposobu jej obliczenia, konsekwentnie obliczy długość drugiej krawędzi, korzystając z zależności wynikającej z warunków zadania i doprowadzi rozwiązanie zadania do końca\na) bez błędów rachunkowych, to otrzymuje 2 punkty.\nb) z błędami rachunkowymi, to otrzymuje 1 punkt.",
+            "3. Poprawność stosowania jednostek ocenia się tylko w wyniku końcowym.",
+            "4. Zapisanie niewłaściwej jednostki objętości lub brak jednostki objętości w wyniku końcowym traktuje się jako błąd rachunkowy."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-XIX.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 17
+      }
+    }
+  ],
+  "rubrics": [],
+  "audio": []
+}

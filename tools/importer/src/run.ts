@@ -114,13 +114,17 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
 
   const keyByNum = new Map(keySeg.spans.map((k) => [k.number, k]));
   // Reviewer corrections: { "6": "note" }. Committed with the content so a re-import reproduces them.
-  const sessionDirForNotes = join(opts.contentRoot, s.subjectId, `${s.year}-${String(s.month).padStart(2, "0")}-glowny`);
+  const sessionDirForNotes = join(opts.contentRoot, s.subjectId, `${s.year}-${String(s.month).padStart(2, "0")}-${s.term}`);
   const notesFile = join(sessionDirForNotes, "review-notes.json");
   const reviewNotes: Record<string, string> = existsSync(notesFile) ? JSON.parse(readFileSync(notesFile, "utf8")) : {};
+  // Hand-checked crops for figures the snapper gets wrong (grids, thin strips, framed boxes):
+  // { "<figure id>": { "page": 12, "box": [x0, y0, x1, y1] } }, box in fractions of the sheet page, like the AI's boxes.
+  const cropsFile = join(sessionDirForNotes, "figure-crops.json");
+  const fixedCrops: Record<string, { page: number; box: [number, number, number, number] }> = existsSync(cropsFile) ? JSON.parse(readFileSync(cropsFile, "utf8")) : {};
   const wanted = sheetSeg.spans.filter((t) => !opts.onlyTasks || opts.onlyTasks.includes(t.number));
   const textGroups = findTextGroups(sheetPages, sheetSeg.spans);
   const textOfTask = new Map(textGroups.flatMap((g) => g.tasks.map((n) => [n, g] as const)));
-  const textId = (g: { index: number }) => makeTaskId(s.subjectId, s.year, 0).replace(/-00$/, `-tekst-${g.index}`);
+  const textId = (g: { index: number }) => makeTaskId(s.subjectId, s.year, 0, s.month, s.term).replace(/-00$/, `-tekst-${g.index}`);
   // A task ends where the next reading text begins (e.g. task 10 must not include text 2's pages).
   for (const span of sheetSeg.spans) {
     const g = textGroups.find((x) => (x.page > span.page || (x.page === span.page && x.y > span.y)) && x.page <= span.toPage);
@@ -200,7 +204,7 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
 
   const { provider, cacheKey, description } = providerFromEnv(process.env);
   opts.log(`AI provider: ${description}`);
-  const sessionDir = join(opts.contentRoot, s.subjectId, `${s.year}-${String(s.month).padStart(2, "0")}-glowny`);
+  const sessionDir = join(opts.contentRoot, s.subjectId, `${s.year}-${String(s.month).padStart(2, "0")}-${s.term}`);
   mkdirSync(join(sessionDir, "assets"), { recursive: true });
 
   const tags = new Map<string, SkillTag>();
@@ -256,7 +260,8 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
         const labelRe = owner ? new RegExp(`^${owner.label.replace(".", "\\.")}\\.\\s`) : undefined;
         const anchorPage = labelRe ? srcPages.find((pg) => pg.page >= area.fromPage && pg.page <= area.toPage && pg.lines.some((l) => labelRe.test(l.text))) : undefined;
         const anchor = anchorPage && labelRe ? { page: anchorPage.page, y: anchorPage.lines.find((l) => labelRe.test(l.text))!.y } : undefined;
-        const snapped = snapFigure(srcPages, (pg) => pixels.get(pg)!, area, f.sheetPage, f.box, anchor);
+        const fixed = fixedCrops[f.stimulus.id];
+        const snapped = fixed ? { ...fixed, method: "fixed" as const } : snapFigure(srcPages, (pg) => pixels.get(pg)!, area, f.sheetPage, f.box, anchor);
         if (snapped.method === "ai-box") a.notes.push(`Figure ${f.stimulus.id}: no drawing found in the task's area, crop uses the AI's box. Check it.`);
         f.stimulus.ref = { ...f.stimulus.ref, page: snapped.page };
         writeFileSync(join(sessionDir, f.stimulus.asset!), await cropPng(await png(src.kind, snapped.page), snapped.box));
@@ -311,7 +316,7 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
       subjectId: s.subjectId,
       year: s.year,
       month: s.month,
-      term: "glowny",
+      term: s.term,
       ...examDate(sheetPages, s.year),
       formCode: formCode(sheetPages),
       versions: [...USABLE_VERSIONS],

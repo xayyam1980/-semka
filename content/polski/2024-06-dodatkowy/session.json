@@ -1,0 +1,2156 @@
+{
+  "session": {
+    "id": "polski-2024-06-dodatkowy",
+    "subjectId": "polski",
+    "year": 2024,
+    "month": 6,
+    "term": "dodatkowy",
+    "formCode": "OPOP-100",
+    "versions": [
+      "X"
+    ],
+    "maxPoints": 45,
+    "taskOrder": [
+      "pl-2024-06d-01",
+      "pl-2024-06d-02",
+      "pl-2024-06d-03",
+      "pl-2024-06d-04",
+      "pl-2024-06d-05",
+      "pl-2024-06d-06",
+      "pl-2024-06d-07",
+      "pl-2024-06d-08",
+      "pl-2024-06d-09",
+      "pl-2024-06d-10",
+      "pl-2024-06d-11",
+      "pl-2024-06d-12",
+      "pl-2024-06d-13",
+      "pl-2024-06d-14",
+      "pl-2024-06d-15",
+      "pl-2024-06d-16",
+      "pl-2024-06d-17",
+      "pl-2024-06d-18",
+      "pl-2024-06d-19",
+      "pl-2024-06d-20"
+    ],
+    "sources": [
+      {
+        "kind": "klucz",
+        "path": "Język polski/Additional/Czerwiec 2024/jezyk-polski-2024-czerwiec-egzamin-osmoklasisty-dodatkowy-odpowiedzi.pdf",
+        "sha256": "4f0037dfc8cc26d93e99b5fd3a538320d510212a3f8608ca569e235ccae3bcf0",
+        "pages": 24
+      },
+      {
+        "kind": "arkusz",
+        "path": "Język polski/Additional/Czerwiec 2024/jezyk-polski-2024-czerwiec-egzamin-osmoklasisty-dodatkowy.pdf",
+        "sha256": "01b3982362410b4bd6d6772f7eb3a3b56658d725f4f33c1e9ff1230422ed108b",
+        "pages": 24
+      }
+    ],
+    "contentVersion": "a3b8c4cc04432eb1",
+    "status": "published"
+  },
+  "stimuli": [
+    {
+      "id": "pl-2024-06d-tekst-1",
+      "kind": "text",
+      "title": "QUO VADIS",
+      "author": "Henryk Sienkiewicz",
+      "lines": [
+        "Wieczorem dnia tego Winicjusz, przechodząc przez Forum do domu, spostrzegł przy wejściu na Vicus Tuscus złoconą lektykę Petroniusza, niesioną przez ośmiu Bityńczyków, i zatrzymawszy ich znakiem ręki, zbliżył się do firanek.",
+        "– Obyś miał sen przyjemny i błogi! – zawołał, śmiejąc się na widok uśpionego Petroniusza.",
+        "– Ach, to ty! – rzekł, ocknąwszy się Petroniusz. – Tak, zdrzemnąłem się, bom noc spędził na Palatynie. Teraz wybrałem się, by sobie kupić coś do czytania do Ancjum… Co słychać? […]",
+        "– Byłeś na Palatynie, więc ja ciebie spytam, co słychać? Albo wiesz co? Odeślij lektykę i puszki z książkami, a pójdź do mnie. Pomówimy o Ancjum i o czymś jeszcze.",
+        "– Dobrze – odrzekł Petroniusz, wysuwając się z lektyki. – Musisz przecie wiedzieć, że pojutrze wybieramy się do Ancjum.",
+        "– Skądże bym miał wiedzieć?",
+        "– Na jakim ty świecie żyjesz? A więc ja pierwszy zwiastuję ci nowinę? Tak! Bądź gotów na pojutrze rano. Groch na oliwie nie pomógł, chustka na grubym karku nie pomogła¹ i Miedzianobrody ochrypł. Wobec tego nie ma mowy o zwłoce. Przeklina Rzym i jego powietrze, na czym świat stoi, rad by go z ziemią zrównać albo zniszczyć ogniem i chce mu się morza jak najprędzej. Powiada, że te zapachy, które wiatr niesie z wąskich uliczek, wtrącą go do grobu. Dziś czyniono wielkie ofiary we wszystkich świątyniach, by mu wrócił głos – i biada Rzymowi, a zwłaszcza senatowi, jeśli prędko nie wróci. […]",
+        "Tak rozmawiając, weszli do domu Winicjusza, który wesoło zawołał o wieczerzę, a następnie zwrócił się do Petroniusza i rzekł:",
+        "– Nie, mój drogi, świat musi się odrodzić.",
+        "– My go nie odrodzim – odpowiedział Petroniusz – choćby dlatego, że w czasach Nerona człowiek jest jako motyl: żyje w słońcu łaski, a przy pierwszym chłodnym powiewie ginie… choćby nie chciał! […] Ale mniejsza z tym. Czy pozwolisz mi posłać twoją lektykę po Eunice? Przeszła mi jakoś ochota do snu i chciałbym się weselić. Każ na wieczerzę przyjść cytrzyście, a potem pogadamy o Ancjum. […]",
+        "Winicjusz wydał rozkaz, by posłano po Eunice, ale oświadczył, że nad pobytem w Ancjum nie myśli sobie łamać głowy. Niech ją łamią ci, którzy nie umieją żyć inaczej, jak w promieniach łaski cezara. Świat nie kończy się na Palatynie, zwłaszcza dla tych, którzy co innego mają w sercu i w duszy.",
+        "I mówił to tak niedbale, z takim ożywieniem i tak wesoło, że wszystko to uderzyło Petroniusza, więc popatrzywszy na niego przez chwilę, rzekł:",
+        "– Co się z tobą dzieje? Tyś dziś taki, jak byłeś wówczas, gdyś jeszcze nosił złotą bullę na szyi².",
+        "– Jestem szczęśliwy – odrzekł Winicjusz. – Zaprosiłem cię do siebie umyślnie, by ci to powiedzieć.",
+        "– Co ci się zdarzyło?",
+        "– Coś takiego, czego bym nie odstąpił za imperium rzymskie.",
+        "To rzekłszy, siadł, wsparł ramię na poręczy krzesła, głowę na ramieniu i począł mówić z twarzą pełną uśmiechów i z jaśniejącym wzrokiem:",
+        "– Czy pamiętasz, jak byliśmy razem u Aulusa Plaucjusza i tam po raz pierwszy widziałeś boską dziewczynę, którąś sam nazwał jutrzenką i wiosną? […]",
+        "Petroniusz patrzył na niego z takim zdziwieniem, jakby chciał sprawdzić, czy głowa jego jest w porządku.",
+        "– Po jakiemu ty mówisz? – rzekł wreszcie. – Oczywiście, że pamiętam Ligię.",
+        "A Winicjusz rzekł:",
+        "– Jestem jej narzeczonym."
+      ],
+      "lineNumbering": "none",
+      "source": "Henryk Sienkiewicz, Quo vadis, Wrocław 2002.",
+      "footnotes": [
+        {
+          "mark": "1",
+          "text": "Groch na oliwie nie pomógł, chustka na grubym karku nie pomogła – Petroniusz przywołuje tu metody, jakimi leczono chore gardło Nerona."
+        },
+        {
+          "mark": "2",
+          "text": "Złota bulla na szyi – w starożytnym Rzymie ozdoba; amulet (bulla), jaki chłopcy do 16. roku życia nosili na szyi."
+        }
+      ],
+      "wordCount": 544,
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "pl-2024-06d-tekst-2",
+      "kind": "text",
+      "title": "Czy filozofia może być sposobem na życie?",
+      "author": "Michał Heller",
+      "lines": [
+        "Jeżeli stawiam takie pytanie, to przynajmniej dopuszczam myśl, że filozofia może być „sposobem na życie”. „Sposób na życie” to trochę zasłona dymna czegoś poważniejszego niż „sposób”: cel życia, sens życia, pasja życia. „Sposób” brzmi skromniej, bardziej na miarę naszych małych ambicji. Mam sposób na spędzenie wolnego czasu. Mam sposób na przechodzenie jezdni na ruchliwym skrzyżowaniu. Mogę mieć sposób na życie.",
+        "Wypada teraz zapytać: Co mam robić, ażeby filozofia stała się sposobem na moje życie? Jest kilka oczywistych metod, „ćwiczeń duchowych”. Są one oczywiste, ale by były skuteczne, trzeba je „dopuścić do głosu”, czyli praktykować.",
+        "Jednym z tych sposobów jest namysł. To zrozumiałe. Bez namysłu w ogóle nie ma filozofii, a jeżeli jest zapisana w jakichś książkach czy rozprawach, to bez namysłu pozostanie martwa. Żeby ożyła, trzeba ją zamienić w myśl. Namysł można inaczej nazwać rozmyślaniem czy medytacją¹ lub nawet użyć odważniejszego określenia: kontemplacja² filozoficzna.",
+        "Medytacja w naturalny sposób związana jest z lekturą. Zawód filozofa jest nie do pomyślenia bez systematycznej lektury. Dobry filozof nie rozstaje się z lekturą, a ona jest jego codziennym pożywieniem. Jakąś lekturę trzeba mieć pod ręką. Na nocnej szafce przy łóżku czy w torbie podróżnej w pociągu czy autobusie. Nie rozstawać się z książką – to dobra zasada. Nigdy nie wiadomo, kiedy sytuacja zmusi nas do „wytracania czasu”. Spóźniony pociąg, odwołany lot, nieprzewidziane okienko w wykładach. Książka wyciągnięta z teczki nie tylko dotrzyma towarzystwa, ale także skutecznie skróci czas oczekiwania.",
+        "W trakcie medytacji i lektury nie da się – i nie należy – unikać refleksji nad sobą. Filozofia i życie muszą się spotkać w tym, kto filozofuje. Filozofia może stać się sposobem na życie tylko pod warunkiem tego spotkania. Jednym z większych złudzeń, jakie grożą w tej dziedzinie, jest wyobrażenie, że filozofia może być źródłem nieustannych „natchnień”, przenikających nasze życie. Owszem, przemyślenia filozoficzne powinny wzbogacać nasze życie wewnętrzne, ale nie spełnią swojego zadania jako „sposobu na życie”, jeśli nie dostarczą nam ani właściwych kryteriów do oceny swojego postępowania, ani bodaj najogólniejszych wskazówek, jak należy postępować w przyszłości.",
+        "Jest rzeczą zrozumiałą, że na ocenie dotychczasowego postępowania i planowania przyszłości nie można poprzestać. Pracę myśli trzeba wcielać w życie. Życie filozoficzne – to być może brzmi nieco sztucznie, ale to na pewno coś, do czego warto dążyć. W pewnym sensie filozofia winna – przynajmniej o pół kroku – wyprzedzać życie. W takim sensie mianowicie, że to filozofia winna dostarczać kryteriów postępowania, a nie – usprawiedliwiać tylko nasze, nie zawsze pochwały godne, postępki. Jeżeli to ostatnie ma miejsce, filozofia nie jest sposobem na życie, lecz sposobem na hipokryzję³."
+      ],
+      "lineNumbering": "none",
+      "source": "Na podstawie: Michał Heller, Czy filozofia może być sposobem na życie? [w:] tegoż, Jak być uczonym, Kraków 2009.",
+      "footnotes": [
+        {
+          "mark": "1",
+          "text": "Medytacja – głębokie rozważanie jakiegoś problemu."
+        },
+        {
+          "mark": "2",
+          "text": "Kontemplacja – pogrążenie się w myślach."
+        },
+        {
+          "mark": "3",
+          "text": "Hipokryzja – fałszywość, dwulicowość, obłuda."
+        }
+      ],
+      "wordCount": 429,
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "pl-2024-06d-06-fig1",
+      "kind": "figure",
+      "title": "Cztery puste kratki połączone strzałkami skierowanymi w prawo, w które należy wpisać litery A, B, C, D we właściwej kolejności.",
+      "asset": "assets/pl-2024-06d-06-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 7
+      }
+    },
+    {
+      "id": "pl-2024-06d-10-fig1",
+      "kind": "figure",
+      "title": "Plakat filmowy do ekranizacji powieści Quo vadis: duży tytuł, postać Nerona z lirą, scena z areny z bykiem i lwami oraz portrety bohaterów z nazwiskami aktorów (Robert Taylor, Deborah Kerr, Peter Ustinov).",
+      "asset": "assets/pl-2024-06d-10-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 9
+      }
+    },
+    {
+      "id": "pl-2024-06d-16-fig1",
+      "kind": "figure",
+      "title": "Okładka książki Jana Kochanowskiego „Fraszki” – ciemnozielona okładka z żółtym napisem FRASZKI i portretem autora w obramowaniu.",
+      "asset": "assets/pl-2024-06d-16-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 13
+      }
+    },
+    {
+      "id": "pl-2024-06d-16-fig2",
+      "kind": "figure",
+      "title": "Okładka książki Antoine'a de Saint-Exupéry'ego „Mały Książę” – granatowa okładka z rysunkiem Małego Księcia i lisa siedzących na trawie wśród planet i gwiazd.",
+      "asset": "assets/pl-2024-06d-16-fig2.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 13
+      }
+    },
+    {
+      "id": "pl-2024-06d-19-fig1",
+      "kind": "figure",
+      "title": "Ozdobna ramka z nagłówkiem „OGŁOSZENIE” i wykropkowanymi liniami przeznaczonymi na napisanie treści ogłoszenia.",
+      "asset": "assets/pl-2024-06d-19-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 15
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "pl-2024-06d-01",
+      "sessionId": "polski-2024-06-dodatkowy",
+      "number": 1,
+      "maxPoints": 1,
+      "instruction": "Na podstawie przytoczonego fragmentu utworu oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.",
+      "stimulusIds": [
+        "pl-2024-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-06d-01",
+          "label": "1",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Winicjuszowi zależało na tym, aby często przebywać w otoczeniu Nerona."
+              },
+              {
+                "id": "2",
+                "text": "Podczas pobytu w domu Winicjusza Petroniusz był zaskoczony zachowaniem gospodarza."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "F",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-2.3"
+          ],
+          "explanation": "Kod FP oznacza, że pierwsze stwierdzenie jest fałszywe, a drugie prawdziwe. Winicjuszowi nie zależało na przebywaniu w otoczeniu Nerona – w rozmowie interesuje go tylko Ligia, którą nazywa swoją narzeczoną, dlatego pierwsze stwierdzenie jest fałszywe. Drugie jest prawdziwe, bo tekst wprost opisuje zdziwienie Petroniusza: patrzył on na Winicjusza „z takim zdziwieniem, jakby chciał sprawdzić, czy głowa jego jest w porządku”, czyli był zaskoczony zachowaniem gospodarza."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-2.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 5
+      }
+    },
+    {
+      "id": "pl-2024-06d-02",
+      "sessionId": "polski-2024-06-dodatkowy",
+      "number": 2,
+      "maxPoints": 1,
+      "instruction": "**Na podstawie przytoczonego fragmentu utworu oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "pl-2024-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-06d-02",
+          "label": "2",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Z wypowiedzi Petroniusza wynika, że cezar nie czuł się dobrze w Rzymie i wolał przebywać w Ancjum. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Z wypowiedzi Winicjusza wynika, że darzy on Petroniusza zaufaniem. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-2.7"
+          ],
+          "explanation": "Petroniusz w rozmowie wspomina o dolegliwościach Nerona i o tym, że cezar unika Rzymu, wybierając pobyt w Ancjum – dlatego pierwsze stwierdzenie jest prawdziwe. Winicjusz zwierza się Petroniuszowi z tego, że jest narzeczonym Ligii, a taki sekret powierza się tylko komuś, komu się ufa – dlatego także drugie stwierdzenie jest prawdziwe. Oba stwierdzenia oceniamy zatem jako prawdziwe (P, P)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-2.7"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 5
+      }
+    },
+    {
+      "id": "pl-2024-06d-03",
+      "sessionId": "polski-2024-06-dodatkowy",
+      "number": 3,
+      "maxPoints": 1,
+      "instruction": "**Na podstawie przytoczonego fragmentu utworu dokończ poniższe zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nW trakcie rozmowy z Winicjuszem Petroniusz nie wspomina o",
+      "stimulusIds": [
+        "pl-2024-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-06d-03",
+          "label": "3",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "stanie zdrowia Nerona."
+              },
+              {
+                "id": "B",
+                "text": "swoim pobycie na Palatynie."
+              },
+              {
+                "id": "C",
+                "text": "terminie wyjazdu do Ancjum."
+              },
+              {
+                "id": "D",
+                "text": "tytułach zakupionych książek."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-2.3"
+          ],
+          "explanation": "W przytoczonym fragmencie Petroniusz wspomina o sposobach leczenia chorego gardła Nerona (czyli o stanie jego zdrowia), o swoim pobycie na Palatynie oraz o planowanym wyjeździe do Ancjum. Nie mówi natomiast nic o tytułach zakupionych książek, dlatego poprawna jest odpowiedź D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-2.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 5
+      }
+    },
+    {
+      "id": "pl-2024-06d-04",
+      "sessionId": "polski-2024-06-dodatkowy",
+      "number": 4,
+      "maxPoints": 1,
+      "instruction": "Na podstawie przytoczonego fragmentu utworu oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.",
+      "stimulusIds": [
+        "pl-2024-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-06d-04",
+          "label": "4",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Winicjusz użył słów: Pomówimy […] o czymś jeszcze, ponieważ zamierzał poinformować Petroniusza o swoich zaręczynach. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Petroniusz zadał Winicjuszowi pytanie: Po jakiemu ty mówisz?, ponieważ był zaskoczony jego słowami. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-2.7"
+          ],
+          "explanation": "Winicjusz powiedział Petroniuszowi, że pomówią jeszcze o czymś innym, bo właśnie wtedy zamierzał poinformować go o swoich zaręczynach z Ligią – pierwsze stwierdzenie jest prawdziwe. Petroniusz zadał pytanie: Po jakiemu ty mówisz?, ponieważ zaskoczyły go nieoczekiwane słowa Winicjusza – drugie stwierdzenie też jest prawdziwe. Dlatego oba stwierdzenia oznaczamy literą P."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-2.7"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "pl-2024-06d-05",
+      "sessionId": "polski-2024-06-dodatkowy",
+      "number": 5,
+      "maxPoints": 2,
+      "instruction": "",
+      "stimulusIds": [
+        "pl-2024-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-06d-05-1",
+          "label": "5.1",
+          "maxPoints": 1,
+          "prompt": "**Wyjaśnij sens słów Petroniusza: *w czasach Nerona człowiek jest jako motyl: żyje w słońcu łaski, a przy pierwszym chłodnym powiewie ginie… choćby nie chciał!***",
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Słowa Petroniusza oznaczają, że za panowania Nerona ludzie byli całkowicie zależni od kaprysów władcy. Jeżeli cieszyli się łaską Nerona, żyli wygodnie. Jeśli łaskę utracili, spotykała ich kara."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "odpowiedź poprawna"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-1.7",
+            "pl-2.8"
+          ],
+          "explanation": "Petroniusz porównuje człowieka do motyla, który żyje tylko wtedy, gdy grzeje go słońce: „słońce łaski” to przychylność Nerona. Dopóki cesarz był łaskawy, ludzie żyli bezpiecznie i wygodnie, ale wystarczył jeden „chłodny powiew”, czyli utrata jego łaski, a człowiek ginął – nawet jeśli tego nie chciał. Poprawna odpowiedź musi więc wyjaśnić, że los ludzi zależał całkowicie od kaprysów władcy.",
+          "exemplars": [
+            {
+              "points": 1,
+              "content": "Słowa Petroniusza oznaczają, że za panowania Nerona ludzie byli całkowicie zależni od kaprysów władcy. Jeżeli cieszyli się łaską Nerona, żyli wygodnie. Jeśli łaskę utracili, spotykała ich kara.",
+              "ref": {
+                "source": "klucz",
+                "page": 4
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Błąd rzeczowy dotyczący lektur obowiązkowych skutkuje przyznaniem 0 punktów."
+          ]
+        },
+        {
+          "id": "pl-2024-06d-05-2",
+          "label": "5.2",
+          "maxPoints": 1,
+          "prompt": "**Odwołując się o znajomości całego utworu *Quo vadis*, uzasadnij trafność słów: *w czasach Nerona człowiek jest jako motyl: żyje w słońcu łaski, a przy pierwszym chłodnym powiewie ginie… choćby nie chciał!*, w odniesieniu do losów Petroniusza.**",
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Losy Petroniusza są potwierdzeniem tych słów. Neron postanowił ukarać Petroniusza, którego wcześniej uważał za swojego przyjaciela, ponieważ uznał, że nie jest mu już potrzebny. Postanowił skazać go na śmierć."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "odpowiedź poprawna"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-1.7",
+            "pl-2.8"
+          ],
+          "explanation": "Petroniusz przez długi czas żył „w słońcu łaski”: był przyjacielem i doradcą Nerona, korzystał z dostatku i bezpieczeństwa. Gdy Neron uznał, że Petroniusz nie jest mu już potrzebny, skazał go na śmierć – nastąpił „chłodny powiew”, który zgubił motyla. Dlatego losy Petroniusza potwierdzają trafność przytoczonych słów.",
+          "exemplars": [
+            {
+              "points": 1,
+              "content": "Losy Petroniusza są potwierdzeniem tych słów. Neron postanowił ukarać Petroniusza, którego wcześniej uważał za swojego przyjaciela, ponieważ uznał, że nie jest mu już potrzebny. Postanowił skazać go na śmierć.",
+              "ref": {
+                "source": "klucz",
+                "page": 4
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Błąd rzeczowy dotyczący lektur obowiązkowych skutkuje przyznaniem 0 punktów."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-1.7",
+        "pl-2.8"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "pl-2024-06d-06",
+      "sessionId": "polski-2024-06-dodatkowy",
+      "number": 6,
+      "maxPoints": 1,
+      "instruction": "Na podstawie całego utworu Quo vadis ułóż poniższe treści dotyczące losów Ligii zgodnie z porządkiem chronologicznym. Wpisz litery A, B, C, D w kratki we właściwej kolejności.\n\n![Cztery puste kratki połączone strzałkami skierowanymi w prawo, w które należy wpisać litery A, B, C, D we właściwej kolejności.](stimulus:pl-2024-06d-06-fig1)",
+      "stimulusIds": [
+        "pl-2024-06d-tekst-1",
+        "pl-2024-06d-06-fig1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-06d-06",
+          "label": "6",
+          "maxPoints": 1,
+          "response": {
+            "type": "matching",
+            "slots": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "options": [
+              {
+                "id": "A",
+                "text": "Ułaskawienie Ligii przez Nerona."
+              },
+              {
+                "id": "B",
+                "text": "Ukrycie Ligii przez Ursusa i chrześcijan."
+              },
+              {
+                "id": "C",
+                "text": "Zabranie dziewczyny z domu Aulusa Plaucjusza."
+              },
+              {
+                "id": "D",
+                "text": "Rozmowa dziewczyny z Winicjuszem podczas uczty w pałacu."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "C",
+                "2": "D",
+                "3": "B",
+                "4": "A"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-2.9"
+          ],
+          "explanation": "W powieści najpierw Ligia zostaje zabrana z domu Aulusa Plaucjusza i trafia na dwór Nerona (C). Potem, podczas uczty w pałacu, rozmawia z Winicjuszem (D). Następnie Ursus i chrześcijanie ukrywają ją (B). Na końcu, po wydarzeniach w arenie, Neron ułaskawia Ligię (A). Właściwa kolejność to więc C, D, B, A.",
+          "scoringNotes": [
+            "Błąd rzeczowy dotyczący lektur obowiązkowych skutkuje przyznaniem 0 punktów."
+          ]
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-2.9"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 7
+      }
+    },
+    {
+      "id": "pl-2024-06d-07",
+      "sessionId": "polski-2024-06-dodatkowy",
+      "number": 7,
+      "maxPoints": 2,
+      "instruction": "**Spośród lektur obowiązkowych – innych niż *Quo vadis* – wybierz tę, której bohater skorzystał z rad swojego rozmówcy. Podaj tytuł tej lektury oraz jej bohatera.**\n\n**Uzasadnij swój wybór. W uzasadnieniu przywołaj sytuację z lektury ilustrującą Twoją argumentację.**\n\n*Uwaga! Lista lektur obowiązkowych znajduje się na stronie 3 tego arkusza egzaminacyjnego.*\n\nTytuł utworu: …\n\nBohater: …\n\nUzasadnienie wyboru: …",
+      "stimulusIds": [
+        "pl-2024-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-06d-07",
+          "label": "7",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Tytuł utworu: *Mały Książę*\nBohater: *Mały Książę*\nUzasadnienie: *Lis udzielił Małemu Księciu rad dotyczących budowania relacji. Dzięki temu chłopiec zrozumiał, że jego róża jest wyjątkowa i postanowił do niej wrócić.*"
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "podanie tytułu i bohatera lektury obowiązkowej, poprawne uzasadnienie zilustrowane sytuacją z lektury."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "podanie tytułu i bohatera lektury obowiązkowej oraz poprawne uzasadnienie bez przywołania sytuacji z lektury",
+                  "podanie bohatera lektury obowiązkowej oraz poprawne uzasadnienie zilustrowane sytuacją z lektury."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-1.18"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "Tytuł utworu: *Mały Książę*\nBohater: *Mały Książę*\nUzasadnienie: *Lis udzielił Małemu Księciu rad dotyczących budowania relacji. Dzięki temu chłopiec zrozumiał, że jego róża jest wyjątkowa i postanowił do niej wrócić.*",
+              "ref": {
+                "source": "klucz",
+                "page": 5
+              }
+            }
+          ],
+          "scoringNotes": [
+            "W przypadku, gdy zdający wskaże poprawnie tytuł lektury, nie wskaże bohatera, ale uzasadnienie pozwala go zidentyfikować, otrzymuje maksymalnie 1 punkt.",
+            "W przypadku, gdy zdający wskaże poprawnie tytuł lektury i bohatera, ale błędnie uzasadni swój wybór, otrzymuje 0 punktów.",
+            "W przypadku, gdy zdający wskaże poprawnie tytuł lektury i bohatera, ale nie uzasadni swojego wyboru, otrzymuje 0 punktów.",
+            "Błąd rzeczowy dotyczący lektur obowiązkowych skutkuje przyznaniem 0 punktów."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-1.18"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 7
+      }
+    },
+    {
+      "id": "pl-2024-06d-08",
+      "sessionId": "polski-2024-06-dodatkowy",
+      "number": 8,
+      "maxPoints": 1,
+      "instruction": "Dokończ poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nZwiązek wyrazowy łamać sobie głowę użyty w wypowiedzeniu Winicjusz […] oświadczył, że nad pobytem w Ancjum nie myśli sobie łamać głowy ma znaczenie [[A|B]]. Aby zastąpić ten związek i nie zmienić sensu wypowiedzi, należy wybrać sformułowanie [[C|D]].",
+      "stimulusIds": [
+        "pl-2024-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-06d-08",
+          "label": "8",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "dosłowne"
+              },
+              {
+                "id": "B",
+                "text": "przenośne"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "zaprzątać sobie czymś głowę"
+              },
+              {
+                "id": "D",
+                "text": "chować głowę w piasek"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "B",
+                "reason": "C"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-2.8"
+          ],
+          "explanation": "Związek wyrazowy „łamać sobie głowę” nie oznacza tu dosłownego łamania głowy, lecz intensywne myślenie o czymś, dlatego w tym wypowiedzeniu został użyty w znaczeniu przenośnym (B). Sens wypowiedzi zachowuje tylko sformułowanie „zaprzątać sobie czymś głowę” (C), które znaczy tyle samo co „łamać sobie głowę”. Odpowiedź D („chować głowę w piasek”) oznacza udawanie, że problem nie istnieje, więc zmieniłaby sens zdania."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-2.8"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "pl-2024-06d-09",
+      "sessionId": "polski-2024-06-dodatkowy",
+      "number": 9,
+      "maxPoints": 1,
+      "instruction": "Uzupełnij poniższe zdanie. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nWyraz mądrość został utworzony od wyrazu podstawowego za pomocą [[A|B]], podobnie jak wyraz [[C|D]].",
+      "stimulusIds": [
+        "pl-2024-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-06d-09",
+          "label": "9",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "przedrostka"
+              },
+              {
+                "id": "B",
+                "text": "przyrostka"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "pomyśleć"
+              },
+              {
+                "id": "D",
+                "text": "rozmyślanie"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "B",
+                "reason": "D"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-1.7"
+          ],
+          "explanation": "Wyraz mądrość powstał od wyrazu podstawowego mądry przez dodanie przyrostka -ość, więc z pierwszej grupy wybieramy odpowiedź B. Szukamy teraz wyrazu utworzonego w ten sam sposób, czyli też za pomocą przyrostka. Wyraz rozmyślanie powstał od czasownika rozmyślać przez dodanie przyrostka -anie, natomiast pomyśleć to bezokolicznik utworzony od myśleć za pomocą przedrostka po-. Dlatego poprawna odpowiedź to BD."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-1.7"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "pl-2024-06d-10",
+      "sessionId": "polski-2024-06-dodatkowy",
+      "number": 10,
+      "maxPoints": 2,
+      "instruction": "Obejrzyj poniższy plakat do filmu będącego ekranizacją powieści *Quo vadis*.\n\n![Plakat filmowy do ekranizacji powieści Quo vadis: duży tytuł, postać Nerona z lirą, scena z areny z bykiem i lwami oraz portrety bohaterów z nazwiskami aktorów (Robert Taylor, Deborah Kerr, Peter Ustinov).](stimulus:pl-2024-06d-10-fig1)\n\nwww.imdb.com\n\n**Twórcy plakatu za pomocą różnych elementów graficznych nawiązali do treści utworu Henryka Sienkiewicza. Wybierz dwa elementy graficzne i wyjaśnij ich sens w kontekście ***Quo vadis***.**\n\nElement graficzny 1.:\n\nWyjaśnienie:\n\nElement graficzny 2.:\n\nWyjaśnienie:",
+      "stimulusIds": [
+        "pl-2024-06d-tekst-1",
+        "pl-2024-06d-10-fig1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-06d-10",
+          "label": "10",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "• Element graficzny 1.: Neron z lirą\nWyjaśnienie: Neron był niespełnionym artystą. Zmuszał poddanych do słuchania gry na lirze i recytacji poematów w jego wykonaniu.\n• Element graficzny 2.: byk na arenie\nWyjaśnienie: Do rogów byka przywiązana była Ligia, którą potem uwolnił Ursus. Pokonał on byka i ocalił życie swojej pani."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "wskazanie dwóch elementów graficznych i wyjaśnienie ich sensu w kontekście lektury."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "wskazanie jednego elementu graficznego i wyjaśnienie jego sensu w kontekście lektury."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-2.11"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "• Element graficzny 1.: Neron z lirą\nWyjaśnienie: Neron był niespełnionym artystą. Zmuszał poddanych do słuchania gry na lirze i recytacji poematów w jego wykonaniu.\n• Element graficzny 2.: byk na arenie\nWyjaśnienie: Do rogów byka przywiązana była Ligia, którą potem uwolnił Ursus. Pokonał on byka i ocalił życie swojej pani.",
+              "ref": {
+                "source": "klucz",
+                "page": 6
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Błąd rzeczowy dotyczący lektur obowiązkowych skutkuje przyznaniem 0 punktów."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-2.11"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 9
+      }
+    },
+    {
+      "id": "pl-2024-06d-11",
+      "sessionId": "polski-2024-06-dodatkowy",
+      "number": 11,
+      "maxPoints": 2,
+      "instruction": "Uzupełnij poniższy tekst tak, aby stanowił streszczenie tekstu **Czy filozofia może być sposobem na życie?** Michała Hellera.\n\nTematem tekstu Michała Hellera jest ………………………………………………………………\n\n………………………………………….……………………………………………....……..…..…… .\n\nAutor rozpoczyna od ………………………………….……………………….………………………\n\n…………………………………………..………………………………………………………........... .\n\nNastępnie zauważa, że .………….………………………………..………………..…………….......\n\n………………………………………….……………………………………………....……..…..……..\n\ni dochodzi do wniosku, że ..…………………………………………………………………………...\n\n………..…………………………………………………..……………………….……………………. .",
+      "stimulusIds": [
+        "pl-2024-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-06d-11",
+          "label": "11",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Tematem tekstu Michała Hellera jest refleksja na temat roli filozofii w naszym życiu. Autor rozpoczyna od wyliczenia warunków, które należy spełnić, aby filozofia stała się dla nas sposobem na życie. Następnie zauważa, że niezbędna jest medytacja oraz lektura książek i dochodzi do wniosku, że takie postępowanie może być pomocne w odnalezieniu właściwej drogi życiowej."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawne określenie tematu i tego, co na ten temat powiedziano w tekście; zachowanie właściwego poziomu uogólnienia."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawne określenie tematu i tego, co na ten temat powiedziano w tekście; zaburzony poziom uogólnienia."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-2.1",
+            "pl-gen-III",
+            "pl-2.3"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "Tematem tekstu Michała Hellera jest refleksja na temat roli filozofii w naszym życiu. Autor rozpoczyna od wyliczenia warunków, które należy spełnić, aby filozofia stała się dla nas sposobem na życie. Następnie zauważa, że niezbędna jest medytacja oraz lektura książek i dochodzi do wniosku, że takie postępowanie może być pomocne w odnalezieniu właściwej drogi życiowej.",
+              "ref": {
+                "source": "klucz",
+                "page": 7
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Uczeń otrzymuje 0 punktów, jeśli jego wypowiedź w całości składa się z fragmentów przepisanych z tekstu „Czy filozofia może być sposobem na życie?”."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-2.1",
+        "pl-gen-III",
+        "pl-2.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 11
+      }
+    },
+    {
+      "id": "pl-2024-06d-12",
+      "sessionId": "polski-2024-06-dodatkowy",
+      "number": 12,
+      "maxPoints": 1,
+      "instruction": "Na które z pytań odpowiedź znajdziesz w 4. akapicie tekstu? Wybierz właściwą odpowiedź spośród podanych.",
+      "stimulusIds": [
+        "pl-2024-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-06d-12",
+          "label": "12",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Co wspólnego z namysłem ma filozofia?"
+              },
+              {
+                "id": "B",
+                "text": "Dlaczego filozofia powinna wyprzedzać życie?"
+              },
+              {
+                "id": "C",
+                "text": "Po co filozofowie czytają niemal każdego dnia?"
+              },
+              {
+                "id": "D",
+                "text": "W jakich sytuacjach filozofia staje się sposobem na życie?"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-2.3"
+          ],
+          "explanation": "W 4. akapicie tekstu Michał Heller pisze o tym, że niezbędna jest medytacja oraz lektura książek, i wyjaśnia, po co filozofowie sięgają po książki niemal każdego dnia – czytanie służy namysłowi nad ważnymi problemami. Na pozostałe pytania (o związek filozofii z namysłem, o wyprzedzanie życia czy o sytuacje, w których filozofia staje się sposobem na życie) ten akapit nie odpowiada. Dlatego poprawna jest odpowiedź C."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-2.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 11
+      }
+    },
+    {
+      "id": "pl-2024-06d-13",
+      "sessionId": "polski-2024-06-dodatkowy",
+      "number": 13,
+      "maxPoints": 1,
+      "instruction": "Na podstawie przytoczonego tekstu oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.",
+      "stimulusIds": [
+        "pl-2024-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-06d-13",
+          "label": "13",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Michał Heller zachęca do wykorzystywania filozofii w celu usprawiedliwiania naszych uczynków. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Michał Heller uważa, że filozofia powinna być źródłem wiedzy na temat odpowiednich sposobów postępowania. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "F",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-2.3"
+          ],
+          "explanation": "Poprawna odpowiedź to FP: pierwsze stwierdzenie jest fałszywe, a drugie prawdziwe. Michał Heller wspomina o usprawiedliwianiu naszych postępków, ale właśnie po to, by to odrzucić: filozofia powinna dostarczać kryteriów postępowania, „a nie – usprawiedliwiać tylko nasze, nie zawsze pochwały godne, postępki”. Taką filozofię autor nazywa „sposobem na hipokryzję”, a nie sposobem na życie, więc nie zachęca do jej wykorzystywania w tym celu. Drugie stwierdzenie jest prawdziwe, bo według autora filozofia ma dostarczać właściwych kryteriów oceny postępowania i wskazówek, jak należy postępować w przyszłości."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-2.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "pl-2024-06d-14",
+      "sessionId": "polski-2024-06-dodatkowy",
+      "number": 14,
+      "maxPoints": 1,
+      "instruction": "O jakich zadaniach filozofa Michał Heller nie wspomina w swoim tekście? Wybierz właściwą odpowiedź spośród podanych.",
+      "stimulusIds": [
+        "pl-2024-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-06d-14",
+          "label": "14",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "nieustanne obcowanie z książką"
+              },
+              {
+                "id": "B",
+                "text": "tworzenie koncepcji filozoficznych"
+              },
+              {
+                "id": "C",
+                "text": "rozważania nad otaczającym światem"
+              },
+              {
+                "id": "D",
+                "text": "zastanawianie się nad swoim postępowaniem"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-2.3"
+          ],
+          "explanation": "W tekście Michał Heller pisze o nieustannym obcowaniu z książką (lektura jest „codziennym pożywieniem” filozofa), o namyśle, rozmyślaniu i medytacji oraz o refleksji nad sobą i ocenie własnego postępowania. Odpowiedzi A, C i D odpowiadają więc tym wątkom: C – namysłowi, medytacji i kontemplacji, D – zastanawianiu się nad swoim postępowaniem. Autor nie wspomina natomiast o tworzeniu koncepcji filozoficznych jako zadaniu filozofa. Dlatego właściwa jest odpowiedź B."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-2.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "pl-2024-06d-15",
+      "sessionId": "polski-2024-06-dodatkowy",
+      "number": 15,
+      "maxPoints": 1,
+      "instruction": "Przeczytaj poniższy tekst.\n\nW jednym z opracowań popularnonaukowych znalazła się informacja, że filozofia (z grec. – phileo ‘miłuje’, sophia ‘mądrość’) to umiłowanie mądrości. Jest to też najbardziej ogólna, racjonalna i krytyczna wiedza o wszystkim, co istnieje.\n\n**Czy w tekście Michała Hellera odnajdujesz potwierdzenie, że filozofia to umiłowanie mądrości? Uzasadnij swoją odpowiedź.**",
+      "stimulusIds": [
+        "pl-2024-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-06d-15",
+          "label": "15",
+          "maxPoints": 1,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Moim zdaniem w tekście Hellera jest potwierdzenie tej myśli. Heller pisze, że filozofia wymaga nieustannego rozmyślania i czytania, a to sprawia, że stajemy się mądrzejsi, a filozofia to przecież umiłowanie mądrości."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "odpowiedź poprawna"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-2.3",
+            "pl-2.5"
+          ],
+          "exemplars": [
+            {
+              "points": 1,
+              "content": "Moim zdaniem w tekście Hellera jest potwierdzenie tej myśli. Heller pisze, że filozofia wymaga nieustannego rozmyślania i czytania, a to sprawia, że stajemy się mądrzejsi, a filozofia to przecież umiłowanie mądrości.",
+              "ref": {
+                "source": "klucz",
+                "page": 9
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-2.3",
+        "pl-2.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "pl-2024-06d-16",
+      "sessionId": "polski-2024-06-dodatkowy",
+      "number": 16,
+      "maxPoints": 1,
+      "instruction": "Którą z książek przedstawionych poniżej zaproponujesz filozofowi? Uzasadnij swój wybór.\n\nKsiążka nr 1\n\n![Okładka książki Jana Kochanowskiego „Fraszki” – ciemnozielona okładka z żółtym napisem FRASZKI i portretem autora w obramowaniu.](stimulus:pl-2024-06d-16-fig1)\n\nKsiążka nr 2\n\n![Okładka książki Antoine'a de Saint-Exupéry'ego „Mały Książę” – granatowa okładka z rysunkiem Małego Księcia i lisa siedzących na trawie wśród planet i gwiazd.](stimulus:pl-2024-06d-16-fig2)\n\nKsiążka nr: …..\n\nUzasadnienie: …",
+      "stimulusIds": [
+        "pl-2024-06d-tekst-2",
+        "pl-2024-06d-16-fig1",
+        "pl-2024-06d-16-fig2"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-06d-16",
+          "label": "16",
+          "maxPoints": 1,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Każdemu filozofowi zaproponowałabym utwór pt. „Mały Książę”. Jest to książka, która zmusza czytelnika do zastanowienia się nad sobą i swoim postępowaniem. Może być więc źródłem filozoficznych rozważań."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "odpowiedź poprawna"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-2.18"
+          ],
+          "explanation": "Poprawna odpowiedź wskazuje jedną z książek i uzasadnia wybór tak, aby powiązać ją z zainteresowaniami filozofa. „Mały Książę” skłania czytelnika do zastanowienia się nad sobą i swoim postępowaniem, więc może być źródłem filozoficznych rozważań. „Fraszki” z kolei pokazują różne sytuacje życiowe i przemyślenia autora, dlatego ich lektura może być punktem wyjścia do filozoficznej refleksji. Wystarczy wybrać jedną książkę i wyjaśnić, dlaczego jej treść pasuje do poszukiwań mądrości.",
+          "exemplars": [
+            {
+              "points": 1,
+              "content": "Każdemu filozofowi zaproponowałabym utwór pt. „Mały Książę”. Jest to książka, która zmusza czytelnika do zastanowienia się nad sobą i swoim postępowaniem. Może być więc źródłem filozoficznych rozważań.",
+              "ref": {
+                "source": "klucz",
+                "page": 9
+              }
+            },
+            {
+              "points": 1,
+              "content": "Zaproponowałabym filozofowi „Fraszki”. To zbiór utworów przedstawiających różne sytuacje życiowe i przemyślenia autora. Ich lektura może być punktem wyjścia do filozoficznej refleksji.",
+              "ref": {
+                "source": "klucz",
+                "page": 9
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-2.18"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 13
+      }
+    },
+    {
+      "id": "pl-2024-06d-17",
+      "sessionId": "polski-2024-06-dodatkowy",
+      "number": 17,
+      "maxPoints": 1,
+      "instruction": "Wskaż wypowiedzenie podrzędnie złożone. Wybierz właściwą odpowiedź spośród podanych.",
+      "stimulusIds": [
+        "pl-2024-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-06d-17",
+          "label": "17",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Filozofia i życie muszą się spotkać w tym, kto filozofuje."
+              },
+              {
+                "id": "B",
+                "text": "Spóźniony pociąg, odwołany lot, nieprzewidziane okienko w wykładach."
+              },
+              {
+                "id": "C",
+                "text": "Dobry filozof nie rozstaje się z lekturą, a ona jest jego codziennym pożywieniem."
+              },
+              {
+                "id": "D",
+                "text": "Filozofia może stać się sposobem na życie tylko pod warunkiem tego spotkania."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-1.10"
+          ],
+          "explanation": "Wypowiedzenie podrzędnie złożone składa się z zdania głównego i co najmniej jednego zdania podrzędnego, wprowadzonego np. zaimkiem względnym. W odpowiedzi A część „kto filozofuje” jest zdaniem podrzędnym wobec części „Filozofia i życie muszą się spotkać w tym”. Odpowiedź B to równoważnik zdania (brak czasownika), odpowiedź C to wypowiedzenie współrzędnie złożone (zdania połączone spójnikiem „a”), a odpowiedź D to zdanie pojedyncze."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-1.10"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "pl-2024-06d-18",
+      "sessionId": "polski-2024-06-dodatkowy",
+      "number": 18,
+      "maxPoints": 1,
+      "instruction": "W którym z wyrazów „ó” okazuje się niewymienne? Wybierz właściwą odpowiedź spośród podanych.",
+      "stimulusIds": [
+        "pl-2024-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-06d-18",
+          "label": "18",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "pół"
+              },
+              {
+                "id": "B",
+                "text": "sposób"
+              },
+              {
+                "id": "C",
+                "text": "źródłem"
+              },
+              {
+                "id": "D",
+                "text": "podróżnej"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-4.1"
+          ],
+          "explanation": "Ó niewymienne to takie, którego w żadnej formie tego wyrazu (ani w wyrazach pokrewnych) nie można zamienić na o, e lub a. W wyrazie „źródłem” (źródło, źródła, źródeł) ó nigdy się nie zmienia, więc jest niewymienne. W pozostałych wyrazach ó jest wymienne: pół – połowa, sposób – sposoby, podróżnej – droga (wyraz pokrewny do „podróż”)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-4.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "pl-2024-06d-19",
+      "sessionId": "polski-2024-06-dodatkowy",
+      "number": 19,
+      "maxPoints": 3,
+      "instruction": "W imieniu przewodniczącego Szkolnego Koła Filozoficznego napisz ogłoszenie o spotkaniu ze znanym filozofem. Zachęć dwoma argumentami koleżanki i kolegów, aby przyszli na to spotkanie.\nUwaga: w ocenie wypowiedzi będzie brana pod uwagę poprawność językowa, ortograficzna i interpunkcyjna.\n\n![Ozdobna ramka z nagłówkiem „OGŁOSZENIE” i wykropkowanymi liniami przeznaczonymi na napisanie treści ogłoszenia.](stimulus:pl-2024-06d-19-fig1)",
+      "stimulusIds": [
+        "pl-2024-06d-tekst-2",
+        "pl-2024-06d-19-fig1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-06d-19",
+          "label": "19",
+          "maxPoints": 3,
+          "response": {
+            "type": "extended_text"
+          },
+          "key": {},
+          "scoring": {
+            "type": "rubric",
+            "rubrics": [
+              {
+                "topic": null,
+                "rubricId": "pl-2024-06d-19-t1"
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-4.1",
+            "pl-gen-III",
+            "pl-2.2"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "Koleżanki i Koledzy! 15 czerwca 2024 roku odbędzie się spotkanie ze znanym filozofem. Początek o godzinie 14.00. Widzimy się w szkolnej bibliotece. Dla uczestników wydarzenia przewidziano warsztaty filozoficzne. Nasz gość będzie też podpisywał swoją najnowszą książkę.\nCzekamy na Was!\nPrzewodnicząca Szkolnego Koła Filozoficznego",
+              "ref": {
+                "source": "klucz",
+                "page": 11
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Jeżeli uczeń uwzględnia 5 elementów ogłoszenia, a podaje tylko jeden argument, w kryterium „Treść i forma” otrzymuje 1 punkt.",
+            "Kategorie „Treść i forma” oraz „Poprawność językowa, ortograficzna i interpunkcyjna” oceniamy rozłącznie."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-4.1",
+        "pl-gen-III",
+        "pl-2.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 15
+      }
+    },
+    {
+      "id": "pl-2024-06d-20",
+      "sessionId": "polski-2024-06-dodatkowy",
+      "number": 20,
+      "maxPoints": 20,
+      "instruction": "Wybierz **jeden** z podanych tematów i napisz wypracowanie.\n\n- Pamiętaj o zachowaniu formy wypowiedzi wskazanej w temacie: napisz **rozprawkę** albo **opowiadanie**.\n- W wypracowaniu odwołaj się do **wybranej lektury obowiązkowej**. Lista lektur obowiązkowych znajduje się na stronie 3 tego arkusza egzaminacyjnego.\n- Innym utworem literackim w rozprawce może być także lektura obowiązkowa.\n- Twoja praca powinna liczyć co najmniej **200 wyrazów**.\n- Zapisz wypracowanie w wyznaczonym miejscu. Nie pisz na marginesie.\n- Pisz czytelnie.\n- Pamiętaj, że zabronione jest pisanie wypowiedzi obraźliwych, wulgarnych lub propagujących postępowanie niezgodne z prawem albo wypowiedzi aprobujących nieetyczne postępowanie bohatera.",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "pl-2024-06d-20",
+          "label": "20",
+          "maxPoints": 20,
+          "response": {
+            "type": "extended_text",
+            "minWords": 200,
+            "topics": [
+              {
+                "id": "1",
+                "text": "**Napisz rozprawkę, w której uzasadnisz, że warto dążyć do porozumienia między ludźmi. W argumentacji odwołaj się do wybranej lektury obowiązkowej oraz do innego utworu literackiego.**",
+                "form": "rozprawka"
+              },
+              {
+                "id": "2",
+                "text": "**Wyobraź sobie, że jeden z bohaterów literackich z lektury obowiązkowej przeniósł się do Twojego świata. Napisz opowiadanie o Waszej wspólnej przygodzie, podczas której bohater literacki pomógł Ci rozwiązać jakiś problem. Wypracowanie powinno dowodzić, że dobrze znasz wybraną lekturę obowiązkową.**",
+                "form": "opowiadanie"
+              }
+            ]
+          },
+          "key": {},
+          "scoring": {
+            "type": "rubric",
+            "rubrics": [
+              {
+                "topic": "1",
+                "rubricId": "pl-2024-06d-20-t1"
+              },
+              {
+                "topic": "2",
+                "rubricId": "pl-2024-06d-20-t2"
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-1.15",
+            "pl-gen-II",
+            "pl-3.2",
+            "pl-4.1",
+            "pl-gen-III",
+            "pl-1.1",
+            "pl-2.1",
+            "pl-1.2"
+          ],
+          "scoringNotes": [
+            "Uwaga. Liczone są wszystkie wyrazy: samodzielne i niesamodzielne.",
+            "Uwagi (Temat 1): Argumentowanie nie polega na streszczaniu utworów. Argumentacja musi być zgodna z poleceniem, wybraną lekturą obowiązkową oraz innym utworem literackim (może to być inna lektura obowiązkowa).",
+            "Uwagi (Temat 2): W opowiadaniu uwzględnione są następujące elementy: wspólna przygoda z bohaterem lektury obowiązkowej, potwierdzenie, że bohater pomógł narratorowi rozwiązać jakiś problem. Opowiadanie ma charakter twórczy, nie może być streszczeniem wybranej lektury obowiązkowej.",
+            "Uwaga: jeżeli za wypowiedź przyznano 0 pkt w kryterium Realizacja tematu wypowiedzi, we wszystkich pozostałych kryteriach przyznaje się 0 pkt.",
+            "Za błędy ortograficzne w przypadku uczniów ze specyficznymi trudnościami w uczeniu się uznaje się: błędy w zapisie wyrazów z u – ó, ż – rz, h – ch; łamanie zasady pisania wielką literą na początku zdania.",
+            "Jeżeli wypowiedź w całości jest nie na temat, egzaminator oceni ją na 0 punktów. Nie sprawdza i nie zaznacza żadnych błędów w pracy. Egzaminator umieszcza dopisek – „Praca nie na temat”.",
+            "Jeżeli w wypowiedzi uczeń w ogóle nie odwołał się do treści lektury obowiązkowej wskazanej w poleceniu, za całą wypowiedź egzaminator przyzna 0 punktów.",
+            "Jeżeli wypowiedź jest nieczytelna, egzaminator oceni ją na 0 punktów.",
+            "Jeżeli wypowiedź nie zawiera w ogóle rozwinięcia (np. uczeń napisał tylko wstęp), egzaminator przyzna 0 punktów w każdym kryterium.",
+            "Jeżeli wypowiedź zawiera 180 wyrazów lub mniej, jest oceniana wyłącznie w kryteriach: Realizacja tematu wypowiedzi, Elementy twórcze / Elementy retoryczne oraz Kompetencje literackie i kulturowe. W pozostałych kryteriach egzaminator przyzna 0 punktów."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-1.15",
+        "pl-gen-II",
+        "pl-3.2",
+        "pl-4.1",
+        "pl-gen-III",
+        "pl-1.1",
+        "pl-2.1",
+        "pl-1.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 16
+      }
+    }
+  ],
+  "rubrics": [
+    {
+      "id": "pl-2024-06d-19-t1",
+      "maxPoints": 3,
+      "criteria": [
+        {
+          "id": "tresc",
+          "name": "Treść i forma",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "treść zgodna z poleceniem, uwzględnione 2 argumenty; uwzględnionych 5 elementów dotyczących formy: kto ogłasza? komu ogłasza? co ogłasza? kiedy się odbywa? gdzie się odbywa?"
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "treść zgodna z poleceniem, uwzględnione 2 argumenty; uwzględnione 4 elementy dotyczące formy: kto ogłasza? ORAZ/ALBO komu ogłasza? ORAZ/ALBO co ogłasza? ORAZ/ALBO kiedy się odbywa? ORAZ/ALBO gdzie się odbywa?"
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "treść niezgodna z poleceniem ALBO treść zgodna z poleceniem, ale uwzględnione tylko 3 elementy dotyczące formy: kto ogłasza? ORAZ/ALBO komu ogłasza? ORAZ/ALBO co ogłasza? ORAZ/ALBO kiedy się odbywa? ORAZ/ALBO gdzie się odbywa?"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "poprawnosc",
+          "name": "Poprawność językowa, ortograficzna i interpunkcyjna",
+          "type": "error_count",
+          "max": 1,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 2,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 3,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        }
+      ],
+      "gates": []
+    },
+    {
+      "id": "pl-2024-06d-20-t1",
+      "maxPoints": 20,
+      "criteria": [
+        {
+          "id": "realizacja",
+          "name": "Realizacja tematu wypowiedzi",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\nWszystkie pozostałe elementy polecenia uwzględnione.\nWypowiedź w całości dotyczy problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\nNieuwzględniony jeden element polecenia (inny niż forma). ORAZ/LUB\nW pracy występują fragmenty niedotyczące problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Forma wypowiedzi niezgodna z formą wskazaną w poleceniu.",
+                "Nieuwzględnione co najmniej dwa elementy polecenia (inne niż forma)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "retoryczne",
+          "name": "Elementy retoryczne",
+          "type": "levels",
+          "max": 5,
+          "levels": [
+            {
+              "points": 5,
+              "paths": [
+                "Pogłębiona argumentacja.\nArgumenty odwołujące się np. do faktów, logiki, emocji, zilustrowane odpowiednimi przykładami ORAZ/LUB wykorzystanie przykładów w funkcji argumentacyjnej.\nArgumenty/przykłady uporządkowane, np. zhierarchizowane."
+              ]
+            },
+            {
+              "points": 4,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 3 pkt i niektóre na 5 pkt."
+              ]
+            },
+            {
+              "points": 3,
+              "paths": [
+                "Powierzchowna argumentacja; w wypowiedzi brak wnikliwości.\nNiektóre argumenty zilustrowane odpowiednimi przykładami ORAZ/LUB wykorzystanie przykładów w funkcji argumentacyjnej.\nArgumenty/przykłady częściowo uporządkowane."
+              ]
+            },
+            {
+              "points": 2,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 1 pkt i niektóre na 3 pkt."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Podjęta próba argumentowania.\nOgraniczenie do wyliczenia powierzchownie omówionych przykładów, powiązanych z problemem określonym w temacie."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompetencje",
+          "name": "Kompetencje literackie i kulturowe",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\nPoprawność rzeczowa."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\nDopuszczalne 1–2 błędy rzeczowe.",
+                "Częściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\nDopuszczalne 1–2 błędy rzeczowe.",
+                "Częściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\nDopuszczalne 1–2 błędy rzeczowe."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompozycja",
+          "name": "Kompozycja tekstu",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi.\nGraficznie wyodrębnione akapity.\nDopuszczalna 1 usterka w zakresie spójności ALBO logiki wypowiedzi, ALBO podziału wypowiedzi na funkcjonalne akapity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi.\nGraficznie wyodrębnione akapity.\nDopuszczalne łącznie 2–3 usterki w zakresie spójności ORAZ/ALBO logiki wypowiedzi."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "styl",
+          "name": "Styl",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Odpowiedni do treści i formy wypowiedzi.\nJednolity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Sporadyczne usterki w odpowiedniości ORAZ/LUB jednolitości stylu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia wymagań określonych na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jezyk",
+          "name": "Język",
+          "type": "matrix",
+          "max": 4,
+          "rows": "Zakres środków",
+          "cols": "Poprawność środków",
+          "table": {
+            "Szeroki zakres środków językowych": {
+              "Nie więcej niż 4 błędy językowe": 4,
+              "5–7 błędów językowych": 3,
+              "8–10 błędów językowych": 2,
+              "11–13 błędów językowych": 1,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Zadowalający zakres środków językowych": {
+              "Nie więcej niż 4 błędy językowe": 3,
+              "5–7 błędów językowych": 2,
+              "8–10 błędów językowych": 1,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Wąski zakres środków językowych": {
+              "Nie więcej niż 4 błędy językowe": 2,
+              "5–7 błędów językowych": 1,
+              "8–10 błędów językowych": 0,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            }
+          }
+        },
+        {
+          "id": "ortografia",
+          "name": "Ortografia",
+          "type": "error_count",
+          "max": 2,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 1,
+                "points": 2
+              },
+              {
+                "maxErrors": 3,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 3,
+                "points": 2
+              },
+              {
+                "maxErrors": 6,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "interpunkcja",
+          "name": "Interpunkcja",
+          "type": "error_count",
+          "max": 1,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 9,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 11,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        }
+      ],
+      "gates": [
+        {
+          "ifCriterion": "realizacja",
+          "equals": 0,
+          "thenAllOthers": 0
+        }
+      ]
+    },
+    {
+      "id": "pl-2024-06d-20-t2",
+      "maxPoints": 20,
+      "criteria": [
+        {
+          "id": "realizacja",
+          "name": "Realizacja tematu wypowiedzi",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\nWszystkie pozostałe elementy polecenia uwzględnione.\nWypowiedź w całości dotyczy problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\nNieuwzględniony jeden element polecenia (inny niż forma). ORAZ/LUB\nW pracy występują fragmenty niedotyczące problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Forma wypowiedzi niezgodna z formą wskazaną w poleceniu.",
+                "Nieuwzględnione co najmniej dwa elementy polecenia (inne niż forma)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tworcze",
+          "name": "Elementy twórcze",
+          "type": "levels",
+          "max": 5,
+          "levels": [
+            {
+              "points": 5,
+              "paths": [
+                "Funkcjonalna narracja.\nLogiczny układ zdarzeń.\nUrozmaicona fabuła, w tym funkcjonalne wykorzystanie co najmniej 6 spośród następujących elementów: opis, charakterystyka bohatera, czas akcji, miejsce akcji, zwrot akcji, puenta, punkt kulminacyjny, dialog, monolog, retrospekcja.\nTwórcze wykorzystanie treści lektury."
+              ]
+            },
+            {
+              "points": 4,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 3 pkt i niektóre na 5 pkt."
+              ]
+            },
+            {
+              "points": 3,
+              "paths": [
+                "Funkcjonalna narracja.\nLogiczny układ zdarzeń.\nProsta fabuła, w tym funkcjonalne wykorzystanie co najmniej 4 spośród następujących elementów: opis, charakterystyka bohatera, czas akcji, miejsce akcji, zwrot akcji, puenta, punkt kulminacyjny, dialog, monolog, retrospekcja."
+              ]
+            },
+            {
+              "points": 2,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 1 pkt i niektóre na 3 pkt."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Narracja częściowo funkcjonalna.\nDopuszczalne usterki w logicznym układzie zdarzeń.\nProsta fabuła."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompetencje",
+          "name": "Kompetencje literackie i kulturowe",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\nPoprawność rzeczowa."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\nDopuszczalne 1–2 błędy rzeczowe.",
+                "Częściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\nDopuszczalne 1–2 błędy rzeczowe.",
+                "Częściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\nDopuszczalne 1–2 błędy rzeczowe."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompozycja",
+          "name": "Kompozycja tekstu",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi.\nGraficznie wyodrębnione akapity.\nDopuszczalna 1 usterka w zakresie spójności ALBO logiki wypowiedzi, ALBO podziału wypowiedzi na funkcjonalne akapity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi.\nGraficznie wyodrębnione akapity.\nDopuszczalne łącznie 2–3 usterki w zakresie spójności ORAZ/ALBO logiki wypowiedzi."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "styl",
+          "name": "Styl",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Odpowiedni do treści i formy wypowiedzi.\nJednolity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Sporadyczne usterki w odpowiedniości ORAZ/LUB jednolitości stylu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia wymagań określonych na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jezyk",
+          "name": "Język",
+          "type": "matrix",
+          "max": 4,
+          "rows": "Zakres środków",
+          "cols": "Poprawność środków",
+          "table": {
+            "Szeroki zakres środków językowych": {
+              "Nie więcej niż 4 błędy językowe": 4,
+              "5–7 błędów językowych": 3,
+              "8–10 błędów językowych": 2,
+              "11–13 błędów językowych": 1,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Zadowalający zakres środków językowych": {
+              "Nie więcej niż 4 błędy językowe": 3,
+              "5–7 błędów językowych": 2,
+              "8–10 błędów językowych": 1,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Wąski zakres środków językowych": {
+              "Nie więcej niż 4 błędy językowe": 2,
+              "5–7 błędów językowych": 1,
+              "8–10 błędów językowych": 0,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            }
+          }
+        },
+        {
+          "id": "ortografia",
+          "name": "Ortografia",
+          "type": "error_count",
+          "max": 2,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 1,
+                "points": 2
+              },
+              {
+                "maxErrors": 3,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 3,
+                "points": 2
+              },
+              {
+                "maxErrors": 6,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "interpunkcja",
+          "name": "Interpunkcja",
+          "type": "error_count",
+          "max": 1,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 9,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 11,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        }
+      ],
+      "gates": [
+        {
+          "ifCriterion": "realizacja",
+          "equals": 0,
+          "thenAllOthers": 0
+        }
+      ]
+    }
+  ],
+  "audio": []
+}

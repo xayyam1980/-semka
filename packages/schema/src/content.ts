@@ -8,7 +8,8 @@ export type SubjectId = z.infer<typeof SubjectId>;
 export const SheetVersion = z.enum(["X", "Y"]);
 export type SheetVersion = z.infer<typeof SheetVersion>;
 
-export const Term = z.enum(["glowny", "dodatkowy"]);
+/** CKE terms: main (May), supplementary (June) and the mock exam ("próbny", December/January). */
+export const Term = z.enum(["glowny", "dodatkowy", "probny"]);
 export type Term = z.infer<typeof Term>;
 
 export const Subject = z.object({
@@ -220,7 +221,7 @@ export const AudioSegment = z
 export type AudioSegment = z.infer<typeof AudioSegment>;
 
 export const Session = z.object({
-  id: z.string().regex(/^(polski|matematyka|angielski)-\d{4}-\d{2}-(glowny|dodatkowy)$/),
+  id: z.string().regex(/^(polski|matematyka|angielski)-\d{4}-\d{2}-(glowny|dodatkowy|probny)$/),
   subjectId: SubjectId,
   year: z.number().int().min(2019),
   month: z.number().int().min(1).max(12),

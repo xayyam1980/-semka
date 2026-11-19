@@ -1,0 +1,359 @@
+{
+  "sessionId": "matematyka-2025-06-dodatkowy",
+  "at": "2026-11-19T17:54:37.236Z",
+  "model": "qwen · qwen3.8-max · token-plan.maas.qwencloudapi.com",
+  "segmentation": {
+    "sheetTasks": 21,
+    "sheetPoints": 30,
+    "keyTasks": 21,
+    "keyPoints": 30,
+    "problems": []
+  },
+  "tasks": [
+    {
+      "number": 1,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9652,
+        "output": 2619,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 2,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9652,
+        "output": 3438,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 3,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9628,
+        "output": 2591,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 4,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 10771,
+        "output": 3589,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 5,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9655,
+        "output": 2932,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 6,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9655,
+        "output": 4192,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 7,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 10748,
+        "output": 2793,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 8,
+      "problems": [],
+      "notes": [
+        "Klucz podaje jedno rozwiązanie (C) bez oznaczenia wersji arkusza X/Y; uzupełniono klucz jako wersję X."
+      ],
+      "usage": {
+        "input": 9662,
+        "output": 2369,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 9,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9630,
+        "output": 2987,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 10,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 10775,
+        "output": 3082,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 11,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9541,
+        "output": 2089,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 12,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9541,
+        "output": 4704,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 13,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 10721,
+        "output": 2584,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 14,
+      "problems": [],
+      "notes": [
+        "Klucz nie rozróżnia wersji arkusza X/Y dla tego zadania, więc podano jedną odpowiedź PF jako wersję X.",
+        "Współrzędne punktów A i B odczytano z rysunku (siatka jednostkowa): A = (-3, -1), B = (1, -1); tekst arkusza ich nie podaje."
+      ],
+      "usage": {
+        "input": 9701,
+        "output": 6475,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 15,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 12469,
+        "output": 4059,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 16,
+      "problems": [],
+      "notes": [
+        "Klucz nie rozróżnia wersji arkusza X/Y dla tego zadania; podano jeden wpis keys (wersja X) z rozwiązaniem modelowym (I sposób).",
+        "Sposób graficzny (V sposób) jest w kluczu rysunkiem trzech siatek 5×5 z zamalowanymi kratkami; w exemplars opisano go słownie, ponieważ rysunki występują tylko na stronie klucza, nie na stronie arkusza."
+      ],
+      "usage": {
+        "input": 12354,
+        "output": 10215,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 17,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 12810,
+        "output": 6604,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 18,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 12970,
+        "output": 10175,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 19,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 11332,
+        "output": 6224,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 20,
+      "problems": [],
+      "notes": [
+        "Klucz nie drukuje osobnych wersji X/Y dla tego zadania otwartego; podano jedną wersję klucza z przykładowym rozwiązaniem (I sposób)."
+      ],
+      "usage": {
+        "input": 12732,
+        "output": 6863,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 21,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 11708,
+        "output": 3131,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "Matches the content schema",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Task points add up to the session total",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Each task equals the sum of its items",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Task numbers run 1…N without gaps",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every item has a key for each usable sheet version",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Choice keys point to options that exist",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Levels go from the item's points down to 0",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every item has a skill tag, and every tag has an area",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Page references are within the files",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every figure file exists",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Rubric items point to rubrics that add up to the item's points",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every image in the text points to an existing figure",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Stimuli referenced by tasks exist",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No control characters in the text",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every formula renders",
+      "ok": true,
+      "details": []
+    }
+  ],
+  "ok": true,
+  "tokens": {
+    "input": 0,
+    "output": 0
+  },
+  "approvedAt": "2026-11-19T18:04:37.967Z"
+}

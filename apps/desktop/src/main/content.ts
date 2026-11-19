@@ -77,6 +77,7 @@ export function openContent(root: string, opts: { includeDrafts: boolean }): Con
         subjectName: SUBJECTS[b.session.subjectId].name,
         year: b.session.year,
         month: b.session.month,
+        term: b.session.term,
         maxPoints: b.session.maxPoints,
         contentVersion: b.session.contentVersion,
         tasks: b.tasks.map(publicTask),

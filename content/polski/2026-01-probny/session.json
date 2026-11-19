@@ -1,0 +1,2207 @@
+{
+  "session": {
+    "id": "polski-2026-01-probny",
+    "subjectId": "polski",
+    "year": 2026,
+    "month": 1,
+    "term": "probny",
+    "examDate": "2026-01-12",
+    "formCode": "OPOP-100",
+    "versions": [
+      "X"
+    ],
+    "maxPoints": 45,
+    "taskOrder": [
+      "pl-2026-01p-01",
+      "pl-2026-01p-02",
+      "pl-2026-01p-03",
+      "pl-2026-01p-04",
+      "pl-2026-01p-05",
+      "pl-2026-01p-06",
+      "pl-2026-01p-07",
+      "pl-2026-01p-08",
+      "pl-2026-01p-09",
+      "pl-2026-01p-10",
+      "pl-2026-01p-11",
+      "pl-2026-01p-12",
+      "pl-2026-01p-13",
+      "pl-2026-01p-14",
+      "pl-2026-01p-15",
+      "pl-2026-01p-16",
+      "pl-2026-01p-17",
+      "pl-2026-01p-18",
+      "pl-2026-01p-19",
+      "pl-2026-01p-20"
+    ],
+    "sources": [
+      {
+        "kind": "klucz",
+        "path": "Język polski/Additional/Styczeń 2026/jezyk-polski-2026-styczen-egzamin-osmoklasisty-probny-odpowiedzi.pdf",
+        "sha256": "d61257201e3ab69506ef86e8fbdf114e44d6686e8a4429660719bc3188ff628b",
+        "pages": 27
+      },
+      {
+        "kind": "arkusz",
+        "path": "Język polski/Additional/Styczeń 2026/jezyk-polski-2026-styczen-egzamin-osmoklasisty-probny.pdf",
+        "sha256": "cca25158a1164cbe321c8ddb75d3070a8d00cf74a98c26460befeb30c0b30a77",
+        "pages": 24
+      }
+    ],
+    "contentVersion": "26c7fb137f455c12",
+    "status": "published"
+  },
+  "stimuli": [
+    {
+      "id": "pl-2026-01p-tekst-1",
+      "kind": "text",
+      "title": "Szatan z siódmej klasy",
+      "author": "Kornel Makuszyński",
+      "lines": [
+        "Główny bohater – Adam Cisowski – to chłopiec, który z powodzeniem rozwiązuje różne zagadki. Profesor Gąsowski, jego nauczyciel historii, zaprasza Adasia do wsi Bejgoła do domu swojego brata (matematyka), jego żony Ewy i ich córki Wandy, aby siódmoklasista rozwiązał zagadkę zaginionych drzwi. Adaś rozpoczyna śledztwo, podczas którego zostaje uwięziony przez złodziei. Na ich polecenie pisze list do państwa Gąsowskich.",
+        "Panna Wanda wpadła do pokoju […], wołając z daleka:",
+        "– List! Jest list od Adasia.",
+        "– Chwała Ci, Panie Boże! – zawołał profesor.",
+        "– Jakiś nieznany człowiek go przyniósł i oddał ludziom na polu.",
+        "– A na odpowiedź nie czeka?",
+        "– Nie! Powiedział, że burza się zbliża, więc mu śpieszno… Niechże stryjaszek prędko czyta.",
+        "Matematyk machnął lekceważąco ręką na znak, że mało go zajmują listy młodych urwipołciów¹, pani Gąsowska natomiast okazała żywe zainteresowanie.",
+        "Profesor zaczął czytać głośno, najpierw bardzo szybko, potem coraz powolniej. Skończył i spojrzał na wszystkich zdumionym wzrokiem.",
+        "– Dziwny list – rzekł po namyśle. – Jakiś sztuczny i wymyślny.",
+        "– O mnie nie raczył pamiętać! – zagrzmiał matematyk.",
+        "– Mniejsza o to! – rzekł profesor zniecierpliwiony. – Prawdę mówiąc, mógł napisać więcej. To serdeczne chłopczysko, a list jest niemalże oschły.",
+        "Odczytał go szeptem po raz drugi i nagle zakrzyknął:",
+        "– Ejże! Co to wszystko ma znaczyć?",
+        "– Co takiego, stryjaszku? – spytała panna Wanda z niepokojem.",
+        "– Adaś wie przecie, że nasza wieś zowie się Bejgoła? Wie czy nie wie? Czemu ją tedy nazywa „Ejgołą”? Ha!",
+        "Nikt mu tego nie umiał wytłumaczyć, dlaczego Adaś dopuścił się takiego zaniedbania czy roztargnienia.",
+        "– Bawi się, więc mu wyleciało z głowy! – huknął brodaty.",
+        "– On nie jest taki! Ejgoła… Ejgoła… Ale w tym liście dziwniejsze jeszcze znajdują się rzeczy. Powiedzcie mi, kim jest ta „pani Maria”, za którą mu tak tęskno?",
+        "– Może o mnie myślał? – zaszemrała dobra pani Gąsowska.",
+        "– Przecie tobie na imię Ewa?",
+        "– Mógł zapomnieć…",
+        "– On?! Nie, on by nie zapomniał. A mówił do mnie dziesiątki razy: „pani Ewa prosi na obiad…”, „pani Ewa jest zmęczona…” Nie, nie! W tym coś tkwi, ale co? Jak myślisz? – zapytał, zwracając się do matematyka.",
+        "– Pokaż mi ten list! – zagrzmiał brat.",
+        "Przyjrzał się bacznie pismu i mówił:",
+        "– Nie to mnie dziwi, że pomieszał imiona… Mógł naprawdę zapomnieć. Wiatr hula po młodej głowie… Zastanawia mnie jednak szyk tych kilku zdań, porwany, krótki, istotnie jakiś sztuczny. I zastanawiają mnie te nierównej długości wiersze². Żaden prawie nie dociera do samego brzegu kartki i czym prędzej przenosi się na lewą stronę. Zazwyczaj piszący dociera ze swym słowem do brzegu, a skoro mu miejsca nie starczy, dzieli słowo i drugą jego część przenosi. Tak podobno czyniono za moich czasów. Ten młodzieniec jednak nie podzielił żadnego słowa. Zaraz!… Czuj duch!³ Dlaczego on tak uczynił?",
+        "– Musiał mieć w tym jakiś cel! – rzekł profesor z pośpiechem. – On zawsze ma jakiś cel!",
+        "Matematyk, nie zwracając uwagi na okrzyk profesora, zagłębił się w dociekaniu.",
+        "– Twierdzicie uparcie, że to mądra głowa. Przyjmijmy to jako pewnik. Przeto mądra głowa, pisząc zamiast Bejgoła – Ejgoła, pragnie, aby na to zwrócono uwagę. Tak czy nie?",
+        "– Możliwe! Możliwe! A skądżeż znowu ta Maria?",
+        "– Przypuszczam, że Maria zjawiła się z tego samego powodu. Albo też nie! Maria musiała mu być potrzebna! Potrzebna, mówię! Jeśli nie cała, to przynajmniej… Tak, tak! – zakrzyknął z triumfem, powiewając listem. – Tak samo jak mu była potrzebna Ejgoła. E było mu potrzebne i M było mu potrzebne… Ależ to lis, to lis! Patrzcie i czytajcie pierwsze litery z góry ku dołowi.",
+        "Profesor czytał powoli i dobitnie:",
+        "Strzeżcie DOMU"
+      ],
+      "lineNumbering": "none",
+      "source": "Kornel Makuszyński, Szatan z siódmej klasy, Warszawa 1996.",
+      "footnotes": [
+        {
+          "mark": "¹",
+          "text": "Urwipołeć – psotnik, urwis."
+        },
+        {
+          "mark": "²",
+          "text": "Wiersz – tu: linijka tekstu."
+        },
+        {
+          "mark": "³",
+          "text": "Czuj duch! – dawniej wezwanie do zachowania czujności."
+        }
+      ],
+      "wordCount": 563,
+      "ref": {
+        "source": "arkusz",
+        "page": 5
+      }
+    },
+    {
+      "id": "pl-2026-01p-tekst-2",
+      "kind": "text",
+      "title": "ŚMIEJ SIĘ NA ZDROWIE!",
+      "author": "Jolanta Maria Berent",
+      "lines": [
+        "Śmiech. Sprawia, że rozpromieniamy się, rozluźniamy. Zbliża nas do innych. Pozwala zdystansować się od problemów. Wiemy, że za jego sprawą czujemy się dobrze, a mimo to często go nie doceniamy. Tymczasem głęboki, intensywny śmiech pomaga uwolnić się od napięć, a w odpowiedniej dawce może nawet uzdrawiać!",
+        "Najlepszym dowodem na to jest historia pewnego amerykańskiego dziennikarza Normana Cousinsa. Stwierdzono u niego poważną chorobę stawów. Diagnozy lekarskie nie pozostawiały złudzeń: w krótkim czasie stawy Cousinsa ulegną zwapnieniu. Do tego skazany będzie przez resztę życia na silny ból. Dziennikarz uznał, że nie może na to pozwolić. Że musi być jakieś rozwiązanie… Opuścił szpital z postanowieniem, że je znajdzie. Zaczął się leczyć na własną rękę. Jak? Otóż oglądał komedie i filmy kręcone z ukrytej kamery. Śmiał się do rozpuku, cieszył się każdym gagiem¹ – aż przestał myśleć o chorobie. I stopniowo ból ustępował... Ponieważ badania potwierdziły, że stan zdrowia Cousinsa się poprawił, dziennikarz dalej kurował się po swojemu. Zaczął ćwiczyć, zmienił dietę. I oglądał komedię za komedią, serwując sobie kolejne dawki śmiechu. Wreszcie wyzdrowiał. Nie dość, że wrócił do codziennych czynności, to jeszcze opublikował książkę, w której opisał mechanizmy swojego zdrowienia i regeneracji.",
+        "Chyba każdy miał okazję się przekonać, że po wybuchach śmiechu świat wydaje się piękniejszy, a wyzwania – prostsze. Nic dziwnego: dzięki śmiechowi poprawia się krążenie krwi i dotlenienie organizmu, spada poziom stresu, wzrasta poziom energii i odporność. Te właściwości śmiechu wykorzystuje klaunoterapia – metoda, którą wprowadziło wiele szpitali na całym świecie i która polega na rozśmieszaniu pacjentów, najczęściej małych. Rolę klaunów odgrywają wolontariusze: by dać chorym dzieciom uśmiech i nadzieję, zakładają ogromne czerwone nosy i się wygłupiają. Oglądając ich występy, mali widzowie mogą poczuć lekkość, radość, beztroskę. Mogą zapomnieć o chorobie, bólu, strachu… Mogą po prostu poczuć się lepiej.",
+        "Kiedy się śmiejemy, korzysta na tym nie tylko ciało – rośnie również koncentracja i poprawia się pamięć. Śmiech sprzyja przyswajaniu wiedzy, ale też wzrostowi pewności siebie. Ułatwia komunikację z innymi – bo kiedy jest wesoło, łatwiej się porozumieć… Tym bardziej że śmiech jest przecież zaraźliwy! Widać to szczególnie na zajęciach z coraz popularniejszej jogi śmiechu. Podczas takich spotkań prowadzący śmieje się, porusza ciałem, robi zabawne miny, pokrzykuje, a inni go naśladują. To wystarczy, by po paru chwilach wszyscy byli rozbawieni i rozluźnieni. Co ciekawe, nasz mózg nie widzi różnicy między naturalnym śmiechem a takim wywołanym mechanicznie. Potwierdza to eksperyment polegający na trzymaniu ołówka w zębach. Dzięki temu, że kąciki ust wędrują wtedy do góry (jak przy uśmiechu), już po kwadransie trzymania ich w tym ułożeniu poprawia się nasze samopoczucie. Nie wierzycie? Sprawdźcie! Może taką sesję śmiechu – jak podczas jogi lub eksperymentu z ołówkiem – warto zorganizować w gronie przyjaciół?",
+        "Dobrze wiedzieć, co nas rozśmiesza. Film? Książka? Piosenka? A może komiks, kabaret… To już zależy od nas! W trudnym momencie warto po to sięgnąć."
+      ],
+      "lineNumbering": "none",
+      "source": "Źródło: materiał własny CKE.",
+      "footnotes": [
+        {
+          "mark": "1",
+          "text": "Gag – zaskakujący chwyt komediowy stosowany w filmie, w teatrze."
+        }
+      ],
+      "wordCount": 465,
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "pl-2026-01p-10-fig1",
+      "kind": "figure",
+      "title": "Stylizowany zwój papieru z tekstem listu Adasia, w którym brakuje trzech znaków interpunkcyjnych, podpisany „Adaś”.",
+      "asset": "assets/pl-2026-01p-10-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 11
+      }
+    },
+    {
+      "id": "pl-2026-01p-16-fig1",
+      "kind": "figure",
+      "title": "Dwie okładki lektur: „Zemsta” Aleksandra Fredry (skrzyżowane szable i zamek) oraz „Artysta” Sławomira Mrożka (cyrkowy namiot, lis i kogut)",
+      "asset": "assets/pl-2026-01p-16-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "pl-2026-01p-01",
+      "sessionId": "polski-2026-01-probny",
+      "number": 1,
+      "maxPoints": 1,
+      "instruction": "Na podstawie przytoczonego fragmentu utworu Kornela Makuszyńskiego oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.",
+      "stimulusIds": [
+        "pl-2026-01p-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-01p-01",
+          "label": "1",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Wszyscy uczestnicy rozmowy od początku wykazali zainteresowanie listem od Adasia. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Rodzinie Gąsowskich udało się odczytać zaszyfrowaną w liście wiadomość. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "F",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "Pierwsze stwierdzenie jest fałszywe: z fragmentu wynika, że dopiero w toku rozmowy uczestnicy zaczęli dociekać znaczenia listu i traktować go poważnie, a nie wszyscy interesowali się nim od początku. Drugie stwierdzenie jest prawdziwe: profesor odczytał na głos zaszyfrowaną wiadomość „Strzeżcie DOMU”, powstałą z pierwszych liter wierszy czytanych z góry ku dołowi. Dlatego poprawne oznaczenia to F przy pierwszym stwierdzeniu i P przy drugim."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "pl-2026-01p-02",
+      "sessionId": "polski-2026-01-probny",
+      "number": 2,
+      "maxPoints": 1,
+      "instruction": "Która z poniższych informacji jest zgodna z treścią fragmentu utworu Kornela Makuszyńskiego? Wybierz właściwą odpowiedź spośród podanych.",
+      "stimulusIds": [
+        "pl-2026-01p-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-01p-02",
+          "label": "2",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "List znalazła przed domem panna Wanda."
+              },
+              {
+                "id": "B",
+                "text": "Znajomy panny Wandy dostarczył list od Adasia."
+              },
+              {
+                "id": "C",
+                "text": "Bohaterowie rozmawiają o liście w domu historyka."
+              },
+              {
+                "id": "D",
+                "text": "List napisany przez Adasia został odczytany kilkakrotnie."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "Poprawna jest odpowiedź D, ponieważ w fragmencie utworu Kornela Makuszyńskiego list napisany przez Adasia został odczytany kilkakrotnie i tylko ta informacja zgadza się z tekstem. Pozostałe odpowiedzi (A, B, C) opisują wydarzenia, których nie ma w przytoczonym fragmencie albo które przedstawiono inaczej niż w utworze."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 7
+      }
+    },
+    {
+      "id": "pl-2026-01p-03",
+      "sessionId": "polski-2026-01-probny",
+      "number": 3,
+      "maxPoints": 1,
+      "instruction": "**Wyjaśnij, dlaczego profesor Gąsowski po przeczytaniu listu spojrzał na wszystkich zdumionym wzrokiem.**",
+      "stimulusIds": [
+        "pl-2026-01p-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-01p-03",
+          "label": "3",
+          "maxPoints": 1,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Profesor Gąsowski był zdziwiony treścią listu. Znał dobrze Adasia, a miał wrażenie, że list napisała inna osoba."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "poprawne wyjaśnienie"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.9"
+          ],
+          "exemplars": [
+            {
+              "points": 1,
+              "content": "* Profesor Gąsowski był zdziwiony treścią listu. Znał dobrze Adasia, a miał wrażenie, że list napisała inna osoba.\n* Profesor Gąsowski był zdziwiony formą listu.",
+              "ref": {
+                "source": "klucz",
+                "page": 3
+              }
+            },
+            {
+              "points": 0,
+              "content": "* Profesor Gąsowski spojrzał na wszystkich zdumionym wzrokiem, ponieważ był zdziwiony.\n* Profesor był zdziwiony listem.",
+              "ref": {
+                "source": "klucz",
+                "page": 3
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-1.9"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 7
+      }
+    },
+    {
+      "id": "pl-2026-01p-04",
+      "sessionId": "polski-2026-01-probny",
+      "number": 4,
+      "maxPoints": 1,
+      "instruction": "**Na podstawie przytoczonego fragmentu utworu Kornela Makuszyńskiego oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "pl-2026-01p-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-01p-04",
+          "label": "4",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "List Adasia wywołał u brata profesora Gąsowskiego różnorodne reakcje. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Brat profesora Gąsowskiego zauważył w liście błąd w nazwie miejscowości. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "F"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "Pierwsze stwierdzenie jest prawdziwe (P), ponieważ w przytoczonym fragmencie brat profesora Gąsowskiego reaguje na list Adasia na różne sposoby. Drugie stwierdzenie jest fałszywe (F), bo to nie brat profesora zauważył w liście błąd w nazwie miejscowości. Dlatego odpowiedzi dla kolejnych stwierdzeń to P i F, czyli kod PF."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 7
+      }
+    },
+    {
+      "id": "pl-2026-01p-05",
+      "sessionId": "polski-2026-01-probny",
+      "number": 5,
+      "maxPoints": 1,
+      "instruction": "Przeczytaj poniższy fragment wypowiedzi matematyka.\n\n– Nie to mnie dziwi, że pomieszał imiona… Mógł naprawdę zapomnieć. Wiatr hula po młodej głowie…\n\n**Na podstawie przytoczonego fragmentu utworu Kornela Makuszyńskiego dokończ poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nUżyte przez matematyka sformułowanie Wiatr hula po młodej głowie ma znaczenie [[A|B]]. Brat profesora Gąsowskiego użył go, aby zwrócić uwagę na [[C|D]] młodych ludzi.",
+      "stimulusIds": [
+        "pl-2026-01p-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-01p-05",
+          "label": "5",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "dosłowne"
+              },
+              {
+                "id": "B",
+                "text": "przenośne"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "roztargnienie"
+              },
+              {
+                "id": "D",
+                "text": "pomysłowość"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "B",
+                "reason": "C"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-2.4"
+          ],
+          "explanation": "Sformułowanie „Wiatr hula po młodej głowie” nie mówi o prawdziwym wietrze, więc zostało użyte w znaczeniu przenośnym: oznacza, że młoda osoba bywa zapominalska i nieuważna. Brat profesora Gąsowskiego chciał przez nie powiedzieć, że młodzi ludzie łatwo zapominają i się rozpraszają, czyli zwrócić uwagę na ich roztargnienie. Dlatego właściwe odpowiedzi to B oraz C."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-2.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "pl-2026-01p-06",
+      "sessionId": "polski-2026-01-probny",
+      "number": 6,
+      "maxPoints": 1,
+      "instruction": "**Na podstawie przytoczonego fragmentu utworu Kornela Makuszyńskiego dokończ poniższe zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nAdaś znalazł sposób, aby ostrzec rodzinę Gąsowskich o niebezpieczeństwie. Można zatem o nim powiedzieć, że",
+      "stimulusIds": [
+        "pl-2026-01p-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-01p-06",
+          "label": "6",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "chowa głowę w piasek."
+              },
+              {
+                "id": "B",
+                "text": "ma głowę nie od parady."
+              },
+              {
+                "id": "C",
+                "text": "ma przewrócone w głowie."
+              },
+              {
+                "id": "D",
+                "text": "chodzi z głową w chmurach."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-2.5"
+          ],
+          "explanation": "Adaś, choć był uwięziony przez złodziei, znalazł sprytny sposób, by ukryć w liście ostrzeżenie dla rodziny Gąsowskich. Związek frazeologiczny „mieć głowę nie od parady” oznacza być mądrym, zaradnym i pomysłowym, więc dobrze opisuje takie zachowanie chłopca – poprawna jest odpowiedź B. Pozostałe związki znaczą co innego i do Adasia nie pasują: „chować głowę w piasek” to unikać problemów, „mieć przewrócone w głowie” to zadzierać nosa, a „chodzić z głową w chmurach” to bujać w obłokach."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-2.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "pl-2026-01p-07",
+      "sessionId": "polski-2026-01-probny",
+      "number": 7,
+      "maxPoints": 3,
+      "instruction": "",
+      "stimulusIds": [
+        "pl-2026-01p-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-01p-07-1",
+          "label": "7.1",
+          "maxPoints": 1,
+          "prompt": "Matematyk, mówiąc o Adasiu, użył sformułowania **Ależ to lis, to lis!** Na podstawie przytoczonego fragmentu utworu Kornela Makuszyńskiego uzasadnij, że słowa te dobrze charakteryzują Adasia.\n\nUzasadnienie:",
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Uwięziony przez złodziei Adaś w bardzo pomysłowy sposób przekazał profesorowi i jego rodzinie informację o tym, że powinni strzec domu, co świadczy o jego sprycie."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "poprawne uzasadnienie zawierające odwołanie do tekstu."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.9",
+            "pl-gen-III",
+            "pl-78-1.4"
+          ],
+          "exemplars": [
+            {
+              "points": 1,
+              "content": "Uzasadnienie: Uwięziony przez złodziei Adaś w bardzo pomysłowy sposób przekazał profesorowi i jego rodzinie informację o tym, że powinni strzec domu, co świadczy o jego sprycie.",
+              "ref": {
+                "source": "klucz",
+                "page": 4
+              }
+            },
+            {
+              "points": 0,
+              "content": "Uzasadnienie: Adaś był przebiegły.",
+              "ref": {
+                "source": "klucz",
+                "page": 5
+              }
+            }
+          ]
+        },
+        {
+          "id": "pl-2026-01p-07-2",
+          "label": "7.2",
+          "maxPoints": 2,
+          "prompt": "Wybierz bohatera lektury obowiązkowej, którego można określić słowami **Ależ to lis, to lis!** Podaj tytuł tej lektury oraz jej bohatera.\n\nUzasadnij swój wybór. W uzasadnieniu przywołaj sytuację z tej lektury, ilustrującą Twoją argumentację.\n\nUwaga! Lista lektur obowiązkowych znajduje się na stronach 3 i 4 tego arkusza egzaminacyjnego.\n\nTytuł lektury obowiązkowej:\n\nBohater lektury obowiązkowej:\n\nUzasadnienie wyboru:",
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Tytuł lektury obowiązkowej: „Zemsta”\nBohater lektury: Rejent\nUzasadnienie wyboru: Był przebiegły, ponieważ stworzył podstępny plan polegający na tym, żeby zrobić na złość swojemu wrogowi. Postanowił ożenić swojego syna z Podstoliną, którą chciał poślubić Cześnik."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "podanie tytułu lektury obowiązkowej i bohatera, poprawne uzasadnienie zilustrowane sytuacją z lektury."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "podanie tytułu lektury obowiązkowej i bohatera, poprawne uzasadnienie bez zilustrowania sytuacją z lektury."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.9",
+            "pl-gen-III",
+            "pl-78-1.4"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "Tytuł lektury obowiązkowej: „Zemsta”\nBohater lektury: Rejent\nUzasadnienie wyboru: Był przebiegły, ponieważ stworzył podstępny plan polegający na tym, żeby zrobić na złość swojemu wrogowi. Postanowił ożenić swojego syna z Podstoliną, którą chciał poślubić Cześnik.",
+              "ref": {
+                "source": "klucz",
+                "page": 5
+              }
+            },
+            {
+              "points": 1,
+              "content": "Tytuł lektury obowiązkowej: „Pan Tadeusz”\nBohater lektury: Wojski\nUzasadnienie wyboru: Wpadł na pomysł, żeby zażegnać kłótnię między Domejką i Dowejką.",
+              "ref": {
+                "source": "klucz",
+                "page": 5
+              }
+            },
+            {
+              "points": 0,
+              "content": "Tytuł lektury obowiązkowej: „Mały Książę”\nBohater lektury: żmija\nUzasadnienie wyboru: Żmija podstępnie ukąsiła Małego Księcia.",
+              "ref": {
+                "source": "klucz",
+                "page": 5
+              }
+            }
+          ],
+          "scoringNotes": [
+            "W przypadku, gdy zdający wskaże poprawnie tytuł lektury, nie wskaże bohatera, ale uzasadnienie pozwala go zidentyfikować, otrzymuje maksymalnie 1 punkt.",
+            "W przypadku, gdy zdający nie wskaże tytułu lektury, wskaże poprawnie bohatera i poprawnie uzasadni swój wybór, otrzymuje maksymalnie 1 punkt.",
+            "W przypadku, gdy zdający wskaże poprawnie tytuł lektury i bohatera, ale błędnie uzasadni swój wybór, otrzymuje 0 punktów.",
+            "W przypadku, gdy zdający wskaże poprawnie tytuł lektury i bohatera, ale nie uzasadni swojego wyboru, otrzymuje 0 punktów."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-1.9",
+        "pl-gen-III",
+        "pl-78-1.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 9
+      }
+    },
+    {
+      "id": "pl-2026-01p-08",
+      "sessionId": "polski-2026-01-probny",
+      "number": 8,
+      "maxPoints": 1,
+      "instruction": "Przeczytaj poniższą wypowiedź profesora Gąsowskiego.\n\n*To serdeczne chłopczysko, <u>a</u> list jest niemalże oschły.*\n\n**Dokończ poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nPodkreślony w zdaniu wyraz jest [[A|B]]. Aby zachować sens wypowiedzi profesora, podkreślony wyraz można zastąpić słowem [[C|D]].",
+      "stimulusIds": [
+        "pl-2026-01p-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-01p-08",
+          "label": "8",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "zaimkiem"
+              },
+              {
+                "id": "B",
+                "text": "spójnikiem"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "dlatego"
+              },
+              {
+                "id": "D",
+                "text": "natomiast"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "B",
+                "reason": "D"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-1.1"
+          ],
+          "explanation": "Podkreślony wyraz „a” łączy dwa przeciwstawne zdania: „To serdeczne chłopczysko” i „list jest niemalże oschły”, jest więc spójnikiem (odpowiedź B), a nie zaimkiem. Sens przeciwstawienia zachowuje także spójnik „natomiast” (odpowiedź D). Słowo „dlatego” wprowadziłoby związek przyczynowy i zmieniłoby sens wypowiedzi profesora."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-1.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "pl-2026-01p-09",
+      "sessionId": "polski-2026-01-probny",
+      "number": 9,
+      "maxPoints": 1,
+      "instruction": "Przeczytaj poniższy fragment tekstu.\n\n> *Twierdzicie uparcie, że to mądra głowa. Przyjmijmy to jako pewnik.*  \n> *<u>Przeto</u> mądra głowa, pisząc zamiast Bejgoła – Ejgoła, pragnie, aby na to zwrócono uwagę.*\n\n**Który wyraz użyty zamiast wyrazu „przeto” <u>zmieni</u> sens przytoczonego wypowiedzenia? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [
+        "pl-2026-01p-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-01p-09",
+          "label": "9",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "więc"
+              },
+              {
+                "id": "B",
+                "text": "toteż"
+              },
+              {
+                "id": "C",
+                "text": "zatem"
+              },
+              {
+                "id": "D",
+                "text": "chociaż"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-2.9"
+          ],
+          "explanation": "Wyraz „przeto” oznacza „więc, zatem, toteż” – wprowadza wniosek wynikający z poprzedniego zdania. Wyrazy więc, toteż i zatem mają takie samo znaczenie, więc po podstawieniu ich sens wypowiedzenia się nie zmienia. Wyraz chociaż wprowadza treść przeciwstawną (ustępstwo), a nie wniosek, dlatego zmienia sens przytoczonego wypowiedzenia. Poprawna jest odpowiedź D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-2.9"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "pl-2026-01p-10",
+      "sessionId": "polski-2026-01-probny",
+      "number": 10,
+      "maxPoints": 1,
+      "instruction": "**Na lekcji języka polskiego uczniowie próbowali stworzyć swoją wersję listu Adasia. W liście napisanym przez jedną z grup zabrakło trzech znaków interpunkcyjnych. Wstaw je we właściwe miejsca.**\n\n![Stylizowany zwój papieru z tekstem listu Adasia, w którym brakuje trzech znaków interpunkcyjnych, podpisany „Adaś”.](stimulus:pl-2026-01p-10-fig1)",
+      "stimulusIds": [
+        "pl-2026-01p-tekst-1",
+        "pl-2026-01p-10-fig1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-01p-10",
+          "label": "10",
+          "maxPoints": 1,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Szanowny Panie Profesorze,\nteraz jestem w trakcie długiej wędrówki.\nRaczej pozwiedzam jeszcze trochę,\nzanim wrócę do\nEjgoły. Proszę,\nżeby Pan pozdrowił pannę Wandę.\nCzy przeczytała już tyle książek,\nile zamierzała?\nEh, chciałem jeszcze zapytać, czy\ndobrze czuje się\nostatnio pani\nMaria.\nUfam, że tak."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "poprawne uzupełnienie trzech znaków interpunkcyjnych."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-4.2"
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-4.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 11
+      }
+    },
+    {
+      "id": "pl-2026-01p-11",
+      "sessionId": "polski-2026-01-probny",
+      "number": 11,
+      "maxPoints": 2,
+      "instruction": "Przeczytaj poniższy fragment tekstu.\n\n> Taż sama twarz – ta sama. Marley z długim harcapem, w zwykłej kamizelce, w codziennych krótkich spodniach, w butach węgierskich, w zaplamionym surducie. Długi łańcuch, przytwierdzony u bioder, okręcał go kilkakrotnie i tworzył rodzaj ogona, składającego się z dziwacznej mieszaniny skutych razem ryglów, kłódek, kluczy, ksiąg buchalteryjnych, opatrzonych mosiężnymi klamrami, i z ciężkich brudnych worków. […]\n>\n> – Dziś przyszedłem cię ostrzec.",
+      "stimulusIds": [
+        "pl-2026-01p-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-01p-11-1",
+          "label": "11.1",
+          "maxPoints": 1,
+          "prompt": "Podaj tytuł lektury obowiązkowej, z której pochodzi powyższy fragment.",
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "„Opowieść wigilijna”"
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "odpowiedź poprawna"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.7"
+          ]
+        },
+        {
+          "id": "pl-2026-01p-11-2",
+          "label": "11.2",
+          "maxPoints": 1,
+          "prompt": "Odwołując się do znajomości całego utworu, z którego pochodzi powyższy fragment, napisz, przed czym Marley chce ostrzec głównego bohatera.",
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Marley chciał ostrzec Scrooge’a przed skutkami błędów, które sam kiedyś popełnił. Wiedział, że Scrooge był też skąpy, że liczyły się dla niego tylko pieniądze. Kara, która spotkała Marleya, miała być przestrogą dla dawnego przyjaciela."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "odpowiedź poprawna"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.7"
+          ],
+          "exemplars": [
+            {
+              "points": 1,
+              "content": "Marley chciał ostrzec Scrooge’a przed skutkami błędów, które sam kiedyś popełnił. Wiedział, że Scrooge był też skąpy, że liczyły się dla niego tylko pieniądze. Kara, która spotkała Marleya, miała być przestrogą dla dawnego przyjaciela.",
+              "ref": {
+                "source": "klucz",
+                "page": 7
+              }
+            },
+            {
+              "points": 0,
+              "content": "Marley chciał przestrzec Scrooge’a przed wizytą duchów.",
+              "ref": {
+                "source": "klucz",
+                "page": 7
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-1.7"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 11
+      }
+    },
+    {
+      "id": "pl-2026-01p-12",
+      "sessionId": "polski-2026-01-probny",
+      "number": 12,
+      "maxPoints": 2,
+      "instruction": "**Uzupełnij poniższe zdania w taki sposób, aby powstało streszczenie tekstu _Śmiej się na zdrowie!_.**\n\nTematem tekstu Jolanty Marii Berent jest ………………………………………………………… .\n\nNa początku autorka wyraża przekonanie ……………………………………………………………… ……………………………………………………………… .\n\nW kolejnych akapitach ……………………………………………………………… ……………………………………………………………… .\n\nW zakończeniu ……………………………………………………………… ……………………………………………………………… .",
+      "stimulusIds": [
+        "pl-2026-01p-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-01p-12",
+          "label": "12",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Tematem tekstu Jolanty Marii Berent jest znaczenie śmiechu w życiu człowieka.\nNa początku autorka wyraża przekonanie, że śmiech wpływa na nas pozytywnie, choć często tego nie doceniamy.\nW kolejnych akapitach wskazuje, że śmiech oddziałuje korzystnie na zdrowie, stan psychiczny i relacje z innymi ludźmi.\nW zakończeniu tekstu stwierdza, że każdy powinien uświadomić sobie, co go bawi i szukać okazji, aby się pośmiać."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawne określenie tematu i tego, co na ten temat powiedziano w tekście; zachowanie właściwego poziomu uogólnienia."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawne określenie tematu i tego, co na ten temat powiedziano w tekście; zaburzony poziom uogólnienia."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-2.3",
+            "pl-gen-III",
+            "pl-78-2.2"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "Tematem tekstu Jolanty Marii Berent jest znaczenie śmiechu w życiu człowieka.\nNa początku autorka wyraża przekonanie, że śmiech wpływa na nas pozytywnie, choć często tego nie doceniamy.\nW kolejnych akapitach wskazuje, że śmiech oddziałuje korzystnie na zdrowie, stan psychiczny i relacje z innymi ludźmi.\nW zakończeniu tekstu stwierdza, że każdy powinien uświadomić sobie, co go bawi i szukać okazji, aby się pośmiać.",
+              "ref": {
+                "source": "klucz",
+                "page": 8
+              }
+            },
+            {
+              "points": 1,
+              "content": "Tematem tekstu Jolanty Marii Berent jest rola śmiechu w naszym życiu.\nNa początku autorka wyraża przekonanie, że śmiech ma wiele pozytywnych skutków.\nW kolejnych akapitach wskazuje, jakie to są skutki.\nW zakończeniu pisze, że warto się śmiać.",
+              "ref": {
+                "source": "klucz",
+                "page": 8
+              }
+            },
+            {
+              "points": 0,
+              "content": "Tematem tekstu Jolanty Marii Berent jest klaunoterapia.\nNa początku autorka wyraża przekonanie, że śmiech ma na nas dobry wpływ.\nW kolejnych akapitach wskazuje na przykład Normana Cousinsa.\nW zakończeniu pisze o zaletach klaunoterapii.",
+              "ref": {
+                "source": "klucz",
+                "page": 8
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Uczeń otrzymuje 0 punktów, jeśli jego wypowiedź w całości składa się z fragmentów przepisanych z tekstu „Śmiej się na zdrowie!”."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-2.3",
+        "pl-gen-III",
+        "pl-78-2.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 13
+      }
+    },
+    {
+      "id": "pl-2026-01p-13",
+      "sessionId": "polski-2026-01-probny",
+      "number": 13,
+      "maxPoints": 1,
+      "instruction": "Na podstawie tekstu Jolanty Marii Berent oceń prawdziwość podanych stwierdzeń.\nWybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.",
+      "stimulusIds": [
+        "pl-2026-01p-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-01p-13",
+          "label": "13",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Autorka stwierdza, że ludzie często nie dostrzegają wartości śmiechu. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Z tekstu wynika, że warto wiedzieć, co może nas rozśmieszyć. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "Oba stwierdzenia są prawdziwe. Autorka tekstu pisze, że śmiech wpływa na nas pozytywnie, choć często tego nie doceniamy, czyli nie dostrzegamy wartości śmiechu. W zakończeniu tekstu stwierdza też, że każdy powinien uświadomić sobie, co go bawi, i szukać okazji, aby się pośmiać – dlatego warto wiedzieć, co może nas rozśmieszyć."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 13
+      }
+    },
+    {
+      "id": "pl-2026-01p-14",
+      "sessionId": "polski-2026-01-probny",
+      "number": 14,
+      "maxPoints": 1,
+      "instruction": "**Na które z pytań znajdziesz odpowiedź w 2. akapicie tekstu Jolanty Marii Berent? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [
+        "pl-2026-01p-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-01p-14",
+          "label": "14",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "W czym pomaga klaunoterapia?"
+              },
+              {
+                "id": "B",
+                "text": "Jakie zalety mają zajęcia z jogi śmiechu?"
+              },
+              {
+                "id": "C",
+                "text": "Dla kogo terapia śmiechem okazała się skuteczna?"
+              },
+              {
+                "id": "D",
+                "text": "Jakie korzyści przynosi śmiech w relacjach międzyludzkich?"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "W 2. akapicie autorka opowiada historię Normana Cousinsa, który dzięki oglądaniu komedii wyleczył się z ciężkiej choroby stawów. To właśnie odpowiedź na pytanie, komu pomogła terapia śmiechem. O klaunoterapii pisze dopiero 3. akapit, a o jodze śmiechu i relacjach z ludźmi – 4. akapit."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 13
+      }
+    },
+    {
+      "id": "pl-2026-01p-15",
+      "sessionId": "polski-2026-01-probny",
+      "number": 15,
+      "maxPoints": 1,
+      "instruction": "**Które stwierdzenie dotyczące zalet śmiechu jest zgodne z akapitem 4. tekstu Jolanty Marii Berent? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [
+        "pl-2026-01p-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-01p-15",
+          "label": "15",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Śmiech pozwala lepiej dotlenić organizm."
+              },
+              {
+                "id": "B",
+                "text": "Śmiech może pomóc złagodzić skutki choroby."
+              },
+              {
+                "id": "C",
+                "text": "Śmiech pomaga w budowaniu relacji z innymi ludźmi."
+              },
+              {
+                "id": "D",
+                "text": "Śmiech przyczynia się do zwiększenia odporności organizmu."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "W 4. akapicie autorka pisze, że śmiech ułatwia komunikację z innymi, bo kiedy jest wesoło, łatwiej się porozumieć. Dotlenienie organizmu i większa odporność są omówione w akapicie 3., a łagodzenie skutków choroby – w akapitach 2. i 3."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "pl-2026-01p-16",
+      "sessionId": "polski-2026-01-probny",
+      "number": 16,
+      "maxPoints": 1,
+      "instruction": "**Spośród lektur zaprezentowanych poniżej wybierz tę, w której znajdziesz przykłady komizmu. Przywołaj z wybranej przez siebie lektury sytuację, która mogłaby rozśmieszyć czytelników i napisz, na czym polega komizm tej sytuacji.**\n\n![Dwie okładki lektur: „Zemsta” Aleksandra Fredry (skrzyżowane szable i zamek) oraz „Artysta” Sławomira Mrożka (cyrkowy namiot, lis i kogut)](stimulus:pl-2026-01p-16-fig1)\n\nTytuł lektury: ………………………………………………\n\nSytuacja: ………………………………………………………………………………………..………",
+      "stimulusIds": [
+        "pl-2026-01p-tekst-2",
+        "pl-2026-01p-16-fig1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-01p-16",
+          "label": "16",
+          "maxPoints": 1,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Tytuł lektury: „Zemsta”\nSytuacja: Śmieszna dla czytelników może być sytuacja, kiedy Cześnik, któremu wydaje się, że jest pomysłowy i przebiegły, dyktuje Dyndalskiemu list, pisany niby przez Klarę do Wacława. Raptusiewicz wielokrotnie powtarza swoje ulubione powiedzenie „mocium panie”, a Dyndalski bezmyślnie je zapisuje."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "Wybór jednej z lektur, poprawne wskazanie sytuacji z tej lektury ilustrującej przykład komizmu i wyjaśnienie, na czym polega komizm tej sytuacji."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "Odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-1.5",
+            "pl-gen-III",
+            "pl-78-1.4"
+          ],
+          "exemplars": [
+            {
+              "points": 1,
+              "content": "Tytuł lektury: „Zemsta”\nSytuacja: Śmieszna dla czytelników może być sytuacja, kiedy Cześnik, któremu wydaje się, że jest pomysłowy i przebiegły, dyktuje Dyndalskiemu list, pisany niby przez Klarę do Wacława. Raptusiewicz wielokrotnie powtarza swoje ulubione powiedzenie „mocium panie”, a Dyndalski bezmyślnie je zapisuje.",
+              "ref": {
+                "source": "klucz",
+                "page": 10
+              }
+            },
+            {
+              "points": 1,
+              "content": "Tytuł lektury: „Artysta”\nSytuacja: Przykładem śmiesznej sytuacji w tej lekturze może być scena, w której kogut stara się zaprezentować przed dyrektorem cyrku jako lew. Pianie koguta w niczym nie przypomina ryku lwa i dlatego ta scena wydaje mi się śmieszna.",
+              "ref": {
+                "source": "klucz",
+                "page": 10
+              }
+            },
+            {
+              "points": 0,
+              "content": "Tytuł lektury: „Zemsta”\nSytuacja: Śmieszne w utworze jest to, że bohaterowie, mimo że są sąsiadami, nieustannie próbują robić sobie na złość.",
+              "ref": {
+                "source": "klucz",
+                "page": 10
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-1.5",
+        "pl-gen-III",
+        "pl-78-1.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "pl-2026-01p-17",
+      "sessionId": "polski-2026-01-probny",
+      "number": 17,
+      "maxPoints": 1,
+      "instruction": "**Uzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nCzasownik *Sprawdźcie!* w zakończeniu 4. akapitu został użyty w trybie [[A|B]]. W ten sposób autorka [[C|D]] zaleceń dotyczących śmiechu.",
+      "stimulusIds": [
+        "pl-2026-01p-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-01p-17",
+          "label": "17",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "rozkazującym"
+              },
+              {
+                "id": "B",
+                "text": "oznajmującym"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "zachęca czytelników do skorzystania z"
+              },
+              {
+                "id": "D",
+                "text": "przestrzega czytelników przed skutkami przyjęcia"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "A",
+                "reason": "C"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-1.11"
+          ],
+          "explanation": "„Sprawdźcie!” to polecenie skierowane do wielu osób, więc czasownik jest w trybie rozkazującym. Autorka zwraca się tak do czytelników, żeby zachęcić ich do skorzystania z jej zaleceń o śmiechu, a nie żeby ich przed czymś ostrzegać."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-1.11"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 15
+      }
+    },
+    {
+      "id": "pl-2026-01p-18",
+      "sessionId": "polski-2026-01-probny",
+      "number": 18,
+      "maxPoints": 1,
+      "instruction": "**Ułóż dwa zdania z wyrazem *staw*, za pomocą których udowodnisz, że wyraz ten jest homonimem.**\n\nZdanie 1. ……………………………………………………………………….……………………………….\n\nZdanie 2. ………………………………………………………………………………………………………..",
+      "stimulusIds": [
+        "pl-2026-01p-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-01p-18",
+          "label": "18",
+          "maxPoints": 1,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Z okna mojego domu widać stawy w parku.\nMojego dziadka bolą stawy."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "Odpowiedź poprawna."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "Odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-78-1.4"
+          ],
+          "exemplars": [
+            {
+              "points": 1,
+              "content": "Z okna mojego domu widać stawy w parku.\nMojego dziadka bolą stawy.",
+              "ref": {
+                "source": "klucz",
+                "page": 11
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-78-1.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 15
+      }
+    },
+    {
+      "id": "pl-2026-01p-19",
+      "sessionId": "polski-2026-01-probny",
+      "number": 19,
+      "maxPoints": 3,
+      "instruction": "**Zredaguj zaproszenie na wykład pod hasłem *Śmiech to zdrowie!*. Zachęć do uczestnictwa w tym wykładzie, używając dwóch argumentów, z których co najmniej jeden będzie dotyczył tematyki wykładu.**\n**Uwaga: w ocenie wypowiedzi będzie brana pod uwagę poprawność językowa, ortograficzna i interpunkcyjna.**",
+      "stimulusIds": [
+        "pl-2026-01p-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-01p-19",
+          "label": "19",
+          "maxPoints": 3,
+          "response": {
+            "type": "extended_text"
+          },
+          "key": {},
+          "scoring": {
+            "type": "rubric",
+            "rubrics": [
+              {
+                "topic": null,
+                "rubricId": "pl-2026-01p-19-t1"
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-4.1",
+            "pl-gen-III",
+            "pl-46-2.1"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "Serdecznie zapraszam uczniów klas ósmych na wykład pod hasłem „Śmiech to zdrowie!”, który odbędzie się 14 stycznia 2026 r. na drugiej godzinie lekcyjnej. Spotykamy się w sali gimnastycznej naszej szkoły. Zachęcam do udziału w tym wydarzeniu. Będzie to dobra okazja, aby poznać zalety śmiechu. Po wykładzie odbędą się krótkie warsztaty relaksacyjne.\nPrzewodnicząca Samorządu Uczniowskiego\nZuzanna Nowak",
+              "ref": {
+                "source": "klucz",
+                "page": 12
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Jeżeli uczeń uwzględnia 5 elementów zaproszenia, a podaje tylko jeden argument, w kryterium „Treść i forma” otrzymuje 1 punkt.",
+            "Jeżeli uczeń uwzględnia 5 elementów zaproszenia i podaje dwa argumenty, ale żaden z nich nie nawiązuje do tematyki wykładu, w kryterium „Treść i forma” otrzymuje 1 punkt.",
+            "Kategorie „Treść i forma” oraz „Poprawność językowa, ortograficzna i interpunkcyjna” oceniamy rozłącznie."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-4.1",
+        "pl-gen-III",
+        "pl-46-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 16
+      }
+    },
+    {
+      "id": "pl-2026-01p-20",
+      "sessionId": "polski-2026-01-probny",
+      "number": 20,
+      "maxPoints": 20,
+      "instruction": "Wybierz **jeden** z podanych tematów i napisz wypracowanie.\n\n- Pamiętaj o zachowaniu formy wypowiedzi wskazanej w temacie: napisz **rozprawkę** albo **opowiadanie**.\n- W wypracowaniu odwołaj się do **wybranej lektury obowiązkowej**. Lista lektur obowiązkowych znajduje się na stronach 3 i 4 tego arkusza egzaminacyjnego.\n- Innym utworem literackim w przemówieniu może być także lektura obowiązkowa.\n- Twoja praca powinna liczyć co najmniej **200 wyrazów**.\n- Zapisz wypracowanie w wyznaczonym miejscu. Nie pisz na marginesie.\n- Pisz czytelnie.\n- Pamiętaj, że zabronione jest pisanie wypowiedzi obraźliwych, wulgarnych lub propagujących postępowanie niezgodne z prawem albo wypowiedzi aprobujących nieetyczne postępowanie bohatera.\n\nTemat 1.\nCzy zgadzasz się ze stwierdzeniem, że optymizm pomaga w życiu? Napisz **rozprawkę**, w której przedstawisz swoje stanowisko. W uzasadnieniu odwołaj się do lektury obowiązkowej oraz do innego utworu literackiego.\n\nTemat 2.\nNapisz **opowiadanie** o spotkaniu z bohaterem wybranej lektury obowiązkowej. Dzięki Twojemu poczuciu humoru Wasza wspólna przygoda zakończyła się szczęśliwie. Wypracowanie powinno dowodzić, że dobrze znasz wybraną lekturę obowiązkową.",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "pl-2026-01p-20",
+          "label": "20",
+          "maxPoints": 20,
+          "response": {
+            "type": "extended_text",
+            "minWords": 200,
+            "topics": [
+              {
+                "id": "1",
+                "text": "Czy zgadzasz się ze stwierdzeniem, że optymizm pomaga w życiu? Napisz **rozprawkę**, w której przedstawisz swoje stanowisko. W uzasadnieniu odwołaj się do lektury obowiązkowej oraz do innego utworu literackiego.",
+                "form": "rozprawka"
+              },
+              {
+                "id": "2",
+                "text": "Napisz **opowiadanie** o spotkaniu z bohaterem wybranej lektury obowiązkowej. Dzięki Twojemu poczuciu humoru Wasza wspólna przygoda zakończyła się szczęśliwie. Wypracowanie powinno dowodzić, że dobrze znasz wybraną lekturę obowiązkową.",
+                "form": "opowiadanie"
+              }
+            ]
+          },
+          "key": {},
+          "scoring": {
+            "type": "rubric",
+            "rubrics": [
+              {
+                "topic": "1",
+                "rubricId": "pl-2026-01p-20-t1"
+              },
+              {
+                "topic": "2",
+                "rubricId": "pl-2026-01p-20-t2"
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-1.7",
+            "pl-gen-II",
+            "pl-46-4.1",
+            "pl-78-3.2",
+            "pl-gen-III",
+            "pl-78-1.1",
+            "pl-78-2.1",
+            "pl-46-2.1"
+          ],
+          "scoringNotes": [
+            "Jeżeli wypowiedź w całości jest nie na temat, egzaminator oceni ją na 0 punktów. Nie sprawdza i nie zaznacza żadnych błędów w pracy. Egzaminator umieszcza dopisek – „Praca nie na temat”.",
+            "Jeżeli w wypowiedzi uczeń w ogóle nie odwołał się do treści lektury obowiązkowej wskazanej w poleceniu, za całą wypowiedź egzaminator przyzna 0 punktów.",
+            "Jeżeli wypowiedź jest nieczytelna, egzaminator oceni ją na 0 punktów.",
+            "Jeżeli wypowiedź nie zawiera w ogóle rozwinięcia (np. uczeń napisał tylko wstęp), egzaminator przyzna 0 punktów w każdym kryterium.",
+            "Funkcjonalność wykorzystania w wypracowaniu utworu literackiego nie oznacza konieczności omówienia przez zdającego wszystkich elementów fabuły, sensów utworu istotnych (z punktu widzenia egzaminatora) ze względu na zagadnienie sformułowane w temacie. Należy jednak pamiętać, że samo przywołanie imienia bohatera literackiego nie jest funkcjonalnym wykorzystaniem utworu.",
+            "Za utwór literacki w wypracowaniu nie uznaje się: powieści obrazkowej, mangi, scenariusza filmowego, gry komputerowej.",
+            "Jeżeli wypowiedź zawiera 180 wyrazów lub mniej, jest oceniana wyłącznie w kryteriach: Realizacja tematu wypowiedzi, Elementy twórcze / Elementy retoryczne oraz Kompetencje literackie i kulturowe. W pozostałych kryteriach egzaminator przyzna 0 punktów. Liczone są wszystkie wyrazy: samodzielne i niesamodzielne.",
+            "Jeżeli wypowiedź jest napisana niesamodzielnie, np. zawiera fragmenty odtworzone z podręcznika, zadania zawartego w arkuszu egzaminacyjnym lub innego źródła, w tym internetowego, lub jest przepisana od innego ucznia, wówczas egzamin z języka polskiego, w przypadku takiego ucznia, zostanie unieważniony.",
+            "W ocenie wypowiedzi uczniów, którym przyznano dostosowanie warunków przeprowadzania egzaminu, stosuje się szczegółowe zasady oceniania rozwiązań zadań otwartych z języka polskiego uwzględniające specyficzne trudności w uczeniu się.",
+            "Zabronione jest pisanie wypowiedzi obraźliwych, wulgarnych lub propagujących postępowanie niezgodne z prawem albo wypowiedzi aprobujących nieetyczne postępowanie bohatera. W przypadku takich wypowiedzi zostanie podjęta indywidualna decyzja dotycząca danej pracy, np. nie zostaną przyznane punkty za styl i język lub cała wypowiedź nie będzie podlegała ocenie.",
+            "Jeżeli za wypowiedź przyznano 0 pkt w kryterium Realizacja tematu wypowiedzi, we wszystkich pozostałych kryteriach przyznaje się 0 pkt.",
+            "Temat 1 (rozprawka): argumentowanie nie polega na streszczaniu utworów. Argumentacja musi być zgodna z poleceniem, wybraną lekturą obowiązkową oraz innym utworem literackim (może to być inna lektura obowiązkowa).",
+            "Temat 2 (opowiadanie): w opowiadaniu uwzględnione są następujące elementy: wspólna przygoda, szczęśliwe zakończenie, do którego doprowadziło poczucie humoru narratora. Opowiadanie ma charakter twórczy, nie może być streszczeniem wybranej lektury obowiązkowej.",
+            "Uczniowie ze specyficznymi trudnościami w uczeniu się: za błędy ortograficzne uznaje się błędy w zapisie wyrazów z u – ó, ż – rz, h – ch oraz łamanie zasady pisania wielką literą na początku zdania; innych błędów w zapisie (np. dodawania, opuszczania, przestawiania, mylenia liter, błędów dotyczących podziału wyrazu lub dźwięczności) nie liczy się jako ortograficznych."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-1.7",
+        "pl-gen-II",
+        "pl-46-4.1",
+        "pl-78-3.2",
+        "pl-gen-III",
+        "pl-78-1.1",
+        "pl-78-2.1",
+        "pl-46-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 17
+      }
+    }
+  ],
+  "rubrics": [
+    {
+      "id": "pl-2026-01p-19-t1",
+      "maxPoints": 3,
+      "criteria": [
+        {
+          "id": "tresc",
+          "name": "Treść i forma",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Treść zgodna z poleceniem, uwzględnione 2 argumenty, z których co najmniej jeden nawiązuje do tematyki wykładu; uwzględnionych 5 elementów dotyczących formy: kto zaprasza? kogo zaprasza? na co zaprasza? kiedy się odbywa? gdzie się odbywa?"
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Treść zgodna z poleceniem, uwzględnione 2 argumenty, z których co najmniej jeden nawiązuje do tematyki wykładu; uwzględnione 4 elementy dotyczące formy: kto zaprasza? ORAZ/ALBO kogo zaprasza? ORAZ/ALBO na co zaprasza? ORAZ/ALBO kiedy się odbywa? ORAZ/ALBO gdzie się odbywa?"
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Treść niezgodna z poleceniem ALBO treść zgodna z poleceniem, ale uwzględnione tylko 3 elementy dotyczące formy: kto zaprasza? ORAZ/ALBO kogo zaprasza? ORAZ/ALBO na co zaprasza? ORAZ/ALBO kiedy się odbywa? ORAZ/ALBO gdzie się odbywa?"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "poprawnosc",
+          "name": "Poprawność językowa, ortograficzna i interpunkcyjna",
+          "type": "error_count",
+          "max": 1,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 2,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 3,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        }
+      ],
+      "gates": []
+    },
+    {
+      "id": "pl-2026-01p-20-t1",
+      "maxPoints": 20,
+      "criteria": [
+        {
+          "id": "realizacja",
+          "name": "Realizacja tematu wypowiedzi",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu. Wszystkie pozostałe elementy polecenia uwzględnione. Wypowiedź w całości dotyczy problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu. Nieuwzględniony jeden element polecenia (inny niż forma). ORAZ/LUB W pracy występują fragmenty niedotyczące problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Forma wypowiedzi niezgodna z formą wskazaną w poleceniu. ALBO Nieuwzględnione co najmniej dwa elementy polecenia (inne niż forma)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "retoryczne",
+          "name": "Elementy retoryczne",
+          "type": "levels",
+          "max": 5,
+          "levels": [
+            {
+              "points": 5,
+              "paths": [
+                "Pogłębiona argumentacja. Argumenty odwołujące się np. do faktów, logiki, emocji, zilustrowane odpowiednimi przykładami ORAZ/LUB wykorzystanie przykładów w funkcji argumentacyjnej. Argumenty/przykłady uporządkowane, np. zhierarchizowane."
+              ]
+            },
+            {
+              "points": 4,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 3 pkt i niektóre na 5 pkt."
+              ]
+            },
+            {
+              "points": 3,
+              "paths": [
+                "Powierzchowna argumentacja; w wypowiedzi brak wnikliwości. Niektóre argumenty zilustrowane odpowiednimi przykładami ORAZ/LUB wykorzystanie przykładów w funkcji argumentacyjnej. Argumenty/przykłady częściowo uporządkowane."
+              ]
+            },
+            {
+              "points": 2,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 1 pkt i niektóre na 3 pkt."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Podjęta próba argumentowania. Ograniczenie do wyliczenia powierzchownie omówionych przykładów, powiązanych z problemem określonym w temacie."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompetencje",
+          "name": "Kompetencje literackie i kulturowe",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). Poprawność rzeczowa."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). ALBO Częściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). ALBO Częściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). Dopuszczalne 1–2 błędy rzeczowe."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompozycja",
+          "name": "Kompozycja tekstu",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi. Graficznie wyodrębnione akapity. Dopuszczalna 1 usterka w zakresie spójności ALBO logiki wypowiedzi, ALBO podziału wypowiedzi na funkcjonalne akapity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi. Graficznie wyodrębnione akapity. Dopuszczalne łącznie 2–3 usterki w zakresie spójności ORAZ/ALBO logiki wypowiedzi."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "styl",
+          "name": "Styl",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Odpowiedni do treści i formy wypowiedzi. Jednolity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Sporadyczne usterki w odpowiedniości ORAZ/LUB jednolitości stylu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia wymagań określonych na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jezyk",
+          "name": "Język",
+          "type": "matrix",
+          "max": 4,
+          "rows": "zakres środków językowych",
+          "cols": "liczba błędów językowych",
+          "table": {
+            "Szeroki zakres środków językowych (zróżnicowana składnia i leksyka, np. bogata frazeologia, precyzyjne słownictwo, umożliwiające pełną i swobodną realizację tematu)": {
+              "nie więcej niż 4 błędy językowe": 4,
+              "5–7 błędów językowych": 3,
+              "8–10 błędów językowych": 2,
+              "11–13 błędów językowych": 1,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Zadowalający zakres środków językowych (składnia i leksyka stosowne/odpowiednie do realizacji tematu)": {
+              "nie więcej niż 4 błędy językowe": 3,
+              "5–7 błędów językowych": 2,
+              "8–10 błędów językowych": 1,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Wąski zakres środków językowych (składnia i leksyka proste/ograniczone, utrudniające realizację tematu)": {
+              "nie więcej niż 4 błędy językowe": 2,
+              "5–7 błędów językowych": 1,
+              "8–10 błędów językowych": 0,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            }
+          }
+        },
+        {
+          "id": "ortografia",
+          "name": "Ortografia",
+          "type": "error_count",
+          "max": 2,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 1,
+                "points": 2
+              },
+              {
+                "maxErrors": 3,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 3,
+                "points": 2
+              },
+              {
+                "maxErrors": 6,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "interpunkcja",
+          "name": "Interpunkcja",
+          "type": "error_count",
+          "max": 1,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 9,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 11,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        }
+      ],
+      "gates": [
+        {
+          "ifCriterion": "realizacja",
+          "equals": 0,
+          "thenAllOthers": 0
+        }
+      ]
+    },
+    {
+      "id": "pl-2026-01p-20-t2",
+      "maxPoints": 20,
+      "criteria": [
+        {
+          "id": "realizacja",
+          "name": "Realizacja tematu wypowiedzi",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu. Wszystkie pozostałe elementy polecenia uwzględnione. Wypowiedź w całości dotyczy problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu. Nieuwzględniony jeden element polecenia (inny niż forma). ORAZ/LUB W pracy występują fragmenty niedotyczące problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Forma wypowiedzi niezgodna z formą wskazaną w poleceniu. ALBO Nieuwzględnione co najmniej dwa elementy polecenia (inne niż forma)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tworcze",
+          "name": "Elementy twórcze",
+          "type": "levels",
+          "max": 5,
+          "levels": [
+            {
+              "points": 5,
+              "paths": [
+                "Funkcjonalna narracja. Logiczny układ zdarzeń. Urozmaicona fabuła, w tym funkcjonalne wykorzystanie co najmniej 6 spośród następujących elementów: opis, charakterystyka bohatera, czas akcji, miejsce akcji, zwrot akcji, puenta, punkt kulminacyjny, dialog, monolog, retrospekcja. Twórcze wykorzystanie treści lektury."
+              ]
+            },
+            {
+              "points": 4,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 3 pkt i niektóre na 5 pkt."
+              ]
+            },
+            {
+              "points": 3,
+              "paths": [
+                "Funkcjonalna narracja. Logiczny układ zdarzeń. Prosta fabuła, w tym funkcjonalne wykorzystanie co najmniej 4 spośród następujących elementów: opis, charakterystyka bohatera, czas akcji, miejsce akcji, zwrot akcji, puenta, punkt kulminacyjny, dialog, monolog, retrospekcja."
+              ]
+            },
+            {
+              "points": 2,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 1 pkt i niektóre na 3 pkt."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Narracja częściowo funkcjonalna. Dopuszczalne usterki w logicznym układzie zdarzeń. Prosta fabuła."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompetencje",
+          "name": "Kompetencje literackie i kulturowe",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). Poprawność rzeczowa."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). ALBO Częściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). ALBO Częściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). Dopuszczalne 1–2 błędy rzeczowe."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompozycja",
+          "name": "Kompozycja tekstu",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi. Graficznie wyodrębnione akapity. Dopuszczalna 1 usterka w zakresie spójności ALBO logiki wypowiedzi, ALBO podziału wypowiedzi na funkcjonalne akapity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi. Graficznie wyodrębnione akapity. Dopuszczalne łącznie 2–3 usterki w zakresie spójności ORAZ/ALBO logiki wypowiedzi."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "styl",
+          "name": "Styl",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Odpowiedni do treści i formy wypowiedzi. Jednolity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Sporadyczne usterki w odpowiedniości ORAZ/LUB jednolitości stylu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia wymagań określonych na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jezyk",
+          "name": "Język",
+          "type": "matrix",
+          "max": 4,
+          "rows": "zakres środków językowych",
+          "cols": "liczba błędów językowych",
+          "table": {
+            "Szeroki zakres środków językowych (zróżnicowana składnia i leksyka, np. bogata frazeologia, precyzyjne słownictwo, umożliwiające pełną i swobodną realizację tematu)": {
+              "nie więcej niż 4 błędy językowe": 4,
+              "5–7 błędów językowych": 3,
+              "8–10 błędów językowych": 2,
+              "11–13 błędów językowych": 1,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Zadowalający zakres środków językowych (składnia i leksyka stosowne/odpowiednie do realizacji tematu)": {
+              "nie więcej niż 4 błędy językowe": 3,
+              "5–7 błędów językowych": 2,
+              "8–10 błędów językowych": 1,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Wąski zakres środków językowych (składnia i leksyka proste/ograniczone, utrudniające realizację tematu)": {
+              "nie więcej niż 4 błędy językowe": 2,
+              "5–7 błędów językowych": 1,
+              "8–10 błędów językowych": 0,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            }
+          }
+        },
+        {
+          "id": "ortografia",
+          "name": "Ortografia",
+          "type": "error_count",
+          "max": 2,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 1,
+                "points": 2
+              },
+              {
+                "maxErrors": 3,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 3,
+                "points": 2
+              },
+              {
+                "maxErrors": 6,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "interpunkcja",
+          "name": "Interpunkcja",
+          "type": "error_count",
+          "max": 1,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 9,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 11,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        }
+      ],
+      "gates": [
+        {
+          "ifCriterion": "realizacja",
+          "equals": 0,
+          "thenAllOthers": 0
+        }
+      ]
+    }
+  ],
+  "audio": []
+}

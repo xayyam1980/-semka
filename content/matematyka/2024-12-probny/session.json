@@ -1,0 +1,1673 @@
+{
+  "session": {
+    "id": "matematyka-2024-12-probny",
+    "subjectId": "matematyka",
+    "year": 2024,
+    "month": 12,
+    "term": "probny",
+    "formCode": "OMAP-100",
+    "versions": [
+      "X"
+    ],
+    "maxPoints": 30,
+    "taskOrder": [
+      "ma-2024-12p-01",
+      "ma-2024-12p-02",
+      "ma-2024-12p-03",
+      "ma-2024-12p-04",
+      "ma-2024-12p-05",
+      "ma-2024-12p-06",
+      "ma-2024-12p-07",
+      "ma-2024-12p-08",
+      "ma-2024-12p-09",
+      "ma-2024-12p-10",
+      "ma-2024-12p-11",
+      "ma-2024-12p-12",
+      "ma-2024-12p-13",
+      "ma-2024-12p-14",
+      "ma-2024-12p-15",
+      "ma-2024-12p-16",
+      "ma-2024-12p-17",
+      "ma-2024-12p-18",
+      "ma-2024-12p-19",
+      "ma-2024-12p-20",
+      "ma-2024-12p-21"
+    ],
+    "sources": [
+      {
+        "kind": "klucz",
+        "path": "Matematyka/Additional/Grudzień 2024/matematyka-2024-grudzien-egzamin-osmoklasisty-probny-odpowiedzi.pdf",
+        "sha256": "4f505fef19534ec50d2db458347d7abf36d149520bcc145b6b45fa92a5b89605",
+        "pages": 23
+      },
+      {
+        "kind": "arkusz",
+        "path": "Matematyka/Additional/Grudzień 2024/matematyka-2024-grudzien-egzamin-osmoklasisty-probny.pdf",
+        "sha256": "b95f33404369d5eea6e91f392e6de51ad40213df6ea7b36eaf76732e15664f9b",
+        "pages": 26
+      }
+    ],
+    "contentVersion": "34d72a33f35aa8d1",
+    "status": "published"
+  },
+  "stimuli": [
+    {
+      "id": "ma-2024-12p-06-figA",
+      "kind": "figure",
+      "title": "Oś liczbowa z pustym kółkiem w punkcie −3 i zaznaczonym na zielono zbiorem liczb większych od −3 (w prawo od −3).",
+      "asset": "assets/ma-2024-12p-06-figA.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2024-12p-06-figB",
+      "kind": "figure",
+      "title": "Oś liczbowa z pustym kółkiem w punkcie −3 i zaznaczonym na zielono zbiorem liczb mniejszych od −3 (w lewo od −3).",
+      "asset": "assets/ma-2024-12p-06-figB.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2024-12p-06-figC",
+      "kind": "figure",
+      "title": "Oś liczbowa z zamalowanym kółkiem w punkcie −3 i zaznaczonym na zielono zbiorem liczb większych lub równych −3 (w prawo od −3).",
+      "asset": "assets/ma-2024-12p-06-figC.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2024-12p-06-figD",
+      "kind": "figure",
+      "title": "Oś liczbowa z zamalowanym kółkiem w punkcie −3 i zaznaczonym na zielono zbiorem liczb mniejszych lub równych −3 (w lewo od −3).",
+      "asset": "assets/ma-2024-12p-06-figD.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2024-12p-07-fig1",
+      "kind": "figure",
+      "title": "Diagram kołowy przedstawiający procentowy rozkład odpowiedzi uczniów: portal $\\mathcal{F}$ – 45%, portal $\\mathcal{Y}$ – 25%, portal $\\mathcal{I}$ – 10%, portal $\\mathcal{S}$ – 15%, portal $\\mathcal{X}$ – 2,5%, żaden z wymienionych – 2,5%.",
+      "asset": "assets/ma-2024-12p-07-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2024-12p-09-fig1",
+      "kind": "figure",
+      "title": "Prostokąt ABCD podzielony pionową prostą EF na kwadrat AEFD po lewej stronie i prostokąt EBCF po prawej; odcinek EB jest opisany długością 10 cm.",
+      "asset": "assets/ma-2024-12p-09-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2024-12p-10-fig1",
+      "kind": "figure",
+      "title": "Trzy poziome, równoległe proste a, b, c przecięte dwiema wzajemnie prostopadłymi prostymi d i e, które przecinają się w punkcie A na prostej b; zaznaczono kąt 142° między prostą d a prostą a oraz kąt α między prostą e a prostą c.",
+      "asset": "assets/ma-2024-12p-10-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2024-12p-12-fig1",
+      "kind": "figure",
+      "title": "Dwa trójkąty: ABC z bokiem AC o długości 7 i kątami 59° przy wierzchołku C oraz 62° przy wierzchołku A oraz KLM z bokiem KL o długości 7 i kątami 62° przy wierzchołku K oraz 59° przy wierzchołku M.",
+      "asset": "assets/ma-2024-12p-12-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2024-12p-14-fig1",
+      "kind": "figure",
+      "title": "Dwa niebieskie znaki drogowe odcinkowego pomiaru prędkości: znak informujący o rozpoczęciu pomiaru oraz znak informujący o zakończeniu pomiaru, przekreślony czerwoną linią.",
+      "asset": "assets/ma-2024-12p-14-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "ma-2024-12p-15-fig1",
+      "kind": "figure",
+      "title": "Okrąg o środku $S$ z cięciwą $AB$; punkty $A$ i $B$ połączono odcinkami ze środkiem $S$, a trójkąt $ASB$ zaznaczono kolorem.",
+      "asset": "assets/ma-2024-12p-15-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "ma-2024-12p-17-fig1",
+      "kind": "figure",
+      "title": "Trójkąt ABC z wierzchołkiem C u góry, którego boki opisano wyrażeniami: bok AC jako $3x - 12$, bok BC jako $88 - 2x$, bok AB jako $1,5x + 18$.",
+      "asset": "assets/ma-2024-12p-17-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 19
+      }
+    },
+    {
+      "id": "ma-2024-12p-18-fig1",
+      "kind": "figure",
+      "title": "Trapez równoramienny ABCD z krótszą podstawą CD u góry i dłuższą podstawą AB na dole oraz wysokością DE poprowadzoną z wierzchołka D do punktu E na podstawie AB; przy punkcie E zaznaczony kąt prosty.",
+      "asset": "assets/ma-2024-12p-18-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 20
+      }
+    },
+    {
+      "id": "ma-2024-12p-20-fig1",
+      "kind": "figure",
+      "title": "Siatka graniastosłupa prawidłowego czworokątnego: pas czterech przystających prostokątów (ścian bocznych) oraz dwa kwadraty (podstawy) dołączone do górnej i dolnej krawędzi pasa; nad trzema prawymi ścianami bocznymi zaznaczono strzałką wymiar 18 cm, a wysokość ściany bocznej oznaczono literą H.",
+      "asset": "assets/ma-2024-12p-20-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 22
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "ma-2024-12p-01",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 1,
+      "maxPoints": 1,
+      "instruction": "Poniżej zamieszczono fragment etykiety pewnego opakowania śmietany.\n\n**Śmietana**\n\nWartość odżywcza w $100\\text{ g}$ produktu:\n\n| Składnik | Zawartość |\n|---|---|\n| tłuszcz | $18\\text{ g}$ |\n| węglowodany | $4\\text{ g}$ |\n| białko | $3\\text{ g}$ |\n| sól | $0,15\\text{ g}$ |\n\n**Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nW opakowaniu zawierającym $200\\text{ g}$ tej śmietany jest [[A|B]] dag białka.\n\nMasa tłuszczu w dowolnej porcji tej śmietany jest [[C|D]] razy większa od masy soli.",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-12p-01",
+          "label": "1",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "0,6"
+              },
+              {
+                "id": "B",
+                "text": "0,06"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "12"
+              },
+              {
+                "id": "D",
+                "text": "120"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "A",
+                "reason": "D"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-46-XII.7",
+            "ma-46-V.2"
+          ],
+          "explanation": "W 100 g śmietany są 3 g białka, więc w 200 g tej śmietany jest 6 g białka, czyli 0,6 dag, ponieważ 1 dag = 10 g – dlatego pierwsza luka to A. Masa tłuszczu (18 g) jest 18 : 0,15 = 120 razy większa od masy soli (0,15 g) – dlatego druga luka to D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-46-XII.7",
+        "ma-46-V.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2024-12p-02",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 2,
+      "maxPoints": 1,
+      "instruction": "Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-12p-02",
+          "label": "2",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Wartość wyrażenia $5^2 \\cdot 5^3 \\cdot 5^5$ jest równa $(5^5)^2$. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Wyrażenia $\\frac{2^3 \\cdot 3^3}{6}$ oraz $\\left(\\frac{12}{5} : \\frac{2}{5}\\right)^2$ mają taką samą wartość. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-78-I.2",
+            "ma-78-I.3",
+            "ma-78-I.4"
+          ],
+          "explanation": "Mnożąc potęgi o tej samej podstawie, dodajemy wykładniki: $5^2 \\cdot 5^3 \\cdot 5^5 = 5^{2+3+5} = 5^{10}$, a podnosząc potęgę do potęgi, mnożymy wykładniki: $(5^5)^2 = 5^{5 \\cdot 2} = 5^{10}$, więc pierwsze zdanie jest prawdziwe. W drugim zdaniu $\\frac{2^3 \\cdot 3^3}{6} = \\frac{8 \\cdot 27}{6} = \\frac{216}{6} = 36$ oraz $\\left(\\frac{12}{5} : \\frac{2}{5}\\right)^2 = \\left(\\frac{12}{5} \\cdot \\frac{5}{2}\\right)^2 = 6^2 = 36$, więc oba wyrażenia mają tę samą wartość i drugie zdanie też jest prawdziwe."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-78-I.2",
+        "ma-78-I.3",
+        "ma-78-I.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2024-12p-03",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 3,
+      "maxPoints": 1,
+      "instruction": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWyrażenie $2(a-2b)-(a-b)(2-b)+b^2$ można przekształcić równoważnie do postaci",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-12p-03",
+          "label": "3",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$ab$"
+              },
+              {
+                "id": "B",
+                "text": "$ab-2b$"
+              },
+              {
+                "id": "C",
+                "text": "$b^2-2b-ab$"
+              },
+              {
+                "id": "D",
+                "text": "$b^2-6b+a-2$"
+              },
+              {
+                "id": "E",
+                "text": "$b^2+ab$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-IV.3",
+            "ma-78-IV.4"
+          ],
+          "explanation": "Wymnażamy nawiasy: $2(a-2b)=2a-4b$ oraz $(a-b)(2-b)=2a-ab-2b+b^2$. Odejmując drugi wynik i dodając $b^2$, otrzymujemy $2a-4b-2a+ab+2b-b^2+b^2=ab-2b$. Zatem wyrażenie można przekształcić równoważnie do postaci $ab-2b$, czyli poprawna jest odpowiedź B."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-IV.3",
+        "ma-78-IV.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2024-12p-04",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 4,
+      "maxPoints": 1,
+      "instruction": "Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nLiczba $4$ jest mniejsza od liczby [[A|B]].\n\nLiczba $4$ jest większa od liczby [[C|D]].",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-12p-04",
+          "label": "4",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "$2\\sqrt{3}$"
+              },
+              {
+                "id": "B",
+                "text": "$3\\sqrt{2}$"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "$\\sqrt{2}+2$"
+              },
+              {
+                "id": "D",
+                "text": "$6-\\sqrt{3}$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "B",
+                "reason": "C"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-78-II.3"
+          ],
+          "explanation": "Zapisujemy liczbę 4 jako pierwiastek: $4=\\sqrt{16}$. Wtedy $2\\sqrt{3}=\\sqrt{12}$ jest mniejsze od 4, a $3\\sqrt{2}=\\sqrt{18}$ jest większe od 4, więc liczba 4 jest mniejsza od $3\\sqrt{2}$ (odpowiedź B). W drugim zdaniu porównujemy: $\\sqrt{2}+2\\approx 3{,}41$ jest mniejsze od 4, natomiast $6-\\sqrt{3}\\approx 4{,}27$ jest większe od 4, zatem liczba 4 jest większa od $\\sqrt{2}+2$ (odpowiedź C)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-78-II.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2024-12p-05",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 5,
+      "maxPoints": 1,
+      "instruction": "W pudełku znajdują się kule różniące się tylko kolorem: białe, czerwone i niebieskie. Kul białych jest pięć, kul czerwonych jest trzy razy więcej niż białych, a kul niebieskich jest o pięć mniej niż czerwonych. Z pudełka losujemy jedną kulę.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nPrawdopodobieństwo wylosowania kuli białej jest równe",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-12p-05",
+          "label": "5",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$\\frac{1}{2}$"
+              },
+              {
+                "id": "B",
+                "text": "$\\frac{1}{3}$"
+              },
+              {
+                "id": "C",
+                "text": "$\\frac{1}{5}$"
+              },
+              {
+                "id": "D",
+                "text": "$\\frac{1}{6}$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-XII.2"
+          ],
+          "explanation": "Kul białych jest 5, czerwonych trzy razy więcej, czyli $5 \\cdot 3 = 15$, a niebieskich o pięć mniej niż czerwonych, czyli $15 - 5 = 10$. Wszystkich kul w pudełku jest zatem $5 + 15 + 10 = 30$. Prawdopodobieństwo wylosowania kuli białej wynosi więc $\\frac{5}{30} = \\frac{1}{6}$, co odpowiada odpowiedzi D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-XII.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2024-12p-06",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 6,
+      "maxPoints": 1,
+      "instruction": "Dana jest nierówność $x \\geq -3$.\n\n**Na którym rysunku poprawnie zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych $x$ spełniających tę nierówność? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [
+        "ma-2024-12p-06-figA",
+        "ma-2024-12p-06-figB",
+        "ma-2024-12p-06-figC",
+        "ma-2024-12p-06-figD"
+      ],
+      "items": [
+        {
+          "id": "ma-2024-12p-06",
+          "label": "6",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "![Oś liczbowa z pustym kółkiem w punkcie −3 i zaznaczonym na zielono zbiorem liczb większych od −3 (w prawo od −3).](stimulus:ma-2024-12p-06-figA)"
+              },
+              {
+                "id": "B",
+                "text": "![Oś liczbowa z pustym kółkiem w punkcie −3 i zaznaczonym na zielono zbiorem liczb mniejszych od −3 (w lewo od −3).](stimulus:ma-2024-12p-06-figB)"
+              },
+              {
+                "id": "C",
+                "text": "![Oś liczbowa z zamalowanym kółkiem w punkcie −3 i zaznaczonym na zielono zbiorem liczb większych lub równych −3 (w prawo od −3).](stimulus:ma-2024-12p-06-figC)"
+              },
+              {
+                "id": "D",
+                "text": "![Oś liczbowa z zamalowanym kółkiem w punkcie −3 i zaznaczonym na zielono zbiorem liczb mniejszych lub równych −3 (w lewo od −3).](stimulus:ma-2024-12p-06-figD)"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-78-X.1"
+          ],
+          "explanation": "Nierówność $x \\geq -3$ jest spełniona przez liczbę $-3$ oraz przez wszystkie liczby od niej większe, więc na osi liczbowej zaznaczamy zamalowany punkt w $-3$ i zbiór liczb w prawo od niego. Taki zbiór pokazuje rysunek C. Na rysunkach A i B liczba $-3$ jest wykluczona (puste kółko), a na rysunkach B i D zaznaczono liczby mniejsze od $-3$, czyli rozwiązania nierówności przeciwnych."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-78-X.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2024-12p-07",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 7,
+      "maxPoints": 1,
+      "instruction": "Uczniom klas ósmych zadano pytanie: *Z którego portalu internetowego korzystasz najczęściej?*. Każdy z uczniów wskazał jeden portal. Procentowy rozkład udzielonych odpowiedzi uczniów przedstawiono na diagramie poniżej. Portal $\\mathcal{F}$ wskazało 72 uczniów.\n\n![Diagram kołowy przedstawiający procentowy rozkład odpowiedzi uczniów: portal $\\mathcal{F}$ – 45%, portal $\\mathcal{Y}$ – 25%, portal $\\mathcal{I}$ – 10%, portal $\\mathcal{S}$ – 15%, portal $\\mathcal{X}$ – 2,5%, żaden z wymienionych – 2,5%.](stimulus:ma-2024-12p-07-fig1)\n\n**Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "ma-2024-12p-07-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2024-12p-07",
+          "label": "7",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Portal $\\mathcal{Y}$ wskazało 40 uczniów."
+              },
+              {
+                "id": "2",
+                "text": "Portal $\\mathcal{I}$ wskazało o 8 uczniów mniej niż uczniów, którzy wskazali portal $\\mathcal{S}$."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-46-XIII.2",
+            "ma-78-V.5"
+          ],
+          "explanation": "Skoro portal $\\mathcal{F}$ (45% uczniów) wskazało 72 uczniów, to 1% odpowiada $72 : 45 = 1{,6}$ ucznia, a wszyscy uczniowie to $100 \\cdot 1{,6} = 160$. Portal $\\mathcal{Y}$ wskazało $25\\% \\cdot 160 = 40$ uczniów, więc pierwsze zdanie jest prawdziwe. Portal $\\mathcal{I}$ wskazało $10\\% \\cdot 160 = 16$ uczniów, a portal $\\mathcal{S}$ – $15\\% \\cdot 160 = 24$ uczniów, czyli o 8 więcej, więc drugie zdanie też jest prawdziwe."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-46-XIII.2",
+        "ma-78-V.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2024-12p-08",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 8,
+      "maxPoints": 1,
+      "instruction": "Dane są cztery liczby: $x$, $y$, $z$, $a$. Wiadomo, że $x = 6$, $a = 4$ oraz średnia arytmetyczna trzech liczb $x$, $y$, $z$ jest równa $12$.\n\n**Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nŚrednia arytmetyczna dwóch liczb $y$ i $z$ jest równa [[A|B]].\n\nŚrednia arytmetyczna czterech liczb: $x$, $y$, $z$, $a$, jest równa [[C|D]].",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-12p-08",
+          "label": "8",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "6"
+              },
+              {
+                "id": "B",
+                "text": "15"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "8"
+              },
+              {
+                "id": "D",
+                "text": "10"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "B",
+                "reason": "D"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-XIII.3"
+          ],
+          "explanation": "Skoro średnia arytmetyczna liczb $x$, $y$, $z$ wynosi $12$, to ich suma jest równa $3 \\cdot 12 = 36$. Ponieważ $x = 6$, suma $y + z = 36 - 6 = 30$, więc średnia liczb $y$ i $z$ to $30 : 2 = 15$ (odpowiedź B). Suma czterech liczb wynosi $36 + 4 = 40$, więc ich średnia to $40 : 4 = 10$ (odpowiedź D)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-XIII.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2024-12p-09",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 9,
+      "maxPoints": 1,
+      "instruction": "Prostokąt $ABCD$ podzielono prostą $EF$ na kwadrat $AEFD$ i prostokąt $EBCF$ (zobacz rysunek). Obwód prostokąta $EBCF$ jest równy $36\\,\\text{cm}$, a długość boku $EB$ jest równa $10\\,\\text{cm}$.\n\n![Prostokąt ABCD podzielony pionową prostą EF na kwadrat AEFD po lewej stronie i prostokąt EBCF po prawej; odcinek EB jest opisany długością 10 cm.](stimulus:ma-2024-12p-09-fig1)\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nPole kwadratu $AEFD$ jest równe",
+      "stimulusIds": [
+        "ma-2024-12p-09-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2024-12p-09",
+          "label": "9",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$8\\,\\text{cm}^2$"
+              },
+              {
+                "id": "B",
+                "text": "$16\\,\\text{cm}^2$"
+              },
+              {
+                "id": "C",
+                "text": "$32\\,\\text{cm}^2$"
+              },
+              {
+                "id": "D",
+                "text": "$64\\,\\text{cm}^2$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-XI.2",
+            "ma-78-IX.2"
+          ],
+          "explanation": "Obwód prostokąta $EBCF$ wynosi $36\\,\\text{cm}$, a boki $EB$ i $FC$ mają po $10\\,\\text{cm}$, więc na pozostałe dwa boki zostaje $36\\,\\text{cm} - 2 \\cdot 10\\,\\text{cm} = 16\\,\\text{cm}$, czyli $EF = BC = 8\\,\\text{cm}$. Odcinek $EF$ jest jednocześnie bokiem kwadratu $AEFD$, więc pole tego kwadratu wynosi $8\\,\\text{cm} \\cdot 8\\,\\text{cm} = 64\\,\\text{cm}^2$. Poprawna jest więc odpowiedź D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-XI.2",
+        "ma-78-IX.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2024-12p-10",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 10,
+      "maxPoints": 1,
+      "instruction": "Na rysunku przedstawiono proste $a$, $b$, $c$, $d$, $e$ oraz zaznaczono miary niektórych kątów. Proste $a$, $b$, $c$ są wzajemnie równoległe. Proste $d$ i $e$ są wzajemnie prostopadłe i przecinają się w punkcie $A$ leżącym na prostej $b$.\n\n![Trzy poziome, równoległe proste a, b, c przecięte dwiema wzajemnie prostopadłymi prostymi d i e, które przecinają się w punkcie A na prostej b; zaznaczono kąt 142° między prostą d a prostą a oraz kąt α między prostą e a prostą c.](stimulus:ma-2024-12p-10-fig1)\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nMiara kąta $\\alpha$ jest równa",
+      "stimulusIds": [
+        "ma-2024-12p-10-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2024-12p-10",
+          "label": "10",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$38^\\circ$"
+              },
+              {
+                "id": "B",
+                "text": "$45^\\circ$"
+              },
+              {
+                "id": "C",
+                "text": "$52^\\circ$"
+              },
+              {
+                "id": "D",
+                "text": "$60^\\circ$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-46-VIII.6",
+            "ma-78-VIII.3"
+          ],
+          "explanation": "Kąt $142^\\circ$ zaznaczony przy prostej $a$ jest rozwarty, więc kąt ostry między prostą $d$ a prostą $a$ ma miarę $180^\\circ - 142^\\circ = 38^\\circ$. Ponieważ proste $a$ i $b$ są równoległe, taki sam kąt ($38^\\circ$) tworzy prosta $d$ z prostą $b$ w punkcie $A$. Proste $d$ i $e$ są prostopadłe, więc kąt między prostą $e$ a prostą $b$ przy punkcie $A$ ma miarę $90^\\circ - 38^\\circ = 52^\\circ$, a ponieważ $b \\parallel c$, kąt $\\alpha$ jest mu równy (kąty odpowiadające). Zatem $\\alpha = 52^\\circ$."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-46-VIII.6",
+        "ma-78-VIII.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2024-12p-11",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 11,
+      "maxPoints": 1,
+      "instruction": "Dany jest romb, którego przekątne mają długość $24$ cm i $18$ cm.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nPole tego rombu jest równe",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-12p-11",
+          "label": "11",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$108\\ \\text{cm}^2$"
+              },
+              {
+                "id": "B",
+                "text": "$216\\ \\text{cm}^2$"
+              },
+              {
+                "id": "C",
+                "text": "$225\\ \\text{cm}^2$"
+              },
+              {
+                "id": "D",
+                "text": "$432\\ \\text{cm}^2$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-XI.3"
+          ],
+          "explanation": "Pole rombu obliczamy ze wzoru $P=\\frac{d_1\\cdot d_2}{2}$, gdzie $d_1$ i $d_2$ to długości przekątnych rombu. Podstawiając dane: $P=\\frac{24\\ \\text{cm}\\cdot 18\\ \\text{cm}}{2}=\\frac{432\\ \\text{cm}^2}{2}=216\\ \\text{cm}^2$. Dlatego poprawna jest odpowiedź B."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-XI.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2024-12p-12",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 12,
+      "maxPoints": 1,
+      "instruction": "Na rysunku przedstawiono dwa trójkąty: $ABC$ i $KLM$, podano długości boków $AC$ i $KL$ oraz zaznaczono miary niektórych kątów.\n\n![Dwa trójkąty: ABC z bokiem AC o długości 7 i kątami 59° przy wierzchołku C oraz 62° przy wierzchołku A oraz KLM z bokiem KL o długości 7 i kątami 62° przy wierzchołku K oraz 59° przy wierzchołku M.](stimulus:ma-2024-12p-12-fig1)\n\n**Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "ma-2024-12p-12-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2024-12p-12",
+          "label": "12",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Trójkąt $KLM$ nie jest równoramienny. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Trójkąty $ABC$ i $KLM$ są przystające. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "F",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-78-VIII.4",
+            "ma-78-VIII.6"
+          ],
+          "explanation": "W trójkącie KLM trzeci kąt (przy wierzchołku L) ma miarę $180° - 62° - 59° = 59°$, więc dwa kąty tego trójkąta są równe i trójkąt KLM jest równoramienny – pierwsze zdanie jest fałszywe. W trójkącie ABC trzeci kąt też ma miarę $59°$, a bok o długości 7 leży w obu trójkątach między kątami o miarach $62°$ i $59°$, więc na podstawie cechy przystawania kąt–bok–kąt trójkąty ABC i KLM są przystające – drugie zdanie jest prawdziwe. Dlatego poprawna odpowiedź to F, P."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-78-VIII.4",
+        "ma-78-VIII.6"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2024-12p-13",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 13,
+      "maxPoints": 1,
+      "instruction": "Dany jest graniastosłup prawidłowy czworokątny, w którym krawędź podstawy ma długość $7$. Krawędź boczna tego graniastosłupa jest dwa razy dłuższa od krawędzi podstawy.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nObjętość tego graniastosłupa jest równa",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-12p-13",
+          "label": "13",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "686"
+              },
+              {
+                "id": "B",
+                "text": "$\\frac{686}{3}$"
+              },
+              {
+                "id": "C",
+                "text": "343"
+              },
+              {
+                "id": "D",
+                "text": "$\\frac{343}{3}$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-II.5",
+            "ma-78-XI.2"
+          ],
+          "explanation": "Podstawą graniastosłupa prawidłowego czworokątnego jest kwadrat o boku $7$, więc pole podstawy wynosi $7\\cdot7=49$. Krawędź boczna (czyli wysokość graniastosłupa) jest dwa razy dłuższa od krawędzi podstawy, zatem ma długość $2\\cdot7=14$. Objętość obliczamy ze wzoru $V=P_p\\cdot H=49\\cdot14=686$, dlatego poprawna jest odpowiedź A."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-II.5",
+        "ma-78-XI.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2024-12p-14",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 14,
+      "maxPoints": 1,
+      "instruction": "Odcinkowy pomiar prędkości polega na wyznaczeniu średniej prędkości samochodu na określonym odcinku drogi. Na początku i na końcu takiego odcinka ustawiono znaki drogowe informujące o rozpoczęciu i zakończeniu pomiaru (zobacz rysunek).\n\n![Dwa niebieskie znaki drogowe odcinkowego pomiaru prędkości: znak informujący o rozpoczęciu pomiaru oraz znak informujący o zakończeniu pomiaru, przekreślony czerwoną linią.](stimulus:ma-2024-12p-14-fig1)\n\nSamochód osobowy przejechał w 2 minuty taki odcinek drogi o długości 3 km.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nWyznaczona prędkość tego samochodu na objętym pomiarem odcinku drogi była równa",
+      "stimulusIds": [
+        "ma-2024-12p-14-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2024-12p-14",
+          "label": "14",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$40\\,\\frac{\\text{km}}{\\text{h}}$"
+              },
+              {
+                "id": "B",
+                "text": "$60\\,\\frac{\\text{km}}{\\text{h}}$"
+              },
+              {
+                "id": "C",
+                "text": "$90\\,\\frac{\\text{km}}{\\text{h}}$"
+              },
+              {
+                "id": "D",
+                "text": "$150\\,\\frac{\\text{km}}{\\text{h}}$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-XII.3",
+            "ma-46-XII.9"
+          ],
+          "explanation": "Samochód przejechał 3 km w 2 minuty, czyli w $\\frac{2}{60}$ h = $\\frac{1}{30}$ h. Średnia prędkość to droga podzielona przez czas: $3\\,\\text{km} : \\frac{1}{30}\\,\\text{h} = 90\\,\\frac{\\text{km}}{\\text{h}}$. Można też zauważyć, że w godzinę (60 minut) samochód przejechałby 30 razy większą drogę niż w 2 minuty: $30 \\cdot 3\\,\\text{km} = 90\\,\\text{km}$, więc prędkość wynosi $90\\,\\frac{\\text{km}}{\\text{h}}$. Dlatego poprawna jest odpowiedź C."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-XII.3",
+        "ma-46-XII.9"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "ma-2024-12p-15",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 15,
+      "maxPoints": 1,
+      "instruction": "Dany jest okrąg $\\mathcal{O}$, którego średnica ma długość $20$ cm. Odcinek $AB$ ma długość $12$ cm i jest cięciwą tego okręgu. Punkty $A$ i $B$ połączono z punktem $S$, który jest środkiem tego okręgu (zobacz rysunek).\n\n![Okrąg o środku $S$ z cięciwą $AB$; punkty $A$ i $B$ połączono odcinkami ze środkiem $S$, a trójkąt $ASB$ zaznaczono kolorem.](stimulus:ma-2024-12p-15-fig1)\n\n**Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "ma-2024-12p-15-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2024-12p-15",
+          "label": "15",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Obwód trójkąta $ASB$ jest równy $36$ cm."
+              },
+              {
+                "id": "2",
+                "text": "Długość okręgu $\\mathcal{O}$ jest równa $20\\pi$ cm."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "F",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-XI.2",
+            "ma-78-XIV.1"
+          ],
+          "explanation": "Średnica okręgu ma $20$ cm, więc promień (czyli odcinki $AS$ i $BS$) ma $10$ cm. Obwód trójkąta $ASB$ wynosi zatem $10 + 10 + 12 = 32$ cm, a nie $36$ cm, więc pierwsze zdanie jest fałszywe. Długość okręgu obliczamy ze wzoru $2\\pi r = 2\\pi \\cdot 10 = 20\\pi$ cm, więc drugie zdanie jest prawdziwe. Odpowiedź: FP."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-XI.2",
+        "ma-78-XIV.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "ma-2024-12p-16",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 16,
+      "maxPoints": 2,
+      "instruction": "Na festyn wpuszczano uczestników jednym wejściem. Pierwszy wchodzący otrzymał i sok, i ciastko. Następnie co szósty wchodzący otrzymywał sok, a co dziesiąty wchodzący otrzymywał ciastko.\n\nTo znaczy, że sok otrzymali wchodzący: pierwszy, siódmy, trzynasty itd. A ciastko otrzymali wchodzący: pierwszy, jedenasty, dwudziesty pierwszy itd. Na festyn przyszło 450 osób.\n\n**Oblicz, ilu uczestników tego festynu otrzymało i sok, i ciastko. Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-12p-16",
+          "label": "16",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "**I sposób**\n\nWypiszemy kilka początkowych kolejnych wielokrotności liczby $6$:\n$6, 12, 18, 24, 30, 36, 42, …$\nWypiszemy kilka początkowych kolejnych wielokrotności liczby $10$:\n$10, 20, 30, 40, 50, 60, …$\nZauważymy, że najmniejszą wspólną wielokrotnością liczb $6$ i $10$ jest liczba $30$, czyli\nNWW $(6, 10) = 30$\nTo oznacza, że co $30$ osoba, licząc od pierwszej (tzn. $1, 31, 61, …$) otrzymała i sok, i ciastko.\nObliczymy, na ile takich $30$-osobowych grup można było podzielić $450$ uczestników festynu:\n$450 : 30 = 15$\nOdpowiedź: Sok i ciastko otrzymało $15$ uczestników tego festynu."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia liczby uczestników festynu, którzy otrzymali i sok, i ciastko, prawidłowe obliczenia oraz prawidłowy wynik liczbowy ($15$)."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia najmniejszej wspólnej wielokrotności (NWW) liczb $6$ i $10$",
+                  "ustalenie bez obliczeń, że co $30$ osoba otrzyma i sok, i ciastko,",
+                  "zapisanie kilku początkowych kolejnych numerów uczestników, którzy otrzymali sok oraz zapisanie kilku początkowych kolejnych numerów uczestników, którzy otrzymali ciastko oraz wskazanie numeru uczestnika różnego od $1$, który otrzyma i sok, i ciastko, np. uczestnicy, którzy otrzymali sok: $1, 7, 13, 19, 25, 31, 37, …$ uczestnicy, którzy otrzymali ciastko: $1, 11, 21, 31, 41, …$",
+                  "ustalenie bez obliczeń, że drugą osobą, która otrzyma i sok, i ciastko jest uczestnik o numerze $31$."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-46-II.11"
+          ],
+          "explanation": "Sok otrzymywali uczestnicy o numerach $1, 7, 13, 19, …$ (co $6$ osoba, licząc od pierwszej), a ciastko uczestnicy o numerach $1, 11, 21, 31, …$ (co $10$ osoba, licząc od pierwszej). Osoby, które dostały i sok, i ciastko, pojawiają się więc co najmniejszą wspólną wielokrotność liczb $6$ i $10$, czyli co $30$ osób: $1, 31, 61, …$. Ponieważ $450 : 30 = 15$, takich uczestników było $15$.",
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "**I sposób**\n\nWypiszemy kilka początkowych kolejnych wielokrotności liczby $6$:\n$6, 12, 18, 24, 30, 36, 42, …$\nWypiszemy kilka początkowych kolejnych wielokrotności liczby $10$:\n$10, 20, 30, 40, 50, 60, …$\nZauważymy, że najmniejszą wspólną wielokrotnością liczb $6$ i $10$ jest liczba $30$, czyli\nNWW $(6, 10) = 30$\nTo oznacza, że co $30$ osoba, licząc od pierwszej (tzn. $1, 31, 61, …$) otrzymała i sok, i ciastko.\nObliczymy, na ile takich $30$-osobowych grup można było podzielić $450$ uczestników festynu:\n$450 : 30 = 15$\nOdpowiedź: Sok i ciastko otrzymało $15$ uczestników tego festynu.",
+              "ref": {
+                "source": "klucz",
+                "page": 11
+              }
+            },
+            {
+              "points": 2,
+              "content": "**II sposób**\n\nWypiszemy kilka początkowych kolejnych wielokrotności liczby $6$:\n$6, 12, 18, 24, 30, 36, …$\nZauważymy, że najmniejszą wielokrotnością liczby $6$, podzielną przez $10$ jest liczba $30$.\nCzyli spośród każdych kolejnych $30$ osób pierwsza osoba otrzymała i sok, i ciastko.\nObliczymy, na ile $30$-osobowych grup można podzielić $450$ uczestników festynu:\n$450 : 30 = 15$\nPierwsza osoba w każdej z tych piętnastu $30$-osobowych grup otrzymała i sok, i ciastko, zatem $15$ osób otrzymało i sok, i ciastko.\nOdpowiedź: Sok i ciastko otrzymało $15$ uczestników tego festynu.",
+              "ref": {
+                "source": "klucz",
+                "page": 12
+              }
+            },
+            {
+              "points": 2,
+              "content": "**III sposób**\n\nWypiszemy kilka początkowych numerów uczestników, którzy otrzymali sok:\n$1, 7, 13, 19, 25, 31, 37, …$\nWypiszemy kilka początkowych numerów uczestników, którzy otrzymali ciastko:\n$1, 11, 21, 31, 41, …$\nZauważymy, że sok i ciastko otrzymuje co $30$ osoba, czyli:\n$1, 31, 61, 91, 121, 151, 181, 211, 241, 271, 301, 331, 361, 391, 421,$ ~~$451$~~\nOdpowiedź: Sok i ciastko otrzymało $15$ uczestników tego festynu.",
+              "ref": {
+                "source": "klucz",
+                "page": 12
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-46-II.11"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 18
+      }
+    },
+    {
+      "id": "ma-2024-12p-17",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 17,
+      "maxPoints": 3,
+      "instruction": "Dany jest trójkąt $ABC$, w którym długości boków opisano za pomocą wyrażeń algebraicznych (zobacz rysunek). Długość boku $AC$ w tym trójkącie jest równa długości boku $BC$.\n\n![Trójkąt ABC z wierzchołkiem C u góry, którego boki opisano wyrażeniami: bok AC jako $3x - 12$, bok BC jako $88 - 2x$, bok AB jako $1,5x + 18$.](stimulus:ma-2024-12p-17-fig1)\n\n**Uzasadnij, że trójkąt $ABC$ jest równoboczny.**\n**Zapisz obliczenia.**",
+      "stimulusIds": [
+        "ma-2024-12p-17-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2024-12p-17",
+          "label": "17",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "I sposób\nDługość boku $AC$ w tym trójkącie jest równa długości boku $BC$, zatem zapiszemy równanie:\n$3x - 12 = 88 - 2x$\n$5x = 100$\n$x = 20$\nObliczymy długości boków trójkąta $ABC$:\n$|AC| = 3 \\cdot 20 - 12 = 60 - 12 = 48$\n$|BC| = 88 - 2 \\cdot 20 = 88 - 40 = 48$\n$|AB| = 1,5 \\cdot 20 + 18 = 30 + 18 = 48$\n$|AC| = |BC| = |AB| = 48$\nBoki tego trójkąta są jednakowej długości, zatem trójkąt $ABC$ jest równoboczny."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia długości boków $AC$ oraz $AB$ lub $BC$ oraz $AB$ trójkąta $ABC$, prawidłowe obliczenia, prawidłowy wynik liczbowy (48) oraz zapisanie wniosku, że trójkąt $ABC$ jest równoboczny."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia długości jednego boku trójkąta $ABC$."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "zapisanie poprawnego równania, prowadzącego do obliczenia niewiadomej $x$, np. $3x - 12 = 88 - 2x$"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-46-IX.1",
+            "ma-78-III.2",
+            "ma-78-IV.2",
+            "ma-78-VIII.8"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "I sposób\nDługość boku $AC$ w tym trójkącie jest równa długości boku $BC$, zatem zapiszemy równanie:\n$3x - 12 = 88 - 2x$\n$5x = 100$\n$x = 20$\nObliczymy długości boków trójkąta $ABC$:\n$|AC| = 3 \\cdot 20 - 12 = 60 - 12 = 48$\n$|BC| = 88 - 2 \\cdot 20 = 88 - 40 = 48$\n$|AB| = 1,5 \\cdot 20 + 18 = 30 + 18 = 48$\n$|AC| = |BC| = |AB| = 48$\nBoki tego trójkąta są jednakowej długości, zatem trójkąt $ABC$ jest równoboczny.",
+              "ref": {
+                "source": "klucz",
+                "page": 14
+              }
+            },
+            {
+              "points": 3,
+              "content": "II sposób\nDługość boku $AC$ w tym trójkącie jest równa długości boku $BC$, zatem zapiszemy równanie:\n$3x - 12 = 88 - 2x$\n$5x = 100$\n$x = 20$\nStąd wynika, że bok $AB$ ma długość:\n$1,5x + 18 = 1,5 \\cdot 20 + 18 = 48$\nObliczymy długość boku $AC$:\n$3x - 12 = 60 - 12 = 48$\nWiadomo, że $|AC| = |BC| = 48$ oraz $|AB| = 48$, zatem trójkąt $ABC$ jest równoboczny.\nBoki tego trójkąta są jednakowej długości, zatem trójkąt $ABC$ jest równoboczny.",
+              "ref": {
+                "source": "klucz",
+                "page": 14
+              }
+            }
+          ],
+          "scoringNotes": [
+            "1. Jeżeli uczeń sprawdza warunki zadania dla konkretnej wartości zmiennej $x$, to za rozwiązanie zadania otrzymuje 0 punktów.",
+            "2. Jeżeli uczeń w wyniku błędu rachunkowego otrzymuje, że długość jednego z boków jest liczbą ujemną, to za rozwiązanie zadania może maksymalnie otrzymać 1 punkt.",
+            "3. Jeżeli uczeń rozwiązuje równanie $1,5x + 18 = 88 - 2x$ lub $1,5x + 18 = 3x - 12$ i bez błędów rachunkowych doprowadza rozwiązanie zadania do końca, to otrzymuje 3 punkty. Jeśli nie doprowadza rozwiązania zadania do końca lub na którymkolwiek etapie popełnia błąd rachunkowy, to otrzymuje 0 punktów.",
+            "4. Jeżeli uczeń rozwiązuje trzy równania: $1,5x + 18 = 88 - 2x$ oraz $1,5x + 18 = 3x - 12$ oraz $3x - 12 = 88 - 2x$ i na podstawie otrzymanej wartości zmiennej $x$, formułuje poprawny wniosek o równości boków trójkąta $ABC$, to otrzymuje 3 punkty.",
+            "5. Nie ocenia się stosowania jednostki."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-46-IX.1",
+        "ma-78-III.2",
+        "ma-78-IV.2",
+        "ma-78-VIII.8"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 19
+      }
+    },
+    {
+      "id": "ma-2024-12p-18",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 18,
+      "maxPoints": 3,
+      "instruction": "Na rysunku przedstawiono trapez równoramienny $ABCD$, w którym $|AD| = |BC| = 13$ cm. Wysokość $DE$ oraz krótsza podstawa $CD$ mają długość po $12$ cm.\n\n**Oblicz pole trapezu $ABCD$. Zapisz obliczenia.**\n\n![Trapez równoramienny ABCD z krótszą podstawą CD u góry i dłuższą podstawą AB na dole oraz wysokością DE poprowadzoną z wierzchołka D do punktu E na podstawie AB; przy punkcie E zaznaczony kąt prosty.](stimulus:ma-2024-12p-18-fig1)",
+      "stimulusIds": [
+        "ma-2024-12p-18-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2024-12p-18",
+          "label": "18",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "I sposób\n\nObliczymy długość odcinka $AE$ z twierdzenia Pitagorasa:\n\n$|AE|^2 + 12^2 = 13^2$\n\n$|AE|^2 = 169 - 144 = 25$\n\n$|AE| = 5$ (cm)\n\nPonieważ trapez $ABCD$ jest równoramienny, to $|AE| = |FB| = 5$ (cm).\n\nObliczymy długość podstawy $AB$ trapezu:\n\n$|AB| = 12\\ \\text{cm} + 2 \\cdot 5\\ \\text{cm} = 22$ (cm)\n\nObliczymy pole trapezu $ABCD$:\n\n$P = \\frac{(12 + 22) \\cdot 12}{2} = 204$ (cm$^2$)\n\nOdpowiedź: Pole trapezu $ABCD$ jest równe $204$ cm$^2$."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia pola trapezu, prawidłowe obliczenia oraz prawidłowy wynik liczbowy zgodny z zastosowaną jednostką ($204$ cm$^2$)."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia długości odcinka $AE$, czyli poprawne zastosowanie twierdzenia Pitagorasa oraz poprawny sposób obliczenia długości podstawy $AB$ trapezu, np. zapisanie poprawnego wyrażenia arytmetycznego, oraz poprawny sposób obliczenia pola trapezu (zgodnie z przyjętymi oznaczeniami lub długościami odcinków otrzymanymi w wyniku zastosowania poprawnego sposobu ich obliczenia), np. $12^2 + |AE|^2 = 13^2$ oraz $12\\ \\text{cm} + 2 \\cdot |AE| = |AB|$ oraz $P = \\frac{(|AB| + |CD|) \\cdot |DE|}{2}$ (lub zapisy równoważne) albo $12^2 + |AE|^2 = 13^2$ oraz $12\\ \\text{cm} + 2 \\cdot 5\\ \\text{cm} = 22\\ \\text{cm}$ oraz $P = \\frac{(12 + 22) \\cdot 12}{2}$ (lub zapisy równoważne)",
+                  "ustalenie (np. zapisanie na rysunku) długości odcinka $AE$ ($5$ cm) oraz ustalenie (np. zapisanie na rysunku) długości podstawy $AB$ trapezu ($22$ cm) oraz poprawny sposób obliczenia pola trapezu (zgodnie z przyjętymi oznaczeniami lub poprawnymi wartościami liczbowymi), np. zapisanie: $|AE| = 5$ cm oraz $|AB| = 22$ cm oraz $P = \\frac{(|AB| + |CD|) \\cdot |DE|}{2}$ (lub zapisy równoważne) albo $|AE| = 5$ cm oraz $|AB| = 22$ cm oraz $P = \\frac{(12 + 22) \\cdot 12}{2}$ (lub zapisy równoważne),",
+                  "zapisanie zgodnie z oznaczeniami, że pole trapezu jest sumą pola trójkąta prostokątnego $AED$ o przyprostokątnej $12$ cm, pola trójkąta przystającego do niego i pola kwadratu o boku długości $12$ cm oraz poprawny sposób obliczenia długości odcinka $AE$, np. zapisanie: $P_{ABCD} = 2 \\cdot \\frac{1}{2} \\cdot |AE| \\cdot 12 + 12^2$ oraz $12^2 + |AE|^2 = 13^2$ (lub zapisy równoważne)."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia długości odcinka $AE$, czyli poprawne zastosowanie twierdzenia Pitagorasa, np. zapisanie: $12^2 + |AE|^2 = 13^2$",
+                  "zapisanie, że długość odcinka $AE$ jest równa $5$ cm (np. na rysunku) bez przedstawienia sposobu jej obliczenia,",
+                  "zapisanie zgodnie z oznaczeniami, wzoru na pole trapezu z uwzględnieniem długości podstawy $CD$ trapezu, wysokości $DE$ oraz zależności między długościami podstaw trapezu $ABCD$, np. $P = \\frac{(12 + 12 + 2 \\cdot |AE|) \\cdot 12}{2}$",
+                  "zapisanie zgodnie z oznaczeniami, że pole trapezu jest sumą pola trójkąta prostokątnego $AED$ o przyprostokątnej $12$ cm, pola trójkąta przystającego do niego i pola kwadratu o boku długości $12$ cm, np. $P_{ABCD} = 2 \\cdot \\frac{1}{2} \\cdot |AE| \\cdot 12 + 12^2$ (lub zapisy równoważne)."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-XI.3",
+            "ma-78-VIII.7"
+          ],
+          "explanation": "W trójkącie prostokątnym $AED$ przyprostokątne to $AE$ i $DE = 12$ cm, a przeciwprostokątna to $AD = 13$ cm, więc z twierdzenia Pitagorasa $|AE|^2 = 13^2 - 12^2 = 25$, czyli $|AE| = 5$ cm. Ponieważ trapez jest równoramienny, z obu stron krótszej podstawy dochodzą odcinki po $5$ cm, zatem dłuższa podstawa ma długość $|AB| = 12 + 2 \\cdot 5 = 22$ cm. Pole trapezu obliczamy ze wzoru $P = \\frac{(12 + 22) \\cdot 12}{2} = 204$ cm$^2$.",
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "I sposób\n\nObliczymy długość odcinka $AE$ z twierdzenia Pitagorasa:\n\n$|AE|^2 + 12^2 = 13^2$\n\n$|AE|^2 = 169 - 144 = 25$\n\n$|AE| = 5$ (cm)\n\nPonieważ trapez $ABCD$ jest równoramienny, to $|AE| = |FB| = 5$ (cm).\n\nObliczymy długość podstawy $AB$ trapezu:\n\n$|AB| = 12\\ \\text{cm} + 2 \\cdot 5\\ \\text{cm} = 22$ (cm)\n\nObliczymy pole trapezu $ABCD$:\n\n$P = \\frac{(12 + 22) \\cdot 12}{2} = 204$ (cm$^2$)\n\nOdpowiedź: Pole trapezu $ABCD$ jest równe $204$ cm$^2$.",
+              "ref": {
+                "source": "klucz",
+                "page": 17
+              }
+            },
+            {
+              "points": 3,
+              "content": "II sposób\n\nObliczymy pole kwadratu $EFCD$:\n\n$P_{EFCD} = 12^2 = 144$ (cm$^2$)\n\nObliczymy długość odcinka $AE$ z twierdzenia Pitagorasa:\n\n$|AE|^2 + 12^2 = 13^2$\n\n$|AE|^2 = 169 - 144 = 25$\n\n$|AE| = 5$ (cm)\n\nTrapez $ABCD$ jest równoramienny, zatem $|AE| = |FB| = 5$ (cm).\n\nZauważymy, że trójkąty $AED$ i $BFC$ są przystające. Obliczymy pole trójkąta $AED$ oraz pole trójkąta $BFC$:\n\n$P_{AED} = P_{BFC} = \\frac{1}{2} \\cdot 5 \\cdot 12 = 30$ (cm$^2$)\n\nObliczymy pole trapezu $ABCD$ jako sumę pól dwóch trójkątów prostokątnych $AED$ i $BFC$ oraz pola kwadratu $EFCD$:\n\n$P_{ABCD} = 2 \\cdot P_{AED} + P_{EFCD}$\n\n$P = 2 \\cdot 30\\ \\text{cm}^2 + 144\\ \\text{cm}^2 = 204\\ \\text{cm}^2$\n\nOdpowiedź: Pole trapezu $ABCD$ jest równe $204$ cm$^2$.",
+              "ref": {
+                "source": "klucz",
+                "page": 17
+              }
+            },
+            {
+              "points": 3,
+              "content": "III sposób\n\nObliczymy długość odcinka $AE$ z twierdzenia Pitagorasa:\n\n$|AE|^2 + 12^2 = 13^2$\n\n$|AE|^2 = 169 - 144 = 25$\n\n$|AE| = 5$ (cm)\n\nPonieważ trapez $ABCD$ jest równoramienny, to $|AE| = |FB| = 5$ (cm).\n\nZauważmy, że trójkąt prostokątny $BFC$ jest przystający do trójkąta prostokątnego $AED$. Z tych trójkątów i z kwadratu o boku długości 12 cm można zbudować prostokąt o polu równym polu trapezu $ABCD$.\n\nObliczymy pole otrzymanego prostokąta:\n\n$P_{ABCD} = P_{prostokąta} = 12 \\cdot 17 = 204\\ \\text{cm}^2$\n\nOdpowiedź: Pole trapezu $ABCD$ jest równe $204$ cm$^2$.",
+              "ref": {
+                "source": "klucz",
+                "page": 18
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Brak jednostki lub zapisanie niewłaściwej jednostki w wyniku końcowym traktuje się jako błąd rachunkowy."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-XI.3",
+        "ma-78-VIII.7"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 20
+      }
+    },
+    {
+      "id": "ma-2024-12p-19",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 19,
+      "maxPoints": 3,
+      "instruction": "Marek kupił w sklepie sportowym kask narciarski, buty i narty. Kask kosztował 500 zł. Narty i kask kosztowały razem o 700 zł mniej niż narty i buty łącznie. Buty i kask kosztowały razem tyle co narty.\n\n**Oblicz, ile kosztowały narty, a ile kosztowały buty, które kupił Marek w tym sklepie. Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-12p-19",
+          "label": "19",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Skoro narty i kask kosztują o 700 zł mniej niż narty i buty, to oznacza, że buty są o 700 zł droższe od kasku czyli kosztują: $700 + 500 = 1200$ (zł). Ponieważ narty kosztują tyle, co buty i kask razem, to oznacza, że ich cena jest równa: $1200 + 500 = 1700$ (zł). Odpowiedź: Narty kosztują 1700 zł, a buty kosztują 1200 zł."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia ceny butów oraz poprawny sposób obliczenia ceny nart, prawidłowe obliczenia oraz prawidłowe wyniki liczbowe (buty: 1200 zł, narty: 1700 zł)"
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "zapisanie poprawnych wyrażeń arytmetycznych prowadzących do obliczenia ceny butów oraz ceny nart",
+                  "zapisanie poprawnego równania z jedną niewiadomą, prowadzącego do obliczenia ceny butów oraz poprawny sposób obliczenia ceny nart, np. $500 = b - 700$ oraz $n = b + 500$ (lub zapisy równoważne),",
+                  "zapisanie poprawnych zależności między ceną nart i ceną butów oraz zapisanie ceny butów bez przedstawienia sposobu jej obliczenia np. $n = b + 500$ oraz $b = 1200$ (lub zapisy równoważne)."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "zapisanie poprawnego wyrażenia arytmetycznego prowadzącego do obliczenia ceny butów",
+                  "zapisanie poprawnego równania z jedną niewiadomą, prowadzącego do obliczenia ceny butów, np. $500 = b - 700$",
+                  "zapisanie poprawnych zależności między cenami kasku, butów i nart, np. $n + k = n + b - 700$ oraz $b + k = n$ (lub zapisy równoważne)."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-XIV.5",
+            "ma-78-III.3"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "I sposób\nSkoro narty i kask kosztują o 700 zł mniej niż narty i buty, to oznacza, że buty są o 700 zł droższe od kasku czyli kosztują:\n$700 + 500 = 1200$ (zł)\nPonieważ narty kosztują tyle, co buty i kask razem, to oznacza, że ich cena jest równa:\n$1200 + 500 = 1700$ (zł)\nOdpowiedź: Narty kosztują 1700 zł, a buty kosztują 1200 zł.",
+              "ref": {
+                "source": "klucz",
+                "page": 20
+              }
+            },
+            {
+              "points": 3,
+              "content": "II sposób\nOznaczymy cenę nart jako $n$ oraz cenę butów jako $b$.\nKask kosztuje 500 złotych.\nNarty i kask kosztują razem o 700 zł mniej niż narty i buty, więc zapiszemy i rozwiążemy równanie:\n$n + 500 = n + b - 700$\n$500 = b - 700$\n$b = 700 + 500$\n$b = 1200$ (zł)\nWiadomo, że buty i kask kosztują razem tyle co narty, czyli\n$n = b + 500$\n$n = 1200 + 500$\n$n = 1700$ (zł)\nOdpowiedź: Narty kosztują 1700 zł, a buty kosztują 1200 zł.",
+              "ref": {
+                "source": "klucz",
+                "page": 20
+              }
+            },
+            {
+              "points": 3,
+              "content": "III sposób\nOznaczymy cenę kasku jako $k$, cenę nart jako $n$ oraz cenę butów jako $b$.\nKask kosztuje 500 złotych:\n$k = 500$\nButy i kask kosztują razem tyle co narty:\n$n = b + k$\nzatem:\n$n = b + 500$\nNarty i kask kosztują razem o 700 zł mniej niż narty i buty:\n$n + k = n + b - 700$\nObliczymy, ile kosztują buty. Zapiszemy i rozwiążemy równanie:\n$b + 500 + 500 = b + 500 + b - 700$\n$1000 = 500 + b - 700$\n$b = 1200$ (zł)\nObliczymy, ile kosztują narty:\n$n = 1200 + 500$\n$n = 1700$ (zł)\nOdpowiedź: Narty kosztują 1700 zł, a buty kosztują 1200 zł.",
+              "ref": {
+                "source": "klucz",
+                "page": 20
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-XIV.5",
+        "ma-78-III.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 21
+      }
+    },
+    {
+      "id": "ma-2024-12p-20",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 20,
+      "maxPoints": 2,
+      "instruction": "Na rysunku przedstawiono siatkę graniastosłupa prawidłowego czworokątnego oraz zapisano jeden z wymiarów tej siatki. Wysokość $H$ tego graniastosłupa jest 1,5 razy większa od długości krawędzi podstawy.\n\n**Oblicz pole powierzchni bocznej tego graniastosłupa. Zapisz obliczenia.**\n\n![Siatka graniastosłupa prawidłowego czworokątnego: pas czterech przystających prostokątów (ścian bocznych) oraz dwa kwadraty (podstawy) dołączone do górnej i dolnej krawędzi pasa; nad trzema prawymi ścianami bocznymi zaznaczono strzałką wymiar 18 cm, a wysokość ściany bocznej oznaczono literą H.](stimulus:ma-2024-12p-20-fig1)",
+      "stimulusIds": [
+        "ma-2024-12p-20-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2024-12p-20",
+          "label": "20",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Podstawą graniastosłupa prawidłowego czworokątnego jest kwadrat. Oznaczymy na rysunku długość krótszej krawędzi tego graniastosłupa jako $a$.\nObliczymy długość krawędzi $a$ graniastosłupa:\n$3a = 18$\n$a = 6$ (cm)\nObliczymy wysokość $H$ graniastosłupa:\n$H = 1,5 \\cdot a = 1,5 \\cdot 6$\n$H = 9$ (cm)\nObliczymy pole powierzchni bocznej graniastosłupa:\n$P_b = 4 \\cdot a \\cdot H = 4 \\cdot 6 \\cdot 9$\n$P_b = 216$ (cm$^2$)\nOdpowiedź: Pole powierzchni bocznej graniastosłupa jest równe $216$ cm$^2$."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia pola powierzchni bocznej graniastosłupa, prawidłowe obliczenia **oraz** prawidłowy wynik liczbowy zgodny z zastosowaną jednostką ($216\\ \\text{cm}^2$)."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia długości krawędzi podstawy **oraz** wysokości graniastosłupa, np. zapisanie $a = 18\\ (\\text{cm}) : 3$ **oraz** $H = 1,5 \\cdot a$",
+                  "ustalenie (np. zapisanie na rysunku) długości krawędzi podstawy **oraz** wysokości graniastosłupa $a = 6\\ (\\text{cm})$ **oraz** $H = 9\\ (\\text{cm})$,",
+                  "zapisanie zgodnie z oznaczeniami, poprawnego wzoru na pole powierzchni bocznej graniastosłupa, np. $P_b = (18 + a) \\cdot 1,5a$ gdzie $a$ oznacza długość krótszej krawędzi graniastosłupa albo $P_b = 4 \\cdot 6 \\cdot H$ albo $P_b = \\frac{4}{3} \\cdot 18 \\cdot H$ (lub zapisy równoważne)."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-46-X.3",
+            "ma-78-XI.2"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "**I sposób**\nPodstawą graniastosłupa prawidłowego czworokątnego jest kwadrat. Oznaczymy na rysunku długość krótszej krawędzi tego graniastosłupa jako $a$.\nObliczymy długość krawędzi $a$ graniastosłupa:\n$3a = 18$\n$a = 6$ (cm)\nObliczymy wysokość $H$ graniastosłupa:\n$H = 1,5 \\cdot a = 1,5 \\cdot 6$\n$H = 9$ (cm)\nObliczymy pole powierzchni bocznej graniastosłupa:\n$P_b = 4 \\cdot a \\cdot H = 4 \\cdot 6 \\cdot 9$\n$P_b = 216$ (cm$^2$)\nOdpowiedź: Pole powierzchni bocznej graniastosłupa jest równe $216$ cm$^2$.",
+              "ref": {
+                "source": "klucz",
+                "page": 22
+              }
+            },
+            {
+              "points": 2,
+              "content": "**II sposób**\nSuma długości trzech krótszych krawędzi graniastosłupa jest równa $18$ cm, zatem długość jednej krawędzi jest równa $6$ cm, a długość czterech krawędzi to $24$ cm.\nWysokość graniastosłupa jest 1,5 razy większa od długości krótszej krawędzi, zatem:\n$H = 1,5 \\cdot 6$\n$H = 9$ (cm)\nObliczymy pole powierzchni bocznej graniastosłupa:\n$P_b = 24 \\cdot H = 24 \\cdot 9 = 216$ (cm$^2$)\nOdpowiedź: Pole powierzchni bocznej graniastosłupa jest równe $216$ cm$^2$.",
+              "ref": {
+                "source": "klucz",
+                "page": 22
+              }
+            },
+            {
+              "points": 2,
+              "content": "**III sposób**\nSuma długości trzech krótszych krawędzi graniastosłupa jest równa $18$ cm, zatem długość jednej krawędzi jest równa $6$ cm.\nWysokość graniastosłupa jest 1,5 razy większa od długości krótszej krawędzi, zatem:\n$H = 1,5 \\cdot 6$\n$H = 9$ (cm)\nObliczymy pole powierzchni jednej ściany bocznej graniastosłupa:\n$P = 6 \\cdot 9 = 54$ (cm$^2$)\nObliczymy pole powierzchni bocznej graniastosłupa:\n$P_b = 54 \\cdot 4 = 216$ (cm$^2$)\nOdpowiedź: Pole powierzchni bocznej graniastosłupa jest równe $216$ cm$^2$.",
+              "ref": {
+                "source": "klucz",
+                "page": 22
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Nie ocenia się stosowania jednostki."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-46-X.3",
+        "ma-78-XI.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 22
+      }
+    },
+    {
+      "id": "ma-2024-12p-21",
+      "sessionId": "matematyka-2024-12-probny",
+      "number": 21,
+      "maxPoints": 2,
+      "instruction": "Urządzenie do produkcji kostek lodu nalewa wodę do jednakowych foremek w kształcie sześcianu o pojemności $8\\ \\text{cm}^3$. Wlana woda wypełnia 75% pojemności każdej foremki. Z jednej foremki zostanie wyprodukowana jedna kostka lodu.\n\n**Oblicz, ile kostek lodu wyprodukuje to urządzenie z $3\\,000\\ \\text{cm}^3$ wody. Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2024-12p-21",
+          "label": "21",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Obliczymy objętość wody w jednej foremce:\n\n$\\frac{3}{4} \\cdot 8 = 6\\ (\\text{cm}^3)$\n\nObliczymy liczbę kostek lodu, które może wyprodukować urządzenie z $3000\\ \\text{cm}^3$ wody:\n\n$3000\\ (\\text{cm}^3) : 6\\ (\\text{cm}^3) = 500$\n\nOdpowiedź: To urządzenie wyprodukuje 500 kostek lodu z $3000\\ \\text{cm}^3$ wody."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia liczby kostek lodu wyprodukowanych przez urządzenie, prawidłowe obliczenia oraz prawidłowy wynik liczbowy (500)."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia objętości wody w jednej foremce, np. zapisanie: $0,75 \\cdot 8$ albo $\\frac{3}{4} \\cdot 8$ albo $\\frac{75\\% \\cdot 8}{100\\%}$",
+                  "ustalenie bez obliczeń objętości wody w jednej foremce ($6\\ \\text{cm}^3$)."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-V.2"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "Obliczymy objętość wody w jednej foremce:\n\n$\\frac{3}{4} \\cdot 8 = 6\\ (\\text{cm}^3)$\n\nObliczymy liczbę kostek lodu, które może wyprodukować urządzenie z $3000\\ \\text{cm}^3$ wody:\n\n$3000\\ (\\text{cm}^3) : 6\\ (\\text{cm}^3) = 500$\n\nOdpowiedź: To urządzenie wyprodukuje 500 kostek lodu z $3000\\ \\text{cm}^3$ wody.",
+              "ref": {
+                "source": "klucz",
+                "page": 23
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Nie ocenia się stosowania jednostki."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-V.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 23
+      }
+    }
+  ],
+  "rubrics": [],
+  "audio": []
+}

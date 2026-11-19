@@ -70,6 +70,8 @@ export interface PublicSession {
   subjectName: string;
   year: number;
   month: number;
+  /** "glowny" | "dodatkowy" | "probny" */
+  term: string;
   maxPoints: number;
   contentVersion: string;
   tasks: PublicTask[];

@@ -1,0 +1,1576 @@
+{
+  "session": {
+    "id": "matematyka-2025-06-dodatkowy",
+    "subjectId": "matematyka",
+    "year": 2025,
+    "month": 6,
+    "term": "dodatkowy",
+    "formCode": "OMAP-100",
+    "versions": [
+      "X"
+    ],
+    "maxPoints": 30,
+    "taskOrder": [
+      "ma-2025-06d-01",
+      "ma-2025-06d-02",
+      "ma-2025-06d-03",
+      "ma-2025-06d-04",
+      "ma-2025-06d-05",
+      "ma-2025-06d-06",
+      "ma-2025-06d-07",
+      "ma-2025-06d-08",
+      "ma-2025-06d-09",
+      "ma-2025-06d-10",
+      "ma-2025-06d-11",
+      "ma-2025-06d-12",
+      "ma-2025-06d-13",
+      "ma-2025-06d-14",
+      "ma-2025-06d-15",
+      "ma-2025-06d-16",
+      "ma-2025-06d-17",
+      "ma-2025-06d-18",
+      "ma-2025-06d-19",
+      "ma-2025-06d-20",
+      "ma-2025-06d-21"
+    ],
+    "sources": [
+      {
+        "kind": "klucz",
+        "path": "Matematyka/Additional/Czerwiec 2025/matematyka-2025-czerwiec-egzamin-osmoklasisty-dodatkowy-odpowiedzi.pdf",
+        "sha256": "ac9d810a363d8180283f1f006cd3c5d8b92ef2f7992bc5899f8cc1823931e5bb",
+        "pages": 23
+      },
+      {
+        "kind": "arkusz",
+        "path": "Matematyka/Additional/Czerwiec 2025/matematyka-2025-czerwiec-egzamin-osmoklasisty-dodatkowy.pdf",
+        "sha256": "a7780cac878510c1edcb79d5b4e9101ac9dae7b38cd85d985405505712d976d5",
+        "pages": 24
+      }
+    ],
+    "contentVersion": "9d221e32596e8a7b",
+    "status": "published"
+  },
+  "stimuli": [
+    {
+      "id": "ma-2025-06d-12-fig1",
+      "kind": "figure",
+      "title": "Trapez prostokątny z zaznaczonymi kątami prostymi przy lewym boku; górna podstawa ma długość 1 cm, lewe ramię prostopadłe 6 cm, a dolna podstawa 9 cm.",
+      "asset": "assets/ma-2025-06d-12-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2025-06d-14-fig1",
+      "kind": "figure",
+      "title": "Układ współrzędnych z siatką kwadratów jednostkowych i zaznaczonymi punktami kratowymi A i B leżącymi poniżej osi x.",
+      "asset": "assets/ma-2025-06d-14-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2025-06d-15-fig1",
+      "kind": "figure",
+      "title": "Prostopadłościenne pudełko o krawędziach oznaczonych literami a, b, c, w którego rogu stoi sześcienna kostka.",
+      "asset": "assets/ma-2025-06d-15-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2025-06d-19-fig1",
+      "kind": "figure",
+      "title": "Dwie osie liczbowe: na pierwszej zaznaczono punkty K, L, M o współrzędnych 0, 5 i x, a na drugiej punkty P, R, S o współrzędnych 0, y i 18; odcinki KM i PS są podzielone na 9 równych części.",
+      "asset": "assets/ma-2025-06d-19-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 20
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "ma-2025-06d-01",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 1,
+      "maxPoints": 1,
+      "instruction": "Robert rozpoczął czytanie książki we wtorek i zakończył w sobotę. W tabeli podano liczbę stron, które Robert przeczytał w kolejnych dniach tygodnia od wtorku do piątku.\n\n| Dzień tygodnia | wtorek | środa | czwartek | piątek |\n|---|---|---|---|---|\n| Liczba przeczytanych stron książki | 55 | 68 | 72 | 49 |\n\nOd wtorku do soboty włącznie Robert czytał dziennie średnio 60 stron tej książki.\n\n**Ile stron tej książki Robert przeczytał w sobotę? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-06d-01",
+          "label": "1",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "46"
+              },
+              {
+                "id": "B",
+                "text": "56"
+              },
+              {
+                "id": "C",
+                "text": "75"
+              },
+              {
+                "id": "D",
+                "text": "76"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-XIII.1",
+            "ma-78-XIII.3"
+          ],
+          "explanation": "Robert czytał przez pięć dni (od wtorku do soboty włącznie), średnio 60 stron dziennie, więc razem przeczytał $5 \\cdot 60 = 300$ stron. Z tabeli suma stron z wtorku do piątku wynosi $55 + 68 + 72 + 49 = 244$. Zatem w sobotę Robert przeczytał $300 - 244 = 56$ stron, czyli poprawna jest odpowiedź B."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-XIII.1",
+        "ma-78-XIII.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2025-06d-02",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 2,
+      "maxPoints": 1,
+      "instruction": "Zapisywano kolejno liczby według następującej zasady:\n- liczbę $6$ zapisano jako pierwszą\n- każda następna zapisana liczba była połową liczby poprzedniej.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nPiątą liczbą, którą zapisano, jest",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-06d-02",
+          "label": "2",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$\\frac{3}{2}$"
+              },
+              {
+                "id": "B",
+                "text": "$\\frac{3}{4}$"
+              },
+              {
+                "id": "C",
+                "text": "$\\frac{3}{8}$"
+              },
+              {
+                "id": "D",
+                "text": "$\\frac{3}{16}$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-46-V.1"
+          ],
+          "explanation": "Każda następna liczba jest połową poprzedniej, więc kolejne zapisane liczby to: $6$, $3$, $\\frac{3}{2}$, $\\frac{3}{4}$, $\\frac{3}{8}$. Piątą zapisaną liczbą jest więc $\\frac{3}{8}$, czyli odpowiedź C."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-46-V.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2025-06d-03",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 3,
+      "maxPoints": 1,
+      "instruction": "Martyna przez 20 minut słuchała kolejno nagrań ćwiczeń językowych. Czas odtwarzania nagrania każdego ćwiczenia w całości jest równy 250 sekund.\n\n**Ile najwięcej ćwiczeń w całości Martyna mogła wysłuchać w tym czasie? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-06d-03",
+          "label": "3",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "4"
+              },
+              {
+                "id": "B",
+                "text": "5"
+              },
+              {
+                "id": "C",
+                "text": "8"
+              },
+              {
+                "id": "D",
+                "text": "12"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-46-XII.3"
+          ],
+          "explanation": "20 minut to $20 \\cdot 60 = 1200$ sekund. Czas jednego nagrania wynosi 250 sekund, a $1200 : 250 = 4{,}8$, więc w całości zmieściły się najwyżej 4 nagrania (piąte nie zdążyłoby się skończyć). Dlatego poprawna jest odpowiedź A."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-46-XII.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2025-06d-04",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 4,
+      "maxPoints": 1,
+      "instruction": "Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-06d-04",
+          "label": "4",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Iloraz $9^4 : 3^2$ jest równy $3^2$. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Liczba $3^8$ jest trzy razy większa od iloczynu $3^5 \\cdot 3^2$. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "F",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-I.2",
+            "ma-78-I.3",
+            "ma-78-I.4"
+          ],
+          "explanation": "Pierwsze zdanie jest fałszywe, ponieważ $9^4 : 3^2 = (3^2)^4 : 3^2 = 3^8 : 3^2 = 3^6$, a nie $3^2$. Drugie zdanie jest prawdziwe, bo $3^5 \\cdot 3^2 = 3^7$, a $3^8 = 3 \\cdot 3^7$, czyli liczba $3^8$ jest dokładnie trzy razy większa od tego iloczynu. Dlatego pierwsze zdanie oceniamy F, a drugie P."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-I.2",
+        "ma-78-I.3",
+        "ma-78-I.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2025-06d-05",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 5,
+      "maxPoints": 1,
+      "instruction": "Dane są liczby: $k = 69$ oraz $m = 83$.\n\n**Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-06d-05",
+          "label": "5",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Suma liczb $k$ i $m$ jest podzielna przez $4$. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Iloczyn liczb $k$ i $m$ jest podzielny przez $3$. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-II.6"
+          ],
+          "explanation": "Suma liczb $k$ i $m$ wynosi $69 + 83 = 152$, a $152 : 4 = 38$, więc suma jest podzielna przez 4 – pierwsze zdanie jest prawdziwe. Iloczyn $69 \\cdot 83$ jest podzielny przez 3, ponieważ już jeden z czynników, $69$, dzieli się przez 3 (bo $6 + 9 = 15$), więc drugie zdanie też jest prawdziwe. Dlatego oba zdania oceniamy jako P."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-II.6"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2025-06d-06",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 6,
+      "maxPoints": 1,
+      "instruction": "W pudełku jest 18 kart jednakowej wielkości. Na każdej z nich narysowano jedną figurę geometryczną. Wśród tych kart\n- jest pięć kart z narysowanym trójkątem równobocznym o boku długości 6 cm\n- są cztery karty z narysowanym kwadratem o boku długości 7 cm\n- jest dziewięć kart z narysowanym pięciokątem foremnym o boku długości 2 cm.\nZ pudełka wylosowano jedną kartę.\n\n**Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nPrawdopodobieństwo, że wylosowano kartę z narysowanym kwadratem, jest równe [[A|B]].\n\nPrawdopodobieństwo, że wylosowano kartę z narysowaną figurą o obwodzie mniejszym od 18 cm, jest równe [[C|D]].",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-06d-06",
+          "label": "6",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "$\\frac{1}{18}$"
+              },
+              {
+                "id": "B",
+                "text": "$\\frac{2}{9}$"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "$\\frac{1}{2}$"
+              },
+              {
+                "id": "D",
+                "text": "$\\frac{7}{9}$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "B",
+                "reason": "C"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-XII.2",
+            "ma-46-XI.2"
+          ],
+          "explanation": "Kart z narysowanym kwadratem jest 4 spośród wszystkich 18 kart, więc prawdopodobieństwo wynosi $\\frac{4}{18}=\\frac{2}{9}$, czyli odpowiedź B. Obwody figur to: trójkąt $3\\cdot6=18$ cm, kwadrat $4\\cdot7=28$ cm, pięciokąt foremny $5\\cdot2=10$ cm. Obwód mniejszy od 18 cm ma tylko pięciokąt, a kart z pięciokątem jest 9, więc prawdopodobieństwo wynosi $\\frac{9}{18}=\\frac{1}{2}$, czyli odpowiedź C."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-XII.2",
+        "ma-46-XI.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2025-06d-07",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 7,
+      "maxPoints": 1,
+      "instruction": "Jurek przejechał rowerem 12 km, co stanowiło $\\frac{2}{3}$ długości zaplanowanej trasy.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nPołowa zaplanowanej trasy ma długość",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-06d-07",
+          "label": "7",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "6 km"
+              },
+              {
+                "id": "B",
+                "text": "8 km"
+              },
+              {
+                "id": "C",
+                "text": "9 km"
+              },
+              {
+                "id": "D",
+                "text": "10 km"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-46-IV.1",
+            "ma-46-V.4"
+          ],
+          "explanation": "Skoro 12 km stanowi $\\frac{2}{3}$ zaplanowanej trasy, to cała trasa ma długość $12 : \\frac{2}{3} = 12 \\cdot \\frac{3}{2} = 18$ km. Połowa zaplanowanej trasy to $18 : 2 = 9$ km. Dlatego poprawna jest odpowiedź C."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-46-IV.1",
+        "ma-46-V.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2025-06d-08",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 8,
+      "maxPoints": 1,
+      "instruction": "Dane jest równanie\n\n$5+\\frac{1-x}{2}=2(x-1)$\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nRozwiązaniem tego równania jest liczba",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-06d-08",
+          "label": "8",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "2"
+              },
+              {
+                "id": "B",
+                "text": "$2\\frac{1}{2}$"
+              },
+              {
+                "id": "C",
+                "text": "3"
+              },
+              {
+                "id": "D",
+                "text": "$4\\frac{1}{3}$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-VI.2"
+          ],
+          "explanation": "Pomnóżmy obie strony równania przez 2, aby pozbyć się ułamka: $10+1-x=4(x-1)$, czyli $11-x=4x-4$. Dodając do obu stron $x$ oraz $4$, otrzymujemy $15=5x$, więc $x=3$. Rozwiązaniem równania jest liczba 3, czyli odpowiedź C."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-VI.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2025-06d-09",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 9,
+      "maxPoints": 1,
+      "instruction": "Dane są dwie figury: kwadrat $K$ i romb $R$. Długość boku kwadratu $K$ jest równa $8$. Iloczyn długości przekątnych rombu $R$ jest równy $64$.\n\n**Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-06d-09",
+          "label": "9",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Pole rombu $R$ jest równe $32$. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Pole kwadratu $K$ jest równe polu rombu $R$. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "F"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-XI.3"
+          ],
+          "explanation": "Pole rombu obliczamy jako połowę iloczynu długości jego przekątnych, czyli $\\frac{64}{2}=32$, więc pierwsze zdanie jest prawdziwe (P). Pole kwadratu o boku $8$ wynosi $8\\cdot 8=64$, a to nie jest równe polu rombu $32$, więc drugie zdanie jest fałszywe (F). Dlatego poprawna odpowiedź to PF."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-XI.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2025-06d-10",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 10,
+      "maxPoints": 1,
+      "instruction": "Karol wie, że suma miar kątów wewnętrznych trójkąta jest równa $180^\\circ$, i na tej podstawie zapisał trzy wnioski.\n\nWniosek 1.\nSkoro suma miar kątów wewnętrznych trójkąta jest równa $180^\\circ$, to trójkąt nie może mieć dwóch kątów wewnętrznych prostych ani dwóch kątów wewnętrznych rozwartych.\n\nWniosek 2.\nPonieważ trójkąt nie może mieć dwóch kątów wewnętrznych rozwartych, więc nie istnieje trójkąt rozwartokątny równoramienny.\n\nWniosek 3.\nJeśli suma miar dwóch kątów wewnętrznych trójkąta jest większa od $90^\\circ$, to trzeci kąt wewnętrzny tego trójkąta jest ostry.\n\nKtóre z wniosków zapisanych przez Karola są prawdziwe? Wybierz właściwą odpowiedź spośród podanych.",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-06d-10",
+          "label": "10",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Tylko 1. i 3."
+              },
+              {
+                "id": "B",
+                "text": "Tylko 1. i 2."
+              },
+              {
+                "id": "C",
+                "text": "Tylko 2. i 3."
+              },
+              {
+                "id": "D",
+                "text": "1., 2. i 3."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-46-IX.3"
+          ],
+          "explanation": "Suma miar kątów wewnętrznych trójkąta wynosi $180^\\circ$, więc trójkąt nie może mieć dwóch kątów prostych (bo $90^\\circ + 90^\\circ = 180^\\circ$ i na trzeci kąt zostaje $0^\\circ$) ani dwóch rozwartych (bo ich suma byłaby większa niż $180^\\circ$) – wniosek 1 jest prawdziwy. Wniosek 2 jest fałszywy, bo istnieje trójkąt rozwartokątny równoramienny, np. o kątach $100^\\circ$, $40^\\circ$, $40^\\circ$. Wniosek 3 jest prawdziwy: jeśli suma dwóch kątów jest większa od $90^\\circ$, to trzeci kąt ma miarę $180^\\circ$ pomniejszoną o tę sumę, czyli mniejszą niż $90^\\circ$, więc jest ostry. Dlatego prawdziwe są wnioski 1 i 3, czyli odpowiedź A."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-46-IX.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2025-06d-11",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 11,
+      "maxPoints": 1,
+      "instruction": "Kasia jest 3 razy starsza od Ani. Ola jest o 2 lata starsza od Kasi. Oznaczymy przez $x$ wiek Ani.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nŁączny wiek Kasi, Ani i Oli opisuje wyrażenie",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-06d-11",
+          "label": "11",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$3x+5$"
+              },
+              {
+                "id": "B",
+                "text": "$4x+2$"
+              },
+              {
+                "id": "C",
+                "text": "$5x+2$"
+              },
+              {
+                "id": "D",
+                "text": "$7x+2$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-III.3"
+          ],
+          "explanation": "Wiek Ani oznaczamy przez $x$. Kasia jest 3 razy starsza od Ani, więc ma $3x$ lat, a Ola jest o 2 lata starsza od Kasi, więc ma $3x+2$ lata. Łączny wiek całej trójki to $x+3x+(3x+2)=7x+2$, dlatego poprawna jest odpowiedź D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-III.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2025-06d-12",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 12,
+      "maxPoints": 1,
+      "instruction": "Na rysunku przedstawiono trapez prostokątny oraz podano długości trzech jego boków.\n\n![Trapez prostokątny z zaznaczonymi kątami prostymi przy lewym boku; górna podstawa ma długość 1 cm, lewe ramię prostopadłe 6 cm, a dolna podstawa 9 cm.](stimulus:ma-2025-06d-12-fig1)\n\n**Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nPole tego trapezu jest równe [[A|B]].\n\nNajdłuższy bok tego trapezu ma długość [[C|D]].",
+      "stimulusIds": [
+        "ma-2025-06d-12-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2025-06d-12",
+          "label": "12",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "$30\\ \\text{cm}^2$"
+              },
+              {
+                "id": "B",
+                "text": "$60\\ \\text{cm}^2$"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "$9\\ \\text{cm}$"
+              },
+              {
+                "id": "D",
+                "text": "$10\\ \\text{cm}$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "A",
+                "reason": "D"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-46-XI.3",
+            "ma-78-VIII.7"
+          ],
+          "explanation": "Pole trapezu liczymy ze wzoru $P = \\frac{(a+b)\\cdot h}{2}$, gdzie podstawy to $a = 1\\ \\text{cm}$ i $b = 9\\ \\text{cm}$, a wysokość $h = 6\\ \\text{cm}$: $P = \\frac{(1+9)\\cdot 6}{2} = 30\\ \\text{cm}^2$, więc pierwsza odpowiedź to A. Najdłuższy bok to pochyłe ramię trapezu; tworzy ono trójkąt prostokątny o przyprostokątnych $6\\ \\text{cm}$ oraz $9 - 1 = 8\\ \\text{cm}$, więc z twierdzenia Pitagorasa jego długość to $\\sqrt{6^2 + 8^2} = \\sqrt{100} = 10\\ \\text{cm}$, czyli druga odpowiedź to D.",
+          "scoringNotes": [
+            "1 pkt – odpowiedź poprawna.",
+            "0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+          ]
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-46-XI.3",
+        "ma-78-VIII.7"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2025-06d-13",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 13,
+      "maxPoints": 1,
+      "instruction": "Pole powierzchni całkowitej sześcianu jest równe $150\\ \\text{cm}^2$.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nObjętość tego sześcianu jest równa",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-06d-13",
+          "label": "13",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$25\\ \\text{cm}^3$"
+              },
+              {
+                "id": "B",
+                "text": "$125\\ \\text{cm}^3$"
+              },
+              {
+                "id": "C",
+                "text": "$625\\ \\text{cm}^3$"
+              },
+              {
+                "id": "D",
+                "text": "$750\\ \\text{cm}^3$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-XI.2"
+          ],
+          "explanation": "Pole powierzchni całkowitej sześcianu o krawędzi $a$ to $6a^2$. Skoro $6a^2 = 150\\ \\text{cm}^2$, to $a^2 = 25\\ \\text{cm}^2$, czyli $a = 5\\ \\text{cm}$. Objętość sześcianu wynosi więc $V = a^3 = 5^3 = 125\\ \\text{cm}^3$, zatem poprawna jest odpowiedź B."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-XI.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2025-06d-14",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 14,
+      "maxPoints": 1,
+      "instruction": "W układzie współrzędnych $(x, y)$ zaznaczono kolejne wierzchołki $A$ i $B$ pewnego czworokąta $ABCD$. Punkty $A$ i $B$ są punktami kratowymi. Pozostałe wierzchołki czworokąta mają współrzędne $C = (3, y_C)$ oraz $D = (-1, y_D)$, gdzie $y_C$ jest liczbą całkowitą dodatnią oraz $y_C = y_D$.\n\n![Układ współrzędnych z siatką kwadratów jednostkowych i zaznaczonymi punktami kratowymi A i B leżącymi poniżej osi x.](stimulus:ma-2025-06d-14-fig1)\n\n**Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "ma-2025-06d-14-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2025-06d-14",
+          "label": "14",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Czworokąt $ABCD$ jest równoległobokiem."
+              },
+              {
+                "id": "2",
+                "text": "Dla $y_C = y_D = 3$ czworokąt $ABCD$ jest rombem."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "F"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-46-IX.5",
+            "ma-78-X.3"
+          ],
+          "explanation": "Z rysunku odczytujemy $A = (-3, -1)$ i $B = (1, -1)$, więc odcinek $AB$ jest poziomy i ma długość $4$. Ponieważ $y_C = y_D$, odcinek $DC$ też jest poziomy, a jego długość wynosi $3 - (-1) = 4$, czyli boki $AB$ i $DC$ są równoległe i równe – dlatego $ABCD$ jest równoległobokiem (zdanie prawdziwe). Dla $y_C = y_D = 3$ bok $BC$ łączący $B = (1, -1)$ i $C = (3, 3)$ ma długość $\\sqrt{2^2 + 4^2} = \\sqrt{20}$, czyli inną niż $4$, więc ten równoległobok nie jest rombem (zdanie fałszywe)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-46-IX.5",
+        "ma-78-X.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2025-06d-15",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 15,
+      "maxPoints": 1,
+      "instruction": "Sześcienną kostkę o objętości $1\\ \\text{dm}^3$ włożono do prostopadłościennego pudełka, którego krawędzie oznaczono literami $a$, $b$, $c$ (zobacz rysunek). Długość krawędzi sześciennej kostki stanowi $\\frac{1}{3}$ długości krawędzi $a$, $\\frac{1}{2}$ długości krawędzi $b$ i $\\frac{2}{5}$ długości krawędzi $c$.\n\n![Prostopadłościenne pudełko o krawędziach oznaczonych literami a, b, c, w którego rogu stoi sześcienna kostka.](stimulus:ma-2025-06d-15-fig1)\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nObjętość tego pudełka jest równa",
+      "stimulusIds": [
+        "ma-2025-06d-15-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2025-06d-15",
+          "label": "15",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$12\\ \\text{dm}^3$"
+              },
+              {
+                "id": "B",
+                "text": "$18\\ \\text{dm}^3$"
+              },
+              {
+                "id": "C",
+                "text": "$10\\ \\text{dm}^3$"
+              },
+              {
+                "id": "D",
+                "text": "$15\\ \\text{dm}^3$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-V.4",
+            "ma-46-XI.6"
+          ],
+          "explanation": "Objętość sześciennej kostki wynosi $1\\ \\text{dm}^3$, więc jej krawędź ma długość $1\\ \\text{dm}$. Skoro krawędź kostki stanowi $\\frac{1}{3}$ krawędzi $a$, to $a = 3\\ \\text{dm}$; skoro stanowi $\\frac{1}{2}$ krawędzi $b$, to $b = 2\\ \\text{dm}$; a skoro stanowi $\\frac{2}{5}$ krawędzi $c$, to $c = 1 : \\frac{2}{5} = 2{,}5\\ \\text{dm}$. Objętość pudełka to $3 \\cdot 2 \\cdot 2{,}5 = 15\\ \\text{dm}^3$, zatem poprawna jest odpowiedź D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-V.4",
+        "ma-46-XI.6"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2025-06d-16",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 16,
+      "maxPoints": 2,
+      "instruction": "Takie same hulajnogi są sprzedawane w sklepach A, B, C. W sklepie B cena hulajnogi stanowi 80% ceny hulajnogi w sklepie A. W sklepie C cena hulajnogi stanowi 120% ceny hulajnogi w sklepie B.\n\n**Uzasadnij, że cena hulajnogi w sklepie C jest niższa od ceny hulajnogi w sklepie A. Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-06d-16",
+          "label": "16",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "**I sposób**\n$x$ – cena hulajnogi w sklepie A\n$0,8x$ – cena hulajnogi w sklepie B\nObliczymy, jaką część ceny hulajnogi w sklepie A stanowi cena hulajnogi w sklepie C:\n$1,2 \\cdot 0,8x = 0,96x$\nPonieważ $0,96x < 1x$, zatem cena hulajnogi w sklepie C jest niższa od ceny hulajnogi w sklepie A."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "zapisanie poprawnego wyrażenia algebraicznego jednej zmiennej, opisującego cenę hulajnogi w sklepie C w zależności od ceny hulajnogi w sklepie A, prawidłowe obliczenia oraz poprawny sposób uzasadnienia, że cena hulajnogi w sklepie C jest niższa od ceny hulajnogi w sklepie A",
+                  "graficzne przedstawienie poprawnej zależności między cenami hulajnogi w sklepach A i C oraz poprawne uzasadnienie, że cena hulajnogi w sklepie C jest niższa od ceny hulajnogi w sklepie A."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "zapisanie poprawnego wyrażenia algebraicznego jednej zmiennej, opisującego cenę hulajnogi w sklepie C w zależności od ceny hulajnogi w sklepie A, np. $0,8x \\cdot 1,2$ albo $\\frac{6}{5} \\cdot \\frac{4}{5}x$ albo $0,8x + 0,16x$ lub zapisy równoważne",
+                  "graficzne przedstawienie poprawnej zależności między cenami hulajnogi w sklepach A i C."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-78-III.3",
+            "ma-78-V.5"
+          ],
+          "explanation": "Niech $x$ oznacza cenę hulajnogi w sklepie A. Wtedy cena w sklepie B to $0,8x$, a cena w sklepie C to $120\\%$ ceny w sklepie B, czyli $1,2 \\cdot 0,8x = 0,96x$. Ponieważ $0,96x < 1x$, cena hulajnogi w sklepie C jest niższa od ceny hulajnogi w sklepie A.",
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "**I sposób**\n$x$ – cena hulajnogi w sklepie A\n$0,8x$ – cena hulajnogi w sklepie B\nObliczymy, jaką część ceny hulajnogi w sklepie A stanowi cena hulajnogi w sklepie C:\n$1,2 \\cdot 0,8x = 0,96x$\nPonieważ $0,96x < 1x$, zatem cena hulajnogi w sklepie C jest niższa od ceny hulajnogi w sklepie A.",
+              "ref": {
+                "source": "klucz",
+                "page": 11
+              }
+            },
+            {
+              "points": 2,
+              "content": "**II sposób**\n$x$ – cena hulajnogi w sklepie A\n$\\frac{4}{5}x$ – cena hulajnogi w sklepie B\nObliczymy, jaką część ceny hulajnogi w sklepie A stanowi cena hulajnogi w sklepie C:\n$\\frac{6}{5} \\cdot \\frac{4}{5}x = \\frac{24}{25}x$\nPonieważ\n$\\frac{24}{25}x < x$\nZatem cena hulajnogi w sklepie C jest niższa od ceny hulajnogi w sklepie A.",
+              "ref": {
+                "source": "klucz",
+                "page": 12
+              }
+            },
+            {
+              "points": 2,
+              "content": "**III sposób**\n$x$ – cena hulajnogi w sklepie A\n$0,8x$ – cena hulajnogi w sklepie B\nObliczymy, o ile wyższa jest cena hulajnogi w sklepie C od ceny hulajnogi w sklepie B:\n$0,8x : 5 = 0,16x$\nObliczymy, jaką część ceny hulajnogi w sklepie A stanowi cena hulajnogi w sklepie C:\n$0,8x + 0,16x = 0,96x$\nPonieważ $96\\% < 100\\%$, zatem cena hulajnogi w sklepie C jest niższa od ceny hulajnogi w sklepie A.",
+              "ref": {
+                "source": "klucz",
+                "page": 12
+              }
+            },
+            {
+              "points": 2,
+              "content": "**IV sposób**\n$x$ – cena hulajnogi w sklepie A\n$0,8x$ – cena hulajnogi w sklepie B\n$y$ – cena hulajnogi w sklepie C\nZapiszemy zależność:\n$0,8x - 100\\%$\n$y - 120\\%$\n$y = \\frac{0,8x \\cdot 120\\%}{100\\%} = 0,96x$\nPonieważ $0,96x < 1x$, zatem cena hulajnogi w sklepie C jest niższa od ceny hulajnogi w sklepie A.",
+              "ref": {
+                "source": "klucz",
+                "page": 12
+              }
+            },
+            {
+              "points": 2,
+              "content": "**V sposób**\nSposób graficzny:\nCena hulajnogi w sklepie A: kwadrat $5 \\times 5$ w całości zamalowany (25 z 25 kratek).\nCena hulajnogi w sklepie B (stanowi $0,8$ ceny hulajnogi w sklepie A): zamalowane 4 z 5 kolumn (20 z 25 kratek).\nCena hulajnogi w sklepie C (stanowi $1,2$ ceny hulajnogi w sklepie B): zamalowane 4 pełne kolumny i 4 kratki piątej kolumny (24 z 25 kratek).\nCena hulajnogi w sklepie C jest niższa od ceny hulajnogi w sklepie A.",
+              "ref": {
+                "source": "klucz",
+                "page": 13
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Jeżeli uczeń uzasadnia prawdziwość stwierdzenia dla wybranych cen hulajnogi, to za rozwiązanie zadania otrzymuje 0 punktów."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-78-III.3",
+        "ma-78-V.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 17
+      }
+    },
+    {
+      "id": "ma-2025-06d-17",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 17,
+      "maxPoints": 3,
+      "instruction": "Kamil otrzymał 300 złotych na zakup koszulki i torby sportowej. Na koszulkę wydał $\\frac{1}{5}$ tej kwoty. Za torbę sportową zapłacił $\\frac{3}{5}$ kwoty, która została mu po zakupie koszulki.\n\n**Oblicz, ile złotych zostało Kamilowi po zakupach.**\n**Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-06d-17",
+          "label": "17",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "I sposób\nObliczymy koszt zakupu koszulki:\n$\\frac{1}{5}\\cdot 300 = 60$ (zł)\nObliczymy kwotę pozostałą po zakupie koszulki:\n$300 - 60 = 240$ (zł)\nObliczymy koszt zakupu torby:\n$\\frac{3}{5}\\cdot 240 = 3\\cdot 48 = 144$ (zł)\nObliczymy kwotę, która została Kamilowi po zakupach:\n$240 - 144 = 96$ (zł)\nOdpowiedź: Po zakupach Kamilowi zostało 96 zł."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia kwoty pozostałej po zakupach, prawidłowe obliczenia oraz prawidłowy wynik liczbowy (96 zł)."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "zapisanie poprawnego wyrażenia arytmetycznego prowadzącego do obliczenia kwoty, którą Kamil zapłacił za torbę, np. $\\frac{3}{5}\\cdot\\left[300-\\left(\\frac{1}{5}\\cdot 300\\right)\\right]$ albo $\\frac{3}{5}\\cdot 240$",
+                  "poprawny sposób obliczenia ułamka kwoty pozostałej po zakupach, np. zapisanie $1-\\left(\\frac{1}{5}+\\frac{12}{25}\\right)$."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "zapisanie poprawnego wyrażenia arytmetycznego prowadzącego do obliczenia kwoty, która została po zakupie koszulki, np. $300-\\left(\\frac{1}{5}\\cdot 300\\right)$ albo $\\frac{4}{5}\\cdot 300$ lub zapisy równoważne",
+                  "poprawny sposób obliczenia ułamka kwoty wydanej na zakup torby, np. zapisanie $\\frac{3}{5}\\cdot\\frac{4}{5}$."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-46-XIV.5"
+          ],
+          "explanation": "Koszulka kosztowała $\\frac{1}{5}\\cdot 300 = 60$ zł, więc po jej zakupie Kamilowi zostało $300-60=240$ zł. Torba kosztowała $\\frac{3}{5}$ tej pozostałej kwoty, czyli $\\frac{3}{5}\\cdot 240 = 144$ zł. Dlatego po wszystkich zakupach Kamilowi zostało $240-144=96$ zł.",
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "I sposób\nObliczymy koszt zakupu koszulki:\n$\\frac{1}{5}\\cdot 300 = 60$ (zł)\nObliczymy kwotę pozostałą po zakupie koszulki:\n$300 - 60 = 240$ (zł)\nObliczymy koszt zakupu torby:\n$\\frac{3}{5}\\cdot 240 = 3\\cdot 48 = 144$ (zł)\nObliczymy kwotę, która została Kamilowi po zakupach:\n$240 - 144 = 96$ (zł)\nOdpowiedź: Po zakupach Kamilowi zostało 96 zł.",
+              "ref": {
+                "source": "klucz",
+                "page": 15
+              }
+            },
+            {
+              "points": 3,
+              "content": "II sposób\nKamil na zakup koszulki wydał $\\frac{1}{5}$ z 300 złotych, a więc zostało mu $\\frac{4}{5}$ z 300 złotych.\nJeżeli z $\\frac{4}{5}$ posiadanej kwoty wydał $\\frac{3}{5}$ na zakup torby, to na zakup torby wydał:\n$\\frac{3}{5}\\cdot\\frac{4}{5} = \\frac{12}{25}$ posiadanej kwoty.\nZatem Kamilowi po zakupach zostało:\n$1-\\left(\\frac{1}{5}+\\frac{12}{25}\\right) = \\frac{8}{25}$ posiadanej kwoty.\nObliczymy, ile złotych zostało Kamilowi po zakupach:\n$\\frac{8}{25}\\cdot 300 = 8\\cdot 12 = 96$ (zł)\nOdpowiedź: Po zakupach Kamilowi zostało 96 zł.",
+              "ref": {
+                "source": "klucz",
+                "page": 15
+              }
+            },
+            {
+              "points": 3,
+              "content": "III sposób\nKamil na zakup koszulki wydał $\\frac{1}{5}$ z 300 złotych, a więc zostało mu $\\frac{4}{5}$ z 300 złotych.\nObliczymy kwotę pozostałą po zakupie koszulki:\n$\\frac{4}{5}\\cdot 300 = 240$ (zł)\nNa zakup torby Kamil wydał $\\frac{3}{5}$ kwoty, która została po zakupie koszulki, a więc po zakupach zostało $\\frac{2}{5}$ tej kwoty:\n$\\frac{2}{5}\\cdot 240 = 96$ (zł)\nOdpowiedź: Po zakupach Kamilowi zostało 96 zł.",
+              "ref": {
+                "source": "klucz",
+                "page": 15
+              }
+            },
+            {
+              "points": 3,
+              "content": "IV sposób\nKwota, którą otrzymał Kamil: 300 złotych.\nKwota, którą Kamil wydał na koszulkę: $\\frac{1}{5}\\cdot 300$ złotych.\nKwota, którą Kamil wydał na torbę: $\\frac{3}{5}\\cdot\\left[300-\\left(\\frac{1}{5}\\cdot 300\\right)\\right]$.\nZapiszemy wyrażenie arytmetyczne prowadzące do obliczenia kwoty, która została Kamilowi po zakupach:\n$300-\\left(\\frac{1}{5}\\cdot 300\\right)-\\frac{3}{5}\\cdot\\left[300-\\left(\\frac{1}{5}\\cdot 300\\right)\\right]$\nObliczymy, ile złotych zostało Kamilowi po zakupach:\n$300-60-\\frac{3}{5}\\cdot 240 = 240-144 = 96$ (zł)\nOdpowiedź: Po zakupach Kamilowi zostało 96 zł.",
+              "ref": {
+                "source": "klucz",
+                "page": 16
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-46-XIV.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 18
+      }
+    },
+    {
+      "id": "ma-2025-06d-18",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 18,
+      "maxPoints": 2,
+      "instruction": "Kuba i Paweł wyruszyli o godzinie $8:44$ ze szkoły na basen tą samą trasą o długości $7,5$ km. Kuba wyruszył skuterem i dojechał na basen o $9:06$. Paweł przejechał tę trasę rowerem elektrycznym z prędkością $18\\ \\frac{\\text{km}}{\\text{h}}$.\n\n**Oblicz, który z chłopców przejechał tę trasę w krótszym czasie. Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-06d-18",
+          "label": "18",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Czas przejazdu Kuby na skuterze od $8:44$ do $9:06$ to $22$ minuty.\nOznaczymy czas przejazdu roweru jako $t_{roweru}$.\nObliczymy czas przejazdu Pawła na rowerze:\n$t_{roweru} = \\frac{7,5\\ \\text{km}}{18\\ \\frac{\\text{km}}{\\text{h}}} = \\frac{75}{180}\\ \\text{h} = \\frac{25}{60}\\ \\text{h} = 25\\ \\text{minut}$\nPorównamy czas przejazdu Pawła na rowerze i czas przejazdu Kuby na skuterze:\n$25\\ \\text{minut} > 22\\ \\text{minut}$\nOdpowiedź: Kuba przejechał tę trasę w krótszym czasie."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia czasów przejazdu skutera i roweru na podanej trasie, porównanie ich, prawidłowe obliczenia, prawidłowe wyniki liczbowe zgodne z zastosowaną jednostką czasu (np. 22 minuty, 25 minut) oraz sformułowanie poprawnego wniosku",
+                  "poprawny sposób obliczenia prędkości skutera, porównanie prędkości przejazdu skutera i roweru na podanej trasie, prawidłowe wyniki liczbowe zgodne z zastosowaną jednostką prędkości ($18\\ \\frac{\\text{km}}{\\text{h}}$; $20\\frac{5}{11}\\ \\frac{\\text{km}}{\\text{h}}$) oraz sformułowanie poprawnego wniosku."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia czasu przejazdu roweru, czyli zastosowanie poprawnego związku między prędkością a drogą, np. zapisanie $t_{roweru} = \\frac{7,5\\ \\text{km}}{18\\ \\frac{\\text{km}}{\\text{h}}}$ lub zapisy równoważne",
+                  "zapisanie poprawnej zależności między prędkością skutera a drogą i czasem oraz poprawny sposób obliczenia czasu przejazdu skutera, np. zapisanie $v_{skutera} = \\frac{7,5\\ \\text{km}}{t_{skutera}}$ oraz $t_{skutera} = 9:06 - 8:44$ lub zapisy równoważne",
+                  "poprawny sposób obliczenia czasu potrzebnego na przejazd rowerem trasy o długości $7,5$ km, gdyby Paweł jechał ze stałą prędkością, czyli zastosowanie poprawnego związku między czasami potrzebnymi na przebycie dróg o długości $7,5$ km oraz $18$ km, z zastosowaniem własności wielkości proporcjonalnych, np. zapisanie $\\frac{t}{60\\ \\text{min}} = \\frac{7,5\\ \\text{km}}{18\\ \\text{km}}$ albo $\\frac{t}{7,5\\ \\text{km}} = \\frac{60\\ \\text{min}}{18\\ \\text{km}}$ lub zapisy równoważne."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-XII.9"
+          ],
+          "explanation": "Kuba jechał skuterem od 8:44 do 9:06, czyli przez 22 minuty. Czas przejazdu Pawła obliczamy, dzieląc drogę przez prędkość: $7,5$ km : $18\\ \\frac{\\text{km}}{\\text{h}} = \\frac{25}{60}$ h, czyli 25 minut. Ponieważ 25 minut > 22 minuty, to Kuba przejechał tę trasę w krótszym czasie.",
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "I sposób\nCzas przejazdu Kuby na skuterze od $8:44$ do $9:06$ to $22$ minuty.\nOznaczymy czas przejazdu roweru jako $t_{roweru}$.\nObliczymy czas przejazdu Pawła na rowerze:\n$t_{roweru} = \\frac{7,5\\ \\text{km}}{18\\ \\frac{\\text{km}}{\\text{h}}} = \\frac{75}{180}\\ \\text{h} = \\frac{25}{60}\\ \\text{h} = 25\\ \\text{minut}$\nPorównamy czas przejazdu Pawła na rowerze i czas przejazdu Kuby na skuterze:\n$25\\ \\text{minut} > 22\\ \\text{minut}$\nOdpowiedź: Kuba przejechał tę trasę w krótszym czasie.",
+              "ref": {
+                "source": "klucz",
+                "page": 17
+              }
+            },
+            {
+              "points": 2,
+              "content": "II sposób\nCzas przejazdu Kuby na skuterze od $8:44$ do $9:06$ to $22$ minuty.\nObliczymy czas przejazdu roweru: $1\\ \\text{h} = 60$ minut, a zatem:\n$18$ km w $60$ minut\n$6$ km w $20$ minut\n$3$ km w $10$ minut\n$1,5$ km w $5$ minut\n\n$7,5$ km w $25$ minut\n$25\\ \\text{minut} > 22\\ \\text{minut}$\nOdpowiedź: Kuba przejechał tę trasę w krótszym czasie.",
+              "ref": {
+                "source": "klucz",
+                "page": 17
+              }
+            },
+            {
+              "points": 2,
+              "content": "III sposób\nCzas przejazdu Kuby na skuterze od $8:44$ do $9:06$ to $22$ minuty.\nObliczymy prędkość skutera. Skorzystamy ze wzoru na prędkość:\n$v = \\frac{s}{t}$, gdzie:\n$v$ – prędkość\n$s = 7,5$ km – droga\n$t = 22\\ \\text{minuty} = 22 \\cdot \\frac{1}{60}\\ \\text{h} = \\frac{11}{30}\\ \\text{h}$ – czas\n$v_{skutera} = \\frac{7,5\\ \\text{km}}{\\frac{11}{30}\\ \\text{h}} = 75\\ \\text{km} \\cdot \\frac{3}{11}\\ \\text{h} = 20\\frac{5}{11}\\ \\frac{\\text{km}}{\\text{h}}$\nPorównamy prędkość przejazdu Kuby na skuterze i prędkość przejazdu Pawła na rowerze:\n$20\\frac{5}{11}\\ \\frac{\\text{km}}{\\text{h}} > 18\\ \\frac{\\text{km}}{\\text{h}}$\nKuba jechał na skuterze z większą prędkością.\nOdpowiedź: Kuba przejechał tę trasę w krótszym czasie.",
+              "ref": {
+                "source": "klucz",
+                "page": 18
+              }
+            },
+            {
+              "points": 2,
+              "content": "IV sposób\nDługość trasy jest równa $7,5$ km.\nCzas przejazdu Kuby na skuterze od $8:44$ do $9:06$ to $22$ minuty.\nPrędkość roweru elektrycznego jest równa $18\\ \\frac{\\text{km}}{\\text{h}}$.\n$1\\ \\text{h} = 60$ minut\nObliczymy, w jakim czasie Paweł przejechał $7,5$ km, jadąc z tą samą prędkością $18\\ \\frac{\\text{km}}{\\text{h}}$.\n$18$ km w $60$ minut\n$7,5$ km w $x$ minut\n$x = \\frac{60\\ \\text{min} \\cdot 7,5\\ \\text{km}}{18\\ \\text{km}}$\n$x = 25$ min\nPorównamy czas przejazdu Pawła na rowerze i czas przejazdu Kuby na skuterze:\n$25\\ \\text{minut} > 22\\ \\text{minut}$\nOdpowiedź: Kuba przejechał tę trasę w krótszym czasie.",
+              "ref": {
+                "source": "klucz",
+                "page": 18
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-XII.9"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 19
+      }
+    },
+    {
+      "id": "ma-2025-06d-19",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 19,
+      "maxPoints": 2,
+      "instruction": "Dane są dwie osie liczbowe (zobacz rysunek).\nNa pierwszej z nich zaznaczono punkty $K$, $L$, $M$ oraz podano współrzędne punktów $K$ i $L$. Odcinek $KM$ jest podzielony na 9 równych części.\nNa drugiej osi liczbowej zaznaczono punkty $P$, $R$, $S$ oraz podano współrzędne punktów $P$ i $S$.\nOdcinek $PS$ jest podzielony na 9 równych części.\n**Oblicz iloczyn $x \\cdot y$. Zapisz obliczenia.**\n![Dwie osie liczbowe: na pierwszej zaznaczono punkty K, L, M o współrzędnych 0, 5 i x, a na drugiej punkty P, R, S o współrzędnych 0, y i 18; odcinki KM i PS są podzielone na 9 równych części.](stimulus:ma-2025-06d-19-fig1)",
+      "stimulusIds": [
+        "ma-2025-06d-19-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2025-06d-19",
+          "label": "19",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "I sposób\n$x$ – współrzędna punktu $M$:\n$x = \\frac{5}{2} \\cdot 9 = 22,5$\n$y$ – współrzędna punktu $R$:\n$y = \\frac{18}{9} \\cdot 3 = 6$\nObliczymy iloczyn liczb $x \\cdot y$:\n$x \\cdot y = 22,5 \\cdot 6 = 135$\nOdpowiedź: Iloczyn liczb $x \\cdot y$ jest równy $135$."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia iloczynu współrzędnych punktów $M$ i $R$, prawidłowe obliczenia **oraz** prawidłowy wynik liczbowy ($135$)."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób wyznaczenia współrzędnej punktu $M$",
+                  "poprawny sposób wyznaczenia współrzędnej punktu $R$,",
+                  "poprawne ustalenie długości odcinków jednostkowych na obu osiach (2,5 na pierwszej osi **oraz** 2 na drugiej osi)."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-46-IV.7",
+            "ma-46-V.2"
+          ],
+          "explanation": "Współrzędna $x$ punktu $M$ to $x = 2,5 \\cdot 9 = 22,5$, a współrzędna $y$ punktu $R$ to $y = 2 \\cdot 3 = 6$. Zatem $x \\cdot y = 22,5 \\cdot 6 = 135$.",
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "I sposób\n$x$ – współrzędna punktu $M$:\n$x = \\frac{5}{2} \\cdot 9 = 22,5$\n$y$ – współrzędna punktu $R$:\n$y = \\frac{18}{9} \\cdot 3 = 6$\nObliczymy iloczyn liczb $x \\cdot y$:\n$x \\cdot y = 22,5 \\cdot 6 = 135$\nOdpowiedź: Iloczyn liczb $x \\cdot y$ jest równy $135$.",
+              "ref": {
+                "source": "klucz",
+                "page": 19
+              }
+            },
+            {
+              "points": 2,
+              "content": "II sposób\nObliczymy długość odcinka jednostkowego na pierwszej osi:\n$5 : 2 = 2,5$\nObliczymy współrzędną $x$ punktu $M$:\n$x = 2,5 \\cdot 9 = 22,5$\nObliczymy długość odcinka jednostkowego na drugiej osi:\n$18 : 9 = 2$\nObliczymy współrzędną $y$ punktu $R$:\n$y = 2 \\cdot 3 = 6$\nObliczymy iloczyn liczb $x \\cdot y$:\n$x \\cdot y = 22,5 \\cdot 6 = 135$\nOdpowiedź: Iloczyn liczb $x \\cdot y$ jest równy $135$.",
+              "ref": {
+                "source": "klucz",
+                "page": 20
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-46-IV.7",
+        "ma-46-V.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 20
+      }
+    },
+    {
+      "id": "ma-2025-06d-20",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 20,
+      "maxPoints": 3,
+      "instruction": "Obwód trójkąta równoramiennego jest równy $36$ cm. Ramię tego trójkąta jest o $3$ cm dłuższe od jego podstawy.\n\n**Oblicz pole tego trójkąta. Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-06d-20",
+          "label": "20",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Oznaczymy jako:\n$x$ – długość podstawy trójkąta\n$x+3$ – długość ramienia trójkąta\nObliczymy długości boków trójkąta:\n$2(x+3)+x=36$\n$3x=36-6$\n$x=10$\n$x+3=13$\nObliczymy wysokość trójkąta z twierdzenia Pitagorasa:\n$h^2+5^2=13^2$\n$h^2=169-25=144$\n$h=12$\nObliczymy pole trójkąta:\n$P_{\\Delta}=\\frac{10\\cdot 12}{2}=60\\ (\\text{cm}^2)$\nOdpowiedź: Pole trójkąta jest równe $60\\ \\text{cm}^2$."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia pola trójkąta, prawidłowe obliczenia oraz prawidłowy wynik liczbowy zgodny z zastosowaną jednostką ($60\\ \\text{cm}^2$)."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia długości boków trójkąta oraz poprawny sposób obliczenia wysokości trójkąta z zastosowaniem twierdzenia Pitagorasa, czyli zapisanie zgodnie z przyjętymi oznaczeniami poprawnej zależności między wysokością trójkąta, połową długości jego podstawy a długością ramienia trójkąta, np. $2(x+3)+x=36$ oraz $h^2+\\left(\\frac{1}{2}x\\right)^2=(x+3)^2$, gdzie: $h$ jest wysokością trójkąta, $x$ jest długością podstawy trójkąta, $x+3$ jest długością ramienia trójkąta (lub zapisy równoważne),",
+                  "poprawny sposób obliczenia pola trójkąta z uwzględnieniem poprawnie obliczonej długości podstawy ($10$), zgodnie z przyjętymi oznaczeniami, np. zapisanie $P_{\\Delta}=\\frac{10\\cdot h}{2}$, gdzie: $h$ jest wysokością trójkąta (lub zapisy równoważne)."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "zapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia długości podstawy trójkąta, np. $2(x+3)+x=36$ lub zapisy równoważne",
+                  "zapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia długości ramienia trójkąta, np. $2x+x-3=36$ lub zapisy równoważne,",
+                  "zapisanie poprawnych wyrażeń arytmetycznych prowadzących do obliczenia długości jednego z boków trójkąta."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-78-VIII.6",
+            "ma-78-VIII.7"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "**I sposób**\nOznaczymy jako:\n$x$ – długość podstawy trójkąta\n$x+3$ – długość ramienia trójkąta\nObliczymy długości boków trójkąta:\n$2(x+3)+x=36$\n$3x=36-6$\n$x=10$\n$x+3=13$\nObliczymy wysokość trójkąta z twierdzenia Pitagorasa:\n$h^2+5^2=13^2$\n$h^2=169-25=144$\n$h=12$\nObliczymy pole trójkąta:\n$P_{\\Delta}=\\frac{10\\cdot 12}{2}=60\\ (\\text{cm}^2)$\nOdpowiedź: Pole trójkąta jest równe $60\\ \\text{cm}^2$.",
+              "ref": {
+                "source": "klucz",
+                "page": 21
+              }
+            },
+            {
+              "points": 3,
+              "content": "**II sposób**\nOznaczymy jako:\n$x$ – długość ramienia trójkąta\n$x-3$ – długość podstawy trójkąta\nObliczymy długości boków trójkąta:\n$2x+x-3=36$\n$3x=36+3$\n$x=13$\n$x-3=10$\nObliczymy wysokość trójkąta z twierdzenia Pitagorasa:\n$h^2+5^2=13^2$\n$h^2=169-25=144$\n$h=12$\nObliczymy pole trójkąta:\n$P_{\\Delta}=\\frac{10\\cdot 12}{2}=60\\ (\\text{cm}^2)$\nOdpowiedź: Pole trójkąta jest równe $60\\ \\text{cm}^2$.",
+              "ref": {
+                "source": "klucz",
+                "page": 22
+              }
+            },
+            {
+              "points": 3,
+              "content": "**III sposób**\nObliczymy długości boków trójkąta:\n$36-6=30\\ (\\text{cm})$\n$30:3=10$\n$10$ – długość podstawy trójkąta\n$13$ – długość ramienia trójkąta\nObliczymy wysokość trójkąta z twierdzenia Pitagorasa:\n$h^2+5^2=13^2$\n$h^2=169-25=144$\n$h=12$\nObliczymy pole trójkąta:\n$P_{\\Delta}=\\frac{10\\cdot 12}{2}=60\\ (\\text{cm}^2)$\nOdpowiedź: Pole trójkąta jest równe $60\\ \\text{cm}^2$.",
+              "ref": {
+                "source": "klucz",
+                "page": 22
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Nie ocenia się stosowania jednostki."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-78-VIII.6",
+        "ma-78-VIII.7"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 21
+      }
+    },
+    {
+      "id": "ma-2025-06d-21",
+      "sessionId": "matematyka-2025-06-dodatkowy",
+      "number": 21,
+      "maxPoints": 3,
+      "instruction": "Dany jest ostrosłup prawidłowy czworokątny, którego krawędź podstawy ma długość $3,5$ cm. Wysokość ostrosłupa jest o $8$ cm mniejsza od obwodu jego podstawy.\n\n**Oblicz objętość tego ostrosłupa.**\n**Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2025-06d-21",
+          "label": "21",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Obliczymy pole kwadratu, który jest podstawą ostrosłupa:\n$P = (3,5)^2 = 12,25$ (cm$^2$)\nObliczymy wysokość ostrosłupa:\n$H = 4 \\cdot 3,5 - 8 = 14 - 8 = 6$ (cm)\nObliczymy objętość ostrosłupa:\n$V = \\frac{1}{3} \\cdot 12,25 \\cdot 6 = 24,5$ (cm$^3$)\nOdpowiedź: Objętość ostrosłupa jest równa $24,5$ cm$^3$."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia objętości ostrosłupa, prawidłowe obliczenia oraz prawidłowy wynik liczbowy zgodny z zastosowaną jednostką objętości ($24,5$ cm$^3$)."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia pola podstawy ostrosłupa oraz poprawny sposób obliczenia wysokości ostrosłupa."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia pola podstawy ostrosłupa",
+                  "poprawny sposób obliczenia wysokości ostrosłupa."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-XI.3"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "Obliczymy pole kwadratu, który jest podstawą ostrosłupa:\n$P = (3,5)^2 = 12,25$ (cm$^2$)\nObliczymy wysokość ostrosłupa:\n$H = 4 \\cdot 3,5 - 8 = 14 - 8 = 6$ (cm)\nObliczymy objętość ostrosłupa:\n$V = \\frac{1}{3} \\cdot 12,25 \\cdot 6 = 24,5$ (cm$^3$)\nOdpowiedź: Objętość ostrosłupa jest równa $24,5$ cm$^3$.",
+              "ref": {
+                "source": "klucz",
+                "page": 23
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Brak jednostki lub zapisanie niewłaściwej jednostki w wyniku końcowym traktuje się jako błąd rachunkowy."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-XI.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 22
+      }
+    }
+  ],
+  "rubrics": [],
+  "audio": []
+}

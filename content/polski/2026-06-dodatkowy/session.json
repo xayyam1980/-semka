@@ -1,0 +1,2031 @@
+{
+  "session": {
+    "id": "polski-2026-06-dodatkowy",
+    "subjectId": "polski",
+    "year": 2026,
+    "month": 6,
+    "term": "dodatkowy",
+    "formCode": "OPOP-100",
+    "versions": [
+      "X"
+    ],
+    "maxPoints": 45,
+    "taskOrder": [
+      "pl-2026-06d-01",
+      "pl-2026-06d-02",
+      "pl-2026-06d-03",
+      "pl-2026-06d-04",
+      "pl-2026-06d-05",
+      "pl-2026-06d-06",
+      "pl-2026-06d-07",
+      "pl-2026-06d-08",
+      "pl-2026-06d-09",
+      "pl-2026-06d-10",
+      "pl-2026-06d-11",
+      "pl-2026-06d-12",
+      "pl-2026-06d-13",
+      "pl-2026-06d-14",
+      "pl-2026-06d-15",
+      "pl-2026-06d-16",
+      "pl-2026-06d-17",
+      "pl-2026-06d-18",
+      "pl-2026-06d-19"
+    ],
+    "sources": [
+      {
+        "kind": "klucz",
+        "path": "Język polski/Additional/Cherwiec 2026/jezyk-polski-2026-czerwiec-egzamin-osmoklasisty-dodatkowy-odpowiedzi.pdf",
+        "sha256": "25c3ef16deab209e3ea48ff9c5b5eeec14f1810b89ce33b3e6bd4691d54dbb4d",
+        "pages": 27
+      },
+      {
+        "kind": "arkusz",
+        "path": "Język polski/Additional/Cherwiec 2026/jezyk-polski-2026-czerwiec-egzamin-osmoklasisty-dodatkowy.pdf",
+        "sha256": "7682b92c973d32ffc3b9aca3b499756ea6fdb1416f3b1f9a4c597df7e2919aba",
+        "pages": 24
+      }
+    ],
+    "contentVersion": "572723600c5c42a5",
+    "status": "published"
+  },
+  "stimuli": [
+    {
+      "id": "pl-2026-06d-tekst-1",
+      "kind": "text",
+      "title": "W PUSTYNI I W PUSZCZY",
+      "author": "Henryk Sienkiewicz",
+      "lines": [
+        "Przez następne trzy dni jechali wciąż wąwozem i zawsze w górę. Dni były przeważnie upalne, noce na przemian chłodne albo parne. Zbliżała się pora dżdżysta¹. Zza widnokręgu wysuwały się tu i ówdzie chmury, białe jak mleko, ale głębokie i zawalne². Stronami widać było już smugi dżdżu i dalekie tęcze. Nad ranem trzeciego dnia jedna z takich chmur pękła nad ich głowami jak beczka, z której zleciała obręcz, i pokropiła ich ciepłym i obfitym, ale na szczęście krótkotrwałym deszczem. Potem pogoda uczyniła się jednak piękna i mogli jechać dalej. [...] Podróż w odświeżonym powietrzu nie była wcale uciążliwa, a obfitość zwierzyny i wody usuwała obawę głodu i pragnienia. W ogóle szło im łatwiej, niż się spodziewali, toteż Stasia nie opuszczał dobry humor i jadąc obok dziewczynki, gwarzył z nią wesoło, a chwilami i żartował:",
+        "– Wiesz co, Nel – mówił – gdy na chwilę zatrzymali konie pod wielkim drzewem chlebowym, z którego Kali z Meą obcinali podobne do ogromnych melonów owoce – czasem mi się zdaje, że ja jestem błędny rycerz.",
+        "– A co to jest błędny rycerz? – zapytała Nel, zwracając ku niemu swą śliczną główkę.",
+        "– Dawno, dawno temu, w średnich wiekach, byli tacy rycerze, którzy jeździli po świecie i szukali przygód. Walczyli z olbrzymami i smokami i wiesz? Każdy miał swoją damę, którą opiekował się i której bronił.",
+        "– To ja jestem taka dama?",
+        "Staś zastanowił się przez chwilę, po czym odrzekł:",
+        "– Nie – tyś na to za mała. Tamte wszystkie były dorosłe.",
+        "I ani przez głowę mu nie przeszło, że może żaden błędny rycerz nie uczynił tyle dla swojej damy, ile on dla tej małej siostrzyczki – po prostu wydawało mu się, że to, co czynił, rozumiało się samo przez się.",
+        "Lecz Nel uczuła się pokrzywdzona jego słowami, więc wysunąwszy z nadąsaną minką usta, rzekła:",
+        "– A mówiłeś raz w pustyni, że postąpiłam jak osoba trzynastoletnia? Aha!",
+        "– No to raz, ale masz lat osiem.",
+        "– To za dziesięć lat będę miała osiemnaście!",
+        "– Wielka rzecz! A ja dwudziesty czwarty! W takim wieku człowiek nie myśli już o żadnych damach, bo ma co innego do roboty. Rozumie się!",
+        "– A co będziesz robił?",
+        "– Będę inżynierem albo marynarzem, albo jeśli w Polsce będzie wojna, to pójdę się bić jak mój ojciec.",
+        "Ona zaś spytała niespokojnie:",
+        "– Ale wrócisz do Port Saidu?",
+        "– Pierwej musimy tam powrócić oboje.",
+        "– Do tatusia! – odpowiedziała dziewczynka.",
+        "I oczy jej zamgliły się smutkiem i tęsknotą. Na szczęście nadleciało w tej chwili stadko prześlicznych papug z różowymi głowami i z różową podszewką pod spodem skrzydeł. Dzieci zapomniały natychmiast o poprzedniej rozmowie i poczęły śledzić oczyma ich lot."
+      ],
+      "lineNumbering": "none",
+      "source": "Henryk Sienkiewicz, W pustyni i w puszczy, Warszawa 1997.",
+      "footnotes": [
+        {
+          "mark": "1",
+          "text": "Dżdżysta – deszczowa."
+        },
+        {
+          "mark": "2",
+          "text": "Chmury zawalne – chmury potężne, gęste."
+        }
+      ],
+      "wordCount": 435,
+      "ref": {
+        "source": "arkusz",
+        "page": 5
+      }
+    },
+    {
+      "id": "pl-2026-06d-tekst-2",
+      "kind": "text",
+      "title": "DO CZEGO W ROZWOJU CZŁOWIEKA POTRZEBNE JEST PIĘKNO?",
+      "author": "Katarzyna Olbrycht",
+      "lines": [
+        "Jest tyle piękna, o które musimy się troszczyć.",
+        "Charlie Mackesy",
+        "Choć tytułowe pytanie tekstu brzmi dosyć prowokacyjnie, zawiera wyraźną tezę: tak, piękno jest potrzebne, a nawet niezbędne w rozwoju człowieka.",
+        "Uznawanie mocnej pozycji piękna kojarzy się w dzisiejszej kulturze raczej z odległą przeszłością, głównie z tradycją grecką. Jest to skojarzenie w pełni zasadne, ponieważ jesteśmy w ogromnym stopniu, mniej lub bardziej świadomie, dziedzicami myśli starożytnych Greków. Tradycja grecka rozróżniała piękno wysokie (piękno duchowe, moralne, ideę piękna) oraz piękno niższe (piękno uchwytne za pomocą zmysłów – wygląd, uroda, kształt).",
+        "Piękno obejmowało więc wszystkie dziedziny życia: obyczaje i myśli, zachowania i działania, przyrodę i rzeczy. Ślady tego myślenia spotykamy w języku do dzisiejszego dnia. Nie budzi większych wątpliwości ogólny sens nie tylko określeń „piękno przyrody” bądź „piękny widok”, ale i „piękny człowiek” (nie w sensie urody, ale postawy życiowej), „piękny charakter”, „piękne zachowanie”, „piękne życie”.",
+        "Codzienne funkcjonowanie dowodzi niezbędności tej kategorii. Przypomnijmy chociażby spontaniczne okrzyki astronautów, kiedy osiągnęli cel swojego lotu – Księżyc. W 1968 roku jeden z nich, Frank Borman¹, dzielił się z mieszkańcami Ziemi swoim zachwytem: „To jest najpiękniejszy widok, jaki kiedykolwiek oglądałem, zapierający dech w piersiach”. W lipcu 1969 roku uczestnik kolejnego lotu – Neil Armstrong² wykrzyknął: „Oto Księżyc… Jego surowe piękno robi wrażenie”, a drugi, Edwin Aldrin, zawołał: „Tu jest pięknie, pięknie!”.",
+        "Zarówno kontakt z pięknem wyższym (duchowym), jak i pięknem niższym (uchwytnym za pomocą zmysłów) buduje człowieczeństwo. Oba, równocześnie realizowane, pogłębiają potrzebę piękna, otwierają coraz to nowe drogi odkrywania go i stwarzania warunków do jego przejawiania się w świecie.",
+        "Piękno, obok prawdy i dobra, jest wartością wyższą, jedną z trzech wielkich wartości. Tym wartościom towarzyszy założenie, że nie mogą być one traktowane użytecznie, czyli nie mogą być jedynie „przydatne”, służyć do czegoś. Powinny być celem pragnień i dążeń. Dlatego tytułowe pytanie można uznać za nieco prowokacyjne, ale prowadzące do lepszego zrozumienia zjawiska i tajemnicy piękna. Potrzeba kontaktu z pięknem odbieranym, przeżywanym, tworzonym jest zatem bardzo ważna w rozwoju. Niezwykle ważne są doświadczenia piękna przeżywanego już w dzieciństwie odkrywanego w kontaktach z różnymi jego odmianami, a w okresie młodości poszukiwanego coraz bardziej świadomie, samodzielnie, krytycznie."
+      ],
+      "lineNumbering": "none",
+      "source": "Na podstawie: Katarzyna Olbrycht, Do czego w rozwoju człowieka potrzebne jest piękno?, „Hejnał Oświatowy”, nr 5/203/2021.",
+      "footnotes": [
+        {
+          "mark": "¹",
+          "text": "Frank Borman – amerykański astronauta, był członkiem załogi statku kosmicznego, który pierwszy w historii wszedł na orbitę wokół Księżyca."
+        },
+        {
+          "mark": "²",
+          "text": "Neil Armstrong, Edwin Aldrin – amerykańscy astronauci, którzy jako pierwsi ludzie stanęli na Księżycu."
+        }
+      ],
+      "wordCount": 403,
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "pl-2026-06d-09-fig1",
+      "kind": "figure",
+      "title": "Dwa plakaty do spektaklu „Balladyna”: plakat 1 z koroną przebitą sztyletem, wężem i malinami; plakat 2 z maliną w kałuży krwi na tle kamuflażu i drzew.",
+      "asset": "assets/pl-2026-06d-09-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 9
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "pl-2026-06d-01",
+      "sessionId": "polski-2026-06-dodatkowy",
+      "number": 1,
+      "maxPoints": 1,
+      "instruction": "**Która z poniższych informacji jest zgodna z przytoczonym fragmentem utworu W pustyni i w puszczy? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [
+        "pl-2026-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-06d-01",
+          "label": "1",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Bohaterowie podróżowali w ponurych nastrojach."
+              },
+              {
+                "id": "B",
+                "text": "Bohaterowie planowali, że wspólnie odwiedzą Polskę."
+              },
+              {
+                "id": "C",
+                "text": "Podczas podróży Staś zdradził Nel swoje plany na przyszłość."
+              },
+              {
+                "id": "D",
+                "text": "Staś i Nel mieli trudności ze zdobyciem pożywienia podczas podróży."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "W przytoczonym fragmencie to podczas podróży Staś opowiada Nel o swoich planach na przyszłość, dlatego zgodna z tekstem jest odpowiedź C. Pozostałe informacje nie pasują do fragmentu: Stasia nie opuszczał dobry humor, a dzieci gawędziły wesoło (więc nie podróżowali w ponurych nastrojach), a w tekście nie ma mowy o wspólnych planach odwiedzenia Polski ani o trudnościach ze zdobyciem pożywienia."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "pl-2026-06d-02",
+      "sessionId": "polski-2026-06-dodatkowy",
+      "number": 2,
+      "maxPoints": 1,
+      "instruction": "**Na podstawie przytoczonego fragmentu utworu _W pustyni i w puszczy_ oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "pl-2026-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-06d-02",
+          "label": "2",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Staś nie uważał opieki nad Nel za coś nadzwyczajnego. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Według Stasia wiek Nel nie przeszkadza jej w byciu damą. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "F"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "Kod PF oznacza, że pierwsze stwierdzenie jest prawdziwe, a drugie fałszywe. W fragmencie Staś traktuje opiekę nad Nel jako swój zwykły, oczywisty obowiązek, a nie jako coś wyjątkowego – dlatego pierwsze stwierdzenie jest prawdziwe. Drugie stwierdzenie jest fałszywe, ponieważ według Stasia Nel jest jeszcze za mała i to właśnie jej wiek stoi na przeszkodzie, by była damą."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "pl-2026-06d-03",
+      "sessionId": "polski-2026-06-dodatkowy",
+      "number": 3,
+      "maxPoints": 1,
+      "instruction": "**Na podstawie przytoczonego fragmentu utworu *W pustyni i w puszczy* dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nW czasie rozmowy ze Stasiem Nel",
+      "stimulusIds": [
+        "pl-2026-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-06d-03",
+          "label": "3",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "cieszy się z porównania jej do damy."
+              },
+              {
+                "id": "B",
+                "text": "próbuje go przekonać o swej dorosłości."
+              },
+              {
+                "id": "C",
+                "text": "wyraża wdzięczność za troskliwość chłopca."
+              },
+              {
+                "id": "D",
+                "text": "potwierdza jego podobieństwo do błędnego rycerza."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.9"
+          ],
+          "explanation": "W przytoczonym fragmencie Nel podczas rozmowy ze Stasiem podkreśla, że jest już duża i chce być traktowana poważnie, więc próbuje go przekonać o swej dorosłości – dlatego poprawna jest odpowiedź B. Pozostałe odpowiedzi nie wynikają z tekstu: Nel nie cieszy się z porównania jej do damy, nie dziękuje Stasiowi za troskliwość i nie potwierdza jego podobieństwa do błędnego rycerza."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-1.9"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "pl-2026-06d-04",
+      "sessionId": "polski-2026-06-dodatkowy",
+      "number": 4,
+      "maxPoints": 1,
+      "instruction": "**W przytoczonym fragmencie utworu *W pustyni i w puszczy* pojawia się stwierdzenie: *toteż Stasia nie opuszczał dobry humor*. Podaj dwie przyczyny dobrego samopoczucia bohatera, jakie zostały zaprezentowane w tekście. Nie cytuj sformułowań z fragmentu utworu.**",
+      "stimulusIds": [
+        "pl-2026-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-06d-04",
+          "label": "4",
+          "maxPoints": 1,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Bohaterowie mieli pod dostatkiem pożywienia i wody. Była dobra pogoda.\n(Akceptowane są też inne poprawne przyczyny, np. podróż przebiegała bez zakłóceń.)"
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "odpowiedź poprawna"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepełna lub niepoprawna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "exemplars": [
+            {
+              "points": 1,
+              "content": "- Mieli pod dostatkiem pożywienia i wody.\n- Była dobra pogoda.\n- Podróż przebiegała bez zakłóceń.",
+              "ref": {
+                "source": "klucz",
+                "page": 3
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "pl-2026-06d-05",
+      "sessionId": "polski-2026-06-dodatkowy",
+      "number": 5,
+      "maxPoints": 1,
+      "instruction": "**Która z informacji dotycząca błędnych rycerzy <u>nie pojawia się</u> w wypowiedzi Stasia? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [
+        "pl-2026-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-06d-05",
+          "label": "5",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Bronili swojego honoru."
+              },
+              {
+                "id": "B",
+                "text": "Opiekowali się swoimi damami."
+              },
+              {
+                "id": "C",
+                "text": "Walczyli z olbrzymami i smokami."
+              },
+              {
+                "id": "D",
+                "text": "Jeździli po świecie i szukali przygód."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "W wypowiedzi Stasia o błędnych rycerzach pojawia się informacja, że opiekowali się swoimi damami, walczyli z olbrzymami i smokami oraz jeździli po świecie w poszukiwaniu przygód. Nie ma natomiast w niej mowy o tym, że bronili swojego honoru. Dlatego właściwa jest odpowiedź A."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 7
+      }
+    },
+    {
+      "id": "pl-2026-06d-06",
+      "sessionId": "polski-2026-06-dodatkowy",
+      "number": 6,
+      "maxPoints": 3,
+      "instruction": "Przeczytaj poniższy fragment utworu.\n\n> KLARA  \n> W dawnych czasach rycerz prawy,  \n> Lubo zdobion wieńcem sławy,  \n> Lubo staczał krwawe boje,  \n> Nim oświadczył miłość swoję –  \n> Ku czci drogiej swej kochanki  \n> W turniejowe stawał szranki.  \n> […]  \n> Zaś śmiałości – w tym sposobie  \n> Da mi dowód, kto dać zechce:  \n> W oddalonej stąd krainie  \n> Jadowity potwór słynie,  \n> Najmężniejszym trwogą bywa –  \n> Krokodylem się nazywa.  \n> Niech go schwyci i przystawi,  \n> Moje oko nim zabawi;  \n> Bom ciekawa jest nad miarę  \n> Widzieć żywą tę poczwarę.  \n> To jest wolą niewzruszoną –  \n> A kto spełni, co ja każę,  \n> Ten powiedzie przed ołtarze.  \n> Tego tylko będę żoną.",
+      "stimulusIds": [
+        "pl-2026-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-06d-06-1",
+          "label": "6.1",
+          "maxPoints": 1,
+          "prompt": "Podaj tytuł utworu, z którego pochodzi powyższy fragment.",
+          "response": {
+            "type": "short_text",
+            "gaps": 1,
+            "language": "pl"
+          },
+          "key": {
+            "X": {
+              "type": "text",
+              "expected": [
+                "Zemsta"
+              ],
+              "accepted": [
+                "„Zemsta”",
+                "Aleksander Fredro, Zemsta"
+              ],
+              "rejected": []
+            }
+          },
+          "scoring": {
+            "type": "text_match",
+            "strictness": "communicative"
+          },
+          "skillTags": [
+            "pl-gen-I"
+          ]
+        },
+        {
+          "id": "pl-2026-06d-06-2",
+          "label": "6.2",
+          "maxPoints": 1,
+          "prompt": "Napisz, do kogo Klara kieruje swoje słowa.",
+          "response": {
+            "type": "short_text",
+            "gaps": 1,
+            "language": "pl"
+          },
+          "key": {
+            "X": {
+              "type": "text",
+              "expected": [
+                "Papkin"
+              ],
+              "accepted": [
+                "Do Papkina",
+                "Do Papkina."
+              ],
+              "rejected": []
+            }
+          },
+          "scoring": {
+            "type": "text_match",
+            "strictness": "communicative"
+          },
+          "skillTags": [
+            "pl-gen-I"
+          ]
+        },
+        {
+          "id": "pl-2026-06d-06-3",
+          "label": "6.3",
+          "maxPoints": 1,
+          "prompt": "Na podstawie znajomości całego utworu, z którego pochodzi powyższy fragment, napisz, czy osobę, do której Klara kieruje swoje słowa, można nazwać rycerzem w takim znaczeniu, o jakim wspomina Staś w swojej rozmowie z Nel.\nUzasadnij swoją odpowiedź.",
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Papkina nie można nazwać takim rycerzem, o jakim wspomina Staś. Papkin tylko się przechwalał, że jest waleczny, ale tak naprawdę był tchórzem.\n(Odpowiedź przeciwna również jest akceptowana, jeśli zostanie uzasadniona, np.: Papkina można nazwać takim rycerzem, o jakim wspomina Staś. Papkin wybrał Klarę na damę swojego serca i oświadczył się jej.)"
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "odpowiedź poprawna"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I"
+          ],
+          "exemplars": [
+            {
+              "points": 1,
+              "content": "Papkina nie można nazwać takim rycerzem, o jakim wspomina Staś. Papkin tylko się przechwalał, że jest waleczny, ale tak naprawdę był tchórzem.",
+              "ref": {
+                "source": "klucz",
+                "page": 4
+              }
+            },
+            {
+              "points": 1,
+              "content": "Papkina można nazwać takim rycerzem, o jakim wspomina Staś. Papkin wybrał Klarę na damę swojego serca i oświadczył się jej.",
+              "ref": {
+                "source": "klucz",
+                "page": 4
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 7
+      }
+    },
+    {
+      "id": "pl-2026-06d-07",
+      "sessionId": "polski-2026-06-dodatkowy",
+      "number": 7,
+      "maxPoints": 1,
+      "instruction": "Uzupełnij poniższe zdanie. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nWystępujący w ostatnim zdaniu przytoczonego fragmentu W pustyni i w puszczy wyraz ich jest [[A|B]] i odnosi się do wyrazu [[C|D]] użytego w zdaniu wcześniejszym.",
+      "stimulusIds": [
+        "pl-2026-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-06d-07",
+          "label": "7",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "zaimkiem"
+              },
+              {
+                "id": "B",
+                "text": "przyimkiem"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "skrzydła"
+              },
+              {
+                "id": "D",
+                "text": "papugi"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "A",
+                "reason": "D"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-1.1"
+          ],
+          "explanation": "Wyraz „ich” w zdaniu „poczęły śledzić oczyma ich lot” zastępuje rzeczownik, wskazując, czyj był lot – jest zaimkiem (A). Lot należał do papug („stadko prześlicznych papug”) wymienionych w zdaniu wcześniejszym, więc „ich” odnosi się do wyrazu „papugi” (D)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-1.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "pl-2026-06d-08",
+      "sessionId": "polski-2026-06-dodatkowy",
+      "number": 8,
+      "maxPoints": 1,
+      "instruction": "**Uczniowie w ramach projektu przygotowali krótkie notatki dotyczące utworu *W pustyni i w puszczy*. W jednej z notatek zabrakło trzech przecinków. Uzupełnij poniższy zapis tak, aby był zgodny z zasadami interpunkcji.**\n\n> Powieść „W pustyni i w puszczy” powstała w 1911 roku a inspiracją do jej napisania była podróż do Afryki, którą odbył Henryk Sienkiewicz dwadzieścia lat wcześniej i opisał w „Listach z Afryki”. Jest to historia o losach czternastoletniego Stasia Tarkowskiego i ośmioletniej Nel Rawlison, porwanych w Egipcie przez powstańców Mahdiego. Dzieci odbywają niebezpieczną wędrówkę przez Afrykę wykazując się przy tym ogromną odwagą. Dzięki sprytowi Stasia oraz pomocy Kalego i Mei odzyskują wolność by po licznych przygodach wrócić do swoich ojców.",
+      "stimulusIds": [
+        "pl-2026-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-06d-08",
+          "label": "8",
+          "maxPoints": 1,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Powieść „W pustyni i w puszczy” powstała w 1911 roku, a inspiracją do jej napisania była podróż do Afryki, którą odbył Henryk Sienkiewicz dwadzieścia lat wcześniej i opisał w „Listach z Afryki”. Jest to historia o losach czternastoletniego Stasia Tarkowskiego i ośmioletniej Nel Rawlison, porwanych w Egipcie przez powstańców Mahdiego. Dzieci odbywają niebezpieczną wędrówkę przez Afrykę, wykazując się przy tym ogromną odwagą. Dzięki sprytowi Stasia oraz pomocy Kalego i Mei odzyskują wolność, by po licznych przygodach wrócić do swoich ojców."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "odpowiedź poprawna"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-4.2"
+          ],
+          "explanation": "Brakujące przecinki stawiamy przed „a inspiracją” (przed spójnikiem „a” łączącym dwa zdania), przed „wykazując się” (oddzielamy przecinkiem imiesłowowy równoważnik zdania) oraz przed „by po licznych przygodach wrócić” (zdanie wyrażające cel)."
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-4.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "pl-2026-06d-09",
+      "sessionId": "polski-2026-06-dodatkowy",
+      "number": 9,
+      "maxPoints": 2,
+      "instruction": "Obejrzyj poniższe plakaty do spektaklu teatralnego *Balladyna*.\n\n![Dwa plakaty do spektaklu „Balladyna”: plakat 1 z koroną przebitą sztyletem, wężem i malinami; plakat 2 z maliną w kałuży krwi na tle kamuflażu i drzew.](stimulus:pl-2026-06d-09-fig1)\n\n**Który plakat – Twoim zdaniem – lepiej nawiązuje do treści utworu *Balladyna* Juliusza Słowackiego? Uzasadnij swój wybór. W uzasadnieniu odwołaj się do dwóch elementów graficznych widocznych na wybranym przez Ciebie plakacie.**\n\nWybieram plakat oznaczony numerem ……………..\n\nUzasadnienie: ……………………………",
+      "stimulusIds": [
+        "pl-2026-06d-tekst-1",
+        "pl-2026-06d-09-fig1"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-06d-09",
+          "label": "9",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Wybieram plakat oznaczony numerem: 1\nUzasadnienie wyboru: Moim zdaniem ten plakat lepiej nawiązuje do treści utworu „Balladyna”, ponieważ znajdują się na nim cztery elementy graficzne nawiązujące do treści dramatu, a tym samym lepiej opisujące ten utwór. Są to korona, sztylet, maliny i wąż. Korona widoczna na plakacie to symbol dążeń tytułowej bohaterki do władzy. Korona ta przebita jest sztyletem, co oznacza, że zdobycie jej wiązało się z popełnieniem wielu zbrodni."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "podanie numeru plakatu, poprawne uzasadnienie z odwołaniem do dwóch elementów graficznych widocznych na plakacie"
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "podanie numeru plakatu, poprawne uzasadnienie z odwołaniem do jednego elementu graficznego widocznego na plakacie"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-III",
+            "pl-78-1.4",
+            "pl-gen-I"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "Wybieram plakat oznaczony numerem: 1\nUzasadnienie wyboru: Moim zdaniem ten plakat lepiej nawiązuje do treści utworu „Balladyna”, ponieważ znajdują się na nim cztery elementy graficzne nawiązujące do treści dramatu, a tym samym lepiej opisujące ten utwór. Są to korona, sztylet, maliny i wąż. Korona widoczna na plakacie to symbol dążeń tytułowej bohaterki do władzy. Korona ta przebita jest sztyletem, co oznacza, że zdobycie jej wiązało się z popełnieniem wielu zbrodni.",
+              "ref": {
+                "source": "klucz",
+                "page": 6
+              }
+            },
+            {
+              "points": 2,
+              "content": "Wybieram plakat oznaczony numerem: 2\nUzasadnienie wyboru: Według mnie ten plakat lepiej nawiązuje do treści utworu „Balladyna”, ponieważ przedstawiono na nim główny element, dzięki któremu rozpoznajemy treść dramatu Słowackiego. Jest to malina leżąca we krwi symbolicznie ukazująca to, że zbieranie malin przez siostry zapoczątkowało wiele zbrodni. Na tle liter tworzących napis „Balladyna” widać drzewa – są to najprawdopodobniej wierzby; w jedną z takich wierzb Goplana zamieniła Grabca.",
+              "ref": {
+                "source": "klucz",
+                "page": 6
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-III",
+        "pl-78-1.4",
+        "pl-gen-I"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 9
+      }
+    },
+    {
+      "id": "pl-2026-06d-10",
+      "sessionId": "polski-2026-06-dodatkowy",
+      "number": 10,
+      "maxPoints": 2,
+      "instruction": "**Uzupełnij poniższy tekst w taki sposób, aby stanowił streszczenie tekstu Katarzyny Olbrycht.**\n\nW swoim tekście Katarzyna Olbrycht podejmuje temat ……………………………\n\nAutorka rozpoczyna od ……………………………\n\ni wyjaśnia ……………………………\n\nW zakończeniu wyraża przekonanie ……………………………",
+      "stimulusIds": [
+        "pl-2026-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-06d-10",
+          "label": "10",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "W swoim tekście Katarzyna Olbrycht podejmuje temat piękna.\nAutorka rozpoczyna rozważania od stwierdzenia, że piękno jest bardzo ważne w życiu każdego człowieka i wyjaśnia, jak rozumiano piękno na przestrzeni wieków.\nW zakończeniu wyraża przekonanie, że piękno jest jedną z najważniejszych wartości, którą należy rozwijać od dzieciństwa."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawne określenie tematu i tego, co na ten temat powiedziano w tekście; zachowanie właściwego poziomu uogólnienia"
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawne określenie tematu i tego, co na ten temat powiedziano w tekście; zaburzony poziom uogólnienia"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-2.3",
+            "pl-gen-III",
+            "pl-78-2.2"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "W swoim teście Katarzyna Olbrycht podejmuje temat piękna.\nAutorka rozpoczyna rozważania od stwierdzenia, że piękno jest bardzo ważne w życiu każdego człowieka i wyjaśnia, jak rozumiano piękno na przestrzeni wieków.\nW zakończeniu wyraża przekonanie, że piękno jest jedną z najważniejszych wartości, którą należy rozwijać od dzieciństwa.",
+              "ref": {
+                "source": "klucz",
+                "page": 7
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Uczeń otrzymuje 0 punktów, jeśli jego wypowiedź w całości składa się z fragmentów przepisanych z tekstu „Do czego w rozwoju człowieka potrzebne jest piękno?”."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-2.3",
+        "pl-gen-III",
+        "pl-78-2.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 11
+      }
+    },
+    {
+      "id": "pl-2026-06d-11",
+      "sessionId": "polski-2026-06-dodatkowy",
+      "number": 11,
+      "maxPoints": 1,
+      "instruction": "**Na które z poniższych pytań znajdziesz odpowiedź w 2. akapicie tekstu Katarzyny Olbrycht? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [
+        "pl-2026-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-06d-11",
+          "label": "11",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Jakie korzyści przynosi kontakt z pięknem?"
+              },
+              {
+                "id": "B",
+                "text": "Dlaczego człowiek powinien doświadczyć piękna?"
+              },
+              {
+                "id": "C",
+                "text": "Skąd wywodzi się nasz sposób myślenia o pięknie?"
+              },
+              {
+                "id": "D",
+                "text": "Kiedy kontakt z pięknem jest dla człowieka szczególnie ważny?"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "Drugi akapit mówi o tym, że dzisiejsze myślenie o pięknie pochodzi od starożytnych Greków i że oni rozróżniali piękno wysokie i niższe. To odpowiada na pytanie, skąd wywodzi się nasz sposób myślenia o pięknie (C). O korzyściach, o tym, dlaczego warto doświadczać piękna, i o dzieciństwie mowa jest dopiero w dalszych akapitach."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 11
+      }
+    },
+    {
+      "id": "pl-2026-06d-12",
+      "sessionId": "polski-2026-06-dodatkowy",
+      "number": 12,
+      "maxPoints": 1,
+      "instruction": "**Na podstawie tekstu Katarzyny Olbrycht oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "pl-2026-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-06d-12",
+          "label": "12",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Z tekstu wynika, że potrzeba kontaktu z pięknem nie może być realizowana w życiu codziennym."
+              },
+              {
+                "id": "2",
+                "text": "Z tekstu wynika, że człowiek potrzebuje kontaktu z pięknem tylko w dzieciństwie."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "F",
+                "2": "F"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-2.2"
+          ],
+          "explanation": "Pierwsze stwierdzenie jest fałszywe: autorka pisze, że codzienne funkcjonowanie dowodzi niezbędności piękna, i podaje przykład zachwytu astronautów. Drugie też jest fałszywe: doświadczenia piękna są ważne już w dzieciństwie, ale w młodości człowiek szuka go coraz bardziej świadomie, więc potrzeba ta nie ogranicza się do dzieciństwa."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-2.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 11
+      }
+    },
+    {
+      "id": "pl-2026-06d-13",
+      "sessionId": "polski-2026-06-dodatkowy",
+      "number": 13,
+      "maxPoints": 1,
+      "instruction": "**Na podstawie tekstu Katarzyny Olbrycht oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "pl-2026-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-06d-13",
+          "label": "13",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Na pytanie zawarte w tytule autorka udziela odpowiedzi w drugim akapicie tekstu."
+              },
+              {
+                "id": "2",
+                "text": "Motto poprzedzające tekst Katarzyny Olbrycht wskazuje na potrzebę pielęgnowania otaczającego nas piękna."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "F",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "Pierwsze stwierdzenie jest fałszywe, bo już w pierwszym akapicie autorka stawia tezę, że piękno jest niezbędne w rozwoju człowieka, a drugi akapit mówi o tradycji greckiej. Drugie jest prawdziwe: motto mówi, że jest tyle piękna, o które musimy się troszczyć, czyli że trzeba je pielęgnować."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "pl-2026-06d-14",
+      "sessionId": "polski-2026-06-dodatkowy",
+      "number": 14,
+      "maxPoints": 1,
+      "instruction": "**Na podstawie tekstu Katarzyny Olbrycht dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nSformułowanie *piękno jest wartością wyższą* w kontekście akapitu 6. oznacza, że",
+      "stimulusIds": [
+        "pl-2026-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-06d-14",
+          "label": "14",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "człowiek zawsze stawia piękno ponad inne wartości."
+              },
+              {
+                "id": "B",
+                "text": "nie każdy człowiek odczuwa potrzebę kontaktu z pięknem."
+              },
+              {
+                "id": "C",
+                "text": "piękno nie służy praktycznym celom, ale wzbogaca człowieka."
+              },
+              {
+                "id": "D",
+                "text": "kontakt z pięknem jest ważny, a jego brak unieszczęśliwia człowieka."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "W szóstym akapicie autorka pisze, że wartości wyższe, takie jak piękno, nie mogą być traktowane użytecznie, czyli nie mają służyć do czegoś, tylko mają być celem naszych pragnień i dążeń. Dlatego poprawna jest odpowiedź C. W tekście nie ma mowy o tym, że człowiek zawsze stawia piękno na pierwszym miejscu, ani o tym, że brak piękna unieszczęśliwia."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "pl-2026-06d-15",
+      "sessionId": "polski-2026-06-dodatkowy",
+      "number": 15,
+      "maxPoints": 2,
+      "instruction": "**Spośród lektur obowiązkowych – innych niż *W pustyni i w puszczy* – wybierz tę, której bohatera można określić mianem *pięknego człowieka*, nie w sensie urody, ale postawy życiowej. Podaj tytuł tej lektury oraz jej bohatera.**\n\n**Uzasadnij swój wybór. W uzasadnieniu przywołaj sytuację z tej lektury, ilustrującą Twoją argumentację.**\n\n*Uwaga! Lista lektur obowiązkowych znajduje się na stronach 3 i 4 tego arkusza egzaminacyjnego.*\n\nTytuł lektury: ……………………………\n\nBohater lektury: ……………………………\n\nUzasadnienie wyboru: ……………………………",
+      "stimulusIds": [
+        "pl-2026-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-06d-15",
+          "label": "15",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Tytuł lektury: „Kamienie na szaniec”\nBohater lektury: Rudy\nUzasadnienie wyboru: Rudy wyróżniał się piękną postawą życiową. W czasie wojny walczył o ojczyznę i był wierny swoim przekonaniom. Mimo okrutnych tortur nie wydał swoich najlepszych przyjaciół, choć wiedział, że może umrzeć."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "podanie tytułu i bohatera lektury obowiązkowej, poprawne uzasadnienie zilustrowane sytuacją z lektury"
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "podanie tytułu i bohatera lektury obowiązkowej, poprawne uzasadnienie bez zilustrowania sytuacją z lektury"
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi"
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-III",
+            "pl-78-1.4",
+            "pl-gen-I"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "Tytuł lektury: „Kamienie na szaniec”\nBohater lektury: Rudy\nUzasadnienie wyboru: Rudy wyróżniał się piękną postawą życiową. W czasie wojny walczył o ojczyznę i był wierny swoim przekonaniom. Mimo okrutnych tortur nie wydał swoich najlepszych przyjaciół, chocaż wiedział, że może umrzeć.",
+              "ref": {
+                "source": "klucz",
+                "page": 9
+              }
+            }
+          ],
+          "scoringNotes": [
+            "W przypadku, gdy zdający wskaże poprawnie tytuł lektury, nie wskaże bohatera, ale uzasadnienie pozwala go zidentyfikować, otrzymuje maksymalnie 1 punkt.",
+            "W przypadku, gdy zdający nie wskaże tytułu lektury, wskaże poprawnie bohatera i poprawnie uzasadni swój wybór, otrzymuje maksymalnie 1 punkt.",
+            "W przypadku, gdy zdający wskaże poprawnie tytuł lektury i bohatera, ale błędnie uzasadni swój wybór, otrzymuje 0 punktów."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-III",
+        "pl-78-1.4",
+        "pl-gen-I"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "pl-2026-06d-16",
+      "sessionId": "polski-2026-06-dodatkowy",
+      "number": 16,
+      "maxPoints": 1,
+      "instruction": "**Na podstawie tekstu Katarzyny Olbrycht oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "pl-2026-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-06d-16",
+          "label": "16",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "W drugim akapicie tekstu treść zapisana w nawiasach doprecyzowuje znaczenie użytych pojęć."
+              },
+              {
+                "id": "2",
+                "text": "W czwartym akapicie tekstu cudzysłowów użyto, aby wyodrębnić wypowiedzi w mowie niezależnej."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-4.2"
+          ],
+          "explanation": "Oba stwierdzenia są prawdziwe. W drugim akapicie nawiasy wyjaśniają, co oznacza piękno wysokie (duchowe, moralne) i niższe (uchwytne zmysłami). W czwartym akapicie w cudzysłowach zapisano dosłowne słowa astronautów, czyli mowę niezależną."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-4.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 13
+      }
+    },
+    {
+      "id": "pl-2026-06d-17",
+      "sessionId": "polski-2026-06-dodatkowy",
+      "number": 17,
+      "maxPoints": 1,
+      "instruction": "Przeczytaj wybrane definicje wyrazu *wartość*.\n\n1. «to, ile coś jest warte pod względem materialnym; cecha jakiejś rzeczy dająca się wyrazić równoważnikiem pieniężnym lub innym środkiem płatniczym; cena»\n2. «cecha lub zespół cech właściwych danej osobie lub rzeczy, stanowiących o jej walorach (np. moralnych, artystycznych) cennych dla ludzi, mogących zaspokoić jakieś ich potrzeby; ważność, znaczenie kogoś, czegoś»\n\nNa podstawie: *Słownik języka polskiego*, pod red. Mieczysława Szymczaka, Warszawa 1999.\n\n**Dokończ poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nW wypowiedzeniu *Piękno, obok prawdy i dobra, jest wartością wyższą, jedną z trzech wielkich wartości* wyraz *wartość* został użyty w znaczeniu [[A|B]]. W takim samym znaczeniu użyto tego wyrazu w wypowiedzeniu [[C|D]].",
+      "stimulusIds": [
+        "pl-2026-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-06d-17",
+          "label": "17",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "pierwszym"
+              },
+              {
+                "id": "B",
+                "text": "drugim"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "Wartość domu znacznie wzrosła w ciągu ostatnich lat"
+              },
+              {
+                "id": "D",
+                "text": "Ten pisarz stworzył dzieło o nieprzemijającej wartości"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "B",
+                "reason": "D"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-IV",
+            "pl-46-IV.5"
+          ],
+          "explanation": "Piękno, prawda i dobro to wartości w sensie ważnych cech niematerialnych, a nie cena, więc chodzi o znaczenie drugie (B). Tak samo jest w zdaniu „Ten pisarz stworzył dzieło o nieprzemijającej wartości” – chodzi o znaczenie artystyczne dzieła, a nie o jego cenę (D). W zdaniu o wartości domu chodzi o cenę, czyli o znaczenie pierwsze."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-IV",
+        "pl-46-IV.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 13
+      }
+    },
+    {
+      "id": "pl-2026-06d-18",
+      "sessionId": "polski-2026-06-dodatkowy",
+      "number": 18,
+      "maxPoints": 3,
+      "instruction": "**Napisz ogłoszenie o spotkaniu z autorem książki pt. *Piękno jest w nas*. Zachęć do uczestnictwa w tym wydarzeniu, używając dwóch argumentów, z których co najmniej jeden będzie nawiązywał do tematyki spotkania.**\n\n**Uwaga: w ocenie wypowiedzi będzie brana pod uwagę poprawność językowa, ortograficzna i interpunkcyjna.**",
+      "stimulusIds": [
+        "pl-2026-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2026-06d-18",
+          "label": "18",
+          "maxPoints": 3,
+          "response": {
+            "type": "extended_text"
+          },
+          "key": {},
+          "scoring": {
+            "type": "rubric",
+            "rubrics": [
+              {
+                "topic": null,
+                "rubricId": "pl-2026-06d-18-t1"
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-4.1",
+            "pl-gen-III",
+            "pl-46-2.1"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "Informujemy uczniów klas VII i VIII, że 22 czerwca 2026 r. o godzinie 12:00 w czytelni naszej szkoły odbędzie się spotkanie z autorem książki pt. „Piękno jest w nas”. Pisarz opowie o kulisach powstania tej publikacji. Spotkanie zakończy się zadawaniem pytań skierowanych do autora książki.\nSamorząd Uczniowski Szkoły Podstawowej w Wesołej",
+              "ref": {
+                "source": "klucz",
+                "page": 10
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Jeżeli uczeń uwzględnia 5 elementów ogłoszenia, a podaje tylko jeden argument, w kryterium „Treść i forma” otrzymuje 1 punkt.",
+            "Jeżeli uczeń uwzględnia 5 elementów ogłoszenia i podaje dwa argumenty, ale żaden z nich nie nawiązuje do tematyki spotkania, w kryterium „Treść i forma” otrzymuje 1 punkt.",
+            "Kategorie „Treść i forma” oraz „Poprawność językowa, ortograficzna i interpunkcyjna” oceniamy rozłącznie."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-4.1",
+        "pl-gen-III",
+        "pl-46-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "pl-2026-06d-19",
+      "sessionId": "polski-2026-06-dodatkowy",
+      "number": 19,
+      "maxPoints": 20,
+      "instruction": "Wybierz **jeden** z podanych tematów i napisz wypracowanie.\n\n- Pamiętaj o zachowaniu formy wypowiedzi wskazanej w temacie: napisz **przemówienie** albo **opowiadanie**.\n- W wypracowaniu odwołaj się do wybranej lektury obowiązkowej. Lista lektur obowiązkowych znajduje się na stronach 3 i 4 tego arkusza egzaminacyjnego.\n- Innym utworem literackim w przemówieniu może być także lektura obowiązkowa.\n- Twoja praca powinna liczyć co najmniej **200 wyrazów**.\n- Zapisz wypracowanie w wyznaczonym miejscu. Nie pisz na marginesie.\n- Pisz czytelnie.\n- Pamiętaj, że zabronione jest pisanie wypowiedzi obraźliwych, wulgarnych lub propagujących postępowanie niezgodne z prawem albo wypowiedzi aprobujących nieetyczne postępowanie bohatera.\n\n**Temat 1.**\nNapisz **przemówienie**, w którym przekonasz rówieśników, że warto dążyć do poznawania czegoś nowego. W argumentacji odwołaj się do wybranej lektury obowiązkowej oraz do innego utworu literackiego.\n\n**Temat 2.**\n*Pomogłeś mi odkryć, jakie to ważne.* Napisz **opowiadanie** o przeżytej z bohaterem wybranej lektury obowiązkowej przygodzie, dzięki której zrozumiałeś, co naprawdę cenisz. Wypracowanie powinno dowodzić, że dobrze znasz wybraną lekturę obowiązkową.",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "pl-2026-06d-19",
+          "label": "19",
+          "maxPoints": 20,
+          "response": {
+            "type": "extended_text",
+            "minWords": 200,
+            "topics": [
+              {
+                "id": "1",
+                "text": "Napisz **przemówienie**, w którym przekonasz rówieśników, że warto dążyć do poznawania czegoś nowego. W argumentacji odwołaj się do wybranej lektury obowiązkowej oraz do innego utworu literackiego.",
+                "form": "przemówienie"
+              },
+              {
+                "id": "2",
+                "text": "*Pomogłeś mi odkryć, jakie to ważne.* Napisz **opowiadanie** o przeżytej z bohaterem wybranej lektury obowiązkowej przygodzie, dzięki której zrozumiałeś, co naprawdę cenisz. Wypracowanie powinno dowodzić, że dobrze znasz wybraną lekturę obowiązkową.",
+                "form": "opowiadanie"
+              }
+            ]
+          },
+          "key": {},
+          "scoring": {
+            "type": "rubric",
+            "rubrics": [
+              {
+                "topic": "1",
+                "rubricId": "pl-2026-06d-19-t1"
+              },
+              {
+                "topic": "2",
+                "rubricId": "pl-2026-06d-19-t2"
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-1.7",
+            "pl-gen-II",
+            "pl-46-4.1",
+            "pl-78-3.2",
+            "pl-gen-III",
+            "pl-78-1.1",
+            "pl-78-2.1",
+            "pl-46-2.1"
+          ],
+          "scoringNotes": [
+            "Jeżeli wypowiedź w całości jest nie na temat, egzaminator oceni ją na 0 punktów. Nie sprawdza i nie zaznacza żadnych błędów w pracy. Egzaminator umieszcza dopisek – „Praca nie na temat”.",
+            "Jeżeli w wypowiedzi uczeń w ogóle nie odwołał się do treści lektury obowiązkowej wskazanej w poleceniu, za całą wypowiedź egzaminator przyzna 0 punktów.",
+            "Jeżeli wypowiedź jest nieczytelna, egzaminator oceni ją na 0 punktów.",
+            "Jeżeli wypowiedź nie zawiera w ogóle rozwinięcia (np. uczeń napisał tylko wstęp), egzaminator przyzna 0 punktów w każdym kryterium.",
+            "Funkcjonalność wykorzystania w wypracowaniu utworu literackiego nie oznacza konieczności omówienia przez zdającego wszystkich elementów fabuły, sensów utworu istotnych (z punktu widzenia egzaminatora) ze względu na zagadnienie sformułowane w temacie. Należy jednak pamiętać, że samo przywołanie imienia bohatera literackiego nie jest funkcjonalnym wykorzystaniem utworu.",
+            "Za utwór literacki w wypracowaniu nie uznaje się: powieści obrazkowej, mangi, scenariusza filmowego, gry komputerowej.",
+            "Jeżeli wypowiedź zawiera 180 wyrazów lub mniej, jest oceniana wyłącznie w kryteriach: Realizacja tematu wypowiedzi, Elementy twórcze / Elementy retoryczne oraz Kompetencje literackie i kulturowe. W pozostałych kryteriach egzaminator przyzna 0 punktów. Uwaga. Liczone są wszystkie wyrazy: samodzielne i niesamodzielne.",
+            "Jeżeli wypowiedź jest napisana niesamodzielnie, np. zawiera fragmenty odtworzone z podręcznika, zadania zawartego w arkuszu egzaminacyjnym lub innego źródła, w tym internetowego, lub jest przepisana od innego ucznia, wówczas egzamin z języka polskiego, w przypadku takiego ucznia, zostanie unieważniony.",
+            "W ocenie wypowiedzi uczniów, którym przyznano dostosowanie warunków przeprowadzania egzaminu, stosuje się szczegółowe zasady oceniania rozwiązań zadań otwartych z języka polskiego uwzględniające specyficzne trudności w uczeniu się.",
+            "Zabronione jest pisanie wypowiedzi obraźliwych, wulgarnych lub propagujących postępowanie niezgodne z prawem albo wypowiedzi aprobujących nieetyczne postępowanie bohatera. W przypadku takich wypowiedzi zostanie podjęta indywidualna decyzja dotycząca danej pracy, np. nie zostaną przyznane punkty za styl i język lub cała wypowiedź nie będzie podlegała ocenie.",
+            "Temat 1: argumentowanie nie polega na streszczaniu utworów. Argumentacja musi być zgodna z poleceniem, wybraną lekturą obowiązkową oraz innym utworem literackim (może to być inna lektura obowiązkowa).",
+            "Temat 1, forma: wypracowanie musi zawierać cechy charakterystyczne przemówienia: a) bezpośredni zwrot do adresata, b) retoryczne środki językowe, np. pytanie retoryczne, powtórzenie, porównanie, słownictwo wartościujące, c) czasowniki w trybie rozkazującym, d) czasowniki w 1. i 2. osobie l. mn. służące podtrzymaniu kontaktu z odbiorcami lub pełniące funkcję perswazyjną, e) zaimki odnoszące się do 1. i 2. osoby l. mn. służące podtrzymaniu kontaktu z odbiorcami lub pełniące funkcję perswazyjną, f) zjednywanie przychylności odbiorców, np. podkreślenie ich znaczenia, kompetencji itp. 2 pkt w kryterium Realizacja tematu: bezpośredni zwrot do adresata oraz przynajmniej dwie różne cechy spośród b)–f), każda potwierdzona przynajmniej jeden raz; wszystkie pozostałe elementy polecenia uwzględnione; wypowiedź w całości dotyczy problemu wskazanego w poleceniu. 1 pkt: bezpośredni zwrot do adresata oraz przynajmniej jedna cecha spośród b)–f), ALBO dwie różne cechy spośród b)–f) bez bezpośredniego zwrotu do adresata, ALBO tylko bezpośredni zwrot do adresata; nieuwzględniony jeden element polecenia (inny niż forma) ORAZ/LUB fragmenty niedotyczące problemu wskazanego w poleceniu.",
+            "Temat 2: w opowiadaniu uwzględnione są następujące elementy: przygoda z bohaterem wybranej lektury obowiązkowej, uwzględnione zrozumienie, co naprawdę cenisz. Opowiadanie ma charakter twórczy, nie może być streszczeniem wybranej lektury obowiązkowej.",
+            "Jeżeli za wypowiedź przyznano 0 pkt w kryterium Realizacja tematu wypowiedzi, we wszystkich pozostałych kryteriach przyznaje się 0 pkt.",
+            "Oceniając język wypowiedzi, należy najpierw ocenić zakres użytych środków językowych, a następnie – ich poprawność. Ostateczną liczbę punktów ustala się na podstawie oceny obu tych aspektów wypowiedzi. Przykładowo, za wypowiedź, w której uczeń użył zadowalającego zakresu środków językowych i popełnił 6 błędów językowych, egzaminator przyzna 2 pkt w tym kryterium.",
+            "Uczniowie ze specyficznymi trudnościami w uczeniu się: za błędy ortograficzne uznaje się błędy w zapisie wyrazów z u – ó, ż – rz, h – ch oraz łamanie zasady pisania wielką literą na początku zdania; innych błędów w zapisie (np. dodawania, opuszczania, przestawiania liter, mylenia liter o podobnym kształcie, błędów dotyczących podziału wyrazu lub dźwięczności) nie liczy się jako błędów ortograficznych."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-1.7",
+        "pl-gen-II",
+        "pl-46-4.1",
+        "pl-78-3.2",
+        "pl-gen-III",
+        "pl-78-1.1",
+        "pl-78-2.1",
+        "pl-46-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 15
+      }
+    }
+  ],
+  "rubrics": [
+    {
+      "id": "pl-2026-06d-18-t1",
+      "maxPoints": 3,
+      "criteria": [
+        {
+          "id": "tresc",
+          "name": "Treść i forma",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Treść zgodna z poleceniem, uwzględnione 2 argumenty, z których co najmniej jeden nawiązuje do tematyki spotkania; uwzględnionych 5 elementów dotyczących formy: kto ogłasza? komu ogłasza? co ogłasza? kiedy się odbywa? gdzie się odbywa?"
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Treść zgodna z poleceniem, uwzględnione 2 argumenty, z których co najmniej jeden nawiązuje do tematyki spotkania; uwzględnione 4 elementy dotyczące formy: kto ogłasza? ORAZ/ALBO komu ogłasza? ORAZ/ALBO co ogłasza? ORAZ/ALBO kiedy się odbywa? ORAZ/ALBO gdzie się odbywa?"
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Treść niezgodna z poleceniem ALBO treść zgodna z poleceniem, ale uwzględnione tylko 3 elementy dotyczące formy: kto ogłasza? ORAZ/ALBO komu ogłasza? ORAZ/ALBO co ogłasza? ORAZ/ALBO kiedy się odbywa? ORAZ/ALBO gdzie się odbywa?"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "poprawnosc",
+          "name": "Poprawność językowa, ortograficzna i interpunkcyjna",
+          "type": "error_count",
+          "max": 1,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 2,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 3,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        }
+      ],
+      "gates": []
+    },
+    {
+      "id": "pl-2026-06d-19-t1",
+      "maxPoints": 20,
+      "criteria": [
+        {
+          "id": "realizacja",
+          "name": "Realizacja tematu wypowiedzi",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu. Wszystkie pozostałe elementy polecenia uwzględnione. Wypowiedź w całości dotyczy problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu. Nieuwzględniony jeden element polecenia (inny niż forma). ORAZ/LUB W pracy występują fragmenty niedotyczące problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Forma wypowiedzi niezgodna z formą wskazaną w poleceniu. ALBO Nieuwzględnione co najmniej dwa elementy polecenia (inne niż forma)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "retoryczne",
+          "name": "Elementy retoryczne",
+          "type": "levels",
+          "max": 5,
+          "levels": [
+            {
+              "points": 5,
+              "paths": [
+                "Pogłębiona argumentacja. Argumenty odwołujące się np. do faktów, logiki, emocji, zilustrowane odpowiednimi przykładami ORAZ/LUB wykorzystanie przykładów w funkcji argumentacyjnej. Argumenty/przykłady uporządkowane, np. zhierarchizowane."
+              ]
+            },
+            {
+              "points": 4,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 3 pkt i niektóre na 5 pkt."
+              ]
+            },
+            {
+              "points": 3,
+              "paths": [
+                "Powierzchowna argumentacja; w wypowiedzi brak wnikliwości. Niektóre argumenty zilustrowane odpowiednimi przykładami ORAZ/LUB wykorzystanie przykładów w funkcji argumentacyjnej. Argumenty/przykłady częściowo uporządkowane."
+              ]
+            },
+            {
+              "points": 2,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 1 pkt i niektóre na 3 pkt."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Podjęta próba argumentowania. Ograniczenie do wyliczenia powierzchownie omówionych przykładów, powiązanych z problemem określonym w temacie."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompetencje",
+          "name": "Kompetencje literackie i kulturowe",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). Poprawność rzeczowa."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). ALBO Częściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). ALBO Częściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). Dopuszczalne 1–2 błędy rzeczowe."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompozycja",
+          "name": "Kompozycja tekstu",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi. Graficznie wyodrębnione akapity. Dopuszczalna 1 usterka w zakresie spójności ALBO logiki wypowiedzi, ALBO podziału wypowiedzi na funkcjonalne akapity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi. Graficznie wyodrębnione akapity. Dopuszczalne łącznie 2–3 usterki w zakresie spójności ORAZ/ALBO logiki wypowiedzi."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "styl",
+          "name": "Styl",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Odpowiedni do treści i formy wypowiedzi. Jednolity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Sporadyczne usterki w odpowiedniości ORAZ/LUB jednolitości stylu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia wymagań określonych na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jezyk",
+          "name": "Język",
+          "type": "matrix",
+          "max": 4,
+          "rows": "zakres środków językowych",
+          "cols": "liczba błędów językowych",
+          "table": {
+            "Szeroki zakres środków językowych (zróżnicowana składnia i leksyka, np. bogata frazeologia, precyzyjne słownictwo, umożliwiające pełną i swobodną realizację tematu)": {
+              "nie więcej niż 4 błędy językowe": 4,
+              "5–7 błędów językowych": 3,
+              "8–10 błędów językowych": 2,
+              "11–13 błędów językowych": 1,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Zadowalający zakres środków językowych (składnia i leksyka stosowne/odpowiednie do realizacji tematu)": {
+              "nie więcej niż 4 błędy językowe": 3,
+              "5–7 błędów językowych": 2,
+              "8–10 błędów językowych": 1,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Wąski zakres środków językowych (składnia i leksyka proste/ograniczone, utrudniające realizację tematu)": {
+              "nie więcej niż 4 błędy językowe": 2,
+              "5–7 błędów językowych": 1,
+              "8–10 błędów językowych": 0,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            }
+          }
+        },
+        {
+          "id": "ortografia",
+          "name": "Ortografia",
+          "type": "error_count",
+          "max": 2,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 1,
+                "points": 2
+              },
+              {
+                "maxErrors": 3,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 3,
+                "points": 2
+              },
+              {
+                "maxErrors": 6,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "interpunkcja",
+          "name": "Interpunkcja",
+          "type": "error_count",
+          "max": 1,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 9,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 11,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        }
+      ],
+      "gates": [
+        {
+          "ifCriterion": "realizacja",
+          "equals": 0,
+          "thenAllOthers": 0
+        }
+      ]
+    },
+    {
+      "id": "pl-2026-06d-19-t2",
+      "maxPoints": 20,
+      "criteria": [
+        {
+          "id": "realizacja",
+          "name": "Realizacja tematu wypowiedzi",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu. Wszystkie pozostałe elementy polecenia uwzględnione. Wypowiedź w całości dotyczy problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu. Nieuwzględniony jeden element polecenia (inny niż forma). ORAZ/LUB W pracy występują fragmenty niedotyczące problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Forma wypowiedzi niezgodna z formą wskazaną w poleceniu. ALBO Nieuwzględnione co najmniej dwa elementy polecenia (inne niż forma)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tworcze",
+          "name": "Elementy twórcze",
+          "type": "levels",
+          "max": 5,
+          "levels": [
+            {
+              "points": 5,
+              "paths": [
+                "Funkcjonalna narracja. Logiczny układ zdarzeń. Urozmaicona fabuła, w tym funkcjonalne wykorzystanie co najmniej 6 spośród następujących elementów: opis, charakterystyka bohatera, czas akcji, miejsce akcji, zwrot akcji, puenta, punkt kulminacyjny, dialog, monolog, retrospekcja. Twórcze wykorzystanie treści lektury."
+              ]
+            },
+            {
+              "points": 4,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 3 pkt i niektóre na 5 pkt."
+              ]
+            },
+            {
+              "points": 3,
+              "paths": [
+                "Funkcjonalna narracja. Logiczny układ zdarzeń. Prosta fabuła, w tym funkcjonalne wykorzystanie co najmniej 4 spośród następujących elementów: opis, charakterystyka bohatera, czas akcji, miejsce akcji, zwrot akcji, puenta, punkt kulminacyjny, dialog, monolog, retrospekcja."
+              ]
+            },
+            {
+              "points": 2,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 1 pkt i niektóre na 3 pkt."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Narracja częściowo funkcjonalna. Dopuszczalne usterki w logicznym układzie zdarzeń. Prosta fabuła."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompetencje",
+          "name": "Kompetencje literackie i kulturowe",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). Poprawność rzeczowa."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). ALBO Częściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). ALBO Częściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). Dopuszczalne 1–2 błędy rzeczowe."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompozycja",
+          "name": "Kompozycja tekstu",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi. Graficznie wyodrębnione akapity. Dopuszczalna 1 usterka w zakresie spójności ALBO logiki wypowiedzi, ALBO podziału wypowiedzi na funkcjonalne akapity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi. Graficznie wyodrębnione akapity. Dopuszczalne łącznie 2–3 usterki w zakresie spójności ORAZ/ALBO logiki wypowiedzi."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "styl",
+          "name": "Styl",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Odpowiedni do treści i formy wypowiedzi. Jednolity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Sporadyczne usterki w odpowiedniości ORAZ/LUB jednolitości stylu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia wymagań określonych na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jezyk",
+          "name": "Język",
+          "type": "matrix",
+          "max": 4,
+          "rows": "zakres środków językowych",
+          "cols": "liczba błędów językowych",
+          "table": {
+            "Szeroki zakres środków językowych (zróżnicowana składnia i leksyka, np. bogata frazeologia, precyzyjne słownictwo, umożliwiające pełną i swobodną realizację tematu)": {
+              "nie więcej niż 4 błędy językowe": 4,
+              "5–7 błędów językowych": 3,
+              "8–10 błędów językowych": 2,
+              "11–13 błędów językowych": 1,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Zadowalający zakres środków językowych (składnia i leksyka stosowne/odpowiednie do realizacji tematu)": {
+              "nie więcej niż 4 błędy językowe": 3,
+              "5–7 błędów językowych": 2,
+              "8–10 błędów językowych": 1,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Wąski zakres środków językowych (składnia i leksyka proste/ograniczone, utrudniające realizację tematu)": {
+              "nie więcej niż 4 błędy językowe": 2,
+              "5–7 błędów językowych": 1,
+              "8–10 błędów językowych": 0,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            }
+          }
+        },
+        {
+          "id": "ortografia",
+          "name": "Ortografia",
+          "type": "error_count",
+          "max": 2,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 1,
+                "points": 2
+              },
+              {
+                "maxErrors": 3,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 3,
+                "points": 2
+              },
+              {
+                "maxErrors": 6,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "interpunkcja",
+          "name": "Interpunkcja",
+          "type": "error_count",
+          "max": 1,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 9,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 11,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        }
+      ],
+      "gates": [
+        {
+          "ifCriterion": "realizacja",
+          "equals": 0,
+          "thenAllOthers": 0
+        }
+      ]
+    }
+  ],
+  "audio": []
+}

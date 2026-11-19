@@ -26,4 +26,10 @@ describe("renderRich", () => {
     expect(html).not.toMatch(/<script|<img src=x|href="javascript/);
     expect(html).toContain("&lt;script&gt;");
   });
+
+  it("drops redundant [[P|F]] markers and renders <u> underlines safely", () => {
+    expect(renderRich("Liczba jest parzysta. [[P|F]]", ctx, true)).toBe("Liczba jest parzysta.");
+    expect(renderRich("To <u>serdeczne</u> chłopczysko.", ctx, true)).toContain("<u>serdeczne</u>");
+    expect(renderRich('<u onclick="x">a</u> <u><b>b</b></u>', ctx, true)).not.toMatch(/<u onclick|<b>/);
+  });
 });

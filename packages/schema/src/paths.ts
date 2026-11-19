@@ -34,6 +34,6 @@ export function parseSessionFolder(folder: string): { year: number; month: numbe
   return { year: Number(m[2]), month: idx + 1 };
 }
 
-export function sessionId(subject: SubjectId, year: number, month: number, term: "glowny" | "dodatkowy" = "glowny"): string {
+export function sessionId(subject: SubjectId, year: number, month: number, term: "glowny" | "dodatkowy" | "probny" = "glowny"): string {
   return `${subject}-${year}-${String(month).padStart(2, "0")}-${term}`;
 }

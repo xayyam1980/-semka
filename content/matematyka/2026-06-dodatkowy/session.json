@@ -1,0 +1,1550 @@
+{
+  "session": {
+    "id": "matematyka-2026-06-dodatkowy",
+    "subjectId": "matematyka",
+    "year": 2026,
+    "month": 6,
+    "term": "dodatkowy",
+    "formCode": "OMAP-100",
+    "versions": [
+      "X"
+    ],
+    "maxPoints": 30,
+    "taskOrder": [
+      "ma-2026-06d-01",
+      "ma-2026-06d-02",
+      "ma-2026-06d-03",
+      "ma-2026-06d-04",
+      "ma-2026-06d-05",
+      "ma-2026-06d-06",
+      "ma-2026-06d-07",
+      "ma-2026-06d-08",
+      "ma-2026-06d-09",
+      "ma-2026-06d-10",
+      "ma-2026-06d-11",
+      "ma-2026-06d-12",
+      "ma-2026-06d-13",
+      "ma-2026-06d-14",
+      "ma-2026-06d-15",
+      "ma-2026-06d-16",
+      "ma-2026-06d-17",
+      "ma-2026-06d-18",
+      "ma-2026-06d-19",
+      "ma-2026-06d-20"
+    ],
+    "sources": [
+      {
+        "kind": "klucz",
+        "path": "Matematyka/Additional/Czerwiec 2026/matematyka-2026-czerwiec-egzamin-osmoklasisty-dodatkowy-odpowiedzi.pdf",
+        "sha256": "49393d2f886041b7694bf3c34619aef7b6a2875e244b719e89c8f017accd6666",
+        "pages": 25
+      },
+      {
+        "kind": "arkusz",
+        "path": "Matematyka/Additional/Czerwiec 2026/matematyka-2026-czerwiec-egzamin-osmoklasisty-dodatkowy.pdf",
+        "sha256": "8b4ddd8063f867d359112e320ec7fbbf7716c36bca35e831c10ac66a3c230eff",
+        "pages": 24
+      }
+    ],
+    "contentVersion": "333077eebd16d902",
+    "status": "published"
+  },
+  "stimuli": [
+    {
+      "id": "ma-2026-06d-01-fig1",
+      "kind": "figure",
+      "title": "Diagram słupkowy przedstawiający liczbę finalistów konkursów przedmiotowych w kolejnych latach: 2018 – 10, 2019 – 8, 2020 – 0, 2021 – 4, 2022 – 12, 2023 – 5.",
+      "asset": "assets/ma-2026-06d-01-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2026-06d-12-fig1",
+      "kind": "figure",
+      "title": "Rysunek równoległoboku $ABCD$ z przekątną $BD$; bok $AD$ oznaczony długością $6$, przekątna $BD$ oznaczona długością $8$, a kąt między bokiem $AD$ i przekątną $BD$ przy wierzchołku $D$ zaznaczony jako prosty.",
+      "asset": "assets/ma-2026-06d-12-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2026-06d-13-fig1",
+      "kind": "figure",
+      "title": "Figura S z ośmiu patyczków: kwadrat o wierzchołkach F i E u góry oraz B i C u dołu, z przystawionymi po bokach trójkątami o wierzchołkach A (po lewej) i D (po prawej).",
+      "asset": "assets/ma-2026-06d-13-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2026-06d-14-fig1",
+      "kind": "figure",
+      "title": "Siatka sześcianu złożona z sześciu jednakowych kwadratów obróconych o 45 stopni, ułożonych w zygzakowaty pas (trzy kwadraty w górnym i trzy w dolnym rzędzie).",
+      "asset": "assets/ma-2026-06d-14-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2026-06d-17-fig1",
+      "kind": "figure",
+      "title": "Dwie ramki: Szampon Pięć ziół, pojemność butelki 500 ml, drugi taki sam produkt o 40% taniej; Szampon Pięć ziół, pojemność butelki 250 ml, czwarty taki sam produkt za 1 zł.",
+      "asset": "assets/ma-2026-06d-17-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 20
+      }
+    },
+    {
+      "id": "ma-2026-06d-18-fig1",
+      "kind": "figure",
+      "title": "Proste równoległe k i l; na k punkty C i E, na l punkty D, A, B; odcinek CD prostopadły do obu prostych; odcinki CA i CB; kąt ACD ma 40°, kąt ECB ma 26°.",
+      "asset": "assets/ma-2026-06d-18-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 21
+      }
+    },
+    {
+      "id": "ma-2026-06d-19-fig1",
+      "kind": "figure",
+      "title": "Trapez prostokątny ABCD z dłuższą podstawą AB na dole, krótszą CD u góry, prostopadłym bokiem BC = 8 cm i kątem DAB = 45°.",
+      "asset": "assets/ma-2026-06d-19-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 22
+      }
+    },
+    {
+      "id": "ma-2026-06d-20-fig1",
+      "kind": "figure",
+      "title": "Graniastosłup prosty o podstawie trójkąta prostokątnego (kąt prosty zaznaczony przy dolnej podstawie).",
+      "asset": "assets/ma-2026-06d-20-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 23
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "ma-2026-06d-01",
+      "sessionId": "matematyka-2026-06-dodatkowy",
+      "number": 1,
+      "maxPoints": 1,
+      "instruction": "Na stronie internetowej szkoły zamieszczono diagram słupkowy przedstawiający liczbę finalistów konkursów przedmiotowych z sześciu kolejnych lat.\n\n![Diagram słupkowy przedstawiający liczbę finalistów konkursów przedmiotowych w kolejnych latach: 2018 – 10, 2019 – 8, 2020 – 0, 2021 – 4, 2022 – 12, 2023 – 5.](stimulus:ma-2026-06d-01-fig1)\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nŚrednia roczna liczba finalistów w okresie tych sześciu lat była równa",
+      "stimulusIds": [
+        "ma-2026-06d-01-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-06d-01",
+          "label": "1",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$6{,}5$"
+              },
+              {
+                "id": "B",
+                "text": "$7$"
+              },
+              {
+                "id": "C",
+                "text": "$7{,}8$"
+              },
+              {
+                "id": "D",
+                "text": "$8$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-78-XIII.1"
+          ],
+          "explanation": "Z diagramu słupkowego odczytujemy liczby finalistów w kolejnych latach: 10, 8, 0, 4, 12 i 5 (w 2020 roku nie było finalistów, więc słupka brak). Suma tych liczb wynosi $10+8+0+4+12+5=39$, a średnia z sześciu lat to $39 : 6 = 6{,}5$. Dlatego poprawna jest odpowiedź A."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-78-XIII.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2026-06d-02",
+      "sessionId": "matematyka-2026-06-dodatkowy",
+      "number": 2,
+      "maxPoints": 1,
+      "instruction": "Kwotę 1 800 złotych przeznaczoną na nagrody w pewnym konkursie podzielono na trzy części w stosunku $6 : 3 : 1$, odpowiednio: za I, za II i za III miejsce.\n\n**Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nWartość nagrody za III miejsce jest równa [[A|B]].\n\nWartość nagrody za I miejsce jest [[C|D]] razy większa od wartości nagrody za II miejsce.",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-06d-02",
+          "label": "2",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "180 złotych"
+              },
+              {
+                "id": "B",
+                "text": "200 złotych"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "3"
+              },
+              {
+                "id": "D",
+                "text": "2"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "A",
+                "reason": "D"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-78-VII.3"
+          ],
+          "explanation": "Suma wszystkich części stosunku wynosi $6 + 3 + 1 = 10$, więc jedna część to $1800 : 10 = 180$ złotych i tyle wynosi nagroda za III miejsce (odpowiedź A). Nagroda za I miejsce to $6 \\cdot 180 = 1080$ złotych, a za II miejsce $3 \\cdot 180 = 540$ złotych. Ponieważ $1080 : 540 = 2$, nagroda za I miejsce jest 2 razy większa od nagrody za II miejsce (odpowiedź D)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-78-VII.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2026-06d-03",
+      "sessionId": "matematyka-2026-06-dodatkowy",
+      "number": 3,
+      "maxPoints": 1,
+      "instruction": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nRozwiązaniem równania $3(x + 2) = 6 - (x - 1)$ jest liczba",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-06d-03",
+          "label": "3",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$-\\frac{3}{2}$"
+              },
+              {
+                "id": "B",
+                "text": "$-1$"
+              },
+              {
+                "id": "C",
+                "text": "$\\frac{1}{4}$"
+              },
+              {
+                "id": "D",
+                "text": "$\\frac{1}{2}$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-VI.2"
+          ],
+          "explanation": "Po wymnożeniu nawiasów otrzymujemy $3x + 6 = 6 - x + 1$, czyli $3x + 6 = 7 - x$. Dodając obustronnie $x$ i odejmując $6$, dostajemy $4x = 1$, więc $x = \\frac{1}{4}$. Dlatego poprawna jest odpowiedź C."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-VI.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2026-06d-04",
+      "sessionId": "matematyka-2026-06-dodatkowy",
+      "number": 4,
+      "maxPoints": 1,
+      "instruction": "W tabeli zapisano cztery wyrażenia arytmetyczne:\n\n| I | $2^{24} : 2$ |\n|---|---|\n| II | $4^{12} \\cdot 4$ |\n| III | $2^{25} : 8$ |\n| IV | $(4 \\cdot 8)^4$ |\n\n**Które z tych wyrażeń ma największą wartość? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-06d-04",
+          "label": "4",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "I"
+              },
+              {
+                "id": "B",
+                "text": "II"
+              },
+              {
+                "id": "C",
+                "text": "III"
+              },
+              {
+                "id": "D",
+                "text": "IV"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-I.2"
+          ],
+          "explanation": "Sprowadzamy wszystkie wyrażenia do potęg o podstawie 2: I = $2^{24} : 2 = 2^{23}$, II = $4^{12} \\cdot 4 = 2^{24} \\cdot 2^2 = 2^{26}$, III = $2^{25} : 8 = 2^{25} : 2^3 = 2^{22}$, IV = $(4 \\cdot 8)^4 = 32^4 = (2^5)^4 = 2^{20}$. Przy tej samej podstawie 2 największą wartość ma potęga o największym wykładniku, czyli wyrażenie II ($2^{26}$)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-I.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2026-06d-05",
+      "sessionId": "matematyka-2026-06-dodatkowy",
+      "number": 5,
+      "maxPoints": 1,
+      "instruction": "W pewnej liczbie czterocyfrowej suma cyfr jest równa $3$.\n\n**Ile jest liczb czterocyfrowych spełniających ten warunek? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-06d-05",
+          "label": "5",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$3$"
+              },
+              {
+                "id": "B",
+                "text": "$6$"
+              },
+              {
+                "id": "C",
+                "text": "$9$"
+              },
+              {
+                "id": "D",
+                "text": "$10$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-46-I.1",
+            "ma-78-XII.1"
+          ],
+          "explanation": "Szukamy liczb czterocyfrowych, których suma cyfr wynosi $3$. Pierwsza cyfra musi być co najmniej $1$, więc wypisujemy wszystkie możliwości: $3000$, $2100$, $2010$, $2001$, $1200$, $1020$, $1002$, $1110$, $1101$, $1011$. Jest ich dokładnie $10$, dlatego poprawna jest odpowiedź D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-46-I.1",
+        "ma-78-XII.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2026-06d-06",
+      "sessionId": "matematyka-2026-06-dodatkowy",
+      "number": 6,
+      "maxPoints": 1,
+      "instruction": "Dane jest wyrażenie arytmetyczne\n\n$\\frac{\\sqrt{100}-\\sqrt{36}}{\\sqrt[3]{-8}}$\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nWartość podanego wyrażenia jest równa",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-06d-06",
+          "label": "6",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$4$"
+              },
+              {
+                "id": "B",
+                "text": "$2$"
+              },
+              {
+                "id": "C",
+                "text": "$-2$"
+              },
+              {
+                "id": "D",
+                "text": "$-4$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-78-II.1"
+          ],
+          "explanation": "Obliczamy osobno licznik i mianownik. $\\sqrt{100}=10$ oraz $\\sqrt{36}=6$, więc licznik wynosi $10-6=4$. Pierwiastek sześcienny z $-8$ to $-2$, ponieważ $(-2)^3=-8$. Zatem wartość wyrażenia to $\\frac{4}{-2}=-2$, czyli odpowiedź C."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-78-II.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2026-06d-07",
+      "sessionId": "matematyka-2026-06-dodatkowy",
+      "number": 7,
+      "maxPoints": 1,
+      "instruction": "Trzy kolejne liczby naturalne można zapisać w postaci: $n$, $(n + 1)$, $(n + 2)$.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nSuma każdych trzech kolejnych liczb naturalnych jest liczbą podzielną przez",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-06d-07",
+          "label": "7",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "2"
+              },
+              {
+                "id": "B",
+                "text": "3"
+              },
+              {
+                "id": "C",
+                "text": "5"
+              },
+              {
+                "id": "D",
+                "text": "6"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-46-II.6",
+            "ma-78-III.1"
+          ],
+          "explanation": "Sumę trzech kolejnych liczb naturalnych zapisujemy jako $n + (n + 1) + (n + 2) = 3n + 3 = 3(n + 1)$. Otrzymany wynik jest iloczynem liczby 3 i liczby naturalnej $(n + 1)$, więc zawsze dzieli się przez 3. Przez 2, 5 ani 6 nie musi się dzielić (np. dla $n = 0$ suma wynosi $0 + 1 + 2 = 3$), dlatego poprawna jest odpowiedź B."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-46-II.6",
+        "ma-78-III.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2026-06d-08",
+      "sessionId": "matematyka-2026-06-dodatkowy",
+      "number": 8,
+      "maxPoints": 1,
+      "instruction": "Poniżej przedstawiono kalendarz na kwiecień w pewnym roku.\n\nKWIECIEŃ\n\n| Poniedziałek | Wtorek | Środa | Czwartek | Piątek | Sobota | Niedziela |\n|---|---|---|---|---|---|---|\n| 1 | 2 | 3 | 4 | 5 | 6 | 7 |\n| 8 | 9 | 10 | 11 | 12 | 13 | 14 |\n| 15 | 16 | 17 | 18 | 19 | 20 | 21 |\n| 22 | 23 | 24 | 25 | 26 | 27 | 28 |\n| 29 | 30 |  |  |  |  |  |\n\nWybieramy losowo jeden dzień tego miesiąca.\n\n**Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nPrawdopodobieństwo, że wybrany dzień tego miesiąca to wtorek, jest równe [[A|B]].\n\nPrawdopodobieństwo, że numer wybranego dnia tego miesiąca będzie liczbą podzielną przez [[C|D]], jest równe $\\frac{2}{15}$.",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-06d-08",
+          "label": "8",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "$\\frac{1}{5}$"
+              },
+              {
+                "id": "B",
+                "text": "$\\frac{1}{6}$"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "4"
+              },
+              {
+                "id": "D",
+                "text": "7"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "B",
+                "reason": "D"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-XII.2"
+          ],
+          "explanation": "Kwiecień ma 30 dni, a wtorki to 2, 9, 16, 23 i 30 dnia miesiąca, czyli 5 dni, więc prawdopodobieństwo wylosowania wtorku wynosi $\\frac{5}{30}=\\frac{1}{6}$ (odpowiedź B). Prawdopodobieństwo $\\frac{2}{15}=\\frac{4}{30}$ oznacza, że szukanych dni jest 4. Wśród liczb od 1 do 30 dokładnie cztery dzielą się przez 7 (7, 14, 21, 28), natomiast przez 4 dzieli się siedem liczb, dlatego druga luka to odpowiedź D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-XII.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2026-06d-09",
+      "sessionId": "matematyka-2026-06-dodatkowy",
+      "number": 9,
+      "maxPoints": 1,
+      "instruction": "Dane są cztery wyrażenia arytmetyczne:\n\nI. $1 - 2\\frac{2}{3} \\cdot 3$\nII. $3,4 - 2\\frac{1}{4}$\nIII. $3\\frac{3}{4} - 4,25$\nIV. $6 : 1,2$\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nLiczbami całkowitymi są wartości wyrażeń",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-06d-09",
+          "label": "9",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "I oraz II"
+              },
+              {
+                "id": "B",
+                "text": "II oraz III"
+              },
+              {
+                "id": "C",
+                "text": "I oraz IV"
+              },
+              {
+                "id": "D",
+                "text": "III oraz IV"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-46-V.7"
+          ],
+          "explanation": "Obliczamy wartości wszystkich czterech wyrażeń. I. $1 - 2\\frac{2}{3} \\cdot 3 = 1 - 8 = -7$, czyli liczba całkowita (najpierw mnożenie!). II. $3,4 - 2\\frac{1}{4} = 3,4 - 2,25 = 1,15$, niecałkowita. III. $3\\frac{3}{4} - 4,25 = 3,75 - 4,25 = -0,5$, niecałkowita. IV. $6 : 1,2 = 5$, czyli liczba całkowita. Zatem liczbami całkowitymi są wartości wyrażeń I oraz IV, więc poprawna jest odpowiedź C."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-46-V.7"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2026-06d-10",
+      "sessionId": "matematyka-2026-06-dodatkowy",
+      "number": 10,
+      "maxPoints": 1,
+      "instruction": "Ala wyruszyła na wycieczkę rowerową o godzinie $11:40$. Przejechała trasę o długości $28$ km i dotarła do celu tego samego dnia o godzinie $13:00$.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nPrędkość, z jaką Ala na rowerze pokonała trasę wycieczki, była równa",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-06d-10",
+          "label": "10",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$10{,}5\\ \\frac{\\text{km}}{\\text{h}}$"
+              },
+              {
+                "id": "B",
+                "text": "$12\\ \\frac{\\text{km}}{\\text{h}}$"
+              },
+              {
+                "id": "C",
+                "text": "$16{,}8\\ \\frac{\\text{km}}{\\text{h}}$"
+              },
+              {
+                "id": "D",
+                "text": "$21\\ \\frac{\\text{km}}{\\text{h}}$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-46-XII.9"
+          ],
+          "explanation": "Od godziny $11:40$ do godziny $13:00$ mija $1$ godzina $20$ minut, czyli $\\frac{4}{3}$ godziny. Prędkość obliczamy, dzieląc drogę przez czas: $28\\,\\text{km} : \\frac{4}{3}\\,\\text{h} = 28 \\cdot \\frac{3}{4} = 21\\,\\frac{\\text{km}}{\\text{h}}$. Dlatego poprawna jest odpowiedź D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-46-XII.9"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2026-06d-11",
+      "sessionId": "matematyka-2026-06-dodatkowy",
+      "number": 11,
+      "maxPoints": 1,
+      "instruction": "W prostokątnym układzie współrzędnych $(x, y)$ dane są odcinki $AB$ oraz $CD$.\nKońcami tych odcinków są – odpowiednio – punkty:\n$A = (0, 0)$, $B = (0, 4)$ oraz $C = (-2, 0)$, $D = (6, 0)$.\n\n**Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-06d-11",
+          "label": "11",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Odcinek $AB$ ma taką samą długość jak odcinek $CD$. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Odcinek $AB$ jest prostopadły do odcinka $CD$. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "F",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-78-X.5",
+            "ma-46-VII.2"
+          ],
+          "explanation": "Odcinek $AB$ ma końce $(0, 0)$ i $(0, 4)$, więc jego długość wynosi $4$. Odcinek $CD$ ma końce $(-2, 0)$ i $(6, 0)$, więc jego długość wynosi $6 - (-2) = 8$ – pierwsze zdanie jest więc fałszywe (F). Odcinek $AB$ leży na osi $y$, a odcinek $CD$ na osi $x$, więc są one prostopadłe – drugie zdanie jest prawdziwe (P)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-78-X.5",
+        "ma-46-VII.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2026-06d-12",
+      "sessionId": "matematyka-2026-06-dodatkowy",
+      "number": 12,
+      "maxPoints": 1,
+      "instruction": "Bok $AD$ równoległoboku $ABCD$ ma długość $6$, a przekątna $BD$ prostopadła do tego boku ma długość $8$ (zobacz rysunek).\n\n![Rysunek równoległoboku $ABCD$ z przekątną $BD$; bok $AD$ oznaczony długością $6$, przekątna $BD$ oznaczona długością $8$, a kąt między bokiem $AD$ i przekątną $BD$ przy wierzchołku $D$ zaznaczony jako prosty.](stimulus:ma-2026-06d-12-fig1)\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nObwód równoległoboku $ABCD$ jest równy",
+      "stimulusIds": [
+        "ma-2026-06d-12-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-06d-12",
+          "label": "12",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$32$"
+              },
+              {
+                "id": "B",
+                "text": "$48$"
+              },
+              {
+                "id": "C",
+                "text": "$24$"
+              },
+              {
+                "id": "D",
+                "text": "$22$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-VIII.7",
+            "ma-46-XI.2"
+          ],
+          "explanation": "Przekątna $BD$ jest prostopadła do boku $AD$, więc trójkąt $ABD$ jest prostokątny o przyprostokątnych $6$ i $8$. Z twierdzenia Pitagorasa bok $AB$ ma długość $\\sqrt{6^2+8^2}=\\sqrt{100}=10$. W równoległoboku przeciwległe boki są równe, więc obwód wynosi $2\\cdot(6+10)=32$, czyli poprawna jest odpowiedź A."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-VIII.7",
+        "ma-46-XI.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2026-06d-13",
+      "sessionId": "matematyka-2026-06-dodatkowy",
+      "number": 13,
+      "maxPoints": 1,
+      "instruction": "Z ośmiu jednakowych patyczków zbudowano figurę $S$ (zobacz rysunek). Ta figura ma dwie osie symetrii w płaszczyźnie rysunku.\n\n![Figura S z ośmiu patyczków: kwadrat o wierzchołkach F i E u góry oraz B i C u dołu, z przystawionymi po bokach trójkątami o wierzchołkach A (po lewej) i D (po prawej).](stimulus:ma-2026-06d-13-fig1)\n\n**Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "ma-2026-06d-13-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-06d-13",
+          "label": "13",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Po usunięciu z figury $S$ patyczków $AF$ i $AB$, bez przesuwania pozostałych patyczków, otrzymamy figurę, która ma jedną oś symetrii."
+              },
+              {
+                "id": "2",
+                "text": "Po usunięciu z figury $S$ patyczka $FE$, bez przesuwania pozostałych patyczków, otrzymamy figurę, która nie ma osi symetrii."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "F"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-46-IX.5"
+          ],
+          "explanation": "Po usunięciu patyczków $AF$ i $AB$ zostaje kwadrat z przystawionym trójkątem po prawej stronie; taka figura ma dokładnie jedną oś symetrii – poziomą prostą przechodzącą przez środki boków $BF$ i $CE$ oraz wierzchołek $D$ – więc pierwsze zdanie jest prawdziwe (P). Po usunięciu patyczka $FE$ zostają dwa trójkąty połączone odcinkiem $BC$ oraz odcinki $BF$ i $CE$; taka figura nadal ma oś symetrii – pionową prostą przechodzącą przez środek odcinka $BC$ – więc drugie zdanie jest fałszywe (F)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-46-IX.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2026-06d-14",
+      "sessionId": "matematyka-2026-06-dodatkowy",
+      "number": 14,
+      "maxPoints": 1,
+      "instruction": "Na rysunku przedstawiono siatkę pewnego sześcianu. Obwód tej siatki jest równy $70\\,\\text{cm}$.\n\n![Siatka sześcianu złożona z sześciu jednakowych kwadratów obróconych o 45 stopni, ułożonych w zygzakowaty pas (trzy kwadraty w górnym i trzy w dolnym rzędzie).](stimulus:ma-2026-06d-14-fig1)\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nPole powierzchni całkowitej tego sześcianu jest równe",
+      "stimulusIds": [
+        "ma-2026-06d-14-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-06d-14",
+          "label": "14",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$100\\,\\text{cm}^2$"
+              },
+              {
+                "id": "B",
+                "text": "$120\\,\\text{cm}^2$"
+              },
+              {
+                "id": "C",
+                "text": "$125\\,\\text{cm}^2$"
+              },
+              {
+                "id": "D",
+                "text": "$150\\,\\text{cm}^2$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-46-X.3",
+            "ma-78-XI.2"
+          ],
+          "explanation": "Siatka sześcianu składa się z sześciu jednakowych kwadratów, a jej obwód tworzy 14 boków takiego kwadratu (każde połączenie dwóch kwadratów siatki zabiera dwa boki z obwodu). Skoro $14 \\cdot a = 70\\,\\text{cm}$, to krawędź sześcianu ma $a = 5\\,\\text{cm}$. Pole powierzchni całkowitej to pola sześciu ścian: $6 \\cdot 5^2 = 150\\,\\text{cm}^2$, więc poprawna jest odpowiedź D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-46-X.3",
+        "ma-78-XI.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2026-06d-15",
+      "sessionId": "matematyka-2026-06-dodatkowy",
+      "number": 15,
+      "maxPoints": 2,
+      "instruction": "Na klombie rośnie 150 tulipanów. Każdy z nich ma kwiat w jednym z trzech kolorów: w czerwonym, w żółtym albo w białym.\nWśród tych kwiatów $\\frac{1}{5}$ ma kolor czerwony i $\\frac{1}{3}$ ma kolor żółty.\n\n**Oblicz, jaką część liczby wszystkich tulipanów stanowi liczba białych tulipanów na tym klombie. Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-06d-15",
+          "label": "15",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Obliczymy, jaką część liczby wszystkich tulipanów stanowi łączna liczba czerwonych i żółtych tulipanów:\n$\\frac{1}{5}+\\frac{1}{3}=\\frac{3+5}{15}=\\frac{8}{15}$\nObliczymy, jaką część liczby wszystkich tulipanów stanowi liczba białych tulipanów:\n$1-\\frac{8}{15}=\\frac{15-8}{15}=\\frac{7}{15}$\nOdpowiedź: Liczba białych tulipanów stanowi $\\frac{7}{15}$ liczby wszystkich tulipanów na tym klombie."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia, jaką część liczby wszystkich tulipanów stanowi liczba białych tulipanów, prawidłowe obliczenia oraz prawidłowy wynik liczbowy ($\\frac{7}{15}$ lub poprawne rozwinięcie tego ułamka)."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia, jaką część liczby wszystkich tulipanów stanowi liczba białych tulipanów, zapisanie np. $1-\\frac{1}{5}-\\frac{1}{3}$,",
+                  "poprawny sposób obliczenia liczby białych tulipanów, zapisanie np. $150-\\left(150\\cdot\\frac{1}{5}\\right)-\\left(150\\cdot\\frac{1}{3}\\right)$,",
+                  "zapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia, jaką część liczby wszystkich tulipanów stanowi liczba białych tulipanów, np. $\\frac{1}{5}+\\frac{1}{3}+x=1$,",
+                  "zapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia liczby białych tulipanów, np. $150\\cdot\\frac{1}{5}+150\\cdot\\frac{1}{3}+x=150$."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-46-XIV.3",
+            "ma-46-V.4"
+          ],
+          "explanation": "Czerwone tulipany stanowią $\\frac{1}{5}$ wszystkich, a żółte $\\frac{1}{3}$ wszystkich, więc białe stanowią resztę: $1-\\frac{1}{5}-\\frac{1}{3}=\\frac{15-3-5}{15}=\\frac{7}{15}$. Można to sprawdzić, licząc sztuki: $150\\cdot\\frac{1}{5}=30$ czerwonych, $150\\cdot\\frac{1}{3}=50$ żółtych, czyli białych jest $150-30-50=70$, a $\\frac{70}{150}=\\frac{7}{15}$.",
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "**I sposób**\nObliczymy, jaką część liczby wszystkich tulipanów stanowi łączna liczba czerwonych i żółtych tulipanów:\n$\\frac{1}{5}+\\frac{1}{3}=\\frac{3+5}{15}=\\frac{8}{15}$\nObliczymy, jaką część liczby wszystkich tulipanów stanowi liczba białych tulipanów:\n$1-\\frac{8}{15}=\\frac{15-8}{15}=\\frac{7}{15}$\nOdpowiedź: Liczba białych tulipanów stanowi $\\frac{7}{15}$ liczby wszystkich tulipanów na tym klombie.",
+              "ref": {
+                "source": "klucz",
+                "page": 11
+              }
+            },
+            {
+              "points": 2,
+              "content": "**II sposób**\nObliczymy, ile czerwonych tulipanów rośnie na klombie:\n$150\\cdot\\frac{1}{5}=30$\nObliczymy, ile żółtych tulipanów rośnie na klombie:\n$150\\cdot\\frac{1}{3}=50$\nObliczymy, ile białych tulipanów rośnie na klombie:\n$150-30-50=70$\nObliczymy, jaką część liczby wszystkich tulipanów stanowi liczba białych tulipanów:\n$\\frac{70}{150}=\\frac{7}{15}$\nOdpowiedź: Liczba białych tulipanów stanowi $\\frac{7}{15}$ liczby wszystkich tulipanów na tym klombie.",
+              "ref": {
+                "source": "klucz",
+                "page": 11
+              }
+            },
+            {
+              "points": 2,
+              "content": "**III sposób**\nOznaczymy przez $x$ liczbę białych tulipanów, zapiszemy i rozwiążemy równanie:\n$150\\cdot\\frac{1}{5}+150\\cdot\\frac{1}{3}+x=150$\n$30+50+x=150$\n$x=150-80$\n$x=70$\nObliczymy, jaką część liczby wszystkich tulipanów stanowi liczba białych tulipanów:\n$\\frac{70}{150}=\\frac{7}{15}$\nOdpowiedź: Liczba białych tulipanów stanowi $\\frac{7}{15}$ liczby wszystkich tulipanów na tym klombie.",
+              "ref": {
+                "source": "klucz",
+                "page": 11
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-46-XIV.3",
+        "ma-46-V.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 18
+      }
+    },
+    {
+      "id": "ma-2026-06d-16",
+      "sessionId": "matematyka-2026-06-dodatkowy",
+      "number": 16,
+      "maxPoints": 3,
+      "instruction": "Gra polega na rzucaniu piłką do kosza. Jeśli rzut jest celny, to liczba dotychczas zdobytych punktów jest zwiększana o $5$ punktów. Jeśli rzut jest nietrafiony, to liczba dotychczas zdobytych punktów jest zmniejszana o $4$ punkty. Janek rozpoczął grę z wynikiem $0$ punktów. Liczba celnych rzutów Janka jest trzy razy większa niż liczba rzutów, w których Janek nie trafił piłką do kosza. W rezultacie Janek zgromadził $132$ punkty.\n\n**Oblicz, ile razy Janek trafił piłką do kosza. Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-06d-16",
+          "label": "16",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "I sposób\n$x$ – liczba rzutów celnych\n$\\frac{1}{3}x$ – liczba rzutów nietrafionych\n$5x$ – liczba punktów uzyskanych w rzutach celnych\n$4\\cdot\\frac{1}{3}x$ – liczba punktów straconych w rzutach nietrafionych\nObliczymy liczbę rzutów celnych, zapiszemy i rozwiążemy równanie:\n$5x-\\frac{4}{3}x=132$\n$\\frac{15}{3}x-\\frac{4}{3}x=132$\n$\\frac{11}{3}x=132$\n$x=132\\cdot\\frac{3}{11}$\n$x=36$\nSprawdzimy, czy liczba rzutów nietrafionych jest liczbą naturalną:\n$x=36$\n$\\frac{1}{3}x=\\frac{1}{3}\\cdot 36=12$\nOdpowiedź: Janek trafił piłką do kosza $36$ razy."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia liczby rzutów, w których Janek trafił piłką do kosza, prawidłowe obliczenia **oraz** prawidłowy wynik liczbowy $(36)$",
+                  "zastosowanie metody prób i błędów – sprawdzenie wszystkich warunków zadania dla co najmniej dwóch różnych liczb rzutów celnych lub nietrafionych, wśród których **jest** prawidłowa liczba rzutów celnych, prawidłowe obliczenia **oraz** wskazanie spośród nich prawidłowego wyniku liczbowego $(36)$."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "zapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia liczby rzutów celnych, np. $5x-\\frac{4}{3}x=132$, gdzie $x$ oznacza liczbę rzutów celnych",
+                  "zapisanie poprawnego równania z jedną niewiadomą prowadzącego do obliczenia liczby rzutów nietrafionych, np. $5\\cdot 3x-4x=132$, gdzie $x$ oznacza liczbę rzutów nietrafionych,",
+                  "zapisanie poprawnego wyrażenia arytmetycznego prowadzącego do obliczenia sumy punktów uzyskanych za $3$ rzuty celne i $1$ rzut nietrafiony **oraz** zapisanie poprawnego wyrażenia arytmetycznego prowadzącego do obliczenia liczby takich czwórek rzutów, np. $3\\cdot 5-4$ **oraz** $132:(3\\cdot 5-4)$",
+                  "zastosowanie metody prób i błędów – sprawdzenie wszystkich warunków zadania dla co najmniej dwóch różnych liczb rzutów celnych lub nietrafionych wśród których **jest** prawidłowa liczba rzutów celnych **bez wskazania** prawidłowego wyniku liczbowego."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "zapisanie poprawnych wyrażeń algebraicznych tej samej zmiennej opisujących liczbę punktów uzyskanych w rzutach celnych **oraz** liczbę punktów straconych w rzutach nietrafionych, np. $x$ – liczba rzutów nietrafionych, $3x$ – liczba rzutów celnych, $5\\cdot 3x$ – liczba punktów uzyskanych w rzutach celnych, $4x$ – liczba punktów straconych w rzutach nietrafionych",
+                  "zapisanie poprawnego wyrażenia arytmetycznego prowadzącego do obliczenia sumy punktów uzyskanych za $3$ rzuty celne i $1$ rzut nietrafiony, np. $3\\cdot 5-4$,",
+                  "zastosowanie metody prób i błędów – sprawdzenie wszystkich warunków zadania dla co najmniej dwóch różnych liczb rzutów celnych lub nietrafionych, wśród których **nie ma** prawidłowej liczby rzutów celnych."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-VI.4"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "I sposób\n$x$ – liczba rzutów celnych\n$\\frac{1}{3}x$ – liczba rzutów nietrafionych\n$5x$ – liczba punktów uzyskanych w rzutach celnych\n$4\\cdot\\frac{1}{3}x$ – liczba punktów straconych w rzutach nietrafionych\nObliczymy liczbę rzutów celnych, zapiszemy i rozwiążemy równanie:\n$5x-\\frac{4}{3}x=132$\n$\\frac{15}{3}x-\\frac{4}{3}x=132$\n$\\frac{11}{3}x=132$\n$x=132\\cdot\\frac{3}{11}$\n$x=36$\nSprawdzimy, czy liczba rzutów nietrafionych jest liczbą naturalną:\n$x=36$\n$\\frac{1}{3}x=\\frac{1}{3}\\cdot 36=12$\nOdpowiedź: Janek trafił piłką do kosza $36$ razy.",
+              "ref": {
+                "source": "klucz",
+                "page": 13
+              }
+            },
+            {
+              "points": 3,
+              "content": "II sposób\n$x$ – liczba rzutów nietrafionych\n$3x$ – liczba rzutów celnych\n$4x$ – liczba punktów straconych w rzutach nietrafionych\n$5\\cdot 3x$ – liczba punktów uzyskanych w rzutach celnych\nObliczymy liczbę rzutów nietrafionych, zapiszemy i rozwiążemy równanie:\n$5\\cdot 3x-4x=132$\n$15x-4x=132$\n$11x=132$\n$x=12$\nObliczymy liczbę rzutów, w których Janek trafił piłką do kosza:\n$3\\cdot 12=36$\nOdpowiedź: Janek trafił piłką do kosza $36$ razy.",
+              "ref": {
+                "source": "klucz",
+                "page": 14
+              }
+            },
+            {
+              "points": 3,
+              "content": "III sposób\nNa każde $3$ rzuty celne przypada $1$ rzut nietrafiony, co daje razem $4$ rzuty.\nZa rzut celny wynik zwiększany jest o $5$ punktów, za nietrafiony – zmniejszany o $4$ punkty.\nObliczymy liczbę punktów uzyskanych przez Janka za każde $4$ rzuty:\n$5\\cdot 3-4=11$\nObliczymy liczbę takich czwórek rzutów:\n$132:11=12$\nW każdej takiej czwórce rzutów są $3$ rzuty celne. Obliczymy liczbę rzutów, w których Janek trafił piłką do kosza:\n$3\\cdot 12=36$\nOdpowiedź: Janek trafił piłką do kosza $36$ razy.",
+              "ref": {
+                "source": "klucz",
+                "page": 14
+              }
+            },
+            {
+              "points": 3,
+              "content": "IV sposób\nMetoda prób i błędów.\n\nLiczba rzutów piłką do kosza:\n\n| nietrafionych | celnych | Sprawdzenie | Wniosek |\n|---|---|---|---|\n| $10$ | $30$ | $(-4)\\cdot 10+5\\cdot 30=110$ | $110<132$ |\n| $15$ | $45$ | $(-4)\\cdot 15+5\\cdot 45=165$ | $165>132$ |\n| $12$ | $36$ | $(-4)\\cdot 12+5\\cdot 36=132$ | $132=132$ |\n\nOdpowiedź: Janek trafił piłką do kosza $36$ razy.",
+              "ref": {
+                "source": "klucz",
+                "page": 14
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Jeżeli uczeń sprawdza wszystkie warunki zadania tylko dla jednego zestawu liczb rzutów piłką do kosza, celnych $36$ i nietrafionych $12$ **oraz** nie popełnia błędów rachunkowych, to otrzymuje 1 punkt."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-VI.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 19
+      }
+    },
+    {
+      "id": "ma-2026-06d-17",
+      "sessionId": "matematyka-2026-06-dodatkowy",
+      "number": 17,
+      "maxPoints": 3,
+      "instruction": "W sklepie ogłoszono dwie promocje przy zakupie szamponu *Pięć ziół* (zobacz rysunek).\n\n![Dwie ramki: Szampon Pięć ziół, pojemność butelki 500 ml, drugi taki sam produkt o 40% taniej; Szampon Pięć ziół, pojemność butelki 250 ml, czwarty taki sam produkt za 1 zł.](stimulus:ma-2026-06d-17-fig1)\n\nOla i Ania kupiły szampony *Pięć ziół* w cenie promocyjnej.\nOla kupiła dwie butelki o pojemności $500$ ml i zapłaciła $24$ zł.\nAnia kupiła cztery butelki o pojemności $250$ ml i zapłaciła $23{,}50$ zł.\n\n**Czy w tym sklepie koszt zakupu bez promocji jednego litra szamponu *Pięć ziół* w butelkach o pojemności $500$ ml oraz koszt zakupu bez promocji jednego litra tego szamponu w butelkach o pojemności $250$ ml jest taki sam? Zapisz obliczenia.**",
+      "stimulusIds": [
+        "ma-2026-06d-17-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-06d-17",
+          "label": "17",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "I sposób\nObliczymy cenę zakupu bez promocji jednego litra szamponu Pięć ziół w butelkach o pojemności $500$ ml:\n$160\\%$ – $24$ zł $/:4$\n$40\\%$ – $6$ zł\n$24+6=30$ (zł)\nObliczymy cenę zakupu bez promocji szamponu Pięć ziół w butelce o pojemności $250$ ml:\n$23{,}50-1=22{,}50$ (zł)\n$22{,}50:3=7{,}50$ (zł)\nObliczymy cenę zakupu bez promocji jednego litra szamponu Pięć ziół w butelkach o pojemności $250$ ml:\n$4\\cdot 7{,}50=30$ (zł)\nOdpowiedź: Koszt zakupu bez promocji jednego litra szamponu Pięć ziół w butelkach o pojemności $500$ ml oraz o pojemności $250$ ml jest taki sam, równy $30$ zł."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia ceny zakupu bez promocji jednego litra szamponu Pięć ziół w butelkach o pojemności $500$ ml oraz w butelkach o pojemności $250$ ml, prawidłowe obliczenia **oraz** prawidłowy wniosek, że koszt zakupu bez promocji jednego litra szamponu Pięć ziół w butelkach o pojemności $500$ ml oraz w butelkach o pojemności $250$ ml jest taki sam ($30$ zł)."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia ceny zakupu bez promocji jednego litra szamponu Pięć ziół w butelkach o pojemności $500$ ml",
+                  "poprawny sposób obliczenia ceny zakupu bez promocji jednego litra szamponu Pięć ziół w butelkach o pojemności $250$ ml,",
+                  "poprawny sposób obliczenia ceny zakupu bez promocji szamponu Pięć ziół w butelce o pojemności $500$ ml **oraz** w butelce o pojemności $250$ ml."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia ceny zakupu bez promocji szamponu Pięć ziół w butelce o pojemności $500$ ml",
+                  "poprawny sposób obliczenia ceny zakupu bez promocji szamponu Pięć ziół w butelce o pojemności $250$ ml."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-XII.2"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "I sposób\nObliczymy cenę zakupu bez promocji jednego litra szamponu Pięć ziół w butelkach o pojemności $500$ ml:\n$160\\%$ – $24$ zł $/:4$\n$40\\%$ – $6$ zł\n$24+6=30$ (zł)\nObliczymy cenę zakupu bez promocji szamponu Pięć ziół w butelce o pojemności $250$ ml:\n$23{,}50-1=22{,}50$ (zł)\n$22{,}50:3=7{,}50$ (zł)\nObliczymy cenę zakupu bez promocji jednego litra szamponu Pięć ziół w butelkach o pojemności $250$ ml:\n$4\\cdot 7{,}50=30$ (zł)\nOdpowiedź: Koszt zakupu bez promocji jednego litra szamponu Pięć ziół w butelkach o pojemności $500$ ml oraz o pojemności $250$ ml jest taki sam, równy $30$ zł.",
+              "ref": {
+                "source": "klucz",
+                "page": 16
+              }
+            },
+            {
+              "points": 3,
+              "content": "II sposób\nOznaczymy cenę zakupu bez promocji szamponu Pięć ziół w butelce o pojemności $500$ ml jako $x$.\nObliczymy cenę zakupu bez promocji szamponu Pięć ziół w butelce o pojemności $500$ ml:\n$x+0{,}6x=24$ (zł)\n$x=15$ (zł)\nObliczymy cenę zakupu bez promocji jednego litra szamponu Pięć ziół w butelkach o pojemności $500$ ml:\n$2\\cdot 15=30$ (zł)\nOznaczymy cenę zakupu bez promocji szamponu Pięć ziół w butelce o pojemności $250$ ml jako $y$.\nObliczymy cenę zakupu bez promocji szamponu Pięć ziół w butelce o pojemności $250$ ml:\n$3y+1=23{,}50$ (zł)\n$3y=22{,}50$ (zł)\n$y=7{,}50$ (zł)\nObliczymy cenę zakupu bez promocji jednego litra szamponu Pięć ziół w butelkach o pojemności $250$ ml:\n$4\\cdot 7{,}50=30$ (zł)\nOdpowiedź: Koszt zakupu bez promocji jednego litra szamponu Pięć ziół w butelkach o pojemności $500$ ml oraz o pojemności $250$ ml jest taki sam, równy $30$ zł.",
+              "ref": {
+                "source": "klucz",
+                "page": 16
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-XII.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 20
+      }
+    },
+    {
+      "id": "ma-2026-06d-18",
+      "sessionId": "matematyka-2026-06-dodatkowy",
+      "number": 18,
+      "maxPoints": 2,
+      "instruction": "Proste $k$ i $l$ są równoległe. Na prostej $l$ zaznaczono punkty $D$, $A$, $B$, a na prostej $k$ zaznaczono punkty $C$ i $E$. Odcinek $CD$ jest prostopadły do prostych $k$ i $l$.\nKąt $ACD$ ma miarę $40^\\circ$ i kąt $ECB$ ma miarę $26^\\circ$ (zobacz rysunek).\n\n![Proste równoległe k i l; na k punkty C i E, na l punkty D, A, B; odcinek CD prostopadły do obu prostych; odcinki CA i CB; kąt ACD ma 40°, kąt ECB ma 26°.](stimulus:ma-2026-06d-18-fig1)\n\n**Czy trójkąt $ABC$ jest równoramienny? Odpowiedź uzasadnij.**",
+      "stimulusIds": [
+        "ma-2026-06d-18-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-06d-18",
+          "label": "18",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "I sposób\nKąty $ECB$ i $ABC$ to kąty naprzemianległe, zatem:\n$|\\angle ABC|=26^\\circ$\nOdcinek $CD$ jest prostopadły do prostej $k$, zatem:\n$|\\angle BCA|=90^\\circ-40^\\circ-26^\\circ=24^\\circ$\nSuma miar kątów w trójkącie $ABC$ jest równa $180^\\circ$, więc:\n$|\\angle CAB|=180^\\circ-24^\\circ-26^\\circ=130^\\circ$\nW trójkącie $ABC$ nie można wskazać pary kątów o tej samej mierze, więc trójkąt ten nie jest równoramienny."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia miar kątów $BCA$ i $ABC$, prawidłowe obliczenia, prawidłowe wyniki liczbowe ($24^\\circ$ oraz $26^\\circ$) **oraz** zapisanie wniosku, że trójkąt $ABC$ nie jest równoramienny."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia miar dowolnych dwóch kątów w trójkącie $ABC$",
+                  "ustalenie, np. zapisanie na rysunku miar dowolnych dwóch kątów w trójkącie $ABC$,",
+                  "zapisanie, że trójkąt $ABC$ będzie równoramienny, jeżeli $|\\angle BCA|=|\\angle ABC|$ **oraz** że nie będzie równoramienny jeżeli $|\\angle BCA|\\neq|\\angle ABC|$ (lub zapisy równoważne)."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-46-VIII.6"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "I sposób\nKąty $ECB$ i $ABC$ to kąty naprzemianległe, zatem:\n$|\\angle ABC|=26^\\circ$\nOdcinek $CD$ jest prostopadły do prostej $k$, zatem:\n$|\\angle BCA|=90^\\circ-40^\\circ-26^\\circ=24^\\circ$\nSuma miar kątów w trójkącie $ABC$ jest równa $180^\\circ$, więc:\n$|\\angle CAB|=180^\\circ-24^\\circ-26^\\circ=130^\\circ$\nW trójkącie $ABC$ nie można wskazać pary kątów o tej samej mierze, więc trójkąt ten nie jest równoramienny.",
+              "ref": {
+                "source": "klucz",
+                "page": 18
+              }
+            },
+            {
+              "points": 2,
+              "content": "II sposób\nObliczymy miary kątów: $CAD$, $CAB$, $BCA$ oraz $ABC$.\nOdcinek $CD$ jest prostopadły do prostej $l$, zatem:\n$|\\angle CDA|=90^\\circ$\nSkorzystamy z sumy miar kątów w trójkącie $DAC$:\n$|\\angle CAD|=180^\\circ-90^\\circ-40^\\circ=50^\\circ$\nSkorzystamy z własności kątów przyległych:\n$|\\angle CAB|=180^\\circ-50^\\circ=130^\\circ$\nOdcinek $CD$ jest prostopadły do prostej $k$, zatem:\n$|\\angle BCA|=90^\\circ-40^\\circ-26^\\circ=24^\\circ$\nSkorzystamy z sumy miar kątów w trójkącie $ABC$:\n$|\\angle ABC|=180^\\circ-130^\\circ-24^\\circ=26^\\circ$\n$|\\angle BCA|\\neq|\\angle ABC|$, zatem trójkąt $ABC$ nie jest równoramienny.",
+              "ref": {
+                "source": "klucz",
+                "page": 19
+              }
+            },
+            {
+              "points": 2,
+              "content": "III sposób\nTrójkąt $ABC$ jest trójkątem rozwartokątnym, ponieważ $|\\angle CAB|=130^\\circ$, a zatem będzie on równoramienny, jeżeli $|\\angle BCA|=|\\angle ABC|$.\nNatomiast jeżeli $|\\angle BCA|\\neq|\\angle ABC|$ trójkąt ten nie będzie równoramienny.\nObliczymy miary $|\\angle BCA|$ oraz $|\\angle ABC|$:\n$|\\angle ABC|=26^\\circ$ (kąt naprzemianległy do kąta $ECB$)\n$|\\angle BCA|=90^\\circ-40^\\circ-26^\\circ=24^\\circ$\n$24^\\circ\\neq26^\\circ$\n$|\\angle BCA|\\neq|\\angle ABC|$, zatem trójkąt $ABC$ nie jest równoramienny.",
+              "ref": {
+                "source": "klucz",
+                "page": 19
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-46-VIII.6"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 21
+      }
+    },
+    {
+      "id": "ma-2026-06d-19",
+      "sessionId": "matematyka-2026-06-dodatkowy",
+      "number": 19,
+      "maxPoints": 3,
+      "instruction": "Dany jest trapez prostokątny $ABCD$, którego długość boku $BC$ jest równa $8$ cm, a kąt $DAB$ ma miarę $45^\\circ$ (zobacz rysunek). Długość boku $AB$ jest trzy razy większa od długości boku $CD$.\n\n![Trapez prostokątny ABCD z dłuższą podstawą AB na dole, krótszą CD u góry, prostopadłym bokiem BC = 8 cm i kątem DAB = 45°.](stimulus:ma-2026-06d-19-fig1)\n\n**Oblicz pole trapezu $ABCD$. Zapisz obliczenia.**",
+      "stimulusIds": [
+        "ma-2026-06d-19-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-06d-19",
+          "label": "19",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "I sposób\nNarysujemy wysokość $DE$ trapezu $ABCD$.\nDzieli ona ten trapez na trójkąt $AED$ oraz prostokąt $EBCD$. Oznaczymy bok $CD$ jako $x$.\nZauważymy, że:\n$|EB|=|CD|=x$\n$|AB|=3x$\nZatem $|AE|=2x$\nTrójkąt $AED$ jest równoramienny, więc:\n$|AE|=|ED|=8$ (cm)\nObliczymy długość boku trapezu oznaczoną niewiadomą $x$:\n$|AE|=2x=8$ (cm)\n$2x=8$\n$x=4$ (cm)\nObliczymy długość boku $AB$:\n$|AB|=8+4=12$ (cm)\nZatem podstawy trapezu $ABCD$ mają długości:\n$|CD|=4$ (cm)\n$|AB|=12$ (cm)\nObliczymy pole trapezu $ABCD$:\n$P_{ABCD}=\\frac{(4+12)}{2}\\cdot 8=\\frac{16}{2}\\cdot 8=64$ ($\\text{cm}^2$)\nOdpowiedź: Pole trapezu $ABCD$ jest równe $64\\ \\text{cm}^2$."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia pola trapezu, prawidłowe obliczenia **oraz** prawidłowy wynik liczbowy zgodny z zastosowaną jednostką ($64\\ \\text{cm}^2$)."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia długości podstaw $AB$ i $CD$ trapezu $ABCD$",
+                  "poprawny sposób obliczenia pola trójkąta $AED$ **oraz** poprawny sposób obliczenia długości boku $CD$,",
+                  "poprawny sposób obliczenia pola trójkąta $AED$ **oraz** poprawny sposób obliczenia długości boku $AB$,",
+                  "ustalenie długości przyprostokątnych trójkąta prostokątnego o przeciwprostokątnej $AD$ **oraz** zapisanie, zgodnie z przyjętymi oznaczeniami i z uwzględnieniem poprawnych zależności między długościami podstaw, wzoru na pole trapezu $ABCD$, np. $|AE|=|ED|=8$ (cm) **oraz** $P_{ABCD}=\\frac{(3x+x)}{2}\\cdot 8$, gdzie $3x$ oraz $x$ oznaczają długości podstaw $AB$ oraz $CD$ trapezu $ABCD$ albo $P_{ABCD}=\\frac{8\\cdot 8}{2}+x\\cdot 8$, gdzie $x$ oznacza długość podstawy $CD$ trapezu $ABCD$ albo $P_{ABCD}=3x\\cdot 8-\\frac{8\\cdot 8}{2}$, gdzie $3x$ oznacza długość podstawy $AB$ trapezu $ABCD$."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "ustalenie długości przyprostokątnych trójkąta prostokątnego o przeciwprostokątnej $AD$, np. zapisanie $|AE|=|ED|=8$ (cm)",
+                  "zapisanie zgodnie z przyjętymi oznaczeniami wzoru na pole trapezu $ABCD$ z uwzględnieniem długości odcinka $BC$, np. $P_{ABCD}=\\frac{(|AB|+|CD|)}{2}\\cdot 8$,",
+                  "zapisanie zgodnie z przyjętymi oznaczeniami, że pole trapezu $ABCD$ jest równe sumie pola trójkąta prostokątnego o przeciwprostokątnej $AD$ i pola prostokąta o bokach $CB$ i $CD$ z uwzględnieniem długości odcinka $BC$, np. $P_{ABCD}=\\frac{|AE|\\cdot|DE|}{2}+|CD|\\cdot 8$,",
+                  "zapisanie zgodnie z przyjętymi oznaczeniami, że pole trapezu $ABCD$ jest równe różnicy pola prostokąta o bokach $AB$ i $BC$ i pola trójkąta przystającego do trójkąta prostokątnego o przeciwprostokątnej $AD$ z uwzględnieniem długości odcinka $BC$, np. $P_{ABCD}=|AB|\\cdot 8-\\frac{|AE|\\cdot|DE|}{2}$."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-VIII.6"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "I sposób\nNarysujemy wysokość $DE$ trapezu $ABCD$.\nDzieli ona ten trapez na trójkąt $AED$ oraz prostokąt $EBCD$. Oznaczymy bok $CD$ jako $x$.\nZauważymy, że:\n$|EB|=|CD|=x$\n$|AB|=3x$\nZatem $|AE|=2x$\nTrójkąt $AED$ jest równoramienny, więc:\n$|AE|=|ED|=8$ (cm)\nObliczymy długość boku trapezu oznaczoną niewiadomą $x$:\n$|AE|=2x=8$ (cm)\n$2x=8$\n$x=4$ (cm)\nObliczymy długość boku $AB$:\n$|AB|=8+4=12$ (cm)\nZatem podstawy trapezu $ABCD$ mają długości:\n$|CD|=4$ (cm)\n$|AB|=12$ (cm)\nObliczymy pole trapezu $ABCD$:\n$P_{ABCD}=\\frac{(4+12)}{2}\\cdot 8=\\frac{16}{2}\\cdot 8=64$ ($\\text{cm}^2$)\nOdpowiedź: Pole trapezu $ABCD$ jest równe $64\\ \\text{cm}^2$.",
+              "ref": {
+                "source": "klucz",
+                "page": 21
+              }
+            },
+            {
+              "points": 3,
+              "content": "II sposób\nZauważymy, że trójkąt $AED$ jest równoramienny, zatem\n$|AE|=|ED|=8$ (cm)\nObliczymy pole trójkąta $AED$:\n$P_{AED}=\\frac{8\\cdot 8}{2}=32$ ($\\text{cm}^2$)\nObliczymy długość boku $AB$:\n$|EB|=|CD|=x$\n$|AB|=3x$ oraz $|AB|=8+x$\n$3x=8+x$\n$x=4$\nObliczymy pole prostokąta $EBCD$:\n$P_{EBCD}=4\\cdot 8=32$ ($\\text{cm}^2$)\nObliczymy pole trapezu $ABCD$ jako sumę pola trójkąta $AED$ oraz pola prostokąta $EBCD$:\n$P_{ABCD}=32+32=64$ ($\\text{cm}^2$)\nOdpowiedź: Pole trapezu $ABCD$ jest równe $64\\ \\text{cm}^2$.",
+              "ref": {
+                "source": "klucz",
+                "page": 21
+              }
+            },
+            {
+              "points": 3,
+              "content": "III sposób\nZauważymy, że\n$|AE|=|BC|=8$ (cm)\noraz trójkąt $ADE$ jest równoramienny, zatem\n$|AE|=|ED|=8$ (cm)\nObliczymy pole trójkąta $AED$:\n$P_{AED}=\\frac{8\\cdot 8}{2}=32$ ($\\text{cm}^2$)\nObliczymy długość boku $EC$:\n$|DC|=x$\n$|EC|=3x$ oraz $|EC|=8+x$\n$3x=8+x$\n$x=4$\n$|EC|=8+4=12$ (cm)\nObliczymy pole prostokąta $ABCE$:\n$P_{ABCE}=12\\cdot 8=96$ ($\\text{cm}^2$)\nObliczymy pole trapezu $ABCD$ jako różnicę pola prostokąta $ABCE$ i pola trójkąta $ADE$:\n$P_{ABCD}=96-32=64$ ($\\text{cm}^2$)\nOdpowiedź: Pole trapezu $ABCD$ jest równe $64\\ \\text{cm}^2$.",
+              "ref": {
+                "source": "klucz",
+                "page": 21
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Nie ocenia się stosowania jednostki."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-VIII.6"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 22
+      }
+    },
+    {
+      "id": "ma-2026-06d-20",
+      "sessionId": "matematyka-2026-06-dodatkowy",
+      "number": 20,
+      "maxPoints": 3,
+      "instruction": "W graniastosłupie prostym o podstawie trójkąta prostokątnego najkrótsza krawędź podstawy ma długość $5$ cm. Ściana boczna tego graniastosłupa o największej powierzchni jest kwadratem o polu $169\\ \\text{cm}^2$.\n\n![Graniastosłup prosty o podstawie trójkąta prostokątnego (kąt prosty zaznaczony przy dolnej podstawie).](stimulus:ma-2026-06d-20-fig1)\n\n**Oblicz objętość tego graniastosłupa. Zapisz obliczenia.**",
+      "stimulusIds": [
+        "ma-2026-06d-20-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-06d-20",
+          "label": "20",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Oznaczymy długość krawędzi największej ściany bocznej graniastosłupa jako $a$.\nObliczymy długość krawędzi największej ściany bocznej graniastosłupa:\n$P=a^2$\n$P=169\\ \\text{cm}^2$\n$a^2=169$\n$a=\\sqrt{169}$\n$a=13$ (cm)\nZauważymy, że długość krawędzi największej ściany bocznej jest przeciwprostokątną trójkąta prostokątnego w podstawie graniastosłupa oraz jest wysokością graniastosłupa:\n$a=H$\n$H=13$ (cm)\nObliczymy długość trzeciej krawędzi podstawy graniastosłupa, czyli dłuższej przyprostokątnej trójkąta prostokątnego. Skorzystamy z twierdzenia Pitagorasa:\n$5^2+x^2=13^2$\n$25+x^2=169$\n$x=\\sqrt{144}$\n$x=12$ (cm)\nObliczymy objętość graniastosłupa:\n$V=P_p\\cdot H$\n$V=\\frac{12\\cdot 5}{2}\\cdot 13=390$ ($\\text{cm}^3$)\nOdpowiedź: Objętość tego graniastosłupa jest równa $390\\ \\text{cm}^3$."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia objętości graniastosłupa, prawidłowe obliczenia **oraz** prawidłowy wynik liczbowy zgodny z zastosowaną jednostką ($390\\ \\text{cm}^3$)."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia długości krawędzi największej ściany bocznej **oraz** poprawny sposób obliczenia długości dłuższej przyprostokątnej trójkąta prostokątnego, tzn. poprawne zastosowanie twierdzenia Pitagorasa, np. zapisanie $a=\\sqrt{169}$ oraz $5^2+x^2=(\\sqrt{169})^2$, gdzie $x$ oznacza długość dłuższej przyprostokątnej trójkąta prostokątnego",
+                  "zapisanie, np. na rysunku, że długość krawędzi największej ściany bocznej (lub wysokość) graniastosłupa jest równa $13$ cm **oraz** że długość dłuższej przyprostokątnej trójkąta prostokątnego jest równa $12$ cm bez przedstawienia sposobu ich obliczenia."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia długości krawędzi największej ściany bocznej (lub wysokości) graniastosłupa",
+                  "zapisanie, np. na rysunku, że długość krawędzi największej ściany bocznej (lub wysokość) graniastosłupa jest równa $13$ cm bez przedstawienia sposobu jej obliczenia,",
+                  "zapisanie, zgodnie z przyjętymi oznaczeniami, poprawnej zależności między długościami krawędzi podstawy graniastosłupa wynikającej z twierdzenia Pitagorasa z uwzględnieniem długości najkrótszej krawędzi podstawy, np. $5^2+x^2=a^2$, gdzie: $x$ oznacza długość dłuższej przyprostokątnej trójkąta prostokątnego, $a$ oznacza długość przeciwprostokątnej trójkąta prostokątnego."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-78-XI.2"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "Oznaczymy długość krawędzi największej ściany bocznej graniastosłupa jako $a$.\nObliczymy długość krawędzi największej ściany bocznej graniastosłupa:\n$P=a^2$\n$P=169\\ \\text{cm}^2$\n$a^2=169$\n$a=\\sqrt{169}$\n$a=13$ (cm)\nZauważymy, że długość krawędzi największej ściany bocznej jest przeciwprostokątną trójkąta prostokątnego w podstawie graniastosłupa oraz jest wysokością graniastosłupa:\n$a=H$\n$H=13$ (cm)\nObliczymy długość trzeciej krawędzi podstawy graniastosłupa, czyli dłuższej przyprostokątnej trójkąta prostokątnego. Skorzystamy z twierdzenia Pitagorasa:\n$5^2+x^2=13^2$\n$25+x^2=169$\n$x=\\sqrt{144}$\n$x=12$ (cm)\nObliczymy objętość graniastosłupa:\n$V=P_p\\cdot H$\n$V=\\frac{12\\cdot 5}{2}\\cdot 13=390$ ($\\text{cm}^3$)\nOdpowiedź: Objętość tego graniastosłupa jest równa $390\\ \\text{cm}^3$.",
+              "ref": {
+                "source": "klucz",
+                "page": 24
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Brak jednostki lub zapisanie niewłaściwej jednostki w wyniku końcowym traktuje się jako błąd rachunkowy.",
+            "Jeżeli uczeń niepoprawnie zidentyfikuje największą ścianę boczną graniastosłupa i konsekwentnie doprowadzi rozwiązanie zadania do końca bez błędów rachunkowych, to otrzymuje 1 punkt."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-78-XI.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 23
+      }
+    }
+  ],
+  "rubrics": [],
+  "audio": []
+}

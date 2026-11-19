@@ -1,8 +1,12 @@
 const MONTHS = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"];
 const MONTHS_GEN = ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października", "listopada", "grudnia"];
 
-/** "Maj 2026" */
-export const sessionLabel = (s: { month: number; year: number }) => `${MONTHS[s.month - 1]} ${s.year}`;
+/** "Maj 2026"; other terms say so: "Grudzień 2024 (próbny)", "Czerwiec 2025 (dodatkowy)". */
+export const sessionLabel = (s: { month: number; year: number; term?: string }) =>
+  `${MONTHS[s.month - 1]} ${s.year}${s.term === "probny" ? " (próbny)" : s.term === "dodatkowy" ? " (dodatkowy)" : ""}`;
+
+/** "termin główny" / "termin dodatkowy" / "egzamin próbny" */
+export const termLabel = (term: string) => (term === "probny" ? "egzamin próbny" : term === "dodatkowy" ? "termin dodatkowy" : "termin główny");
 
 /** "15 lis, 14:05" style short date, in Polish. */
 export function shortDate(iso: string): string {

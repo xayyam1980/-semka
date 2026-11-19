@@ -1,0 +1,353 @@
+{
+  "sessionId": "matematyka-2026-06-dodatkowy",
+  "at": "2026-11-19T17:54:39.262Z",
+  "model": "qwen · qwen3.8-max · token-plan.maas.qwencloudapi.com",
+  "segmentation": {
+    "sheetTasks": 20,
+    "sheetPoints": 30,
+    "keyTasks": 20,
+    "keyPoints": 30,
+    "problems": []
+  },
+  "tasks": [
+    {
+      "number": 1,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9664,
+        "output": 3521,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 2,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9664,
+        "output": 3306,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 3,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 10662,
+        "output": 2462,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 4,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9506,
+        "output": 3996,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 5,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9602,
+        "output": 3161,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 6,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9602,
+        "output": 2980,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 7,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 10686,
+        "output": 2514,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 8,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9565,
+        "output": 4721,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 9,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 10751,
+        "output": 4002,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 10,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9723,
+        "output": 2797,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 11,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9732,
+        "output": 3791,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 12,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 10878,
+        "output": 4194,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 13,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9484,
+        "output": 5566,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 14,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 12437,
+        "output": 3792,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 15,
+      "problems": [],
+      "notes": [
+        "Klucz zawiera przypisy dla arkusza OMAP-C00-2606: zamiast „tulipanów” – „kwiatów” oraz zamiast „na tym klombie” – „w tym ogródku”; nie są to oznaczone wersje X/Y, dlatego podano jeden wpis keys (wersja X).",
+        "Kratownica pod treścią zadania to miejsce na rozwiązanie ucznia, nie rysunek zadaniowy."
+      ],
+      "usage": {
+        "input": 12434,
+        "output": 6327,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 16,
+      "problems": [],
+      "notes": [
+        "Klucz nie rozróżnia wersje X i Y dla tego zadania otwartego; przypisy 4 i 5 odnoszą się tylko do innych kodów arkuszy (OMAP-C00-2606, OMAP-400-2606), dlatego podano jeden wpis keys z wersją X, a znaczniki przypisów pominięto w poziomach punktowych.",
+        "Siatka na rozwiązanie pod treścią zadania jest miejscem na odpowiedź ucznia, nie rysunkiem – nie oznaczono jej jako figury."
+      ],
+      "usage": {
+        "input": 13179,
+        "output": 10858,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 17,
+      "problems": [],
+      "notes": [
+        "Własne rozwiązanie: Ola zapłaciła x + 0,6x = 1,6x = 24 zł, więc x = 15 zł za 500 ml, czyli 30 zł za litr. Ania zapłaciła 3y + 1 = 23,50 zł, więc y = 7,50 zł za 250 ml, czyli 30 zł za litr. Wynik zgodny z kluczem (tak, koszt jest taki sam: 30 zł).",
+        "Klucz zawiera osobne zasady oceniania dla arkuszy OMAP-400-2606 i OMAP-C00-2606, w których pytanie brzmi inaczej (ile złotych zaoszczędziła Ola; odpowiedź 6 zł; 3 pkt – wynik 6 zł, 2 pkt – cena butelki ze zniżką 40%, 1 pkt – cena butelki bez promocji lub równanie x+0,6x=24). Nie dotyczy arkusza OMAP-100-2606, więc pominięto je w poziomach punktowych."
+      ],
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 18,
+      "problems": [],
+      "notes": [
+        "Własne rozwiązanie: kąt ABC = kąt ECB = 26° (naprzemianległe), kąt BCA = 90° - 40° - 26° = 24°, kąt CAB = 130°. Kąty 24°, 26°, 130° są różne, więc trójkąt ABC nie jest równoramienny. Zgodne z kluczem."
+      ],
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 19,
+      "problems": [],
+      "notes": [
+        "Własne rozwiązanie: wysokość z D dzieli trapez na trójkąt prostokątny równoramienny (kąt 45°) o przyprostokątnych 8 cm i prostokąt 8 x x. AB = 3x = 8 + x, więc x = 4, AB = 12. P = (12+4)/2 * 8 = 64 cm2. Zgodne z kluczem."
+      ],
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 20,
+      "problems": [],
+      "notes": [
+        "Własne rozwiązanie: największa ściana boczna opiera się na przeciwprostokątnej: a = 13 cm = H; druga przyprostokątna = sqrt(169-25) = 12; V = (5*12/2)*13 = 390 cm3. Zgodne z kluczem.",
+        "Rysunek graniastosłupa na arkuszu nie zawiera oznaczeń długości."
+      ],
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "Matches the content schema",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Task points add up to the session total",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Each task equals the sum of its items",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Task numbers run 1…N without gaps",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every item has a key for each usable sheet version",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Choice keys point to options that exist",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Levels go from the item's points down to 0",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every item has a skill tag, and every tag has an area",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Page references are within the files",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every figure file exists",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Rubric items point to rubrics that add up to the item's points",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every image in the text points to an existing figure",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Stimuli referenced by tasks exist",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No control characters in the text",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every formula renders",
+      "ok": true,
+      "details": []
+    }
+  ],
+  "ok": true,
+  "tokens": {
+    "input": 0,
+    "output": 0
+  },
+  "approvedAt": "2026-11-19T18:04:47.851Z"
+}

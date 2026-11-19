@@ -31,8 +31,20 @@ export interface Assembled {
 
 const pad = (n: number) => String(n).padStart(2, "0");
 
-export function taskId(subjectId: SubjectId, year: number, n: number): string {
-  return `${PREFIX[subjectId]}-${year}-${pad(n)}`;
+/**
+ * "ma-2026-07" for the main May exam. Supplementary and mock papers of the same year get the month and term in the id
+ * ("ma-2026-06d-07", "pl-2024-12p-03"): progress, mistake review and practice plans key on task and item ids, so ids
+ * must be unique across sessions. Main-term ids stay as they were, so existing answer history keeps matching.
+ */
+export function taskId(subjectId: SubjectId, year: number, n: number, month?: number, term?: "glowny" | "dodatkowy" | "probny"): string {
+  const variant = term && term !== "glowny" ? `${pad(month ?? 0)}${term[0]}-` : "";
+  return `${PREFIX[subjectId]}-${year}-${variant}${pad(n)}`;
+}
+
+/** month and term from a session id such as "matematyka-2026-06-dodatkowy". */
+function variantOf(sessionId: string): [number | undefined, "glowny" | "dodatkowy" | "probny" | undefined] {
+  const m = /-\d{4}-(\d{2})-(glowny|dodatkowy|probny)$/.exec(sessionId);
+  return m ? [Number(m[1]), m[2] as "glowny" | "dodatkowy" | "probny"] : [undefined, undefined];
 }
 
 /** "XII. Obliczenia praktyczne." → { roman: "XII", name: "Obliczenia praktyczne" } */
@@ -154,7 +166,8 @@ function linkFigures(text: string, refs: Map<string, string>, problems: string[]
   return text.replace(/!\[([^\]]*)\]\(([^)]*)\)/g, (whole, _alt: string, target: string) => {
     if (target.startsWith("stimulus:")) return whole;
     const ref = target.replace(/^fig:/, "");
-    const link = refs.get(ref);
+    // Models sometimes return a figure as "fig1" and link it as "fig:1" (or the other way round).
+    const link = refs.get(ref) ?? refs.get(`fig${ref}`) ?? refs.get(ref.replace(/^fig/, ""));
     if (!link) problems.push(`${where}: image "${target}" is not one of the returned figures`);
     return link ?? whole;
   });
@@ -188,15 +201,17 @@ export function buildRubrics(taskId: string, maxPoints: number, essay: DraftEssa
     });
     const sum = criteria.reduce((a, c) => a + c.max, 0);
     if (sum !== maxPoints) problems.push(`Temat ${topic.id}: criteria add up to ${sum}, the essay is worth ${maxPoints}`);
-    for (const g of topic.gates) if (!criteria.some((c) => c.id === g.ifCriterion)) problems.push(`Temat ${topic.id}: gate refers to unknown criterion ${g.ifCriterion}`);
-    const gates = topic.gates.map((g) => ({ ifCriterion: g.ifCriterion, equals: g.equals, thenAllOthers: g.thenAllOthers, ...(g.mode === "cap" ? { mode: "cap" as const } : {}) }));
+    // Models sometimes name the criterion ("Realizacja tematu wypowiedzi") instead of giving its id.
+    const criterionId = (x: string) => criteria.find((c) => c.id === x)?.id ?? criteria.find((c) => c.name.trim().toLowerCase() === x.trim().toLowerCase())?.id;
+    for (const g of topic.gates) if (!criterionId(g.ifCriterion)) problems.push(`Temat ${topic.id}: gate refers to unknown criterion ${g.ifCriterion}`);
+    const gates = topic.gates.map((g) => ({ ifCriterion: criterionId(g.ifCriterion) ?? g.ifCriterion, equals: g.equals, thenAllOthers: g.thenAllOthers, ...(g.mode === "cap" ? { mode: "cap" as const } : {}) }));
     return { id: `${taskId}-t${topic.id}`, maxPoints, criteria, gates };
   });
 }
 
 export function assemble(draft: DraftTask, expected: { number: number; maxPoints: number }, ctx: AssembleCtx): Assembled {
   const problems: string[] = [];
-  const id = taskId(ctx.subjectId, ctx.year, expected.number);
+  const id = taskId(ctx.subjectId, ctx.year, expected.number, ...variantOf(ctx.sessionId));
   if (draft.number !== expected.number) problems.push(`AI returned Zadanie ${draft.number}, expected ${expected.number}`);
   if (draft.maxPoints !== expected.maxPoints) problems.push(`AI says 0–${draft.maxPoints}, sheet says 0–${expected.maxPoints}`);
   const itemSum = draft.items.reduce((s, i) => s + i.maxPoints, 0);
@@ -246,7 +261,16 @@ export function assemble(draft: DraftTask, expected: { number: number; maxPoints
       label: d.label,
       maxPoints: d.maxPoints,
       ...(d.prompt ? { prompt: linkFigures(normalizeSlots(d.prompt), figRefs, problems, `${d.label} prompt`) } : {}),
-      response: response(d, ctx.subjectId, draft.essay),
+      // Answer options can be drawings too (e.g. "A. ![](fig:figA)").
+      response: response(
+        {
+          ...d,
+          options: d.options.map((o) => ({ ...o, text: o.text.includes("fig:") ? linkFigures(o.text, figRefs, problems, `${d.label} ${o.id}`) : o.text })),
+          reasons: d.reasons.map((o) => ({ ...o, text: o.text.includes("fig:") ? linkFigures(o.text, figRefs, problems, `${d.label} ${o.id}`) : o.text })),
+        },
+        ctx.subjectId,
+        draft.essay,
+      ),
       key: keys,
       scoring: scoring(d, problems, rubricIds),
       skillTags: [...new Set(itemTags.map((t) => t.id))],

@@ -1,0 +1,2129 @@
+{
+  "session": {
+    "id": "polski-2024-12-probny",
+    "subjectId": "polski",
+    "year": 2024,
+    "month": 12,
+    "term": "probny",
+    "examDate": "2024-12-02",
+    "formCode": "OPOP-100",
+    "versions": [
+      "X"
+    ],
+    "maxPoints": 45,
+    "taskOrder": [
+      "pl-2024-12p-01",
+      "pl-2024-12p-02",
+      "pl-2024-12p-03",
+      "pl-2024-12p-04",
+      "pl-2024-12p-05",
+      "pl-2024-12p-06",
+      "pl-2024-12p-07",
+      "pl-2024-12p-08",
+      "pl-2024-12p-09",
+      "pl-2024-12p-10",
+      "pl-2024-12p-11",
+      "pl-2024-12p-12",
+      "pl-2024-12p-13",
+      "pl-2024-12p-14",
+      "pl-2024-12p-15",
+      "pl-2024-12p-16",
+      "pl-2024-12p-17",
+      "pl-2024-12p-18"
+    ],
+    "sources": [
+      {
+        "kind": "klucz",
+        "path": "Język polski/Additional/Grudzień 2024/jezyk-polski-2024-grudzien-egzamin-osmoklasisty-probny-odpowiedzi.pdf",
+        "sha256": "4212b5c4dfcc1b62a8fec9cf7489a46ddde14886d3708de92a43b111abe23784",
+        "pages": 26
+      },
+      {
+        "kind": "arkusz",
+        "path": "Język polski/Additional/Grudzień 2024/jezyk-polski-2024-grudzien-egzamin-osmoklasisty-probny.pdf",
+        "sha256": "f9bdae47da5672fc7e4d7eb76b96f855f7d963440b4b8349f70c753a72d74763",
+        "pages": 24
+      }
+    ],
+    "contentVersion": "879a4ee6068223f7",
+    "status": "published"
+  },
+  "stimuli": [
+    {
+      "id": "pl-2024-12p-tekst-1",
+      "kind": "text",
+      "title": "Hobbit, czyli tam i z powrotem",
+      "author": "John Ronald Reuel Tolkien",
+      "lines": [
+        "Długo stały krasnoludy w ciemnościach pod drzwiami, naradzając się, co robić, wreszcie przemówił Thorin:",
+        "– Oto wybiła godzina szanownego pana Bagginsa, który okazał się cennym przyjacielem w ciągu całej długiej podróży, jako hobbit – nadspodziewanie na swój wzrost – wielki męstwem, niewyczerpany w pomysłach, a także, pozwolę sobie rzec, obdarzony nad zwykłą miarę szczęściem w przygodach. Wybiła tedy godzina, by pan Baggins wypełnił zadanie, do którego zobowiązaliśmy go, zabierając z sobą na tę wyprawę, i przyszedł czas, by zarobił na obiecane wynagrodzenie. […]",
+        "Chwila była rzeczywiście doniosła, lecz Bilbo niecierpliwił się bardzo. Bilbo także już zdążył poznać dobrze Thorina i od razu zgadł, o co mu chodzi.",
+        "– Jeśli chcesz przez to powiedzieć, że twoim zdaniem ja powinienem pierwszy zapuścić się w ten tajemniczy korytarz, o Thorinie, synu Thraina, zwany Dębową Tarczą, oby broda twoja urosła jeszcze dłuższa! – przerwał mu gniewnie – mów tak od razu i daj spokój ceregielom. Mógłbym odmówić. Wyratowałem was dwukrotnie z ciężkich tarapatów, co nie było przewidziane w umowie, toteż, jak sądzę, już zarobiłem na wynagrodzenie. Ale do trzech razy sztuka – jak powiadał mój ojciec, więc nie odmówię, choć sam nie bardzo rozumiem dlaczego. Może nauczyłem się ufać własnemu szczęściu bardziej niż dawnymi laty. […] W każdym razie gotów jestem iść, zajrzeć do środka, skończyć z tym wreszcie. Kto pójdzie ze mną?",
+        "Nie spodziewał się usłyszeć chóru licznych ochotników, więc nie doznał rozczarowania. Kili i Fili z zakłopotanymi minami spojrzeli na siebie, przestępując z nogi na nogę, inni nawet nie udawali ochoty, z wyjątkiem sędziwego Balina, stałego wartownika drużyny, który szczególnie polubił hobbita. Balin więc oświadczył, że pójdzie z Bilbem do wnętrza jamy, przynajmniej kawałek drogi, żeby w razie potrzeby skrzyknąć pomoc. […]",
+        "Kiedy hobbit wsuwał się przez zaczarowane drzwi do wnętrza Góry, za jego plecami gwiazdy ukazały się na bladym, pociętym czarnymi pasmami niebie. Droga okazała się łatwiejsza, niż przewidywał. […]",
+        "Po chwili Balin, życząc hobbitowi szczęśliwej drogi, zatrzymał się w miejscu, z którego mógł jeszcze dostrzec nikły zarys drzwi i dosłyszeć, dzięki echu odbijającemu się o ściany korytarza, szmer głosów przyjaciół szepczących we wnęce u wejścia. Wówczas Bilbo wsunął pierścień na palec i bardziej nawet, niż jest to w zwyczaju hobbitów – ze względu na echo – wystrzegając się jakiegokolwiek hałasu, bezszelestnie zaczął schodzić w dół, w dół, w ciemność. Trząsł się ze strachu, ale jego drobna twarzyczka miała wyraz stanowczy i zawzięty. […] Wysunął mieczyk, zacisnął pasa i szedł naprzód.",
+        "Teraz już wpadłeś po uszy, Bilbo Baggins – powiedział sobie. – Tamtej nocy, przyjmując krasnoludów w swoim domu, wdepnąłeś w tę historię, a dziś, żeby się z niej wydobyć, płacisz. Tam do licha, ależ głupiec był i jest z ciebie! – odezwała się najmniej Tukowa część jego istoty. – Daruję chętnie wszystkie skarby strzeżone przez smoka, niechby sobie na wieki zostały w podziemiu, bylebym ja obudził się i przekonał, że ten okropny tunel to po prostu mój własny pokój w moim własnym domu."
+      ],
+      "lineNumbering": "none",
+      "source": "John Ronald Reuel Tolkien, Hobbit, czyli tam i z powrotem, tłum. Maria Skibniewska, Warszawa 1997.",
+      "wordCount": 481,
+      "ref": {
+        "source": "arkusz",
+        "page": 5
+      }
+    },
+    {
+      "id": "pl-2024-12p-tekst-2",
+      "kind": "text",
+      "title": "Ciekawość",
+      "author": "Wojciech Chudy",
+      "lines": [
+        "Ciekawość to siła tkwiąca w człowieku, która pobudza go do szukania i do odkrywania ciągle czegoś nowego – nowych rozwiązań technicznych, poznawania nowych krajów, ludzi – czy też do doświadczania nowych przeżyć. Dziecko od urodzenia jest ciekawe świata. Odkąd zacznie składać słowa, pyta: „Co to?”, „Po co?”, „Dlaczego?”. Nie na darmo nazywa się ten okres w życiu człowieka wiekiem najbardziej filozoficznym. Z czasem pytań jest coraz mniej (ponieważ pytać nie wypada), ale ciekawość pozostaje.",
+        "Ciekawość stoi u podstaw nauki i filozofii. Ten sam motyw, ta sama głęboka inspiracja, spowodował odkrycie prawa Archimedesa¹, praw Newtona², Einsteina³ i Hubble’a⁴. To samo „wścibstwo” co do miejsca i sensu naszego bycia w świecie („Skąd przyszedłem?”, „Gdzie jestem?”, „Dokąd zdążam?”) zrodziło różne systemy filozoficzne. W miarę rozwoju nauk potężniała ciekawość ludzka. To ona ostatecznie doprowadziła do rewolucji naukowo-technicznej XX wieku. Ale to ona również każe zaglądać dziecku do garnka!",
+        "W czym tkwi źródło ludzkiej ciekawości? Z pewnością w jedności człowieka ze światem. Cały świat i wszyscy ludzie stanowią naturalne środowisko człowieka. Wszystko, co istnieje, jest mu bliskie. A to, co bliskie, musi być poznane. Chciałoby się, aby było odkryte, odsłonięte we wszystkich wymiarach. Wystarczy, że jest, że istnieje – a już zaciekawia. Edmund Hillary, słynny zdobywca Mount Everestu (1953 r.), na pytanie, dlaczego właściwie zdobywa szczyt, odpowiedział: „Idę tam, bo on tam stoi”.",
+        "Zasadniczo oceniamy ciekawość ludzką pozytywnie. Wiemy, że poszerza ona wiedzę i może prowadzić do wynalazków czy pożytecznych odkryć dających poczucie satysfakcji. Znamy jednak również ciemne strony ciekawości. Istnieją przecież pojęcia ciekawości przesadnej lub niezdrowej. Taką jest z pewnością naruszająca czyjąś prywatność ciekawość dziennikarska lub też chęć nowych doznań, prowadząca do odrzucenia wszelkich norm. Nie bez powodu mówi się przecież o ciekawości, że jest „pierwszym stopniem do piekła”.",
+        "Ważne więc jest, aby nie przekraczać granic ciekawości. Trzeba w pewnych sytuacjach powiedzieć „stop!”. Trzeba wyłączyć ciekawość, gdy może się ona okazać szkodliwa dla człowieka, dla jego życia, dla zdrowia lub dla spraw osobistych. Trzeba wyłączyć ciekawość, gdy może ona szkodzić naszej Ziemi, systemowi wartości i obyczajom. Należy też wyzbyć się ciekawości, gdy stoi się – to można niekiedy wyczuć – nie przed zagadką, lecz przed tajemnicą."
+      ],
+      "lineNumbering": "none",
+      "source": "Na podstawie: Wojciech Chudy, Ciekawość, www.forumakademickie.pl",
+      "footnotes": [
+        {
+          "mark": "1",
+          "text": "Archimedes – grecki filozof i matematyk, żył w III w. p.n.e."
+        },
+        {
+          "mark": "2",
+          "text": "Isaak Newton – angielski fizyk, astronom, matematyk, filozof, żył na przełomie XVII i XVIII w., skonstruował teleskop."
+        },
+        {
+          "mark": "3",
+          "text": "Albert Einstein – fizyk, żył na przełomie XIX i XX w., laureat Nagrody Nobla, twórca teorii względności."
+        },
+        {
+          "mark": "4",
+          "text": "Edwin Powell Hubble – amerykański astronom, żył na przełomie XIX i XX w., odkrył istnienie innych galaktyk poza Drogą Mleczną."
+        }
+      ],
+      "wordCount": 413,
+      "ref": {
+        "source": "arkusz",
+        "page": 11
+      }
+    },
+    {
+      "id": "pl-2024-12p-08-fig1",
+      "kind": "figure",
+      "title": "Portret Johna Ronalda Reuela Tolkiena wraz z reprodukcją jego podpisu.",
+      "asset": "assets/pl-2024-12p-08-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 9
+      }
+    },
+    {
+      "id": "pl-2024-12p-10-fig1",
+      "kind": "figure",
+      "title": "Gazetka ścienna zatytułowana „PRZEDMIOT MA ZNACZENIE” z sześcioma przypiętymi ilustracjami przedmiotów oznaczonymi literami A–F: A – monety, B – dzbanek z malinami, C – kolekcja motyli w ramce, D – wianek z kwiatów, E – studnia, F – książka.",
+      "asset": "assets/pl-2024-12p-10-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "pl-2024-12p-16-fig1",
+      "kind": "figure",
+      "title": "Portret Alberta Einsteina wraz z notą biograficzną: „Albert Einstein (1879–1955) Fizyk teoretyk, twórca teorii względności.”",
+      "asset": "assets/pl-2024-12p-16-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "pl-2024-12p-17-fig1",
+      "kind": "figure",
+      "title": "Czerwona grafika ozdobna z ikonami wynalazków (lornetka, telefon, teleskop, postać) w lewym górnym rogu ramki zaproszenia.",
+      "asset": "assets/pl-2024-12p-17-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 15
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "pl-2024-12p-01",
+      "sessionId": "polski-2024-12-probny",
+      "number": 1,
+      "maxPoints": 1,
+      "instruction": "Na podstawie przytoczonego fragmentu utworu oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.",
+      "stimulusIds": [
+        "pl-2024-12p-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-12p-01",
+          "label": "1",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Narada krasnoludów miała miejsce we wnętrzu Góry. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "W trakcie rozmowy Bilbo spokojnie czekał na decyzję Thorina. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "F",
+                "2": "F"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "Oba stwierdzenia są fałszywe, dlatego poprawny kod odpowiedzi to FF. Narada krasnoludów nie odbyła się we wnętrzu Góry: „Długo stały krasnoludy w ciemnościach pod drzwiami, naradzając się, co robić”. Bilbo także nie czekał spokojnie na decyzję Thorina: w tekście czytamy, że „Bilbo niecierpliwił się bardzo”, a gdy zgadł, o co chodzi Thorinowi, „przerwał mu gniewnie”."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "pl-2024-12p-02",
+      "sessionId": "polski-2024-12-probny",
+      "number": 2,
+      "maxPoints": 1,
+      "instruction": "**Dokończ zdanie tak, aby było zgodne z treścią przytoczonego fragmentu utworu.**\n**Wybierz właściwą odpowiedź spośród podanych.**\n\nThorin, aby nakłonić Bilba do wejścia do wnętrza Góry, stwierdził, że hobbit powinien",
+      "stimulusIds": [
+        "pl-2024-12p-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-12p-02",
+          "label": "2",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "stanąć u boku przyjaciół."
+              },
+              {
+                "id": "B",
+                "text": "zaufać swojemu szczęściu."
+              },
+              {
+                "id": "C",
+                "text": "wypełnić swoje zobowiązania."
+              },
+              {
+                "id": "D",
+                "text": "odpracować otrzymaną zapłatę."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "Thorin przypomina Bilbowi, że czas „by pan Baggins wypełnił zadanie, do którego zobowiązaliśmy go”, czyli że hobbit powinien wypełnić swoje zobowiązania – dlatego poprawna jest odpowiedź C. Odpowiedź A jest błędna, bo Thorin nie mówi o staniu u boku przyjaciół. W odpowiedzi B pojawia się szczęście, ale Thorin tylko chwali Bilba jako „obdarzonego nad zwykłą miarę szczęściem w przygodach”, a o zaufaniu własnemu szczęściu mówi dopiero sam hobbit w swojej odpowiedzi. W odpowiedzi D chodzi o zapłatę, ale Thorin mówi o „obiecanym wynagrodzeniu”, które Bilbo ma dopiero zarobić – nie otrzymał go wcześniej."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "pl-2024-12p-03",
+      "sessionId": "polski-2024-12-probny",
+      "number": 3,
+      "maxPoints": 1,
+      "instruction": "Która z poniższych informacji jest zgodna z przytoczonym fragmentem utworu?\nWybierz właściwą odpowiedź spośród podanych.",
+      "stimulusIds": [
+        "pl-2024-12p-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-12p-03",
+          "label": "3",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Thorin poprosił Balina o towarzyszenie hobbitowi."
+              },
+              {
+                "id": "B",
+                "text": "Bilbo wszedł do wnętrza Góry niezależnie od namów Thorina."
+              },
+              {
+                "id": "C",
+                "text": "Thorin postanowił towarzyszyć hobbitowi w wyprawie po skarb."
+              },
+              {
+                "id": "D",
+                "text": "Bilbo uważał skarby z wnętrza Góry za cenniejsze niż własne życie."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "Z przytoczonego fragmentu wynika, że Bilbo samodzielnie podjął decyzję o wejściu do wnętrza Góry – wszedł tam niezależnie od namów Thorina. Pozostałe informacje nie zgadzają się z tekstem: Thorin nie prosił Balina o towarzyszenie hobbitowi ani nie postanowił wyruszyć z nim po skarb, a Bilbo nie uważał skarbów za cenniejsze niż własne życie."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "pl-2024-12p-04",
+      "sessionId": "polski-2024-12-probny",
+      "number": 4,
+      "maxPoints": 1,
+      "instruction": "Które z poniższych zdań charakteryzuje Bilba w przytoczonym fragmencie utworu?\nWybierz właściwą odpowiedź spośród podanych.",
+      "stimulusIds": [
+        "pl-2024-12p-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-12p-04",
+          "label": "4",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Potrafi pokonać strach."
+              },
+              {
+                "id": "B",
+                "text": "Liczy na zdobycie sławy."
+              },
+              {
+                "id": "C",
+                "text": "Wątpi w pomyślność losu."
+              },
+              {
+                "id": "D",
+                "text": "Chce zaimponować krasnoludom."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.9"
+          ],
+          "explanation": "W przytoczonym fragmencie utworu Bilbo, mimo odczuwanego lęku, zdobywa się na odwagę i podejmuje wyzwanie, dlatego charakteryzuje go zdanie „Potrafi pokonać strach”. W tekście nie ma natomiast sygnałów, że bohater liczy na sławę, wątpi w pomyślność losu albo chce zaimponować krasnoludom, więc pozostałe odpowiedzi są niepoprawne."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-1.9"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 7
+      }
+    },
+    {
+      "id": "pl-2024-12p-05",
+      "sessionId": "polski-2024-12-probny",
+      "number": 5,
+      "maxPoints": 2,
+      "instruction": "**Spośród lektur obowiązkowych – innych niż *Hobbit, czyli tam i z powrotem* – wybierz tę, w której podróż bohatera nauczyła go czegoś cennego.**\n\n**Uzasadnij swój wybór. W uzasadnieniu przywołaj sytuację z tej lektury potwierdzającą Twoje stanowisko.**\n\n*Uwaga! Lista lektur obowiązkowych znajduje się na stronach 3 i 4 tego arkusza egzaminacyjnego.*\n\nTytuł lektury: …\n\nBohater lektury: …\n\nUzasadnienie wyboru: …",
+      "stimulusIds": [
+        "pl-2024-12p-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-12p-05",
+          "label": "5",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Tytuł lektury: „Mały Książę”\nBohater lektury: Mały Książę\nUzasadnienie wyboru: Mały Książę podczas podróży na Ziemię i rozmowy z lisem uświadomił sobie, że jest odpowiedzialny za wszystko, co jest jego i że jego róża jest tą jedną jedyną i powinien o nią dbać, dlatego postanowił do niej wrócić."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "podanie tytułu lektury obowiązkowej i bohatera, poprawne uzasadnienie zilustrowane sytuacją z lektury."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "podanie tytułu lektury obowiązkowej i bohatera, poprawne uzasadnienie bez zilustrowania sytuacją z lektury."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-gen-III",
+            "pl-78-1.4"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "Tytuł lektury: „Mały Książę”\nBohater lektury: Mały Książę\nUzasadnienie wyboru: Mały Książę podczas podróży na Ziemię i rozmowy z lisem uświadomił sobie, że jest odpowiedzialny za wszystko, co jest jego i że jego róża jest tą jedną jedyną i powinien o nią dbać, dlatego postanowił do niej wrócić.",
+              "ref": {
+                "source": "klucz",
+                "page": 4
+              }
+            },
+            {
+              "points": 1,
+              "content": "Tytuł lektury: „Mały Książę”\nBohater lektury: Mały Książę\nUzasadnienie wyboru: Wybrałam tę lekturę, ponieważ główny bohater podczas swojej podróży po planetach nauczył się, że trzeba pielęgnować relacje, które się zawiera.",
+              "ref": {
+                "source": "klucz",
+                "page": 4
+              }
+            },
+            {
+              "points": 0,
+              "content": "Tytuł lektury: „Kamienie na szaniec”\nBohater lektury: Zośka\nUzasadnienie wyboru: Wybrałam Zośkę z „Kamieni na szaniec” ponieważ bohater był odważny, gdy walczył o Polskę i nauczył mnie jak to jest być odważnym. Uważam, że jest to bardzo cenne.",
+              "ref": {
+                "source": "klucz",
+                "page": 5
+              }
+            }
+          ],
+          "scoringNotes": [
+            "W przypadku, gdy zdający wskaże poprawnie tytuł lektury, nie wskaże bohatera, ale uzasadnienie pozwala go zidentyfikować, otrzymuje maksymalnie 1 punkt.",
+            "W przypadku, gdy zdający nie wskaże tytułu lektury, wskaże poprawnie bohatera i poprawnie uzasadni swój wybór, otrzymuje maksymalnie 1 punkt.",
+            "W przypadku, gdy zdający wskaże poprawnie tytuł lektury i bohatera, ale błędnie uzasadni swój wybór, otrzymuje 0 punktów.",
+            "W przypadku, gdy zdający wskaże poprawnie tytuł lektury i bohatera, ale nie uzasadni swojego wyboru, otrzymuje 0 punktów."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-gen-III",
+        "pl-78-1.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 7
+      }
+    },
+    {
+      "id": "pl-2024-12p-06",
+      "sessionId": "polski-2024-12-probny",
+      "number": 6,
+      "maxPoints": 1,
+      "instruction": "Oceń prawdziwość podanych stwierdzeń na podstawie przytoczonego fragmentu utworu. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.",
+      "stimulusIds": [
+        "pl-2024-12p-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-12p-06",
+          "label": "6",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "W sformułowaniu bezszelestnie zaczął schodzić w dół, w dół, w ciemność zastosowano powtórzenie, aby podkreślić łatwość drogi, którą miał pokonać hobbit. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Użycie zdrobnień w sformułowaniach wysunął mieczyk, drobna twarzyczka wskazuje na lekceważący stosunek narratora wobec hobbita. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "F",
+                "2": "F"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.4"
+          ],
+          "explanation": "Powtórzenie „w dół, w dół, w ciemność” podkreśla, że droga hobbita była trudna, niebezpieczna i pełna niepewności, a nie łatwa, dlatego pierwsze stwierdzenie jest fałszywe. Zdrobnienia „mieczyk” i „twarzyczka” wyrażają sympatię oraz czułość narratora wobec małego bohatera, a nie lekceważenie, więc drugie stwierdzenie również jest fałszywe. Poprawna odpowiedź to FF."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-1.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "pl-2024-12p-07",
+      "sessionId": "polski-2024-12-probny",
+      "number": 7,
+      "maxPoints": 2,
+      "instruction": "Przeczytaj poniższy fragment utworu.\n\n> W jednej z dzielnic warszawskich było środowisko młodzieży harcerskiej, które umiało stworzyć atmosferę i warunki, w jakich młodzież czuła się dobrze, pragnęła sama kształcić swe charaktery, sama sobie stawiała cele i sama czyniła wszystko, co w jej mocy, by te cele osiągnąć.\n>\n> Jednym z zespołów tego środowiska był zespół Buków, nazywany tak od częstych wypraw leśnych, jakie czynił rokrocznie.",
+      "stimulusIds": [
+        "pl-2024-12p-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-12p-07-1",
+          "label": "7.1",
+          "maxPoints": 1,
+          "prompt": "**Podaj tytuł lektury obowiązkowej, z której pochodzi powyższy fragment.**",
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "*Kamienie na szaniec*"
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "odpowiedź poprawna."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-III",
+            "pl-78-1.4",
+            "pl-gen-I",
+            "pl-46-1.9"
+          ],
+          "explanation": "Fragment opisuje warszawskie środowisko młodzieży harcerskiej i zespół Buków, który wyruszał na wyprawy leśne. Tak zaczyna się lektura obowiązkowa Aleksandra Kamińskiego „Kamienie na szaniec”, więc to jej tytuł należy podać."
+        },
+        {
+          "id": "pl-2024-12p-07-2",
+          "label": "7.2",
+          "maxPoints": 1,
+          "prompt": "**Odwołując się do znajomości całego utworu, z którego pochodzi powyższy fragment, podaj imię albo pseudonim bohatera tej lektury, który mimo lęku i obaw podjął się wykonać jakieś trudne zadanie. Wyjaśnij, na czym polegała trudność tego zadania.**",
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Tadeusz Zawadzki podjął się przeprowadzenia akcji pod Arsenałem. Akcja była bardzo trudna, ponieważ więźniarka z więźniami oraz z Rudym jechała trasą, która znajdowała się w centrum miasta, oraz była strzeżona przez kilka umundurowanych osób."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "odpowiedź poprawna."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-III",
+            "pl-78-1.4",
+            "pl-gen-I",
+            "pl-46-1.9"
+          ],
+          "explanation": "Odpowiedź musi zawierać dwie części: imię lub pseudonim bohatera oraz wyjaśnienie, na czym polegała trudność zadania. Na przykład Tadeusz Zawadzki („Zośka”) dowodził akcją pod Arsenałem, a trudność polegała na tym, że więźniarka z Rudym jechała przez centrum miasta i była strzeżona przez umundurowanych Niemców. Samo nazwanie bohatera i zadania bez wyjaśnienia trudności to odpowiedź niepełna.",
+          "exemplars": [
+            {
+              "points": 1,
+              "content": "Tadeusz Zawadzki podjął się przeprowadzenia akcji pod Arsenałem. Akcja była bardzo trudna, ponieważ więźniarka z więźniami oraz z Rudym jechała trasą, która znajdowała się w centrum miasta, oraz była strzeżona przez kilka umundurowanych osób.",
+              "ref": {
+                "source": "klucz",
+                "page": 6
+              }
+            },
+            {
+              "points": 0,
+              "content": "„Rudy”. Bohater pomimo lęku i obaw, zdejmował flagi przeciwnika, chociaż mogło go to kosztować życie.",
+              "ref": {
+                "source": "klucz",
+                "page": 6
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-III",
+        "pl-78-1.4",
+        "pl-gen-I",
+        "pl-46-1.9"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "pl-2024-12p-08",
+      "sessionId": "polski-2024-12-probny",
+      "number": 8,
+      "maxPoints": 1,
+      "instruction": "**Jedno z poniższych zdań dotyczących Johna Ronalda Reuela Tolkiena zapisano niezgodnie z regułami interpunkcji. Wybierz zdanie, w którym <u>interpunkcja jest niepoprawna</u>.**\n\n**John Ronald Reuel Tolkien**\n\n![Portret Johna Ronalda Reuela Tolkiena wraz z reprodukcją jego podpisu.](stimulus:pl-2024-12p-08-fig1)",
+      "stimulusIds": [
+        "pl-2024-12p-tekst-1",
+        "pl-2024-12p-08-fig1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-12p-08",
+          "label": "8",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Był poliglotą, czyli posługiwał się wieloma językami."
+              },
+              {
+                "id": "B",
+                "text": "Uczył się zarówno języków współczesnych, jak i starożytnych."
+              },
+              {
+                "id": "C",
+                "text": "Tworzył także fikcyjne języki, którymi posługiwali się bohaterowie jego powieści."
+              },
+              {
+                "id": "D",
+                "text": "Jednym ze stworzonych przez niego języków, była tak zwana mowa elfów czyli Quenya."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-4.2"
+          ],
+          "explanation": "Poprawna odpowiedź to D. W tym zdaniu interpunkcja jest błędna na dwa sposoby: przecinek stoi po wyrazie „języków”, czyli oddziela podmiot od orzeczenia („Jednym ze stworzonych przez niego języków była…”), a przecinka brakuje przed wyrazem „czyli”, który wprowadza dopowiedzenie („mowa elfów, czyli Quenya”). W pozostałych zdaniach interpunkcja jest poprawna: w A przecinek stoi przed „czyli”, w B przed „jak i” w parze „zarówno…, jak i…”, a w C przecinek otwiera zdanie podrzędne („…języki, którymi posługiwali się bohaterowie jego powieści”)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-4.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 9
+      }
+    },
+    {
+      "id": "pl-2024-12p-09",
+      "sessionId": "polski-2024-12-probny",
+      "number": 9,
+      "maxPoints": 1,
+      "instruction": "**Oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "pl-2024-12p-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-12p-09",
+          "label": "9",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Wypowiedzenie *Bilbo także już zdążył poznać dobrze Thorina i od razu zgadł, o co mu chodzi* jest zdaniem wielokrotnie złożonym. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "W wypowiedzeniu *<u>Kiedy hobbit wsuwał się przez zaczarowane drzwi do wnętrza Góry</u>, za jego plecami gwiazdy ukazały się na bladym, pociętym czarnymi pasmami niebie* podkreślono zdanie nadrzędne. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "F"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-1.12",
+            "pl-78-1.5"
+          ],
+          "explanation": "Pierwsze wypowiedzenie składa się z trzech zdań składowych: „Bilbo także już zdążył poznać dobrze Thorina”, „i od razu zgadł” oraz „o co mu chodzi”, więc jest zdaniem wielokrotnie złożonym – stwierdzenie 1 jest prawdziwe (P). W drugim wypowiedzeniu podkreślony fragment „Kiedy hobbit wsuwał się przez zaczarowane drzwi do wnętrza Góry” zaczyna się od spójnika „kiedy” i jest zdaniem podrzędnym, a nie nadrzędnym, więc stwierdzenie 2 jest fałszywe (F). Poprawny kod odpowiedzi to PF."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-1.12",
+        "pl-78-1.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 9
+      }
+    },
+    {
+      "id": "pl-2024-12p-10",
+      "sessionId": "polski-2024-12-probny",
+      "number": 10,
+      "maxPoints": 2,
+      "instruction": "Uczniowie jednej z klas przygotowali gazetkę ścienną. Na tablicy umieścili ilustracje wybranych przedmiotów nawiązujących do lektur obowiązkowych.\n\n![Gazetka ścienna zatytułowana „PRZEDMIOT MA ZNACZENIE” z sześcioma przypiętymi ilustracjami przedmiotów oznaczonymi literami A–F: A – monety, B – dzbanek z malinami, C – kolekcja motyli w ramce, D – wianek z kwiatów, E – studnia, F – książka.](stimulus:pl-2024-12p-10-fig1)\n\n**Spośród ilustracji oznaczonych literami A–F wybierz jedną i podaj tytuł lektury obowiązkowej, do której ona nawiązuje. Wyjaśnij związek elementu graficznego przedstawionego na wybranej przez Ciebie ilustracji z losami wybranego bohatera tej lektury.**\n\n*Uwaga! Lista lektur obowiązkowych znajduje się na stronach 3 i 4 tego arkusza egzaminacyjnego.*\n\nWybieram ilustrację oznaczoną literą: …\n\nTytuł lektury obowiązkowej: …\n\nBohater lektury obowiązkowej: …\n\nWyjaśnienie: …",
+      "stimulusIds": [
+        "pl-2024-12p-tekst-1",
+        "pl-2024-12p-10-fig1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-12p-10",
+          "label": "10",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Wybieram ilustrację oznaczoną literą: *A*\nTytuł lektury obowiązkowej: „Opowieść wigilijna”\nBohater lektury obowiązkowej: *Ebenezer Scrooge*\nWyjaśnienie: *Monety przedstawione na obrazku nawiązują do chciwości Ebenezera. Mówią też o jego przemianie.*"
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "uczeń podaje tytuł lektury obowiązkowej i bohatera oraz wyjaśnia, w jaki sposób element graficzny łączy się z losami tego bohatera."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "uczeń podaje tytuł lektury obowiązkowej i bohatera, ale nie podaje wyjaśnienia albo wyjaśnienie jest niepełne",
+                  "ALBO podaje tytuł lektury obowiązkowej, nie podaje bohatera lektury, ale wyjaśnienie związku elementu graficznego z losami jednego z bohaterów tej lektury pozwala zidentyfikować tego bohatera,",
+                  "ALBO uczeń nie podaje tytułu lektury, ale podaje bohatera lektury obowiązkowej i poprawnie wyjaśnia związek elementu graficznego z losami tego bohatera."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-2.12"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "Wybieram ilustrację oznaczoną literą: *A*\nTytuł lektury obowiązkowej: „Opowieść wigilijna”\nBohater lektury obowiązkowej: *Ebenezer Scrooge*\nWyjaśnienie: *Monety przedstawione na obrazku nawiązują do chciwości Ebenezera. Mówią też o jego przemianie.*",
+              "ref": {
+                "source": "klucz",
+                "page": 7
+              }
+            },
+            {
+              "points": 2,
+              "content": "Wybieram ilustrację oznaczoną literą: *B*\nTytuł lektury obowiązkowej: „Balladyna”\nBohater lektury obowiązkowej: *Alina*\nWyjaśnienie: *Alina zebrała więcej malin w dzbanku, przez to Balladyna czuje się zagrożona, więc zabija siostrę, by wygrać zawody i zostać żoną księcia Kirkora.*",
+              "ref": {
+                "source": "klucz",
+                "page": 7
+              }
+            },
+            {
+              "points": 2,
+              "content": "Wybieram ilustrację oznaczoną literą: *C*\nTytuł lektury obowiązkowej: „Zemsta”\nBohater lektury obowiązkowej: *Papkin*\nWyjaśnienie: *Bohater posiadał kolekcję motyli. Wspomina o tym, gdy pisze testament i motyle zapisuje Klarze, której wcześniej się oświadcza.*",
+              "ref": {
+                "source": "klucz",
+                "page": 7
+              }
+            },
+            {
+              "points": 2,
+              "content": "Wybieram ilustrację oznaczoną literą: *D*\nTytuł lektury obowiązkowej: „Świtezianka”\nBohater lektury obowiązkowej: *Świtezianka*\nWyjaśnienie: *Strzelec podczas spotkania z dziewczyną dawał jej kwiaty, z których ona plotła wianek.*",
+              "ref": {
+                "source": "klucz",
+                "page": 7
+              }
+            },
+            {
+              "points": 2,
+              "content": "Wybieram ilustrację oznaczoną literą: *E*\nTytuł lektury obowiązkowej: „Mały Książę”\nBohater lektury obowiązkowej: *Mały Książę*\nWyjaśnienie: *Kiedy Mały Książę był na pustyni, razem z Pilotem poszukiwali studni, żeby napić się z niej wody.*",
+              "ref": {
+                "source": "klucz",
+                "page": 8
+              }
+            },
+            {
+              "points": 2,
+              "content": "Wybieram ilustrację oznaczoną literą: *F*\nTytuł lektury obowiązkowej: „Latarnik”\nBohater lektury obowiązkowej: *Skawiński*\nWyjaśnienie: *Skawiński dostał książkę pt. „Pan Tadeusz”. Lektura wywołała w nim silne emocje, przez które zapomniał zapalić latarnię i stracił pracę.*",
+              "ref": {
+                "source": "klucz",
+                "page": 8
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-2.12"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "pl-2024-12p-11",
+      "sessionId": "polski-2024-12-probny",
+      "number": 11,
+      "maxPoints": 2,
+      "instruction": "**Uzupełnij poniższe zdania w taki sposób, aby powstało streszczenie tekstu *Ciekawość*. Nie cytuj sformułowań z arkusza.**\n\nTematem tekstu Wojciecha Chudego jest ………………………………………………………………………… .\n\nW swoich rozważaniach autor podkreśla ………………………………………………………………………\n……………………………………………………………………………………………………………………….,\n\nale zauważa również ……………………………………………………………………………………………\n……………………………………………………………………………………………………………………. .\n\nW końcowym wniosku zwraca uwagę, że ………………………………………………………………………\n……………………………………………………………………………………………………………………. .",
+      "stimulusIds": [
+        "pl-2024-12p-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-12p-11",
+          "label": "11",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Tematem tekstu Wojciecha Chudego jest *wpływ ciekawości na różne dziedziny życia*.\nW swoich rozważaniach autor podkreśla, że *świat wiele zawdzięcza ludzkiej ciekawości*, ale zauważa również *negatywne oblicza ciekawości*. W końcowym wniosku zwraca uwagę, że *należy korzystać z ciekawości z umiarem, gdyż nadmierna ciekawość może wyrządzić wiele szkody*."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawne określenie tematu i tego, co na ten temat powiedziano w tekście; zachowanie właściwego poziomu uogólnienia."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawne określenie tematu i tego, co na ten temat powiedziano w tekście; zaburzony poziom uogólnienia."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-2.3",
+            "pl-gen-III",
+            "pl-78-2.2"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "Tematem tekstu Wojciecha Chudego jest *wpływ ciekawości na różne dziedziny życia*.\nW swoich rozważaniach autor podkreśla, że *świat wiele zawdzięcza ludzkiej ciekawości*, ale zauważa również *negatywne oblicza ciekawości*. W końcowym wniosku zwraca uwagę, że *należy korzystać z ciekawości z umiarem, gdyż nadmierna ciekawość może wyrządzić wiele szkody*.",
+              "ref": {
+                "source": "klucz",
+                "page": 8
+              }
+            },
+            {
+              "points": 1,
+              "content": "Tematem tekstu Wojciecha Chudego jest *ciekawość*.\nW swoich rozważaniach autor podkreśla *jej zalety*,\nale zauważa również *wady*.\nW końcowym wniosku zwraca uwagę, że *ma ona swoje granice*.",
+              "ref": {
+                "source": "klucz",
+                "page": 8
+              }
+            },
+            {
+              "points": 0,
+              "content": "Tematem tekstu Wojciecha Chudego jest *ciekawość człowieka*.\nW swoich rozważaniach autor podkreśla, że *„ciekawość stoi u podstaw nauki i filozofii”*,\nale zauważa również, że *„cały świat i wszyscy ludzie stanowią naturalne środowisko człowieka”*.\nW końcowym wniosku zwraca uwagę, że *„ważne również jest, aby nie przekraczać granic ciekawości”*.",
+              "ref": {
+                "source": "klucz",
+                "page": 9
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Uczeń otrzymuje 0 punktów, jeśli jego wypowiedź w całości składa się z fragmentów przepisanych z tekstu „Ciekawość”."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-2.3",
+        "pl-gen-III",
+        "pl-78-2.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "pl-2024-12p-12",
+      "sessionId": "polski-2024-12-probny",
+      "number": 12,
+      "maxPoints": 1,
+      "instruction": "Spośród podanych niżej pytań wybierz to, na które odpowiedź **znajdziesz** w ostatnim akapicie tekstu. Wybierz właściwą odpowiedź spośród podanych.",
+      "stimulusIds": [
+        "pl-2024-12p-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-12p-12",
+          "label": "12",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Do czego skłania nas ciekawość?"
+              },
+              {
+                "id": "B",
+                "text": "Kiedy należy pohamować ciekawość?"
+              },
+              {
+                "id": "C",
+                "text": "Co leży u podstaw ludzkiej ciekawości?"
+              },
+              {
+                "id": "D",
+                "text": "Jakie pożytki ma ludzkość z ciekawości?"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "W ostatnim akapicie tekstu Wojciecha Chudego pojawia się myśl, że „Ważne więc jest, aby nie przekraczać granic ciekawości”. To właśnie odpowiedź na pytanie, kiedy należy pohamować ciekawość, dlatego poprawna jest odpowiedź B. Pozostałe pytania dotyczą innych fragmentów tekstu lub informacji, których w ostatnim akapicie nie ma."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "pl-2024-12p-13",
+      "sessionId": "polski-2024-12-probny",
+      "number": 13,
+      "maxPoints": 1,
+      "instruction": "**Oceń prawdziwość podanych stwierdzeń na podstawie przytoczonego tekstu. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "pl-2024-12p-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-12p-13",
+          "label": "13",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Z tekstu wynika, że dzieci z czasem przestają zadawać pytania, gdyż tracą ciekawość świata. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Z tekstu wynika, że dzięki ciekawości możliwy był postęp cywilizacyjny. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "F",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-2.2"
+          ],
+          "explanation": "Aby rozwiązać zadanie, trzeba odnaleźć w tekście fragmenty odnoszące się do każdego stwierdzenia. Pierwsze stwierdzenie jest fałszywe (F), ponieważ z tekstu nie wynika, że dzieci przestają zadawać pytania z powodu utraty ciekawości świata – autor wskazuje inne przyczyny tego zjawiska. Drugie stwierdzenie jest prawdziwe (P), bo w tekście pojawia się myśl, że to właśnie ciekawość ludzi prowadziła do odkryć i rozwoju cywilizacji. Dlatego poprawny kod odpowiedzi to FP."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-2.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "pl-2024-12p-14",
+      "sessionId": "polski-2024-12-probny",
+      "number": 14,
+      "maxPoints": 2,
+      "instruction": "Przeczytaj bajkę Ignacego Krasickiego.\n\n> Ignacy Krasicki  \n> **JOWISZ¹ I OWCE**\n>\n> Naprzykrzały się bogom częstymi prośbami  \n> Owce, chcąc wiedzieć, co się stanie z jagniętami.  \n> Rzekł im Jowisz: «Lepiej to dla was, że nie wiecie.  \n> Ale kiedy koniecznie przyszłość dociec² chcecie,\n>\n> Godna kary ciekawość w uporze zacięta:  \n> I was ludzie wygubią, i wasze jagnięta».  \n> W ścisłym kręgu ciekawość naszą trzeba mieścić:  \n> Wie niebo, co nam taić; wie, co nam obwieścić.\n>\n> *Ignacy Krasicki, Jowisz i owce, [w:] tegoż: Bajki, Wrocław 1989.*\n\n¹ Jowisz – w miologii rzymskiej bóg nieba i ziemi.  \n² Dociec – dowiedzieć się czegoś, zbadać istotę jakiegoś zjawiska.",
+      "stimulusIds": [
+        "pl-2024-12p-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-12p-14-1",
+          "label": "14.1",
+          "maxPoints": 1,
+          "prompt": "**Wskaż zdanie, które <u>nie jest zgodne</u> z morałem bajki Jowisz i owce. Wybierz właściwą odpowiedź spośród podanych.**",
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Zbytnia ciekawość może zostać ukarana."
+              },
+              {
+                "id": "B",
+                "text": "W byciu ciekawym należy zachować umiar."
+              },
+              {
+                "id": "C",
+                "text": "Niektóre tajemnice powinny zostać nieodkryte."
+              },
+              {
+                "id": "D",
+                "text": "Warto szukać odpowiedzi na wszystkie pytania."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.3",
+            "pl-78-1.7"
+          ],
+          "explanation": "Morał bajki zawiera się w wersach: „W ścisłym kręgu ciekawość naszą trzeba mieścić: / Wie niebo, co nam taić; wie, co nam obwieścić”. Oznacza to, że zbytnia ciekawość może zostać ukarana (A), że w ciekawości trzeba zachować umiar (B) i że niektóre tajemnice powinny pozostać nieodkryte (C). Niezgodne z morałem jest zdanie D, ponieważ bajka przestrzega przed dążeniem do poznania wszystkiego: Jowisz przepowiada owcom, że za natarczywą ciekawość spotka je kara – ludzie wygubią je i ich jagnięta."
+        },
+        {
+          "id": "pl-2024-12p-14-2",
+          "label": "14.2",
+          "maxPoints": 1,
+          "prompt": "**Odpowiedz na pytanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nKtóry akapit tekstu Wojciecha Chudego wyraża myśl podobną do morału wynikającego z bajki Jowisz i owce?",
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Pierwszy."
+              },
+              {
+                "id": "B",
+                "text": "Drugi."
+              },
+              {
+                "id": "C",
+                "text": "Trzeci."
+              },
+              {
+                "id": "D",
+                "text": "Piąty."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.3",
+            "pl-78-1.7"
+          ],
+          "explanation": "Morał bajki mówi, że ciekawość trzeba mieścić w ścisłym kręgu, czyli nie przekraczać jej granic – nie wszystko powinno być odkryte i poznane. Podobną myśl wyraża piąty akapit tekstu Wojciecha Chudego, w którym autor zwraca uwagę, że ważne jest, aby nie przekraczać granic ciekawości. Wcześniejsze akapity mówią o ciekawości jako podstawie nauki i filozofii oraz o świecie i ludziach jako naturalnym środowisku człowieka, więc poprawna jest odpowiedź D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-1.3",
+        "pl-78-1.7"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 13
+      }
+    },
+    {
+      "id": "pl-2024-12p-15",
+      "sessionId": "polski-2024-12-probny",
+      "number": 15,
+      "maxPoints": 1,
+      "instruction": "Uzupełnij poniższe zdanie. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nW zdaniu *Zasadniczo oceniamy ciekawość ludzką <u>pozytywnie</u>* podkreślony wyraz to [[A|B]], pełniący funkcję [[C|D]].",
+      "stimulusIds": [
+        "pl-2024-12p-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-12p-15",
+          "label": "15",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "przymiotnik"
+              },
+              {
+                "id": "B",
+                "text": "przysłówek"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "przydawki"
+              },
+              {
+                "id": "D",
+                "text": "okolicznika"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "B",
+                "reason": "D"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-1.1",
+            "pl-46-1.8"
+          ],
+          "explanation": "Podkreślony wyraz „pozytywnie” odpowiada na pytanie „jak?” i określa czasownik „oceniamy”, dlatego jest przysłówkiem. W zdaniu przysłówek ten pełni funkcję okolicznika sposobu. Poprawna odpowiedź to B oraz D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-1.1",
+        "pl-46-1.8"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "pl-2024-12p-16",
+      "sessionId": "polski-2024-12-probny",
+      "number": 16,
+      "maxPoints": 2,
+      "instruction": "Albert Einstein – wybitny fizyk – powiedział:\n\n> *Nie mam żadnych szczególnych uzdolnień. Cechuje mnie tylko niepohamowana ciekawość.*\n\n![Portret Alberta Einsteina wraz z notą biograficzną: „Albert Einstein (1879–1955) Fizyk teoretyk, twórca teorii względności.”](stimulus:pl-2024-12p-16-fig1)\n\n**Uzupełnij poniższe zdanie.**\n\nPartykuła „nie” została zapisana najpierw rozłącznie, ponieważ ………………………………………… …………………………………………, a następnie – łącznie, gdyż ………………………………………… ………………………………………… .",
+      "stimulusIds": [
+        "pl-2024-12p-tekst-2",
+        "pl-2024-12p-16-fig1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-12p-16",
+          "label": "16",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Partykuła „nie” została zapisana najpierw rozłącznie, ponieważ *wyraz „mam” jest czasownikiem*, a następnie – łącznie, gdyż *wyraz „pohamowana” to imiesłów przymiotnikowy*."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawne uzupełnienie dwóch luk w zdaniu."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawne uzupełnienie jednej luki w zdaniu."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-4.1"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "Partykuła „nie” została zapisana najpierw rozłącznie, ponieważ *wyraz „mam” jest czasownikiem*, a następnie – łącznie, gdyż *wyraz „pohamowana” to imiesłów przymiotnikowy*.",
+              "ref": {
+                "source": "klucz",
+                "page": 11
+              }
+            },
+            {
+              "points": 2,
+              "content": "Partykuła „nie” została zapisana najpierw rozłącznie, ponieważ *„nie” z czasownikami zapisujemy osobno*, a następnie – łącznie, gdyż *wyraz „niepohamowana” jest przymiotnikiem*.",
+              "ref": {
+                "source": "klucz",
+                "page": 11
+              }
+            },
+            {
+              "points": 1,
+              "content": "Partykuła „nie” została zapisana najpierw rozłącznie, ponieważ *po niej jest czasownik*, a następnie – łącznie, gdyż *nie jest czasownikiem*.",
+              "ref": {
+                "source": "klucz",
+                "page": 11
+              }
+            },
+            {
+              "points": 0,
+              "content": "Partykuła „nie” została zapisana najpierw rozłącznie, ponieważ *takie są zasady*, a następnie – łącznie, gdyż *tu jest inny wyraz*.",
+              "ref": {
+                "source": "klucz",
+                "page": 11
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Uwaga. Ze względu na fakt, że wyraz „niepohamowana” to we współczesnej polszczyźnie i imiesłów przymiotnikowy bierny, i przymiotnik (oznaczający cechę stałą), dlatego obie odpowiedzi uczniów zostały uznane za poprawne."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-4.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "pl-2024-12p-17",
+      "sessionId": "polski-2024-12-probny",
+      "number": 17,
+      "maxPoints": 3,
+      "instruction": "**Zredaguj zaproszenie na spotkanie pod hasłem: _Wynalazki, które zawdzięczamy ludzkiej ciekawości_. Zachęć do udziału w tym wydarzeniu. Użyj dwóch argumentów, z których przynajmniej jeden będzie nawiązywał do tematyki spotkania.**\n**Uwaga: w ocenie wypowiedzi będzie brana pod uwagę poprawność językowa, ortograficzna i interpunkcyjna.**\n\n![Czerwona grafika ozdobna z ikonami wynalazków (lornetka, telefon, teleskop, postać) w lewym górnym rogu ramki zaproszenia.](stimulus:pl-2024-12p-17-fig1)\n\n***Zaproszenie***",
+      "stimulusIds": [
+        "pl-2024-12p-tekst-2",
+        "pl-2024-12p-17-fig1"
+      ],
+      "items": [
+        {
+          "id": "pl-2024-12p-17",
+          "label": "17",
+          "maxPoints": 3,
+          "response": {
+            "type": "extended_text"
+          },
+          "key": {},
+          "scoring": {
+            "type": "rubric",
+            "rubrics": [
+              {
+                "topic": null,
+                "rubricId": "pl-2024-12p-17-t1"
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-4",
+            "pl-gen-III",
+            "pl-46-2"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "Serdecznie zapraszam wszystkich mieszkańców Krakowa na spotkanie pod hasłem: „Wynalazki, które zawdzięczamy ludzkiej ciekawości”. Wydarzenie odbędzie się 12 grudnia 2024 r., w godzinach 16.00–18.00 w Domu Kultury przy ul. Słonecznej 11. Uczestnicy spotkania będą mieli okazję dowiedzieć się, kto wynalazł rower i telefon komórkowy. Dla chętnych zorganizowany zostanie również konkurs z atrakcyjnymi nagrodami.\nLiczymy na Państwa aktywny udział.\nPrezydent Miasta Krakowa",
+              "ref": {
+                "source": "klucz",
+                "page": 12
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Jeżeli uczeń uwzględnia 5 elementów zaproszenia, a podaje tylko jeden argument, w kryterium „Treść i forma” otrzymuje 1 punkt.",
+            "Jeżeli uczeń uwzględnia 5 elementów zaproszenia i podaje dwa argumenty, ale żaden z nich nie nawiązuje do tematyki spotkania, w kryterium „Treść i forma” otrzymuje 1 punkt.",
+            "Kategorie „Treść i forma” oraz „Poprawność językowa, ortograficzna i interpunkcyjna” oceniamy rozłącznie."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-4",
+        "pl-gen-III",
+        "pl-46-2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 15
+      }
+    },
+    {
+      "id": "pl-2024-12p-18",
+      "sessionId": "polski-2024-12-probny",
+      "number": 18,
+      "maxPoints": 20,
+      "instruction": "Wybierz **jeden** z podanych tematów i napisz wypracowanie.\n\n- Pamiętaj o zachowaniu formy wypowiedzi wskazanej w temacie: napisz **przemówienie** albo **opowiadanie**.\n- W wypracowaniu odwołaj się do **wybranej lektury obowiązkowej**. Lista lektur obowiązkowych znajduje się na stronach 3 i 4 tego arkusza egzaminacyjnego.\n- Innym utworem literackim w przemówieniu może być także lektura obowiązkowa.\n- Twoja praca powinna liczyć co najmniej **200 wyrazów**.\n- Zapisz wypracowanie w wyznaczonym miejscu. Nie pisz na marginesie.\n- Pisz czytelnie.\n- Pamiętaj, że zabronione jest pisanie wypowiedzi obraźliwych, wulgarnych lub propagujących postępowanie niezgodne z prawem albo wypowiedzi aprobujących nieetyczne postępowanie bohatera.",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "pl-2024-12p-18",
+          "label": "18",
+          "maxPoints": 20,
+          "response": {
+            "type": "extended_text",
+            "minWords": 200,
+            "topics": [
+              {
+                "id": "1",
+                "text": "Napisz **przemówienie** skierowane do koleżanek i kolegów, mające ich przekonać, że warto postępować zgodnie z wartościami, które zawarte są w wielu książkach.\nW argumentacji odwołaj się do wybranej lektury obowiązkowej oraz do innego utworu literackiego.",
+                "form": "przemówienie"
+              },
+              {
+                "id": "2",
+                "text": "Napisz **opowiadanie** o spotkaniu z wybranym bohaterem lektury obowiązkowej. Wasza wspólna przygoda zachęciła Cię do szukania i odkrywania ciągle czegoś nowego.\nWypracowanie powinno dowodzić, że dobrze znasz wybraną lekturę obowiązkową.",
+                "form": "opowiadanie"
+              }
+            ]
+          },
+          "key": {},
+          "scoring": {
+            "type": "rubric",
+            "rubrics": [
+              {
+                "topic": "1",
+                "rubricId": "pl-2024-12p-18-t1"
+              },
+              {
+                "topic": "2",
+                "rubricId": "pl-2024-12p-18-t2"
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-1.7",
+            "pl-gen-II",
+            "pl-46-4.1",
+            "pl-78-3.2",
+            "pl-gen-III",
+            "pl-78-1.1",
+            "pl-78-2.1",
+            "pl-46-2.1",
+            "pl-78-1.2"
+          ],
+          "scoringNotes": [
+            "1. Jeżeli wypowiedź w całości jest nie na temat, egzaminator oceni ją na 0 punktów. Nie sprawdza i nie zaznacza żadnych błędów w pracy. Egzaminator umieszcza dopisek – „Praca nie na temat”.",
+            "2. Jeżeli w wypowiedzi uczeń w ogóle nie odwołał się do treści lektury obowiązkowej wskazanej w poleceniu, za całą wypowiedź egzaminator przyzna 0 punktów.",
+            "3. Jeżeli wypowiedź jest nieczytelna, egzaminator oceni ją na 0 punktów.",
+            "4. Jeżeli wypowiedź nie zawiera w ogóle rozwinięcia (np. uczeń napisał tylko wstęp), egzaminator przyzna 0 punktów w każdym kryterium.",
+            "5. Funkcjonalność wykorzystania w wypracowaniu utworu literackiego nie oznacza konieczności omówienia przez zdającego wszystkich elementów fabuły, sensów utworu istotnych (z punktu widzenia egzaminatora) ze względu na zagadnienie sformułowane w temacie. Należy jednak pamiętać, że samo przywołanie imienia bohatera literackiego nie jest funkcjonalnym wykorzystaniem utworu.",
+            "6. Za utwór literacki w wypracowaniu nie uznaje się: powieści obrazkowej, mangi, scenariusza filmowego, gry komputerowej.",
+            "7. Jeżeli wypowiedź zawiera 180 wyrazów lub mniej, jest oceniana wyłącznie w kryteriach: Realizacja tematu wypowiedzi, Elementy twórcze / Elementy retoryczne oraz Kompetencje literackie i kulturowe. W pozostałych kryteriach egzaminator przyzna 0 punktów.",
+            "8. Jeżeli wypowiedź jest napisana niesamodzielnie, np. zawiera fragmenty odtworzone z podręcznika, zadania zawartego w arkuszu egzaminacyjnym lub innego źródła, w tym internetowego, lub jest przepisana od innego ucznia, wówczas egzamin z języka polskiego, w przypadku takiego ucznia, zostanie unieważniony.",
+            "9. W ocenie wypowiedzi uczniów, którym przyznano dostosowanie warunków przeprowadzania egzaminu, zgodnie z Komunikatem dyrektora Centralnej Komisji Egzaminacyjnej w sprawie szczegółowych sposobów dostosowania warunków i form przeprowadzania egzaminu ósmoklasisty w danym roku szkolnym, stosuje się szczegółowe zasady oceniania rozwiązań zadań otwartych z języka polskiego uwzględniające specyficzne trudności w uczeniu się.",
+            "10. Zabronione jest pisanie wypowiedzi obraźliwych, wulgarnych lub propagujących postępowanie niezgodne z prawem albo wypowiedzi aprobujących nieetyczne postępowanie bohatera. W przypadku takich wypowiedzi zostanie podjęta indywidualna decyzja dotycząca danej pracy, np. nie zostaną przyznane punkty za styl i język lub cała wypowiedź nie będzie podlegała ocenie.",
+            "Uwaga. Liczone są wszystkie wyrazy: samodzielne i niesamodzielne.",
+            "Uwagi. • Argumentowanie nie polega na streszczaniu utworów. • Argumentacja musi być zgodna z poleceniem, wybraną lekturą obowiązkową oraz innym utworem literackim (może to być inna lektura obowiązkowa).",
+            "Uwaga dotycząca formy wypowiedzi. Wypracowanie musi zawierać cechy charakterystyczne przemówienia jako wypowiedzi o charakterze argumentacyjnym, przeznaczonej do wygłoszenia: a) bezpośredni zwrot do adresata, b) retoryczne środki językowe, np.: pytanie retoryczne, powtórzenie, porównanie, słownictwo wartościujące, c) czasowniki w trybie rozkazującym, d) czasowniki w 1. i 2. osobie l. mn. służące podtrzymaniu kontaktu z odbiorcami lub pełniące funkcję perswazyjną, e) zaimki odnoszące się do 1. i 2. osoby l. mn. służące podtrzymaniu kontaktu z odbiorcami lub pełniące funkcję perswazyjną, f) zjednywanie przychylności odbiorców, np. podkreślenie ich znaczenia, kompetencji itp. Uczeń może otrzymać 2 punkty, jeżeli: • w jego wypracowaniu pojawią się bezpośredni zwrot do adresata oraz przynajmniej dwie różne cechy wybrane spośród b) – f); każda cecha powinna być potwierdzona przynajmniej jeden raz, np. uczeń w wypracowaniu użył jednego porównania i jednego zaimka odnoszącego się do 1 osoby l. mn., tym samym zrealizował podpunkty b) i e), • wszystkie pozostałe elementy polecenia zostały uwzględnione, • wypowiedź w całości dotyczy problemu wskazanego w poleceniu. Uczeń może otrzymać 1 punkt, jeżeli: • w jego wypracowaniu pojawią się bezpośredni zwrot do adresata oraz przynajmniej jedna cecha wybrana spośród b) – f), wybrana cecha powinna być potwierdzona przynajmniej jeden raz, np. uczeń w wypracowaniu użył jednego porównania i tym samym zrealizował podpunkt b), ALBO w wypracowaniu występują dwie różne cechy przemówienia spośród b) – f), a nie występuje bezpośredni zwrot do adresata, ALBO występuje tylko bezpośredni zwrot do adresata, • nieuwzględniony został jeden element polecenia (inny niż forma) ORAZ/LUB • w pracy występują fragmenty niedotyczące problemu wskazanego w poleceniu.",
+            "Realizacja tematu wypowiedzi – Oceniając wypowiedź ucznia w tym kryterium, należy rozważyć m.in., czy: • wypowiedź jest zgodna z formą wskazaną w poleceniu • w wypowiedzi ujęte zostały wszystkie kluczowe elementy tematu, np. czy uczeń w odpowiedni sposób odwołał się do lektury wskazanej w poleceniu • wypowiedź jest w całości na temat.",
+            "Elementy retoryczne – Oceniając wypowiedź ucznia w tym kryterium, należy rozważyć m.in., czy: • argumentacja w pracy jest wnikliwa • argumenty są poparte właściwymi przykładami • argumenty są przedstawione w sposób uporządkowany, np. są przedstawione od najbardziej do najmniej ważnego albo są zapisane w porządku argument – kontrargument.",
+            "Elementy twórcze – Oceniając wypowiedź ucznia w tym kryterium, należy rozważyć m.in., czy: • narracja w opowiadaniu jest konsekwentnie prowadzona • wydarzenia są logicznie ułożone • fabuła jest urozmaicona, np. czy zawiera elementy typowe dla opowiadania, takie jak zwroty akcji, dialog, puenta • lektura wskazana w poleceniu została wykorzystana pobieżnie, czy w sposób ciekawy i twórczy.",
+            "Kompetencje literackie i kulturowe – Oceniając wypowiedź ucznia w tym kryterium, należy rozważyć m.in., czy: • uczeń wykorzystał znajomość lektury obowiązkowej wskazanej w poleceniu (a także innych tekstów – jeżeli polecenie tego wymagało) w sposób funkcjonalny, tzn. np. czy przywołał w pracy takie wydarzenia albo omówił takie wątki, które istotnie wspierają jego tok rozumowania albo dobrze ilustrują to, o czym pisze • uczeń, pisząc np. o wydarzeniach z danej lektury, nie popełnił błędów, np. nie pomylił imion postaci, nie przypisał postaciom cech, których nie posiadają, bądź nie wymyślił wydarzeń, których w lekturze nie ma.",
+            "Kompozycja tekstu – Oceniając wypowiedź ucznia w tym kryterium, należy rozważyć m.in., czy: • kompozycja wypowiedzi jest zgodna z formą wskazaną w poleceniu, np. czy rozprawka zawiera wstęp, rozwinięcie i zakończenie • wypowiedź jest spójna, tzn. czy jest napisana w taki sposób, że łatwo się ją czyta dzięki np. jasnym powiązaniom wewnątrz zdań oraz między zdaniami i akapitami tekstu • wypowiedź jest logiczna, tzn. czy jest zbiorem uporządkowanych myśli • wypowiedź jest podzielona na odpowiednio wyodrębnione graficznie akapity, z których każdy stanowi logicznie zorganizowaną, zwartą całość.",
+            "Styl – Oceniając wypowiedź ucznia w tym kryterium, należy rozważyć m.in., czy: • styl wypowiedzi jest odpowiedni do jej treści i formy, tzn. np. czy uczeń nie napisał rozprawki, stosując słownictwo charakterystyczne dla stylu potocznego w odmianie mówionej • styl wypowiedzi jest jednolity, tzn. czy uczeń konsekwentnie posługuje się jednym, wybranym stylem, a jeżeli miesza różne style w wypowiedzi – to czy jest to uzasadnione (czy czemuś to służy).",
+            "Język – Oceniając wypowiedź ucznia w tym kryterium, należy rozważyć m.in.: • czy uczeń poprawnie użył w wypowiedzi różnych rodzajów zdań i bogatej leksyki (np. frazeologizmów, wyrazów rzadziej używanych w języku polskim), czy też ograniczył się do najprostszych środków językowych • czy środki językowe, których użył uczeń, pozwalają mu zrealizować temat w sposób swobodny i precyzyjny, czy też pobieżny, sprawiający trudność w zrozumieniu tekstu. W ocenie należy również uwzględnić liczbę wszystkich błędów językowych, które uczeń popełnił w wypowiedzi.",
+            "Oceniając język wypowiedzi, należy najpierw ocenić zakres użytych środków językowych, a następnie – ich poprawność. Ostateczną liczbę punktów ustala się na podstawie oceny obu tych aspektów wypowiedzi, zgodnie z poniższą tabelą.",
+            "Przykładowo, za wypowiedź, w której uczeń użył zadowalającego zakresu środków językowych i popełnił 6 błędów językowych, egzaminator przyzna 2 pkt w tym kryterium.",
+            "Ortografia – Oceniając wypowiedź ucznia w tym kryterium, należy uwzględnić liczbę błędów ortograficznych, które uczeń popełnił w wypowiedzi.",
+            "Interpunkcja – Oceniając wypowiedź ucznia w tym kryterium, należy uwzględnić liczbę błędów interpunkcyjnych, które uczeń popełnił w wypowiedzi.",
+            "Uwaga: jeżeli za wypowiedź przyznano 0 pkt w kryterium Realizacja tematu wypowiedzi, we wszystkich pozostałych kryteriach przyznaje się 0 pkt.",
+            "Uwagi. • W opowiadaniu uwzględnione są następujące elementy: wspólna przygoda i wynikająca z niej zachęta do szukania i odkrywania ciągle czegoś nowego. • Opowiadanie ma charakter twórczy, nie może być streszczeniem wybranej lektury obowiązkowej.",
+            "Kryteria oceny prac uczniów ze specyficznymi trudnościami w uczeniu się: 1. Za błędy ortograficzne w przypadku uczniów ze specyficznymi trudnościami w uczeniu się uznaje się: − błędy w zapisie wyrazów z u – ó, ż – rz, h – ch − łamanie zasady pisania wielką literą na początku zdania. 2. W ocenie poprawności ortograficznej w pracach uczniów ze specyficznymi trudnościami w uczeniu się egzaminator nie będzie uwzględniał innych niż wymienione w punkcie 1. błędów w zapisie (tzn. nie będzie liczył ich jako błędy ortograficzne), w tym: − dodawania, opuszczania, przestawiania liter, sylab lub całych wyrazów − mylenia liter ✓ o podobnym kształcie (a – o, l – ł – t, n – r, m – n, u – w, e – ę, a – ą, i – j, u – y) ✓ dużych i małych (z wyjątkiem początku zdania) ✓ odpowiedników głosek zbliżonych fonetycznie (b – p, d – t, w – f, g – k, dz – c, sz – s, i – y, ę – em – en, ą – om – on, ś – ź, ć – dź) ✓ różniących się w położeniu w stosunku do osi pionowej (p – b, d – b) lub poziomej (m – w, n – u, b – p, d – g, p – g) − ominięcia drobnych elementów graficznych, w tym ✓ oznaczania miękkości nad literami ✓ kropek (dż, ż, i, j) ✓ „ogonków” przy literach ą lub ę i kreski (wężyka) przy literach ó, t lub ł − błędów dotyczących podziału wyrazu − błędów dotyczących dźwięczności (kóska zamiast kózka, proźba zamiast prośba) − błędów wynikających ze schematycznego stosowania zasad ortografii, np. startóje bo startować − mylenia przedrostków z przyimkami (pode szły) − błędnego zapisywania przyimków z rzeczownikami i przysłówkami (wklasie, zachwilę, na pewno) − niewłaściwego zapisu spółgłosek miękkich (słonice zamiast słońce, rosinie zamiast rośnie)."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-1.7",
+        "pl-gen-II",
+        "pl-46-4.1",
+        "pl-78-3.2",
+        "pl-gen-III",
+        "pl-78-1.1",
+        "pl-78-2.1",
+        "pl-46-2.1",
+        "pl-78-1.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 16
+      }
+    }
+  ],
+  "rubrics": [
+    {
+      "id": "pl-2024-12p-17-t1",
+      "maxPoints": 3,
+      "criteria": [
+        {
+          "id": "tresc_forma",
+          "name": "Treść i forma",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "treść zgodna z poleceniem, uwzględnione 2 argumenty, z których co najmniej jeden nawiązuje do tematyki spotkania; uwzględnionych 5 elementów dotyczących formy: kto zaprasza? kogo zaprasza? na co zaprasza? kiedy się odbywa? gdzie się odbywa?"
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "treść zgodna z poleceniem, uwzględnione 2 argumenty, z których co najmniej jeden nawiązuje do tematyki spotkania; uwzględnione 4 elementy dotyczące formy: kto zaprasza? ORAZ/ALBO kogo zaprasza? ORAZ/ALBO na co zaprasza? ORAZ/ALBO kiedy się odbywa? ORAZ/ALBO gdzie się odbywa?"
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "treść niezgodna z poleceniem ALBO treść zgodna z poleceniem, ale uwzględnione tylko 3 elementy dotyczące formy: kto zaprasza? ORAZ/ALBO kogo zaprasza? ORAZ/ALBO na co zaprasza? ORAZ/ALBO kiedy się odbywa? ORAZ/ALBO gdzie się odbywa?"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "poprawnosc",
+          "name": "Poprawność językowa, ortograficzna i interpunkcyjna",
+          "type": "error_count",
+          "max": 1,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 2,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 3,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        }
+      ],
+      "gates": []
+    },
+    {
+      "id": "pl-2024-12p-18-t1",
+      "maxPoints": 20,
+      "criteria": [
+        {
+          "id": "realizacja",
+          "name": "Realizacja tematu wypowiedzi",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "• Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\n• Wszystkie pozostałe elementy polecenia uwzględnione.\n• Wypowiedź w całości dotyczy problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "• Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\n• Nieuwzględniony jeden element polecenia (inny niż forma). ORAZ/LUB\n• W pracy występują fragmenty niedotyczące problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "• Forma wypowiedzi niezgodna z formą wskazaną w poleceniu. ALBO\n• Nieuwzględnione co najmniej dwa elementy polecenia (inne niż forma)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "retoryczne",
+          "name": "Elementy retoryczne",
+          "type": "levels",
+          "max": 5,
+          "levels": [
+            {
+              "points": 5,
+              "paths": [
+                "• Pogłębiona argumentacja.\n• Argumenty odwołujące się np. do faktów, logiki, emocji, zilustrowane odpowiednimi przykładami ORAZ/LUB wykorzystanie przykładów w funkcji argumentacyjnej.\n• Argumenty/przykłady uporządkowane, np. zhierarchizowane."
+              ]
+            },
+            {
+              "points": 4,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 3 pkt i niektóre na 5 pkt."
+              ]
+            },
+            {
+              "points": 3,
+              "paths": [
+                "• Powierzchowna argumentacja; w wypowiedzi brak wnikliwości.\n• Niektóre argumenty zilustrowane odpowiednimi przykładami ORAZ/LUB wykorzystanie przykładów w funkcji argumentacyjnej.\n• Argumenty/przykłady częściowo uporządkowane."
+              ]
+            },
+            {
+              "points": 2,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 1 pkt i niektóre na 3 pkt."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "• Podjęta próba argumentowania.\n• Ograniczenie do wyliczenia powierzchownie omówionych przykładów, powiązanych z problemem określonym w temacie."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompetencje",
+          "name": "Kompetencje literackie i kulturowe",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "• Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\n• Poprawność rzeczowa."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "• Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\nALBO\nCzęściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\nALBO\nCzęściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\n• Dopuszczalne 1–2 błędy rzeczowe."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompozycja",
+          "name": "Kompozycja tekstu",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "• Kompozycja zgodna z formą wypowiedzi.\n• Graficznie wyodrębnione akapity.\n• Dopuszczalna 1 usterka w zakresie spójności ALBO logiki wypowiedzi, ALBO podziału wypowiedzi na funkcjonalne akapity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "• Kompozycja zgodna z formą wypowiedzi.\n• Graficznie wyodrębnione akapity.\n• Dopuszczalne łącznie 2–3 usterki w zakresie spójności ORAZ/ALBO logiki wypowiedzi."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "styl",
+          "name": "Styl",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "• Odpowiedni do treści i formy wypowiedzi.\n• Jednolity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Sporadyczne usterki w odpowiedniości ORAZ/LUB jednolitości stylu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia wymagań określonych na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jezyk",
+          "name": "Język",
+          "type": "matrix",
+          "max": 4,
+          "rows": "Szeroki zakres środków językowych, tzn. zróżnicowana składnia, zróżnicowana leksyka, w tym np. bogata frazeologia, precyzyjne słownictwo, umożliwiające pełną i swobodną realizację tematu.\nZadowalający zakres środków językowych, tzn. składnia i leksyka stosowne/odpowiednie do realizacji tematu.\nWąski zakres środków językowych, tzn. składnia i leksyka proste/ograniczone, utrudniające realizację tematu.",
+          "cols": "Nie więcej niż 4 błędy językowe | 5–7 błędów językowych | 8–10 błędów językowych | 11–13 błędów językowych | 14 lub więcej błędów językowych",
+          "table": {
+            "Szeroki zakres środków językowych, tzn. zróżnicowana składnia, zróżnicowana leksyka, w tym np. bogata frazeologia, precyzyjne słownictwo, umożliwiające pełną i swobodną realizację tematu.": {
+              "Nie więcej niż 4 błędy językowe": 4,
+              "5–7 błędów językowych": 3,
+              "8–10 błędów językowych": 2,
+              "11–13 błędów językowych": 1,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Zadowalający zakres środków językowych, tzn. składnia i leksyka stosowne/odpowiednie do realizacji tematu.": {
+              "Nie więcej niż 4 błędy językowe": 3,
+              "5–7 błędów językowych": 2,
+              "8–10 błędów językowych": 1,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Wąski zakres środków językowych, tzn. składnia i leksyka proste/ograniczone, utrudniające realizację tematu.": {
+              "Nie więcej niż 4 błędy językowe": 2,
+              "5–7 błędów językowych": 1,
+              "8–10 błędów językowych": 0,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            }
+          }
+        },
+        {
+          "id": "ortografia",
+          "name": "Ortografia",
+          "type": "error_count",
+          "max": 2,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 1,
+                "points": 2
+              },
+              {
+                "maxErrors": 3,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 3,
+                "points": 2
+              },
+              {
+                "maxErrors": 6,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "interpunkcja",
+          "name": "Interpunkcja",
+          "type": "error_count",
+          "max": 1,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 9,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 11,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        }
+      ],
+      "gates": [
+        {
+          "ifCriterion": "realizacja",
+          "equals": 0,
+          "thenAllOthers": 0
+        }
+      ]
+    },
+    {
+      "id": "pl-2024-12p-18-t2",
+      "maxPoints": 20,
+      "criteria": [
+        {
+          "id": "realizacja",
+          "name": "Realizacja tematu wypowiedzi",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "• Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\n• Wszystkie pozostałe elementy polecenia uwzględnione.\n• Wypowiedź w całości dotyczy problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "• Forma wypowiedzi zgodna z formą wskazaną w poleceniu.\n• Nieuwzględniony jeden element polecenia (inny niż forma). ORAZ/LUB\n• W pracy występują fragmenty niedotyczące problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "• Forma wypowiedzi niezgodna z formą wskazaną w poleceniu. ALBO\n• Nieuwzględnione co najmniej dwa elementy polecenia (inne niż forma)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tworcze",
+          "name": "Elementy twórcze",
+          "type": "levels",
+          "max": 5,
+          "levels": [
+            {
+              "points": 5,
+              "paths": [
+                "• Funkcjonalna narracja.\n• Logiczny układ zdarzeń.\n• Urozmaicona fabuła, w tym funkcjonalne wykorzystanie co najmniej 6 spośród następujących elementów: opis, charakterystyka bohatera, czas akcji, miejsce akcji, zwrot akcji, puenta, punkt kulminacyjny, dialog, monolog, retrospekcja.\n• Twórcze wykorzystanie treści lektury."
+              ]
+            },
+            {
+              "points": 4,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 3 pkt i niektóre na 5 pkt."
+              ]
+            },
+            {
+              "points": 3,
+              "paths": [
+                "• Funkcjonalna narracja.\n• Logiczny układ zdarzeń.\n• Prosta fabuła, w tym funkcjonalne wykorzystanie co najmniej 4 spośród następujących elementów: opis, charakterystyka bohatera, czas akcji, miejsce akcji, zwrot akcji, puenta, punkt kulminacyjny, dialog, monolog, retrospekcja."
+              ]
+            },
+            {
+              "points": 2,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 1 pkt i niektóre na 3 pkt."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "• Narracja częściowo funkcjonalna.\n• Dopuszczalne usterki w logicznym układzie zdarzeń.\n• Prosta fabuła."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompetencje",
+          "name": "Kompetencje literackie i kulturowe",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "• Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\n• Poprawność rzeczowa."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "• Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\nALBO\nCzęściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\nALBO\nCzęściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga).\n• Dopuszczalne 1–2 błędy rzeczowe."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompozycja",
+          "name": "Kompozycja tekstu",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "• Kompozycja zgodna z formą wypowiedzi.\n• Graficznie wyodrębnione akapity.\n• Dopuszczalna 1 usterka w zakresie spójności ALBO logiki wypowiedzi, ALBO podziału wypowiedzi na funkcjonalne akapity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "• Kompozycja zgodna z formą wypowiedzi.\n• Graficznie wyodrębnione akapity.\n• Dopuszczalne łącznie 2–3 usterki w zakresie spójności ORAZ/ALBO logiki wypowiedzi."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "styl",
+          "name": "Styl",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "• Odpowiedni do treści i formy wypowiedzi.\n• Jednolity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Sporadyczne usterki w odpowiedniości ORAZ/LUB jednolitości stylu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia wymagań określonych na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jezyk",
+          "name": "Język",
+          "type": "matrix",
+          "max": 4,
+          "rows": "Szeroki zakres środków językowych, tzn. zróżnicowana składnia, zróżnicowana leksyka, w tym np. bogata frazeologia, precyzyjne słownictwo, umożliwiające pełną i swobodną realizację tematu.\nZadowalający zakres środków językowych, tzn. składnia i leksyka stosowne/odpowiednie do realizacji tematu.\nWąski zakres środków językowych, tzn. składnia i leksyka proste/ograniczone, utrudniające realizację tematu.",
+          "cols": "Nie więcej niż 4 błędy językowe | 5–7 błędów językowych | 8–10 błędów językowych | 11–13 błędów językowych | 14 lub więcej błędów językowych",
+          "table": {
+            "Szeroki zakres środków językowych, tzn. zróżnicowana składnia, zróżnicowana leksyka, w tym np. bogata frazeologia, precyzyjne słownictwo, umożliwiające pełną i swobodną realizację tematu.": {
+              "Nie więcej niż 4 błędy językowe": 4,
+              "5–7 błędów językowych": 3,
+              "8–10 błędów językowych": 2,
+              "11–13 błędów językowych": 1,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Zadowalający zakres środków językowych, tzn. składnia i leksyka stosowne/odpowiednie do realizacji tematu.": {
+              "Nie więcej niż 4 błędy językowe": 3,
+              "5–7 błędów językowych": 2,
+              "8–10 błędów językowych": 1,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Wąski zakres środków językowych, tzn. składnia i leksyka proste/ograniczone, utrudniające realizację tematu.": {
+              "Nie więcej niż 4 błędy językowe": 2,
+              "5–7 błędów językowych": 1,
+              "8–10 błędów językowych": 0,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            }
+          }
+        },
+        {
+          "id": "ortografia",
+          "name": "Ortografia",
+          "type": "error_count",
+          "max": 2,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 1,
+                "points": 2
+              },
+              {
+                "maxErrors": 3,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 3,
+                "points": 2
+              },
+              {
+                "maxErrors": 6,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "interpunkcja",
+          "name": "Interpunkcja",
+          "type": "error_count",
+          "max": 1,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 9,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 11,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        }
+      ],
+      "gates": [
+        {
+          "ifCriterion": "realizacja",
+          "equals": 0,
+          "thenAllOthers": 0
+        }
+      ]
+    }
+  ],
+  "audio": []
+}

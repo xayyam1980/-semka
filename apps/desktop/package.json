@@ -1,7 +1,7 @@
 {
   "name": "@osemka/desktop",
   "productName": "Ósemka",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "private": true,
   "description": "Ósemka: przygotowanie do egzaminu ósmoklasisty",
   "main": "./out/main/index.js",

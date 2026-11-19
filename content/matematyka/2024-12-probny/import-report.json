@@ -1,0 +1,359 @@
+{
+  "sessionId": "matematyka-2024-12-probny",
+  "at": "2026-11-19T17:54:38.094Z",
+  "model": "qwen · qwen3.8-max · token-plan.maas.qwencloudapi.com",
+  "segmentation": {
+    "sheetTasks": 21,
+    "sheetPoints": 30,
+    "keyTasks": 21,
+    "keyPoints": 30,
+    "problems": []
+  },
+  "tasks": [
+    {
+      "number": 1,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9872,
+        "output": 6661,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 2,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9872,
+        "output": 3389,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 3,
+      "problems": [],
+      "notes": [
+        "Klucz podaje jedno rozwiązanie (B) bez rozróżnienia wersji arkusza X/Y; wpisano jedną pozycję keys z wersją X."
+      ],
+      "usage": {
+        "input": 10818,
+        "output": 4659,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 4,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9567,
+        "output": 3143,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 5,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9542,
+        "output": 2383,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 6,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 10685,
+        "output": 3821,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 7,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9558,
+        "output": 3839,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 8,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 10701,
+        "output": 3939,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 9,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9618,
+        "output": 4998,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 10,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 10766,
+        "output": 5997,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 11,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9575,
+        "output": 2942,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 12,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9575,
+        "output": 4720,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 13,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 10791,
+        "output": 2346,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 14,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 9592,
+        "output": 4208,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 15,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 12344,
+        "output": 4823,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 16,
+      "problems": [],
+      "notes": [
+        "W III sposobie przykładowego rozwiązania liczba 451 jest w kluczu przekreślona (uczestnik o tym numerze nie przyszedł na festyn, bo było 450 osób); zapisano ją jako ~~451~~.",
+        "I sposób przykładowego rozwiązania zaczyna się na pierwszej stronie klucza i kończy na drugiej; przypisano mu keyImageIndex 0."
+      ],
+      "usage": {
+        "input": 11239,
+        "output": 7560,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 17,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 11494,
+        "output": 8650,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 18,
+      "problems": [],
+      "notes": [
+        "Przykładowe rozwiązania w kluczu zawierają rysunki trapezu z dodatkowymi oznaczeniami (punkt F, odcinki o długościach 5 cm, 12 cm, 13 cm); rysunki te pominięto w transkrypcji rozwiązań przykładowych."
+      ],
+      "usage": {
+        "input": 14973,
+        "output": 11912,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 19,
+      "problems": [],
+      "notes": [
+        "Klucz nie rozróżnia wersji arkusza X/Y dla tego zadania; podano jeden wpis keys z wersją X.",
+        "Przykładowe rozwiązanie „III sposób\" zaczyna się na stronie 20 klucza (obraz 1) i kończy na stronie 21 (obraz 2); jako keyImageIndex podano stronę początkową."
+      ],
+      "usage": {
+        "input": 13042,
+        "output": 7943,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 20,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 11312,
+        "output": 7365,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    },
+    {
+      "number": 21,
+      "problems": [],
+      "notes": [],
+      "usage": {
+        "input": 11676,
+        "output": 5130,
+        "cacheRead": 0,
+        "cacheWrite": 0
+      },
+      "cached": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "Matches the content schema",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Task points add up to the session total",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Each task equals the sum of its items",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Task numbers run 1…N without gaps",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every item has a key for each usable sheet version",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Choice keys point to options that exist",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Levels go from the item's points down to 0",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every item has a skill tag, and every tag has an area",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Page references are within the files",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every figure file exists",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Rubric items point to rubrics that add up to the item's points",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every image in the text points to an existing figure",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Stimuli referenced by tasks exist",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "No control characters in the text",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "Every formula renders",
+      "ok": true,
+      "details": []
+    }
+  ],
+  "ok": true,
+  "tokens": {
+    "input": 0,
+    "output": 0
+  },
+  "approvedAt": "2026-11-19T18:04:33.067Z"
+}

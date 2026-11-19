@@ -3,7 +3,10 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router";
 import { SUBJECTS } from "@osemka/schema";
 import type { AttemptSummary, SessionSummary } from "../../../shared/ipc";
-import { clock, pct, plural, sessionLabel, SUBJECT_TONE } from "../lib/format";
+import { clock, pct, plural, sessionLabel, SUBJECT_TONE, termLabel } from "../lib/format";
+
+/** "Czerwiec 2025" without the term, which the card spells out. */
+const MONTH_YEAR = (s: { month: number; year: number }) => sessionLabel({ month: s.month, year: s.year });
 
 export function ExamBrowser() {
   const [sessions, setSessions] = useState<SessionSummary[] | null>(null);
@@ -67,7 +70,7 @@ export function ExamBrowser() {
                 return (
                   <article key={s.id} className="card flex flex-col gap-3 rounded-[10px] border border-line bg-surface p-5">
                     <div>
-                      <h3 className="text-lg font-bold">{sessionLabel(s)} · termin główny</h3>
+                      <h3 className="text-lg font-bold">{MONTH_YEAR(s)} · {termLabel(s.term)}</h3>
                       <p className="tabular text-sm text-muted">
                         {s.taskCount} {plural(s.taskCount, "zadanie", "zadania", "zadań")} · {s.maxPoints} pkt · {s.standardMinutes} min
                       </p>

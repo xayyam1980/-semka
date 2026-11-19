@@ -1,0 +1,1530 @@
+{
+  "session": {
+    "id": "matematyka-2026-01-probny",
+    "subjectId": "matematyka",
+    "year": 2026,
+    "month": 1,
+    "term": "probny",
+    "formCode": "OMAP-100",
+    "versions": [
+      "X"
+    ],
+    "maxPoints": 30,
+    "taskOrder": [
+      "ma-2026-01p-01",
+      "ma-2026-01p-02",
+      "ma-2026-01p-03",
+      "ma-2026-01p-04",
+      "ma-2026-01p-05",
+      "ma-2026-01p-06",
+      "ma-2026-01p-07",
+      "ma-2026-01p-08",
+      "ma-2026-01p-09",
+      "ma-2026-01p-10",
+      "ma-2026-01p-11",
+      "ma-2026-01p-12",
+      "ma-2026-01p-13",
+      "ma-2026-01p-14",
+      "ma-2026-01p-15",
+      "ma-2026-01p-16",
+      "ma-2026-01p-17",
+      "ma-2026-01p-18",
+      "ma-2026-01p-19",
+      "ma-2026-01p-20"
+    ],
+    "sources": [
+      {
+        "kind": "klucz",
+        "path": "Matematyka/Additional/Styczeń 2026/matematyka-2026-styczen-egzamin-osmoklasisty-probny-odpowiedzi.pdf",
+        "sha256": "5504487a3451bff0a9d085fbd918448cc30da6469439014bc2cb18b7c4eeb235",
+        "pages": 21
+      },
+      {
+        "kind": "arkusz",
+        "path": "Matematyka/Additional/Styczeń 2026/matematyka-2026-styczen-egzamin-osmoklasisty-probny.pdf",
+        "sha256": "f61e6cf40fbda05c4e80432ee0971de69f757bc45cf3d2371a4cf30c20bf4ab2",
+        "pages": 23
+      }
+    ],
+    "contentVersion": "c17bb43d752971b4",
+    "status": "published"
+  },
+  "stimuli": [
+    {
+      "id": "ma-2026-01p-01-fig1",
+      "kind": "figure",
+      "title": "Diagram słupkowy przedstawiający zysk firmy w tysiącach złotych w czterech kwartałach 2024 roku: I kwartał – 300, II kwartał – 450, III kwartał – 600, IV kwartał – 500.",
+      "asset": "assets/ma-2026-01p-01-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2026-01p-08-fig1",
+      "kind": "figure",
+      "title": "Oś liczbowa z zaznaczonymi punktami K, L i M, na której odcinek KM podzielono na 10 równych części, a pod dwiema podziałkami podpisano liczby 6 i 21.",
+      "asset": "assets/ma-2026-01p-08-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2026-01p-09-fig1",
+      "kind": "figure",
+      "title": "Trójkąty równoramienne ABC (kąt 80° przy C) i ABD (kąt 40° przy B), odcinki AC i BD przecinają się w S",
+      "asset": "assets/ma-2026-01p-09-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2026-01p-12-fig1",
+      "kind": "figure",
+      "title": "Szereg figur ułożonych z jednakowych trójkątów równobocznych: pojedynczy trójkąt, potem coraz większe równoległoboki i trapezy z kolejnych trójkątów, zakończone wielokropkiem.",
+      "asset": "assets/ma-2026-01p-12-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2026-01p-17-fig1",
+      "kind": "figure",
+      "title": "Wykres zależności przebytej drogi (w km) od czasu (w min): linia łamana złożona z trzech rosnących odcinków oznaczonych I, II i III, przedzielonych poziomymi odcinkami odpowiadającymi postojom.",
+      "asset": "assets/ma-2026-01p-17-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 19
+      }
+    },
+    {
+      "id": "ma-2026-01p-19-fig1",
+      "kind": "figure",
+      "title": "Romb ABCD z przekątną BD oraz wysokością opuszczoną z wierzchołka D na bok AB.",
+      "asset": "assets/ma-2026-01p-19-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 21
+      }
+    },
+    {
+      "id": "ma-2026-01p-20-fig1",
+      "kind": "figure",
+      "title": "Czworokąt ABCD z przekątną BD; znaki kąta prostego (łuki z kropką) przy wierzchołku D w trójkącie BCD i przy wierzchołku A w trójkącie ABD.",
+      "asset": "assets/ma-2026-01p-20-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 22
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "ma-2026-01p-01",
+      "sessionId": "matematyka-2026-01-probny",
+      "number": 1,
+      "maxPoints": 1,
+      "instruction": "Na diagramie przedstawiono zysk pewnej firmy w kolejnych kwartałach 2024 roku.\n\n![Diagram słupkowy przedstawiający zysk firmy w tysiącach złotych w czterech kwartałach 2024 roku: I kwartał – 300, II kwartał – 450, III kwartał – 600, IV kwartał – 500.](stimulus:ma-2026-01p-01-fig1)\n\n**Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [
+        "ma-2026-01p-01-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-01p-01",
+          "label": "1",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Zysk tej firmy w I kwartale stanowi $\\frac{1}{6}$ zysku z całego roku 2024. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Zysk tej firmy w drugim półroczu 2024 roku był o 350 tysięcy złotych większy niż jej zysk w pierwszym półroczu 2024 roku. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "F",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-78-XIII.1",
+            "ma-46-IV.1"
+          ],
+          "explanation": "Z diagramu odczytujemy zyski: 300, 450, 600 i 500 tys. zł, czyli łącznie 1850 tys. zł. Jedna szósta całej sumy to około 308 tys. zł, a nie 300 tys. zł, więc pierwsze zdanie jest fałszywe. Zysk w drugim półroczu (III i IV kwartał) wynosi 1100 tys. zł, a w pierwszym półroczu (I i II kwartał) 750 tys. zł, różnica to właśnie 350 tys. zł, więc drugie zdanie jest prawdziwe. Dlatego poprawna odpowiedź to FP.",
+          "scoringNotes": [
+            "1 pkt – odpowiedź poprawna.",
+            "0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+          ]
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-78-XIII.1",
+        "ma-46-IV.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2026-01p-02",
+      "sessionId": "matematyka-2026-01-probny",
+      "number": 2,
+      "maxPoints": 1,
+      "instruction": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWartość wyrażenia $4^3 - 8^2 : 2^4$ jest równa",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-01p-02",
+          "label": "2",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "0"
+              },
+              {
+                "id": "B",
+                "text": "10"
+              },
+              {
+                "id": "C",
+                "text": "56"
+              },
+              {
+                "id": "D",
+                "text": "60"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-46-II.8",
+            "ma-46-II.9",
+            "ma-78-I.2"
+          ],
+          "explanation": "Najpierw obliczamy potęgi: $4^3 = 64$, $8^2 = 64$ oraz $2^4 = 16$. Potem, zgodnie z kolejnością wykonywania działań, dzielimy przed odejmowaniem: $64 : 16 = 4$. Na koniec $64 - 4 = 60$, więc poprawna jest odpowiedź D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-46-II.8",
+        "ma-46-II.9",
+        "ma-78-I.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2026-01p-03",
+      "sessionId": "matematyka-2026-01-probny",
+      "number": 3,
+      "maxPoints": 1,
+      "instruction": "Dane jest wyrażenie\n\n$\\left(0,75 \\cdot 8 + 8 \\cdot \\frac{1}{2}\\right) : (-2)$\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nWartość tego wyrażenia jest równa",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-01p-03",
+          "label": "3",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$-5$"
+              },
+              {
+                "id": "B",
+                "text": "$-3,5$"
+              },
+              {
+                "id": "C",
+                "text": "$3,5$"
+              },
+              {
+                "id": "D",
+                "text": "$5$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-46-V.7"
+          ],
+          "explanation": "Najpierw wykonujemy działania w nawiasie: $0,75 \\cdot 8 = 6$ oraz $8 \\cdot \\frac{1}{2} = 4$, więc wartość w nawiasie to $6 + 4 = 10$. Potem dzielimy ten wynik przez $-2$: $10 : (-2) = -5$. Dlatego poprawna jest odpowiedź A."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-46-V.7"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 4
+      }
+    },
+    {
+      "id": "ma-2026-01p-04",
+      "sessionId": "matematyka-2026-01-probny",
+      "number": 4,
+      "maxPoints": 1,
+      "instruction": "Uczniowie trzech klas: 8A, 8B i 8C, zebrali łącznie 132,9 kg makulatury. Uczniowie klas 8A i 8B zebrali łącznie 90,6 kg makulatury, a uczniowie klas 8B i 8C zebrali łącznie 86,8 kg makulatury.\n\n**Ile kilogramów makulatury zebrali uczniowie klasy 8B? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-01p-04",
+          "label": "4",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "43,4"
+              },
+              {
+                "id": "B",
+                "text": "44,3"
+              },
+              {
+                "id": "C",
+                "text": "44,5"
+              },
+              {
+                "id": "D",
+                "text": "47,2"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-I",
+            "ma-46-V.2",
+            "ma-46-XIV.5"
+          ],
+          "explanation": "Suma wyników klas 8A i 8B oraz klas 8B i 8C to 90,6 kg + 86,8 kg = 177,4 kg. W tej sumie masa zebrana przez klasę 8B została policzona dwa razy, a klasy 8A i 8C po jednym razie, więc od tej sumy wystarczy odjąć łączną masę zebraną przez wszystkie trzy klasy: 177,4 kg − 132,9 kg = 44,5 kg. Zatem uczniowie klasy 8B zebrali 44,5 kg makulatury."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-I",
+        "ma-46-V.2",
+        "ma-46-XIV.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2026-01p-05",
+      "sessionId": "matematyka-2026-01-probny",
+      "number": 5,
+      "maxPoints": 1,
+      "instruction": "Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nRówność $3a-4=a+2$ jest spełniona dla liczby $a$ równej [[A|B]].\n\nWyrażenie $(3a-4)-(a+2)$ jest równe [[C|D]].",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-01p-05",
+          "label": "5",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "3"
+              },
+              {
+                "id": "B",
+                "text": "1"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "$2a-2$"
+              },
+              {
+                "id": "D",
+                "text": "$2a-6$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "A",
+                "reason": "D"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-78-III.2",
+            "ma-78-IV.2"
+          ],
+          "explanation": "Rozwiązujemy równanie $3a-4=a+2$: przenosząc wyrazy, otrzymujemy $3a-a=2+4$, czyli $2a=6$, więc $a=3$ – to odpowiedź A. Następnie upraszczamy wyrażenie: $(3a-4)-(a+2)=3a-4-a-2=2a-6$ – to odpowiedź D. Dlatego poprawne uzupełnienie obu zdań to kod AD."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-78-III.2",
+        "ma-78-IV.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2026-01p-06",
+      "sessionId": "matematyka-2026-01-probny",
+      "number": 6,
+      "maxPoints": 1,
+      "instruction": "Aleks kupił jeden komplet słuchawek bezprzewodowych, dwie jednakowe ładowarki i dwa jednakowe dyski USB. Jeden dysk USB był 2 razy tańszy od ładowarki, a komplet słuchawek bezprzewodowych był 4 razy droższy od jednej ładowarki.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nJeżeli przez $x$ oznaczymy cenę jednej ładowarki, to wartość zakupów Aleksa opiszemy wyrażeniem",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-01p-06",
+          "label": "6",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$10,5x$"
+              },
+              {
+                "id": "B",
+                "text": "$7x$"
+              },
+              {
+                "id": "C",
+                "text": "$6,5x$"
+              },
+              {
+                "id": "D",
+                "text": "$6x$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-III.3"
+          ],
+          "explanation": "Niech $x$ oznacza cenę jednej ładowarki. Jeden dysk USB był 2 razy tańszy od ładowarki, więc kosztuje $0,5x$, a komplet słuchawek był 4 razy droższy od jednej ładowarki, więc kosztuje $4x$. Wartość zakupów to $4x + 2x + 2 \\cdot 0,5x = 4x + 2x + x = 7x$, dlatego poprawna jest odpowiedź B."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-III.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2026-01p-07",
+      "sessionId": "matematyka-2026-01-probny",
+      "number": 7,
+      "maxPoints": 1,
+      "instruction": "Dane są trzy liczby: $x = 5,27 \\cdot 10^{-3}$, $y = 0,0023$, $z = 1400 \\cdot 10^{-5}$.\nUporządkowano te liczby w kolejności od najmniejszej do największej.\n\n**Który zapis przedstawia poprawny sposób uporządkowania liczb $x$, $y$, $z$?**\n**Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-01p-07",
+          "label": "7",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "$x < y < z$"
+              },
+              {
+                "id": "B",
+                "text": "$y < x < z$"
+              },
+              {
+                "id": "C",
+                "text": "$z < y < x$"
+              },
+              {
+                "id": "D",
+                "text": "$x < z < y$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-IV.12"
+          ],
+          "explanation": "Zapiszmy wszystkie trzy liczby w postaci dziesiętnej: $x = 5,27 \\cdot 10^{-3} = 0,00527$, $y = 0,0023$, $z = 1400 \\cdot 10^{-5} = 0,014$. Porównując te wartości, widzimy, że $0,0023 < 0,00527 < 0,014$, czyli $y < x < z$. Dlatego poprawny zapis to odpowiedź B."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-IV.12"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "ma-2026-01p-08",
+      "sessionId": "matematyka-2026-01-probny",
+      "number": 8,
+      "maxPoints": 1,
+      "instruction": "Na osi liczbowej zaznaczono punkty $K$, $L$ i $M$. Odcinek $KM$ jest podzielony na 10 równych części (zobacz rysunek).\n\n![Oś liczbowa z zaznaczonymi punktami K, L i M, na której odcinek KM podzielono na 10 równych części, a pod dwiema podziałkami podpisano liczby 6 i 21.](stimulus:ma-2026-01p-08-fig1)\n\nZ liczb, które są współrzędnymi punktów $K$, $L$ i $M$, utworzono sumy:\n\nI. $K+L+M$ II. $K+L$ III. $K+M$ IV. $L+M$\n\n**Która z utworzonych sum jest liczbą podzielną przez $9$? Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [
+        "ma-2026-01p-08-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-01p-08",
+          "label": "8",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "I"
+              },
+              {
+                "id": "B",
+                "text": "II"
+              },
+              {
+                "id": "C",
+                "text": "III"
+              },
+              {
+                "id": "D",
+                "text": "IV"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-II",
+            "ma-78-X.6"
+          ],
+          "explanation": "Między podziałką podpisaną liczbą 6 a podziałką podpisaną liczbą 21 jest 5 równych części odcinka $KM$, więc jedna część ma długość $(21-6):5=3$. Punkt $K$ leży 3 części przed liczbą 6, zatem $K=-3$, a stąd $L=9$ i $M=27$. Sumy wynoszą: I. $33$, II. $6$, III. $24$, IV. $36$, a przez 9 dzieli się tylko $36$, więc poprawna jest odpowiedź D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-II",
+        "ma-78-X.6"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2026-01p-09",
+      "sessionId": "matematyka-2026-01-probny",
+      "number": 9,
+      "maxPoints": 1,
+      "instruction": "Trójkąty $ABC$ i $ABD$ są równoramienne. Miara kąta między ramionami trójkąta $ABC$ jest równa $80^\\circ$, a miara kąta między ramionami trójkąta $ABD$ jest równa $40^\\circ$. Punkt $S$ jest punktem przecięcia odcinków $AC$ i $BD$ (zobacz rysunek).\n\n![Trójkąty równoramienne ABC (kąt 80° przy C) i ABD (kąt 40° przy B), odcinki AC i BD przecinają się w S](stimulus:ma-2026-01p-09-fig1)\n\n**Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nKąt $ASB$ jest [[A|B]].\n\nMiara kąta $DAC$ jest równa [[C|D]].",
+      "stimulusIds": [
+        "ma-2026-01p-09-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-01p-09",
+          "label": "9",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "ostry"
+              },
+              {
+                "id": "B",
+                "text": "prosty"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "$20^\\circ$"
+              },
+              {
+                "id": "D",
+                "text": "$40^\\circ$"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "B",
+                "reason": "C"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-VIII.6"
+          ],
+          "explanation": "W trójkącie równoramiennym $ABC$ kąt między ramionami ma $80^\\circ$, więc kąty przy podstawie $AB$ mają po $(180^\\circ-80^\\circ):2=50^\\circ$, czyli kąt $CAB=50^\\circ$. W trójkącie równoramiennym $ABD$ kąt między ramionami przy wierzchołku $B$ ma $40^\\circ$, więc kąt $DAB=(180^\\circ-40^\\circ):2=70^\\circ$. W trójkącie $ASB$ mamy kąt $SAB=50^\\circ$ i kąt $SBA=40^\\circ$, zatem kąt $ASB=180^\\circ-50^\\circ-40^\\circ=90^\\circ$, czyli jest prosty (B). Miara kąta $DAC$ to różnica kątów $DAB$ i $CAB$: $70^\\circ-50^\\circ=20^\\circ$ (C)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-VIII.6"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "ma-2026-01p-10",
+      "sessionId": "matematyka-2026-01-probny",
+      "number": 10,
+      "maxPoints": 1,
+      "instruction": "Na tablicy zapisano osiem liczb całkowitych dodatnich, których średnia arytmetyczna jest równa $9$.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nPo dopisaniu do tych ośmiu liczb dodatkowej liczby równej $9$ średnia arytmetyczna",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-01p-10",
+          "label": "10",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "wzrośnie o $1$."
+              },
+              {
+                "id": "B",
+                "text": "zmaleje o $1$."
+              },
+              {
+                "id": "C",
+                "text": "się nie zmieni."
+              },
+              {
+                "id": "D",
+                "text": "wzrośnie o $9$."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-XIII.3"
+          ],
+          "explanation": "Suma ośmiu liczb, których średnia arytmetyczna wynosi $9$, jest równa $8 \\cdot 9 = 72$. Po dopisaniu liczby $9$ suma dziewięciu liczb wynosi $72 + 9 = 81$, więc ich średnia to $\\frac{81}{9} = 9$, czyli dokładnie tyle samo co przed dopisaniem. Dlatego średnia arytmetyczna się nie zmieni."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-XIII.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2026-01p-11",
+      "sessionId": "matematyka-2026-01-probny",
+      "number": 11,
+      "maxPoints": 1,
+      "instruction": "Dany jest prostokąt $ABCD$ o bokach długości $4$ cm i $9$ cm. Ten prostokąt narysowano w skali $2:1$ i otrzymano prostokąt $EFGH$.\n\n**Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F – jeśli jest fałszywe.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-01p-11",
+          "label": "11",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Obwód prostokąta $EFGH$ jest dwukrotnie większy od obwodu prostokąta $ABCD$. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Pole prostokąta $EFGH$ jest równe $144$ cm$^2$. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-XII.8",
+            "ma-46-XI.3"
+          ],
+          "explanation": "Skala $2:1$ oznacza, że każdy bok narysowanego prostokąta jest dwa razy dłuższy niż odpowiadający mu bok prostokąta $ABCD$, więc prostokąt $EFGH$ ma boki $8$ cm i $18$ cm. Jego obwód wynosi $2\\cdot(8+18)=52$ cm, czyli dokładnie dwa razy więcej niż obwód prostokąta $ABCD$ równy $2\\cdot(4+9)=26$ cm, dlatego pierwsze zdanie jest prawdziwe. Pole prostokąta $EFGH$ wynosi $8\\cdot18=144$ cm$^2$, więc drugie zdanie również jest prawdziwe."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-XII.8",
+        "ma-46-XI.3"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2026-01p-12",
+      "sessionId": "matematyka-2026-01-probny",
+      "number": 12,
+      "maxPoints": 1,
+      "instruction": "Z kart w kształcie trójkąta równobocznego o boku długości $2\\text{ cm}$ układano figury w sposób przedstawiony na rysunku.\n\n![Szereg figur ułożonych z jednakowych trójkątów równobocznych: pojedynczy trójkąt, potem coraz większe równoległoboki i trapezy z kolejnych trójkątów, zakończone wielokropkiem.](stimulus:ma-2026-01p-12-fig1)\n\n**Ile takich trójkątów należy ułożyć, aby otrzymać trapez o obwodzie równym $42\\text{ cm}$?**\n\n**Wybierz właściwą odpowiedź spośród podanych.**",
+      "stimulusIds": [
+        "ma-2026-01p-12-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-01p-12",
+          "label": "12",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "7"
+              },
+              {
+                "id": "B",
+                "text": "11"
+              },
+              {
+                "id": "C",
+                "text": "19"
+              },
+              {
+                "id": "D",
+                "text": "21"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-46-XI.2"
+          ],
+          "explanation": "Trapez powstaje z nieparzystej liczby trójkątów: z 3 trójkątów jego obwód ma 5 boków (10 cm), z 5 trójkątów – 7 boków (14 cm), czyli z $n$ trójkątów obwód wynosi $2 \\cdot (n + 2)$ cm. Z równania $2 \\cdot (n + 2) = 42$ otrzymujemy $n + 2 = 21$, czyli $n = 19$. Dlatego poprawna jest odpowiedź C."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-46-XI.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "ma-2026-01p-13",
+      "sessionId": "matematyka-2026-01-probny",
+      "number": 13,
+      "maxPoints": 1,
+      "instruction": "Adam zbudował dwa prostopadłościany. Pierwszy prostopadłościan ma wymiary 5, 6, 10. Drugi prostopadłościan ma wymiary 6, 6, 10.\n\n**Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.**\n\nObjętość pierwszego prostopadłościanu jest równa [[A|B]].\n\nRóżnica objętości tych prostopadłościanów jest równa [[C|D]].",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-01p-13",
+          "label": "13",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "300"
+              },
+              {
+                "id": "B",
+                "text": "600"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "60"
+              },
+              {
+                "id": "D",
+                "text": "120"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "A",
+                "reason": "C"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-XI.2"
+          ],
+          "explanation": "Objętość prostopadłościanu to iloczyn jego trzech wymiarów. Pierwszy prostopadłościan ma wymiary 5, 6, 10, więc jego objętość wynosi $5\\cdot6\\cdot10=300$ i wybieramy odpowiedź A. Drugi prostopadłościan ma wymiary 6, 6, 10, więc jego objętość wynosi $6\\cdot6\\cdot10=360$, a różnica objętości obu prostopadłościanów to $360-300=60$, czyli odpowiedź C."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-XI.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2026-01p-14",
+      "sessionId": "matematyka-2026-01-probny",
+      "number": 14,
+      "maxPoints": 1,
+      "instruction": "Adam zbudował dwa prostopadłościany. Pierwszy prostopadłościan ma wymiary 5, 6, 10. Drugi prostopadłościan ma wymiary 6, 6, 10.\n\nAdam ustawił te prostopadłościany jeden na drugim tak, że powstał większy prostopadłościan.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nPole powierzchni całkowitej otrzymanego prostopadłościanu jest równe",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-01p-14",
+          "label": "14",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "412"
+              },
+              {
+                "id": "B",
+                "text": "472"
+              },
+              {
+                "id": "C",
+                "text": "532"
+              },
+              {
+                "id": "D",
+                "text": "592"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-78-XI.2"
+          ],
+          "explanation": "Pierwszy prostopadłościan ma wymiary 5, 6, 10, a drugi 6, 6, 10. Aby po ustawieniu jednego na drugim powstał większy prostopadłościan, trzeba je zetknąć jednakowymi ścianami o wymiarach 6 × 10, więc nowy prostopadłościan ma wymiary 6, 10 oraz $5 + 6 = 11$. Jego pole powierzchni całkowitej wynosi $2 \\cdot (6 \\cdot 10 + 6 \\cdot 11 + 10 \\cdot 11) = 2 \\cdot (60 + 66 + 110) = 472$. Dlatego poprawna jest odpowiedź B."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-78-XI.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "ma-2026-01p-15",
+      "sessionId": "matematyka-2026-01-probny",
+      "number": 15,
+      "maxPoints": 2,
+      "instruction": "Dana jest liczba\n\n$a = \\frac{2\\sqrt{3} \\cdot \\sqrt{10}}{\\sqrt{6}}$\n\n**Wyznacz dwie kolejne liczby całkowite dodatnie, między którymi na osi liczbowej znajduje się liczba $a$. Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-01p-15",
+          "label": "15",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "I sposób\nObliczymy wartość liczby $a$.\n$a = \\frac{2\\sqrt{3} \\cdot \\sqrt{10}}{\\sqrt{6}} = \\frac{2\\sqrt{3} \\cdot \\sqrt{2} \\cdot \\sqrt{5}}{\\sqrt{2} \\cdot \\sqrt{3}} = 2\\sqrt{5} = \\sqrt{20}$\nSzukamy dwóch kolejnych liczb naturalnych, takich że jedna jest mniejsza od $\\sqrt{20}$, a druga jest większa od $\\sqrt{20}$.\n$\\sqrt{16} < \\sqrt{20} < \\sqrt{25}$\n$\\sqrt{16} = 4$\n$\\sqrt{25} = 5$\nOdpowiedź: Liczba $a$ znajduje się na osi liczbowej między liczbami 4 oraz 5."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób wyznaczenia dwóch kolejnych liczb naturalnych, między którymi znajduje się wartość podanego wyrażenia arytmetycznego, prawidłowe obliczenia oraz prawidłowy wynik liczbowy (4 oraz 5)."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia liczby $a$."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-II.3",
+            "ma-78-II.5"
+          ],
+          "explanation": "Upraszczamy wyrażenie: $a = \\frac{2\\sqrt{3} \\cdot \\sqrt{10}}{\\sqrt{6}} = 2\\sqrt{5} = \\sqrt{20}$. Ponieważ $\\sqrt{16} < \\sqrt{20} < \\sqrt{25}$, czyli $4 < \\sqrt{20} < 5$, liczba $a$ leży na osi liczbowej między kolejnymi liczbami całkowitymi 4 i 5.",
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "I sposób\nObliczymy wartość liczby $a$.\n$a = \\frac{2\\sqrt{3} \\cdot \\sqrt{10}}{\\sqrt{6}} = \\frac{2\\sqrt{3} \\cdot \\sqrt{2} \\cdot \\sqrt{5}}{\\sqrt{2} \\cdot \\sqrt{3}} = 2\\sqrt{5} = \\sqrt{20}$\nSzukamy dwóch kolejnych liczb naturalnych, takich że jedna jest mniejsza od $\\sqrt{20}$, a druga jest większa od $\\sqrt{20}$.\n$\\sqrt{16} < \\sqrt{20} < \\sqrt{25}$\n$\\sqrt{16} = 4$\n$\\sqrt{25} = 5$\nOdpowiedź: Liczba $a$ znajduje się na osi liczbowej między liczbami 4 oraz 5.",
+              "ref": {
+                "source": "klucz",
+                "page": 10
+              }
+            },
+            {
+              "points": 2,
+              "content": "II sposób\nObliczymy wartość liczby $a$.\n$a = \\frac{2\\sqrt{3} \\cdot \\sqrt{10}}{\\sqrt{6}} = \\frac{2\\sqrt{3 \\cdot 10}}{\\sqrt{6}} = \\frac{2\\sqrt{30}}{\\sqrt{6}} = 2\\sqrt{5}$\nSzacujemy wartość liczby $\\sqrt{5}$.\n$(2,2)^2 = 4,84$\n$(2,3)^2 = 5,29$\nstąd $2,2 < \\sqrt{5} < 2,3$\nWnioskujemy, że:\n$4,4 < 2\\sqrt{5} < 4,6$\nZatem szukane dwie kolejne liczby naturalne to 4 i 5.\nOdpowiedź: Liczba $a$ znajduje się na osi liczbowej między liczbami 4 oraz 5.",
+              "ref": {
+                "source": "klucz",
+                "page": 11
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-II.3",
+        "ma-78-II.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 17
+      }
+    },
+    {
+      "id": "ma-2026-01p-16",
+      "sessionId": "matematyka-2026-01-probny",
+      "number": 16,
+      "maxPoints": 3,
+      "instruction": "Drużynę harcerską można podzielić na 4-osobowe zespoły. Gdyby ta drużyna liczyła o 3 osoby mniej, to wtedy harcerzy można by podzielić na zespoły 5-osobowe. Liczba zespołów 5-osobowych byłaby o 2 mniejsza od liczby zespołów 4-osobowych.\n\n**Oblicz, ile osób jest w tej drużynie harcerskiej. Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-01p-16",
+          "label": "16",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Gdy drużyna dzieli się na zespoły po 4 osoby, to powstaje $x$ zespołów. Liczbę osób w drużynie zapiszemy więc jako $4x$. Gdyby drużyna liczyła o 3 osoby mniej czyli $(4x-3)$, to można ją dzielić na $(x-2)$ zespołów po 5 osób. Zapiszemy równanie uwzględniające powyższe warunki:\n$4x-3=5(x-2)$\n$4x=5\\cdot(x-2)+3$\n$4x=5x-10+3$\n$7=5x-4x$\n$x=7$\nSkoro jest 7 zespołów po 4 osoby, to w drużynie jest $7\\cdot4=28$ osób.\nOdpowiedź: W tej drużynie harcerskiej jest 28 osób."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia liczby osób w drużynie harcerskiej, prawidłowe obliczenia **oraz** prawidłowy wynik liczbowy (28 osób)",
+                  "zastosowanie metody prób i błędów – sprawdzenie warunków zadania dla co najmniej dwóch liczb zespołów 4-osobowych z uwzględnieniem liczby zespołów równej 7, prawidłowe obliczenia **oraz** prawidłowy wynik liczbowy (28 osób)."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "zapisanie poprawnego równania prowadzącego do obliczenia liczby zespołów 4-osobowych lub 5-osobowych, np. $4x = 5 \\cdot (x - 2) + 3$ lub $4(x + 2) = 5 \\cdot x + 3$ (lub zapisy równoważne)",
+                  "zapisanie poprawnego równania prowadzącego do obliczenia liczby harcerzy w drużynie, np. $\\frac{x}{4} = \\frac{x-3}{5} + 2$ (lub zapisy równoważne)",
+                  "zastosowanie metody prób i błędów – sprawdzenie warunków zadania dla co najmniej dwóch różnych liczb zespołów 4-osobowych **z uwzględnieniem** liczby zespołów równej 7."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "zapisanie poprawnych wyrażeń algebraicznych jednej zmiennej opisujących liczbę osób w zespołach 4-osobowych oraz liczbę osób w zespołach 5-osobowych, np. $4x$ **oraz** $5(x - 2) + 3$ (lub zapisy równoważne)",
+                  "zapisanie poprawnych wyrażeń algebraicznych jednej zmiennej opisujących liczbę zespołów 4-osobowych i 5-osobowych, np. $\\frac{x}{4}$ **oraz** $\\frac{x-3}{5}$ (lub zapisy równoważne)",
+                  "zastosowanie metody prób i błędów – sprawdzenie warunków zadania dla co najmniej dwóch różnych liczb zespołów 4-osobowych **bez uwzględnienia** liczby zespołów równej 7."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-IV",
+            "ma-46-XIV.5"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "**I sposób**\nGdy drużyna dzieli się na zespoły po 4 osoby, to powstaje $x$ zespołów.\nLiczbę osób w drużynie zapiszemy więc jako $4x$.\nGdyby drużyna liczyła o 3 osoby mniej czyli $(4x-3)$, to można ją dzielić na $(x-2)$ zespołów po 5 osób.\nZapiszemy równanie uwzględniające powyższe warunki:\n$4x-3=5(x-2)$\n$4x=5\\cdot(x-2)+3$\n$4x=5x-10+3$\n$7=5x-4x$\n$x=7$\nSkoro jest 7 zespołów po 4 osoby, to w drużynie jest $7\\cdot4=28$ osób.\nOdpowiedź: W tej drużynie harcerskiej jest 28 osób.",
+              "ref": {
+                "source": "klucz",
+                "page": 12
+              }
+            },
+            {
+              "points": 3,
+              "content": "**II sposób**\nOznaczymy przez $x$ liczbę osób w drużynie.\nLiczba zespołów 4-osobowych jest równa $\\frac{x}{4}$, a liczba zespołów 5-osobowych jest równa $\\frac{x-3}{5}$.\nLiczba zespołów 5-osobowych jest o 2 mniejsza od liczby zespołów 4-osobowych, możemy zatem zapisać równanie:\n$\\frac{x}{4}=\\frac{x-3}{5}+2$\n$5x=4x+28$\n$x=28$\nOdpowiedź: W tej drużynie harcerskiej jest 28 osób.",
+              "ref": {
+                "source": "klucz",
+                "page": 13
+              }
+            },
+            {
+              "points": 3,
+              "content": "**III sposób**\nMetoda prób i błędów:\n\n| Liczba zespołów 4-osobowych | Liczba osób w zespołach 4-osobowych | Liczba zespołów 5-osobowych (o 2 mniej) | Liczba osób w zespołach 5-osobowych | Wniosek |\n| --- | --- | --- | --- | --- |\n| 5 | $5\\cdot4=20$ | 3 | $3\\cdot5=15$ | $20-15\\neq3$ |\n| 6 | $6\\cdot4=24$ | 4 | $4\\cdot5=20$ | $24-20\\neq3$ |\n| 8 | $8\\cdot4=32$ | 6 | $6\\cdot5=30$ | $32-30\\neq3$ |\n| **7** | **$7\\cdot4=28$** | **5** | **$5\\cdot5=25$** | **$28-25=3$** |\n\nOdpowiedź: W tej drużynie harcerskiej jest 28 osób.",
+              "ref": {
+                "source": "klucz",
+                "page": 13
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Jeżeli uczeń sprawdza wszystkie warunki zadania tylko dla 7 zespołów 4-osobowych lub 28 osób w drużynie i nie popełni błędów rachunkowych, to otrzymuje 1 punkt."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-IV",
+        "ma-46-XIV.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 18
+      }
+    },
+    {
+      "id": "ma-2026-01p-17",
+      "sessionId": "matematyka-2026-01-probny",
+      "number": 17,
+      "maxPoints": 3,
+      "instruction": "Kierowca pokonał drogę podzieloną na trzy odcinki (I, II, III). Po przejechaniu każdego odcinka drogi zatrzymywał się na postój. Na wykresie przedstawiono zależność przebytej przez kierowcę drogi od czasu.\n\n![Wykres zależności przebytej drogi (w km) od czasu (w min): linia łamana złożona z trzech rosnących odcinków oznaczonych I, II i III, przedzielonych poziomymi odcinkami odpowiadającymi postojom.](stimulus:ma-2026-01p-17-fig1)\n\n**Oblicz, z jaką prędkością, wyrażoną w $\\frac{\\text{km}}{\\text{h}}$, kierowca pokonał II odcinek drogi.**\n**Zapisz obliczenia.**",
+      "stimulusIds": [
+        "ma-2026-01p-17-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-01p-17",
+          "label": "17",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "I sposób\nObliczymy długość drugiego odcinka drogi:\n$s = 200 - 120 = 80$ (km)\nObliczymy czas przejazdu drugiego odcinka drogi:\n$t = 180 - 105 = 75$ (min)\nObliczymy prędkość, z którą kierowca pokonał drugi odcinek drogi.\nSkorzystamy ze wzoru na prędkość:\n$v = \\frac{s}{t}$, gdzie:\n$v$ – prędkość\n$s = 80$ km – droga\n$t = 75$ minut $= 75 \\cdot \\frac{1}{60}$ h $= \\frac{5}{4}$ h – czas\n$v = \\frac{80\\ \\text{km}}{\\frac{5}{4}\\ \\text{h}} = 80 \\cdot \\frac{4}{5}\\ \\frac{\\text{km}}{\\text{h}} = 64\\ \\frac{\\text{km}}{\\text{h}}$\nOdpowiedź: Kierowca pokonał II odcinek drogi z prędkością $64\\ \\frac{\\text{km}}{\\text{h}}$."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia prędkości, z jaką kierowca pokonał drugi odcinek drogi, prawidłowe obliczenia oraz prawidłowy wynik liczbowy $\\left(64\\ \\frac{\\text{km}}{\\text{h}}\\right)$."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia prędkości, z jaką kierowca pokonał drugi odcinek drogi, czyli zastosowanie poprawnego związku między prędkością, drogą i czasem, np. zapisanie $v = \\frac{200 - 120}{180 - 105}\\ \\frac{\\text{km}}{\\text{min}}$ (lub zapisy równoważne)",
+                  "poprawny sposób obliczenia długości drugiego odcinka drogi oraz poprawny sposób wyrażenia czasu przejazdu drugiego odcinka drogi jako część godziny, np. zapisanie $(200 - 120)\\ \\text{km}$ oraz $\\frac{(180 - 105)}{60}\\ \\text{h}$ (lub zapisy równoważne)."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia długości drugiego odcinka drogi oraz poprawny sposób obliczenia czasu przejazdu tego odcinka drogi",
+                  "ustalenie, np. odczytanie z wykresu długości drugiego odcinka drogi i czasu przejazdu tego odcinka drogi (80 km i 75 minut)."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-XII.9",
+            "ma-78-XIII.1"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "I sposób\nObliczymy długość drugiego odcinka drogi:\n$s = 200 - 120 = 80$ (km)\nObliczymy czas przejazdu drugiego odcinka drogi:\n$t = 180 - 105 = 75$ (min)\nObliczymy prędkość, z którą kierowca pokonał drugi odcinek drogi.\nSkorzystamy ze wzoru na prędkość:\n$v = \\frac{s}{t}$, gdzie:\n$v$ – prędkość\n$s = 80$ km – droga\n$t = 75$ minut $= 75 \\cdot \\frac{1}{60}$ h $= \\frac{5}{4}$ h – czas\n$v = \\frac{80\\ \\text{km}}{\\frac{5}{4}\\ \\text{h}} = 80 \\cdot \\frac{4}{5}\\ \\frac{\\text{km}}{\\text{h}} = 64\\ \\frac{\\text{km}}{\\text{h}}$\nOdpowiedź: Kierowca pokonał II odcinek drogi z prędkością $64\\ \\frac{\\text{km}}{\\text{h}}$.",
+              "ref": {
+                "source": "klucz",
+                "page": 15
+              }
+            },
+            {
+              "points": 3,
+              "content": "II sposób\nObliczymy długość drugiego odcinka drogi:\n$200 - 120 = 80$ (km)\nObliczymy czas przejazdu drugiego odcinka drogi:\n$180 - 105 = 75$ (min)\nObliczymy, ile kilometrów kierowca przejechałby w ciągu 1 godziny (60 min), gdyby jechał z tą samą, stałą prędkością.\n80 km w 75 min\n$x$ km w 60 min\n$x = \\frac{80\\ \\text{km} \\cdot 60\\ \\text{min}}{75\\ \\text{min}}$\n$x = 64$ km\nOdpowiedź: Kierowca pokonał II odcinek drogi z prędkością $64\\ \\frac{\\text{km}}{\\text{h}}$.",
+              "ref": {
+                "source": "klucz",
+                "page": 15
+              }
+            },
+            {
+              "points": 3,
+              "content": "III sposób\nDługość drugiego odcinka drogi: $80$ (km)\nCzas przejazdu drugiego odcinka drogi: $75$ (min)\n80 km w 75 min\n16 km w 15 min\n64 km w 60 min\n60 min = 1 h\nOdpowiedź: Kierowca pokonał II odcinek drogi z prędkością $64\\ \\frac{\\text{km}}{\\text{h}}$.",
+              "ref": {
+                "source": "klucz",
+                "page": 16
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Błąd przy zamianie jednostek traktuje się jako błąd rachunkowy."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-XII.9",
+        "ma-78-XIII.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 19
+      }
+    },
+    {
+      "id": "ma-2026-01p-18",
+      "sessionId": "matematyka-2026-01-probny",
+      "number": 18,
+      "maxPoints": 2,
+      "instruction": "Graniastosłup prawidłowy czworokątny o objętości $567\\ \\text{cm}^3$ ma wysokość równą $7\\ \\text{cm}$.\n\n**Oblicz, ile $\\text{cm}^2$ ma pole powierzchni całkowitej tego graniastosłupa. Zapisz obliczenia.**",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "ma-2026-01p-18",
+          "label": "18",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Objętość graniastosłupa: $V = 567\\ \\text{cm}^3$.\nWysokość graniastosłupa: $H = 7\\ \\text{cm}$.\nGraniastosłup prawidłowy czworokątny ma w podstawie kwadrat.\nOznaczymy długość krawędzi podstawy (długość boku kwadratu) jako $a$.\nObliczymy długość krawędzi podstawy graniastosłupa prawidłowego czworokątnego.\nSkorzystamy ze wzoru na objętość graniastosłupa:\n$V = a^2 \\cdot H$\n$a^2 = V : H$\n$a^2 = 567 : 7$\n$a^2 = 81$\n$a = 9\\ (\\text{cm})$\nObliczymy pole powierzchni całkowitej tego graniastosłupa:\n$P_c = 9 \\cdot 7 \\cdot 4 + 81 \\cdot 2 = 414\\ (\\text{cm}^2)$\nOdpowiedź: Pole powierzchni całkowitej graniastosłupa jest równe $414\\ \\text{cm}^2$."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia pola powierzchni całkowitej graniastosłupa, prawidłowe obliczenia **oraz** prawidłowy wynik liczbowy $(414\\ \\text{cm}^2)$"
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia długości krawędzi podstawy graniastosłupa."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-X.5",
+            "ma-78-XI.2"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "Objętość graniastosłupa: $V = 567\\ \\text{cm}^3$.\nWysokość graniastosłupa: $H = 7\\ \\text{cm}$.\nGraniastosłup prawidłowy czworokątny ma w podstawie kwadrat.\nOznaczymy długość krawędzi podstawy (długość boku kwadratu) jako $a$.\nObliczymy długość krawędzi podstawy graniastosłupa prawidłowego czworokątnego.\nSkorzystamy ze wzoru na objętość graniastosłupa:\n$V = a^2 \\cdot H$\n$a^2 = V : H$\n$a^2 = 567 : 7$\n$a^2 = 81$\n$a = 9$ (cm)\nObliczymy pole powierzchni całkowitej tego graniastosłupa:\n$P_c = 9 \\cdot 7 \\cdot 4 + 81 \\cdot 2 = 414\\ (\\text{cm}^2)$\nOdpowiedź: Pole powierzchni całkowitej graniastosłupa jest równe $414\\ \\text{cm}^2$.",
+              "ref": {
+                "source": "klucz",
+                "page": 16
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-X.5",
+        "ma-78-XI.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 20
+      }
+    },
+    {
+      "id": "ma-2026-01p-19",
+      "sessionId": "matematyka-2026-01-probny",
+      "number": 19,
+      "maxPoints": 3,
+      "instruction": "W rombie $ABCD$ poprowadzono przekątną $BD$ oraz wysokość opuszczoną z wierzchołka $D$ na bok $AB$ (zobacz rysunek). Długość boku tego rombu jest równa 10 cm, a długość przekątnej $BD$ jest równa 12 cm.\n\n![Romb ABCD z przekątną BD oraz wysokością opuszczoną z wierzchołka D na bok AB.](stimulus:ma-2026-01p-19-fig1)\n\n**Oblicz wysokość rombu $ABCD$ poprowadzoną z wierzchołka $D$ na bok $AB$.**\n**Zapisz obliczenia.**",
+      "stimulusIds": [
+        "ma-2026-01p-19-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-01p-19",
+          "label": "19",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "**I sposób**\nZaznaczymy na rysunku przekątną $AC$ i oznaczymy połowę długości tej przekątnej jako $x$. Skorzystamy z twierdzenia Pitagorasa, aby obliczyć $x$:\n$6^2 + x^2 = 10^2$\n$x^2 = 64$\n$x = \\sqrt{64}$\n$x = 8$ (cm)\nPołowa długości przekątnej $AC$ jest równa 8 cm, zatem przekątna $AC$ ma długość 16 cm.\nObliczymy pole rombu $ABCD$. Skorzystamy ze wzoru z przekątnymi rombu:\n$P = \\frac{|BD| \\cdot |AC|}{2}$\n$P = \\frac{12 \\cdot 16}{2} = 96$ (cm$^2$)\nObliczymy wysokość rombu $ABCD$. Skorzystamy ze wzoru na pole z uwzględnieniem wysokości rombu:\n$P = a \\cdot h$\n$h = \\frac{P}{a}$\n$h = \\frac{96}{10} = 9,6$ (cm)\nOdpowiedź: Wysokość rombu $ABCD$ poprowadzona z wierzchołka $D$ na bok $AB$ jest równa 9,6 cm."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia wysokości rombu poprowadzonej z wierzchołka $D$ na bok $AB$, prawidłowe obliczenia oraz prawidłowy wynik liczbowy (9,6 cm)."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia pola rombu."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia połowy długości przekątnej $AC$",
+                  "ustalenie, np. zapisanie na rysunku połowy długości przekątnej $AC$ (8 cm)."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-46-IX.5",
+            "ma-78-VIII.7",
+            "ma-78-IX.2"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "**I sposób**\nZaznaczymy na rysunku przekątną $AC$ i oznaczymy połowę długości tej przekątnej jako $x$. Skorzystamy z twierdzenia Pitagorasa, aby obliczyć $x$:\n$6^2 + x^2 = 10^2$\n$x^2 = 64$\n$x = \\sqrt{64}$\n$x = 8$ (cm)\nPołowa długości przekątnej $AC$ jest równa 8 cm, zatem przekątna $AC$ ma długość 16 cm.\nObliczymy pole rombu $ABCD$. Skorzystamy ze wzoru z przekątnymi rombu:\n$P = \\frac{|BD| \\cdot |AC|}{2}$\n$P = \\frac{12 \\cdot 16}{2} = 96$ (cm$^2$)\nObliczymy wysokość rombu $ABCD$. Skorzystamy ze wzoru na pole z uwzględnieniem wysokości rombu:\n$P = a \\cdot h$\n$h = \\frac{P}{a}$\n$h = \\frac{96}{10} = 9,6$ (cm)\nOdpowiedź: Wysokość rombu $ABCD$ poprowadzona z wierzchołka $D$ na bok $AB$ jest równa 9,6 cm.",
+              "ref": {
+                "source": "klucz",
+                "page": 18
+              }
+            },
+            {
+              "points": 3,
+              "content": "**II sposób**\nPrzekątna $BD$ dzieli romb $ABCD$ na dwa trójkąty przystające $ABD$ i $BCD$.\nZauważymy, że połowa długości przekątnej $AC$ rombu $ABCD$ jest wysokością opuszczoną na bok $BD$ trójkąta $ABD$ i trójkąta $BCD$.\nObliczymy wysokość trójkąta $ABD$ (połowę długości przekątnej $AC$). Skorzystamy z twierdzenia Pitagorasa:\n$6^2 + \\left(\\frac{1}{2}|AC|\\right)^2 = 10^2$\n$\\left(\\frac{1}{2}|AC|\\right)^2 = 64$\n$\\frac{1}{2}|AC| = \\sqrt{64}$\n$\\frac{1}{2}|AC| = 8$\nObliczymy pole trójkąta $ABD$:\n$P_{ABD} = \\frac{1}{2} \\cdot \\frac{1}{2}|AC| \\cdot |BD|$\n$P_{ABD} = \\frac{1}{2} \\cdot 8 \\cdot 12 = 48$ (cm$^2$)\nObliczymy pole rombu $ABCD$ jako sumę pól trójkątów $ABD$ i $BCD$:\n$P_{ABD} = P_{BCD}$\n$P_{ABCD} = P_{ABD} \\cdot 2 = 48 \\cdot 2 = 96$ (cm$^2$)\nObliczymy wysokość rombu $ABCD$. Skorzystamy ze wzoru na pole rombu z uwzględnieniem wysokości:\n$P_{ABCD} = a \\cdot h$\n$h = \\frac{P_{ABCD}}{a}$\n$h = \\frac{96}{10} = 9,6$ (cm)\nOdpowiedź: Wysokość rombu $ABCD$ poprowadzona z wierzchołka $D$ na bok $AB$ jest równa 9,6 cm.",
+              "ref": {
+                "source": "klucz",
+                "page": 18
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-46-IX.5",
+        "ma-78-VIII.7",
+        "ma-78-IX.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 21
+      }
+    },
+    {
+      "id": "ma-2026-01p-20",
+      "sessionId": "matematyka-2026-01-probny",
+      "number": 20,
+      "maxPoints": 3,
+      "instruction": "Dany jest czworokąt $ABCD$. Przekątna $BD$ o długości $\\sqrt{18}$ dzieli ten czworokąt na dwa trójkąty prostokątne równoramienne w sposób pokazany na rysunku.\n\n**Oblicz obwód czworokąta $ABCD$. Zapisz obliczenia.**\n\n![Czworokąt ABCD z przekątną BD; znaki kąta prostego (łuki z kropką) przy wierzchołku D w trójkącie BCD i przy wierzchołku A w trójkącie ABD.](stimulus:ma-2026-01p-20-fig1)",
+      "stimulusIds": [
+        "ma-2026-01p-20-fig1"
+      ],
+      "items": [
+        {
+          "id": "ma-2026-01p-20",
+          "label": "20",
+          "maxPoints": 3,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Obliczymy długość przeciwprostokątnej $BC$ trójkąta prostokątnego równoramiennego $DBC$. Skorzystamy z twierdzenia Pitagorasa. Zapiszemy i rozwiążemy równanie:\n$(\\sqrt{18})^2 + (\\sqrt{18})^2 = |BC|^2$\n$18 + 18 = |BC|^2$\n$36 = |BC|^2$\n$|BC| = 6$\nZauważymy, że $|AB| = |AD|$.\nObliczymy długości przyprostokątnych $AB$ i $AD$ trójkąta $ABD$. Skorzystamy z twierdzenia Pitagorasa, zapiszemy równanie:\n$|AB|^2 + |AD|^2 = (\\sqrt{18})^2$\n$2|AB|^2 = 18$\n$|AB|^2 = 9$\n$|AB| = |AD| = 3$\nObliczymy obwód czworokąta $ABCD$:\n$3 + 3 + 6 + \\sqrt{18} = 12 + \\sqrt{18}$\nOdpowiedź: Obwód czworokąta $ABCD$ jest równy $(12 + \\sqrt{18})$."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 3,
+                "paths": [
+                  "poprawny sposób obliczenia obwodu czworokąta $ABCD$, prawidłowe obliczenia oraz prawidłowy wynik liczbowy $(12 + \\sqrt{18})$ lub $(12 + 3\\sqrt{2})$."
+                ]
+              },
+              {
+                "points": 2,
+                "paths": [
+                  "poprawny sposób obliczenia długości odcinka $AB$ oraz długości odcinka $BC$",
+                  "ustalenie (np. zapisanie na rysunku) długości odcinka $AB$ oraz poprawny sposób obliczenia długości odcinka $BC$,",
+                  "ustalenie (np. zapisanie na rysunku) długości odcinka $BC$ oraz poprawny sposób obliczenia długości odcinka $AB$."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawny sposób obliczenia długości odcinka $AB$ lub długości odcinka $AD$",
+                  "ustalenie (np. zapisanie na rysunku) długości odcinka $AB$ lub długości odcinka $AD$,",
+                  "poprawny sposób obliczenia długości odcinka $BC$,",
+                  "ustalenie (np. zapisanie na rysunku) długości odcinka $BC$."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "rozwiązanie błędne albo brak rozwiązania."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "ma-gen-III",
+            "ma-78-VIII.7",
+            "ma-46-XI.2"
+          ],
+          "explanation": "Trójkąt ABD jest prostokątny równoramienny o przeciwprostokątnej BD = $\\sqrt{18}$, więc jego przyprostokątne AB i AD mają długość 3 (bo $3^2 + 3^2 = 18$). Trójkąt BCD jest prostokątny równoramienny o przyprostokątnych BD i DC równych $\\sqrt{18}$, więc jego przeciwprostokątna BC spełnia $|BC|^2 = 18 + 18 = 36$, czyli $|BC| = 6$. Obwód czworokąta ABCD to $3 + 3 + 6 + \\sqrt{18} = 12 + \\sqrt{18}$, czyli równoważnie $12 + 3\\sqrt{2}$.",
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "I sposób\nCzworokąt $ABCD$ można podzielić na trzy trójkąty przystające prostokątne równoramienne o długości przeciwprostokątnej równej $\\sqrt{18}$.\nOznaczymy długość odcinka $AB$ jako $a$.\nZapiszemy równanie, skorzystamy ze wzoru na długość przekątnej kwadratu i obliczymy $a$:\n$a\\sqrt{2} = \\sqrt{18}$\n$a = \\sqrt{9}$\n$a = 3$\nObliczymy obwód czworokąta $ABCD$:\n$4a + \\sqrt{18} = 4 \\cdot 3 + \\sqrt{18} = 12 + \\sqrt{18}$\nOdpowiedź: Obwód czworokąta $ABCD$ jest równy $(12 + \\sqrt{18})$.",
+              "ref": {
+                "source": "klucz",
+                "page": 20
+              }
+            },
+            {
+              "points": 3,
+              "content": "II sposób\nObliczymy długość przeciwprostokątnej $BC$ trójkąta prostokątnego równoramiennego $DBC$. Skorzystamy z twierdzenia Pitagorasa. Zapiszemy i rozwiążemy równanie:\n$(\\sqrt{18})^2 + (\\sqrt{18})^2 = |BC|^2$\n$18 + 18 = |BC|^2$\n$36 = |BC|^2$\n$|BC| = 6$\nZauważymy, że $|AB| = |AD|$.\nObliczymy długości przyprostokątnych $AB$ i $AD$ trójkąta $ABD$. Skorzystamy z twierdzenia Pitagorasa, zapiszemy równanie:\n$|AB|^2 + |AD|^2 = (\\sqrt{18})^2$\n$2|AB|^2 = 18$\n$|AB|^2 = 9$\n$|AB| = |AD| = 3$\nObliczymy obwód czworokąta $ABCD$:\n$3 + 3 + 6 + \\sqrt{18} = 12 + \\sqrt{18}$\nOdpowiedź: Obwód czworokąta $ABCD$ jest równy $(12 + \\sqrt{18})$.",
+              "ref": {
+                "source": "klucz",
+                "page": 21
+              }
+            },
+            {
+              "points": 3,
+              "content": "III sposób\nOznaczymy długość odcinka $AB$ jako $a$. Ułożymy równanie na podstawie wzoru na długość przekątnej kwadratu i obliczymy długość boku $a$ małego zielonego kwadratu:\n$a\\sqrt{2} = \\sqrt{18}$\n$a = \\sqrt{9}$\n$a = 3$\nOznaczymy długość odcinka $BC$ jako $d$. Ułożymy równanie na podstawie wzoru na długość przekątnej kwadratu i obliczymy długość przekątnej $d$ dużego kwadratu:\n$d = \\sqrt{18} \\cdot \\sqrt{2}$\n$d = \\sqrt{36}$\n$d = 6$\nObliczymy obwód czworokąta $ABCD$:\n$3 + 3 + 6 + \\sqrt{18} = 12 + \\sqrt{9 \\cdot 2} = 12 + 3\\sqrt{2}$\nOdpowiedź: Obwód czworokąta $ABCD$ jest równy $(12 + 3\\sqrt{2})$.",
+              "ref": {
+                "source": "klucz",
+                "page": 21
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "ma-gen-III",
+        "ma-78-VIII.7",
+        "ma-46-XI.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 22
+      }
+    }
+  ],
+  "rubrics": [],
+  "audio": []
+}

@@ -30,6 +30,10 @@ export function renderRich(text: string, ctx: RichContext, inline = false): stri
       if (!s?.asset) return hold(`<span class="rich-missing">[rysunek niedostępny]</span>`);
       return hold(`<figure class="rich-figure"><img src="${esc(assetUrl(ctx.sessionId, s.asset))}" alt="${esc(alt || s.title || "")}"></figure>`);
     })
+    // A true/false row already has its own P/F buttons, so a "[[P|F]]" slot in its text is noise.
+    .replace(/\s*\[\[P\|F\]\]/g, "")
+    // Underline ("podkreślony wyraz" tasks): Markdown has none and raw HTML is off, so only this exact tag pair passes.
+    .replace(/<u>([^<>\n]+?)<\/u>/g, (_, t: string) => hold(`<u>${esc(t)}</u>`))
     .replace(/\[\[([A-F1-4])\|([A-F1-4])\]\]/g, (_, a: string, b: string) => {
       const chosen = ctx.slotText?.(a, b) ?? "";
       return hold(`<span class="rich-slot${chosen ? " filled" : ""}">${chosen ? esc(chosen) : `<b>${a}</b><b>${b}</b>`}</span>`);

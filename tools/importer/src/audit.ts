@@ -54,7 +54,10 @@ export function keyAnswers(subjectId: string, keyLayout: string): Map<string, st
   for (let i = 1; i + 1 < parts.length; i += 2) {
     const n = parts[i]!, body = parts[i + 1]!;
     const x = /Rozwiązanie\s*–\s*wersja X[^\n]*\n\s*(\S+)/.exec(body);
+    // Single-version keys (supplementary and mock exams): "Rozwiązanie" then the code, sometimes after blank lines.
+    const single = /Rozwiązanie\s*\n(?:[ \t]*\n){0,6}[ \t]*([A-F]{1,4}|[PF]{2,4}|[A-D][1-4])[ \t]*(?:\n|$)/.exec(body);
     if (x) out.set(n, x[1]!);
+    else if (single) out.set(n, single[1]!);
     else if (body.includes("Rozwiązanie")) {
       // Matching written as "3–A / 5–E / 7–D".
       const pairs = [...body.matchAll(/^\s*\d+\s*[–-]\s*([A-F])\s*$/gm)].map((m) => m[1]);

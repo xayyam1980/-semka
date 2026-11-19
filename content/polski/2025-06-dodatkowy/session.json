@@ -1,0 +1,2023 @@
+{
+  "session": {
+    "id": "polski-2025-06-dodatkowy",
+    "subjectId": "polski",
+    "year": 2025,
+    "month": 6,
+    "term": "dodatkowy",
+    "formCode": "OPOP-100",
+    "versions": [
+      "X"
+    ],
+    "maxPoints": 45,
+    "taskOrder": [
+      "pl-2025-06d-01",
+      "pl-2025-06d-02",
+      "pl-2025-06d-03",
+      "pl-2025-06d-04",
+      "pl-2025-06d-05",
+      "pl-2025-06d-06",
+      "pl-2025-06d-07",
+      "pl-2025-06d-08",
+      "pl-2025-06d-09",
+      "pl-2025-06d-10",
+      "pl-2025-06d-11",
+      "pl-2025-06d-12",
+      "pl-2025-06d-13",
+      "pl-2025-06d-14",
+      "pl-2025-06d-15",
+      "pl-2025-06d-16",
+      "pl-2025-06d-17",
+      "pl-2025-06d-18"
+    ],
+    "sources": [
+      {
+        "kind": "klucz",
+        "path": "Język polski/Additional/Czerwiec 2025/jezyk-polski-2025-czerwiec-egzamin-osmoklasisty-dodatkowy-odpowiedzi.pdf",
+        "sha256": "c118045044c22e0fa3ea7287a2acae8715eadeca3ad6359bd0e14e9026e87c27",
+        "pages": 24
+      },
+      {
+        "kind": "arkusz",
+        "path": "Język polski/Additional/Czerwiec 2025/jezyk-polski-2025-czerwiec-egzamin-osmoklasisty-dodatkowy.pdf",
+        "sha256": "fb1ba74968f662f4d4dd06ea5b34de1a6103ae90793e9db2e7c1856be67f5ceb",
+        "pages": 24
+      }
+    ],
+    "contentVersion": "58559a2c7b4cf2f4",
+    "status": "published"
+  },
+  "stimuli": [
+    {
+      "id": "pl-2025-06d-tekst-1",
+      "kind": "text",
+      "title": "Tajemniczy ogród",
+      "author": "Frances Hodgston Burnett",
+      "lines": [
+        "Mary Lennox po śmierci rodziców zamieszkała w Anglii, u swojego wujka. Na terenie jego posiadłości odkryła zaniedbany ogród, któremu chciała przywrócić dawny wygląd. Dziewczynce w zrealizowaniu tego planu pomagali przede wszystkim służąca Martha oraz jej młodszy brat – Dick.",
+        "To było niezwykłe! Mary wstrzymała oddech i przystanęła, by popatrzeć. Pod drzewem, wsparty o pień plecami, siedział chłopiec i grał na fujarce. […] Na drzewie, o którego pień był oparty, siedziała wiewiórka, patrząc na chłopca, zza krzaków zaś wyciągał szyję i nasłuchiwał bażant, a tuż przy nim siedziały dwa króliki, ruszając różowymi pyszczkami – wszystkie te zwierzęta jakby się coraz bardziej przysuwały, by słuchać łagodnych tonów fujarki.",
+        "Ujrzawszy Mary, chłopiec wyciągnął rękę i odezwał się głosem tak cichym jak jego granie.",
+        "– Nie trzeba się ruszać, bo pouciekają.",
+        "Mary stała nieruchomo. Chłopiec przestał grać i zaczął podnosić się z ziemi. Robił to tak wolno, iż ledwie można było spostrzec, że się rusza, lecz wreszcie wyprostował się, a wtedy wiewiórka drapnęła na gałęzie, bażant skrył się w krzakach, a króliki uciekły w podskokach, choć wcale nie zdawały się przestraszone.",
+        "– Jestem Dick – rzekł chłopiec. – Wiem, że to panna Mary. Mary uprzytomniła sobie teraz, iż od razu wiedziała, że to musi być Dick, nikt inny. […]",
+        "– Wstawałem powolutku – tłumaczył – bo gdybym nagle się zerwał, toby się przestraszyły. Człowiek musi delikatnie się ruszać i cicho mówić, kiedy ma do czynienia ze zwierzętami.",
+        "Mówił do niej tak, jakby się znali od dawna. Mary pojęcia nie miała, jacy są chłopcy, więc odpowiadała trochę sztywno i czuła się lekko onieśmielona.",
+        "– Czy otrzymałeś list Marthy? – spytała.",
+        "Skinął twierdząco rudą, kędzierzawą czupryną.",
+        "– Dlatego tu przyszedłem.",
+        "Schylił się, by podnieść coś z ziemi.",
+        "– Przyniosłem narzędzia: łopatkę, grabie i motykę. Mocne i dobre! Jest też szufelka. A kiedy kupowałem nasiona, kupcowa¹ dodała mi paczuszkę nasion białego maku i niebieskiej ostróżki.",
+        "– Pokażesz mi nasiona? – spytała Mary. […]",
+        "– Usiądźmy sobie tu na pniu i obejrzyjmy wszystko.",
+        "Usiedli i Dick wyciągnął z kieszeni niezgrabne zawiniątko w brązowym papierze. Rozwinął sznurek, a wewnątrz ukazały się paczuszki z obrazkami kwiatów na każdej.",
+        "– Jest tu dużo rezedy² i maków – rzekł. […]",
+        "Ucichł i szybko odwrócił głowę, a twarz mu się rozjaśniła.",
+        "– Skąd ten rudzik³ woła? – spytał, nadsłuchując. Świergot dolatywał z pokrytego czerwonymi jagodami ostrokrzewu. Mary domyśliła się zaraz, czyj to głos.",
+        "– Czy on nas woła? – spytała.",
+        "– Tak – rzekł Dick, jak gdyby to była rzecz całkiem naturalna – woła kogoś, kogo lubi. […]",
+        "Podsunął się w stronę krzaka tym łagodnym ruchem, który Mary zauważyła już przedtem, i wydał dźwięk całkiem podobny do ćwierkania rudzika. Ptaszek słuchał kilka sekund uważnie, po czym zaćwierkał, jakby odpowiadał na pytanie.",
+        "– To wielki przyjaciel panienki – uśmiechnął się Dick.",
+        "– Tak myślisz? – skwapliwie zapytała Mary, pragnąc usłyszeć potwierdzenie. – Myślisz, że on mnie naprawdę lubi?",
+        "– Nie przyleciałby tak blisko, gdyby nie lubił – odparł Dick. – Ptaki niełatwo zaprzyjaźniają się, a taki rudzik to potrafi wystrychnąć na dudka gorzej niż człowiek. Niech panienka popatrzy, jak się teraz wdzięczy, jakby chciał powiedzieć: „Czy panienka nie widzi, jaki ze mnie ładny ptaszek?”.",
+        "I zdawało się, że naprawdę tak jest. Rudzik mizdrzył się, skacząc po gałązkach, ćwierkał i przechylał główkę.",
+        "– Czy rozumiesz mowę ptaków? – spytała Mary.",
+        "Twarz Dicka rozjaśniła się. Chłopiec roześmiał się szeroko i potarł ręką czuprynę.",
+        "– Zdaje mi się, że rozumiem, i one też myślą, że rozumiem – odparł. – Tak dawno z nimi w tych wrzosach przebywam. Widziałem, jak się z jajka wykluwały, jak się opierzały, uczyły latać i zaczynały śpiewać. Czasem mi się zdaje, że i ja jestem królikiem albo wiewiórką, albo jakimś żukiem. Czasem to sobie myślę, że może i ptakiem albo lisem, bo ja wiem?"
+      ],
+      "lineNumbering": "none",
+      "source": "Frances Hodgston Burnett, Tajemniczy ogród, tłum. Jadwiga Włodarkiewicz, Warszawa 2015.",
+      "footnotes": [
+        {
+          "mark": "¹",
+          "text": "Kupcowa – kobieta trudniąca się handlem."
+        },
+        {
+          "mark": "²",
+          "text": "Rezeda – rodzaj roślin zielnych."
+        },
+        {
+          "mark": "³",
+          "text": "Rudzik – gatunek ptaka."
+        }
+      ],
+      "wordCount": 598,
+      "ref": {
+        "source": "arkusz",
+        "page": 5
+      }
+    },
+    {
+      "id": "pl-2025-06d-tekst-2",
+      "kind": "text",
+      "title": "ISTOTA CZYTANIA",
+      "author": "Sebastian Taboł",
+      "lines": [
+        "Ze słowem „czytanie” stykamy się bardzo często i używamy tego pojęcia w bardzo wielu sytuacjach. Nie mam tu na myśli tylko czytania tekstu pisanego czy drukowanego.",
+        "Z oczu lub twarzy można wyczytać emocje, które ktoś przeżywa. Ratownik GOPR¹ może wnikliwie czytać mapę okolicy. Dyrygent może biegle czytać zapis nutowy wielkiej opery. Kierowca prowadzący samochód odczytuje ze znaków drogowych wskazania dotyczące jazdy. Wielu ludzi używa sformułowania „czytanie między wierszami”, oznaczającego, że nie do końca wierzymy, czy rozmówca czegoś przed nami nie ukrywa, lub domyślamy się treści, których rozmówca nie sformułował wprost.",
+        "Z podanych przykładów wynika, że w naszej świadomości słowo „czytanie” zadomowiło się na dobre. Tym słowem pomagamy sobie zobrazować wiele różnorodnych sytuacji, z jakimi spotykamy się w naszym codziennym życiu. Wszystkie podane wyżej przykłady są do siebie podobne – każda z tych osób dostrzegła jakieś znaki, które potem odpowiednio zinterpretowała. Jeżeli ratownik GOPR źle odczyta mapę, nie znajdzie zaginionych turystów, kierowca nieumiejący czytać znaków może spowodować wypadek, a dyrygent nieumiejący czytać zapisu nutowego nie będzie wiedział, kto z grających fałszuje. Dzięki umiejętności czytania człowiek jest w stanie poznać nową rzeczywistość i uzyskać nowe informacje. Każdy z nas musi poprawnie odczytywać znaczenie przyporządkowane do określonych znaków, aby trafnie zinterpretować treść ukrytą pod nimi.",
+        "Czytanie jest procesem bardzo złożonym. Polega na rozumieniu treści zawartych w tekście. Obejmuje także umiejętność racjonalnego i sprawnego odczytywania różnorodnych tekstów. Inaczej czyta się teksty naukowe, najeżone specjalistycznymi terminami, a inaczej – literaturę piękną. Każdy napisany tekst jest odrębny ze względu na tematykę i na sposób ujmowania problemu. Niektórzy z nas sami się przekonali, że czasami niezbędne okazuje się umiejętne odczytywanie tabel, schematów, rysunków, rozkładów jazdy. Umiejętność czytania wykorzystujemy inaczej w trakcie czytania powieści, po którą sięgamy z własnej woli, żeby się odprężyć, a inaczej w trakcie czytania, do którego zostaliśmy zmuszeni. Czasem jakiś tekst czytamy kilkakrotnie, aby uchwycić w nim istotne kwestie lub znaleźć ważne daty, nazwiska lub zdarzenia. Jeszcze inaczej czytamy gazetę, aby się dowiedzieć, co ciekawego wydarzyło się na świecie. Jak sami się przekonujemy, techniki czytania różnią się w zależności od jego celu.",
+        "Umiejętność czytania jest wykorzystywana do wyszukiwania potrzebnych nam informacji. Ważne jest rozeznanie w świecie tekstów, które dotyczą interesujących nas wiadomości. Na koniec trzeba wspomnieć o tym, że umiejętność czytania jest konieczna w procesie uczenia się. Dzięki uczeniu się zdobywamy nową wiedzę lub weryfikujemy obecne sądy, rozwijamy się wszechstronnie i samokształcimy. Czytanie zaspokaja nasze codzienne potrzeby: dostarczania informacji i rozrywki, zdobywania wiedzy, kształtowania swojego poglądu na świat, rozwijania swojej osobowości."
+      ],
+      "lineNumbering": "none",
+      "source": "Na podstawie: Sebastian Taboł, Istota czytania, Kraków 2005.",
+      "footnotes": [
+        {
+          "mark": "1",
+          "text": "GOPR – Górskie Ochotnicze Pogotowie Ratunkowe."
+        }
+      ],
+      "wordCount": 413,
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "pl-2025-06d-07-fig1",
+      "kind": "figure",
+      "title": "Zdjęcie 1: jesienny las we mgle z pochylonym, rozłożystym drzewem na pierwszym planie.",
+      "asset": "assets/pl-2025-06d-07-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 9
+      }
+    },
+    {
+      "id": "pl-2025-06d-07-fig2",
+      "kind": "figure",
+      "title": "Zdjęcie 2: piaszczysta pustynia z wydmami pod błękitnym niebem z chmurami.",
+      "asset": "assets/pl-2025-06d-07-fig2.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 9
+      }
+    },
+    {
+      "id": "pl-2025-06d-07-fig3",
+      "kind": "figure",
+      "title": "Zdjęcie 3: skaliste, jasne góry z kamienistym zboczem na pierwszym planie.",
+      "asset": "assets/pl-2025-06d-07-fig3.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 9
+      }
+    },
+    {
+      "id": "pl-2025-06d-07-fig4",
+      "kind": "figure",
+      "title": "Zdjęcie 4: wzburzone morze z falą rozbijającą się o skałę wystającą z wody.",
+      "asset": "assets/pl-2025-06d-07-fig4.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 9
+      }
+    },
+    {
+      "id": "pl-2025-06d-16-fig1",
+      "kind": "figure",
+      "title": "Wpis z Instagrama Igi Świątek: plakat „Czytam z Igą Świątek w 2023”, #IGAczyta #czytamzIGĄ, „W tym roku przeczytam 12 książek lub więcej! –IGA”, „Dołącz do mnie!”, trzy zdjęcia tenisistki z książką.",
+      "asset": "assets/pl-2025-06d-16-fig1.png",
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "pl-2025-06d-01",
+      "sessionId": "polski-2025-06-dodatkowy",
+      "number": 1,
+      "maxPoints": 1,
+      "instruction": "Na podstawie przytoczonego fragmentu Tajemniczego ogrodu oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.",
+      "stimulusIds": [
+        "pl-2025-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-06d-01",
+          "label": "1",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Z przytoczonego fragmentu wynika, że Mary i Dick znali się od dawna."
+              },
+              {
+                "id": "2",
+                "text": "Podczas spotkania Dick pokazał Mary różne nasiona kwiatów."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "F",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "Poprawna odpowiedź to FP. Pierwsze stwierdzenie jest fałszywe: Dick przedstawia się Mary słowami „Jestem Dick”, więc wcześniej się nie znali. Zdanie „Mówił do niej tak, jakby się znali od dawna” oznacza tylko, że chłopiec zachowywał się swobodnie, „jakby” się znali – nie że znali się naprawdę. Drugie stwierdzenie jest prawdziwe: Dick wyjął z kieszeni paczuszki z nasionami i pokazał Mary różne kwiaty, m.in. rezedę i maki.",
+          "scoringNotes": [
+            "Akceptowane są wszystkie odpowiedzi merytorycznie poprawne, spełniające warunki zadania.",
+            "Błąd rzeczowy dotyczący lektur obowiązkowych skutkuje przyznaniem 0 punktów."
+          ]
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 6
+      }
+    },
+    {
+      "id": "pl-2025-06d-02",
+      "sessionId": "polski-2025-06-dodatkowy",
+      "number": 2,
+      "maxPoints": 1,
+      "instruction": "Na podstawie przytoczonego fragmentu Tajemniczego ogrodu oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.",
+      "stimulusIds": [
+        "pl-2025-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-06d-02",
+          "label": "2",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Dziewczynka na początku rozmowy czuła się speszona."
+              },
+              {
+                "id": "2",
+                "text": "Między Mary a Dickiem nawiązała się nić porozumienia."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "P"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "W przytoczonym fragmencie Tajemniczego ogrodu Mary na początku rozmowy jest zaskoczona i niepewna w obecności Dicka, czyli czuje się speszona – dlatego pierwsze stwierdzenie jest prawdziwe. Podczas rozmowy o ptakach i zwierzętach dzieci zaczynają się rozumieć: Dick cierpliwie odpowiada na pytania, a Mary słucha z zaciekawieniem, więc między bohaterami nawiązuje się nić porozumienia – drugie stwierdzenie też jest prawdziwe. Oba stwierdzenia oznaczamy więc literą P.",
+          "scoringNotes": [
+            "Akceptowane są wszystkie odpowiedzi merytorycznie poprawne, spełniające warunki zadania.",
+            "Błąd rzeczowy dotyczący lektur obowiązkowych skutkuje przyznaniem 0 punktów."
+          ]
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 7
+      }
+    },
+    {
+      "id": "pl-2025-06d-03",
+      "sessionId": "polski-2025-06-dodatkowy",
+      "number": 3,
+      "maxPoints": 1,
+      "instruction": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nNa podstawie przytoczonego fragmentu Tajemniczego ogrodu można stwierdzić, że Mary",
+      "stimulusIds": [
+        "pl-2025-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-06d-03",
+          "label": "3",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "jest zbyt pewna siebie."
+              },
+              {
+                "id": "B",
+                "text": "ignoruje zaczepki rudzika."
+              },
+              {
+                "id": "C",
+                "text": "traktuje chłopca z wyższością."
+              },
+              {
+                "id": "D",
+                "text": "interesuje się otaczającym ją światem."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.9"
+          ],
+          "explanation": "W przytoczonym fragmencie Mary dopytuje Dicka o wiele rzeczy: pyta o list od Marthy, prosi o pokazanie nasion, interesuje się rudzikiem i tym, czy on ją lubi, oraz pyta, czy chłopiec rozumie mowę ptaków. Świadczy to o jej zainteresowaniu otaczającym ją światem, dlatego poprawna jest odpowiedź D. Pozostałe odpowiedzi nie znajdują potwierdzenia w tekście: Mary nie jest zbyt pewna siebie (czuje się onieśmielona), nie ignoruje rudzika ani nie traktuje chłopca z wyższością."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-1.9"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 7
+      }
+    },
+    {
+      "id": "pl-2025-06d-04",
+      "sessionId": "polski-2025-06-dodatkowy",
+      "number": 4,
+      "maxPoints": 3,
+      "instruction": "**Zadanie 4. (0–3)**",
+      "stimulusIds": [
+        "pl-2025-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-06d-04-1",
+          "label": "4.1",
+          "maxPoints": 2,
+          "prompt": "**4.1. Spośród podanych niżej sformułowań wybierz te trzy, które charakteryzują Dicka w przytoczonym fragmencie *Tajemniczego ogrodu*. Następnie zapisz oznaczenia literowe tych sformułowań w miejscach wyznaczonych kropkami.**\n\n**A.** Niechętnie pomaga ludziom.\n**B.** Ma rozległą wiedzę przyrodniczą.\n**C.** Potrafi naśladować głosy ptaków.\n**D.** Ma trudności w nawiązywaniu kontaktów.\n**E.** Uważnie obserwuje zachowania zwierząt.\n\nSformułowania, które dotyczą Dicka, oznaczono literami: ............. , ............. oraz ............. .",
+          "response": {
+            "type": "short_text",
+            "gaps": 3,
+            "language": "pl"
+          },
+          "key": {
+            "X": {
+              "type": "text",
+              "expected": [
+                "B",
+                "C",
+                "E"
+              ],
+              "accepted": [],
+              "rejected": []
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawne wskazanie trzech sformułowań."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawne wskazanie dwóch sformułowań."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.9"
+          ]
+        },
+        {
+          "id": "pl-2025-06d-04-2",
+          "label": "4.2",
+          "maxPoints": 1,
+          "prompt": "**4.2. Spośród sformułowań wskazanych przez Ciebie wybierz jedno i uzasadnij jego trafność na podstawie przytoczonego fragmentu *Tajemniczego ogrodu*. Nie cytuj sformułowań z arkusza.**\n\nWybieram sformułowanie oznaczone literą: .............\n\nUzasadnienie: ………………………………………………………………………………………………",
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Wybieram sformułowanie oznaczone literą: *B*\nUzasadnienie: *Dick bardzo dobrze znał się na gatunkach roślin i rodzajach ptaków. Gatunek ptaków potrafił rozpoznać po wydawanych przez nie odgłosach.*"
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 1,
+                "paths": [
+                  "odpowiedź poprawna."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.9"
+          ],
+          "exemplars": [
+            {
+              "points": 1,
+              "content": "Wybieram sformułowanie oznaczone literą: *B*\nUzasadnienie: *Dick bardzo dobrze znał się na gatunkach roślin i rodzajach ptaków. Gatunek ptaków potrafił rozpoznać po wydawanych przez nie odgłosach.*",
+              "ref": {
+                "source": "klucz",
+                "page": 3
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-1.9"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 7
+      }
+    },
+    {
+      "id": "pl-2025-06d-05",
+      "sessionId": "polski-2025-06-dodatkowy",
+      "number": 5,
+      "maxPoints": 1,
+      "instruction": "Uzupełnij poniższe zdanie. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nW wypowiedzeniu *Skinął twierdząco <u>rudą, kędzierzawą</u> czupryną* podkreślone wyrazy to [[A|B]], dzięki którym określono cechy [[C|D]] chłopca.",
+      "stimulusIds": [
+        "pl-2025-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-06d-05",
+          "label": "5",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "epitety"
+              },
+              {
+                "id": "B",
+                "text": "ożywienia"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "usposobienia"
+              },
+              {
+                "id": "D",
+                "text": "wyglądu"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "A",
+                "reason": "D"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-1.4"
+          ],
+          "explanation": "Podkreślone wyrazy „rudą” i „kędzierzawą” to przymiotniki określające cechy czupryny, a więc epitety (odpowiedź A). Opisują one zewnętrzne, widoczne cechy chłopca, czyli cechy jego wyglądu (odpowiedź D). Dlatego uzupełnione zdanie jest poprawne przy wyborze A i D, czyli kod AD."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-1.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "pl-2025-06d-06",
+      "sessionId": "polski-2025-06-dodatkowy",
+      "number": 6,
+      "maxPoints": 1,
+      "instruction": "**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nW wypowiedzeniu *Ptaki niełatwo zaprzyjaźniają się, a taki rudzik to potrafi <u>wystrychnąć na dudka</u> gorzej niż człowiek* podkreślone sformułowanie można zastąpić związkiem wyrazowym",
+      "stimulusIds": [
+        "pl-2025-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-06d-06",
+          "label": "6",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "postawić do pionu."
+              },
+              {
+                "id": "B",
+                "text": "wystawić na próbę."
+              },
+              {
+                "id": "C",
+                "text": "wyprowadzić w pole."
+              },
+              {
+                "id": "D",
+                "text": "sprowadzić na ziemię."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-2.5"
+          ],
+          "explanation": "Podkreślone sformułowanie „wystrychnąć na dudka” to związek frazeologiczny, który oznacza oszukanie kogoś, zwiedzenie go. Takie samo znaczenie ma związek „wyprowadzić w pole”, dlatego poprawna jest odpowiedź C. Pozostałe związki znaczą co innego: „postawić do pionu” to przywołać kogoś do porządku, „wystawić na próbę” to sprawdzić kogoś, a „sprowadzić na ziemię” to skłonić kogoś do realistycznego myślenia."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-2.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 8
+      }
+    },
+    {
+      "id": "pl-2025-06d-07",
+      "sessionId": "polski-2025-06-dodatkowy",
+      "number": 7,
+      "maxPoints": 2,
+      "instruction": "Spośród poniższych zdjęć wybierz jedno i wyjaśnij, w jaki sposób krajobraz przedstawiony na nim łączy się z losami jednego z bohaterów lektury obowiązkowej wybranej przez Ciebie. Uzasadnij swój wybór.\n\nUwaga! Lista lektur obowiązkowych znajduje się na stronach 3 i 4 tego arkusza egzaminacyjnego.\n\n1. ![Zdjęcie 1: jesienny las we mgle z pochylonym, rozłożystym drzewem na pierwszym planie.](stimulus:pl-2025-06d-07-fig1)\n2. ![Zdjęcie 2: piaszczysta pustynia z wydmami pod błękitnym niebem z chmurami.](stimulus:pl-2025-06d-07-fig2)\n3. ![Zdjęcie 3: skaliste, jasne góry z kamienistym zboczem na pierwszym planie.](stimulus:pl-2025-06d-07-fig3)\n4. ![Zdjęcie 4: wzburzone morze z falą rozbijającą się o skałę wystającą z wody.](stimulus:pl-2025-06d-07-fig4)\n\nWybieram zdjęcie nr: …….\nBohater lektury obowiązkowej: ……………………………………………………………………….\nTytuł lektury obowiązkowej: ………………………………………………………………………......\nUzasadnienie: ………………………………………………………………………………..…………",
+      "stimulusIds": [
+        "pl-2025-06d-tekst-1",
+        "pl-2025-06d-07-fig1",
+        "pl-2025-06d-07-fig2",
+        "pl-2025-06d-07-fig3",
+        "pl-2025-06d-07-fig4"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-06d-07",
+          "label": "7",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Wybieram zdjęcie nr: 1\nBohater lektury obowiązkowej: Balladyna\nTytuł lektury obowiązkowej: „Balladyna”\nUzasadnienie wyboru: Las był miejscem jednej ze zbrodni, których dopuściła się Balladyna. To w lesie zamordowała swoją siostrę Alinę."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "podanie numeru zdjęcia, bohatera i tytułu lektury obowiązkowej, poprawne uzasadnienie."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "podanie numeru zdjęcia, bohatera i tytułu lektury obowiązkowej."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-gen-III",
+            "pl-78-1.4"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "Wybieram zdjęcie nr: 1\nBohater lektury obowiązkowej: Balladyna\nTytuł lektury obowiązkowej: „Balladyna”\nUzasadnienie wyboru: Las był miejscem jednej ze zbrodni, których dopuściła się Balladyna. To w lesie zamordowała swoją siostrę Alinę.",
+              "ref": {
+                "source": "klucz",
+                "page": 5
+              }
+            },
+            {
+              "points": 2,
+              "content": "Wybieram zdjęcie nr: 2\nBohater lektury obowiązkowej: Mały Książę\nTytuł lektury obowiązkowej: „Mały Książę”\nUzasadnienie wyboru: Mały Książę znalazł się na pustyni i tam spotkał Pilota. Był to dorosły człowiek, z którym chłopiec się zaprzyjaźnił i któremu opowiedział swoją historię.",
+              "ref": {
+                "source": "klucz",
+                "page": 5
+              }
+            },
+            {
+              "points": 2,
+              "content": "Wybieram zdjęcie nr: 3\nBohater lektury obowiązkowej: Mały Książę\nTytuł lektury obowiązkowej: „Mały Książę”\nUzasadnienie wyboru: Mały Książę podczas podróży odwiedził Ziemię. Podczas wędrówki po niej wspiął się na skalistą górę, aby z wysokości zobaczyć całą planetę. Tam po raz pierwszy zetknął się z echem.",
+              "ref": {
+                "source": "klucz",
+                "page": 5
+              }
+            },
+            {
+              "points": 2,
+              "content": "Wybieram zdjęcie nr: 4\nBohater lektury obowiązkowej: Skawiński\nTytuł lektury obowiązkowej: „Latarnik”\nUzasadnienie wyboru: Skawiński po upadku powstania listopadowego musiał tułać się po świecie i podejmować różnych zajęć. Pływał m.in. na statkach jako harpunnik i majtek.",
+              "ref": {
+                "source": "klucz",
+                "page": 5
+              }
+            }
+          ],
+          "scoringNotes": [
+            "W przypadku, gdy zdający wskaże poprawnie tytuł lektury, nie wskaże bohatera, ale uzasadnienie pozwala go zidentyfikować, otrzymuje maksymalnie 1 punkt.",
+            "W przypadku, gdy zdający nie wskaże tytułu lektury, wskaże poprawnie bohatera i poprawnie uzasadni swój wybór, otrzymuje maksymalnie 1 punkt."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-gen-III",
+        "pl-78-1.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 9
+      }
+    },
+    {
+      "id": "pl-2025-06d-08",
+      "sessionId": "polski-2025-06-dodatkowy",
+      "number": 8,
+      "maxPoints": 2,
+      "instruction": "Przekształć podane zdania w taki sposób, aby powstały wypowiedzenia z imiesłowowym równoważnikiem zdania.\n\n1. Dick gra na fujarce i obserwuje zwierzęta przysłuchujące się grze.\nDick, ……………………………………………………, obserwuje zwierzęta przysłuchujące się grze.\n\n2. Mary stoi nieruchomo i przygląda się zwierzętom zgromadzonym wokół Dicka.\nMary, ……………………………………………………, przygląda się zwierzętom zgromadzonym wokół Dicka.",
+      "stimulusIds": [
+        "pl-2025-06d-tekst-1"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-06d-08",
+          "label": "8",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Dick, *grając na fujarce*, obserwuje zwierzęta przysłuchujące się grze.\nMary, *stojąc nieruchomo*, przygląda się zwierzętom zgromadzonym wokół Dicka."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawne przekształcenie dwóch wypowiedzeń."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawne przekształcenie jednego wypowiedzenia."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-78-1.4"
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-78-1.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 10
+      }
+    },
+    {
+      "id": "pl-2025-06d-09",
+      "sessionId": "polski-2025-06-dodatkowy",
+      "number": 9,
+      "maxPoints": 2,
+      "instruction": "**Uzupełnij poniższe zdania tak, aby powstało streszczenie tekstu Istota czytania.**\n\nTematem tekstu jest …………………………………………………………………………………...\n……………………………………………………………………………………………………….…. .\nAutor zauważa ………………………………………………………………………………………....\n…………………………………………………………………………………………………………....\n……………………………………………………………………………………………………….…. .\nW podsumowaniu ……………………………………………………………………………………...\n…………………………………………………………………………………………………………....\n……………………………………………………………………………………………………….…. .",
+      "stimulusIds": [
+        "pl-2025-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-06d-09",
+          "label": "9",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Tematem tekstu jest wieloznaczność słowa czytanie.\nAutor zauważa różne sytuacje codziennego życia, w których ta umiejętność jest wykorzystywana. Ponadto stwierdza, że czytanie jest procesem trudnym, ponieważ wymaga umiejętności rozumienia i interpretowania różnych tekstów (literackich i użytkowych).\nW podsumowaniu dochodzi do wniosku, że dzięki umiejętności czytania możemy się uczyć, rozwijać i kształtować swoje poglądy."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "poprawne określenie tematu i tego, co na ten temat powiedziano w tekście; zachowanie właściwego poziomu uogólnienia."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "poprawne określenie tematu i tego, co na ten temat powiedziano w tekście; zaburzony poziom uogólnienia."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-2.3",
+            "pl-gen-III",
+            "pl-78-2.2"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "Tematem tekstu jest wieloznaczność słowa czytanie.\nAutor zauważa różne sytuacje codziennego życia, w których ta umiejętność jest wykorzystywana. Ponadto stwierdza, że czytanie jest procesem trudnym, ponieważ wymaga umiejętności rozumienia i interpretowania różnych tekstów (literackich i użytkowych).\nW podsumowaniu dochodzi do wniosku, że dzięki umiejętności czytania możemy się uczyć, rozwijać i kształtować swoje poglądy.",
+              "ref": {
+                "source": "klucz",
+                "page": 6
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Uwaga. Uczeń otrzymuje 0 punktów, jeśli jego wypowiedź w całości składa się z fragmentów przepisanych z tekstu „Istota czytania”."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-2.3",
+        "pl-gen-III",
+        "pl-78-2.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 11
+      }
+    },
+    {
+      "id": "pl-2025-06d-10",
+      "sessionId": "polski-2025-06-dodatkowy",
+      "number": 10,
+      "maxPoints": 1,
+      "instruction": "Z podanych pytań wybierz to, na które nie można znaleźć odpowiedzi w 4. akapicie tekstu Istota czytania. Wybierz właściwą odpowiedź spośród podanych.",
+      "stimulusIds": [
+        "pl-2025-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-06d-10",
+          "label": "10",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "Na czym polega proces czytania?"
+              },
+              {
+                "id": "B",
+                "text": "Od czego zależy dobór techniki czytania?"
+              },
+              {
+                "id": "C",
+                "text": "Dlaczego niektóre teksty wymagają wielokrotnego czytania?"
+              },
+              {
+                "id": "D",
+                "text": "W jakich sytuacjach przydaje się umiejętność czytania różnych znaków?"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "D"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "W czwartym akapicie tekstu Istota czytania autor pisze o tym, na czym polega proces czytania, od czego zależy dobór techniki czytania oraz dlaczego niektóre teksty wymagają wielokrotnego czytania, więc na pytania A, B i C znajdziemy tam odpowiedź. Nie ma natomiast w tym akapicie informacji o sytuacjach, w których przydaje się umiejętność czytania różnych znaków – ta myśl pojawia się w innej części tekstu. Dlatego poprawna jest odpowiedź D."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "pl-2025-06d-11",
+      "sessionId": "polski-2025-06-dodatkowy",
+      "number": 11,
+      "maxPoints": 1,
+      "instruction": "Na podstawie przytoczonego tekstu Istota czytania oceń prawdziwość podanych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.",
+      "stimulusIds": [
+        "pl-2025-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-06d-11",
+          "label": "11",
+          "maxPoints": 1,
+          "response": {
+            "type": "true_false",
+            "statements": [
+              {
+                "id": "1",
+                "text": "Z tekstu Sebastiana Taboła wynika, że jednym z celów czytania jest zdobywanie informacji. [[P|F]]"
+              },
+              {
+                "id": "2",
+                "text": "Z tekstu Sebastiana Taboła wynika, że czytanie powieści i czytanie gazety służą temu samemu celowi. [[P|F]]"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "1": "P",
+                "2": "F"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-46-2.2"
+          ],
+          "explanation": "Pierwsze stwierdzenie jest prawdziwe, ponieważ Sebastian Taboł wskazuje w tekście zdobywanie informacji jako jeden z celów czytania, dlatego oznaczamy je literą P. Drugie stwierdzenie jest fałszywe, bo czytanie powieści i czytanie gazety służą różnym celom – co innego daje czytanie dla przyjemności, a co innego szukanie informacji, dlatego oznaczamy je literą F."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-46-2.2"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "pl-2025-06d-12",
+      "sessionId": "polski-2025-06-dodatkowy",
+      "number": 12,
+      "maxPoints": 1,
+      "instruction": "**Dokończ zdanie tak, aby było zgodne z treścią tekstu *Istota czytania*. Wybierz właściwą odpowiedź spośród podanych.**\n\nZdaniem Sebastiana Taboła proces czytania dotyczy",
+      "stimulusIds": [
+        "pl-2025-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-06d-12",
+          "label": "12",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "głównie znaków służących praktycznym celom."
+              },
+              {
+                "id": "B",
+                "text": "tylko znaków tworzących teksty pisane i drukowane."
+              },
+              {
+                "id": "C",
+                "text": "wszystkich znaków spotykanych w otaczającym nas świecie."
+              },
+              {
+                "id": "D",
+                "text": "przede wszystkim znaków umożliwiających poznanie ukrytych treści."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "C"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "W tekście Istota czytania Sebastian Taboł pisze, że proces czytania nie ogranicza się do tekstów pisanych i drukowanych, lecz obejmuje wszystkie znaki, które spotykamy w otaczającym nas świecie. Dlatego zdanie poprawnie dokończono odpowiedzią C. Pozostałe odpowiedzi zawężają myśl autora (A, B) lub ją zmieniają (D)."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 12
+      }
+    },
+    {
+      "id": "pl-2025-06d-13",
+      "sessionId": "polski-2025-06-dodatkowy",
+      "number": 13,
+      "maxPoints": 1,
+      "instruction": "Na podstawie przytoczonego tekstu Istota czytania dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nZ tekstu Sebastiana Taboła wynika, że czytanie jest czynnością",
+      "stimulusIds": [
+        "pl-2025-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-06d-13",
+          "label": "13",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "nieodzowną."
+              },
+              {
+                "id": "B",
+                "text": "niepopularną."
+              },
+              {
+                "id": "C",
+                "text": "niecodzienną."
+              },
+              {
+                "id": "D",
+                "text": "nieskomplikowaną."
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "A"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-2.1"
+          ],
+          "explanation": "W tekście Istota czytania autor pisze, że umiejętność czytania „jest konieczna w procesie uczenia się”, a samo czytanie zaspokaja nasze codzienne potrzeby: dostarczania informacji i rozrywki, zdobywania wiedzy, kształtowania poglądu na świat i rozwijania osobowości. Dlatego czytanie jest czynnością nieodzowną, czyli niezbędną. Pozostałe odpowiedzi (niepopularna, niecodzienna, nieskomplikowana) nie zgadzają się z myślą autora – czytanie jest przecież procesem bardzo złożonym i potrzebnym na co dzień."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 13
+      }
+    },
+    {
+      "id": "pl-2025-06d-14",
+      "sessionId": "polski-2025-06-dodatkowy",
+      "number": 14,
+      "maxPoints": 1,
+      "instruction": "W którym z poniższych wyrazów występuje „rz” wymienne? Wybierz właściwą odpowiedź spośród podanych.",
+      "stimulusIds": [
+        "pl-2025-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-06d-14",
+          "label": "14",
+          "maxPoints": 1,
+          "response": {
+            "type": "single_choice",
+            "options": [
+              {
+                "id": "A",
+                "text": "twarzy"
+              },
+              {
+                "id": "B",
+                "text": "wierzymy"
+              },
+              {
+                "id": "C",
+                "text": "przykładów"
+              },
+              {
+                "id": "D",
+                "text": "przekonujemy"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choice",
+              "correct": "B"
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-4.1"
+          ],
+          "explanation": "„Rz” wymienne to takie, które w innych formach tego samego wyrazu lub w wyrazach pokrewnych wymienia się na inną głoskę. W wyrazie „wierzymy” „rz” wymienia się na „r”, por. wiara, wierny. W pozostałych wyrazach „rz” się nie wymienia: w „twarzy” pozostaje „rz” (twarz), a w „przykładów” i „przekonujemy” „rz” występuje po „p” w przedrostkach przy- i prze-. Dlatego właściwa jest odpowiedź B."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-4.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 13
+      }
+    },
+    {
+      "id": "pl-2025-06d-15",
+      "sessionId": "polski-2025-06-dodatkowy",
+      "number": 15,
+      "maxPoints": 1,
+      "instruction": "Dokończ poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nZnaczenia słowa wszechstronny należy szukać w słowniku [[A|B]].\nWśród haseł słownikowych będzie je poprzedzać m.in. wyraz [[C|D]].",
+      "stimulusIds": [
+        "pl-2025-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-06d-15",
+          "label": "15",
+          "maxPoints": 1,
+          "response": {
+            "type": "choice_with_reason",
+            "choices": [
+              {
+                "id": "A",
+                "text": "ortograficznym"
+              },
+              {
+                "id": "B",
+                "text": "języka polskiego"
+              }
+            ],
+            "reasons": [
+              {
+                "id": "C",
+                "text": "wszechpotężny"
+              },
+              {
+                "id": "D",
+                "text": "wszechwiedzący"
+              }
+            ]
+          },
+          "key": {
+            "X": {
+              "type": "choices",
+              "correct": {
+                "choice": "B",
+                "reason": "C"
+              }
+            }
+          },
+          "scoring": {
+            "type": "all_or_nothing"
+          },
+          "skillTags": [
+            "pl-gen-IV",
+            "pl-46-IV.5"
+          ],
+          "explanation": "Znaczenia wyrazu wszechstronny szukamy w słowniku języka polskiego, ponieważ słownik ortograficzny podaje tylko poprawną pisownię wyrazów, a nie ich znaczenia. Hasła w słowniku ułożone są w kolejności alfabetycznej, więc przed hasłem wszechstronny znajdzie się wyraz wszechpotężny (bo litera p jest w alfabecie przed s), a nie wszechwiedzący (bo litera w jest po s). Dlatego poprawne odpowiedzi to B oraz C."
+        }
+      ],
+      "format": "zamkniete",
+      "skillTags": [
+        "pl-gen-IV",
+        "pl-46-IV.5"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 13
+      }
+    },
+    {
+      "id": "pl-2025-06d-16",
+      "sessionId": "polski-2025-06-dodatkowy",
+      "number": 16,
+      "maxPoints": 2,
+      "instruction": "Iga Świątek, wybitna polska tenisistka, w styczniu 2023 roku w swoich mediach społecznościowych zamieściła wpis promujący czytanie.\n\n![Wpis z Instagrama Igi Świątek: plakat „Czytam z Igą Świątek w 2023”, #IGAczyta #czytamzIGĄ, „W tym roku przeczytam 12 książek lub więcej! –IGA”, „Dołącz do mnie!”, trzy zdjęcia tenisistki z książką.](stimulus:pl-2025-06d-16-fig1)\n\n**Napisz, w jakiej formie Ty najchętniej poznajesz literaturę – sięgasz po e-book, po papierową książkę czy może po audiobook – i uzasadnij swój wybór, podając dwa argumenty.**\n\nMój wybór: …\n\nArgument 1.: …\n\nArgument 2.: …",
+      "stimulusIds": [
+        "pl-2025-06d-tekst-2",
+        "pl-2025-06d-16-fig1"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-06d-16",
+          "label": "16",
+          "maxPoints": 2,
+          "response": {
+            "type": "worked_solution"
+          },
+          "key": {
+            "X": {
+              "type": "model_solution",
+              "solution": "Ja, podobnie jak moi rówieśnicy, zwykle sięgam po e-book. Jesteśmy przyzwyczajeni do kontaktu z tekstem w takiej formie, bo na co dzień korzystamy z komórek. Dodatkowo czytnik jest bardzo wygodny, bo nie zajmuje dużo miejsca i pozwala na dostęp do ulubionej lektury w każdej chwili."
+            }
+          },
+          "scoring": {
+            "type": "levels",
+            "levels": [
+              {
+                "points": 2,
+                "paths": [
+                  "sformułowanie stanowiska i podanie dwóch argumentów."
+                ]
+              },
+              {
+                "points": 1,
+                "paths": [
+                  "sformułowanie stanowiska i podanie jednego argumentu."
+                ]
+              },
+              {
+                "points": 0,
+                "paths": [
+                  "odpowiedź niepoprawna lub niepełna albo brak odpowiedzi."
+                ]
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-III",
+            "pl-78-1.4"
+          ],
+          "exemplars": [
+            {
+              "points": 2,
+              "content": "Ja, podobnie jak moi rówieśnicy, zwykle sięgam po e-book. Jesteśmy przyzwyczajeni do kontaktu z tekstem w takiej formie, bo na co dzień korzystamy z komórek. Dodatkowo czytnik jest bardzo wygodny, bo nie zajmuje dużo miejsca i pozwala na dostęp do ulubionej lektury w każdej chwili.",
+              "ref": {
+                "source": "klucz",
+                "page": 9
+              }
+            }
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-III",
+        "pl-78-1.4"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 14
+      }
+    },
+    {
+      "id": "pl-2025-06d-17",
+      "sessionId": "polski-2025-06-dodatkowy",
+      "number": 17,
+      "maxPoints": 3,
+      "instruction": "**Zredaguj zaproszenie na uroczystość wręczenia nagród laureatom konkursu pięknego czytania. Zachęć do udziału w tym wydarzeniu, używając dwóch argumentów, z których co najmniej jeden będzie nawiązywał do tematyki uroczystości.**\n\n*Uwaga: w ocenie wypowiedzi będzie brana pod uwagę poprawność językowa, ortograficzna i interpunkcyjna.*",
+      "stimulusIds": [
+        "pl-2025-06d-tekst-2"
+      ],
+      "items": [
+        {
+          "id": "pl-2025-06d-17",
+          "label": "17",
+          "maxPoints": 3,
+          "response": {
+            "type": "extended_text"
+          },
+          "key": {},
+          "scoring": {
+            "type": "rubric",
+            "rubrics": [
+              {
+                "topic": null,
+                "rubricId": "pl-2025-06d-17-t1"
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-II",
+            "pl-46-4.1",
+            "pl-gen-III",
+            "pl-46-2.1"
+          ],
+          "exemplars": [
+            {
+              "points": 3,
+              "content": "Serdecznie zapraszamy wszystkich miłośników literatury na uroczystość wręczenia nagród laureatom konkursu pięknego czytania. Odbędzie się ona 16 czerwca 2025 r., w godzinach 16.00–19.00, w Miejskim Domu Kultury przy ul. Jaśminowej 15 w Krakowie.\nWarto wziąć udział w tym wydarzeniu, ponieważ po części oficjalnej laureaci odczytają fragmenty najsłynniejszych dzieł literatury polskiej. Odbędą się także warsztaty krasomówcze.\nSerdecznie zachęcamy do udziału w uroczystości.\nSzkolne Koło Literackie",
+              "ref": {
+                "source": "klucz",
+                "page": 10
+              }
+            }
+          ],
+          "scoringNotes": [
+            "Jeżeli uczeń uwzględnia 5 elementów zaproszenia, a podaje tylko jeden argument, w kryterium „Treść i forma” otrzymuje 1 punkt.",
+            "Jeżeli uczeń uwzględnia 5 elementów zaproszenia i podaje dwa argumenty, ale żaden z nich nie nawiązuje do tematyki uroczystości, w kryterium „Treść i forma” otrzymuje 1 punkt.",
+            "Kategorie „Treść i forma” oraz „Poprawność językowa, ortograficzna i interpunkcyjna” oceniamy rozłącznie."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-II",
+        "pl-46-4.1",
+        "pl-gen-III",
+        "pl-46-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 15
+      }
+    },
+    {
+      "id": "pl-2025-06d-18",
+      "sessionId": "polski-2025-06-dodatkowy",
+      "number": 18,
+      "maxPoints": 20,
+      "instruction": "**Wybierz jeden z podanych tematów i napisz wypracowanie.**\n\n- Pamiętaj o zachowaniu formy wypowiedzi wskazanej w temacie: napisz **przemówienie** albo **opowiadanie**.\n- W wypracowaniu odwołaj się do wybranej lektury obowiązkowej. Lista lektur obowiązkowych znajduje się na stronach 3 i 4 tego arkusza egzaminacyjnego.\n- Innym utworem literackim w przemówieniu może być także lektura obowiązkowa.\n- Twoja praca powinna liczyć co najmniej **200 wyrazów**.\n- Zapisz wypracowanie w wyznaczonym miejscu. Nie pisz na marginesie.\n- Pisz czytelnie.\n- Pamiętaj, że zabronione jest pisanie wypowiedzi obraźliwych, wulgarnych lub propagujących postępowanie niezgodne z prawem albo wypowiedzi aprobujących nieetyczne postępowanie bohatera.",
+      "stimulusIds": [],
+      "items": [
+        {
+          "id": "pl-2025-06d-18",
+          "label": "18",
+          "maxPoints": 20,
+          "response": {
+            "type": "extended_text",
+            "minWords": 200,
+            "topics": [
+              {
+                "id": "1",
+                "text": "O człowieku świadczą jego czyny. Napisz **przemówienie**, w którym przekonasz swoich rówieśników o trafności tego stwierdzenia. W wypracowaniu odwołaj się do wybranej lektury obowiązkowej i innego utworu literackiego.",
+                "form": "przemówienie"
+              },
+              {
+                "id": "2",
+                "text": "Napisz **opowiadanie** o Twoim spotkaniu z bohaterem lektury obowiązkowej, który przekonał Cię, że warto czynić świat lepszym. Wypracowanie powinno dowodzić, że dobrze znasz wybraną lekturę obowiązkową.",
+                "form": "opowiadanie"
+              }
+            ]
+          },
+          "key": {},
+          "scoring": {
+            "type": "rubric",
+            "rubrics": [
+              {
+                "topic": "1",
+                "rubricId": "pl-2025-06d-18-t1"
+              },
+              {
+                "topic": "2",
+                "rubricId": "pl-2025-06d-18-t2"
+              }
+            ]
+          },
+          "skillTags": [
+            "pl-gen-I",
+            "pl-78-1.7",
+            "pl-gen-II",
+            "pl-46-4.1",
+            "pl-78-3.2",
+            "pl-gen-III",
+            "pl-78-1.1",
+            "pl-46-2.1",
+            "pl-78-2.1"
+          ],
+          "scoringNotes": [
+            "Jeżeli wypowiedź w całości jest nie na temat, egzaminator oceni ją na 0 punktów. Nie sprawdza i nie zaznacza żadnych błędów w pracy. Egzaminator umieszcza dopisek – „Praca nie na temat”.",
+            "Jeżeli w wypowiedzi uczeń w ogóle nie odwołał się do treści lektury obowiązkowej wskazanej w poleceniu, za całą wypowiedź egzaminator przyzna 0 punktów.",
+            "Jeżeli wypowiedź jest nieczytelna, egzaminator oceni ją na 0 punktów.",
+            "Jeżeli wypowiedź nie zawiera w ogóle rozwinięcia (np. uczeń napisał tylko wstęp), egzaminator przyzna 0 punktów w każdym kryterium.",
+            "Funkcjonalność wykorzystania w wypracowaniu utworu literackiego nie oznacza konieczności omówienia przez zdającego wszystkich elementów fabuły, sensów utworu istotnych (z punktu widzenia egzaminatora) ze względu na zagadnienie sformułowane w temacie. Należy jednak pamiętać, że samo przywołanie imienia bohatera literackiego nie jest funkcjonalnym wykorzystaniem utworu.",
+            "Za utwór literacki w wypracowaniu nie uznaje się: powieści obrazkowej, mangi, scenariusza filmowego, gry komputerowej.",
+            "Jeżeli wypowiedź zawiera 180 wyrazów lub mniej, jest oceniana wyłącznie w kryteriach: Realizacja tematu wypowiedzi, Elementy twórcze / Elementy retoryczne oraz Kompetencje literackie i kulturowe. W pozostałych kryteriach egzaminator przyzna 0 punktów. Liczone są wszystkie wyrazy: samodzielne i niesamodzielne.",
+            "Jeżeli wypowiedź jest napisana niesamodzielnie, np. zawiera fragmenty odtworzone z podręcznika, zadania zawartego w arkuszu egzaminacyjnym lub innego źródła, w tym internetowego, lub jest przepisana od innego ucznia, wówczas egzamin z języka polskiego, w przypadku takiego ucznia, zostanie unieważniony.",
+            "W ocenie wypowiedzi uczniów, którym przyznano dostosowanie warunków przeprowadzania egzaminu, stosuje się szczegółowe zasady oceniania rozwiązań zadań otwartych z języka polskiego uwzględniające specyficzne trudności w uczeniu się. Za błędy ortograficzne uznaje się wtedy błędy w zapisie wyrazów z u – ó, ż – rz, h – ch oraz łamanie zasady pisania wielką literą na początku zdania.",
+            "Zabronione jest pisanie wypowiedzi obraźliwych, wulgarnych lub propagujących postępowanie niezgodne z prawem albo wypowiedzi aprobujących nieetyczne postępowanie bohatera. W przypadku takich wypowiedzi zostanie podjęta indywidualna decyzja dotycząca danej pracy, np. nie zostaną przyznane punkty za styl i język lub cała wypowiedź nie będzie podlegała ocenie.",
+            "Temat 1 (przemówienie): argumentowanie nie polega na streszczaniu utworów; argumentacja musi być zgodna z poleceniem, wybraną lekturą obowiązkową oraz innym utworem literackim (może to być inna lektura obowiązkowa). Na 2 pkt w kryterium Realizacja tematu wypowiedzi potrzebny jest bezpośredni zwrot do adresata oraz przynajmniej dwie różne cechy wybrane spośród: retoryczne środki językowe, czasowniki w trybie rozkazującym, czasowniki w 1. i 2. osobie l. mn., zaimki odnoszące się do 1. i 2. osoby l. mn., zjednywanie przychylności odbiorców; każda cecha powinna być potwierdzona przynajmniej jeden raz. Na 1 pkt wystarczy bezpośredni zwrot do adresata oraz jedna cecha ALBO dwie różne cechy bez zwrotu do adresata, ALBO tylko bezpośredni zwrot do adresata.",
+            "Temat 2 (opowiadanie): w opowiadaniu uwzględnione są następujące elementy: spotkanie z bohaterem lektury obowiązkowej, przekonanie, że warto czynić świat lepszym. Opowiadanie ma charakter twórczy, nie może być streszczeniem wybranej lektury obowiązkowej."
+          ]
+        }
+      ],
+      "format": "otwarte",
+      "skillTags": [
+        "pl-gen-I",
+        "pl-78-1.7",
+        "pl-gen-II",
+        "pl-46-4.1",
+        "pl-78-3.2",
+        "pl-gen-III",
+        "pl-78-1.1",
+        "pl-46-2.1",
+        "pl-78-2.1"
+      ],
+      "ref": {
+        "source": "arkusz",
+        "page": 16
+      }
+    }
+  ],
+  "rubrics": [
+    {
+      "id": "pl-2025-06d-17-t1",
+      "maxPoints": 3,
+      "criteria": [
+        {
+          "id": "tresc",
+          "name": "Treść i forma",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Treść zgodna z poleceniem, uwzględnione 2 argumenty, z których co najmniej jeden nawiązuje do tematyki uroczystości; uwzględnionych 5 elementów dotyczących formy: kto zaprasza? kogo zaprasza? na co zaprasza? kiedy się odbywa? gdzie się odbywa?"
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Treść zgodna z poleceniem, uwzględnione 2 argumenty, z których co najmniej jeden nawiązuje do tematyki uroczystości; uwzględnione 4 elementy dotyczące formy: kto zaprasza? ORAZ/ALBO kogo zaprasza? ORAZ/ALBO na co zaprasza? ORAZ/ALBO kiedy się odbywa? ORAZ/ALBO gdzie się odbywa?"
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Treść niezgodna z poleceniem ALBO treść zgodna z poleceniem, ale uwzględnione tylko 3 elementy dotyczące formy: kto zaprasza? ORAZ/ALBO kogo zaprasza? ORAZ/ALBO na co zaprasza? ORAZ/ALBO kiedy się odbywa? ORAZ/ALBO gdzie się odbywa?"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "poprawnosc",
+          "name": "Poprawność językowa, ortograficzna i interpunkcyjna",
+          "type": "error_count",
+          "max": 1,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 2,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 3,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        }
+      ],
+      "gates": []
+    },
+    {
+      "id": "pl-2025-06d-18-t1",
+      "maxPoints": 20,
+      "criteria": [
+        {
+          "id": "realizacja",
+          "name": "Realizacja tematu wypowiedzi",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu. Wszystkie pozostałe elementy polecenia uwzględnione. Wypowiedź w całości dotyczy problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu. Nieuwzględniony jeden element polecenia (inny niż forma) ORAZ/LUB w pracy występują fragmenty niedotyczące problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Forma wypowiedzi niezgodna z formą wskazaną w poleceniu ALBO nieuwzględnione co najmniej dwa elementy polecenia (inne niż forma)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "retoryczne",
+          "name": "Elementy retoryczne",
+          "type": "levels",
+          "max": 5,
+          "levels": [
+            {
+              "points": 5,
+              "paths": [
+                "Pogłębiona argumentacja. Argumenty odwołujące się np. do faktów, logiki, emocji, zilustrowane odpowiednimi przykładami ORAZ/LUB wykorzystanie przykładów w funkcji argumentacyjnej. Argumenty/przykłady uporządkowane, np. zhierarchizowane."
+              ]
+            },
+            {
+              "points": 4,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 3 pkt i niektóre na 5 pkt."
+              ]
+            },
+            {
+              "points": 3,
+              "paths": [
+                "Powierzchowna argumentacja; w wypowiedzi brak wnikliwości. Niektóre argumenty zilustrowane odpowiednimi przykładami ORAZ/LUB wykorzystanie przykładów w funkcji argumentacyjnej. Argumenty/przykłady częściowo uporządkowane."
+              ]
+            },
+            {
+              "points": 2,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 1 pkt i niektóre na 3 pkt."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Podjęta próba argumentowania. Ograniczenie do wyliczenia powierzchownie omówionych przykładów, powiązanych z problemem określonym w temacie."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompetencje",
+          "name": "Kompetencje literackie i kulturowe",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). Poprawność rzeczowa."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga) ALBO częściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga) ALBO częściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). Dopuszczalne 1–2 błędy rzeczowe."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompozycja",
+          "name": "Kompozycja tekstu",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi. Graficznie wyodrębnione akapity. Dopuszczalna 1 usterka w zakresie spójności ALBO logiki wypowiedzi, ALBO podziału wypowiedzi na funkcjonalne akapity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi. Graficznie wyodrębnione akapity. Dopuszczalne łącznie 2–3 usterki w zakresie spójności ORAZ/ALBO logiki wypowiedzi."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "styl",
+          "name": "Styl",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Odpowiedni do treści i formy wypowiedzi. Jednolity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Sporadyczne usterki w odpowiedniości ORAZ/LUB jednolitości stylu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia wymagań określonych na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jezyk",
+          "name": "Język",
+          "type": "matrix",
+          "max": 4,
+          "rows": "zakres środków językowych",
+          "cols": "liczba błędów językowych",
+          "table": {
+            "Szeroki zakres środków językowych, tzn. zróżnicowana składnia, zróżnicowana leksyka, w tym np. bogata frazeologia, precyzyjne słownictwo, umożliwiające pełną i swobodną realizację tematu.": {
+              "Nie więcej niż 4 błędy językowe": 4,
+              "5–7 błędów językowych": 3,
+              "8–10 błędów językowych": 2,
+              "11–13 błędów językowych": 1,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Zadowalający zakres środków językowych, tzn. składnia i leksyka stosowne/odpowiednie do realizacji tematu.": {
+              "Nie więcej niż 4 błędy językowe": 3,
+              "5–7 błędów językowych": 2,
+              "8–10 błędów językowych": 1,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Wąski zakres środków językowych, tzn. składnia i leksyka proste/ograniczone, utrudniające realizację tematu.": {
+              "Nie więcej niż 4 błędy językowe": 2,
+              "5–7 błędów językowych": 1,
+              "8–10 błędów językowych": 0,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            }
+          }
+        },
+        {
+          "id": "ortografia",
+          "name": "Ortografia",
+          "type": "error_count",
+          "max": 2,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 1,
+                "points": 2
+              },
+              {
+                "maxErrors": 3,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 3,
+                "points": 2
+              },
+              {
+                "maxErrors": 6,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "interpunkcja",
+          "name": "Interpunkcja",
+          "type": "error_count",
+          "max": 1,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 9,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 11,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        }
+      ],
+      "gates": [
+        {
+          "ifCriterion": "realizacja",
+          "equals": 0,
+          "thenAllOthers": 0
+        }
+      ]
+    },
+    {
+      "id": "pl-2025-06d-18-t2",
+      "maxPoints": 20,
+      "criteria": [
+        {
+          "id": "realizacja",
+          "name": "Realizacja tematu wypowiedzi",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu. Wszystkie pozostałe elementy polecenia uwzględnione. Wypowiedź w całości dotyczy problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Forma wypowiedzi zgodna z formą wskazaną w poleceniu. Nieuwzględniony jeden element polecenia (inny niż forma) ORAZ/LUB w pracy występują fragmenty niedotyczące problemu wskazanego w poleceniu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Forma wypowiedzi niezgodna z formą wskazaną w poleceniu ALBO nieuwzględnione co najmniej dwa elementy polecenia (inne niż forma)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tworcze",
+          "name": "Elementy twórcze",
+          "type": "levels",
+          "max": 5,
+          "levels": [
+            {
+              "points": 5,
+              "paths": [
+                "Funkcjonalna narracja. Logiczny układ zdarzeń. Urozmaicona fabuła, w tym funkcjonalne wykorzystanie co najmniej 6 spośród następujących elementów: opis, charakterystyka bohatera, czas akcji, miejsce akcji, zwrot akcji, puenta, punkt kulminacyjny, dialog, monolog, retrospekcja. Twórcze wykorzystanie treści lektury."
+              ]
+            },
+            {
+              "points": 4,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 3 pkt i niektóre na 5 pkt."
+              ]
+            },
+            {
+              "points": 3,
+              "paths": [
+                "Funkcjonalna narracja. Logiczny układ zdarzeń. Prosta fabuła, w tym funkcjonalne wykorzystanie co najmniej 4 spośród następujących elementów: opis, charakterystyka bohatera, czas akcji, miejsce akcji, zwrot akcji, puenta, punkt kulminacyjny, dialog, monolog, retrospekcja."
+              ]
+            },
+            {
+              "points": 2,
+              "paths": [
+                "Praca spełnia wszystkie wymagania na 1 pkt i niektóre na 3 pkt."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Narracja częściowo funkcjonalna. Dopuszczalne usterki w logicznym układzie zdarzeń. Prosta fabuła."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompetencje",
+          "name": "Kompetencje literackie i kulturowe",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). Poprawność rzeczowa."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga) ALBO częściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga) ALBO częściowo funkcjonalne wykorzystanie znajomości lektury obowiązkowej wskazanej w poleceniu (oraz częściowo funkcjonalne wykorzystanie innego tekstu literackiego lub tekstu kultury, jeżeli polecenie tego wymaga). Dopuszczalne 1–2 błędy rzeczowe."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kompozycja",
+          "name": "Kompozycja tekstu",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi. Graficznie wyodrębnione akapity. Dopuszczalna 1 usterka w zakresie spójności ALBO logiki wypowiedzi, ALBO podziału wypowiedzi na funkcjonalne akapity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Kompozycja zgodna z formą wypowiedzi. Graficznie wyodrębnione akapity. Dopuszczalne łącznie 2–3 usterki w zakresie spójności ORAZ/ALBO logiki wypowiedzi."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia co najmniej jednego wymagania określonego na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "styl",
+          "name": "Styl",
+          "type": "levels",
+          "max": 2,
+          "levels": [
+            {
+              "points": 2,
+              "paths": [
+                "Odpowiedni do treści i formy wypowiedzi. Jednolity."
+              ]
+            },
+            {
+              "points": 1,
+              "paths": [
+                "Sporadyczne usterki w odpowiedniości ORAZ/LUB jednolitości stylu."
+              ]
+            },
+            {
+              "points": 0,
+              "paths": [
+                "Praca nie spełnia wymagań określonych na 1 pkt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jezyk",
+          "name": "Język",
+          "type": "matrix",
+          "max": 4,
+          "rows": "zakres środków językowych",
+          "cols": "liczba błędów językowych",
+          "table": {
+            "Szeroki zakres środków językowych, tzn. zróżnicowana składnia, zróżnicowana leksyka, w tym np. bogata frazeologia, precyzyjne słownictwo, umożliwiające pełną i swobodną realizację tematu.": {
+              "Nie więcej niż 4 błędy językowe": 4,
+              "5–7 błędów językowych": 3,
+              "8–10 błędów językowych": 2,
+              "11–13 błędów językowych": 1,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Zadowalający zakres środków językowych, tzn. składnia i leksyka stosowne/odpowiednie do realizacji tematu.": {
+              "Nie więcej niż 4 błędy językowe": 3,
+              "5–7 błędów językowych": 2,
+              "8–10 błędów językowych": 1,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            },
+            "Wąski zakres środków językowych, tzn. składnia i leksyka proste/ograniczone, utrudniające realizację tematu.": {
+              "Nie więcej niż 4 błędy językowe": 2,
+              "5–7 błędów językowych": 1,
+              "8–10 błędów językowych": 0,
+              "11–13 błędów językowych": 0,
+              "14 lub więcej błędów językowych": 0
+            }
+          }
+        },
+        {
+          "id": "ortografia",
+          "name": "Ortografia",
+          "type": "error_count",
+          "max": 2,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 1,
+                "points": 2
+              },
+              {
+                "maxErrors": 3,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 3,
+                "points": 2
+              },
+              {
+                "maxErrors": 6,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        },
+        {
+          "id": "interpunkcja",
+          "name": "Interpunkcja",
+          "type": "error_count",
+          "max": 1,
+          "thresholds": {
+            "standard": [
+              {
+                "maxErrors": 9,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ],
+            "dyslexia": [
+              {
+                "maxErrors": 11,
+                "points": 1
+              },
+              {
+                "maxErrors": 999,
+                "points": 0
+              }
+            ]
+          }
+        }
+      ],
+      "gates": [
+        {
+          "ifCriterion": "realizacja",
+          "equals": 0,
+          "thenAllOthers": 0
+        }
+      ]
+    }
+  ],
+  "audio": []
+}
