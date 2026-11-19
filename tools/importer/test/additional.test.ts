@@ -3,6 +3,7 @@ import { classify, fromCkeName } from "../src/discover.ts";
 import type { PdfPage } from "../src/pdf.ts";
 import { segment } from "../src/segment.ts";
 import { tagsFor, taskId } from "../src/assemble.ts";
+import { separateTagClashes } from "../src/taxonomy.ts";
 
 const page = (n: number, lines: string[]): PdfPage => ({ page: n, width: 595, height: 842, lines: lines.map((text, i) => ({ text, x: 50, y: 90 + i * 20 })) }) as PdfPage; // first line near the top, as on real sheets
 
@@ -61,5 +62,17 @@ describe("Additional/ papers (supplementary and mock exams)", () => {
     expect(ids("II. Kształcenie językowe.", "1. Gramatyka języka polskiego.")).toContain("pl-78-II.1.4");
     expect(ids("III. Tworzenie wypowiedzi.", "1. Elementy retoryki.")).toContain("pl-78-III.1.4");
     expect(tagsFor("matematyka", { general: "II. Wykorzystanie i interpretowanie reprezentacji.", section: "XII. Obliczenia praktyczne.", specific: "4) x", stage: "VII–VIII" } as never).map((t) => t.id)).toContain("ma-78-XII.4");
+  });
+
+  it("gives a tag its own id when a key numbers a section differently from the taxonomy", () => {
+    const existing = [{ id: "pl-78-II.1.4", subjectId: "polski", general: "II.", area: "Gramatyka języka polskiego" }] as never[];
+    const tags = new Map([["pl-78-II.1.4", { id: "pl-78-II.1.4", subjectId: "polski", general: "II.", area: "Zróżnicowanie języka" }]]) as never;
+    const tasks = [{ items: [{ skillTags: ["pl-gen-II", "pl-78-II.1.4"] }] }] as never[];
+    expect(separateTagClashes(existing, tags, tasks)).toEqual(["pl-78-II.1.4 → pl-78-II.1.4~zroznicowanie-jezyka"]);
+    expect((tasks[0] as unknown as { items: { skillTags: string[] }[] }).items[0]!.skillTags).toEqual(["pl-gen-II", "pl-78-II.1.4~zroznicowanie-jezyka"]);
+    expect([...(tags as Map<string, unknown>).keys()]).toEqual(["pl-78-II.1.4~zroznicowanie-jezyka"]);
+    // Punctuation is not a different requirement.
+    const same = new Map([["ma-46-IX.5", { id: "ma-46-IX.5", subjectId: "matematyka", general: "II.", area: "Wielokąty koła i okręgi" }]]) as never;
+    expect(separateTagClashes([{ id: "ma-46-IX.5", subjectId: "matematyka", general: "II.", area: "Wielokąty, koła i okręgi" }] as never[], same, [])).toEqual([]);
   });
 });

@@ -1,5 +1,6 @@
 // P8 "Dane": export the student's history (JSON with every answer and grade, CSV with one row per attempt) and clear it.
 // Settings are included without secrets: the AI key lives in its own encrypted table and is never exported.
+import { eq } from "drizzle-orm";
 import { SUBJECTS } from "@osemka/schema";
 import type { AttemptService } from "./attempts";
 import type { ContentStore } from "./content";
@@ -59,6 +60,13 @@ export function exportCsv(svc: AttemptService, content: ContentStore): string {
 }
 
 /** Deletes every attempt; answers and scores go with them (foreign keys cascade). Settings stay. */
+/** Deletes the chosen attempts with their answers and scores (rows cascade); returns how many were removed. */
+export function deleteAttempts(db: Db, ids: string[]): number {
+  let n = 0;
+  for (const id of new Set(ids)) n += db.delete(attempts).where(eq(attempts.id, id)).run().changes;
+  return n;
+}
+
 export function clearHistory(db: Db): number {
   const n = db.select().from(attempts).all().length;
   db.delete(attempts).run();

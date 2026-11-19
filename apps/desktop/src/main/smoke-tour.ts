@@ -323,6 +323,33 @@ async function runSettingsTour(win: BrowserWindow, outDir: string): Promise<stri
   const applied = await js<string>(`JSON.stringify({ font: document.documentElement.dataset.readingFont, scale: getComputedStyle(document.documentElement).getPropertyValue("--font-scale"), theme: document.documentElement.dataset.theme })`);
   writeFileSync(join(outDir, "ustawienia-applied.txt"), applied);
   await js(`window.osemka.updateSettings({ readingFont: "literata", fontScale: 1, theme: "system" })`);
+
+  // Wider spacing and the shortcut switch reach the page.
+  await js(`location.hash = "#/ustawienia"`);
+  await waitFor("#wide-spacing");
+  await js(`document.getElementById("wide-spacing").click(); document.getElementById("single-key-shortcuts").click()`);
+  await wait(500);
+  const flags = await js<{ spacing?: string; shortcuts?: string }>(`({ spacing: document.documentElement.dataset.spacing, shortcuts: document.documentElement.dataset.shortcuts })`);
+  if (flags.spacing !== "wide" || flags.shortcuts !== "off") throw new Error(`settings not applied: ${JSON.stringify(flags)}`);
+  await js(`location.hash = "#/arkusze/matematyka-2026-05-glowny"`);
+  await wait(500);
+  await shot("wieksze-odstepy");
+  await js(`location.hash = "#/ustawienia"`);
+  await waitFor("#wide-spacing");
+  await js(`document.getElementById("wide-spacing").click(); document.getElementById("single-key-shortcuts").click()`);
+  await wait(300);
+
+  // Delete chosen attempts: the list shows every attempt with a checkbox (the native confirmation is not clicked here).
+  await waitFor('[data-testid="delete-attempts"] summary');
+  await js(`document.querySelector('[data-testid="delete-attempts"] summary').click()`);
+  await wait(600);
+  const listed = await js<number>(`document.querySelectorAll('[data-testid="delete-attempts"] li input[type=checkbox]').length`);
+  await js(`document.querySelector('[data-testid="delete-attempts"] li input[type=checkbox]')?.click()`);
+  await wait(200);
+  const button = await js<string>(`document.querySelector('[data-testid="delete-chosen"]')?.textContent ?? ""`);
+  if (listed && !/\(1\)/.test(button)) throw new Error(`delete button says "${button}" after choosing one attempt`);
+  await js(`document.querySelector('[data-testid="delete-attempts"]').scrollIntoView()`);
+  await shot("usun-proby");
   return shots;
 }
 

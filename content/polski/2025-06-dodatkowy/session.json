@@ -44,7 +44,7 @@
         "pages": 24
       }
     ],
-    "contentVersion": "0917ed7c941240c7",
+    "contentVersion": "2f75d94deb701c3d",
     "status": "published"
   },
   "stimuli": [
@@ -762,7 +762,7 @@
           },
           "skillTags": [
             "pl-gen-II",
-            "pl-78-II.1.4"
+            "pl-78-II.1.4~gramatyka-jezyka-polskiego"
           ]
         }
       ],

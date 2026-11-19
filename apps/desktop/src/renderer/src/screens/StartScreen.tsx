@@ -65,7 +65,7 @@ export function StartScreen() {
   return (
     <section className="flex flex-col gap-6">
       <div>
-        <Link to="/arkusze" className="text-sm text-muted hover:text-ink">← Arkusze</Link>
+        <Link to="/arkusze" className="text-sm text-muted hover:text-ink"><span aria-hidden="true">←</span> Arkusze</Link>
         <h1 className="mt-1 text-4xl font-bold">
           {session.subjectName} · {sessionLabel(session)}
         </h1>

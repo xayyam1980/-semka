@@ -17,6 +17,10 @@ export const StudentSettings = z.object({
   fontScale: z.number().min(0.9).max(1.4).default(1),
   readingFont: z.enum(["literata", "sans", "dyslexic"]).default("literata"),
   reduceMotion: z.boolean().default(false),
+  /** Wider line, letter and word spacing in texts and tasks (dyslexia; WCAG 1.4.12). */
+  wideSpacing: z.boolean().default(false),
+  /** One-key shortcuts in the players (J/K, F, A–D). Arrows, Enter and Tab work either way. */
+  singleKeyShortcuts: z.boolean().default(true),
   extendedTime: z.boolean().default(false),
   // Defaults to confirm against the current CKE accommodations notice.
   extendedMinutes: z

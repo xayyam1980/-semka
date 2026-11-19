@@ -240,8 +240,8 @@ export function ExamPlayer() {
             <h1 className="text-2xl font-bold outline-none" tabIndex={-1} ref={headingRef}>
               Zadanie {task.number}. <span className="font-normal text-muted">(0–{task.maxPoints})</span>
             </h1>
-            <button className={`btn ghost ml-auto ${flags[task.items[0]!.id] ? "flagged" : ""}`} onClick={toggleFlag} aria-pressed={!!flags[task.items[0]!.id]} aria-label="Oznacz do powrotu" title="Oznacz do powrotu (F)">
-              <span aria-hidden="true">{flags[task.items[0]!.id] ? "★ Oznaczone" : "☆ Oznacz"}</span>
+            <button className={`btn ghost ml-auto ${flags[task.items[0]!.id] ? "flagged" : ""}`} onClick={toggleFlag} aria-pressed={!!flags[task.items[0]!.id]} title="Oznacz do powrotu (F)">
+              <span aria-hidden="true">{flags[task.items[0]!.id] ? "★" : "☆"}</span> Oznacz
             </button>
           </div>
           <TaskText task={task} values={values} ctx={ctx} />

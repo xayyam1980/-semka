@@ -259,6 +259,8 @@ export interface OsemkaApi {
   exportHistory(format: "json" | "csv"): Promise<string | null>;
   /** P8: asks for confirmation in a system dialog, then deletes every attempt; resolves to the number deleted, or null. */
   clearHistory(): Promise<number | null>;
+  /** Deletes the chosen attempts after a confirmation dialog; null when the student cancels. */
+  deleteAttempts(ids: string[]): Promise<number | null>;
   /** P7: one subject; days null = all time. */
   analyticsSubject(subjectId: SubjectId, opts: { days: number | null; mode: "oba" | "nauka" | "symulacja" }): Promise<SubjectAnalysis>;
   /** P7: starts a practice attempt with tasks for one area; returns the attempt id, or null if no task fits. */
@@ -299,6 +301,7 @@ export const IPC = {
   practiceReview: "review:practice",
   exportHistory: "data:export",
   clearHistory: "data:clear",
+  deleteAttempts: "data:delete-attempts",
   analyticsSubject: "analytics:subject",
   practiceArea: "analytics:practice",
   startMixedPractice: "attempt:start-mixed",

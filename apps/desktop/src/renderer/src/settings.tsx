@@ -24,6 +24,10 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
     root.dataset.readingFont = settings.readingFont;
     if (settings.reduceMotion) root.dataset.motion = "reduce";
     else delete root.dataset.motion;
+    if (settings.wideSpacing) root.dataset.spacing = "wide";
+    else delete root.dataset.spacing;
+    if (settings.singleKeyShortcuts === false) root.dataset.shortcuts = "off";
+    else delete root.dataset.shortcuts;
   }, [settings]);
 
   const update = useCallback(async (patch: Partial<StudentSettings>) => {

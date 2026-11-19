@@ -6,7 +6,7 @@ import { SUBJECTS, type StudentSettings, type SubjectId } from "@osemka/schema";
 import { IPC, mixSessionId, type AppInfo, type Scope } from "../shared/ipc";
 import type { AiService } from "./ai";
 import { mixedPlan, overview, practicePlan, subjectAnalysis, type MixOptions } from "./analytics";
-import { clearHistory, exportCsv, exportJson } from "./data";
+import { clearHistory, deleteAttempts, exportCsv, exportJson } from "./data";
 import { dueGroups, reviewState, reviewSummary } from "./review";
 import type { AttemptService } from "./attempts";
 import type { ContentStore } from "./content";
@@ -87,6 +87,22 @@ export function registerIpc(ctx: { db: Db; dbFile: string; runs: number; content
     };
     const res = win ? await dialog.showMessageBox(win, options) : await dialog.showMessageBox(options);
     return res.response === 1 ? clearHistory(ctx.db) : null;
+  });
+  ipcMain.handle(IPC.deleteAttempts, async (e, ids: unknown) => {
+    if (!Array.isArray(ids) || !ids.length || ids.length > 10000 || !ids.every((x) => typeof x === "string")) throw new Error("Invalid attempt ids");
+    const n = ids.length;
+    const win = BrowserWindow.fromWebContents(e.sender) ?? undefined;
+    const options = {
+      type: "warning" as const,
+      title: "Usuń próby",
+      message: `Usunąć ${n} ${n === 1 ? "próbę" : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? "próby" : "prób"}?`,
+      detail: "Znikną ich odpowiedzi, oceny i wyniki (analiza i powtórka błędów policzą się bez nich). Tego nie da się cofnąć.",
+      buttons: ["Anuluj", "Usuń"],
+      defaultId: 0,
+      cancelId: 0,
+    };
+    const res = win ? await dialog.showMessageBox(win, options) : await dialog.showMessageBox(options);
+    return res.response === 1 ? deleteAttempts(ctx.db, ids as string[]) : null;
   });
   // Essays and other long writing are not repeated as review items.
   const reviewable = (itemId: string) => {

@@ -37,6 +37,8 @@ pnpm dist:win:mac    # Windows installer, built on a Mac
 
 The installers include the content of `content/`, with the English recordings, which are not in git. They are unsigned until certificates are set up; see [docs/code-signing.md](docs/code-signing.md).
 
+To release from CI, push a tag such as `v0.5.0`. The **Release** workflow builds both installers, checks the packaged app and attaches them to a **draft** GitHub release, which you publish by hand. It adds the English recordings when the `RECORDINGS_URL` secret points to a zip of them (`zip -r recordings.zip content/angielski/*/assets/*.mp3`), and signs when the certificates from docs/code-signing.md are set.
+
 ## Importing an exam session
 
 The importer turns a folder such as `Matematyka/Maj 2026/` into `content/matematyka/2026-05-glowny/session.json`.

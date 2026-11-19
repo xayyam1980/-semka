@@ -293,8 +293,8 @@ export function PracticePlayer() {
                 Zadanie {task.number}. <span className="font-normal text-muted">(0–{task.maxPoints})</span>
                 {task.origin && <span className="ml-2 align-middle text-sm font-normal text-muted">z arkusza: {sessionLabel(task.origin)}</span>}
               </h1>
-              <button className={`btn ghost ml-auto ${flagged ? "flagged" : ""}`} onClick={toggleFlag} aria-pressed={flagged} aria-label="Oznacz do powtórki" title="Oznacz do powtórki (F)">
-                <span aria-hidden="true">{flagged ? "★ Oznaczone" : "☆ Oznacz"}</span>
+              <button className={`btn ghost ml-auto ${flagged ? "flagged" : ""}`} onClick={toggleFlag} aria-pressed={flagged} title="Oznacz do powtórki (F)">
+                <span aria-hidden="true">{flagged ? "★" : "☆"}</span> Oznacz
               </button>
             </div>
             {listening && <ListeningPlayer sessionId={session.id} stimulus={listening} available={!!session.recording} />}

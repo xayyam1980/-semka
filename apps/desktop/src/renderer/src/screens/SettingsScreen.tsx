@@ -1,9 +1,9 @@
 // S12 Ustawienia: appearance and reading, exam accommodations, sound, AI, data.
 import { useEffect, useState, type ReactNode } from "react";
-import type { AppInfo } from "../../../shared/ipc";
+import type { AppInfo, AttemptSummary, SessionSummary } from "../../../shared/ipc";
 import { SUBJECTS, type StudentSettings, type SubjectId, type Theme } from "@osemka/schema";
 import { AiSettingsCard } from "../components/AiSettingsCard";
-import { plural } from "../lib/format";
+import { plural, sessionLabel, shortDate } from "../lib/format";
 import { useSettings } from "../settings";
 
 const THEMES: { value: Theme; label: string }[] = [
@@ -110,6 +110,17 @@ export function SettingsScreen() {
           <input type="checkbox" checked={settings.reduceMotion} onChange={(e) => void update({ reduceMotion: e.target.checked })} id="reduce-motion" />
           Ogranicz animacje
         </label>
+        <label className="flex items-center gap-2">
+          <input type="checkbox" checked={settings.wideSpacing} onChange={(e) => void update({ wideSpacing: e.target.checked })} id="wide-spacing" data-testid="wide-spacing" />
+          Większe odstępy między wierszami, literami i wyrazami
+        </label>
+        <label className="flex items-start gap-2">
+          <input type="checkbox" className="mt-1.5" checked={settings.singleKeyShortcuts} onChange={(e) => void update({ singleKeyShortcuts: e.target.checked })} id="single-key-shortcuts" data-testid="single-key-shortcuts" />
+          <span>
+            Skróty jednoklawiszowe w zadaniach
+            <span className="block text-sm text-muted">J/K – poprzednie/następne zadanie, F – oznacz, A–D – wybór odpowiedzi. Strzałki, Enter i Tab działają zawsze.</span>
+          </span>
+        </label>
       </Card>
 
       <Card title="Dostosowania egzaminacyjne" testid="settings-accommodations">
@@ -122,7 +133,7 @@ export function SettingsScreen() {
             <label key={s.id} className="flex flex-col gap-1 text-[0.9375rem]">
               {s.name}
               <span className="flex items-center gap-2">
-                <span className="tabular text-muted">{s.standardMinutes} →</span>
+                <span className="tabular text-muted">{s.standardMinutes} <span aria-hidden="true">→</span></span>
                 <input
                   type="number"
                   min={s.standardMinutes}
@@ -191,6 +202,7 @@ export function SettingsScreen() {
             Wyczyść historię…
           </button>
         </div>
+        <DeleteAttempts onDone={setMessage} />
         <p className="text-sm text-muted" role="status" aria-live="polite">
           {message}
         </p>
@@ -231,6 +243,77 @@ function AboutApp() {
           <p className="text-muted">Ładowanie…</p>
         )}
       </details>
+  );
+}
+
+/** Delete chosen attempts: one, several or all of them, each with its date, sheet, mode and score. */
+function DeleteAttempts({ onDone }: { onDone: (message: string) => void }) {
+  const [rows, setRows] = useState<AttemptSummary[] | null>(null);
+  const [sessions, setSessions] = useState<SessionSummary[]>([]);
+  const [chosen, setChosen] = useState<Set<string>>(new Set());
+  const load = () => {
+    void window.osemka.listAttempts().then((all) => setRows([...all].sort((a, b) => b.startedAt.localeCompare(a.startedAt))));
+    void window.osemka.listSessions().then(setSessions);
+  };
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (open && !rows) load();
+  }, [open, rows]);
+  const label = (a: AttemptSummary) => {
+    const s = sessions.find((x) => x.id === a.sessionId);
+    return s ? `${s.subjectName} · ${sessionLabel(s)}` : a.sessionId;
+  };
+  const toggle = (id: string) => setChosen((c) => {
+    const n = new Set(c);
+    if (n.has(id)) n.delete(id);
+    else n.add(id);
+    return n;
+  });
+  const all = !!rows?.length && chosen.size === rows.length;
+  const remove = async () => {
+    const n = await window.osemka.deleteAttempts([...chosen]);
+    if (n === null) return onDone("Nic nie zostało usunięte.");
+    onDone(`Usunięto ${n} ${plural(n, "próbę", "próby", "prób")}.`);
+    setChosen(new Set());
+    setRows(null);
+    load();
+  };
+  return (
+    <details className="rounded-md border border-line p-3" onToggle={(e) => setOpen((e.target as HTMLDetailsElement).open)} data-testid="delete-attempts">
+      <summary className="cursor-pointer font-bold">Usuń wybrane próby…</summary>
+      {!rows ? (
+        <p className="mt-2 text-muted">Ładowanie…</p>
+      ) : !rows.length ? (
+        <p className="mt-2 text-muted">Nie ma zapisanych prób.</p>
+      ) : (
+        <div className="mt-3 flex flex-col gap-2">
+          <label className="flex items-center gap-2 font-bold">
+            <input type="checkbox" checked={all} onChange={() => setChosen(all ? new Set() : new Set(rows.map((a) => a.id)))} data-testid="delete-all-toggle" />
+            Zaznacz wszystkie ({rows.length})
+          </label>
+          <ul className="flex max-h-72 flex-col overflow-y-auto rounded-md border border-line" aria-label="Próby">
+            {rows.map((a) => (
+              <li key={a.id} className="border-b border-line last:border-0">
+                <label className="flex cursor-pointer items-center gap-3 px-3 py-2 text-[0.9375rem]">
+                  <input type="checkbox" checked={chosen.has(a.id)} onChange={() => toggle(a.id)} />
+                  <span className="tabular w-44 shrink-0 text-muted">{shortDate(a.startedAt)}</span>
+                  <span className="flex-1">
+                    {label(a)} · {a.mode === "symulacja" ? "symulacja" : "nauka"}
+                    {a.status === "in_progress" ? " · w toku" : ""}
+                  </span>
+                  <span className="tabular text-muted">
+                    {a.earned}/{a.maxPoints} pkt
+                  </span>
+                </label>
+              </li>
+            ))}
+          </ul>
+          <button className="btn ghost self-start !border-[var(--bad)] !text-[var(--bad)]" disabled={!chosen.size} onClick={() => void remove()} data-testid="delete-chosen">
+            Usuń zaznaczone ({chosen.size})…
+          </button>
+        </div>
+      )}
+    </details>
   );
 }
 

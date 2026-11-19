@@ -206,3 +206,9 @@ label:has(> input.sr-only:focus-visible) { outline: 3px solid var(--accent); out
 .rich-figure[role="button"]:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .figure-zoom { position: fixed; inset: 0; z-index: 60; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 24px; background: rgb(0 0 0 / 0.8); }
 .figure-zoom img { max-width: 100%; max-height: calc(100% - 72px); object-fit: contain; background: #fff; border-radius: var(--r-s); image-rendering: auto; min-width: min(70vw, 900px); }
+
+/* "Większe odstępy" (Ustawienia): WCAG 1.4.12 text-spacing values for texts, tasks and answers. */
+:root[data-spacing="wide"] main { line-height: 1.8; letter-spacing: 0.05em; word-spacing: 0.16em; }
+:root[data-spacing="wide"] main p, :root[data-spacing="wide"] main li { margin-bottom: 0.4em; }
+:root[data-spacing="wide"] main .uppercase { text-transform: none; }
+:root[data-spacing="wide"] main .tracking-wider { letter-spacing: 0.05em; }

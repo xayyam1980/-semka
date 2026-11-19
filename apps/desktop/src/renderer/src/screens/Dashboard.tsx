@@ -75,7 +75,7 @@ export function Dashboard() {
             </li>
           </ol>
           <Link to="/arkusze" className="btn primary self-start" data-testid="first-steps-start">
-            Przejdź do arkuszy →
+            Przejdź do arkuszy <span aria-hidden="true">→</span>
           </Link>
         </article>
       )}
@@ -92,7 +92,7 @@ export function Dashboard() {
                   {a.mode === "symulacja" ? "symulacja" : "nauka"} · {shortDate(a.startedAt)} · {a.pending} {plural(a.pending, "zadanie", "zadania", "zadań")} do oceny
                 </span>
                 <Link className="btn ghost ml-auto" to={`/proba/${a.id}/przeglad`}>
-                  Oceń →
+                  Oceń <span aria-hidden="true">→</span>
                 </Link>
               </li>
             ))}
@@ -264,7 +264,7 @@ export function Dashboard() {
             </tbody>
           </table>
           <Link to="/analiza" className="self-end font-bold text-accent">
-            Pełna analiza →
+            Pełna analiza <span aria-hidden="true">→</span>
           </Link>
         </article>
       )}
@@ -286,7 +286,7 @@ export function Dashboard() {
             ))}
           </ul>
           <Link to="/historia" className="self-end font-bold text-accent">
-            Cała historia →
+            Cała historia <span aria-hidden="true">→</span>
           </Link>
         </article>
       )}

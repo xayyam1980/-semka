@@ -46,7 +46,7 @@ export function History() {
         <p className="text-muted">
           Nie ma jeszcze prób.{" "}
           <Link to="/arkusze" className="font-bold text-accent">
-            Wybierz arkusz →
+            Wybierz arkusz <span aria-hidden="true">→</span>
           </Link>
         </p>
       )}

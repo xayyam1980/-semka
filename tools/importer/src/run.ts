@@ -10,6 +10,7 @@ import { cropPng, decodePng, openPdf, readPages, renderPage, type PdfPage } from
 import { snapFigure } from "./figures.ts";
 import { findTextGroups, stimulusFromDraft, textCacheFile, transcribeText } from "./texts.ts";
 import { taskId as makeTaskId } from "./assemble.ts";
+import { mergeTaxonomy, readTaxonomy, separateTagClashes } from "./taxonomy.ts";
 import { compareSheetAndKey, segment } from "./segment.ts";
 import { cueMap, englishKeyPages, speechBlocks, transcriptByTask } from "./english.ts";
 import { validateBundle, type Check } from "./validate.ts";
@@ -320,6 +321,8 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
     const doc = f.rel.toLowerCase().endsWith(".pdf") ? await openPdf(f.abs) : undefined;
     sources.push({ kind: f.kind, path: f.rel, sha256: f.sha256, ...(doc ? { pages: doc.numPages } : {}) });
   }
+  const taxonomyFile = join(opts.contentRoot, "taxonomy", "skills.json");
+  for (const r of separateTagClashes(readTaxonomy(taxonomyFile), tags, tasks)) opts.log(`  Skill tag id already names another requirement: ${r}`);
   const bundleNoVersion: Omit<SessionBundle, "session"> & { session: Omit<SessionBundle["session"], "contentVersion"> } = {
     session: {
       id: s.id,
@@ -358,7 +361,7 @@ export async function runSession(s: FoundSession, opts: RunOptions): Promise<Run
     const used = new Set(stimuli.map((x) => x.asset?.split("/").pop()));
     for (const f of readdirSync(join(sessionDir, "assets"))) if (!used.has(f)) unlinkSync(join(sessionDir, "assets", f));
   }
-  mergeTaxonomy(join(opts.contentRoot, "taxonomy", "skills.json"), tags);
+  mergeTaxonomy(taxonomyFile, tags);
   writeFileSync(join(sessionDir, "import-report.json"), JSON.stringify(report, null, 2) + "\n");
   opts.log(`Wrote ${join(sessionDir, "session.json")}`);
   for (const c of v.checks) opts.log(`  ${c.ok ? "✓" : "✗"} ${c.name}${c.ok ? "" : `: ${c.details.slice(0, 5).join("; ")}`}`);
@@ -381,13 +384,6 @@ function formCode(pages: PdfPage[]): string {
   return m ? `${m[1]}-${m[2]}` : "unknown";
 }
 
-function mergeTaxonomy(file: string, tags: Map<string, SkillTag>): void {
-  mkdirSync(dirname(file), { recursive: true });
-  const existing: SkillTag[] = existsSync(file) ? JSON.parse(readFileSync(file, "utf8")) : [];
-  const map = new Map(existing.map((t) => [t.id, t]));
-  for (const [id, t] of tags) if (!map.has(id)) map.set(id, t);
-  writeFileSync(file, JSON.stringify([...map.values()].sort((a, b) => a.id.localeCompare(b.id, "en")), null, 2) + "\n");
-}
 
 const round = (n: number) => Math.round(n * 100) / 100;
 

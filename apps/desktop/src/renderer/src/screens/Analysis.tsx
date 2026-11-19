@@ -71,7 +71,7 @@ export function Analysis() {
         <p className="text-muted">
           W tym okresie nie ma jeszcze wyników z tego przedmiotu. Po pierwszej próbie zobaczysz tu wynik w czasie i umiejętności, w których tracisz punkty.{" "}
           <Link to={`/arkusze?przedmiot=${subject}`} className="font-bold text-accent">
-            Wybierz arkusz →
+            Wybierz arkusz <span aria-hidden="true">→</span>
           </Link>
         </p>
       ) : (

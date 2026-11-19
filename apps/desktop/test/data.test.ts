@@ -4,7 +4,7 @@ import { join, resolve } from "node:path";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { AttemptService } from "../src/main/attempts";
 import { openContent, type ContentStore } from "../src/main/content";
-import { clearHistory, exportCsv, exportJson } from "../src/main/data";
+import { clearHistory, deleteAttempts, exportCsv, exportJson } from "../src/main/data";
 import { openDb, readSettings, writeSettings, type Db } from "../src/main/db";
 import { itemScores, responses, settings as settingsTable } from "../src/main/db/schema";
 
@@ -64,6 +64,15 @@ describe("export and clear history", () => {
     expect(db.select().from(responses).all()).toEqual([]);
     expect(db.select().from(itemScores).all()).toEqual([]);
     expect(readSettings(db).extendedTime).toBe(true);
+  });
+
+  it("deletes only the chosen attempts, with their answers", () => {
+    const keep = practiceWithOneAnswer().attemptId;
+    const drop = svc.startSimulation(SESSION).summary.id;
+    expect(deleteAttempts(db, [drop, drop, "no-such-attempt"])).toBe(1);
+    expect(svc.list().map((a) => a.id)).toEqual([keep]);
+    expect(db.select().from(responses).all().every((r) => r.attemptId === keep)).toBe(true);
+    expect(db.select().from(responses).all().length).toBeGreaterThan(0);
   });
 });
 

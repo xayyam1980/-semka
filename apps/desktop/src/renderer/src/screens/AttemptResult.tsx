@@ -35,7 +35,7 @@ export function AttemptResult() {
   return (
     <section className="flex flex-col gap-6" data-testid="attempt-result">
       <div>
-        <Link to="/arkusze" className="text-sm text-muted hover:text-ink">← Arkusze</Link>
+        <Link to="/arkusze" className="text-sm text-muted hover:text-ink"><span aria-hidden="true">←</span> Arkusze</Link>
         <h1 className="mt-1 text-4xl font-bold">Wynik {sim ? "symulacji" : "próby"}</h1>
         <p className="text-muted">
           {session.subjectName} · {sessionLabel(session)} · {sim ? "symulacja egzaminu" : "tryb nauki"} · {shortDate(t.startedAt)}
@@ -82,7 +82,7 @@ export function AttemptResult() {
             <>
               <p className="text-sm">Oceń zadania otwarte według klucza, aby wynik był ostateczny.</p>
               <button className="btn primary self-start" onClick={() => navigate(reviewUrl(firstPending))} data-testid="grade-open">
-                Oceń zadania otwarte →
+                Oceń zadania otwarte <span aria-hidden="true">→</span>
               </button>
             </>
           ) : (

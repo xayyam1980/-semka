@@ -16,6 +16,7 @@ export const inRadioGroup = (e: Event) => !!el(e)?.closest?.('[role="radiogroup"
 export const onControl = (e: Event) => !!el(e)?.closest?.(CONTROLS);
 /** Single-character shortcuts (F, J, K, A–D) work only with no control focused: on the page, the task heading or the main area (WCAG 2.1.4). */
 export const shortcutsActive = (e: Event) => {
+  if (document.documentElement.dataset.shortcuts === "off") return false; // switched off in Ustawienia
   const t = el(e);
   return !t || t === document.body || t === document.documentElement || t.tagName === "H1" || t.id === "main";
 };

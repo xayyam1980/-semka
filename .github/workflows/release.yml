@@ -1,0 +1,102 @@
+# Release installers: push a tag like v0.5.0 (or run it by hand from the Actions tab). Builds the Windows and macOS
+# installers, checks each packaged app with the smoke test, and attaches them to a DRAFT GitHub release. A draft is
+# visible only to people with write access to the repository; publishing it is a separate, manual step.
+#
+# Optional repository secrets:
+# - RECORDINGS_URL: a direct download link to recordings.zip, which holds the English recordings at their content
+#   paths (content/angielski/2025-05-glowny/assets/nagranie.mp3, …). Without it the installers have no recordings and
+#   the listening tasks say so. Use a private link: the recordings are not in git.
+# - Signing: see docs/code-signing.md (MAC_CSC_LINK, APPLE_ID, WIN_CSC_LINK or the AZURE_* values …).
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: build-${{ matrix.os }}
+    strategy:
+      fail-fast: true
+      matrix:
+        include:
+          - os: windows-latest
+            dist: dist:win
+            exe: release/win-unpacked/Osemka.exe
+          - os: macos-latest
+            dist: dist:mac
+            exe: release/mac-arm64/Osemka.app/Contents/MacOS/Osemka
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @osemka/desktop ensure:electron
+      - name: English recordings (optional)
+        shell: bash
+        env:
+          RECORDINGS_URL: ${{ secrets.RECORDINGS_URL }}
+        run: |
+          if [ -z "$RECORDINGS_URL" ]; then echo "::warning::No RECORDINGS_URL secret: the installers will have no recordings."; exit 0; fi
+          curl -fsSL "$RECORDINGS_URL" -o recordings.zip
+          # Only mp3 files under content/angielski/ are taken from the archive.
+          unzip -o recordings.zip 'content/angielski/*.mp3' -d .
+          rm recordings.zip
+          ls content/angielski/*/assets/*.mp3
+      - name: Build the installer
+        run: pnpm --filter @osemka/desktop ${{ matrix.dist }}
+        env:
+          CSC_LINK: ${{ matrix.os == 'macos-latest' && secrets.MAC_CSC_LINK || '' }}
+          CSC_KEY_PASSWORD: ${{ matrix.os == 'macos-latest' && secrets.MAC_CSC_KEY_PASSWORD || '' }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          WIN_CSC_LINK: ${{ secrets.WIN_CSC_LINK }}
+          WIN_CSC_KEY_PASSWORD: ${{ secrets.WIN_CSC_KEY_PASSWORD }}
+          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+          OSEMKA_AZURE_ENDPOINT: ${{ vars.OSEMKA_AZURE_ENDPOINT }}
+          OSEMKA_AZURE_ACCOUNT: ${{ vars.OSEMKA_AZURE_ACCOUNT }}
+          OSEMKA_AZURE_PROFILE: ${{ vars.OSEMKA_AZURE_PROFILE }}
+          OSEMKA_AZURE_PUBLISHER: ${{ vars.OSEMKA_AZURE_PUBLISHER }}
+      - name: Smoke test of the packaged app
+        working-directory: apps/desktop
+        shell: bash
+        run: OSEMKA_SMOKE_EXE="${{ matrix.exe }}" pnpm smoke:packaged
+      - uses: actions/upload-artifact@v4
+        with:
+          name: installers-${{ matrix.os }}
+          path: |
+            apps/desktop/release/*.exe
+            apps/desktop/release/*.dmg
+          if-no-files-found: error
+          retention-days: 7
+
+  draft-release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: installers
+          merge-multiple: true
+      - name: Create or update the draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_type == 'tag' && github.ref_name || format('build-{0}', github.run_number) }}
+        run: |
+          ls -la installers
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "$TAG" installers/* --clobber --repo "$GITHUB_REPOSITORY"
+          else
+            gh release create "$TAG" installers/* --draft --title "Ósemka $TAG" --target "$GITHUB_SHA" --repo "$GITHUB_REPOSITORY" \
+              --notes "Instalatory: Windows (Osemka-Setup-*.exe), macOS Apple silicon (*-arm64.dmg) i Intel (*-x64.dmg)."
+          fi
